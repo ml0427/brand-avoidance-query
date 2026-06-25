@@ -1965,7 +1965,50 @@
     "name": "安踏 / ANTA",
     "aliases": [
       "安踏",
-      "ANTA"
+      "安踏體育",
+      "安踏体育",
+      "安踏體育用品有限公司",
+      "安踏体育用品有限公司",
+      "ANTA",
+      "ANTA Sports",
+      "ANTA Sports Products Limited",
+      "ANTA KIDS",
+      "安踏兒童",
+      "安踏儿童",
+      "FILA",
+      "FILA China",
+      "FILA KIDS",
+      "FILA FUSION",
+      "DESCENTE",
+      "DESCENTE China",
+      "迪桑特",
+      "KOLON SPORT",
+      "KOLON SPORT China",
+      "可隆",
+      "MAIA ACTIVE",
+      "JACK WOLFSKIN",
+      "狼爪",
+      "Amer Sports",
+      "Arc'teryx",
+      "Arcteryx",
+      "始祖鳥",
+      "始祖鸟",
+      "Salomon",
+      "薩洛蒙",
+      "萨洛蒙",
+      "Wilson",
+      "Peak Performance",
+      "Atomic",
+      "Armada",
+      "ATEC",
+      "DeMarini",
+      "EvoShield",
+      "Louisville Slugger",
+      "MUSINSA STANDARD China",
+      "Musinsa Store China",
+      "PUMA",
+      "Cobra Golf",
+      "stichd"
     ],
     "country": "中國",
     "categories": [
@@ -1978,23 +2021,51 @@
     ],
     "confidence": "medium",
     "status": "watchlist",
-    "summary": "安踏風險重點是公開支持／使用新疆棉；目前未直接證明台灣特定商品涉及強迫勞動，故列觀察中。",
+    "summary": "安踏風險重點是公開退出 BCI 並稱持續採購／使用中國含新疆棉；官方品牌組合另涵蓋 FILA 中國、DESCENTE、KOLON SPORT、MAIA ACTIVE、JACK WOLFSKIN、Amer Sports 旗下 Arc'teryx/Salomon/Wilson 等，以及 PUMA 29.06% 股權待完成交易。因部分品牌為區域授權、參股或待交割交易，列中等信心觀察。",
     "sources": [
-      {
-        "title": "Axios - Olympic uniform supplier rebuffs concerns over Xinjiang cotton",
-        "url": "https://www.axios.com/2021/04/27/olympic-uniform-supplier-anta-xinjiang-cotton",
-        "date": "2021-04-27",
-        "note": "報導安踏公開表示將繼續使用新疆棉。"
-      },
       {
         "title": "Business & Human Rights Resource Centre - Anta to quit BCI, continue Xinjiang cotton",
         "url": "https://www.business-humanrights.org/en/latest-news/chinese-company-anta-to-quit-bci-will-continue-to-use-cotton-from-xinjiang/",
         "date": "2021",
         "note": "彙整安踏退出 BCI 並稱持續採購中國含新疆棉的公開表態。"
+      },
+      {
+        "title": "ANTA Sports - Multi-brand Strategy",
+        "url": "https://ir.anta.com/en/brand.php",
+        "date": "查核日 2026-06-25",
+        "note": "官方多品牌策略頁列 ANTA、ANTA KIDS、FILA、FILA KIDS、FILA FUSION、DESCENTE、KOLON SPORT、MAIA ACTIVE、JACK WOLFSKIN、AMER、MUSINSA 等品牌脈絡。"
+      },
+      {
+        "title": "ANTA Sports - Corporate Profile",
+        "url": "https://ir.anta.com/en/about.php",
+        "date": "查核日 2026-06-25",
+        "note": "官方公司簡介列安踏為 Amer Sports 最大股東，並列 Arc'teryx、Salomon、Wilson、Peak Performance、Atomic 等 Amer Sports 品牌。"
+      },
+      {
+        "title": "Amer Sports - Our Brands",
+        "url": "https://www.amersports.com/",
+        "date": "查核日 2026-06-25",
+        "note": "Amer Sports 官方品牌頁列 Arc'teryx、Salomon、Wilson、Peak Performance、Atomic、Armada、ATEC、DeMarini、EvoShield、Louisville Slugger。"
+      },
+      {
+        "title": "ANTA Sports - ANTA Sports to Acquire 29% Stake in PUMA",
+        "url": "https://ir.anta.com/en/news_detail.php?id=159082",
+        "date": "2026-01-27",
+        "note": "安踏公告與 Groupe Artemis 簽署協議收購 PUMA SE 29.06% 股權；交易預計 2026 年底前完成，仍受監管批准與交割條件限制。"
       }
     ],
-    "aiNotes": "本條目只表示公開來源足以支持風險標籤，不代表法律定罪、台灣禁售，或證明每一項商品都有問題。",
-    "lastReviewed": "2026-06-25"
+    "aiNotes": "FILA、DESCENTE、KOLON SPORT、MUSINSA 等品牌存在區域授權／合資範圍差異；PUMA 於查核日仍是已公告但待完成的 29.06% 股權交易，且 PUMA/Cobra Golf/stichd 不等同已被安踏全資控制。此筆是供使用者避用策略提示，不代表每個海外或台灣通路商品都直接由安踏營運。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "2020.HK",
+      "82020.HK",
+      "ir.anta.com",
+      "anta.com",
+      "anta.cn",
+      "fila.cn",
+      "NYSE: AS",
+      "PUMA 29.06% pending acquisition"
+    ]
   },
   {
     "id": "pop-mart",
@@ -2139,10 +2210,12 @@
   },
   {
     "id": "geely-volvo-polestar",
-    "name": "吉利控股 / Geely / Volvo / Polestar",
+    "name": "吉利控股 / Geely / Volvo / Polestar / Lotus / LEVC / smart",
     "aliases": [
       "Geely",
       "吉利",
+      "吉利控股",
+      "Zhejiang Geely Holding Group",
       "Volvo",
       "富豪",
       "Volvo Taiwan",
@@ -2150,9 +2223,23 @@
       "EX40",
       "EC40",
       "Polestar",
-      "Polestar Engineered"
+      "Polestar Engineered",
+      "Lotus",
+      "Lotus Cars",
+      "Lotus Technology",
+      "Lotus Eletre",
+      "Lotus Emira",
+      "Lotus Emeya",
+      "LEVC",
+      "London Electric Vehicle Company",
+      "London Taxi Company",
+      "smart",
+      "smart Automobile",
+      "smart #1",
+      "smart #3",
+      "smart #5"
     ],
-    "country": "中國／瑞典品牌（吉利控股）",
+    "country": "中國／瑞典、英國、德國品牌（吉利控股）",
     "categories": [
       "汽車／交通／能源"
     ],
@@ -2163,7 +2250,7 @@
     ],
     "confidence": "medium",
     "status": "watchlist",
-    "summary": "Volvo 在台可買，Geely 對 Volvo/Polestar 有明確所有權或資金關係；風險依據主要是黨建與補貼／反補貼，而非國企。",
+    "summary": "Volvo 在台可買；Geely 對 Volvo、Polestar、Lotus、LEVC 與 smart 有明確所有權、控制或合資關係。smart 為 Mercedes-Benz 與 Geely 50:50 合資，不寫成 Geely 全控；整體風險依據主要是吉利黨建與中國電動車補貼／反補貼脈絡，而非國企。",
     "sources": [
       {
         "title": "Volvo Cars Taiwan",
@@ -2178,6 +2265,30 @@
         "note": "Volvo 官方新聞稿確認浙江吉利完成收購 Volvo Cars。"
       },
       {
+        "title": "Geely Holding - 2023 annual sales by brands",
+        "url": "https://www.geely.com/en/news/2024/geely-holding-annual-sales-2023",
+        "date": "2024-01-12",
+        "note": "吉利官方新聞列 Geely Auto、Volvo Cars、Polestar、Lotus、smart、LEVC 等品牌銷量。"
+      },
+      {
+        "title": "Geely Holding - DRB-HICOM final contract",
+        "url": "https://zgh.com/media-center/news/20170622_1/?lang=en",
+        "date": "2017-06-22",
+        "note": "吉利官方新聞稱取得 Lotus 51% 股權與 Proton 49.9% 股權。"
+      },
+      {
+        "title": "LEVC - Corporate Compliance",
+        "url": "https://www.levc.com/company/corporate-compliance/",
+        "date": "查核日 2026-06-25",
+        "note": "LEVC 公司治理頁揭露 Geely UK Limited 為全資母公司，最終母公司為浙江吉利控股集團。"
+      },
+      {
+        "title": "smart - Daimler and Geely form global joint venture",
+        "url": "https://media.smart.com/en-INT/260787-daimler-and-geely-holding-form-global-joint-venture-to-develop-smart/",
+        "date": "2019-03-28",
+        "note": "smart 官方新聞稿稱 Daimler 與 Geely 成立 50:50 合資公司發展 smart。"
+      },
+      {
         "title": "人民網黨建 - 吉利集团党委",
         "url": "https://dangjian.people.com.cn/n/2013/0124/c117092-20315712.html",
         "date": "2013-01-24",
@@ -2190,8 +2301,18 @@
         "note": "歐盟對中國電動車價值鏈補貼採反補貼措施；此為戰略產業／補貼風險來源，不等同國安制裁。"
       }
     ],
-    "aiNotes": "本條目只表示公開來源足以支持風險標籤，不代表法律定罪、台灣禁售，或證明每一項商品都有問題。",
-    "lastReviewed": "2026-06-25"
+    "aiNotes": "Volvo、Polestar、Lotus、LEVC、smart 的控制型態不同；smart 是 50:50 合資，Lotus/LEVC 也有重整與股權細節，查具體車款時應看當地銷售主體與製造地。此筆是吉利控股相關歐洲品牌風險提示，不代表每一台車或每個市場都同等風險。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "zgh.com",
+      "geely.com",
+      "volvocars.com",
+      "polestar.com",
+      "levc.com",
+      "group-lotus.com",
+      "smart.com",
+      "smart 50:50 JV"
+    ]
   },
   {
     "id": "dongfeng-dfsk",
@@ -2698,5 +2819,619 @@
     "aiNotes": "本條目只表示公開來源足以支持風險標籤，不代表法律定罪、台灣禁售，或證明每一項商品都有問題。",
     "lastReviewed": "2026-06-25",
     "identifiers": []
+  },
+  {
+    "id": "sunnyhills-delights",
+    "name": "微熱山丘 / SunnyHills / 寶田股份有限公司",
+    "aliases": [
+      "微熱山丘",
+      "微熱山丘 SunnyHills",
+      "微热山丘",
+      "SunnyHills",
+      "Sunny Hills",
+      "寶田股份有限公司",
+      "宝田股份有限公司",
+      "SUNNY HILLS DELIGHTS INC.",
+      "Smille",
+      "Smille 微笑蜜樂",
+      "微笑蜜樂",
+      "SMILLE by SunnyHills",
+      "蜜樂酥",
+      "山丘芭娜娜",
+      "蜜豐糖脆蛋糕",
+      "蜜丰糖脆蛋糕",
+      "柚香蘋果",
+      "微熱山丘柚香蘋果",
+      "全球果實計畫",
+      "全球果實計劃",
+      "SunnyHills World Project",
+      "FORBIDDEN",
+      "FORBIDDEN 馥餅殿",
+      "馥餅殿",
+      "FORBIDDEN D24榴槤蛋捲",
+      "D24榴槤蛋捲",
+      "SunnyHills D24 Durian Roll",
+      "SunnyHills Musang King Roulade",
+      "微熱生活",
+      "SunnyHills Life",
+      "SunnyHillsLife",
+      "サニーヒルズ"
+    ],
+    "country": "台灣",
+    "categories": [
+      "食品／飲料／農水產"
+    ],
+    "avoidReasons": [
+      "中國市場標示／矮化爭議",
+      "中國經銷／通路合規風險"
+    ],
+    "confidence": "low",
+    "status": "watchlist",
+    "summary": "微熱山丘母公司為寶田股份有限公司；公開來源可確認中國市場商品曾出現「中國台灣」標示與「中國內地專供版」爭議，品牌說法是中國經銷商依當地法令重貼且產品均台灣生產。官方商品資料與新聞來源已核對台灣、中港、日本、新加坡商品線及 Smille、FORBIDDEN 等延伸品牌；此列為中國市場標示／矮化爭議觀察項，不等同國資、黨建或制裁證據。",
+    "sources": [
+      {
+        "title": "微熱山丘線上宅配訂購 - 常見問答",
+        "url": "https://shop.sunnyhills.com.tw/qa/content?index=11",
+        "date": "查核日 2026-06-25",
+        "note": "官方購物站頁尾列寶田股份有限公司、統一編號 24202147 與 SUNNY HILLS DELIGHTS INC.。"
+      },
+      {
+        "title": "微熱山丘官方商品 API - 台灣",
+        "url": "https://www.sunnyhills.com.tw/api/Products.asmx/List?Lang=zh-tw",
+        "date": "查核日 2026-06-25",
+        "note": "官方商品資料列鳳梨酥、蘋果酥、山丘芭娜娜與鳳梨汁。"
+      },
+      {
+        "title": "微熱山丘官方商品 API - 中港與海外",
+        "url": "https://www.sunnyhills.com.tw/api/Products.asmx/List?Lang=zh-cn",
+        "date": "查核日 2026-06-25",
+        "note": "中國語系官方商品資料列鳳梨酥與蜜豐糖脆蛋糕，並導向天貓通路。另以其他語系 API 核對香港、日本、新加坡商品線。"
+      },
+      {
+        "title": "中央社 - 微熱山丘旗下微笑蜜樂插旗南港",
+        "url": "https://www.cna.com.tw/news/afe/202502180364.aspx",
+        "date": "2025-02-18",
+        "note": "報導微笑蜜樂為微熱山丘旗下主打甜點品牌，並提及 2023 年底推出 Smille 微笑蜜樂。"
+      },
+      {
+        "title": "微熱山丘 - 柚香蘋果酥／全球果實計劃",
+        "url": "https://www.sunnyhills.com.tw/YuzuAppleCake/zh-tw/",
+        "date": "查核日 2026-06-25",
+        "note": "官方頁面列冬季限定柚香蘋果酥，並說明微熱山丘推出全球果實計劃。"
+      },
+      {
+        "title": "iF Design - Forbidden",
+        "url": "https://ifdesign.com/en/winner-ranking/project/forbidden/308783",
+        "date": "查核日 2026-06-25",
+        "note": "iF Design 專案頁說明 Forbidden 為 SunnyHills World Project 脈絡下的榴槤甜點品牌。"
+      },
+      {
+        "title": "SunnyHills Singapore - FORBIDDEN Durian",
+        "url": "https://www.sunnyhills.com.sg/collections/forbidden-durian",
+        "date": "查核日 2026-06-25",
+        "note": "SunnyHills Singapore 官方集合頁列 FORBIDDEN 榴槤甜點脈絡。"
+      },
+      {
+        "title": "中央社 - 產地標中國台灣 微熱山丘澄清：中國經銷商重新貼標",
+        "url": "https://www.cna.com.tw/news/afe/202501030176.aspx",
+        "date": "2025-01-03",
+        "note": "報導中國市場產品標示「中國台灣」爭議、品牌聲明與中國經銷商代理說法，並提及 2018 年也曾有類似標示。"
+      },
+      {
+        "title": "壹蘋新聞網 - 微熱山丘喊冤產地只標台灣，卻自曝包裝用這兩字稱中國",
+        "url": "https://news.nextapple.com/life/20250103/5A85D2053EAC14B8D0CEC8B519CE00A8",
+        "date": "2025-01-03",
+        "note": "報導品牌公布包裝另有「中國內地專供版」字樣，作為矮化標示爭議來源。"
+      }
+    ],
+    "aiNotes": "此筆是低可信度／觀察中；收錄重點是中國市場標示與通路合規爭議，不是確認寶田或微熱山丘有國資、黨建、制裁或法律違規問題。已核對官方／公開商品線與延伸品牌：台灣為鳳梨酥、蘋果酥、山丘芭娜娜、鳳梨汁、柚香蘋果酥；中港為鳳梨酥／凤梨酥、蜜豐糖脆蛋糕／蜜丰糖脆蛋糕；日本為パイナップルケーキ、りんごケーキ、バナナワッフルクッキー；英文／新加坡為 Pineapple Cake、D24 Durian Roll、Musang King Roulade；延伸品牌／企劃包含 Smille 微笑蜜樂、蜜樂酥、全球果實計畫、FORBIDDEN 馥餅殿、微熱生活。一般未帶品牌的鳳梨酥、蘋果酥、鳳梨汁、蛋糕、榴槤捲、蘋果蛋糕、香蕉鬆餅餅乾等泛用品項不得當成命中。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "統一編號：24202147",
+      "食品業者登錄字號：M-124202147-00000-2"
+    ]
+  },
+  {
+    "id": "kp-global-palladium-k-swiss",
+    "name": "KP Global / Palladium / K-Swiss",
+    "aliases": [
+      "KP Global",
+      "KP Global Investment Limited",
+      "Palladium Boots",
+      "Palladium",
+      "PALLADIUM",
+      "Palladium TW",
+      "Palladium Taiwan",
+      "帕拉丁",
+      "帕拉迪姆",
+      "K-Swiss",
+      "K·SWISS",
+      "K SWISS",
+      "Ding Shun Investment",
+      "Xtep",
+      "特步"
+    ],
+    "country": "中國",
+    "categories": [
+      "服飾／玩具／生活零售"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "黨組織／黨建關聯",
+      "母公司／控制股東中國市場關聯"
+    ],
+    "confidence": "medium",
+    "status": "watchlist",
+    "summary": "Palladium 與 K-Swiss 現由 KP Global 持有；KP Global 於 2024 年由中國運動品牌特步出售給特步控股股東丁氏家族，特步公開資料顯示集團黨委與黨建活動。因非國企、未見制裁或強迫勞動直接證據，列中等信心觀察。此條目指鞋靴／服飾品牌，不指金屬元素鈀。",
+    "sources": [
+      {
+        "title": "Palladium 台灣官網旗艦店",
+        "url": "https://www.palladium.com.tw/",
+        "date": "查核日 2026-06-25",
+        "note": "台灣官網列 Palladium 防水鞋、軍靴、服飾與配件等商品，確認本地消費可接觸。"
+      },
+      {
+        "title": "Xtep International - Our Brands > Palladium",
+        "url": "https://www.xtep.com.hk/en/brands/palladium.php",
+        "date": "查核日 2026-06-25",
+        "note": "特步投資人網站列 Palladium 品牌頁，並導向 Palladium 官方網站與天貓通路。"
+      },
+      {
+        "title": "Xtep International - Disposal of KP Global announcement",
+        "url": "https://doc.irasia.com/listco/hk/xtep/announcement/a240509.pdf",
+        "date": "2024-05-09",
+        "note": "公告列 KP Global 持有 K-Swiss 與 Palladium，並說明丁氏家族收購 KP Global、特步保留可轉債與潛在股權轉換安排。"
+      },
+      {
+        "title": "東南網 - 特步：讓黨建融入職工的工作與生活",
+        "url": "https://qz.fjsen.com/2019-07/02/content_22458566_0.htm",
+        "date": "2019-07-02",
+        "note": "報導特步公司黨支部升格為黨委，並列行政、同步、營銷、供應鏈支部及黨建融入企業活動。"
+      }
+    ],
+    "aiNotes": "本條目用於標示 Palladium/K-Swiss 鞋靴服飾品牌的中國控制鏈與特步黨建關聯；不代表 Palladium 金屬元素、化學材料，或所有歷史/海外庫存商品皆有同等風險。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "palladiumboots.com",
+      "palladium.com.tw",
+      "1368.HK",
+      "KP Global Investment Limited"
+    ]
+  },
+  {
+    "id": "coco-fresh-tea",
+    "name": "CoCo都可 / CoCo Fresh Tea & Juice / 億可國際飲食",
+    "aliases": [
+      "CoCo都可",
+      "CoCo Fresh Tea & Juice",
+      "都可茶飲",
+      "都可",
+      "億可國際飲食",
+      "億可國際飲食股份有限公司",
+      "OCOCO INTERNATIONAL CO., LTD.",
+      "OCOCO Fresh Tea & Juice International"
+    ],
+    "country": "台灣／中國大陸營運曝險",
+    "categories": [
+      "食品／飲料／農水產"
+    ],
+    "avoidReasons": [
+      "中國市場政治表態／審查風險",
+      "中國大陸營運曝險"
+    ],
+    "confidence": "medium",
+    "status": "watchlist",
+    "summary": "CoCo都可台灣母體公開資料未顯示中港資控制；收錄理由是中國大陸營運規模高，且 2019 年香港反送中期間曾因中國輿論壓力切割香港門市並發表香港主權表態。此條不標示為中資控制。",
+    "sources": [
+      {
+        "title": "CoCo Fresh Tea & Juice - About",
+        "url": "https://www.coco-tea.com/about",
+        "date": "查核日 2026-06-25",
+        "note": "官方頁面稱 CoCo 於 1997 年由 Tommy Hung 創立。"
+      },
+      {
+        "title": "台灣公司網 - 億可國際飲食股份有限公司",
+        "url": "https://twincn.com/item.aspx?no=12915964",
+        "date": "查核日 2026-06-25",
+        "note": "公司登記公開彙整列億可國際飲食、英文名 OCOCO INTERNATIONAL CO., LTD. 與董監事資料。"
+      },
+      {
+        "title": "CoCo都可中國加盟官網",
+        "url": "https://www.coco-tea.com.cn/",
+        "date": "查核日 2026-06-25",
+        "note": "中國加盟官網列中國覆蓋省市與門市規模，支撐中國大陸營運曝險。"
+      },
+      {
+        "title": "中央社 - 反送中延燒 CoCo聲明香港是中國不可分割一部分",
+        "url": "https://www.cna.com.tw/news/firstnews/201908090233.aspx",
+        "date": "2019-08-09",
+        "note": "報導 CoCo 對香港門市收據事件聲明香港是中國不可分割的一部分，並暫停灣仔門市。"
+      },
+      {
+        "title": "關鍵評論網 - 反送中手搖飲政治表態事件整理",
+        "url": "https://www.thenewslens.com/article/123311",
+        "date": "2019-08-13",
+        "note": "補充手搖飲政治表態事件脈絡，並指出部分地圖指控涉及山寨網站，需和確定聲明分開看。"
+      }
+    ],
+    "aiNotes": "coco 名稱高度歧義；此筆只指台灣手搖飲品牌 CoCo都可／CoCo Fresh Tea & Juice／億可國際飲食，不指其他 Coco 品牌、椰子商品或泛用詞。未找到 CoCo 台灣母體中港資控制、黨建或制裁證據；中國大陸加盟與區域授權結構仍需工商資料穿透。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "統一編號：12915964",
+      "coco-tea.com",
+      "coco-tea.com.cn",
+      "OCOCO INTERNATIONAL CO., LTD."
+    ]
+  },
+  {
+    "id": "xiaogu-jiejie-malaban",
+    "name": "小谷姐姐 / 小谷姊姊 / 天津小谷頓餐飲",
+    "aliases": [
+      "小谷姐姐",
+      "小谷姊姊",
+      "天津小谷顿餐饮管理服务有限公司",
+      "天津小谷頓餐飲管理服務有限公司",
+      "双玉餐飲有限公司",
+      "雙玉餐飲有限公司"
+    ],
+    "country": "中國",
+    "categories": [
+      "餐飲／生活服務"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "中國品牌／總部背景"
+    ],
+    "confidence": "medium",
+    "status": "watchlist",
+    "summary": "公開來源可將「小谷姊姊」對應到中國天津起源的餐飲品牌「小谷姐姐」；台灣 104 頁面稱其起源於 2018 年天津，官方加盟網站頁尾列天津小谷頓餐飲管理服務有限公司。未找到黨建、制裁、審查或台灣矮化證據。",
+    "sources": [
+      {
+        "title": "小谷姐姐麻辣烫加盟官网",
+        "url": "https://xiaogujiejie.com/",
+        "date": "查核日 2026-06-25",
+        "note": "官方加盟網站稱品牌成立於 2018 年、總部位於天津，頁尾列天津小谷頓餐飲管理服務有限公司。"
+      },
+      {
+        "title": "104人力銀行 - 双玉餐飲有限公司",
+        "url": "https://www.104.com.tw/company/1a2x6bnkmh",
+        "date": "查核日 2026-06-25",
+        "note": "台灣徵才頁稱小谷姐姐麻辣起源於 2018 年天津，台灣第一家分店在台北。"
+      },
+      {
+        "title": "FoodTalks - 小谷姐姐",
+        "url": "https://www.foodtalks.cn/company/xiao_gu_jie_jie",
+        "date": "查核日 2026-06-25",
+        "note": "食品公司庫列天津小谷頓餐飲管理服務有限公司與旗下餐飲品牌小谷姐姐。"
+      }
+    ],
+    "aiNotes": "此筆只指餐飲連鎖品牌小谷姐姐／小谷姊姊，不指兒童節目主持人、藝人或泛稱姐姐。台灣双玉餐飲有限公司與天津總部之間的授權或股權控制鏈尚未由政府登記或合約資料完整證實，因此列 watchlist 而非 confirmed。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "xiaogujiejie.com",
+      "天津小谷顿餐饮管理服务有限公司"
+    ]
+  },
+  {
+    "id": "lanvin-group-fosun",
+    "name": "Lanvin Group / Lanvin / Wolford / Sergio Rossi",
+    "aliases": [
+      "Lanvin Group",
+      "Lanvin",
+      "浪凡",
+      "Wolford",
+      "Sergio Rossi",
+      "St. John Knits",
+      "St John Knits",
+      "Caruso",
+      "復星時尚",
+      "复星时尚",
+      "Fosun Fashion Group"
+    ],
+    "country": "中國／歐洲品牌組合",
+    "categories": [
+      "服飾／玩具／生活零售"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "中國集團控制",
+      "母公司黨建關聯"
+    ],
+    "confidence": "high",
+    "status": "confirmed",
+    "summary": "Lanvin Group 總部在中國，管理 Lanvin、Wolford、Sergio Rossi、St. John Knits 等歐洲／美國精品品牌；公開申報文件顯示 Fosun International 持有過半投票權，復星另有公開黨建資料。",
+    "sources": [
+      {
+        "title": "Lanvin Group - Company profile",
+        "url": "https://www.lanvin-group.com/en/",
+        "date": "查核日 2026-06-25",
+        "note": "官方頁面稱 Lanvin Group headquartered in China，管理 Lanvin、Sergio Rossi、Wolford、St. John Knits 等品牌。"
+      },
+      {
+        "title": "Lanvin Group 2024 Form 20-F",
+        "url": "https://www.sec.gov/Archives/edgar/data/1922097/000141057825001024/lanv-20241231x20f.htm",
+        "date": "2025-04-30",
+        "note": "20-F 申報揭露 Fosun International 持有 Lanvin Group 過半投票權。"
+      },
+      {
+        "title": "Fosun Fashion Group to Acquire Sergio Rossi",
+        "url": "https://www.lanvin-group.com/en/fosun-fashion-group-to-acquire-italian-luxury-shoemaker-sergio-rossi/",
+        "date": "2021-06-01",
+        "note": "官方新聞稿列 Fosun Fashion Group 品牌組合，包含 Lanvin、Wolford、Caruso、St. John Knits，並宣布收購 Sergio Rossi。"
+      },
+      {
+        "title": "共產黨員網 - 復星一家黨建工作路徑與抓手探索",
+        "url": "https://www.12371.cn/2019/06/05/ARTI1559727544061396.shtml",
+        "date": "2019-06-05",
+        "note": "公開黨建教材介紹復星集團黨委與黨建融入經營管理。"
+      }
+    ],
+    "aiNotes": "本條目只表示公開來源足以支持風險標籤，不代表法律定罪、台灣禁售，或證明每一項商品都有問題。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "NYSE: LANV",
+      "lanvin-group.com",
+      "Fosun International"
+    ]
+  },
+  {
+    "id": "club-med-fosun",
+    "name": "Club Med / Fosun Tourism Group",
+    "aliases": [
+      "Club Med",
+      "Club Méditerranée",
+      "地中海俱樂部",
+      "地中海俱乐部",
+      "Fosun Tourism",
+      "Fosun Tourism Group",
+      "Fosun Holiday",
+      "復星旅文",
+      "复星旅文"
+    ],
+    "country": "中國／法國品牌",
+    "categories": [
+      "餐飲／生活服務"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "中國集團控制",
+      "母公司黨建關聯"
+    ],
+    "confidence": "high",
+    "status": "confirmed",
+    "summary": "Club Med 是法國起源度假村品牌；公開資料顯示已由復星旅文／Fosun Tourism Group 持有與經營，且 2025 年 Club Med 高層更替也由復星推動。復星本身有公開黨建資料。",
+    "sources": [
+      {
+        "title": "Fosun Holiday - Company Profile",
+        "url": "https://en.fosunholiday.com/about/index.html",
+        "date": "查核日 2026-06-25",
+        "note": "復星旅文公司簡介列 Club Med Holding 與 Club Med 管理層。"
+      },
+      {
+        "title": "Fosun - Fosun's Story 2025",
+        "url": "https://en.fosun.com/content/details46_5497.html",
+        "date": "2026-01-23",
+        "note": "復星官方回顧稱 2015 年完成 Club Med 收購，並列 Club Med 2025 年業務表現。"
+      },
+      {
+        "title": "Le Monde - Club Med : Henri Giscard d'Estaing débarqué par le propriétaire chinois du groupe, Fosun",
+        "url": "https://www.lemonde.fr/economie/article/2025/07/16/club-med-henri-giscard-d-estaing-debarque-par-le-proprietaire-chinois-du-groupe-fosun_6621617_3234.html",
+        "date": "2025-07-16",
+        "note": "報導 Club Med 董事長被中國股東復星撤換，作為控制與治理影響佐證。"
+      },
+      {
+        "title": "共產黨員網 - 復星一家黨建工作路徑與抓手探索",
+        "url": "https://www.12371.cn/2019/06/05/ARTI1559727544061396.shtml",
+        "date": "2019-06-05",
+        "note": "公開黨建教材介紹復星集團黨委與黨建融入經營管理。"
+      }
+    ],
+    "aiNotes": "本條目只表示公開來源足以支持風險標籤，不代表法律定罪、台灣禁售，或證明每一項商品都有問題。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "fosunholiday.com",
+      "Fosun Tourism Group",
+      "01992.HK"
+    ]
+  },
+  {
+    "id": "pirelli-sinochem",
+    "name": "Pirelli / Sinochem / ChemChina",
+    "aliases": [
+      "Pirelli",
+      "Pirelli & C.",
+      "Pirelli & C. S.p.A.",
+      "倍耐力",
+      "Sinochem",
+      "Sinochem Holdings",
+      "ChemChina",
+      "CNRC",
+      "Marco Polo International Italy"
+    ],
+    "country": "義大利／中國國企持股",
+    "categories": [
+      "汽車／交通／能源"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "國企／央企",
+      "外國政府 golden power 限制"
+    ],
+    "confidence": "high",
+    "status": "confirmed",
+    "summary": "Pirelli 最大中資股東為中國國企系統 Sinochem/ChemChina/CNRC；義大利政府因 Pirelli 智慧輪胎資料與戰略技術疑慮，對中資股東治理權施加 golden power 限制。控制認定近年有變動與爭議，但國企重大持股與政府限制證據明確。",
+    "sources": [
+      {
+        "title": "Pirelli - Shareholder structure",
+        "url": "https://corporate.pirelli.com/corporate/en-ww/investors/shareholder-information/shareholder-structure",
+        "date": "更新日 2026-06",
+        "note": "Pirelli 官方投資人頁列最新股權結構。"
+      },
+      {
+        "title": "Pirelli - New measures to Marco Polo/CNRC by Golden Power PMO decree",
+        "url": "https://press.pirelli.com/pirelli-new-measures-to-marco-polocnrc-by-golden-power--pmo-decree/",
+        "date": "2026-04-16",
+        "note": "Pirelli 公告義大利政府對 Marco Polo/CNRC 施加 golden power 措施。"
+      },
+      {
+        "title": "AP - Italy opens procedure against China's Sinochem for possible breach of Pirelli governance",
+        "url": "https://apnews.com/article/italy-golden-power-china-pirelli-sinochem-67a3276b8e391fe0c7903ae8ea9cbc8b",
+        "date": "2024-11-07",
+        "note": "報導 Sinochem 持有 Pirelli 37% 股權，並受義大利 golden power 限制審查。"
+      },
+      {
+        "title": "國務院國資委中央企業名錄",
+        "url": "https://wap.sasac.gov.cn/n2588045/n27271785/n27271792/c14159097/content.html",
+        "date": "查核日 2026-06-25",
+        "note": "國務院國資委中央企業名錄可確認相關集團的央企背景。"
+      }
+    ],
+    "aiNotes": "此筆指義大利輪胎與智慧輪胎品牌 Pirelli，不指一般輪胎品類。Pirelli 董事會與義大利政府已限制中資治理權，故摘要用重大國企持股與治理風險，不簡化成目前完全由中方日常控制。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "pirelli.com",
+      "Sinochem Holdings",
+      "CNRC",
+      "Marco Polo International Italy",
+      "Golden Power"
+    ]
+  },
+  {
+    "id": "ferretti-group-weichai",
+    "name": "Ferretti Group / Riva / Pershing / Wally / Weichai",
+    "aliases": [
+      "Ferretti",
+      "Ferretti Group",
+      "Ferretti Yachts",
+      "Riva",
+      "Pershing",
+      "Wally",
+      "Itama",
+      "CRN",
+      "Custom Line",
+      "Mochi Craft",
+      "Weichai",
+      "Weichai Group",
+      "SHIG",
+      "Shandong Heavy Industry Group",
+      "Ferretti International Holding"
+    ],
+    "country": "義大利／中國地方國資持股",
+    "categories": [
+      "汽車／交通／能源"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "國企／地方國資",
+      "中國控制股東"
+    ],
+    "confidence": "high",
+    "status": "confirmed",
+    "summary": "Ferretti Group 是義大利豪華遊艇集團，旗下含 Riva、Pershing、Wally 等品牌；公開年報與公告列 Weichai/SHIG/Ferretti International Holding 為控制股東，且 SHIG 關聯山東省國資。",
+    "sources": [
+      {
+        "title": "Ferretti Group 2025 Annual Report",
+        "url": "https://www.ferrettigroup.com/Upload/EI_IPO_IT/20260424100515_2026042400099.pdf",
+        "date": "2026-04-24",
+        "note": "年報列 Weichai、SHIG、FIH 相關控制股東與董事會資訊。"
+      },
+      {
+        "title": "Ferretti Group 2025 Interim Report",
+        "url": "https://www.ferrettigroup.com/Upload/EI_IPO_IT/20250731160910_E_897264_FERRETTI_IR2025_0731_2200_ESS.pdf",
+        "date": "2025-07-31",
+        "note": "中期報告揭露 FIH、Weichai、SHIG 與 Shandong SASAC 的持股鏈。"
+      },
+      {
+        "title": "Ferretti Group - SHIG-Weichai Group takes control",
+        "url": "https://www.ferrettigroup.com/en-us/News-and-events/Detail/t/SHIG--WEICHAI-GROUP-TAKES-CONTROL-OF-WORLDS/y/2012/n/247",
+        "date": "2012-01-10",
+        "note": "Ferretti 官方歷史新聞稿說明 SHIG-Weichai Group 取得控制權。"
+      },
+      {
+        "title": "PR Newswire - Ferretti shareholders elect new board; FIH and Weichai reaffirm support",
+        "url": "https://www.prnewswire.com/news-releases/ferretti-spa-shareholders-elect-new-board-of-directors-at-annual-general-meeting-fih-and-weichai-group-reaffirm-full-support-for-the-companys-future-development-302792438.html",
+        "date": "2026-06-05",
+        "note": "近期公告稱 FIH 為 Weichai 全資子公司與 Ferretti 控制股東，並說明股東會董事選任。"
+      }
+    ],
+    "aiNotes": "此筆指 Ferretti Group 旗下遊艇品牌控制鏈；不代表所有二手船、歷史船款或無關同名品牌皆有同等風險。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "9638.HK",
+      "YACHT.MI",
+      "ferrettigroup.com",
+      "Ferretti International Holding S.p.A.",
+      "Weichai Group",
+      "Shandong SASAC"
+    ]
+  },
+  {
+    "id": "nice-magic-amah-household",
+    "name": "納愛斯 / 妙管家 / 台灣妙管家",
+    "aliases": [
+      "納愛斯",
+      "纳爱斯",
+      "Nice Group",
+      "妙管家",
+      "台灣妙管家",
+      "台湾妙管家",
+      "台灣妙管家股份有限公司",
+      "台湾妙管家股份有限公司",
+      "MAGIC AMAH HOUSEHOLD (TAIWAN) CO., LTD.",
+      "大陸商納愛斯浙江投資有限公司",
+      "纳爱斯浙江投资有限公司",
+      "納愛斯浙江投資有限公司"
+    ],
+    "country": "中國",
+    "categories": [
+      "家電／智慧家庭"
+    ],
+    "avoidReasons": [
+      "中共政權關聯風險",
+      "中國企業控制",
+      "黨組織／黨建關聯"
+    ],
+    "confidence": "high",
+    "status": "confirmed",
+    "summary": "台灣妙管家清潔用品公司已由中國納愛斯浙江投資有限公司 100% 收購，現行公司登記也顯示董監事代表法人為大陸商納愛斯浙江投資有限公司；納愛斯官網另有黨建資料。此筆不指同名卡式爐／戶外生活用品品牌。",
+    "sources": [
+      {
+        "title": "台灣妙管家股份有限公司官方網站",
+        "url": "https://www.amah.com.tw/tw/index.asp?au_id=1",
+        "date": "查核日 2026-06-25",
+        "note": "官方網站列台灣妙管家股份有限公司與清潔用品業務。"
+      },
+      {
+        "title": "自由財經 - 陸資13.5億收購台灣妙管家",
+        "url": "https://ec.ltn.com.tw/article/breakingnews/1112876",
+        "date": "2014-09-25",
+        "note": "報導投審會通過納愛斯浙江投資有限公司以 13.5 億元收購台灣妙管家 100% 股權。"
+      },
+      {
+        "title": "台灣公司網 - 台灣妙管家股份有限公司",
+        "url": "https://twincn.com/item.aspx?no=23912009",
+        "date": "查核日 2026-06-25",
+        "note": "公司登記公開彙整顯示董監事代表法人為大陸商納愛斯浙江投資有限公司。"
+      },
+      {
+        "title": "納愛斯 - 妙管家品牌頁",
+        "url": "https://www.cnnice.com/brand/353.html",
+        "date": "查核日 2026-06-25",
+        "note": "納愛斯官網將妙管家列為旗下品牌。"
+      },
+      {
+        "title": "納愛斯 - 黨建引領聚合力",
+        "url": "https://www.cnnice.com/news/1400.html",
+        "date": "查核日 2026-06-25",
+        "note": "納愛斯官網黨建文章，支撐母公司黨組織／黨建關聯。"
+      }
+    ],
+    "aiNotes": "妙管家在台灣至少有清潔用品與卡式爐／戶外用品兩個容易混淆的品牌脈絡；此筆只指被納愛斯收購的台灣妙管家清潔用品公司，不把清潔劑、洗衣精、除濕劑等泛用品項作為 alias。",
+    "lastReviewed": "2026-06-25",
+    "identifiers": [
+      "統一編號：23912009",
+      "amah.com.tw",
+      "cnnice.com"
+    ]
   }
 ]
