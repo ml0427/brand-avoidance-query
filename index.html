@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>品牌避雷查詢</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page-shell" aria-labelledby="pageTitle">
+    <header class="page-header">
+      <h1 id="pageTitle">品牌避雷查詢</h1>
+      <p id="dataStatus" class="data-status" aria-live="polite">資料狀態：尚未載入</p>
+    </header>
+
+    <section class="query-panel" aria-label="查詢條件">
+      <div class="search-field">
+        <label for="searchInput">搜尋</label>
+        <input id="searchInput" name="q" type="search" autocomplete="off">
+      </div>
+
+      <div class="filter-grid">
+        <label for="confidenceFilter">
+          <span>可信度</span>
+          <select id="confidenceFilter" name="confidence">
+            <option value="">全部可信度</option>
+          </select>
+        </label>
+
+        <label for="statusFilter">
+          <span>狀態</span>
+          <select id="statusFilter" name="status">
+            <option value="">全部狀態</option>
+          </select>
+        </label>
+
+        <label for="categoryFilter">
+          <span>分類</span>
+          <select id="categoryFilter" name="category">
+            <option value="">全部分類</option>
+          </select>
+        </label>
+
+        <label for="reasonFilter">
+          <span>避買理由</span>
+          <select id="reasonFilter" name="reason">
+            <option value="">全部避買理由</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="result-summary" aria-label="查詢結果摘要">
+      <p id="resultCount" aria-live="polite">結果計數：0</p>
+    </section>
+
+    <section id="warningBox" class="warning-box" aria-live="polite" hidden></section>
+
+    <section id="results" class="results" aria-label="查詢結果"></section>
+
+    <section id="emptyState" class="empty-state" aria-live="polite">
+      目前沒有可顯示的品牌資料。
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
