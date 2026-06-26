@@ -1696,14 +1696,72 @@
     "name": "旺旺 / 中國旺旺控股",
     "aliases": [
       "旺旺",
+      "旺旺集團",
+      "旺旺食品",
       "中國旺旺",
+      "中國旺旺控股",
       "Want Want",
+      "Want Want Holdings",
+      "旺仔",
+      "旺仔俱樂部",
+      "旺仔旺鋪",
       "旺旺仙貝",
+      "福旺仙貝",
+      "旺仔雪餅",
       "旺旺雪餅",
       "旺仔牛奶",
+      "旺旺香蕉牛奶",
+      "旺仔牛奶糖",
+      "旺仔小饅頭",
+      "旺仔米餅",
+      "旺仔有機米餅",
+      "旺旺小小酥",
+      "旺旺O泡果奶",
+      "O泡果奶",
+      "旺旺果粒多",
+      "果粒多",
       "浪味仙",
-      "中天",
-      "中國時報"
+      "LONELY GOD 浪味仙",
+      "浪味炒麵",
+      "黑白配",
+      "旺旺黑白配",
+      "旺旺碎冰冰",
+      "挑豆",
+      "雪里菓",
+      "旺旺厚燒",
+      "無聊派",
+      "嚼代爽椒",
+      "Got Rice",
+      "帕樂德",
+      "匠派",
+      "米小餅",
+      "紫薯物語",
+      "金薯物語",
+      "紅麴物語",
+      "青蔥物語",
+      "米CHEESE",
+      "瑞花米果",
+      "米豆米果",
+      "燒米屋",
+      "波貝仙",
+      "貝比瑪瑪",
+      "Baby Mama",
+      "野川蛋黃派",
+      "Jelly蒟蒻凍",
+      "旺旺食技研",
+      "爆利旺",
+      "旺事平安",
+      "旺事發財",
+      "金旺米果",
+      "邦德咖啡",
+      "邦德食品",
+      "Fix XBody",
+      "FixXBody",
+      "WANTPOWER",
+      "水神",
+      "Water God",
+      "諾旺生醫",
+      "太陽星"
     ],
     "country": "中國",
     "categories": [
@@ -1712,11 +1770,11 @@
     "avoidReasons": [
       "中共政權關聯風險",
       "公開表態／補貼爭議",
-      "親共媒體爭議"
+      "同集團媒體親共爭議"
     ],
     "confidence": "high",
     "status": "confirmed",
-    "summary": "旺旺食品本身不是國企；收錄理由是同集團中國補貼與台灣媒體親中／親共影響爭議有公開來源支撐。",
+    "summary": "旺旺食品本身不是國企；收錄理由是中國補貼、蔡衍明與旺旺中時媒體集團親中／親共影響爭議有公開來源支撐。此筆收食品、飲料與集團關聯消費品牌；媒體品牌另拆到旺旺中時媒體集團紀錄。",
     "sources": [
       {
         "title": "Freedom House - Beijing's Global Media Influence: Taiwan",
@@ -1731,7 +1789,7 @@
         "note": "報導旺旺承認有中國地方政府補助但否認政治用途，並引述台灣主管機關疑慮。"
       }
     ],
-    "aiNotes": "食品本身與媒體風險要分開說明；此條不是指所有旺旺食品有違法問題，而是使用者可依集團爭議避買。",
+    "aiNotes": "此筆收旺旺食品、飲料與集團關聯消費品牌；中天、中國時報、中視、工商時報等媒體已拆到 want-want-china-times-media-group。不要把食品、飲料、零食、米果、牛奶、咖啡、清潔、保健等泛稱當 alias。水神、諾旺生醫、太陽星等是旺旺官網／商城關聯入口，回答時應說明屬關聯品牌辨識，不等於每項商品本身有安全或違法定論。",
     "lastReviewed": "2026-06-25"
   },
   {
@@ -5619,6 +5677,102 @@
       }
     ],
     "aiNotes": "此筆 personal，證據重點是杜詩梅公開受訪時將大罷免列為餐廳生意受影響因素之一，並非店內張貼反罷免文宣。confidence medium 是因為『挑釁』主要來自社群炎上與批評脈絡，直接新聞語句較像歸因／抱怨。不要把海鮮、燒烤、花蓮餐廳、大罷免等泛稱列為 alias。",
+    "lastReviewed": "2026-06-25"
+  },
+  {
+    "id": "want-want-china-times-media-group",
+    "name": "旺旺中時集團 / 中國時報 / 中天 / 中視",
+    "aliases": [
+      "旺旺中時集團",
+      "旺中集團",
+      "旺中",
+      "Want Want China Times Group",
+      "China Times Group",
+      "中國時報",
+      "中時新聞網",
+      "China Times",
+      "中天",
+      "中天新聞",
+      "中天新聞台",
+      "中天電視",
+      "CTi TV",
+      "CTi News",
+      "中國電視",
+      "中視",
+      "中視新聞",
+      "CTV",
+      "工商時報",
+      "工商時報網",
+      "Commercial Times",
+      "CTWANT",
+      "旺報",
+      "時報資訊",
+      "InfoTimes",
+      "伊林娛樂",
+      "Eelin",
+      "時際創意傳媒",
+      "商訊文化",
+      "旺旺中時文化傳媒",
+      "美國中旺電視",
+      "樂時尚",
+      "快點TV",
+      "翻爆",
+      "旺傳媒"
+    ],
+    "identifiers": [
+      "蔡衍明",
+      "Want Want",
+      "chinatimes.com",
+      "ctitv.com.tw",
+      "ctv.com.tw",
+      "ctee.com.tw"
+    ],
+    "country": "台灣",
+    "categories": [
+      "社群／App／媒體娛樂"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "親中／親共媒體爭議",
+      "中國補貼／中共影響疑慮",
+      "NCC 中天新聞台換照爭議"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：旺旺官網列旺旺中時媒體集團及其友鏈含中時新聞網、中國電視、中天電視、工商時報、時報資訊、伊林娛樂、時際創意傳媒、商訊文化、旺旺中時文化傳媒、美國中旺電視、樂時尚、快點TV、翻爆等；Freedom House、RSF、陸委會與 NCC 等公開來源均記錄旺中媒體在中國影響、親中宣傳或中天新聞台換照爭議脈絡。此筆是紅媒／個人避開紀錄，不作單一節目或每位員工法律定論。",
+    "sources": [
+      {
+        "title": "旺旺集團 - 旺傳媒",
+        "url": "https://www.want-want.com/tw/about/media",
+        "date": "查核日 2026-06-26",
+        "note": "旺旺官網稱旺傳媒覆蓋旺旺中時媒體集團及其他轉投資單位，頁尾友鏈列中時新聞網、中國電視、中天電視、工商時報、時報資訊等。"
+      },
+      {
+        "title": "Freedom House - Beijing's Global Media Influence: Taiwan",
+        "url": "https://freedomhouse.org/country/taiwan/beijings-global-media-influence/2022",
+        "date": "2022",
+        "note": "指出旺旺中國控股取得中國政府補貼，並將同集團媒體列入北京對台媒體影響疑慮脈絡。"
+      },
+      {
+        "title": "中央社 - NCC不予中天新聞台換照 法院撤銷原處分：審查基礎錯誤",
+        "url": "https://www.cna.com.tw/news/asoc/202305100240.aspx",
+        "date": "2023-05-10",
+        "note": "報導中天新聞台換照遭 NCC 審議駁回、法院撤銷原處分與相關審查爭議，並整理 NCC 認定脈絡。"
+      },
+      {
+        "title": "Reporters Without Borders - Taiwan: Abusive libel suit against Financial Times correspondent",
+        "url": "https://rsf.org/en/taiwan-abusive-libel-suit-against-financial-times-correspondent",
+        "date": "2019-07-24",
+        "note": "RSF 說明旺中媒體集團對 Financial Times 記者提告脈絡，該報導涉及中國干預中國時報編輯方向指控。"
+      },
+      {
+        "title": "Mainland Affairs Council - MAC Condemns Want Want China Times Media Group",
+        "url": "https://www.mac.gov.tw/en/News_Content.aspx?n=A921DFB2651FF92F&s=D44F04601C361502&sms=37838322A6DA5E79",
+        "date": "2025-06-02",
+        "note": "陸委會英文新聞稿標題即稱譴責旺旺中時媒體集團配合中共統戰宣傳，並將依法查處。"
+      }
+    ],
+    "aiNotes": "此筆是紅媒／個人避開紀錄，依使用者要求採網路常見紅媒圖譜方向並用公開來源核對。不要把媒體、新聞、電視、報紙、節目等泛稱當 alias；回答時應區分旺旺食品與旺中媒體。中天新聞台換照是 NCC 對頻道換照處分，不等於中天全部內容均違法；FT/RSF 脈絡涉及報導與訴訟爭議，需避免寫成已法院定罪。",
     "lastReviewed": "2026-06-25"
   }
 ]
