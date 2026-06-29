@@ -64,6 +64,30 @@ export function normalizeText(value) {
   return cleanString(value).toLowerCase();
 }
 
+const GENERIC_QUERY_BLOCKLIST = new Set(
+  [
+    "APP",
+    "中國製",
+    "中国制",
+    "中国製",
+    "口腔用品",
+    "口腔清潔用品",
+    "水",
+    "牙刷",
+    "牙膏",
+    "政治人物",
+    "瓶裝水",
+    "導演",
+    "礦泉水",
+    "藝人",
+    "遠端桌面",
+    "飲料",
+    "飲料店",
+    "飲用水",
+    "反罷免",
+  ].map(normalizeText),
+);
+
 export function asStringArray(value) {
   const values = Array.isArray(value)
     ? value
@@ -172,6 +196,10 @@ export function filterBrands(brands, filters = {}) {
   const countryFilters = activeFilterSet(filters.country);
   const categoryFilters = activeFilterSet(filters.category ?? filters.categories);
   const reasonFilters = activeFilterSet(filters.reason ?? filters.avoidReason ?? filters.avoidReasons);
+
+  if (query && GENERIC_QUERY_BLOCKLIST.has(query)) {
+    return [];
+  }
 
   return brands.filter((brand) => {
     if (!brand || typeof brand !== "object") {
