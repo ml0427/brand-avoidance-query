@@ -85,6 +85,12 @@ const GENERIC_QUERY_BLOCKLIST = new Set(
     "飲料店",
     "飲用水",
     "反罷免",
+    "海鮮",
+    "沖繩餐廳",
+    "沖縄餐廳",
+    "蒸汽料理",
+    "蒸気料理",
+    "天理スタミナラーメン",
   ].map(normalizeText),
 );
 
