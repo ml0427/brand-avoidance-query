@@ -76,6 +76,8 @@ const GENERIC_QUERY_BLOCKLIST = new Set(
     "牙刷",
     "牙膏",
     "政治人物",
+    "廣洋",
+    "广洋",
     "瓶裝水",
     "導演",
     "礦泉水",
