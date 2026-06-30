@@ -85,6 +85,8 @@ const GENERIC_QUERY_BLOCKLIST = new Set(
     "飲料店",
     "飲用水",
     "反罷免",
+    "歌手",
+    "馬來西亞歌手",
     "海鮮",
     "沖繩餐廳",
     "沖縄餐廳",
