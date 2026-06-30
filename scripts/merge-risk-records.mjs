@@ -53,6 +53,58 @@ function source(title, url, date, note) {
   return { title, url, date, note };
 }
 
+const categoryNormalization = new Map([
+  ["科技／通訊／消費電子", "科技／通訊資安"],
+  ["監控／AI／資安", "科技／通訊資安"],
+  ["電商／App／數位服務", "App／數位服務"],
+  ["社群／App／媒體娛樂", "App／數位服務"],
+  ["遠端桌面 App", "App／數位服務"],
+  ["遠端控制軟體", "App／數位服務"],
+  ["雲端服務", "App／數位服務"],
+  ["汽車／交通／能源", "車輛交通"],
+  ["食品／飲料／農水產", "食品飲料"],
+  ["食品／飲料／飲用水", "食品飲料"],
+  ["食品／飲料／果汁／全家商品來源", "食品飲料"],
+  ["餐飲／生活服務", "餐飲旅遊"],
+  ["餐飲／旅遊服務", "餐飲旅遊"],
+  ["餐廳／海鮮／沖繩", "餐飲旅遊"],
+  ["口腔清潔用品", "口腔用品"],
+  ["牙刷", "口腔用品"],
+  ["牙膏", "口腔用品"],
+  ["服飾／玩具／生活零售", "服飾生活"],
+  ["兒童用品", "服飾生活"],
+  ["家電／智慧家庭", "家電智慧家庭"],
+  ["媒體／娛樂／公眾人物", "媒體娛樂"],
+  ["歌手／藝人", "媒體娛樂"],
+  ["影像創作者／導演", "媒體娛樂"],
+  ["政治／統戰／公眾人物", "政治／公眾人物"],
+  ["政治／個人避開", "政治／公眾人物"],
+  ["政治／政黨人物／參選人", "政治／公眾人物"],
+  ["政治／政黨人物／幕僚", "政治／公眾人物"],
+  ["環境倡議／社運／政黨人物名單", "政治／公眾人物"],
+  ["政治／政黨人物名單", "政治／政黨名單"],
+  ["司法／環境污染／廢棄物案件", "司法／企業案件"],
+  ["公司／負責人關聯", "司法／企業案件"],
+]);
+
+function normalizeCategories(categories = []) {
+  const normalized = [];
+  const seen = new Set();
+
+  for (const category of categories) {
+    const canonical = categoryNormalization.get(category) ?? category;
+
+    if (!canonical || seen.has(canonical)) {
+      continue;
+    }
+
+    seen.add(canonical);
+    normalized.push(canonical);
+  }
+
+  return normalized;
+}
+
 function record({
   id,
   name,
@@ -74,7 +126,7 @@ function record({
     aliases,
     ...(identifiers ? { identifiers } : {}),
     country,
-    categories,
+    categories: normalizeCategories(categories),
     avoidReasons,
     confidence,
     status,
@@ -3232,7 +3284,7 @@ function applyRecordCleanup(item) {
     ...item,
     aliases,
     identifiers: uniqueStrings([...(item.identifiers ?? []), ...(cleanup.identifiers ?? [])]),
-    categories: broadCategoryOverrides.get(item.id) ?? item.categories,
+    categories: normalizeCategories(broadCategoryOverrides.get(item.id) ?? item.categories),
     summary: cleanup.summary ?? item.summary,
     aiNotes: cleanup.aiNotes ?? item.aiNotes,
   };
@@ -3241,7 +3293,7 @@ function applyRecordCleanup(item) {
 function applyBroadCategory(item) {
   return {
     ...item,
-    categories: broadCategoryOverrides.get(item.id) ?? item.categories,
+    categories: normalizeCategories(broadCategoryOverrides.get(item.id) ?? item.categories),
   };
 }
 
