@@ -1,0 +1,4 @@
+interface:
+  display_name: "Family Food Safety Lookup"
+  short_description: "Query Taiwan FamilyMart product supplier and source data."
+  default_prompt: "Use $family-foodsafety-lookup to look up supplier and source details for a FamilyMart product."
