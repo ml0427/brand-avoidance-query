@@ -6477,5 +6477,83 @@
     ],
     "aiNotes": "此筆依使用者明確指定列入 personal。公開來源可支撐其馬來西亞歌手身分、台灣出道／活動、中國芒果TV節目曝光，以及『其實沒有很想去台灣發展』發言爭議；但目前未查到中資、黨建、制裁、違法或正式政治職務證據。不要把『歌手』『馬來西亞歌手』『聲林之王』『下一戰歌手』等泛稱或節目名列為 alias。若回答使用者『在中國說』，應保守更正為目前找到的公開報導寫作回馬來西亞開唱時發言。",
     "lastReviewed": "2026-06-30"
+  },
+  {
+    "id": "familymart-oneday-fruit-drinks-china-concentrate-2026-06-30",
+    "name": "全家一日水果／蔬果飲料中國來源濃縮汁 SKU",
+    "aliases": [
+      "光泉一日快充綜合水果飲",
+      "波蜜100%一日百香果蔬果汁",
+      "波蜜一日蔬果100％紫色蔬果汁",
+      "一日水果100%蘋果汁",
+      "一日蔬果100％紫色蔬果汁",
+      "一日蔬果100%蔬果汁"
+    ],
+    "identifiers": [
+      "1147599",
+      "1413875",
+      "2921851",
+      "2970555",
+      "2970573",
+      "2970591",
+      "foodsafety.family.com.tw/Web_FFD_2022/product/1147599",
+      "foodsafety.family.com.tw/Web_FFD_2022/product/1413875",
+      "foodsafety.family.com.tw/Web_FFD_2022/product/2921851",
+      "foodsafety.family.com.tw/Web_FFD_2022/product/2970555",
+      "foodsafety.family.com.tw/Web_FFD_2022/product/2970573",
+      "foodsafety.family.com.tw/Web_FFD_2022/product/2970591"
+    ],
+    "country": "台灣通路／中國原料來源",
+    "categories": [
+      "食品／飲料／果汁／全家商品來源"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "中國來源果汁／濃縮汁原料",
+      "全家食安平台商品來源"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者指定若全家一日水果／蔬果飲料使用中國來源濃縮汁即加入避買；全家食在購安心 API 於 2026-06-30 查到 6 個一般飲料 SKU 的 RASRC 原料來源含中國來源果汁／濃縮汁：光泉一日快充綜合水果飲含蘋果濃縮汁／中國；波蜜100%一日百香果蔬果汁含蘋果濃縮汁／中國、桃子濃縮汁／中國；波蜜一日蔬果100％紫色蔬果汁、一日水果100%蘋果汁、一日蔬果100％紫色蔬果汁、一日蔬果100%蔬果汁均含蘋果濃縮汁／中國。此筆限列上述 SKU，不擴大到全家、光泉、波蜜或所有果汁。",
+    "sources": [
+      {
+        "title": "全家食在購安心 - 光泉一日快充綜合水果飲",
+        "url": "https://foodsafety.family.com.tw/Web_FFD_2022/product/1147599",
+        "date": "查核日 2026-06-30",
+        "note": "CMNO 1147599；VEND_DESC 光泉牧場股份有限公司；RASRC 列蘋果濃縮汁／中國，另有檸檬酸、檸檬酸鈉、葡萄糖酸鋅／中國。"
+      },
+      {
+        "title": "全家食在購安心 - 波蜜100%一日百香果蔬果汁",
+        "url": "https://foodsafety.family.com.tw/Web_FFD_2022/product/1413875",
+        "date": "查核日 2026-06-30",
+        "note": "CMNO 1413875；VEND_DESC 格菱股份有限公司；RASRC 列蘋果濃縮汁／中國、桃子濃縮汁／中國。"
+      },
+      {
+        "title": "全家食在購安心 - 波蜜一日蔬果100％紫色蔬果汁",
+        "url": "https://foodsafety.family.com.tw/Web_FFD_2022/product/2921851",
+        "date": "查核日 2026-06-30",
+        "note": "CMNO 2921851；VEND_DESC 格菱股份有限公司；RASRC 列蘋果濃縮汁／中國。"
+      },
+      {
+        "title": "全家食在購安心 - 一日水果100%蘋果汁",
+        "url": "https://foodsafety.family.com.tw/Web_FFD_2022/product/2970555",
+        "date": "查核日 2026-06-30",
+        "note": "CMNO 2970555；VEND_DESC 格菱股份有限公司；RASRC 列蘋果濃縮汁／中國，紙捲／中國。"
+      },
+      {
+        "title": "全家食在購安心 - 一日蔬果100％紫色蔬果汁",
+        "url": "https://foodsafety.family.com.tw/Web_FFD_2022/product/2970573",
+        "date": "查核日 2026-06-30",
+        "note": "CMNO 2970573；VEND_DESC 格菱股份有限公司；RASRC 列蘋果濃縮汁／中國，紙捲／中國。"
+      },
+      {
+        "title": "全家食在購安心 - 一日蔬果100%蔬果汁",
+        "url": "https://foodsafety.family.com.tw/Web_FFD_2022/product/2970591",
+        "date": "查核日 2026-06-30",
+        "note": "CMNO 2970591；VEND_DESC 格菱股份有限公司；RASRC 列蘋果濃縮汁／中國，紙捲／中國。"
+      }
+    ],
+    "aiNotes": "此筆是 SKU 級 personal record：依使用者口徑，針對全家食安平台查到中國來源果汁／濃縮汁的『一日』飲料列入。不要寫成全家、光泉、波蜜或所有一日系列都避雷；不要把『一日』『果汁』『水果飲』『濃縮汁』『中國製』等泛稱列為 alias。查到但未納入者：光泉一日快充高C檸檬飲（CMNO 1439025）有檸檬酸／中國、維生素C／中國，但未查到中國來源果汁／濃縮汁；綜合水果軟糖等非飲料不在本筆範圍。",
+    "lastReviewed": "2026-06-30"
   }
 ]
