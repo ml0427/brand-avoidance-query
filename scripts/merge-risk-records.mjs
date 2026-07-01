@@ -3232,7 +3232,7 @@ const riskRecords = [
   record({
     id: "hahababy-bobomommy-china-made-giveaway-personal",
     name: "HAHABABY / 波波貴媽咪有限公司",
-    aliases: ["HAHABABY", "HAHA BABY", "hahababy", "ははベビー", "嘎嫂二伯", "二伯", "李佩潔", "波波貴媽咪有限公司"],
+    aliases: ["HAHABABY", "HAHA BABY", "hahababy", "ははベビー", "嘎嫂二伯", "李佩潔", "波波貴媽咪有限公司"],
     identifiers: ["90833399", "統編90833399", "hahababyselect.com"],
     country: "台灣／中國製贈品爭議",
     categories: ["服飾／玩具／生活零售", "兒童用品"],

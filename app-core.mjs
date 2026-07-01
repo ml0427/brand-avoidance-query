@@ -143,6 +143,7 @@ const GENERIC_QUERY_BLOCKLIST = new Set(
     "導演",
     "礦泉水",
     "藝人",
+    "二伯",
     "遠端桌面",
     "飲料",
     "飲料店",
