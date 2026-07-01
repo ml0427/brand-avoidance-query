@@ -2736,6 +2736,25 @@ const riskRecords = [
     aiNotes: "此筆只列 watchlist：洪秀柱的一中／和平統一論述不必然等同明確支持中共版一國兩制，查詢時應保留政治語義差距。",
   }),
   record({
+    id: "chou-hsiwei-pro-china-statements-personal",
+    name: "周錫瑋 / Chou Hsi-wei",
+    aliases: ["周錫瑋", "周锡玮", "Chou Hsi-wei", "Chou Hsiwei", "Chou Hsi Wei"],
+    country: "台灣",
+    categories: ["政治／統戰／公眾人物"],
+    avoidReasons: ["使用者個人避開", "公開親中／中國民族認同表述", "中國飛彈／武力保護台灣言論爭議"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "每日巡檢試跑新增：多家媒體於 2026-06 報導前台北縣長周錫瑋公開稱「大陸導彈不是對台灣」、是在保護台灣不受外國欺負；另有報導稱其致詞時表示任何台灣人說自己不是中國人就是歷史罪人。此筆依公開政治言論與使用者個人避開列 personal，不作違法、中共黨籍或中資關聯定論。",
+    sources: [
+      source("TVBS - 影片曝光！周錫瑋喊「大陸導彈不是對台灣」：保護台灣不受外國欺負", "https://news.tvbs.com.tw/politics/3235440", "2026-06-19", "報導周錫瑋稱大陸導彈不是對台灣，而是保護台灣不受外國欺負。"),
+      source("自由時報 - 致詞又拋驚句！周錫瑋：任何台灣人說自己非中國人就是歷史罪人", "https://news.ltn.com.tw/news/politics/breakingnews/5489023", "2026-06-30", "報導周錫瑋在致詞中以中國人／中華民族認同論述批評台灣人自認非中國人。"),
+    ],
+    aiNotes:
+      "此筆是 personal，證據邊界是公開政治言論與媒體報導。不要寫成司法犯罪、制裁、中共黨員或中資控制證據；也不要把前縣長、政治人物、導彈、飛彈、中國人、歷史罪人等泛稱或語句當 alias。",
+    lastReviewed: "2026-07-01",
+  }),
+  record({
     id: "taiwan-entertainers-long-term-mainland-china-market",
     name: "台灣娛樂公眾人物長期中國大陸市場發展名單",
     aliases: longTermMainlandChinaEntertainmentAliases,
@@ -3208,6 +3227,28 @@ const riskRecords = [
     ],
     aiNotes:
       "此筆為 personal／中可信度：重慶享其油脂有限公司與其油品類別可由中國官方資料核對，油品曾有一批抽檢不合格紀錄；但『巧克熊使用該公司中國製油品』目前依公開 Threads 貼文與照片指稱，尚未找到店家自述、政府查驗或主流媒體報導。回答時要保留此證據邊界，不得寫成巧克熊違法、使用不合格批次、遭裁罰或中共關聯。不要把漢堡、餐車、食用油、油品、中國油等泛稱列為 alias。",
+    lastReviewed: "2026-07-01",
+  }),
+  record({
+    id: "hahababy-bobomommy-china-made-giveaway-personal",
+    name: "HAHABABY / 波波貴媽咪有限公司",
+    aliases: ["HAHABABY", "HAHA BABY", "hahababy", "ははベビー", "嘎嫂二伯", "二伯", "李佩潔", "波波貴媽咪有限公司"],
+    identifiers: ["90833399", "統編90833399", "hahababyselect.com"],
+    country: "台灣／中國製贈品爭議",
+    categories: ["服飾／玩具／生活零售", "兒童用品"],
+    avoidReasons: ["使用者個人避開", "中國製贈品／產地疑慮", "MIT／台灣製品牌敘事爭議"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "每日巡檢試跑新增：HAHABABY 官方站可核對品牌與統編 90833399，公開公司資料對應波波貴媽咪有限公司、代表人李佩潔；2026-06-29 至 2026-06-30 多家媒體報導蔡阿嘎／二伯相關品牌活動贈品遭質疑中國製，二伯回應部分活動贈品的產地確有非台灣製，並強調產品核心台製未改變。此筆依使用者價值邊界列 personal，不表示 HAHABABY 全部商品中國製或有違法。",
+    sources: [
+      source("HAHABABY 官方網站", "https://www.hahababyselect.com/", "查核日 2026-07-01", "官方網站可核對 HAHABABY／hahababy／ははベビー品牌與統編 90833399。"),
+      source("公司資料開放查詢 - 波波貴媽咪有限公司", "https://company.g0v.ronny.tw/api/show/90833399", "查核日 2026-07-01", "公開公司資料列統編 90833399、公司名稱波波貴媽咪有限公司、代表人李佩潔。"),
+      source("三立新聞網 - 獨家／稱100%MIT 蔡阿嘎旗下贈品遭爆「中國製」", "https://www.setn.com/News.aspx?NewsID=1864282", "2026-06-29", "報導蔡阿嘎／二伯品牌活動贈品產地爭議與 100%MIT 敘事。"),
+      source("ETtoday星光雲 - 二伯品牌被爆「活動送中國製贈品」直球回應", "https://star.ettoday.net/news/3192909", "2026-06-30", "報導二伯回應活動贈品中國製／非台灣製爭議，並稱產品核心台製未改變。"),
+    ],
+    aiNotes:
+      "此筆是 personal。媒體報導重點是活動贈品／周邊產地，不要擴張成所有 HAHABABY 商品都是中國製，也不要寫成中資、黨建、制裁或違法證據。不要把贈品、包屁衣、童裝、嬰兒用品、MIT、台灣製、中國製贈品等泛稱當 alias。",
     lastReviewed: "2026-07-01",
   }),
   record({
