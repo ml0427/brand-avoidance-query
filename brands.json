@@ -7226,5 +7226,248 @@
     ],
     "aiNotes": "此筆是 personal。媒體報導重點是活動贈品／周邊產地，不要擴張成所有 HAHABABY 商品都是中國製，也不要寫成中資、黨建、制裁或違法證據。不要把贈品、包屁衣、童裝、嬰兒用品、MIT、台灣製、中國製贈品等泛稱當 alias。",
     "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "lalamove-taiwan-china-taiwan-labeling-watchlist",
+    "name": "Lalamove Taiwan Limited / 小蜂鳥國際物流有限公司",
+    "aliases": [
+      "Lalamove",
+      "Lalamove Taiwan",
+      "Lalamove Taiwan Limited",
+      "小蜂鳥國際物流有限公司",
+      "啦啦快送"
+    ],
+    "identifiers": [
+      "lalamove.com.tw"
+    ],
+    "country": "台灣／香港",
+    "categories": [
+      "車輛交通"
+    ],
+    "avoidReasons": [
+      "台灣矮化標示爭議",
+      "中國市場政治用語風險",
+      "使用者信任疑慮"
+    ],
+    "confidence": "medium",
+    "status": "watchlist",
+    "summary": "自由時報報導稱 Lalamove 官網、條款或註冊內容曾出現「中國台灣」或「中華人民共和國台灣地區」等標示，引發陸委會關切；報導也稱相關頁面後續已有修改。此筆列 watchlist，重點是台灣標示與政治用語爭議，不作中資、制裁或資料安全定論。",
+    "sources": [
+      {
+        "title": "自由時報 - 陸委會回應 Lalamove 台灣標示爭議",
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5318949",
+        "date": "2026-01-22",
+        "note": "報導稱 Lalamove 官網／條款或註冊內容有台灣標示爭議，並提到後續修改與主管機關回應。"
+      },
+      {
+        "title": "自由時報 - Lalamove 官網台灣標示爭議",
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5317064",
+        "date": "2026-01-21",
+        "note": "報導稱 Lalamove 相關頁面曾以中國政治用語標示台灣，引發政治消費與信任疑慮。"
+      }
+    ],
+    "aiNotes": "此筆只處理 Lalamove 台灣標示／政治用語事件。報導稱相關內容後續已修改，因此不升 confirmed；不要推論為 Lalamove 已被制裁、違法、資安高風險或所有物流平台皆有相同問題。",
+    "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "paris-evergreen-laurel-hotel-statement-event-personal",
+    "name": "巴黎長榮桂冠酒店 / 長榮集團聲明事件",
+    "aliases": [
+      "巴黎長榮桂冠酒店",
+      "巴黎長榮桂冠",
+      "Evergreen Laurel Hotel Paris",
+      "巴黎長榮桂冠酒店聲明事件"
+    ],
+    "identifiers": [
+      "巴黎長榮桂冠酒店五星旗事件"
+    ],
+    "country": "台灣／法國事件",
+    "categories": [
+      "餐飲旅遊"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "中國市場政治壓力爭議",
+      "企業聲明爭議"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：自由時報報導巴黎長榮桂冠酒店未掛五星旗爭議後，長榮集團相關聲明引發台灣輿論反應。此筆精準限於巴黎長榮桂冠酒店／長榮集團聲明事件，不擴張到所有長榮關聯企業、航空、海運或所有長榮消費品牌。",
+    "sources": [
+      {
+        "title": "自由時報 - 長榮集團巴黎長榮桂冠酒店聲明爭議",
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/4779255",
+        "date": "2024-08-24",
+        "note": "報導巴黎長榮桂冠酒店五星旗事件後，長榮集團聲明與台灣輿論反應。"
+      },
+      {
+        "title": "自由時報 - 巴黎長榮桂冠酒店五星旗事件後續",
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/4779160",
+        "date": "2024-08-24",
+        "note": "報導巴黎長榮桂冠酒店事件與相關政治消費討論。"
+      }
+    ],
+    "aiNotes": "此筆是 personal／事件層級紀錄。不要把『長榮』『長榮集團』『長榮桂冠』作為可命中的廣泛避雷結論；回答時必須說明僅限巴黎長榮桂冠酒店與該次聲明事件，不代表所有長榮體系品牌皆列入。",
+    "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "cha-li-wang-zhengshan-xiaozhong-moli-longjing-sku-personal",
+    "name": "茶裏王正山小種 / 茶裏王茉莉龍井（7-11 限定）",
+    "aliases": [
+      "茶裏王正山小種",
+      "茶裏王 正山小種",
+      "茶裏王：正山小種",
+      "茶裏王茉莉龍井",
+      "茶裏王 茉莉龍井",
+      "茶裏王：茉莉龍井"
+    ],
+    "country": "台灣",
+    "categories": [
+      "食品飲料"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "中國茶葉／產地標示疑慮",
+      "政治消費／信任疑慮"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：自由時報報導茶裏王正山小種、茶裏王茉莉龍井 7-11 限定商品涉及中國茶葉或產地標示疑慮，引發部分消費者對政治消費與信任的疑問。此筆限於這兩個 SKU，不寫成食品安全違規，也不擴張為茶裏王全品牌。",
+    "sources": [
+      {
+        "title": "自由時報 - 茶裏王正山小種／茉莉龍井產地標示爭議",
+        "url": "https://news.ltn.com.tw/news/life/breakingnews/5434734",
+        "date": "2026-05-12",
+        "note": "報導茶裏王正山小種與茶裏王茉莉龍井 7-11 限定商品涉及中國茶葉／產地標示與消費者信任疑慮。"
+      }
+    ],
+    "aiNotes": "此筆只收茶裏王正山小種、茶裏王茉莉龍井兩個 SKU。不要把茶裏王全品牌、瓶裝茶、茶飲、中國茶、正山小種或茉莉龍井泛稱當作 alias；也不要寫成食品安全違規、下架、裁罰或中資定論。",
+    "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "sunshine-womens-choir-china-taiwan-labeling-watchlist",
+    "name": "《陽光女子合唱團》",
+    "aliases": [
+      "陽光女子合唱團",
+      "《陽光女子合唱團》",
+      "Sunshine Women's Choir"
+    ],
+    "country": "台灣",
+    "categories": [
+      "App／數位服務"
+    ],
+    "avoidReasons": [
+      "中國市場政治宣傳用語爭議",
+      "台灣矮化標示爭議"
+    ],
+    "confidence": "medium",
+    "status": "watchlist",
+    "summary": "自由時報報導稱《陽光女子合唱團》中國官方微博宣傳文案使用「中國台灣地區」等文字，引發爭議。此筆僅列作品／電影層級 watchlist，不把安心亞、陳意涵或其他演員列為個人避雷。",
+    "sources": [
+      {
+        "title": "自由時報 - 《陽光女子合唱團》中國宣傳文案爭議",
+        "url": "https://news.ltn.com.tw/news/politics/breakingnews/5413727",
+        "date": "2026-04-23",
+        "note": "報導稱電影中國微博宣傳文案使用中國政治用語標示台灣，引發文化與政治爭議。"
+      },
+      {
+        "title": "自由娛樂 - 《陽光女子合唱團》宣傳文案後續",
+        "url": "https://ent.ltn.com.tw/news/paper/1752099",
+        "date": "2026-04-24",
+        "note": "報導電影宣傳文案爭議與製作團隊相關回應。"
+      }
+    ],
+    "aiNotes": "此筆只指作品在中國市場宣傳文案的台灣標示爭議。不要把安心亞、陳意涵、翁倩玉、導演、演員或全部製作團隊列為個人避雷；也不要推論為電影違法或所有台灣上映通路皆有相同風險。",
+    "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "lin-bo-rui-public-figure-watchlist",
+    "name": "林柏叡",
+    "aliases": [
+      "林柏叡"
+    ],
+    "country": "台灣",
+    "categories": [
+      "App／數位服務"
+    ],
+    "avoidReasons": [
+      "公開政治表態／統戰宣傳風險",
+      "中國官方政治內容轉發爭議"
+    ],
+    "confidence": "medium",
+    "status": "watchlist",
+    "summary": "自由時報報導稱林柏叡曾轉發央視、中國國慶與「台灣必歸」等政治內容，引發政治表態爭議。因目前未加入原始微博封存或官方處分來源，保守列 watchlist，不升 confirmed。",
+    "sources": [
+      {
+        "title": "自由娛樂 - 林柏叡轉發中國政治內容爭議",
+        "url": "https://ent.ltn.com.tw/news/breakingnews/5165963",
+        "date": "2025-09-03",
+        "note": "報導稱林柏叡轉發央視、中國國慶與台灣必歸等政治內容，作為 watchlist 來源。"
+      }
+    ],
+    "aiNotes": "此筆依媒體報導列 watchlist；未找到原始微博封存或官方裁處前，不得寫成 confirmed、違法、遭處分或中共黨政關聯。不要把演員、藝人、作品名或社群政治口號放入 alias。",
+    "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "mecatron-joemars-iran-uav-ofac-sanctions",
+    "name": "龍馬精機股份有限公司 / 喬懋機電工業股份有限公司",
+    "aliases": [
+      "龍馬精機股份有限公司",
+      "龍馬精機",
+      "MECATRON MACHINERY CO LTD",
+      "Mecatron Machinery Co Ltd",
+      "喬懋機電工業股份有限公司",
+      "喬懋機電",
+      "JOEMARS MACHINERY AND ELECTRIC INDUSTRIAL CO LTD",
+      "Joemars Machinery and Electric Industrial Co Ltd",
+      "常州喬懋工業自動化有限公司",
+      "常州乔懋工业自动化有限公司",
+      "CHANGZHOU JOEMARS INDUSTRIAL AUTOMATION CO LTD",
+      "CHANGZHOU JOMARS INDUSTRIAL AUTOMATION CO LTD",
+      "CHANGZHOU QIAOMAO INDUSTRIAL AUTOMATION CO LTD"
+    ],
+    "identifiers": [
+      "24249847",
+      "統編24249847",
+      "23397051",
+      "統編23397051",
+      "320400400003944",
+      "913204006081307514"
+    ],
+    "country": "台灣／中國子公司",
+    "categories": [
+      "科技／通訊資安"
+    ],
+    "avoidReasons": [
+      "美國 OFAC SDN 制裁",
+      "制裁／國安風險",
+      "伊朗無人機採購網絡",
+      "出口管制／制裁規避風險"
+    ],
+    "confidence": "high",
+    "status": "confirmed",
+    "summary": "美國 Treasury/OFAC 於 2025-07-31 將龍馬精機股份有限公司（Mecatron Machinery Co Ltd）、喬懋機電工業股份有限公司（Joemars Machinery and Electric Industrial Co Ltd）及喬懋中國子公司列入 SDN List；官方說明稱兩家台灣公司支援 Control Afzar Tabriz 為 HESA 採購／運送 CNC 機器與設備的網絡，並依 E.O. 13382 指定。",
+    "sources": [
+      {
+        "title": "OFAC - Non-Proliferation Designations",
+        "url": "https://ofac.treasury.gov/recent-actions/20250731",
+        "date": "2025-07-31",
+        "note": "OFAC Recent Action 將 MECATRON MACHINERY CO LTD、JOEMARS MACHINERY AND ELECTRIC INDUSTRIAL CO LTD 與 CHANGZHOU JOEMARS INDUSTRIAL AUTOMATION CO LTD 加入 SDN List，列出 Taiwan business numbers、China registration identifiers、[NPWMD] [IFSR] 與 Linked To 關係。"
+      },
+      {
+        "title": "U.S. Treasury - Treasury Sanctions Global Network Supporting Iran's Military UAV Program",
+        "url": "https://home.treasury.gov/news/press-releases/sb0217",
+        "date": "2025-07-31",
+        "note": "Treasury 說明 Control Afzar 使用 Mecatron 與 Joemars Machinery 將 CNC 機器與設備運往伊朗，並依 E.O. 13382 指定兩家公司。"
+      },
+      {
+        "title": "White House - National Security Presidential Memorandum/NSPM-2",
+        "url": "https://www.whitehouse.gov/presidential-actions/2025/02/national-security-presidential-memorandum-nspm-2/",
+        "date": "2025-02-04",
+        "note": "Treasury 說明 2025-07-31 行動是在 NSPM-2 政策方向下執行，用於限制伊朗不對稱與常規武器能力。"
+      }
+    ],
+    "aiNotes": "此筆依美國 Treasury/OFAC 官方指定列 confirmed/high。回答時應限於官方制裁與採購／運送 CNC 設備網絡指稱，不額外推論所有台灣工具機業者、所有 CNC 機器或未列名關聯公司都有相同風險；Control Afzar Tabriz 與 HESA 只作官方 linked-to 識別與脈絡，不作本資料庫的台灣消費品牌別名。",
+    "lastReviewed": "2026-07-01"
   }
 ]
