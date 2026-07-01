@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Avoidance Workflow"
+  short_description: "Route brand avoidance workflows"
+  default_prompt: "Route this brand-avoidance task into discovery, record editing, and verification phases as needed."

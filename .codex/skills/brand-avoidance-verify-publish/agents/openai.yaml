@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Avoidance Verify"
+  short_description: "Validate and publish changes"
+  default_prompt: "Run local validation, matching checks, commit, and push the current brand-avoidance changes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Avoidance Discovery"
+  short_description: "Find avoidance candidates online"
+  default_prompt: "Run a proactive web/news/social discovery scan for avoidance candidates and report sources only."

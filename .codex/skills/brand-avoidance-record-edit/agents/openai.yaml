@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Avoidance Record Edit"
+  short_description: "Edit avoidance records locally"
+  default_prompt: "Add or update selected brand-avoidance records without broad discovery."
