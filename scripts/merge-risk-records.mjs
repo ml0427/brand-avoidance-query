@@ -3326,6 +3326,24 @@ const riskRecords = [
     lastReviewed: "2026-07-01",
   }),
   record({
+    id: "chengxie-guide-hotel-personal",
+    name: "承攜行旅",
+    aliases: ["承攜行旅"],
+    country: "未查核",
+    categories: ["餐飲／生活服務"],
+    avoidReasons: ["使用者個人避開", "住宿服務品質／體驗不佳"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者直接指定承攜行旅因住宿品質／體驗太差列入個人避住；此筆僅代表使用者主觀住宿體驗與個人偏好，不作中資、政治、食安、安全、法律違規或所有分館客觀風險定論。",
+    sources: [
+      source("使用者提供 - 承攜行旅住宿體驗", "", "2026-07-02", "使用者指定因住宿品質／體驗太差列入個人避雷。"),
+    ],
+    aiNotes:
+      "此筆是 personal subjective preference：回答時只能說使用者個人避買／避住承攜行旅，理由是個人住宿服務品質／體驗不佳；不代表所有分館皆有客觀違規、安全、食安、法律或政治風險，也不要延伸為中資／親共／國資結論。",
+    lastReviewed: "2026-07-02",
+  }),
+  record({
     id: "cha-li-wang-zhengshan-xiaozhong-moli-longjing-sku-personal",
     name: "茶裏王正山小種 / 茶裏王茉莉龍井（7-11 限定）",
     aliases: ["茶裏王正山小種", "茶裏王 正山小種", "茶裏王：正山小種", "茶裏王茉莉龍井", "茶裏王 茉莉龍井", "茶裏王：茉莉龍井"],
