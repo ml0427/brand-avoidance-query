@@ -7881,5 +7881,71 @@
     ],
     "aiNotes": "此筆是公共採購／資安疑慮 watchlist，不是法院判決或弊案定論。命中聖東、超鉞、楊博森、台北機器狗或台北遮陽傘時，應說明有公司登記關聯與媒體報導爭議，但也要保留北市府澄清公館圓環與機器狗非同一案。不要把『機器狗』『遮陽傘』『營造』『科技公司』等泛稱作 alias，也不要推論所有楊博森同名者或所有北市標案都有問題。",
     "lastReviewed": "2026-07-02"
+  },
+  {
+    "id": "cheap-zheng-caiwei-public-figure-personal",
+    "name": "Cheap / 鄭才暐",
+    "aliases": [
+      "Cheap",
+      "網紅Cheap",
+      "網紅 Cheap",
+      "YouTuber Cheap",
+      "YouTube Cheap",
+      "鄭才暐",
+      "Cheap鄭才暐",
+      "Cheap 鄭才暐",
+      "cheapaoe",
+      "@cheapaoe"
+    ],
+    "identifiers": [
+      "UCGGrblndNzi86WY5lJkQJiA",
+      "facebook.com/cheapAOE"
+    ],
+    "country": "台灣",
+    "categories": [
+      "媒體娛樂"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "公眾人物言論／政治時事評論爭議",
+      "媒體內容合作前二次查核"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定將網紅 Cheap 列入個人避開。公開來源可識別 Cheap 為台灣 YouTuber／KOL 鄭才暐、官方頻道為 @cheapaoe；近年媒體亦報導其政治時事評論與企業影射內容引發爭議或法律攻防。此筆只作個人避買／合作前查核提示，不認定其收受中國資金、違法、親共、中共關聯、法院敗訴或所有合作品牌都有風險。",
+    "sources": [
+      {
+        "title": "Cheap - YouTube 官方頻道",
+        "url": "https://www.youtube.com/channel/UCGGrblndNzi86WY5lJkQJiA",
+        "date": "查核日 2026-07-02",
+        "note": "官方頻道頁面支撐 Cheap／@cheapaoe 頻道識別；頁面描述稱僅經營 YT、FB、IG，中國 B 站與抖音為仿冒。"
+      },
+      {
+        "title": "新北市青年局 - Cheap 的逆襲之路：從不學無術的魯蛇翻身成百萬 Youtuber",
+        "url": "https://www.youth.ntpc.gov.tw/youth/ch/app/data/view?module=youth0011&id=96&serno=5c015432-b0ef-4ec6-91eb-8768a24b35f1",
+        "date": "查核日 2026-07-02",
+        "note": "文章稱 Cheap 本名鄭才暐，YouTube 頻道有百萬訂閱，並以 KOL／意見領袖脈絡介紹。"
+      },
+      {
+        "title": "天下雜誌 - 失戀開直播打電動爆紅 魯蛇上班族奇蹟翻身年收千萬網紅「Cheap」",
+        "url": "https://www.cw.com.tw/article/5123365",
+        "date": "查核日 2026-07-02",
+        "note": "人物報導稱 Cheap 本尊為鄭才暐，並介紹其 YouTube 歷史頻道與網紅身分。"
+      },
+      {
+        "title": "自由時報 - 被點名極端社會推手Cheap嗆：懶得鳥下弦鬼",
+        "url": "https://news.ltn.com.tw/news/life/breakingnews/5184663",
+        "date": "查核日 2026-07-02",
+        "note": "報導 Cheap 政治時事評論引發網路論戰與批評，作為公眾人物言論爭議脈絡；不作事實定罪。"
+      },
+      {
+        "title": "遠見雜誌 - 求償1億元！雷虎科技正式提告Cheap『散布不實訊息』",
+        "url": "https://www.gvm.com.tw/article/127351",
+        "date": "查核日 2026-07-02",
+        "note": "報導雷虎科技與 Cheap 的法律攻防；此來源僅支撐存在爭議／訴訟攻防，不代表法院已認定不實或任何一方勝訴。"
+      }
+    ],
+    "aiNotes": "此筆是老爺指定的個人避開公眾人物紀錄。命中 Cheap／鄭才暐／@cheapaoe 時，回答應限於個人避開、頻道／人物識別、政治時事評論爭議與合作前二次查核；不得寫成 Cheap 已收紅錢、親共、中共控制、違法、敗訴、散布不實經法院認定，或把所有 YouTuber／網紅／歷史頻道泛稱納入避雷。",
+    "lastReviewed": "2026-07-02"
   }
 ]
