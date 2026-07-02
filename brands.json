@@ -7469,5 +7469,65 @@
     ],
     "aiNotes": "此筆依美國 Treasury/OFAC 官方指定列 confirmed/high。回答時應限於官方制裁與採購／運送 CNC 設備網絡指稱，不額外推論所有台灣工具機業者、所有 CNC 機器或未列名關聯公司都有相同風險；Control Afzar Tabriz 與 HESA 只作官方 linked-to 識別與脈絡，不作本資料庫的台灣消費品牌別名。",
     "lastReviewed": "2026-07-01"
+  },
+  {
+    "id": "vivaia",
+    "name": "VIVAIA",
+    "aliases": [
+      "VIVAIA",
+      "Vivaia",
+      "Pioneer ECOM Global Limited",
+      "Starlinke",
+      "Shenzhen Starlinke Network Technology Company"
+    ],
+    "identifiers": [
+      "vivaia.com",
+      "vivaia.tw",
+      "starlinke.com",
+      "Pioneer ECOM Global Limited",
+      "Shenzhen Starlinke Network Technology Company"
+    ],
+    "country": "香港／深圳跨境電商關聯",
+    "categories": [
+      "服飾生活",
+      "App／數位服務"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "Taiwan-label／政治合規風險",
+      "香港／深圳跨境電商品牌關聯",
+      "個資跨境移轉至中國風險"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "VIVAIA 是鞋履／服飾電商品牌；其官方站地區列表將台灣標為 Taiwan China，官方隱私政策由香港 Pioneer ECOM Global Limited 發布，並揭露個資可能轉移至 China 或服務提供者所在地。Starlinke 官方 Our Brand 頁標題為 Shenzhen Starlinke Network Technology Company，並列 VIVAIA 品牌。此筆依使用者採買偏好列個人避買，不作食安、安全或法律違規定論。",
+    "sources": [
+      {
+        "title": "VIVAIA - Privacy Policy",
+        "url": "https://www.vivaia.com/article/Privacy-Policy",
+        "date": "查核日 2026-07-02",
+        "note": "官方隱私政策列 Pioneer ECOM Global Limited（香港地址）為發布主體／data controller，並說明個資可能轉移至 China 或服務提供者所在地。"
+      },
+      {
+        "title": "VIVAIA 官方站 - country/region selector",
+        "url": "https://www.vivaia.com/",
+        "date": "查核日 2026-07-02",
+        "note": "官方站 country/region 列表可見 Hongkong, China、Macau China、Taiwan China 等標示。"
+      },
+      {
+        "title": "Starlinke - Our Brand",
+        "url": "https://www.starlinke.com/ourbrand",
+        "date": "查核日 2026-07-02",
+        "note": "頁面標題為 Shenzhen Starlinke Network Technology Company；Our Brand 頁列 VIVAIA，並描述其鞋履與服飾品牌定位且連至 vivaia.com。"
+      },
+      {
+        "title": "使用者提供 - VIVAIA 風險摘要",
+        "url": "",
+        "date": "2026-07-02",
+        "note": "使用者要求依 VIVAIA Taiwan China 標示、香港 Pioneer ECOM Global Limited、資料移轉至 China 與 Starlinke 關聯摘要加入採買避雷。"
+      }
+    ],
+    "aiNotes": "此筆是 personal／中可信度：可回覆還沒買不建議買；已買鞋不是食安或立即安全問題，不需要恐慌，但之後可避開。若涉及官網註冊／下單，重點說明隱私政策揭露個資可能轉移至 China。不要寫成台灣禁售、已確認國資／黨建、制裁或違法案例。aliases 不放「鞋」「女鞋」「平底鞋」「服飾」「環保鞋」等商品泛稱，避免誤傷一般品項。",
+    "lastReviewed": "2026-07-02"
   }
 ]
