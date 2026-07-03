@@ -3094,6 +3094,65 @@ const riskRecords = [
     lastReviewed: "2026-07-03",
   }),
   record({
+    id: "chen-hsuehsheng-sexual-harassment-civil-final",
+    name: "陳雪生 / 性騷擾民事判賠確定",
+    aliases: ["陳雪生", "陈雪生", "Chen Hsueh-sheng", "Chen Hsuehsheng"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "性騷擾民事判決確定", "國民黨現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導范雲控陳雪生性騷擾求償案，台北地方法院一審判陳雪生賠償8萬元，二審駁回上訴，全案確定且不得上訴。此筆是民事性騷擾判賠確定，不寫成刑事犯罪定讞。",
+    sources: [
+      source("中央社 - 范雲控性騷擾求償 法院判陳雪生賠8萬元確定", "https://www.cna.com.tw/news/asoc/202306065002.aspx", "2023-06-06", "報導台北地方法院二審駁回陳雪生上訴，民事判賠8萬元確定。"),
+      source("中央社 - 陳雪生遭法院認定性騷 國民黨：無撤銷提名問題", "https://www.cna.com.tw/news/aipl/202306060122.aspx", "2023-06-06", "報導國民黨回應法院認定性騷擾與提名問題，用於核對政治人物關聯與事件性質。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指民事判決確定，不是刑事犯罪紀錄。回答時必須寫成性騷擾民事判賠確定；不要把性騷擾、立委、國民黨、判賠、范雲等泛稱或其他人名當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "cheng-tientsai-bribery-indictment",
+    name: "鄭天財 / 收賄案起訴審理中",
+    aliases: ["鄭天財", "郑天财", "Cheng Tien-tsai", "Cheng Tientsai", "Sra Kacaw"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "貪污收賄案起訴", "國民黨現有名單人物"],
+    confidence: "high",
+    status: "watchlist",
+    summary:
+      "現有名單人物司法補充：中央社報導國民黨立委鄭天財涉收賄711萬元，台北地檢署於 2025-12-24 依貪污等罪起訴並求刑10年以上；中央社 2026-03-13 報導同案被告、鄭天財國會辦公室執行長張騰龍當庭認罪。此筆記錄起訴與審理中狀態，不寫成有罪或定讞。",
+    sources: [
+      source("中央社 - 立委鄭天財涉受業者供養收賄711萬 北檢貪污起訴", "https://www.cna.com.tw/news/asoc/202512240046.aspx", "2025-12-24", "報導北檢依貪污等罪起訴鄭天財並求刑10年以上。"),
+      source("中央社 - 北院審理立委鄭天財涉收賄案 助理張騰龍當庭認罪", "https://www.cna.com.tw/news/asoc/202603130320.aspx", "2026-03-13", "報導鄭天財涉收賄案審理中，同案被告張騰龍當庭認罪。"),
+    ],
+    aiNotes:
+      "此筆 watchlist：目前是起訴與審理中，未有一審判決或定讞。不得寫成犯罪紀錄、收賄罪已成立或判刑。不要把收賄、貪污、特助、起訴、求刑、立委、國民黨等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "su-chingchuan-antai-hospital-fire-indictment",
+    name: "蘇清泉 / 安泰醫院大火案起訴",
+    aliases: ["蘇清泉", "苏清泉", "Su Ching-chuan", "Su Chingchuan"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "安泰醫院大火案起訴", "國民黨現有名單人物"],
+    confidence: "high",
+    status: "watchlist",
+    summary:
+      "現有名單人物司法補充：中央社報導屏東安泰醫院大火造成9死，屏東地檢署原對國民黨立委、醫院榮譽院長蘇清泉等4人緩起訴；高雄高分檢撤銷發回後，屏檢重啟偵辦並於 2026-06-03 起訴蘇清泉等4人。此筆記錄起訴與審理中狀態，不寫成判決有罪或定讞。",
+    sources: [
+      source("中央社 - 東港安泰醫院大火9死 緩起訴屏縣府深表遺憾", "https://www.cna.com.tw/news/asoc/202508060119.aspx", "2025-08-06", "報導屏檢原對蘇清泉等4人緩起訴，須支付公庫款項。"),
+      source("中央社 - 屏東安泰醫院大火9死 蘇清泉緩起訴遭撤銷發回", "https://www.cna.com.tw/news/asoc/202510090216.aspx", "2025-10-09", "報導高雄高分檢撤銷原緩起訴並發回續行偵查。"),
+      source("中央社 - 屏東安泰醫院大火9死案重啟偵辦 起訴蘇清泉等4人", "https://www.cna.com.tw/news/asoc/202606030110.aspx", "2026-06-03", "報導屏檢重啟偵辦後起訴蘇清泉等4人。"),
+      source("公視新聞 - 屏東安泰醫院9死大火重啟偵辦 蘇清泉等4人逆轉遭起訴", "https://news.pts.org.tw/article/811324", "2026-06-03", "報導起訴罪名包含違反建築法致人於死、過失致死與行使業務上登載不實文書等。"),
+    ],
+    aiNotes:
+      "此筆 watchlist：目前是緩起訴撤銷後起訴、審理中，未有判決有罪或定讞。不要把安泰醫院、大火、火災、9死、過失致死、建築法、起訴、緩起訴、立委、國民黨等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
     id: "kmt-current-public-figures-2026-06-26",
     name: "中國國民黨現任人物名單（2026-06-26）",
     aliases: kmtCurrentPublicFigureAliases,
