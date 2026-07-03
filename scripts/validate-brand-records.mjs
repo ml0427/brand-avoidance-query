@@ -129,7 +129,7 @@ Default checks:
   - validate every record with app-core validateBrandRecord()
   - detect duplicate IDs
   - verify README record count, if present
-  - run node --check for app-core.mjs, app.js, merge-risk-records.mjs, and this script
+  - run node --check for app-core.mjs, app.js, scripts/*.mjs, and data/**/*.mjs
   - run default positive smoke queries
   - run default generic negative queries; these must return zero results
   - run git diff --check when inside a git repository
@@ -284,6 +284,31 @@ function checkSyntax(filePath) {
     output: [result.stdout, result.stderr].filter(Boolean).join("\n").trim(),
     status: result.status,
   };
+}
+
+function listMjsFiles(directoryPath) {
+  const absoluteDirectory = resolveFromRoot(directoryPath);
+
+  if (!fs.existsSync(absoluteDirectory)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(absoluteDirectory, { withFileTypes: true })
+    .flatMap((entry) => {
+      const absolutePath = path.join(absoluteDirectory, entry.name);
+
+      if (entry.isDirectory()) {
+        return listMjsFiles(path.relative(rootDir, absolutePath));
+      }
+
+      if (!entry.isFile() || !entry.name.endsWith(".mjs")) {
+        return [];
+      }
+
+      return path.relative(rootDir, absolutePath).replaceAll(path.sep, "/");
+    })
+    .sort((left, right) => left.localeCompare(right));
 }
 
 function idsForQuery(brands, query) {
@@ -514,6 +539,7 @@ function main() {
       "app.js",
       "scripts/merge-risk-records.mjs",
       "scripts/validate-brand-records.mjs",
+      ...listMjsFiles("data"),
     ];
     const syntaxResults = syntaxFiles.map(checkSyntax);
     const failedSyntax = syntaxResults.filter((result) => !result.ok);
