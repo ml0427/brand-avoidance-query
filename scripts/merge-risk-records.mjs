@@ -85,6 +85,8 @@ const categoryNormalization = new Map([
   ["政治／政黨人物名單", "政治／政黨名單"],
   ["司法／環境污染／廢棄物案件", "司法／企業案件"],
   ["公司／負責人關聯", "司法／企業案件"],
+  ["司法／公眾人物案件", "司法／人物案件"],
+  ["政治／司法案件", "司法／人物案件"],
 ]);
 
 function normalizeCategories(categories = []) {
@@ -2896,6 +2898,158 @@ const riskRecords = [
     aiNotes:
       "此筆 confirmed 指公開來源已確認一審有罪判決與公司／負責人關聯；全案可上訴，不代表定讞。回答時可說明郭再欽為前民進黨中執委、明祥馨負責人，但不要把民進黨、政治人物、農地、爐碴、爐渣、廢棄物等泛稱列為命中或擴張成整個政黨。aliases 僅放姓名、公司名與具體案件名稱。",
     lastReviewed: "2026-06-30",
+  }),
+  record({
+    id: "lin-tzu-miao-corruption-first-instance",
+    name: "林姿妙 / 宜蘭縣長貪污一審判刑",
+    aliases: ["林姿妙", "Lin Tzu-miao", "Lin Zimiao"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "貪污罪一審有罪判決", "停職縣長／國民黨現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：內政部依宜蘭地方法院一審判決新聞稿說明，宜蘭縣長林姿妙因圖利、特殊洗錢、公務員財產來源不明等罪，合併執行有期徒刑12年6月、褫奪公權6年；內政部並自 2024-12-31 起停止其縣長職務，由副縣長代理。此筆記錄一審判決與停職事實，不寫成定讞。",
+    sources: [
+      source("內政部 - 宜蘭縣長林姿妙因貪污罪經法院一審判刑", "https://www.moi.gov.tw/News_Content.aspx?n=4&s=324430&sms=9009", "2024-12-31", "內政部依宜蘭地方法院一審判決，說明林姿妙合併執行有期徒刑12年6月、褫奪公權6年，並停止縣長職務。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指官方來源可確認一審判刑與停職；若後續上訴結果變動需重查。不要把宜蘭縣長、縣長、國民黨、貪污、洗錢、停職等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "fu-kunqi-stock-manipulation-final-convictions",
+    name: "傅崐萁 / 炒股案定讞判刑",
+    aliases: ["傅崐萁", "傅崑萁", "Fu Kun-chi", "Fu Kunchi"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "炒股案定讞判刑", "國民黨現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導傅崐萁曾因合機炒股案於 2018 年判刑8月定讞，另因凱聚等股票炒作案於 2020 年經最高法院駁回上訴、判刑2年10月定讞須入獄。此筆只記錄已定讞的證券交易／炒股案件，不擴張到未定讞或已無罪案件。",
+    sources: [
+      source("中央社 - 傅崐萁炒作合機案 判刑8月定讞需入獄", "https://www.cna.com.tw/news/firstnews/201809125006.aspx", "2018-09-12", "報導最高法院駁回上訴，傅崐萁合機炒股案判刑8月定讞。"),
+      source("中央社 - 傅崐萁炒作凱聚案判刑2年10月定讞須入獄", "https://www.cna.com.tw/news/firstnews/202005145009.aspx", "2020-05-14", "報導傅崐萁炒作凱聚等股票案經最高法院駁回上訴，判刑2年10月定讞。"),
+      source("中央社 - 傅崐萁因炒股案須入獄 尚有理想大地案纏身", "https://www.cna.com.tw/news/asoc/202005140323.aspx", "2020-05-14", "整理傅崐萁合機案、凱聚案與其他案件狀態；用於避免把未定讞案件混寫成犯罪紀錄。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 僅指中央社可核對的兩件炒股案定讞判刑。不要把花蓮王、立委、炒股、經濟犯罪、國民黨等泛稱當 alias；其他官司需逐案標註定讞、無罪或審理中。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "yen-kuanheng-forgery-final-and-corruption-remand",
+    name: "顏寬恒 / 偽造文書定讞與助理費案發回",
+    aliases: ["顏寬恒", "颜宽恒", "Yen Kuan-heng", "Yen Kuanheng"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "偽造文書罪判刑定讞", "助理費貪污案發回更審"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導顏寬恒涉房屋假買賣與詐領助理費案，一審貪污罪判刑7年10月、偽造文書罪判刑6月；二審維持原判後，最高法院於 2026-05-28 將貪污有罪部分撤銷發回更審。聯合新聞網報導假買賣處理豪宅部分依偽造文書罪判刑6月可易科罰金，已定讞。此筆 confirmed 指偽造文書罪定讞與案件程序狀態，不把貪污部分寫成定讞。",
+    sources: [
+      source("中央社 - 顏寬恒涉貪二審判7年10月 最高法院撤銷發回更審", "https://www.cna.com.tw/news/asoc/202605280211.aspx", "2026-05-28", "報導顏寬恒一審、二審與最高法院撤銷發回更審脈絡，並列偽造文書罪6月與貪污罪部分。"),
+      source("聯合新聞網 - 顏寬恒涉貪案遭判7年10月最高法院撤銷發回更審原因曝光", "https://udn.com/news/story/7321/9531844", "2026-05-28", "報導顏寬恒假買賣處理豪宅部分依偽造文書罪判刑6月、可易科罰金且已定讞；貪污部分發回更審。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 的範圍限於偽造文書罪判刑6月定讞，以及貪污／助理費案曾有一二審判決但最高法院發回更審。不得寫成貪污罪定讞。不要把助理費、貪污、偽造文書、豪宅、立委等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "ko-wenje-jinghuacheng-political-donation-first-instance",
+    name: "柯文哲 / 京華城與政治獻金案一審判決",
+    aliases: ["柯文哲", "Ko Wen-je", "Ko Wenje"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "貪污等罪一審有罪判決", "民眾黨現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導台北地方法院於 2026-03-26 就京華城案、政治獻金案等一審宣判，柯文哲依貪污等罪判處應執行17年徒刑、褫奪公權6年；另中央社依判決書整理，公益侵占部分包含侵占民眾黨政治獻金600萬元及與李文宗、李文娟共同以木可公司名義侵占政治獻金款項。此筆記錄一審判決與可上訴狀態，不寫成定讞。",
+    sources: [
+      source("中央社 - 柯文哲涉京華城等案一審判有期徒刑17年、褫奪公權6年", "https://www.cna.com.tw/news/aipl/202603265002.aspx", "2026-03-26", "報導柯文哲京華城等案一審判刑17年、褫奪公權6年，並列可上訴脈絡。"),
+      source("中央社 - 北院認柯文哲偕李文宗兄妹侵占6134萬政治獻金", "https://www.cna.com.tw/news/aipl/202603260308.aspx", "2026-03-26", "報導法院認定柯文哲與李文宗、李文娟以木可公司名義侵占募款小物所得等，共同公益侵占6134萬元。"),
+      source("中央社 - 京華城等案判決書／柯文哲藉木可挪用政治獻金", "https://www.cna.com.tw/news/asoc/202604110114.aspx", "2026-04-11", "依判決書整理柯文哲政治獻金案公益侵占部分與木可款項流向。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指公開來源可確認一審判決內容，不代表定讞。KP 是柯文哲常用政治代稱，可能較短但具特定性；若未來造成誤命中再收窄。不要把京華城、政治獻金、貪污、侵占、民眾黨等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "ying-hsiaowei-jinghuacheng-first-instance",
+    name: "應曉薇 / 京華城案一審判刑",
+    aliases: ["應曉薇", "应晓薇", "Ying Hsiao-wei", "Ying Xiaowei"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "貪污等罪一審有罪判決", "國民黨議員現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導台北地方法院於 2026-03-26 就京華城等案一審宣判，國民黨台北市議員應曉薇判刑15年6月、褫奪公權6年，可上訴；中央社 2026-05-20 另報導應曉薇已提上訴，法院要求補正理由。此筆記錄一審判決與上訴狀態，不寫成定讞。",
+    sources: [
+      source("中央社 - 京華城等案一審宣判 應曉薇判刑15年6月、沈慶京10年", "https://www.cna.com.tw/news/aipl/202603260197.aspx", "2026-03-26", "報導應曉薇一審判刑15年6月、褫奪公權6年，並列可上訴。"),
+      source("中央社 - 應曉薇京華城案提上訴 北院要求補正理由", "https://www.cna.com.tw/news/asoc/202605200237.aspx", "2026-05-20", "報導應曉薇針對一審判決提出上訴，法院要求補正理由。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指一審判決與上訴程序可核對，不代表定讞。不要把京華城、議員、國民黨、貪污、上訴等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "huang-shaoting-assistant-fee-final-conviction",
+    name: "黃紹庭 / 詐領助理費定讞",
+    aliases: ["黃紹庭", "黄绍庭", "Huang Shao-ting", "Huang Shaoting"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "詐領助理費貪污案定讞", "國民黨議員現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導國民黨高雄市議員黃紹庭涉詐領助理費1455萬餘元，一、二審依貪污等罪判刑2年、褫奪公權3年、緩刑5年；最高法院於 2026-06-24 駁回上訴，全案確定。此筆記錄定讞判決。",
+    sources: [
+      source("中央社 - 高市議員黃紹庭涉詐助理費1455萬 獲緩刑確定、褫奪公權3年", "https://www.cna.com.tw/news/asoc/202606240214.aspx", "2026-06-24", "報導黃紹庭涉詐領助理費案，最高法院駁回上訴，全案確定。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指中央社可核對的詐領助理費案定讞判決。不要把高雄市議員、議員、助理費、貪污、緩刑、國民黨等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "chen-chungwen-corruption-first-instance",
+    name: "陳重文 / 涉貪一審判刑",
+    aliases: ["陳重文", "陈重文", "Chen Chung-wen", "Chen Chungwen"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "貪污等罪一審有罪判決", "國民黨議員現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導國民黨台北市議員陳重文因涉貪污等罪，一審判刑合計9年，案經上訴後二審由台灣高等法院審理中；國民黨台北市黨部主委戴錫欽受訪稱依黨內提名辦法，一審有罪者不符合初選登記資格。此筆記錄一審判決與二審中，不寫成定讞。",
+    sources: [
+      source("中央社 - 藍營議員陳重文涉貪一審判刑 台北市黨部：應無法參加初選", "https://www.cna.com.tw/news/aloc/202602260290.aspx", "2026-02-26", "報導陳重文涉貪污等罪一審判刑合計9年，二審由高院審理中。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指一審判刑與二審中可核對，不代表定讞。不要把台北市議員、議員、貪污、一審、初選等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "chung-tungchin-harm-causing-death-public-record",
+    name: "鍾東錦 / 傷害致死前科公開報導",
+    aliases: ["鍾東錦", "鍾朝平", "钟东锦", "钟朝平", "Chung Tung-chin", "Chung Tungchin"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "公開前科報導", "國民黨政治人物關聯"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "本輪查核新增：中央社報導時代力量於 2022 年記者會指出苗栗縣長參選人鍾東錦原名鍾朝平，25歲時曾涉傷害致死案並遭判刑，鍾東錦競選總部回應稱年代久遠且主張案情另有脈絡；太報 2026 年報導鍾東錦談及過往案件時，不諱言曾拿西瓜刀劃破對方肚皮，並稱自己曾判刑坐牢，陳水扁也公開提及曾為其傷害致死案件辯護。此筆因未直接取得判決原文，列 personal／medium，不寫成官方定讞來源已核對。",
+    sources: [
+      source("中央社 - 時力質疑改名前涉傷害致死 鍾東錦競辦批抹黑", "https://www.cna.com.tw/news/aipl/202210030229.aspx", "2022-10-03", "報導時代力量披露鍾東錦原名鍾朝平、曾涉傷害致死案並遭判刑；同文列鍾東錦競辦回應與爭議脈絡。"),
+      source("太報 - 曾為他「傷害致死罪」辯護！陳水扁讚鍾東錦", "https://www.taisounds.com/news/content/71/236084", "2026-01-14", "報導鍾東錦談及過往持刀傷人與判刑坐牢說法，並記錄陳水扁稱曾為其傷害致死案件辯護。"),
+      source("中國國民黨 - 鄭麗文苗栗小組長培訓喊話", "https://www.kmt.org.tw/2026/05/blog-post_26.html", "2026-05-26", "國民黨官方新聞稿稱苗栗縣在縣長鍾東錦帶領下並呼籲支持其連任，用於核對其國民黨政治人物關聯。"),
+    ],
+    aiNotes:
+      "此筆是 personal／medium：目前使用中央社、太報與國民黨官方政治關聯來源，未直接取得判決原文；不要把它寫成已由本輪核對判決原文的 confirmed。不要把苗栗縣長、前科、傷害致死、殺人、國民黨等泛稱當 alias。鍾東錦目前未在既有 KMT current list 命中，本筆同時補足其可查詢性；若要修正 KMT 名單，需另查內政部與黨籍最新資料。",
+    lastReviewed: "2026-07-03",
   }),
   record({
     id: "kmt-current-public-figures-2026-06-26",
