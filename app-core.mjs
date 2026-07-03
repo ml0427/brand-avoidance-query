@@ -12,6 +12,7 @@ export const STATUS_LABELS = {
 
 const ALLOWED_CONFIDENCES = new Set(Object.keys(CONFIDENCE_LABELS));
 const ALLOWED_STATUSES = new Set(Object.keys(STATUS_LABELS));
+const SEARCH_TEXT_CACHE = Symbol("searchTextCache");
 
 function cleanString(value) {
   if (value === null || value === undefined) {
@@ -395,7 +396,7 @@ export function asStringArray(value) {
 export function normalizeBrand(record, index = 0) {
   const source = record && typeof record === "object" && !Array.isArray(record) ? record : {};
 
-  return {
+  const brand = {
     id: cleanString(source.id) || `brand-${index + 1}`,
     name: cleanString(source.name),
     aliases: asStringArray(source.aliases),
@@ -410,6 +411,13 @@ export function normalizeBrand(record, index = 0) {
     lastReviewed: cleanString(source.lastReviewed),
     sources: normalizeSources(source.sources),
   };
+
+  Object.defineProperty(brand, SEARCH_TEXT_CACHE, {
+    value: buildSearchText(brand),
+    enumerable: false,
+  });
+
+  return brand;
 }
 
 export function validateBrandRecord(brand) {
@@ -464,7 +472,7 @@ export function collectOptions(brands, field) {
   });
 }
 
-export function getSearchText(brand) {
+function buildSearchText(brand) {
   if (!brand || typeof brand !== "object") {
     return "";
   }
@@ -477,6 +485,14 @@ export function getSearchText(brand) {
       ...asStringArray(brand.identifiers),
     ].join(" "),
   );
+}
+
+export function getSearchText(brand) {
+  if (!brand || typeof brand !== "object") {
+    return "";
+  }
+
+  return brand[SEARCH_TEXT_CACHE] ?? buildSearchText(brand);
 }
 
 export function filterBrands(brands, filters = {}) {
