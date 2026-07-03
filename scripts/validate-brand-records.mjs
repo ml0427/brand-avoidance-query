@@ -28,6 +28,44 @@ const DEFAULT_NEGATIVE_QUERIES = [
   "行動電源",
   "藝人",
   "政治人物",
+  "李洋",
+  "運動部長李洋",
+  "运动部长李洋",
+  "政治化",
+  "體育協會",
+  "体育协会",
+  "單項協會",
+  "单项协会",
+  "運動部",
+  "运动部",
+  "協會",
+  "协会",
+  "理事長",
+  "理事长",
+  "預算",
+  "预算",
+  "浮報",
+  "浮报",
+  "浮報3億",
+  "浮报3亿",
+  "協會浮報",
+  "协会浮报",
+  "浮編",
+  "浮编",
+  "不當請款",
+  "不当请款",
+  "不當請款指控",
+  "不当请款指控",
+  "請款",
+  "请款",
+  "請款指控",
+  "请款指控",
+  "財路",
+  "财路",
+  "擋誰財路",
+  "挡谁财路",
+  "擋人財路",
+  "挡人财路",
   "牙膏",
   "水",
   "旅遊",
@@ -335,24 +373,30 @@ function main() {
       pass("duplicate-ids", "no duplicate IDs");
     }
 
-    const genericAliasHits = [];
+    const genericSearchFieldHits = [];
     for (const brand of brands) {
-      for (const alias of asStringArray(brand.aliases)) {
-        if (GENERIC_ALIAS_TERMS.has(normalizeText(alias))) {
-          genericAliasHits.push({ id: brand.id, name: brand.name, alias });
+      const searchableFields = [
+        { field: "name", value: brand.name },
+        ...asStringArray(brand.aliases).map((value) => ({ field: "aliases", value })),
+        ...asStringArray(brand.identifiers).map((value) => ({ field: "identifiers", value })),
+      ];
+
+      for (const { field, value } of searchableFields) {
+        if (GENERIC_ALIAS_TERMS.has(normalizeText(value))) {
+          genericSearchFieldHits.push({ id: brand.id, name: brand.name, field, value });
         }
       }
     }
 
-    if (genericAliasHits.length > 0) {
-      const message = `${genericAliasHits.length} exact generic alias(es) found; review whether they should be blocklisted or qualified`;
+    if (genericSearchFieldHits.length > 0) {
+      const message = `${genericSearchFieldHits.length} exact generic searchable field(s) found; review whether they should be blocklisted or qualified`;
       if (options.strictGenerics) {
-        fail("generic-aliases", message, genericAliasHits);
+        fail("generic-search-fields", message, genericSearchFieldHits);
       } else {
-        warn("generic-aliases", message, genericAliasHits.slice(0, 20));
+        warn("generic-search-fields", message, genericSearchFieldHits.slice(0, 20));
       }
     } else {
-      pass("generic-aliases", "no exact generic aliases from the built-in guard list");
+      pass("generic-search-fields", "no exact generic searchable fields from the built-in guard list");
     }
   }
 
