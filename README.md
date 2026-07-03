@@ -109,10 +109,27 @@ http://localhost:4173/
 node .\scripts\merge-risk-records.mjs
 ```
 
-重跑後建議至少執行：
+重跑後執行固定驗證腳本：
 
 ```powershell
-node --check app-core.mjs
-node --check app.js
-node --check scripts\merge-risk-records.mjs
+node .\scripts\validate-brand-records.mjs
 ```
+
+需要針對新紀錄做正查／反查時，可加上 target 與查詢矩陣：
+
+```powershell
+node .\scripts\validate-brand-records.mjs --target-id <record-id> --positive <品牌名> --positive <公司名> --negative <泛稱>
+```
+
+這個腳本會自動執行：
+
+- `brands.json` JSON parse、normalize 與 `validateBrandRecord()`。
+- duplicate ID 檢查。
+- README 筆數一致性檢查。
+- 預設正查 smoke tests。
+- 預設泛稱反查，避免 `牙膏`、`水`、`旅遊`、`政治人物` 等普通詞誤命中。
+- `node --check app-core.mjs`、`node --check app.js`、`node --check scripts\merge-risk-records.mjs`、`node --check scripts\validate-brand-records.mjs`。
+- `git diff --check`。
+- 發布 gate 必須是 0 errors、0 warnings；`--allow-warnings` 只用於調查，不可作為自動發布依據。
+
+正式交辦的入庫／更新任務，在驗證腳本 PASS（0 errors、0 warnings）、diff 只包含預期檔案、本地 AI 筆記已更新後，可以直接 commit 並 push 到 `origin/main`；push 後再把 commit hash 寫入／更新 Pinecone 紀錄。主動探索候選仍不可自動入庫或自動發布，必須等使用者確認候選。
