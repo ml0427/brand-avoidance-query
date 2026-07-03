@@ -3052,6 +3052,48 @@ const riskRecords = [
     lastReviewed: "2026-07-03",
   }),
   record({
+    id: "kao-hongan-assistant-fee-forgery-second-instance",
+    name: "高虹安 / 助理費案二審偽造文書判刑",
+    aliases: ["高虹安", "Gao Hong-an", "Gao Hongan", "Ann Kao"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "偽造文書罪二審有罪判決", "民眾黨現有名單人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導高虹安涉立委任內助理費案，一審依貪污罪判刑7年4月；二審改認貪污部分無罪，依使公務員登載不實偽造文書罪判刑6月、得易科罰金。中央社 2026-01-05 報導高檢署已提起上訴，因此此筆記錄二審判決與上訴中，不寫成定讞，也不寫成貪污罪已確定。",
+    sources: [
+      source("中央社 - 高虹安詐領助理費案一審判7年4月", "https://www.cna.com.tw/news/asoc/202407265005.aspx", "2024-07-26", "報導高虹安助理費案一審依貪污治罪條例判刑7年4月、可上訴。"),
+      source("中央社 - 高虹安二審改依偽造文書罪判6月 高檢署研議上訴", "https://www.cna.com.tw/news/asoc/202512160062.aspx", "2025-12-16", "報導二審改依偽造文書罪判刑6月，並稱高檢署研議上訴。"),
+      source("中央社 - 高虹安涉詐助理費二審改判6月 高檢署上訴", "https://www.cna.com.tw/news/asoc/202601050274.aspx", "2026-01-05", "報導高檢署已就二審判決提起上訴，全案尚未定讞。"),
+      source("內政部 - 新竹市長高虹安助理費案貪污罪經二審法院改判無罪", "https://www.moi.gov.tw/News_Content.aspx?n=2&s=335278", "2025-12-16", "內政部說明高虹安貪污罪二審改判無罪後可依法申請復職；用於標註貪污罪二審無罪邊界。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 指二審偽造文書判刑與檢方上訴狀態可核對，不代表定讞。貪污罪部分一審有罪但二審無罪，回答時必須講清楚。不要把新竹市長、民眾黨、助理費、貪污、偽造文書、復職、停職等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
+    id: "chang-anle-tax-forgery-final-conviction",
+    name: "張安樂 / 稅捐偽造文書案定讞",
+    aliases: ["張安樂", "张安乐", "白狼", "Chang An-le", "Chang Anle", "White Wolf"],
+    country: "台灣",
+    categories: ["司法／公眾人物案件", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "稅捐稽徵法／偽造文書相關判刑", "統促黨人物"],
+    confidence: "high",
+    status: "confirmed",
+    summary:
+      "現有名單人物司法補充：中央社報導張安樂涉統促黨、華夏大地旅行社等案件，政治獻金與業務侵占部分有無罪邊界；但稅捐稽徵法／偽造文書相關部分曾判刑8月，後續中央社報導稱稅捐稽徵法部分無人上訴而定讞。此筆只記錄可核對的判刑與定讞邊界，不把另案指控、芬太尼指控或組織犯罪通緝史混寫成已定罪事實。",
+    sources: [
+      source("中央社 - 張安樂偽造文書等案二審仍判8月 政治獻金案無罪", "https://www.cna.com.tw/news/asoc/202407010106.aspx", "2024-07-01", "報導張安樂偽造文書、違反稅捐稽徵法判刑8月，政治獻金案無罪。"),
+      source("中央社 - 張安樂被控業務侵占無罪確定 兒子張瑋有罪定讞", "https://www.cna.com.tw/news/asoc/202412200061.aspx", "2024-12-20", "報導張安樂業務侵占等案無罪確定，並說明同案其他被告結果；用於避免把業務侵占寫成張安樂有罪。"),
+      source("中央社 - 張安樂之子張瑋判刑1年定讞未到案 北檢發布通緝", "https://www.cna.com.tw/news/asoc/202508150165.aspx", "2025-08-15", "報導張安樂稅捐稽徵法部分一審判處得易科罰金刑8月，無人上訴而定讞；同文也列政治獻金、業務侵占無罪邊界。"),
+      source("最高檢察署 - 媒體報導白狼張安樂及竹聯幫協助墨西哥販毒集團涉及芬太尼案件發交查明", "https://www.tps.moj.gov.tw/media/387720/%E6%9C%80%E9%AB%98%E6%AA%A2%E5%AF%9F%E7%BD%B2114%E5%B9%B42%E6%9C%8812%E6%97%A5%E6%96%B0%E8%81%9E%E7%A8%BF-%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E%E6%9C%89%E9%97%9C%E7%99%BD%E7%8B%BC%E5%8D%94%E5%8A%A9%E5%A2%A8%E8%A5%BF%E5%93%A5%E6%AF%92%E5%B9%AB.pdf?mediaDL=true", "2025-02-12", "最高檢新聞稿稱相關媒體報導已發交高檢署查明；此來源只作未定指控邊界，不作犯罪紀錄。"),
+    ],
+    aiNotes:
+      "此筆 confirmed 僅指稅捐稽徵法／偽造文書相關判刑與定讞邊界。政治獻金、業務侵占部分已有無罪結果；芬太尼與組織犯罪相關內容在本筆僅能寫成查明或歷史指控，不得寫成已定罪。不要把統促黨、政治獻金、稅捐、偽造文書、業務侵占、芬太尼、黑幫等泛稱當 alias。",
+    lastReviewed: "2026-07-03",
+  }),
+  record({
     id: "kmt-current-public-figures-2026-06-26",
     name: "中國國民黨現任人物名單（2026-06-26）",
     aliases: kmtCurrentPublicFigureAliases,
