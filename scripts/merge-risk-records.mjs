@@ -2934,7 +2934,6 @@ const riskRecords = [
     identifiers: [
       "CNA202604220026",
       "LTN5407122",
-      "sports-association-budget-governance-2026-04",
       "中華民國籃球協會",
       "中華民國巧固球協會",
       "中華民國划船協會",
