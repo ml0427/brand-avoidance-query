@@ -51,6 +51,11 @@ http://localhost:4173/
 .\start-server.ps1 -Port 4174
 ```
 
+## AI 專案記憶
+
+- `AGENTS.md`：本專案的 AI 操作規則、收尾標準與保守口徑。
+- `AI_NOTES.md`：本專案的耐久工作流記憶與近期案例。專案細節優先留在這裡，不放全域 memory 或外部筆記。
+
 ## 資料
 
 `brands.json` 目前有 160 筆資料：
