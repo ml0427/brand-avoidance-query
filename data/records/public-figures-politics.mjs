@@ -486,6 +486,28 @@ export const records = [
     lastReviewed: "2026-07-01",
   }),
   record({
+    id: "hsiao-ching-tien-kmt-1984-police-killing-case-personal",
+    name: "蕭景田 / Hsiao Ching-tien",
+    aliases: ["蕭景田", "萧景田", "Hsiao Ching-tien", "Hsiao Ching Tien", "Hsiao Ching-tian", "Xiao Jingtian"],
+    identifiers: ["羅立柏", "罗立柏", "力照霖", "1984年殺警案", "1984年杀警案", "運送屍體罪", "运送尸体罪"],
+    country: "台灣",
+    categories: ["政治／個人避開", "政治／政黨人物／參選人"],
+    avoidReasons: ["使用者個人避開", "國民黨政治人物", "1984年殺警案涉入報導", "運送屍體罪判刑入獄報導"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供社群圖卡後查核補充：公開媒體資料可支撐蕭景田早年涉入 1984 年殺警案的保守表述；中央社 2023 年報導引述民進黨發言人稱，時任彰化縣社頭鄉代表會主席的蕭景田在 1984 年涉入殺警案，因運送屍體罪被判刑入獄。自由時報與 ETtoday 2019 年報導亦記錄蕭景田以 35 年前刑案／出獄後翻轉人生等語回應。此筆依使用者個人避開列入，不把社群圖卡『他也殺過警』直接寫成法院認定親手殺警或殺人罪定讞。",
+    sources: [
+      source("中央社 - 綠指雙標面對涉殺警案蕭景田 侯辦：轉移焦點", "https://www.cna.com.tw/news/aipl/202307110191.aspx", "2023-07-11", "報導引述民進黨發言人稱，蕭景田 1984 年涉入殺警案，因運送屍體罪被判刑入獄；同文亦記錄侯辦回應。"),
+      source("自由時報 - 吳音寧翻出『殺警』往事 蕭景田PO文為『黑歷史』辯白", "https://news.ltn.com.tw/news/politics/breakingnews/2832952", "2019-06-25", "報導稱蕭景田早年混跡黑道、幫派並捲入殺警案，並記錄蕭景田以 35 年前刑案、出獄後翻轉人生等內容回應。"),
+      source("ETtoday - 為35年前的殺警案自清 國民黨彰化立委蕭景田的真心告白", "https://www.ettoday.net/news/20191221/1607054.htm", "2019-12-21", "報導蕭景田競選文宣針對 35 年前刑案自清，文宣稱該刑案成為人生原罪並主張改過遷善。"),
+      source("三立新聞網 - 國民黨提名販毒、殺警立委候選人 蕭景田張瀚天入列挨轟", "https://www.setn.com/News.aspx?NewsID=647674", "2019-12-04", "報導民進黨批評國民黨提名蕭景田，並以『殺警奪槍』造成兩條人命描述該爭議；此來源作政治攻防脈絡，不單獨作法院事實。"),
+    ],
+    aiNotes:
+      "回答時採保守口徑：可說『公開媒體資料與中央社報導可支撐蕭景田 1984 年涉入殺警案、因運送屍體罪被判刑入獄的表述』；不可直接說『法院認定蕭景田親手殺警』或『蕭景田殺人罪定讞』，除非另找到正式判決／法院資料。社群圖卡只作線索，不作來源。不要把國民黨、立委候選人、殺警、殺警案、殺警奪槍案、運送屍體罪等泛稱單獨當 alias； victim names 放 identifiers 是為了精準查詢。",
+    lastReviewed: "2026-07-06",
+  }),
+  record({
     id: "taiwan-entertainers-long-term-mainland-china-market",
     name: "台灣娛樂公眾人物長期中國大陸市場發展名單",
     aliases: longTermMainlandChinaEntertainmentAliases,
