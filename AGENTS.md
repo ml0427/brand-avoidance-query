@@ -30,8 +30,9 @@
 
 - `aliases` 放品牌名、公司名、明確產品線、域名與常見查詢字。
 - `identifiers` 會被查詢也會在 UI 顯示，僅放條碼、統編、食品業者字號、法院案號、正式名稱等穩定識別；不要放未採信指控或說明性括號。
-- 泛稱不得單獨命中。新增紀錄時要測正查與負查；必要時把泛稱加入 `GENERIC_QUERY_BLOCKLIST` 與 validator 預設負查。
-- 特別注意 substring：`filterBrands()` 會搜 `name`、`aliases`、`country`、`identifiers`，所以泛稱可能來自名稱或 qualified alias，不只 alias。
+- 使用者查詢端允許泛稱探索，不再用 query blocklist 硬擋 `餐廳`、`拉麵`、`果汁`、`統一` 等詞。
+- 泛稱管控改在入庫驗證：不要把沒有品牌／人物／公司限定的泛稱寫成 exact `aliases` 或 `identifiers`；validator 的 `generic-search-fields` 會檢查這類資料品質問題。
+- 特別注意 substring：`filterBrands()` 會搜 `name`、`aliases`、`country` 與處理後的 `identifiers`；`identifiers` 中 `標籤：值` 只索引值，避免 `統一編號` 這類欄位標籤污染查詢。
 
 ## 驗證與提交
 
@@ -39,7 +40,7 @@
 
 ```bash
 node scripts/merge-risk-records.mjs
-node scripts/validate-brand-records.mjs --target-id <record-id> --positive <明確查詢> --negative <泛稱>
+node scripts/validate-brand-records.mjs --target-id <record-id> --positive <明確查詢>
 ```
 
 提交前檢查：

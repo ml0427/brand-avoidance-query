@@ -22,7 +22,7 @@ const DEFAULT_POSITIVE_SMOKE_TESTS = [
   { query: "韓國旅遊風險", minMatches: 1 },
 ];
 
-const DEFAULT_NEGATIVE_QUERIES = [
+const GENERIC_SEARCH_FIELD_TERMS = [
   "珍珠芭樂",
   "鳳梨酥",
   "行動電源",
@@ -183,7 +183,7 @@ const DEFAULT_NEGATIVE_QUERIES = [
 
 const GENERIC_ALIAS_TERMS = new Set(
   [
-    ...DEFAULT_NEGATIVE_QUERIES,
+    ...GENERIC_SEARCH_FIELD_TERMS,
     "APP",
     "中國製",
     "中国製",
@@ -223,24 +223,25 @@ Default checks:
   - verify README record count, if present
   - run node --check for app-core.mjs, app.js, scripts/*.mjs, and data/**/*.mjs
   - run default positive smoke queries
-  - run default generic negative queries; these must return zero results
+  - check exact generic searchable fields so record authors do not add bare generic aliases / identifiers
   - run git diff --check when inside a git repository
 
 Record-specific checks:
   --target-id <id>          Target record id. Repeat or comma-separate for multiple IDs.
   --positive <query>        Query that must hit the target id when --target-id is set; otherwise must hit at least one record.
-  --negative <query>        Query that must return zero records. Repeat for all generic false-positive probes.
+  --negative <query>        Advanced regression: query must return zero records. Do not use this for ordinary generic terms.
   --expect <query=>id>      Query must include the exact id. Repeat for multi-record batches.
+  --not-expect <query=>id>  Query must not include the exact id while allowing other records.
   --expect-any <query>      Query must return at least one record.
 
 Control:
   --data <path>             brands JSON path, default: brands.json
   --readme <path>           README path, default: README.md
   --no-default-smoke        Skip built-in positive smoke tests.
-  --no-default-negatives    Skip built-in generic negative tests.
+  --no-default-negatives    Deprecated compatibility no-op; generic query blocking is no longer default behavior.
   --no-syntax-check         Skip node --check checks.
   --no-git-diff-check       Skip git diff --check.
-  --strict-generics         Classify exact generic aliases as errors instead of warnings.
+  --strict-generics         Deprecated compatibility flag; exact generic searchable fields are errors by default.
   --allow-warnings          Exit zero even if warnings exist; for investigation only, not publish gates.
   --fail-on-warnings        Compatibility flag; warnings are fatal by default.
   --json                    Output machine-readable JSON only.
@@ -248,8 +249,8 @@ Control:
 
 Examples:
   node scripts/validate-brand-records.mjs
-  node scripts/validate-brand-records.mjs --target-id weichuan-foods --positive 味全 --negative 水
-  node scripts/validate-brand-records.mjs --expect "味全=>weichuan-foods" --expect-any TikTok --negative 政治人物
+  node scripts/validate-brand-records.mjs --target-id weichuan-foods --positive 味全
+  node scripts/validate-brand-records.mjs --expect "拉麵=>butanchu-tainan-changrong-unification-personal" --not-expect "統一=>xianxiangle-li-zaishenbian-canned-pear-china-origin-personal"
 `;
 }
 
@@ -261,9 +262,10 @@ function parseArgs(argv) {
     positives: [],
     negatives: [],
     expects: [],
+    notExpects: [],
     expectAny: [],
     defaultSmoke: true,
-    defaultNegatives: true,
+    defaultNegatives: false,
     syntaxCheck: true,
     gitDiffCheck: true,
     strictGenerics: false,
@@ -312,6 +314,17 @@ function parseArgs(argv) {
           throw new Error(`--expect must use the form "query=>record-id": ${value}`);
         }
         options.expects.push({ query: query.trim(), id: id.trim() });
+        index += 1;
+        break;
+      }
+      case "--not-expect": {
+        const value = takeValue(argv, index, arg);
+        const separator = value.includes("=>") ? "=>" : "=";
+        const [query, id, ...rest] = value.split(separator);
+        if (!query || !id || rest.length > 0) {
+          throw new Error(`--not-expect must use the form "query=>record-id": ${value}`);
+        }
+        options.notExpects.push({ query: query.trim(), id: id.trim() });
         index += 1;
         break;
       }
@@ -519,12 +532,11 @@ function main() {
     }
 
     if (genericSearchFieldHits.length > 0) {
-      const message = `${genericSearchFieldHits.length} exact generic searchable field(s) found; review whether they should be blocklisted or qualified`;
-      if (options.strictGenerics) {
-        fail("generic-search-fields", message, genericSearchFieldHits);
-      } else {
-        warn("generic-search-fields", message, genericSearchFieldHits.slice(0, 20));
-      }
+      fail(
+        "generic-search-fields",
+        `${genericSearchFieldHits.length} exact generic searchable field(s) found; qualify or remove them before publishing`,
+        genericSearchFieldHits.slice(0, 20),
+      );
     } else {
       pass("generic-search-fields", "no exact generic searchable fields from the built-in guard list");
     }
@@ -564,10 +576,7 @@ function main() {
       pass("positive-smoke", `${positiveSmokeTests.length} built-in positive smoke query/probe(s) checked`);
     }
 
-    const negativeQueries = [
-      ...(options.defaultNegatives ? DEFAULT_NEGATIVE_QUERIES : []),
-      ...options.negatives,
-    ];
+    const negativeQueries = [...options.negatives];
     for (const query of negativeQueries) {
       const ids = idsForQuery(brands, query);
       details.negativeQueries[query] = ids;
@@ -611,6 +620,17 @@ function main() {
     }
     if (options.expects.length > 0) {
       pass("expect-query", `${options.expects.length} exact query=>id expectation(s) checked`);
+    }
+
+    for (const { query, id } of options.notExpects) {
+      const ids = idsForQuery(brands, query);
+      details.positiveQueries[query] = ids;
+      if (ids.includes(id)) {
+        fail("not-expect-query", `query "${query}" returned forbidden id ${id} in [${formatList(ids)}]`);
+      }
+    }
+    if (options.notExpects.length > 0) {
+      pass("not-expect-query", `${options.notExpects.length} query=>id exclusion expectation(s) checked`);
     }
 
     for (const query of options.expectAny) {
