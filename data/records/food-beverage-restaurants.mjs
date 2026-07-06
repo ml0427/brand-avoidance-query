@@ -277,6 +277,39 @@ export const records = [
     lastReviewed: "2026-06-30",
   }),
   record({
+    id: "butanchu-tainan-changrong-unification-personal",
+    name: "豚人拉麵 長榮店 / butanchu_tainan",
+    aliases: [
+      "豚人拉麵",
+      "豚人拉麵 長榮店",
+      "豚人拉麵長榮店",
+      "豚人 長榮店",
+      "豚人拉麵 台南",
+      "豚人拉麵台南",
+      "butanchu_tainan",
+      "butanchu tainan",
+      "Butanchu Tainan",
+      "豚人 支持統一",
+      "豚人拉麵 支持統一",
+      "豚人拉麵長榮店 支持統一",
+    ],
+    identifiers: ["地址：台南市東區長榮路二段159號", "Threads/Instagram 帳號：butanchu_tainan"],
+    country: "台灣",
+    categories: ["餐飲／生活服務", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "使用者提供支持統一線索", "社群貼文線索"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 連結線索指稱豚人拉麵長榮店支持統一，並明確要求直接加入個人避開。使用者提供的截圖可辨識店家為『豚人拉麵 長榮店』、帳號 butanchu_tainan、地址台南市東區長榮路二段159號、營業時間與菜單；截圖本身未顯示政治主張，因此此筆以使用者指定 personal 紀錄處理，不作官方立場、法律違規或所有分店定論。",
+    sources: [
+      source("使用者提供 - Threads 線索：豚人拉麵長榮店支持統一", "https://www.threads.com/@guide_red2.0/post/DaaxeIBAc6u?xmt=AQG0AG0myCo3pkLmnogA80Sqt-I0iZkKE5VZF9_drJ6oCICkmFDlKn8fTwgAZFDd3tUvLifZ&slof=1", "2026-07-06", "使用者提供此 Threads 連結並表示『支持統一，直接加入』；此來源作為使用者個人避開線索，不在本次流程中另行確認線上版。"),
+      source("使用者提供 - 豚人拉麵長榮店 Threads/Instagram 截圖", "", "2026-07-06", "截圖可讀到店名『豚人拉麵 長榮店』、帳號 butanchu_tainan、地址台南市東區長榮路二段159號、週四五公休、營業時間 11:30–14:15 / 17:00–20:15，以及菜單項目；截圖本身未顯示支持統一文字。"),
+    ],
+    aiNotes:
+      "此筆是 user-directed personal record。可說『使用者提供 Threads 線索指稱支持統一，因此列入個人避開』；不可說已由官方承認、法院認定、違法或所有豚人拉麵分店皆同一立場。截圖只支撐店家識別與地址，不支撐政治主張本身。查詢可用豚人拉麵、長榮店、butanchu_tainan、地址或豚人+支持統一；不要讓拉麵、餐廳、長榮店、支持統一等泛稱單獨命中。",
+    lastReviewed: "2026-07-06",
+  }),
+  record({
     id: "xianxiangle-li-zaishenbian-canned-pear-china-origin-personal",
     name: "纖享樂 / JOY FOOD 纖享樂 / 榮品居國際食品",
     aliases: [
