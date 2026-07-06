@@ -104,17 +104,17 @@ export const recordCleanups = new Map([
   [
     "tacoop-taiwan-agricultural-united-marketing-cooperative",
     {
-      identifiers: ["統一編號：88789093"],
+      removeIdentifiers: ["統一編號：88789093"],
       removeAliases: ["88789093", "統編88789093"],
-      aiNotes: "目前沒有明確零售 SKU；購買水果、農產品、食品或飲料時，主要比對合作社名稱、TACOOP、英文名與統一編號。不要把單純水果品項當成品牌命中。",
+      aiNotes: "目前沒有明確零售 SKU；購買水果、農產品、食品或飲料時，主要比對合作社名稱、TACOOP 與英文名。公司統一編號 88789093 僅保留在來源／備註作佐證，不作 searchable/display identifier。不要把單純水果品項當成品牌命中。",
     },
   ],
   [
     "shye-chuen-seafood",
     {
-      identifiers: ["統一編號：54511227"],
+      removeIdentifiers: ["統一編號：54511227"],
       removeAliases: ["54511227", "統編54511227"],
-      aiNotes: "目前以供應商／公司標示辨識，不要推論成已確認的消費者自有品牌清單；統一編號只作包裝或公司資料核對用。",
+      aiNotes: "目前以供應商／公司標示辨識，不要推論成已確認的消費者自有品牌清單；公司統一編號 54511227 只保留在來源／備註作佐證，不作 searchable/display identifier。",
     },
   ],
   [
@@ -148,7 +148,7 @@ export const recordCleanups = new Map([
   [
     "tianwei-agricultural-technology",
     {
-      identifiers: ["統一編號：83035103"],
+      removeIdentifiers: ["統一編號：83035103"],
       removeAliases: [
         "83035103",
         "統編83035103",
@@ -163,19 +163,21 @@ export const recordCleanups = new Map([
         "金鑽鳳梨脆片",
       ],
       summary: "使用者標記為關聯保守避開；天崴公司本身可由公開資料確認，永興菓舖／永興合作社與黃威騰、鳳梨供應鏈有公開關聯，但未確認為天崴自有品牌的泛用品項已不放入別名。",
-      aiNotes: "此筆是低可信度／觀察中，重點是公司與關聯單位辨識。珍珠芭樂、鳳梨酥、金鑽鳳梨等沒有品牌或責任廠商限定的品項不得當成別名；只有看到天崴、永興菓舖、永興果菜生產合作社或統一編號時才應命中。",
+      aiNotes: "此筆是低可信度／觀察中，重點是公司與關聯單位辨識。珍珠芭樂、鳳梨酥、金鑽鳳梨等沒有品牌或責任廠商限定的品項不得當成別名；只有看到天崴、永興菓舖或永興果菜生產合作社時才應命中。公司統一編號 83035103 僅保留在來源／備註作佐證，不作 searchable/display identifier。",
     },
   ],
   [
     "coco-fresh-tea",
     {
-      identifiers: ["統一編號：12915964", "coco-tea.com", "coco-tea.com.cn", "OCOCO INTERNATIONAL CO., LTD."],
+      removeIdentifiers: ["統一編號：12915964"],
+      identifiers: ["coco-tea.com", "coco-tea.com.cn", "OCOCO INTERNATIONAL CO., LTD."],
     },
   ],
   [
     "sunnyhills-delights",
     {
-      identifiers: ["統一編號：24202147", "食品業者登錄字號：M-124202147-00000-2"],
+      removeIdentifiers: ["統一編號：24202147"],
+      identifiers: ["食品業者登錄字號：M-124202147-00000-2"],
     },
   ],
   [
@@ -229,7 +231,8 @@ export const recordCleanups = new Map([
   [
     "nice-magic-amah-household",
     {
-      identifiers: ["統一編號：23912009", "amah.com.tw", "cnnice.com"],
+      removeIdentifiers: ["統一編號：23912009"],
+      identifiers: ["amah.com.tw", "cnnice.com"],
     },
   ],
   [

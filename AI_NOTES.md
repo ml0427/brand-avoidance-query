@@ -21,7 +21,7 @@
 - Record: `uni-president-yuanzhiwei-apple-juice-china-origin-personal`
 - 依據：使用者提供瓶身標籤截圖；標籤可讀到統一「園之味 100%果汁 蘋果汁」、原產地中國、統一企業股份有限公司、統一企業楊梅廠、食品統一編號 `5549421703`、條碼約 `4710088473141`。
 - 口徑：可說「這款統一園之味蘋果汁標籤顯示原產地中國，因此個人避買」。不可延伸為統一企業全部產品、中資／國資／中共控制、食安、違法或禁售。
-- 查詢：正查使用 `統一企業 園之味`、`統一 園之味 蘋果汁`、`統一蘋果汁`、`園之味`、`園之味100%果汁`、食品統一編號或條碼。
+- 查詢：正查使用 `統一企業 園之味`、`統一 園之味 蘋果汁`、`統一蘋果汁`、`園之味`、`園之味100%果汁` 或條碼；食品統一編號 `5549421703` 只留在 summary / source note 作佐證，不作 searchable/display identifier。
 - 2026-07-06 起泛稱查詢允許使用者探索；`統一`、`果汁`、`蘋果汁`、`100%果汁`、`飲料`、`食品` 等不再由查詢端硬擋，但入庫時仍不得把這些泛稱寫成 exact alias / identifier。
 
 ## 2026-07-06 蕭景田圖卡查核
@@ -43,7 +43,7 @@
 
 遇到商品標籤直接標示中國原產：
 
-1. OCR / 視覺確認品牌、品名、原產地、公司、條碼或統編。
+1. OCR / 視覺確認品牌、品名、原產地、公司、條碼；統編／統一編號若出現，只作佐證記在 summary / source note / aiNotes，不放 aliases / identifiers。
 2. 本機查重。
 3. 補 `data/records/*.mjs`，跑 merge。
 4. validator 正查、必要 `--expect` / `--not-expect`、exact generic field guard PASS。
@@ -57,12 +57,18 @@
 - 使用者提供 Threads 連結並明確說「支持統一，直接加入」。
 - 截圖可支撐店家識別：豚人拉麵 長榮店、帳號 `butanchu_tainan`、地址台南市東區長榮路二段159號、營業時間與菜單；截圖本身未顯示政治主張。
 - 口徑：可說「使用者提供 Threads 線索指稱支持統一，因此列個人避開」。不可說官方承認、違法、法院認定，或所有豚人拉麵分店都同一立場。
-- 查詢設計：正查 `豚人拉麵`、`豚人拉麵 長榮店`、`butanchu_tainan`、地址、`豚人 支持統一`；`拉麵`、`餐廳`、`長榮店`、`支持統一`、`統一` 等泛稱現在允許探索命中，但不可作未限定的 exact alias / identifier。
+- 查詢設計：正查 `豚人拉麵`、`豚人拉麵 長榮店`、`butanchu_tainan` 與地址；`支持統一` 是收錄理由／線索，不作 alias 或 identifier，`豚人 支持統一` 也不應靠 alias 命中。`拉麵`、`餐廳`、`長榮店`、`支持統一`、`統一` 等泛稱不可作未限定的 exact alias / identifier。
+
+## 2026-07-06 統編／統一編號不作使用者搜尋鍵
+
+- 使用者明確指出一般使用者不會查統編；台灣公司統編／統一編號、食品統一編號、公司統編不應放在 searchable/display `identifiers` 或 `aliases`。
+- 若統編是來源佐證，保留在 `summary`、`sources.note` 或 `aiNotes`；不要顯示成 UI「辨識編號」，也不要讓數字或 `統編...` 成為查詢命中鍵。
+- 條碼、食品業者登錄字號、域名、地址、官方帳號、法院／制裁正式案號仍可視使用情境保留在 `identifiers`。
 
 ## 2026-07-06 泛稱查詢改為使用者端可查、入庫端把關
 
 - 老爺明確提出：泛稱應改成 AI 加入紀錄時的檢查，使用者查詢時可以使用泛稱。
 - 已移除 `app-core.mjs` 的使用者查詢端 exact generic blocklist；`filterBrands()` 不再因 `GENERIC_QUERY_BLOCKLIST` 直接回空。
-- 搜尋索引會處理 `identifiers` 的 `標籤：值` 格式，只索引冒號後的值，避免 `食品統一編號`、`條碼`、`地址` 等欄位標籤污染查詢。
+- 搜尋索引會處理 `identifiers` 的 `標籤：值` 格式，只索引冒號後的值；但統編／統一編號／食品統一編號仍不應放進 `identifiers`，只能放 summary / source note / aiNotes 作佐證。
 - validator 改以 `generic-search-fields` 檢查入庫資料品質：泛稱不應是 exact `name` / `aliases` / `identifiers`；但泛稱出現在完整品牌名或 qualified alias 中可以被使用者查到。
 - `--negative` 現為進階零命中回歸測試，不再拿來測普通泛稱；需要確認某查詢不該命中特定紀錄時，用 `--not-expect query=>record-id`。

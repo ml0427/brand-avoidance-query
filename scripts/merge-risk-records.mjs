@@ -22,12 +22,16 @@ function applyRecordCleanup(item) {
   }
 
   const removeAliases = new Set(cleanup.removeAliases ?? []);
+  const removeIdentifiers = new Set(cleanup.removeIdentifiers ?? []);
   const aliases = uniqueStrings([...(item.aliases ?? []).filter((alias) => !removeAliases.has(alias)), ...(cleanup.addAliases ?? [])]);
 
   return {
     ...item,
     aliases,
-    identifiers: uniqueStrings([...(item.identifiers ?? []), ...(cleanup.identifiers ?? [])]),
+    identifiers: uniqueStrings([
+      ...(item.identifiers ?? []).filter((identifier) => !removeIdentifiers.has(identifier)),
+      ...(cleanup.identifiers ?? []),
+    ]),
     categories: normalizeCategories(broadCategoryOverrides.get(item.id) ?? item.categories),
     summary: cleanup.summary ?? item.summary,
     aiNotes: cleanup.aiNotes ?? item.aiNotes,
