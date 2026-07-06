@@ -33,6 +33,7 @@ function applyRecordCleanup(item) {
       ...(cleanup.identifiers ?? []),
     ]),
     categories: normalizeCategories(broadCategoryOverrides.get(item.id) ?? item.categories),
+    sources: cleanup.sources ?? item.sources,
     summary: cleanup.summary ?? item.summary,
     aiNotes: cleanup.aiNotes ?? item.aiNotes,
   };

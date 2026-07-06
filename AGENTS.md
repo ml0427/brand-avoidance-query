@@ -15,8 +15,8 @@
 ## 收尾規則
 
 - 預設收尾：本機 `node scripts/validate-brand-records.mjs` PASS，且 `warnings: 0; errors: 0`；commit 並 push 到 `origin/main`。
-- 不預設確認 GitHub Pages / 線上版。只有老爺明確要求、或正在排查線上版問題時，才查 Pages 發布結果。
-- 不預設同步 Pinecone。除非老爺明確要求或 legacy 查找真的需要，否則以本 repo、git history、`AI_NOTES.md` 為耐久紀錄。
+- 不預設確認 GitHub Pages / 線上版。只有使用者明確要求、或正在排查線上版問題時，才查 Pages 發布結果。
+- 不預設同步 Pinecone。除非使用者明確要求或 legacy 查找真的需要，否則以本 repo、git history、`AI_NOTES.md` 為耐久紀錄。
 - 不把 Obsidian/Hermes skill/global memory 當作此專案的主要記憶位置；那些地方最多只留索引或通用偏好。
 
 ## 入庫口徑
@@ -30,10 +30,10 @@
 
 - `aliases` 放品牌名、公司名、明確產品線、域名與常見查詢字。
 - `identifiers` 會被查詢也會在 UI 顯示，僅放使用者真的會拿來查的穩定識別，例如條碼、食品業者登錄字號、法院案號、網域、地址或官方帳號；不要放未採信指控或說明性括號。
-- 台灣公司統編／統一編號、食品統一編號、公司統編預設不作 searchable/display identifier，也不放 aliases；若需保存佐證，寫在 `summary`、`sources.note` 或 `aiNotes`。
+- 台灣公司稅籍號碼一開始就不要查，也不要寫進 `aliases`、`identifiers`、`summary`、`sources.note` 或 `aiNotes`；看到標籤或來源上有這類號碼時直接略過。
 - 使用者查詢端允許泛稱探索，不再用 query blocklist 硬擋 `餐廳`、`拉麵`、`果汁`、`統一` 等詞。
 - 泛稱管控改在入庫驗證：不要把沒有品牌／人物／公司限定的泛稱寫成 exact `aliases` 或 `identifiers`；validator 的 `generic-search-fields` 會檢查這類資料品質問題。
-- 特別注意 substring：`filterBrands()` 會搜 `name`、`aliases`、`country` 與處理後的 `identifiers`；`identifiers` 中 `標籤：值` 只索引值，但仍不要把統編／統一編號等低使用率佐證號碼放進 `identifiers`。
+- 特別注意 substring：`filterBrands()` 會搜 `name`、`aliases`、`country` 與處理後的 `identifiers`；不要用稅籍號碼建立任何可查或不可查的紀錄資料。
 
 ## 驗證與提交
 

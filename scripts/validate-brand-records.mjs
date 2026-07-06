@@ -181,6 +181,33 @@ const GENERIC_SEARCH_FIELD_TERMS = [
   "營造",
 ];
 
+
+const FORBIDDEN_TAIWAN_TAX_ID_PATTERNS = [
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+  //u,
+];
+
 const GENERIC_ALIAS_TERMS = new Set(
   [
     ...GENERIC_SEARCH_FIELD_TERMS,
@@ -529,6 +556,27 @@ function main() {
           genericSearchFieldHits.push({ id: brand.id, name: brand.name, field, value });
         }
       }
+    }
+
+
+    const taxIdDataHits = [];
+    for (const brand of brands) {
+      const serialized = JSON.stringify(brand);
+      for (const pattern of FORBIDDEN_TAIWAN_TAX_ID_PATTERNS) {
+        if (pattern.test(serialized)) {
+          taxIdDataHits.push({ id: brand.id, name: brand.name, pattern: String(pattern) });
+        }
+      }
+    }
+
+    if (taxIdDataHits.length > 0) {
+      fail(
+        "tax-id-data",
+        `${taxIdDataHits.length} Taiwanese tax-id datum/datum label(s) found; do not store or search them`,
+        taxIdDataHits.slice(0, 20),
+      );
+    } else {
+      pass("tax-id-data", "no Taiwanese tax-id data in generated records");
     }
 
     if (genericSearchFieldHits.length > 0) {

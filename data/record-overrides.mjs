@@ -104,17 +104,37 @@ export const recordCleanups = new Map([
   [
     "tacoop-taiwan-agricultural-united-marketing-cooperative",
     {
-      removeIdentifiers: ["統一編號：88789093"],
-      removeAliases: ["88789093", "統編88789093"],
-      aiNotes: "目前沒有明確零售 SKU；購買水果、農產品、食品或飲料時，主要比對合作社名稱、TACOOP 與英文名。公司統一編號 88789093 僅保留在來源／備註作佐證，不作 searchable/display identifier。不要把單純水果品項當成品牌命中。",
+      summary: "使用者標記為避買；目前以合作社名稱、英文名與 TACOOP 辨識，未查到明確消費者零售 SKU。",
+      sources: [
+        {
+          title: "使用者提供避買清單",
+          url: "",
+          date: "2026-06-25",
+          note: "使用者指定 TACOOP、合作社全名與英文名作為辨識字樣。",
+        },
+        {
+          title: "保證責任台灣農產共同協力運銷合作社 - 中華黃頁",
+          url: "https://www.iyp.com.tw/087512715",
+          date: "2026-06-25",
+          note: "公開資料列示營業名稱、地址與經營項目水果批發。",
+        },
+      ],
+      aiNotes: "目前沒有明確零售 SKU；購買水果、農產品、食品或飲料時，主要比對合作社名稱、TACOOP 與英文名。不要把單純水果品項當成品牌命中。",
     },
   ],
   [
     "shye-chuen-seafood",
     {
-      removeIdentifiers: ["統一編號：54511227"],
-      removeAliases: ["54511227", "統編54511227"],
-      aiNotes: "目前以供應商／公司標示辨識，不要推論成已確認的消費者自有品牌清單；公司統一編號 54511227 只保留在來源／備註作佐證，不作 searchable/display identifier。",
+      summary: "使用者標記為避買；目前未查到明確消費者品牌，購買海鮮、冷凍或加工水產時以公司名稱與英文名辨識。",
+      sources: [
+        {
+          title: "使用者提供避買清單",
+          url: "",
+          date: "2026-06-25",
+          note: "使用者指定協春水產、協春水產有限公司與英文名作為辨識字樣。",
+        },
+      ],
+      aiNotes: "目前以供應商／公司標示辨識，不要推論成已確認的消費者自有品牌清單。",
     },
   ],
   [
@@ -148,10 +168,7 @@ export const recordCleanups = new Map([
   [
     "tianwei-agricultural-technology",
     {
-      removeIdentifiers: ["統一編號：83035103"],
       removeAliases: [
-        "83035103",
-        "統編83035103",
         "鳳梨鮮果萃",
         "100%鳳梨鮮果萃",
         "金鑽鳳梨",
@@ -163,22 +180,44 @@ export const recordCleanups = new Map([
         "金鑽鳳梨脆片",
       ],
       summary: "使用者標記為關聯保守避開；天崴公司本身可由公開資料確認，永興菓舖／永興合作社與黃威騰、鳳梨供應鏈有公開關聯，但未確認為天崴自有品牌的泛用品項已不放入別名。",
-      aiNotes: "此筆是低可信度／觀察中，重點是公司與關聯單位辨識。珍珠芭樂、鳳梨酥、金鑽鳳梨等沒有品牌或責任廠商限定的品項不得當成別名；只有看到天崴、永興菓舖或永興果菜生產合作社時才應命中。公司統一編號 83035103 僅保留在來源／備註作佐證，不作 searchable/display identifier。",
+      sources: [
+        {
+          title: "使用者提供避買清單",
+          url: "",
+          date: "2026-06-25",
+          note: "使用者指定天崴農業科技與永興菓舖、永興合作社、鳳梨／冷凍水果相關字樣作為保守避開。",
+        },
+        {
+          title: "天崴農業科技 - 創生夥伴介紹",
+          url: "https://twrr.org.tw/zh-TW/partner/273",
+          date: "2026-06-25",
+          note: "介紹天崴農業科技由黃威騰創立，經營種植、集貨、內外銷、加工與水果原物料供應。",
+        },
+        {
+          title: "古坑第三代鳳梨產業升級-天崴農業科技",
+          url: "https://www.newsmarket.com.tw/blog/214575/",
+          date: "2026-06-25",
+          note: "文章提到天崴農業科技與雲林永興合作社在產地種植、收購水果上的角色。",
+        },
+        {
+          title: "永興菓舖 100%鳳梨鮮果萃",
+          url: "https://www.afasale.tw/product/634",
+          date: "2026-06-25",
+          note: "商品頁介紹永興菓舖源自雲林永興合作社，並列鳳梨鮮果萃、金鑽鳳梨等商品。",
+        },
+      ],
+      aiNotes: "此筆是低可信度／觀察中，重點是公司與關聯單位辨識。珍珠芭樂、鳳梨酥、金鑽鳳梨等沒有品牌或責任廠商限定的品項不得當成別名；只有看到天崴、永興菓舖或永興果菜生產合作社時才應命中。",
     },
   ],
   [
     "coco-fresh-tea",
     {
-      removeIdentifiers: ["統一編號：12915964"],
       identifiers: ["coco-tea.com", "coco-tea.com.cn", "OCOCO INTERNATIONAL CO., LTD."],
     },
   ],
   [
     "sunnyhills-delights",
-    {
-      removeIdentifiers: ["統一編號：24202147"],
-      identifiers: ["食品業者登錄字號：M-124202147-00000-2"],
-    },
+    {},
   ],
   [
     "xiaogu-jiejie-malaban",
@@ -231,7 +270,6 @@ export const recordCleanups = new Map([
   [
     "nice-magic-amah-household",
     {
-      removeIdentifiers: ["統一編號：23912009"],
       identifiers: ["amah.com.tw", "cnnice.com"],
     },
   ],
