@@ -759,4 +759,38 @@ export const records = [
       "此筆依使用者明確指定列入 personal。aliases 僅放園所實體名稱，不放『幼兒園』『準公托』『虐童』『不當對待幼童』等泛稱或原因，也不把教保員姓名林佳靜、劉可婕放入 aliases／identifiers，避免人名單查命中機構避雷紀錄。回答時可說公開報導與市府行政調查／裁處支持名人幼兒園涉案、2 名教保員受行政裁處、園所停招與解除準公托契約；不得寫成刑事定罪、法院判決、所有幼兒園或所有準公托都有相同風險，也不得把未完成的第二階段裁處說成已確定。",
     lastReviewed: "2026-07-06",
   }),
+  record({
+    id: "huihong-interior-ai-political-video-personal",
+    name: "匯鴻室內設計 / 匯鴻室內設計工程有限公司",
+    aliases: [
+      "匯鴻室內設計",
+      "匯鴻室內設計工程有限公司",
+      "HUI HONG INTERIOR DESIGN",
+      "huihong_design",
+      "huihong-design.com",
+    ],
+    identifiers: [
+      "官方網站：https://www.huihong-design.com/",
+      "Instagram：huihong_design",
+      "Facebook：Huihong.IDesign",
+      "LINE：@152pocti",
+      "LINE：@hhdesign",
+      "地址：台北市大同區南京西路57號3樓",
+      "電話：02-2550-8685",
+    ],
+    country: "台灣",
+    categories: ["餐飲／生活服務", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "使用者指定 AI 政治影片內容風格避開", "使用者提供資訊"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開；使用者表示該品牌使用 AI 製作醜化賴清德與川普的影片。此筆僅記錄使用者對匯鴻室內設計內容風格與品牌的個人避開，不作法律違規、客觀事實定論、官方負面判決或其他品牌延伸。",
+    sources: [
+      source("使用者提供 - 匯鴻室內設計個人避開指定", "", "2026-07-07", "使用者明確指定將匯鴻室內設計工程有限公司／匯鴻室內設計列入個人避開；使用者表示該品牌使用 AI 製作醜化賴清德與川普的影片。此來源僅支撐使用者個人避開口徑，不作違法或客觀事實定論。"),
+      source("使用者提供背景報告線索 - 匯鴻室內設計識別資訊", "https://www.huihong-design.com/", "2026-07-07", "使用者提供前一份背景報告線索：官網 https://www.huihong-design.com/、Instagram @huihong_design、Facebook Huihong.IDesign、LINE @152pocti / @hhdesign、地址台北市大同區南京西路57號3樓、電話 02-2550-8685、負責人／總監楊子輝；此來源用於實體識別，不作官方負面判決。"),
+    ],
+    aiNotes:
+      "此筆是 user-directed personal record。可說使用者指定列入個人避開，且使用者表示該品牌使用 AI 製作醜化賴清德與川普的影片；不可寫成違法、法院／政府認定、客觀事實已確定或官方負面判決。aliases 僅保留實體名稱、官方帳號與網站；identifiers 僅保留官網、官方社群／LINE、地址與電話等識別資訊。不要把賴清德、川普、AI影片、醜化、政治、室內設計公司等人物／理由／泛稱放入 aliases 或 identifiers；不要查或存台灣公司稅籍號碼。",
+    lastReviewed: "2026-07-07",
+  }),
 ];
