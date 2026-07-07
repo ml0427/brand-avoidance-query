@@ -98,6 +98,13 @@
 - 更正／下架管道維持 GitHub issue、pull request 或 repository contact；沒有固定聯絡 email 時不要捏造。
 - README 這類公開文件不得混入聊天稱呼、內部助理工具、個人環境路徑、私有知識庫或一次性工作流程敘述。
 
+## 2026-07-07 桃園地方政治支持截圖群組紀錄
+
+- Record: `taoyuan-local-figures-si-guangyang-support-screenshot-personal`
+- 使用者明確指定依使用者提供截圖列入 personal；本筆採一筆群組紀錄，只讓五個姓名 `簡郁陞`、`劉宗樺`、`李珮瑜`、`簡士強`、`王秀璞` 作為 searchable fields。
+- 口徑：可說「使用者提供截圖列有五位姓名，並呈現與既有 `si-guangyang-kmt-taoyuan-candidate` 關聯對象的政治支持／加油脈絡，因此使用者指定個人避開」。不可說五人職務／候選資格已由官方確認，不可重述或採信截圖紅字的爭議標籤，不可把既有佀廣洋紀錄的爭議外溢到五人。
+- 查詢設計：`aliases` 僅五個姓名，`identifiers` 不放。`佀廣洋`、`幫加油`、地方職稱／里別與截圖爭議詞只可作 summary/source/aiNotes 脈絡與警示，不得放入 `name` / `aliases` / `identifiers`。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：

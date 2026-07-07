@@ -8942,5 +8942,38 @@
     ],
     "aiNotes": "此筆是 user-directed personal record。可說使用者指定列入個人避開，且使用者表示該品牌使用 AI 製作醜化賴清德與川普的影片；不可寫成違法、法院／政府認定、客觀事實已確定或官方負面判決。aliases 僅保留實體名稱、官方帳號與網站；identifiers 僅保留官網、官方社群／LINE、地址與電話等識別資訊。不要把賴清德、川普、AI影片、醜化、政治、室內設計公司等人物／理由／泛稱放入 aliases 或 identifiers；不要查或存台灣公司稅籍號碼。",
     "lastReviewed": "2026-07-07"
+  },
+  {
+    "id": "taoyuan-local-figures-si-guangyang-support-screenshot-personal",
+    "name": "簡郁陞、劉宗樺、李珮瑜、簡士強、王秀璞",
+    "aliases": [
+      "簡郁陞",
+      "劉宗樺",
+      "李珮瑜",
+      "簡士強",
+      "王秀璞"
+    ],
+    "country": "台灣",
+    "categories": [
+      "政治／公眾人物"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者提供截圖",
+      "地方政治支持關聯"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：使用者提供截圖，畫面列有簡郁陞、劉宗樺、李珮瑜、簡士強、王秀璞等姓名，並呈現其與既有 si-guangyang-kmt-taoyuan-candidate 關聯對象的政治支持／加油脈絡。此筆僅記錄使用者依該截圖採取的個人避開，不作上述五人職務、候選資格、官方背書、法律違規、司法認定，或任何未由截圖直接支持的負面事實定論。",
+    "sources": [
+      {
+        "title": "使用者提供截圖 - 桃園地方政治支持畫面",
+        "url": "",
+        "date": "2026-07-07",
+        "note": "使用者提供截圖／OCR 線索顯示 Threads 發文者為 soonggee1227；畫面文字列有簡郁陞、劉宗樺、李珮瑜、簡士強、王秀璞等姓名，並附桃園市桃園區里別與職稱／參選相關描述；畫面另可見其中一人與既有 si-guangyang-kmt-taoyuan-candidate 關聯對象合照及批評性紅字。此來源僅支撐使用者提供畫面內容與個人避開理由；不作五人現任職務、候選資格、官方背書、法律違規、司法認定、支持相關爭議或其他負面事實定論。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed personal screenshot group record。搜尋鍵刻意只保留五位姓名；不可把佀廣洋、幫加油、里長、參選人、桃園區、春日里、寶民里、新埔里、豐林里、中原里或截圖爭議詞放入 name / aliases / identifiers，也不要為截圖脈絡補社群帳號或里別 identifiers。不可因既有 si-guangyang-kmt-taoyuan-candidate record 的其他爭議，推論五人涉入、背書或共同承擔；除非另有官方或本人公開來源，否則不要斷言五人的現任職務、候選資格、黨籍、里別或法律責任。",
+    "lastReviewed": "2026-07-07"
   }
 ]

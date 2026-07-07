@@ -637,4 +637,27 @@ export const records = [
     aiNotes: "此筆是 personal：重點是使用者指定避開、國民黨參選人／政治幕僚關聯與公開媒體爭議脈絡。霸凌相關內容以『被指控／媒體報導／社群爭議』表述，不寫成法院或官方認定。不要把『市議員參選人』『助理』『祕書』『萬美玲』『國民黨』『霸凌』等泛稱或關聯人物放入 alias，避免誤命中其他人。",
     lastReviewed: "2026-06-30",
   }),
+  record({
+    id: "taoyuan-local-figures-si-guangyang-support-screenshot-personal",
+    name: "簡郁陞、劉宗樺、李珮瑜、簡士強、王秀璞",
+    aliases: ["簡郁陞", "劉宗樺", "李珮瑜", "簡士強", "王秀璞"],
+    country: "台灣",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "使用者提供截圖", "地方政治支持關聯"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開：使用者提供截圖，畫面列有簡郁陞、劉宗樺、李珮瑜、簡士強、王秀璞等姓名，並呈現其與既有 si-guangyang-kmt-taoyuan-candidate 關聯對象的政治支持／加油脈絡。此筆僅記錄使用者依該截圖採取的個人避開，不作上述五人職務、候選資格、官方背書、法律違規、司法認定，或任何未由截圖直接支持的負面事實定論。",
+    sources: [
+      source(
+        "使用者提供截圖 - 桃園地方政治支持畫面",
+        "",
+        "2026-07-07",
+        "使用者提供截圖／OCR 線索顯示 Threads 發文者為 soonggee1227；畫面文字列有簡郁陞、劉宗樺、李珮瑜、簡士強、王秀璞等姓名，並附桃園市桃園區里別與職稱／參選相關描述；畫面另可見其中一人與既有 si-guangyang-kmt-taoyuan-candidate 關聯對象合照及批評性紅字。此來源僅支撐使用者提供畫面內容與個人避開理由；不作五人現任職務、候選資格、官方背書、法律違規、司法認定、支持相關爭議或其他負面事實定論。"
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed personal screenshot group record。搜尋鍵刻意只保留五位姓名；不可把佀廣洋、幫加油、里長、參選人、桃園區、春日里、寶民里、新埔里、豐林里、中原里或截圖爭議詞放入 name / aliases / identifiers，也不要為截圖脈絡補社群帳號或里別 identifiers。不可因既有 si-guangyang-kmt-taoyuan-candidate record 的其他爭議，推論五人涉入、背書或共同承擔；除非另有官方或本人公開來源，否則不要斷言五人的現任職務、候選資格、黨籍、里別或法律責任。",
+    lastReviewed: "2026-07-07",
+  }),
 ];
