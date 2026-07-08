@@ -70,6 +70,25 @@ export const records = [
     lastReviewed: "2026-07-08",
   }),
   record({
+    id: "sanlih-setn-wrong-ai-taiwan-map-personal",
+    name: "三立 / SETN",
+    aliases: ["三立", "SETN", "Sanlih"],
+    identifiers: ["setn.com"],
+    country: "台灣",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: ["使用者個人避開", "使用者提供文字線索", "AI 台灣地圖錯誤內容風格"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開：使用者指出三立新聞使用錯誤 AI 台灣地圖。此筆只記錄使用者依該文字線索與個人偏好避開三立／SETN，不作地圖畫面真偽、新聞台故意性、違法、主管機關認定或每則內容品質的客觀定論。",
+    sources: [
+      source("使用者提供文字線索 - 三立新聞錯誤 AI 台灣地圖", "", "2026-07-08", "使用者要求將三立新聞加入個人避開，理由為使用錯誤 AI 台灣地圖；代理查證初輪未取得可靠公開來源，故此來源僅支撐使用者指定與個人避開理由，不獨立證明地圖畫面真偽、製作流程、故意性、違法或主管機關結論。"),
+    ],
+    aiNotes:
+      "此筆是 user-directed personal record。可說使用者指出三立新聞使用錯誤 AI 台灣地圖，因此指定個人避開；不可寫成已由本專案獨立查證該地圖畫面、三立故意造假、違法、主管機關認定、每則報導品質均有問題或法律定論。searchable fields 採三立／SETN／Sanlih／setn.com；為避免 substring 搜尋讓『新聞』泛稱命中本紀錄，不把三立新聞、三立新聞網、三立新聞台、SETN三立新聞網、AI、錯誤AI台灣地圖、台灣地圖、錯誤地圖、地圖、新聞、媒體等原因詞或泛稱作 alias / identifier。若後續 read-only worker 找到可靠公開來源，可只補 sources / summary 邊界，不擴張 aliases。",
+    lastReviewed: "2026-07-08",
+  }),
+  record({
     id: "yeh-bin-sen-er-conflict-personal",
     name: "葉賓森 / 鈺鑽珠寶水晶直播葉賓森",
     aliases: ["葉賓森", "鈺鑽珠寶水晶直播葉賓森", "鈺鑽珠寶", "鈺鑽珠寶水晶直播"],
