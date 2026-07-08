@@ -596,7 +596,7 @@ function main() {
     const readmeCount = extractReadmeCount(readmeText);
 
     if (readmeCount === null) {
-      warn("readme-count", `No README count pattern found in ${details.readmePath}`);
+      pass("readme-count", `README has no volatile record-count line; skipped count consistency check`);
     } else if (readmeCount !== brands.length) {
       fail("readme-count", `README says ${readmeCount} records but ${details.dataPath} has ${brands.length}`);
     } else {

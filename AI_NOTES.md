@@ -159,6 +159,13 @@
 - 口徑：可說使用者因 bgirl_anlei 抄襲爭議與公開 IG 上合作／團購促銷線索，指定個人避開璦研司／EvolSense 與髮基因／Scalp Recovery。不可寫成抄襲已由本專案獨立查證、廠商抄襲、付費代言合約已確認、違法、官方認定或法律責任。
 - 查詢設計：searchable fields 僅保留品牌、官方帳號與具體產品線。不要把 `bgirl_anlei`、`Anlei`、`安蕾`、`抄襲`、`一直抄襲`、`代言`、`合作`、`團購優惠`、`網紅`、`吉伊卡哇`、`Bandai`、`chiikawa` 作為 aliases / identifiers。
 
+## 2026-07-08 README 不列總筆數／完整資料內容
+
+- 使用者明確要求：README 不用寫完整資料內容，才不用一直更新。
+- README 應只保留用途、使用方式、穩定收錄原則與欄位原則；不要寫 `brands.json` 目前總筆數，也不要列會隨入庫變動的完整資料範圍。
+- `scripts/validate-brand-records.mjs` 已調整：README 沒有總筆數列時，`readme-count` 視為通過／略過，不再產生 warning；若未來 README 又寫了總筆數，仍會檢查一致性。
+- 新增紀錄時仍需更新 source records、重生 `brands.json`、跑 validator、更新必要 AI_NOTES；但不因總筆數變動而修改 README，除非 README 的穩定說明本身需要調整。
+
 ## 2026-07-08 黃建銘／KEN大叔觀察日記著作權判決個人避開
 
 - Record: `huang-jianming-kenh0813-copyright-judgment-personal`
