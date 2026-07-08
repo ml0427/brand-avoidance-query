@@ -36,6 +36,40 @@ export const records = [
     lastReviewed: "2026-07-06",
   }),
   record({
+    id: "taiwan-media-china-influence-screenshot-list-personal-2026-07-08",
+    name: "台灣媒體截圖清單（聯合報系／東森新聞／TVBS／ETtoday）",
+    aliases: [
+      "聯合報系",
+      "聯合報",
+      "聯合新聞網",
+      "UDN",
+      "United Daily News Group",
+      "東森新聞",
+      "東森新聞台",
+      "東森電視",
+      "ETTV",
+      "TVBS",
+      "TVBS新聞",
+      "TVBS新聞網",
+      "ETtoday",
+      "ETtoday新聞雲",
+      "東森新媒體",
+    ],
+    country: "台灣",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: ["使用者個人避開", "使用者提供截圖線索", "媒體中國影響疑慮"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定依截圖列入個人避開：使用者提供的台灣媒體圖卡列出聯合報系、東森新聞／ETTV、TVBS、ETtoday 等，並以『具有中國色彩（中資介入）的台灣媒體』描述。此筆只作使用者個人避開與媒體清單辨識，不把截圖文字延伸為已查證中資控制、違法、主管機關認定或每則內容均有問題。旺報／中視／中天／中國時報／工商時報等已由既有旺旺中時集團紀錄收錄。",
+    sources: [
+      source("使用者提供截圖 - 台灣媒體中國色彩圖卡", "", "2026-07-08", "截圖可見聯合報系、東森新聞 ETTV、TVBS、ETtoday 等媒體 logo，文字稱『具有中國色彩（中資介入）的台灣媒體』與『新聞製造業者』；此來源只支撐使用者提供線索與個人避開，不獨立證明股權、法律或主管機關結論。"),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only personal group record。可說使用者提供截圖列出聯合報系、東森新聞／ETTV、TVBS、ETtoday，使用者指定個人避開；不可寫成已查證中資控制、違法、主管機關認定或每位員工／每則報導均有問題。aliases 只放媒體／集團名稱與穩定英文名；不要把媒體、新聞、新聞製造業者、中資介入、中國色彩、偏頗、捏造、分化、挑撥、操弄、愚台、賤台等原因詞作 alias 或 identifier。旺報、中視、中天、中國時報、工商時報、時報周刊屬旺旺中時集團紀錄，不在此筆重複收。",
+    lastReviewed: "2026-07-08",
+  }),
+  record({
     id: "yeh-bin-sen-er-conflict-personal",
     name: "葉賓森 / 鈺鑽珠寶水晶直播葉賓森",
     aliases: ["葉賓森", "鈺鑽珠寶水晶直播葉賓森", "鈺鑽珠寶", "鈺鑽珠寶水晶直播"],
@@ -105,6 +139,24 @@ export const records = [
       source("中央社 - 台灣藝人近年親中表態一覽", "https://www.cna.com.tw/news/acn/202505160135.aspx", "2025-05-16", "整理台灣藝人轉發中共涉台政治文宣案例。"),
     ],
     aiNotes: "此筆不把一般歌名、專輯名或『歌手』列為 alias；重點是公開政治宣傳活動與轉發脈絡。",
+  }),
+  record({
+    id: "pet-tseng-cctv-july7-peace-screenshot-personal",
+    name: "曾沛慈 / Pet Tseng",
+    aliases: ["曾沛慈", "Pet Tseng", "Tseng Pei-tzu"],
+    country: "台灣",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: ["使用者個人避開", "使用者提供截圖線索", "轉發央視七七事變／珍愛和平表態爭議"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定依截圖列入個人避開：使用者提供的 Threads 截圖顯示帳號 cindyxxod 轉貼『娛樂星聞』圖卡，圖卡文字稱『曾沛慈轉央視七七事變，3度表態珍愛和平』。此筆只記錄使用者依該截圖線索作個人避開，不獨立證明原始貼文、政治立場、違法、官方認定或中共黨政關聯。",
+    sources: [
+      source("使用者提供截圖 - 曾沛慈央視七七事變圖卡線索", "", "2026-07-08", "截圖可見 Threads 帳號 cindyxxod 發文『台版小粉紅們，我知道你們很急，但你先別急，後面還有10/1的』，並嵌入『娛樂星聞』圖卡，圖卡文字稱『曾沛慈轉央視七七事變，3度表態珍愛和平』；此來源只支撐使用者提供線索與個人避開，不作原始社群行為或法律事實定論。"),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only personal record。可說使用者提供截圖中的娛樂星聞圖卡稱曾沛慈轉央視七七事變並多次表態珍愛和平，使用者因此指定個人避開；不可寫成已由本專案獨立查證原始貼文、違法、官方認定、中共黨政關聯或定罪。aliases 僅保留姓名與英文名；不要把央視、七七事變、珍愛和平、小粉紅、台版小粉紅、10/1、娛樂星聞或截圖帳號 cindyxxod 當 alias。",
+    lastReviewed: "2026-07-08",
   }),
   record({
     id: "rainie-yang-public-figure",
