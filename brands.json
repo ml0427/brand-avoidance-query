@@ -9346,5 +9346,48 @@
     ],
     "aiNotes": "此筆是 user-directed personal record。可說使用者因 bgirl_anlei／Anlei 抄襲爭議與其公開 IG 上髮基因團購促銷線索，指定個人避開髮基因／Scalp Recovery；不可寫成 bgirl_anlei 抄襲已由本專案獨立查證、髮基因或 Scalp Recovery 抄襲、已確認付費代言合約、違法、官方認定或法律責任。aliases 僅保留品牌、官方帳號與具體產品線；不要把 bgirl_anlei、Anlei、安蕾、抄襲、一直抄襲、代言、合作、團購優惠、網紅、吉伊卡哇、Bandai、chiikawa 等原因詞或脈絡詞作 alias / identifier。",
     "lastReviewed": "2026-07-08"
+  },
+  {
+    "id": "huang-jianming-kenh0813-copyright-judgment-personal",
+    "name": "黃建銘 / KEN大叔觀察日記",
+    "aliases": [
+      "黃建銘",
+      "KEN大叔觀察日記",
+      "Ken大叔觀察日記",
+      "kenh0813"
+    ],
+    "identifiers": [
+      "114年度智易字第13號",
+      "114年度智附民字第8號"
+    ],
+    "country": "台灣",
+    "categories": [
+      "媒體娛樂",
+      "司法／人物案件"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "著作權法刑事一審判決",
+      "附帶民事賠償判決"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：司法院裁判書系統可查臺灣桃園地方法院 114 年度智易字第 13 號刑事判決，認定黃建銘犯著作權法第九十二條之侵害著作財產權罪，處拘役 40 日，得易科罰金；同日 114 年度智附民字第 8 號附帶民事判決命其給付原告 3 萬元及法定遲延利息。判決事實記載其將他人『台派』美術著作改作為『超台派』後，上傳至 Threads 帳號 kenh0813、臉書暱稱 KEN大叔觀察日記、Instagram 帳號 kenh0813 等頁面。此筆只依公開法院判決與使用者個人避開列入；不採信或延伸社群貼文中的政治稱號、政黨御用關係或其他未經來源直接支持的說法。",
+    "sources": [
+      {
+        "title": "司法院裁判書系統 - 臺灣桃園地方法院 114 年度智易字第 13 號刑事判決",
+        "url": "https://judgment.judicial.gov.tw/FJUD/default.aspx",
+        "date": "2026-06-25",
+        "note": "查詢『114年度智易字第13號 黃建銘』可得刑事判決；判決主文為黃建銘犯著作權法第九十二條之侵害著作財產權罪，處拘役 40 日，得易科罰金。判決事實記載 Threads / Facebook / Instagram 帳號與『台派』改作為『超台派』脈絡；來源支撐法院判決事實，不支撐社群政治稱號。"
+      },
+      {
+        "title": "司法院裁判書系統 - 臺灣桃園地方法院 114 年度智附民字第 8 號刑事附帶民事訴訟判決",
+        "url": "https://judgment.judicial.gov.tw/FJUD/default.aspx",
+        "date": "2026-06-25",
+        "note": "查詢『114年度智易字第13號 黃建銘』同列附帶民事判決；主文命被告給付原告新臺幣 3 萬元，及自 114 年 11 月 29 日起至清償日止按年息 5% 計算之利息；其餘請求駁回。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed personal record，但有公開法院判決支撐。可說司法院裁判書系統可確認黃建銘／KEN大叔觀察日記／kenh0813 涉著作權法案件的一審刑事判決與附帶民事判決；可提拘役 40 日得易科罰金、民事判賠 3 萬元。不可說判決已確定、不可說一定入監、不可把『民眾黨御用畫師』、『柯文哲活動關聯』等社群政治標籤當成事實，除非另有可靠來源。searchable fields 僅保留姓名、穩定帳號／暱稱與法院案號；不要把民眾黨、柯文哲、台派、台派BB寶寶、超台派、著作權、抄襲、拘役、小草、畫師等理由詞或脈絡詞作 alias / identifier。",
+    "lastReviewed": "2026-07-08"
   }
 ]
