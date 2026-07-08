@@ -9263,5 +9263,88 @@
     ],
     "aiNotes": "此筆是 screenshot-only / user-directed personal record。可說使用者表示林思齊抄襲文章並指定個人避開；不可寫成已由本專案獨立查證抄襲成立、著作權侵害、違法、官方認定、法律責任、政治立場或法院定論。aliases 僅保留姓名；不要把抄襲、抄襲文章、文章、原創、piupiu_j_j、shin_22333、doctorkowj、柯文哲、草、小草、Threads 或截圖中疑似 handle 作為 alias / identifier。截圖中的個人檔案 handle 視覺上近似 stv__l_i_n 但不確定，故不列 searchable fields。",
     "lastReviewed": "2026-07-08"
+  },
+  {
+    "id": "evolsense-aiyanshi-bgirl-anlei-collab-personal",
+    "name": "璦研司 / EvolSense",
+    "aliases": [
+      "璦研司",
+      "EvolSense",
+      "evolsense",
+      "喚原輕飲"
+    ],
+    "identifiers": [
+      "Instagram：@evolsense"
+    ],
+    "country": "台灣",
+    "categories": [
+      "美妝／保健／生活零售"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "與使用者指定避開網紅合作／團購促銷線索",
+      "公開 Instagram 貼文線索"
+    ],
+    "confidence": "low",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：使用者表示 bgirl_anlei／Anlei 一直抄襲，要求將與其合作或代言的台灣廠商列入個人避開。公開 Instagram profile 可見 bgirl_anlei 的璦研司相關貼文，文字包含『#團購優惠』『@evolsense』『#璦研司』『#喚原輕飲』與主頁／限動優惠連結描述。此筆只記錄使用者依合作／團購促銷線索作個人避開，不作 bgirl_anlei 抄襲成立、璦研司或 EvolSense 抄襲、付費代言合約、違法、官方認定或法律責任定論。",
+    "sources": [
+      {
+        "title": "使用者提供截圖與指定 - bgirl_anlei 合作廠商避開",
+        "url": "",
+        "date": "2026-07-08",
+        "note": "使用者提供短影音截圖並表示此人一直抄襲，要求把與其合作／代言的台灣廠商加入；此來源只支撐使用者個人避開偏好，不獨立證明抄襲或廠商責任。"
+      },
+      {
+        "title": "Instagram - bgirl_anlei 公開 profile／璦研司團購貼文線索",
+        "url": "https://www.instagram.com/bgirl_anlei/",
+        "date": "查核日 2026-07-08",
+        "note": "未登入公開 profile snapshot 可見璦研司相關精選動態與貼文文字：『#團購優惠』『@evolsense』『#璦研司』『#喚原輕飲』及主頁／限動優惠連結描述；此來源支撐合作／團購促銷線索，不證明付費合約、違法或廠商抄襲。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed personal record。可說使用者因 bgirl_anlei／Anlei 抄襲爭議與其公開 IG 上璦研司團購促銷線索，指定個人避開璦研司／EvolSense；不可寫成 bgirl_anlei 抄襲已由本專案獨立查證、璦研司或 EvolSense 抄襲、已確認付費代言合約、違法、官方認定或法律責任。aliases 僅保留品牌、官方帳號與具體產品線；不要把 bgirl_anlei、Anlei、安蕾、抄襲、一直抄襲、代言、合作、團購優惠、網紅、吉伊卡哇、Bandai、chiikawa 等原因詞或脈絡詞作 alias / identifier。",
+    "lastReviewed": "2026-07-08"
+  },
+  {
+    "id": "hair-gene-scalp-recovery-bgirl-anlei-collab-personal",
+    "name": "髮基因 / Scalp Recovery",
+    "aliases": [
+      "髮基因",
+      "髮基因青春露",
+      "髮基因頭皮護理專家",
+      "Scalp Recovery",
+      "scalprecovery_official"
+    ],
+    "identifiers": [
+      "Instagram：@scalprecovery_official"
+    ],
+    "country": "台灣",
+    "categories": [
+      "美妝／保健／生活零售"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "與使用者指定避開網紅合作／團購促銷線索",
+      "公開 Instagram 貼文線索"
+    ],
+    "confidence": "low",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：使用者表示 bgirl_anlei／Anlei 一直抄襲，要求將與其合作或代言的台灣廠商列入個人避開。公開 Instagram profile 可見 bgirl_anlei 的髮基因相關精選動態與貼文，文字包含『#團購優惠』『#髮基因』『@scalprecovery_official』『#髮基因頭皮護理專家』『#髮基因青春露』與主頁優惠連結描述。此筆只記錄使用者依合作／團購促銷線索作個人避開，不作 bgirl_anlei 抄襲成立、髮基因或 Scalp Recovery 抄襲、付費代言合約、違法、官方認定或法律責任定論。",
+    "sources": [
+      {
+        "title": "使用者提供截圖與指定 - bgirl_anlei 合作廠商避開",
+        "url": "",
+        "date": "2026-07-08",
+        "note": "使用者提供短影音截圖並表示此人一直抄襲，要求把與其合作／代言的台灣廠商加入；此來源只支撐使用者個人避開偏好，不獨立證明抄襲或廠商責任。"
+      },
+      {
+        "title": "Instagram - bgirl_anlei 公開 profile／髮基因團購貼文線索",
+        "url": "https://www.instagram.com/bgirl_anlei/",
+        "date": "查核日 2026-07-08",
+        "note": "未登入公開 profile snapshot 可見髮基因相關精選動態與貼文文字：『#團購優惠』『#髮基因』『@scalprecovery_official』『#髮基因頭皮護理專家』『#髮基因青春露』及主頁優惠連結描述；此來源支撐合作／團購促銷線索，不證明付費合約、違法或廠商抄襲。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed personal record。可說使用者因 bgirl_anlei／Anlei 抄襲爭議與其公開 IG 上髮基因團購促銷線索，指定個人避開髮基因／Scalp Recovery；不可寫成 bgirl_anlei 抄襲已由本專案獨立查證、髮基因或 Scalp Recovery 抄襲、已確認付費代言合約、違法、官方認定或法律責任。aliases 僅保留品牌、官方帳號與具體產品線；不要把 bgirl_anlei、Anlei、安蕾、抄襲、一直抄襲、代言、合作、團購優惠、網紅、吉伊卡哇、Bandai、chiikawa 等原因詞或脈絡詞作 alias / identifier。",
+    "lastReviewed": "2026-07-08"
   }
 ]

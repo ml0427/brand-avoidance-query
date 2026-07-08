@@ -152,6 +152,13 @@
 - 口徑：可說「使用者表示林思齊抄襲文章，因此指定個人避開」。不可寫成已由本專案獨立查證抄襲成立、著作權侵害、違法、官方認定、法律責任、政治立場或法院定論。
 - 查詢設計：searchable fields 僅保留 `林思齊`。不要把 `抄襲`、`抄襲文章`、`文章`、`原創`、`piupiu_j_j`、`shin_22333`、`doctorkowj`、`柯文哲`、`草`、`小草`、`Threads` 或截圖中疑似 handle 放入 aliases / identifiers。
 
+## 2026-07-08 bgirl_anlei 合作／團購促銷廠商個人避開
+
+- Records: `evolsense-aiyanshi-bgirl-anlei-collab-personal`, `hair-gene-scalp-recovery-bgirl-anlei-collab-personal`
+- 使用者表示 `bgirl_anlei` / Anlei 一直抄襲，要求把與其合作／代言的台灣廠商加入個人避開。公開 IG profile snapshot 可見：璦研司相關貼文含 `#團購優惠`、`@evolsense`、`#璦研司`、`#喚原輕飲`；髮基因相關貼文含 `#團購優惠`、`#髮基因`、`@scalprecovery_official`、`#髮基因頭皮護理專家`、`#髮基因青春露`。
+- 口徑：可說使用者因 bgirl_anlei 抄襲爭議與公開 IG 上合作／團購促銷線索，指定個人避開璦研司／EvolSense 與髮基因／Scalp Recovery。不可寫成抄襲已由本專案獨立查證、廠商抄襲、付費代言合約已確認、違法、官方認定或法律責任。
+- 查詢設計：searchable fields 僅保留品牌、官方帳號與具體產品線。不要把 `bgirl_anlei`、`Anlei`、`安蕾`、`抄襲`、`一直抄襲`、`代言`、`合作`、`團購優惠`、`網紅`、`吉伊卡哇`、`Bandai`、`chiikawa` 作為 aliases / identifiers。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：
