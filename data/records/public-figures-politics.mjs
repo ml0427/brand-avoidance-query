@@ -89,6 +89,24 @@ export const records = [
     lastReviewed: "2026-07-08",
   }),
   record({
+    id: "lin-siqi-plagiarism-article-screenshot-personal",
+    name: "林思齊",
+    aliases: ["林思齊"],
+    country: "台灣",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: ["使用者個人避開", "使用者提供截圖線索", "文章抄襲／原創性爭議線索"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開：使用者表示林思齊抄襲文章，並提供 Threads 串文截圖作為社群線索。截圖可見帳號 piupiu_j_j 發文、內嵌名為『林思齊』的個人檔案畫面，以及回覆稱『草是一種人格，而這種行為很草』；但截圖本身未呈現原文與被抄襲文章逐字對照。此筆只記錄使用者依該線索作個人避開，不作抄襲成立、著作權侵害、違法、官方認定或法律責任定論。",
+    sources: [
+      source("使用者提供 Threads 截圖 - 林思齊文章抄襲線索", "", "2026-07-08", "截圖可見 Threads 帳號 piupiu_j_j 發文『Not all 🌱,bu always 🌱』，內嵌畫面顯示人物名稱『林思齊』、粉絲約 11 萬與追蹤中 1,734，並有使用者回覆『草是一種人格／而這種行為很草』等文字；此來源只支撐使用者提供社群線索與個人避開理由，不獨立證明抄襲、著作權侵害、政治立場、法律責任或官方認定。"),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record。可說使用者表示林思齊抄襲文章並指定個人避開；不可寫成已由本專案獨立查證抄襲成立、著作權侵害、違法、官方認定、法律責任、政治立場或法院定論。aliases 僅保留姓名；不要把抄襲、抄襲文章、文章、原創、piupiu_j_j、shin_22333、doctorkowj、柯文哲、草、小草、Threads 或截圖中疑似 handle 作為 alias / identifier。截圖中的個人檔案 handle 視覺上近似 stv__l_i_n 但不確定，故不列 searchable fields。",
+    lastReviewed: "2026-07-08",
+  }),
+  record({
     id: "yeh-bin-sen-er-conflict-personal",
     name: "葉賓森 / 鈺鑽珠寶水晶直播葉賓森",
     aliases: ["葉賓森", "鈺鑽珠寶水晶直播葉賓森", "鈺鑽珠寶", "鈺鑽珠寶水晶直播"],
