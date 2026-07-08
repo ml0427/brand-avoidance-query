@@ -142,11 +142,11 @@ export const records = [
   }),
   record({
     id: "pet-tseng-cctv-july7-peace-screenshot-personal",
-    name: "曾沛慈 / Pet Tseng",
-    aliases: ["曾沛慈", "Pet Tseng", "Tseng Pei-tzu"],
+    name: "曾沛慈 / Pets Tseng",
+    aliases: ["曾沛慈", "Pets Tseng", "Tseng Pei-tzu"],
     country: "台灣",
     categories: ["媒體／娛樂／公眾人物"],
-    avoidReasons: ["使用者個人避開", "使用者提供截圖線索", "轉發央視七七事變／珍愛和平表態爭議"],
+    avoidReasons: ["使用者個人避開", "使用者提供截圖線索", "圖卡文字提及央視七七事變／珍愛和平"],
     confidence: "low",
     status: "personal",
     summary:
