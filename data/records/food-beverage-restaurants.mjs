@@ -176,6 +176,29 @@ export const records = [
     aiNotes: "coco 名稱高度歧義；此筆只指台灣手搖飲品牌 CoCo都可／CoCo Fresh Tea & Juice／億可國際飲食，不指其他 Coco 品牌、椰子商品或泛用詞。未找到 CoCo 台灣母體中港資控制、黨建或制裁證據；中國大陸加盟與區域授權結構仍需工商資料穿透。",
   }),
   record({
+    id: "wai-kee-cha-chaan-teng-china-anthem-screenshot-personal",
+    name: "台北市維記茶餐廳",
+    aliases: ["維記茶餐廳", "台北市維記茶餐廳"],
+    country: "台灣",
+    categories: ["餐飲", "生活服務"],
+    avoidReasons: ["使用者個人避開", "使用者提供社群截圖線索", "公開場合播放中國國歌相關不適感"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開：使用者提供 Threads 截圖顯示，帳號 hello_world_taiwan_1006 指稱台北市維記茶餐廳每天播放香港無線電視，且無線電視在每日六點半播放中國國歌；截圖內附店內電視畫面，其中一張可見香港與中國旗幟畫面。此筆只記錄使用者依該截圖線索作個人避開，不作店家主觀政治立場、播放頻率、法令違反、敵國國歌定性或其他法律／事實定論。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 維記茶餐廳店內播放內容線索",
+        "",
+        "2026-07-08",
+        "截圖可見帳號 hello_world_taiwan_1006 發文稱『台北市維記茶餐廳，每天播放中國國歌』，並說店內會直播香港無線電視、無線電視每日六點半播放中國國歌；附圖可見餐廳內電視畫面與香港／中國旗幟畫面。此來源為使用者提供截圖與社群發文線索，不獨立證明店家立場或實際播放頻率。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only personal record。可說使用者提供 Threads 截圖指稱台北市維記茶餐廳店內播放香港無線電視，且截圖文字認為其播放中國國歌造成不適，因此使用者指定個人避開。不可寫成已查證店家每天播放、店家故意政治表態、違法、官方認定、敵國國歌法律定性，或所有港式茶餐廳都有相同問題。aliases 只放店名；不要把中國國歌、香港無線電視、TVB、無線電視、國歌、香港、顧客、不舒服等原因或脈絡詞放進 aliases / identifiers。",
+    lastReviewed: "2026-07-08",
+  }),
+  record({
     id: "taiwan-beverage-chain-controversy-personal-list-2026-06-30",
     name: "台灣手搖飲／咖啡政治表述與消費爭議名單（2026-06-30）",
     aliases: [
