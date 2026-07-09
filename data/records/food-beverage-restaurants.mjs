@@ -203,6 +203,35 @@ export const records = [
     lastReviewed: "2026-07-08",
   }),
   record({
+    id: "wuliangwu-fried-chicken-taiping-second-store-screenshot-personal",
+    name: "伍兩五炸雞 太平二店",
+    aliases: ["伍兩五炸雞 太平二店", "伍兩五炸雞太平二店", "伍兩五炸雞-太平二店"],
+    country: "台灣",
+    categories: ["餐飲", "生活服務"],
+    avoidReasons: ["使用者個人避開", "使用者提供社群截圖線索", "餐飲備料衛生觀感疑慮"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開：使用者提供 Threads 截圖顯示帳號 dafeiji_new 發文點名『台中伍兩五炸雞太平二店』，文字稱『香噴噴地去角質』；截圖中的嵌入限時動態畫面可見一名男子在廚房／備料區，赤裸上身、下身穿短褲，雙腳站在盛有大量淺色食材或備料的盆中，旁邊另有多個盛裝同類食材的盆。公開搜尋結果可見『伍兩五炸雞 太平二店』作為外送／店名條目。此筆依使用者提供截圖與個人避開偏好收錄，不作官方食安裁罰、法令違反、店家責任或影片真實來源的定論。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 伍兩五炸雞太平二店備料衛生觀感線索",
+        "",
+        "2026-07-08",
+        "截圖可見帳號 dafeiji_new 發文『台中伍兩五炸雞太平二店／香噴噴地去角質』，嵌入故事帳號 l.jeff_y 的畫面中，一名男子在廚房／備料區以雙腳站在盛有大量淺色食材或備料的盆中。此來源是使用者提供截圖與社群貼文線索，不等同官方裁罰或司法認定。",
+      ),
+      source(
+        "Uber Eats - 伍兩五炸雞 太平二店店名頁",
+        "https://www.ubereats.com/tw/store/%E4%BC%8D%E5%85%A9%E4%BA%94%E7%82%B8%E9%9B%9E-%E5%A4%AA%E5%B9%B3%E4%BA%8C%E5%BA%97",
+        "查核日 2026-07-08",
+        "公開搜尋結果可見該外送平台店名頁，支撐『伍兩五炸雞 太平二店』為可查詢店名；不支撐截圖中行為已由平台或主管機關查證。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-based user-directed personal record。可說使用者提供 Threads 截圖點名台中伍兩五炸雞太平二店，畫面造成餐飲備料衛生觀感疑慮，因此指定個人避開。不可寫成已由本專案獨立查證影片真實來源、店家官方承認、主管機關裁罰、法令違反、食品安全事故、故意污染、所有分店皆相同，或對畫面中人物作人身辨識。aliases 僅保留店名常見寫法；不要把 dafeiji_new、l.jeff_y、香噴噴地去角質、去角質、赤腳、踩食材、食安、衛生、Threads 等脈絡／原因詞放進 aliases / identifiers。",
+    lastReviewed: "2026-07-08",
+  }),
+  record({
     id: "taiwan-beverage-chain-controversy-personal-list-2026-06-30",
     name: "台灣手搖飲／咖啡政治表述與消費爭議名單（2026-06-30）",
     aliases: [
