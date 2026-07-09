@@ -187,6 +187,14 @@
 - 口徑：可說使用者因該社群頁面自介內容指定個人避開此帳號／創作者。不可寫成已查證真人身分、違法、騷擾、詐欺、官方認定、政治組織關係、法律責任或對其線下活動作安全／合法性定論。
 - 查詢設計：searchable fields 僅保留 `哈娜 Hana Mu`、`Hana Mu`、`hana.mu721`、`hana721mu`。不要把 `青鳥`、侮辱性改稱原詞、`很臭`、`留言封鎖`、`台北麻將`、`麻將`、`貓咪`、`塔羅`、`台北桌遊`、`進擊の巨人`、`Love always be right`、`自媒體`、`小盒子`、`歌手`、`Threads`、`TikTok` 放入 aliases / identifiers。
 
+## 2026-07-09 食藥署／主管機關品項公告短期警示規則
+
+- 使用者確認：近期油品／食品品項問題這類食藥署公布資訊通常只需要約一個月的高亮時效，不應無限期擴大成整個品牌永久避雷。
+- 新增欄位支援：`temporaryUntil`、`reviewAfter`、`temporaryAlertReason`。`app-core.mjs` 會保留欄位並驗證 `lastReviewed` / `temporaryUntil` / `reviewAfter` 使用 `YYYY-MM-DD`；有 `temporaryUntil` 時必須有 `temporaryAlertReason`。`app.js` 會在卡片顯示短期警示到期、建議複查與原因。
+- 入庫口徑：食藥署或主管機關公布的特定食品、油品、批號、有效日期或進口批次，預設建 `watchlist` 或使用者指定的 `personal` 短期品項紀錄；`temporaryUntil` / `reviewAfter` 抓公告日或查核日起約 30 天。summary / sources 必須寫明「特定品項／批號」，不可直接宣稱整個品牌所有產品都有問題。
+- 到期後口徑：若沒有新公告、新批次或拒不回收／反覆出包證據，降為歷史警示或複查，不主動高亮；若同品牌反覆出包、明確拒不回收、主管機關認定系統性管理問題，或使用者明確指定，才升級成品牌層級 `watchlist` / 長期個人避開。
+- 查詢設計：aliases / identifiers 只放品牌、品名、批號、條碼、食藥署公告編號或官方可查識別；不要把 `油品問題`、`食安`、`不合格`、`回收`、`召回`、`食藥署` 等原因／機關泛稱做成 searchable fields。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：

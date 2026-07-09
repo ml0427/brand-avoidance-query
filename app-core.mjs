@@ -13,6 +13,7 @@ export const STATUS_LABELS = {
 const ALLOWED_CONFIDENCES = new Set(Object.keys(CONFIDENCE_LABELS));
 const ALLOWED_STATUSES = new Set(Object.keys(STATUS_LABELS));
 const SEARCH_TEXT_CACHE = Symbol("searchTextCache");
+const ISO_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/u;
 
 function cleanString(value) {
   if (value === null || value === undefined) {
@@ -91,6 +92,9 @@ export function normalizeBrand(record, index = 0) {
     confidence: normalizeChoice(source.confidence, ALLOWED_CONFIDENCES, "low"),
     status: normalizeChoice(source.status, ALLOWED_STATUSES, "personal"),
     lastReviewed: cleanString(source.lastReviewed),
+    temporaryUntil: cleanString(source.temporaryUntil),
+    reviewAfter: cleanString(source.reviewAfter),
+    temporaryAlertReason: cleanString(source.temporaryAlertReason),
     sources: normalizeSources(source.sources),
   };
 
@@ -115,6 +119,17 @@ export function validateBrandRecord(brand) {
 
   if (normalizeText(brand.status) === "confirmed" && normalizeSources(brand.sources).length === 0) {
     errors.push("confirmed records require at least one source");
+  }
+
+  for (const field of ["lastReviewed", "temporaryUntil", "reviewAfter"]) {
+    const value = cleanString(brand[field]);
+    if (value && !ISO_DATE_PATTERN.test(value)) {
+      errors.push(`${field} must use YYYY-MM-DD`);
+    }
+  }
+
+  if (cleanString(brand.temporaryUntil) && !cleanString(brand.temporaryAlertReason)) {
+    errors.push("temporaryUntil requires temporaryAlertReason");
   }
 
   return errors;

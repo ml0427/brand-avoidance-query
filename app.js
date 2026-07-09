@@ -198,6 +198,15 @@ function createBrandCard(brand) {
   appendMetaItem(meta, "分類", formatList(brand.categories));
   appendMetaItem(meta, "避買理由", formatList(brand.avoidReasons));
   appendMetaItem(meta, "最後檢查", brand.lastReviewed);
+  if (brand.temporaryUntil) {
+    appendMetaItem(meta, "短期警示到期", brand.temporaryUntil);
+  }
+  if (brand.reviewAfter) {
+    appendMetaItem(meta, "建議複查", brand.reviewAfter);
+  }
+  if (brand.temporaryAlertReason) {
+    appendMetaItem(meta, "短期警示原因", brand.temporaryAlertReason);
+  }
 
   const details = document.createElement("details");
   details.append(createElement("summary", "", "資料來源與 AI 備註"));

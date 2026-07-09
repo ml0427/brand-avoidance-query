@@ -114,6 +114,9 @@ export function record({
   sources,
   aiNotes,
   lastReviewed = reviewed,
+  temporaryUntil,
+  reviewAfter,
+  temporaryAlertReason,
 }) {
   return {
     id,
@@ -130,6 +133,9 @@ export function record({
     aiNotes:
       aiNotes ??
       "本條目只表示公開來源足以支持風險標籤，不代表法律定罪、台灣禁售，或證明每一項商品都有問題。",
+    ...(temporaryUntil ? { temporaryUntil } : {}),
+    ...(reviewAfter ? { reviewAfter } : {}),
+    ...(temporaryAlertReason ? { temporaryAlertReason } : {}),
     lastReviewed,
   };
 }
