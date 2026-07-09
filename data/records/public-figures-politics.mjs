@@ -89,6 +89,29 @@ export const records = [
     lastReviewed: "2026-07-08",
   }),
   record({
+    id: "hana-mu-hana-mu721-social-profile-screenshot-personal",
+    name: "哈娜 Hana Mu / hana.mu721",
+    aliases: ["哈娜 Hana Mu", "Hana Mu", "hana.mu721", "hana721mu"],
+    country: "台灣",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: ["使用者個人避開", "使用者提供社群截圖線索", "社群頁面政治辱罵／排斥留言措辭"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定列入個人避開：使用者提供 Threads 個人頁截圖，顯示名稱為『哈娜 Hana Mu｜被酒呎誤的歌手』、帳號 `hana.mu721`，自介文字對『青鳥』使用侮辱性改稱並表示不歡迎相關留言；自介另標示自媒體、貓咪、麻將、塔羅與合作私訊資訊，並可見 TikTok 連結 `tiktok.com/@hana721mu`。此筆只記錄使用者依該截圖對此社群帳號／創作者作個人避開，不作本人身分、違法、官方認定、騷擾、詐欺或其他法律定論。",
+    sources: [
+      source(
+        "使用者提供 Threads 個人頁截圖 - Hana Mu / hana.mu721",
+        "",
+        "2026-07-09",
+        "截圖可見顯示名稱『哈娜 Hana Mu｜被酒呎誤的歌手』、帳號 `hana.mu721`、自介對『青鳥』使用侮辱性改稱與排斥留言文字，並列自媒體、貓咪、麻將、塔羅、合作私訊與 TikTok 連結 `tiktok.com/@hana721mu`；此來源僅支撐截圖可見內容與使用者個人避開，不作線下身分或法律事實認定。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record。可說使用者提供 Threads 個人頁截圖，該帳號自介對『青鳥』使用侮辱性改稱並排斥留言，因此使用者指定個人避開。不可寫成已查證真人身分、違法、騷擾、詐欺、官方認定、政治組織關係或法律責任。searchable fields 僅保留顯示名稱、Threads 帳號、TikTok handle 與自稱稱號；不要把青鳥、侮辱性改稱原詞、很臭、留言封鎖、台北麻將、麻將、貓咪、塔羅、台北桌遊、進擊の巨人、Love always be right、自媒體、小盒子、歌手、Threads、TikTok 等脈絡／興趣／平台詞作 alias / identifier。",
+    lastReviewed: "2026-07-09",
+  }),
+  record({
     id: "lin-siqi-plagiarism-article-screenshot-personal",
     name: "林思齊",
     aliases: ["林思齊"],
