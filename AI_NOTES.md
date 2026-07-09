@@ -195,6 +195,13 @@
 - 到期後口徑：若沒有新公告、新批次或拒不回收／反覆出包證據，降為歷史警示或複查，不主動高亮；若同品牌反覆出包、明確拒不回收、主管機關認定系統性管理問題，或使用者明確指定，才升級成品牌層級 `watchlist` / 長期個人避開。
 - 查詢設計：aliases / identifiers 只放品牌、品名、批號、條碼、食藥署公告編號或官方可查識別；不要把 `油品問題`、`食安`、`不合格`、`回收`、`召回`、`食藥署` 等原因／機關泛稱做成 searchable fields。
 
+## 2026-07-09 WOAWOA / Woawoa 中國製袖套截圖個人避買
+
+- Record: `woawoa-sleeve-made-in-china-screenshot-personal`
+- 使用者以無文字截圖提供 Threads 貼文；截圖可見 `chengan.chang` 發文點名 Woawoa，文字稱花時間找台灣製袖套後發現其產品標籤；附圖可見 WOAWOA 樣式 logo 與洗標底部 `Made in China`。
+- 口徑：可說使用者提供截圖中的產品洗標顯示 `Made in China`，因此依使用者偏好列個人避買。不可寫成官方認定欺騙消費者、違法、台灣禁售、品牌曾正式宣稱台灣製、全部 WOAWOA 商品皆中國製，或本專案已獨立查證所有 SKU 產地。
+- 查詢設計：searchable fields 僅保留 `WOAWOA`、`Woawoa`、`woawoa`、`WOA WOA`。不要把 `chengan.chang`、`欺騙消費者`、`台灣製`、`袖套`、`中國製`、`Made in China`、`Threads`、`服飾`、`運動`、`戶外` 放入 aliases / identifiers。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：

@@ -9459,5 +9459,37 @@
     ],
     "aiNotes": "此筆是 screenshot-only / user-directed personal record。可說使用者提供 Threads 個人頁截圖，該帳號自介對『青鳥』使用侮辱性改稱並排斥留言，因此使用者指定個人避開。不可寫成已查證真人身分、違法、騷擾、詐欺、官方認定、政治組織關係或法律責任。searchable fields 僅保留顯示名稱、Threads 帳號、TikTok handle 與自稱稱號；不要把青鳥、侮辱性改稱原詞、很臭、留言封鎖、台北麻將、麻將、貓咪、塔羅、台北桌遊、進擊の巨人、Love always be right、自媒體、小盒子、歌手、Threads、TikTok 等脈絡／興趣／平台詞作 alias / identifier。",
     "lastReviewed": "2026-07-09"
+  },
+  {
+    "id": "woawoa-sleeve-made-in-china-screenshot-personal",
+    "name": "WOAWOA / Woawoa",
+    "aliases": [
+      "WOAWOA",
+      "Woawoa",
+      "woawoa",
+      "WOA WOA"
+    ],
+    "country": "洗標產地中國",
+    "categories": [
+      "服飾生活"
+    ],
+    "avoidReasons": [
+      "使用者個人避買",
+      "商品標籤顯示中國製",
+      "使用者提供截圖線索"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者提供 Threads 截圖可見帳號 chengan.chang 發文點名 Woawoa，稱其花時間尋找台灣製袖套後發現產品標籤為中國製；附圖可見 WOAWOA 樣式 logo 與洗標底部標示 Made in China。此筆依使用者中國製商品個人避買偏好列入，不作官方欺騙消費者、違法、台灣禁售、全部商品皆中國製或品牌產地宣稱已由本專案獨立查證之定論。",
+    "sources": [
+      {
+        "title": "使用者提供 Threads 截圖 - WOAWOA / Woawoa 袖套洗標",
+        "url": "",
+        "date": "2026-07-09",
+        "note": "截圖可見 Threads 帳號 chengan.chang 貼文點名 Woawoa；照片中產品 logo 類似 WOAWOA，洗標底部清楚顯示 Made in China。貼文的欺騙消費者說法只作使用者線索，不作法律或官方認定。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-source personal record。可說使用者提供截圖中的產品洗標顯示 Made in China，因此依使用者偏好列個人避買。不可說官方認定欺騙消費者、違法、所有 WOAWOA 商品皆中國製、品牌曾承諾台灣製或台灣禁售；除非後續另有官方產品頁或品牌回應。searchable fields 僅保留品牌常見寫法，不要把 chengan.chang、欺騙消費者、台灣製、袖套、中國製、Made in China、Threads、服飾、運動、戶外放入 aliases / identifiers。",
+    "lastReviewed": "2026-07-09"
   }
 ]

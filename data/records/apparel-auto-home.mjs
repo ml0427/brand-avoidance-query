@@ -427,4 +427,27 @@ export const records = [
     ],
     aiNotes: "妙管家在台灣至少有清潔用品與卡式爐／戶外用品兩個容易混淆的品牌脈絡；此筆只指被納愛斯收購的台灣妙管家清潔用品公司，不把清潔劑、洗衣精、除濕劑等泛用品項作為 alias。",
   }),
+  record({
+    id: "woawoa-sleeve-made-in-china-screenshot-personal",
+    name: "WOAWOA / Woawoa",
+    aliases: ["WOAWOA", "Woawoa", "woawoa", "WOA WOA"],
+    country: "洗標產地中國",
+    categories: ["服飾／玩具／生活零售"],
+    avoidReasons: ["使用者個人避買", "商品標籤顯示中國製", "使用者提供截圖線索"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖可見帳號 chengan.chang 發文點名 Woawoa，稱其花時間尋找台灣製袖套後發現產品標籤為中國製；附圖可見 WOAWOA 樣式 logo 與洗標底部標示 Made in China。此筆依使用者中國製商品個人避買偏好列入，不作官方欺騙消費者、違法、台灣禁售、全部商品皆中國製或品牌產地宣稱已由本專案獨立查證之定論。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - WOAWOA / Woawoa 袖套洗標",
+        "",
+        "2026-07-09",
+        "截圖可見 Threads 帳號 chengan.chang 貼文點名 Woawoa；照片中產品 logo 類似 WOAWOA，洗標底部清楚顯示 Made in China。貼文的欺騙消費者說法只作使用者線索，不作法律或官方認定。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-source personal record。可說使用者提供截圖中的產品洗標顯示 Made in China，因此依使用者偏好列個人避買。不可說官方認定欺騙消費者、違法、所有 WOAWOA 商品皆中國製、品牌曾承諾台灣製或台灣禁售；除非後續另有官方產品頁或品牌回應。searchable fields 僅保留品牌常見寫法，不要把 chengan.chang、欺騙消費者、台灣製、袖套、中國製、Made in China、Threads、服飾、運動、戶外放入 aliases / identifiers。",
+    lastReviewed: "2026-07-09",
+  }),
 ];
