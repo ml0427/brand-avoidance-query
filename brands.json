@@ -9491,5 +9491,75 @@
     ],
     "aiNotes": "此筆是 screenshot-source personal record。可說使用者提供截圖中的產品洗標顯示 Made in China，因此依使用者偏好列個人避買。不可說官方認定欺騙消費者、違法、所有 WOAWOA 商品皆中國製、品牌曾承諾台灣製或台灣禁售；除非後續另有官方產品頁或品牌回應。searchable fields 僅保留品牌常見寫法，不要把 chengan.chang、欺騙消費者、台灣製、袖套、中國製、Made in China、Threads、服飾、運動、戶外放入 aliases / identifiers。",
     "lastReviewed": "2026-07-09"
+  },
+  {
+    "id": "qianqiu-wanshi-bcc-newsradio-screenshot-personal",
+    "name": "千秋萬事",
+    "aliases": [
+      "千秋萬事",
+      "千秋萬事 盡付笑談中",
+      "中廣千秋萬事"
+    ],
+    "country": "台灣",
+    "categories": [
+      "媒體娛樂"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者提供影片截圖線索",
+      "媒體節目內容風格個人不喜"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：使用者提供影片截圖，畫面可見中廣新聞網 NewsRadio 背板、左上節目標示『千秋萬事 盡付笑談中』，畫面字幕為『如果是無辜被害』，底部可見『按讚、訂閱、開啟小鈴鐺』提示。此筆只記錄使用者依該截圖對節目／內容風格作個人避開，不作節目主持人、來賓、電台全體或法律事實定論。",
+    "sources": [
+      {
+        "title": "使用者提供影片截圖 - 中廣《千秋萬事》畫面",
+        "url": "",
+        "date": "2026-07-10",
+        "note": "截圖可見中廣新聞網 NewsRadio 背板、節目標示『千秋萬事 盡付笑談中』、字幕『如果是無辜被害』與底部訂閱提示；此來源只支撐截圖可見節目識別與使用者個人避開，不獨立證明節目完整內容、主持人或來賓立場。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-source / user-directed media content personal record。可說使用者提供截圖顯示中廣《千秋萬事》畫面，因此指定個人避開該節目。不可寫成已查證完整節目內容、主持人／來賓違法或中廣新聞網全體均有問題。searchable fields 只放節目名與限定的中廣千秋萬事；不要把中廣新聞網、NewsRadio、新聞網、無辜被害、按讚、訂閱、小鈴鐺、主持人、來賓或畫面人物姓名放進 aliases / identifiers。",
+    "lastReviewed": "2026-07-10"
+  },
+  {
+    "id": "wen-tzu-yun-social-post-screenshot-personal",
+    "name": "文姿云 / Wen Tzu-Yun / wen_tzu_yun",
+    "aliases": [
+      "文姿云",
+      "文姿雲",
+      "Wen Tzu-Yun",
+      "Wen Tzu Yun",
+      "wen_tzu_yun"
+    ],
+    "country": "台灣",
+    "categories": [
+      "媒體娛樂"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者提供社群截圖線索",
+      "運動員公開發言爭議線索"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：使用者提供社群截圖可見經驗證帳號 `wen_tzu_yun`，文字談及運動賽會與運動員言論被放大檢視、權益發聲與尊重他人，並以反問語氣寫下『等你來當運動員，參與其中，你再來講』等語。公開百科資料可核對文姿云羅馬拼音為 Wen Tzu-Yun，為台灣空手道運動員。此筆只記錄使用者依截圖對該公開帳號／運動員作個人避開，不作違法、官方認定或完整言論脈絡定論。",
+    "sources": [
+      {
+        "title": "使用者提供社群截圖 - wen_tzu_yun 發文畫面",
+        "url": "",
+        "date": "2026-07-10",
+        "note": "截圖可見經驗證帳號 `wen_tzu_yun` 與發文文字，內容談及運動賽會、運動員言論被放大檢視、權益發聲與尊重他人，底部另有黃底標示『等你來當運動員，參與其中，你再來講，謝謝』；此來源支撐使用者提供線索與個人避開理由，不作完整上下文或法律事實定論。"
+      },
+      {
+        "title": "維基百科 - 文姿云",
+        "url": "https://zh.wikipedia.org/wiki/%E6%96%87%E5%A7%BF%E4%BA%91",
+        "date": "查核日 2026-07-10",
+        "note": "公開百科資料列文姿云羅馬拼音 Wen Tzu-Yun，並記載其為台灣空手道運動員；此來源只用於核對姓名／羅馬拼音／運動員身分，不支撐截圖言論真偽或評價。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-source / user-directed personal record。可說使用者提供 `wen_tzu_yun` 社群截圖，並指定將文姿云／Wen Tzu-Yun 加入個人避開；百科來源只用於核對姓名與運動員身分。不可寫成違法、官方認定、完整原文上下文已查證、運動組織裁處、對特定運動賽會的客觀結論或法律責任。searchable fields 只保留姓名、羅馬拼音與帳號；不要把運動員、空手道、運動賽會、言論自由、權益、尊重他人、訓練、發聲、利益衝突、等你來當運動員、Threads 或平台互動數作 alias / identifier。",
+    "lastReviewed": "2026-07-10"
   }
 ]

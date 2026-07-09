@@ -202,6 +202,15 @@
 - 口徑：可說使用者提供截圖中的產品洗標顯示 `Made in China`，因此依使用者偏好列個人避買。不可寫成官方認定欺騙消費者、違法、台灣禁售、品牌曾正式宣稱台灣製、全部 WOAWOA 商品皆中國製，或本專案已獨立查證所有 SKU 產地。
 - 查詢設計：searchable fields 僅保留 `WOAWOA`、`Woawoa`、`woawoa`、`WOA WOA`。不要把 `chengan.chang`、`欺騙消費者`、`台灣製`、`袖套`、`中國製`、`Made in China`、`Threads`、`服飾`、`運動`、`戶外` 放入 aliases / identifiers。
 
+## 2026-07-10 中廣《千秋萬事》與文姿云社群截圖個人避開
+
+- Records:
+  - `qianqiu-wanshi-bcc-newsradio-screenshot-personal`
+  - `wen-tzu-yun-social-post-screenshot-personal`
+- 中廣《千秋萬事》：使用者提供影片截圖，畫面可見中廣新聞網 NewsRadio 背板與節目標示「千秋萬事 盡付笑談中」。口徑只說使用者依截圖指定節目個人避開；不可擴張成中廣新聞網全體、主持人／來賓違法或完整節目內容已查證。
+- 文姿云／`wen_tzu_yun`：使用者提供社群截圖並稱其為運動員；公開百科僅用於核對文姿云羅馬拼音 Wen Tzu-Yun 與台灣空手道運動員身分。口徑只說使用者依截圖指定個人避開，不作違法、官方認定或完整上下文定論。
+- 查詢設計：節目 record searchable fields 僅節目名與限定字串 `中廣千秋萬事`；不放 `中廣新聞網`、`新聞網`、`NewsRadio`、`無辜被害`、`按讚`、`訂閱`。文姿云 record searchable fields 僅姓名、羅馬拼音與帳號；不放 `運動員`、`空手道`、`言論自由`、`權益`、`尊重他人`、`等你來當運動員` 等原因詞。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：
