@@ -214,9 +214,10 @@
 ## 2026-07-10 《功夫道長》／kung_fu168 社群頁面截圖個人避開
 
 - Record: `kung-fu168-social-profile-screenshot-personal`
-- 使用者明確指定依使用者提供的公開社群個人頁截圖加入個人避開；本案未做網路研究，採 screenshot-only / user-directed personal、`confidence: low`。
-- 口徑：只可說截圖可見《功夫道長》／`kung_fu168` 帳號、自介與一則置頂貼文上半部，因此使用者指定個人避開。不可驗證或推論帳號背後真人、資格、傳承、宮廟／團體關係、宗教真偽、服務效果、違法、詐欺、官方裁處或法律責任。
-- 查詢設計：searchable fields 僅 `《功夫道長》`、`功夫道長`、`kung_fu168`，`identifiers` 維持空陣列，`country` 採 `未查核`。`羅正道長`、台南、宮名、團體名、宗教／武術職稱、服務項目、貼文脈絡及 LINE／Facebook 等來源字串不得放入 `name` / `aliases` / `country` / `identifiers`。
+- 使用者明確指定列為 personal；維持 `confidence: low`。帳號截圖只支撐《功夫道長》／`kung_fu168` 帳號、自介與一則置頂貼文上半部，仍不得據此確認真人、資格、傳承、服務效果、違法或詐欺。
+- 公開頁面／地圖可確認範圍與不可跨接案例：Facebook 公開頁面只可核對 title 為「台南烏山腳飛龍宮-功夫道長 | Facebook」；Google Maps 對「臺南市龍崎區大坪里20號」只可核對 POI「龍眼宅飛龍宮」、類別宗教組織與地址大坪里20號。目前沒有獨立來源直接把該地圖 POI 與 IG／FB 帳號或「台南烏山腳飛龍宮」連起來，因此不得合併認定為同一實體／地點／經營方。
+- IG／FB 所列法脈、館長、資格及相關名稱均只屬頁面經營方自述，未找到獨立佐證；「諦威武術館」是更正後的 IG 自述名稱，不能當作資格、傳承、真人、團體關係或服務效果的外部證明。
+- 查詢設計：searchable fields 僅 `《功夫道長》`、`功夫道長`、`kung_fu168`，`identifiers` 維持空陣列，`country` 採 `未查核`。`羅正道長`、龍眼宅飛龍宮、台南、龍崎、飛龍宮、諦威武術館、法師、館長、道教、武術、Facebook、LINE、宗教及理由詞不得放入 `name` / `aliases` / `country` / `identifiers`。
 
 ## 快速處理模式
 
