@@ -211,6 +211,13 @@
 - 文姿云／`wen_tzu_yun`：使用者提供社群截圖並稱其為運動員；公開百科僅用於核對文姿云羅馬拼音 Wen Tzu-Yun 與台灣空手道運動員身分。口徑只說使用者依截圖指定個人避開，不作違法、官方認定或完整上下文定論。
 - 查詢設計：節目 record searchable fields 僅節目名與限定字串 `中廣千秋萬事`；不放 `中廣新聞網`、`新聞網`、`NewsRadio`、`無辜被害`、`按讚`、`訂閱`。文姿云 record searchable fields 僅姓名、羅馬拼音與帳號；不放 `運動員`、`空手道`、`言論自由`、`權益`、`尊重他人`、`等你來當運動員` 等原因詞。
 
+## 2026-07-10 《功夫道長》／kung_fu168 社群頁面截圖個人避開
+
+- Record: `kung-fu168-social-profile-screenshot-personal`
+- 使用者明確指定依使用者提供的公開社群個人頁截圖加入個人避開；本案未做網路研究，採 screenshot-only / user-directed personal、`confidence: low`。
+- 口徑：只可說截圖可見《功夫道長》／`kung_fu168` 帳號、自介與一則置頂貼文上半部，因此使用者指定個人避開。不可驗證或推論帳號背後真人、資格、傳承、宮廟／團體關係、宗教真偽、服務效果、違法、詐欺、官方裁處或法律責任。
+- 查詢設計：searchable fields 僅 `《功夫道長》`、`功夫道長`、`kung_fu168`，`identifiers` 維持空陣列，`country` 採 `未查核`。`羅正道長`、台南、宮名、團體名、宗教／武術職稱、服務項目、貼文脈絡及 LINE／Facebook 等來源字串不得放入 `name` / `aliases` / `country` / `identifiers`。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：
