@@ -220,6 +220,13 @@
 - Facebook 精確頁 URL 存於 source，精確頁名「台南烏山腳飛龍宮-功夫道長」可由 alias 查詢；不保留不完整 share URL。因 URL 本身會讓 bare `Facebook` substring 命中，URL 不放 identifier；同理 bare `LINE`／`Facebook` 不得靠本 record 的 identifier 命中。
 - 未限定泛稱台南、龍崎、法師、館長、道教、武術、LINE、Facebook、宗教、服務、補運等不可作 standalone exact alias／identifier；它們在具體完整辨識詞中出現不等於另建泛稱查詢鍵。
 
+## 2026-07-10 YOLOPARK 「中國台灣」參展截圖個人避開
+
+- Record: `yolopark-china-taiwan-comic-exhibition-screenshot-personal`
+- 使用者明確指定：YOLOPARK 截圖中以「中國台灣」標示台灣活動地點，已足以放入個人避雷。
+- 口徑：可說「使用者提供截圖顯示 YOLOPARK Official 參展公告／海報將台灣活動地點寫成『中國台灣・台北市世貿一館』，因此使用者指定個人避開」。不可寫成已查證原始貼文仍在線、違法、官方裁罰、國資／黨建、中共控制、產品安全問題或所有商品品質問題。
+- 查詢設計：searchable fields 僅保留 `YOLOPARK`、`YoloPark`、`YOLO PARK`、`YOLOPARK Official`。不要把 `中國台灣`、`台灣2026漫畫博覽會`、`漫畫博覽會`、`世貿一館`、`台北市`、`攤位號碼`、`Transformers`、`變形金剛` 放入 aliases / identifiers。
+
 ## 快速處理模式
 
 遇到商品標籤直接標示中國原產：

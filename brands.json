@@ -9629,5 +9629,39 @@
     ],
     "aiNotes": "此筆維持 screenshot-only / user-directed personal、confidence low、country 未查核。使用者明確偏好：具體辨識詞可查，只有泛稱不單獨入庫。因此 aliases 可保留帳號／頁名、台南烏山腳飛龍宮、烏山腳飛龍宮、羅正道長、黃羅正、諦威武術館、謚威武術館（OCR recovery）、龍眼宅飛龍宮（使用者指定地圖辨識線索）、中國閭漢道教總會法師、祖傳第四代三壇法師、諦威武術館館長、閭山派淨明宗、正一符籙宗、紀府法壇、仙靈壇三壇小法、正一劉厝派鼎新門高階行道師、港傳蔡李佛派第五傳人，以及祭煞補運、打財入庫、收驚安神、祈安禮斗、靈符客製；`lin.ee/ZoSnaNN` 是可查 identifier。這些非帳號詞分別僅是截圖／帳號經營方自述、貼文自稱／hashtag、OCR recovery 或使用者指定地圖線索，絕非外部資格、傳承、真人身分、團體關係或服務效果事實。Facebook 精確頁 URL 放 sources，精確頁名「台南烏山腳飛龍宮-功夫道長」放 alias；如此可保留精確辨識而不讓 bare Facebook 靠 identifier 命中，也不保留不完整 share URL。不得把台南、龍崎、法師、館長、道教、武術、LINE、Facebook、宗教、服務、補運等未限定泛稱作 standalone alias / identifier。不可把勾選圖示或頁面自述解讀為本專案、政府或其他單位認證；不對違法、詐欺或法律責任作結論。",
     "lastReviewed": "2026-07-10"
+  },
+  {
+    "id": "yolopark-china-taiwan-comic-exhibition-screenshot-personal",
+    "name": "YOLOPARK",
+    "aliases": [
+      "YOLOPARK",
+      "YoloPark",
+      "YOLO PARK",
+      "YOLOPARK Official"
+    ],
+    "country": "未查核",
+    "categories": [
+      "服飾生活",
+      "玩具",
+      "收藏品"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "Taiwan-label／政治合規風險",
+      "使用者提供截圖線索"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者提供截圖可見 YOLOPARK Official 參展公告與海報，海報將台灣活動地點標示為「中國台灣・台北市世貿一館」；使用者指定因此列個人避開。此筆僅保存使用者對該標示的個人避雷偏好，不作違法、官方裁罰、國資／黨建、商品安全或所有商品另有問題的定論。",
+    "sources": [
+      {
+        "title": "使用者提供截圖 - YOLOPARK Official 參展公告",
+        "url": "",
+        "date": "2026-07-10",
+        "note": "截圖可見 YOLOPARK Official 貼文與海報；海報寫有「YOLOPARK × 台灣2026漫畫博覽會參展確認」、日期 2026-07-23 至 2026-07-27、攤位 310/312/314，地點標示為「中國台灣・台北市世貿一館」。此筆只以該表述作為使用者指定個人避開理由。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-source personal record。可說使用者提供截圖顯示 YOLOPARK 將台灣活動地點寫成「中國台灣」，因此使用者指定個人避開。不可說已查證官方原始貼文仍在線、違法、官方裁罰、國資／黨建、中共控制、產品安全問題或所有 YOLOPARK 商品都有品質問題。searchable fields 僅保留 YOLOPARK 及其官方頁常見寫法；不要把中國台灣、台灣2026漫畫博覽會、漫畫博覽會、世貿一館、台北市、攤位號碼、Transformers、變形金剛等原因／活動／角色詞放入 aliases / identifiers。",
+    "lastReviewed": "2026-07-10"
   }
 ]

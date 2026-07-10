@@ -450,4 +450,27 @@ export const records = [
       "此筆是 screenshot-source personal record。可說使用者提供截圖中的產品洗標顯示 Made in China，因此依使用者偏好列個人避買。不可說官方認定欺騙消費者、違法、所有 WOAWOA 商品皆中國製、品牌曾承諾台灣製或台灣禁售；除非後續另有官方產品頁或品牌回應。searchable fields 僅保留品牌常見寫法，不要把 chengan.chang、欺騙消費者、台灣製、袖套、中國製、Made in China、Threads、服飾、運動、戶外放入 aliases / identifiers。",
     lastReviewed: "2026-07-09",
   }),
+  record({
+    id: "yolopark-china-taiwan-comic-exhibition-screenshot-personal",
+    name: "YOLOPARK",
+    aliases: ["YOLOPARK", "YoloPark", "YOLO PARK", "YOLOPARK Official"],
+    country: "未查核",
+    categories: ["服飾／玩具／生活零售", "玩具", "收藏品"],
+    avoidReasons: ["使用者個人避開", "Taiwan-label／政治合規風險", "使用者提供截圖線索"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者提供截圖可見 YOLOPARK Official 參展公告與海報，海報將台灣活動地點標示為「中國台灣・台北市世貿一館」；使用者指定因此列個人避開。此筆僅保存使用者對該標示的個人避雷偏好，不作違法、官方裁罰、國資／黨建、商品安全或所有商品另有問題的定論。",
+    sources: [
+      source(
+        "使用者提供截圖 - YOLOPARK Official 參展公告",
+        "",
+        "2026-07-10",
+        "截圖可見 YOLOPARK Official 貼文與海報；海報寫有「YOLOPARK × 台灣2026漫畫博覽會參展確認」、日期 2026-07-23 至 2026-07-27、攤位 310/312/314，地點標示為「中國台灣・台北市世貿一館」。此筆只以該表述作為使用者指定個人避開理由。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-source personal record。可說使用者提供截圖顯示 YOLOPARK 將台灣活動地點寫成「中國台灣」，因此使用者指定個人避開。不可說已查證官方原始貼文仍在線、違法、官方裁罰、國資／黨建、中共控制、產品安全問題或所有 YOLOPARK 商品都有品質問題。searchable fields 僅保留 YOLOPARK 及其官方頁常見寫法；不要把中國台灣、台灣2026漫畫博覽會、漫畫博覽會、世貿一館、台北市、攤位號碼、Transformers、變形金剛等原因／活動／角色詞放入 aliases / identifiers。",
+    lastReviewed: "2026-07-10",
+  }),
 ];
