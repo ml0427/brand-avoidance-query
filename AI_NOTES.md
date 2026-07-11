@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-07-11 浪愛集食等流浪動物狗食／勸募截圖群組個人避開
+
+- Record: `langai-jishi-stray-dog-food-fundraising-screenshot-personal`
+- 使用者無文字傳圖，依 ongoing 避雷 intake 視為 user-directed Exact Record Add。截圖發文帳號 `yunpeihsu` 列出浪愛集食、毛孩集糧-流浪狗集食計畫、米家集糧-浪愛屋呷計畫、浪浪天使、糧盛集食 Love & Food for Strays Dogs、糧舍商號、浪愛溫飽浪浪糧食，並稱這些全部都是同一個老闆。
+- 口徑：截圖稱台南市社會局曾指出不具公益勸募資格仍用販售狗食捐助流浪動物等字眼；本專案快查未取得可直接引用的官方／新聞頁，因此只能寫成截圖主張與使用者個人避開線索，不作官方認定已獨立查證、違法定罪、詐騙成立或所有同名實體同一經營者定論。
+- 查詢設計：只讓截圖列出的具體名稱命中；`yunpeihsu`、`公益勸募`、`公益勸募條例`、`勸募資格`、`台南市社會局`、`販售狗食`、`捐助流浪動物`、`流浪動物`、`募資廣告`、`合法管道`、`同一個老闆`、`社群平台`、`做愛心`、`狗食`、`狗糧` 不應靠 aliases / identifiers 命中此 record。
+
 ## 2026-07-11 林伯豐颱風假成本發言截圖個人避開
 
 - Record: `lin-bofeng-typhoon-holiday-cost-comment-screenshot-personal`
