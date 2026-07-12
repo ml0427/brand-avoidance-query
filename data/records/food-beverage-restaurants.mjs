@@ -400,6 +400,32 @@ export const records = [
     lastReviewed: "2026-07-04",
   }),
   record({
+    id: "familymart-plant-based-life-frozen-spinach-china-origin-personal",
+    name: "FamilyMart／全家 植覺生活 冷凍菠菜",
+    aliases: [
+      "FamilyMart 植覺生活 冷凍菠菜",
+      "全家 植覺生活 冷凍菠菜",
+      "全家便利商店 植覺生活 冷凍菠菜",
+      "植覺生活 冷凍菠菜",
+      "FamilyMart Frozen Spinach",
+      "植覺生活 Frozen Spinach",
+    ],
+    identifiers: ["國內負責廠商：上洛貿易企業有限公司"],
+    country: "中國／台灣通路可見",
+    categories: ["食品／飲料／農水產"],
+    avoidReasons: ["使用者個人避買", "中國原產食品", "全家便利商店商品標籤原產地中國"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供商品標籤照片顯示，FamilyMart／全家『植覺生活 冷凍菠菜』品名為冷凍菠菜、成分為菠菜、淨重 150g，背標標示原產地為中國，負責廠商為上洛貿易企業有限公司；正面可見英文 Frozen Spinach 與有效日期 2028.05.28。此筆依使用者中國原產食品個人避買偏好列入；不延伸為全家所有商品、植覺生活全系列或上洛貿易全部商品皆為中國原產，也不作食安、安全、違法、台灣禁售、國資或中共控制定論。",
+    sources: [
+      source("使用者提供 - FamilyMart／植覺生活冷凍菠菜商品標籤照片", "", "2026-07-12", "正面標籤可讀到 FamilyMart、植覺生活、冷凍菠菜、Frozen Spinach、有效日期 2028.05.28；背面標籤可讀到品名冷凍菠菜、成分菠菜、淨重 150g、原產地中國、保存期限 24 個月、冷凍保存條件與負責廠商上洛貿易企業有限公司。電話與地址僅見於標籤，不作本紀錄 searchable fields。"),
+    ],
+    aiNotes:
+      "此筆是 product-specific / SKU-level personal record。可說這款 FamilyMart／全家 植覺生活冷凍菠菜標籤顯示原產地中國，因此依使用者偏好列個人避買。不可說全家所有商品、植覺生活全系列、上洛貿易全部商品都有問題，或推論食安、安全、違法、禁售、國資或中共控制。searchable fields 限定 FamilyMart／全家 + 植覺生活 + 冷凍菠菜等具體產品名稱與負責廠商；不要把冷凍菠菜、菠菜、Frozen Spinach、中國、中國原產、食品、冷凍蔬菜、FamilyMart、全家、植覺生活、電話或地址作 standalone alias / identifier。",
+    lastReviewed: "2026-07-12",
+  }),
+  record({
     id: "uni-president-yuanzhiwei-apple-juice-china-origin-personal",
     name: "統一 園之味 100%果汁 蘋果汁",
     aliases: [
