@@ -57,7 +57,6 @@ export const broadCategoryOverrides = new Map([
   ["tpp-muke-zhiyau-xiaocao-cafe", ["餐飲／生活服務"]],
   ["yen-kuan-heng-lutzr-yuanli-related", ["餐飲／生活服務"]],
   ["fu-hsu-jungliang-enterprise", ["餐飲／生活服務"]],
-  ["taroko-sankong-hsieh-family", ["餐飲／生活服務"]],
   ["antai-hospital-su-ching-chuan", ["餐飲／生活服務"]],
   ["shenshen-yongkang-onigiri-anti-recall", ["餐飲／生活服務"]],
   ["black-tea-bus-wanglai-bluebird-remark", ["餐飲／生活服務"]],
