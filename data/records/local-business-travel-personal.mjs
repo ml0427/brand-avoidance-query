@@ -896,4 +896,32 @@ export const records = [
       "此筆是 user-directed personal record，且刻意不保存名片上的完整電話、QR Code、私人 LINE ID 或個人姓名。可說使用者提供富誠理財名片／對話截圖與補充線索，公開表單收集敏感財務資料，投信投顧公會會員名錄查核未見富誠理財命中，因此使用者指定個人避開。不可寫成已由主管機關裁罰、刑事定罪、一定是中國來源、已確認特定真人犯罪、或所有同名公司／人物都有問題。searchable fields 僅保留富誠理財；不要把保證獲利、內線交易、假投資APP、詐騙、警示戶、貸款、LINE、電話、QR Code、板橋地址、個人姓名等原因／欄位／私人識別放入 aliases / identifiers。",
     lastReviewed: "2026-07-10",
   }),
+  record({
+    id: "vb-climbing-gym-jinhua-venue-screenshot-personal",
+    name: "攀吶攀岩場＿進化館",
+    aliases: ["攀吶攀岩場", "攀吶攀岩場 進化館"],
+    identifiers: [
+      "公開帳號：vb_climbing_gym",
+      "地址：台中市東區進化路 90-1",
+      "頁面連結：portaly.cc/vbclimbinggym",
+    ],
+    country: "台灣",
+    categories: ["運動休閒／親子娛樂"],
+    avoidReasons: ["使用者個人避開", "使用者提供社群截圖線索"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者明確指定將「攀吶攀岩場＿進化館」列入個人避開。使用者提供的截圖商家資訊可辨識店名、顯示帳號、地址及頁面連結；截圖另含對該店的政治語境評論，僅作使用者指定個人避開線索，未經本專案獨立查證。不得據此推定店家政治立場、帳號或頁面實際經營歸屬、任何實際行為、違法或官方認定。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 攀吶攀岩場＿進化館",
+        "",
+        "2026-07-18",
+        "截圖內嵌商家資訊顯示店名「攀吶攀岩場＿進化館」、帳號 vb_climbing_gym、地址台中市東區進化路 90-1 與頁面連結 portaly.cc/vbclimbinggym；截圖另含發文者對該店的政治語境評論。此來源只支撐使用者指定個人避開與截圖可見識別線索，不獨立證明店家立場、帳號／頁面歸屬、實際行為、違法或官方認定。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed screenshot-only personal record。可說使用者提供截圖可辨識攀吶攀岩場＿進化館、vb_climbing_gym、完整地址與頁面連結，且使用者指定個人避開；不可將截圖中的政治評論視為本專案已查證的店家政治立場或行為，也不可推定帳號／頁面實際經營歸屬、違法或官方認定。searchable fields 僅保留完整店名、限定店名變體、帳號、完整地址及完整頁面連結；不要把 gilbertzhangtw、Threads、政治、台派、政治主張、攀岩場、進化館、台中、東區、進化路、90-1、portaly 或 portaly.cc 等來源／理由／未限定泛稱作 alias / identifier。",
+    lastReviewed: "2026-07-18",
+  }),
 ];
