@@ -353,6 +353,42 @@ export const records = [
     lastReviewed: "2026-07-06",
   }),
   record({
+    id: "baotien2001-chuantian-handcut-ice-cream-screenshot-personal",
+    name: "川田 手切冰淇淋",
+    aliases: ["川田手切冰淇淋", "baotien2001"],
+    identifiers: ["公開帳號：baotien2001"],
+    country: "未查核",
+    categories: ["餐飲／生活服務", "政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "使用者提供社群截圖線索", "公開帳號回覆之粗俗政治性文字"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者指定將『川田 手切冰淇淋』／公開帳號 baotien2001 列入個人避開。使用者提供社群截圖可見此帳號的公開回覆含對特定政黨的粗俗政治性文字；截圖中的回覆與留言脈絡未由本專案透過原貼文獨立讀回。Threads 與 Instagram 公開帳號頁僅用來核對該帳號自我呈現的店名。此筆不推定帳號實際經營者、店主、法人、地址、政治身分或正式政策、食安、法律責任或全體人員立場。",
+    sources: [
+      source(
+        "使用者提供社群截圖",
+        "",
+        "2026-07-18",
+        "截圖可見名稱『川田 手切冰淇淋』、帳號 baotien2001 的公開回覆含對特定政黨的粗俗政治性文字，留言脈絡提及一萬元。此來源只支撐截圖可見內容與使用者指定個人避開；未提供原貼文永久連結，回覆及留言脈絡未由原貼文獨立讀回。",
+      ),
+      source(
+        "Threads 公開帳號頁",
+        "https://www.threads.com/@baotien2001",
+        "查核日 2026-07-18",
+        "公開帳號頁以『川田 手切冰淇淋』顯示 baotien2001，並以 rel=me 連至對應 Instagram 帳號；此來源只支撐帳號—店名自我呈現，不支撐店主、法人或地址。",
+      ),
+      source(
+        "Instagram 公開帳號頁",
+        "https://www.instagram.com/baotien2001/",
+        "查核日 2026-07-18",
+        "公開帳號頁以『川田 手切冰淇淋』顯示 baotien2001；此來源只支撐帳號—店名自我呈現，不支撐店主、法人或地址。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record。可說使用者提供截圖可見帳號 baotien2001 的公開回覆含對特定政黨的粗俗政治性文字，因此指定將川田 手切冰淇淋列入個人避開；回覆與留言脈絡未由原貼文獨立讀回。Threads 與 Instagram 公開帳號頁只用於帳號—店名自我呈現的核對，不足以確認帳號實際經營者、店主、法人或地址。不可推定政治身分、正式政策、食安、法律責任或全體人員立場，也不要逐字重錄粗俗文字。searchable fields 僅保留店名、其無空格寫法、baotien2001 與中性完整值『公開帳號：baotien2001』；不要把香港、政黨、政治、粗俗回覆、一萬元、留言者、Threads、Instagram、餐車、冰淇淋等來源／理由／平台／泛稱作額外 standalone alias 或 identifier。",
+    lastReviewed: "2026-07-18",
+  }),
+  record({
     id: "xianxiangle-li-zaishenbian-canned-pear-china-origin-personal",
     name: "纖享樂 / JOY FOOD 纖享樂 / 榮品居國際食品",
     aliases: [
