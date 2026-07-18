@@ -10253,16 +10253,22 @@
     "lastReviewed": "2026-07-16"
   },
   {
-    "id": "vb-climbing-gym-jinhua-venue-screenshot-personal",
-    "name": "攀吶攀岩場＿進化館",
+    "id": "vb-climbing-gym-screenshot-personal",
+    "name": "攀吶攀岩場",
     "aliases": [
-      "攀吶攀岩場",
-      "攀吶攀岩場 進化館"
+      "攀吶攀岩館",
+      "攀吶攀岩場＿進化館",
+      "攀吶攀岩場_進化館",
+      "攀吶攀岩場 進化館",
+      "攀吶進化館",
+      "攀吶進化館vb climbing gym",
+      "VB Climbing Gym"
     ],
     "identifiers": [
-      "公開帳號：vb_climbing_gym",
-      "地址：台中市東區進化路 90-1",
-      "頁面連結：portaly.cc/vbclimbinggym"
+      "Instagram：@vb_climbing_gym",
+      "Facebook：facebook.com/vbclimbing",
+      "Portaly：portaly.cc/vbclimbinggym",
+      "地址：台中市東區進化路 90-1"
     ],
     "country": "台灣",
     "categories": [
@@ -10270,20 +10276,38 @@
     ],
     "avoidReasons": [
       "使用者個人避開",
-      "使用者提供社群截圖線索"
+      "社群素材與香港書店店員事件高度相符"
     ],
-    "confidence": "low",
+    "confidence": "medium",
     "status": "personal",
-    "summary": "使用者明確指定將「攀吶攀岩場＿進化館」列入個人避開。使用者提供的截圖商家資訊可辨識店名、顯示帳號、地址及頁面連結；截圖另含對該店的政治語境評論，僅作使用者指定個人避開線索，未經本專案獨立查證。不得據此推定店家政治立場、帳號或頁面實際經營歸屬、任何實際行為、違法或官方認定。",
+    "summary": "使用者指定將攀吶攀岩場列入個人避開。公開留存的 Threads 貼文附圖顯示，與其公開帳號／品牌識別相符的限時動態素材使用「我是岩場店員」等文字與人物畫面；該素材與香港留下書舍女店員 Mandy 於 2026-07-15 遭警方拘捕時所穿「我是書店店員」T 恤及其後聲援畫面有高度相符的戲仿關聯。店家素材未直接點名 Mandy、留下書舍或香港事件，故僅記錄可見元素與可合理辨識的關聯，不推定店家承認模仿、政治立場、創作意圖、付費廣告、違法或官方認定。公開報導顯示 Mandy 其後獲准保釋候查，非失蹤或定罪紀錄。此筆是品牌／對外帳號層級收錄；目前只直接確認進化館據點，不擴及未確認的其他場館。",
     "sources": [
       {
-        "title": "使用者提供 Threads 截圖 - 攀吶攀岩場＿進化館",
-        "url": "",
-        "date": "2026-07-18",
-        "note": "截圖內嵌商家資訊顯示店名「攀吶攀岩場＿進化館」、帳號 vb_climbing_gym、地址台中市東區進化路 90-1 與頁面連結 portaly.cc/vbclimbinggym；截圖另含發文者對該店的政治語境評論。此來源只支撐使用者指定個人避開與截圖可見識別線索，不獨立證明店家立場、帳號／頁面歸屬、實際行為、違法或官方認定。"
+        "title": "攀吶攀岩館 Portaly 頁面",
+        "url": "https://portaly.cc/vbclimbinggym",
+        "date": "查核日 2026-07-18",
+        "note": "頁面標題為「攀吶攀岩館」，列 Facebook 攀吶進化館 vb climbing gym、進化路 90-1 地址與 Instagram 外連；頁面底部連結指向 @vb_climbing_gym。此來源支持品牌／公開對外帳號與進化館據點的對應，不證明分館全貌或其他同名場館關係。"
+      },
+      {
+        "title": "Threads - Gilbert Zhang 貼文留存的限時動態截圖",
+        "url": "https://www.threads.com/@gilbertzhangtw/post/Da63x_EAbvH",
+        "date": "查核日 2026-07-18",
+        "note": "公開貼文附圖留存一張與攀吶帳號／黃色標誌識別相符的限時動態素材；畫面可見「我是岩場店員」與相關人物畫面。此為第三方留存截圖，原始限時動態未取得永久網址；可支持可見素材與使用者個人避開脈絡，不單獨證明店家意圖或政治立場。"
+      },
+      {
+        "title": "鏡週刊 - 香港留下書舍女店員 Mandy 獲保釋",
+        "url": "https://www.mirrormedia.mg/story/20260717edi060",
+        "date": "2026-07-17",
+        "note": "報導香港警方搜查兩家獨立書店並拘捕從業人員；留下書舍女店員 Mandy 被帶離時身穿「我是書店店員」黑色 T 恤，後獲准保釋。此來源只支撐香港事件、身分、T 恤文字與保釋狀態，不直接證明台灣店家素材的對象或意圖。"
+      },
+      {
+        "title": "國際特赦組織 - 香港警方再次搜查獨立書店",
+        "url": "https://www.amnesty.org/zh-hant/latest/news/2026/07/hong-kong-police-raids-on-independent-bookshops-reported-again-in-new-blow-to-freedom-of-expression/",
+        "date": "2026-07-15",
+        "note": "國際特赦組織稱香港警方 7 月 15 日搜查留下書舍與田園書屋，據報拘捕五人。此來源交叉確認事件日期、書店與拘捕範圍，不直接證明台灣店家素材的對象或意圖。"
       }
     ],
-    "aiNotes": "此筆是 user-directed screenshot-only personal record。可說使用者提供截圖可辨識攀吶攀岩場＿進化館、vb_climbing_gym、完整地址與頁面連結，且使用者指定個人避開；不可將截圖中的政治評論視為本專案已查證的店家政治立場或行為，也不可推定帳號／頁面實際經營歸屬、違法或官方認定。searchable fields 僅保留完整店名、限定店名變體、帳號、完整地址及完整頁面連結；不要把 gilbertzhangtw、Threads、政治、台派、政治主張、攀岩場、進化館、台中、東區、進化路、90-1、portaly 或 portaly.cc 等來源／理由／未限定泛稱作 alias / identifier。",
+    "aiNotes": "此筆是 user-directed personal record，收錄主體為攀吶攀岩場的公開對外品牌／帳號識別；進化館是目前可直接確認的據點，不代表品牌僅有一處或可擴及未確認其他場館。可說其公開留存限時動態素材使用「我是岩場店員」等可見文字，與 Mandy 的「我是書店店員」事件畫面有高度相符的戲仿關聯；但不可寫成店家明示承認模仿 Mandy、完整重製、付費廣告、政治立場、創作意圖、仇恨言論、違法或官方認定。Mandy 是 2026 年留下書舍店員事件，非 2015 年銅鑼灣書店的林榮基；不可寫成失蹤、已定罪或被監禁。searchable fields 僅保留品牌／限定場館名稱、帳號、完整地址與完整頁面連結；不要把 Mandy、留下書舍、田園書屋、香港、書店店員、廣告、模仿、戲仿、被抓、被捕、拘捕、煽動、政治、台派、統一、中國、中共、gilbertzhangtw、Threads、攀岩場、進化館、台中、東區、進化路、90-1、portaly 或 portaly.cc 等事件／來源／理由／未限定泛稱作 alias / identifier。",
     "lastReviewed": "2026-07-18"
   }
 ]
