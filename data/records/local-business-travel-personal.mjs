@@ -951,4 +951,34 @@ export const records = [
       "此筆是 user-directed personal record，收錄主體為攀吶攀岩場的公開對外品牌／帳號識別；進化館是目前可直接確認的據點，不代表品牌僅有一處或可擴及未確認其他場館。可說其公開留存限時動態素材使用「我是岩場店員」等可見文字，與 Mandy 的「我是書店店員」事件畫面有高度相符的戲仿關聯；但不可寫成店家明示承認模仿 Mandy、完整重製、付費廣告、政治立場、創作意圖、仇恨言論、違法或官方認定。Mandy 是 2026 年留下書舍店員事件，非 2015 年銅鑼灣書店的林榮基；不可寫成失蹤、已定罪或被監禁。searchable fields 僅保留品牌／限定場館名稱、帳號、完整地址與完整頁面連結；不要把 Mandy、留下書舍、田園書屋、香港、書店店員、廣告、模仿、戲仿、被抓、被捕、拘捕、煽動、政治、台派、統一、中國、中共、gilbertzhangtw、Threads、攀岩場、進化館、台中、東區、進化路、90-1、portaly 或 portaly.cc 等事件／來源／理由／未限定泛稱作 alias / identifier。",
     lastReviewed: "2026-07-18",
   }),
+  record({
+    id: "ancuiyan-aesthetic-medicine-brand-personal",
+    name: "安萃妍醫美",
+    aliases: ["安萃妍醫美 新竹館", "愛爾麗診所 台中+"],
+    identifiers: ["Facebook Page ID：969107102952616"],
+    country: "",
+    categories: ["美妝／保健／生活零售"],
+    avoidReasons: ["使用者個人避買"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者指定將安萃妍醫美全品牌（含現有及後續分館）列為個人避買。ETtoday 於 2026-07-19 報導稱愛爾麗涉及偷拍案，並提及相關處分及司法進程；此處僅按媒體報導歸屬，不作法院終局定論。CTWANT 留存的 Facebook Page transparency 截圖顯示同一 Page ID 的歷史名稱由「愛爾麗診所 台中+」變為「安萃妍醫美 新竹館」，支持該 Page 的名稱承接。全品牌範圍為使用者個人偏好，不代表外部證實全體分館、法人、公司、醫療機構或服務均相同。",
+    sources: [
+      source(
+        "ETtoday - 愛爾麗涉及偷拍案之報導",
+        "https://www.ettoday.net/news/20260719/3203703.htm",
+        "2026-07-19",
+        "ETtoday 報導稱愛爾麗涉及偷拍案，並敘及相關處分及司法進程；此為媒體報導歸屬，僅支撐使用者的個人避買理由，不作法院終局定論或對其他實體的結論。",
+      ),
+      source(
+        "CTWANT 留存 - Facebook Page transparency 截圖",
+        "https://static.ctwant.com/images/content/89/489789/8a13124cc4091eb27165c779004e0d7c.jpg",
+        "查核日 2026-07-21",
+        "截圖可見 Page ID 969107102952616：建立名稱為「愛爾麗診所 台中+」（2026-01-28），並於 2026-06-11 改為「安萃妍醫美 新竹館」。此來源只支持同一 Page 的歷史名稱承接，不外推為全體分館、法人、公司、醫療機構或服務相同的外部證實。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed whole-brand personal avoidance：使用者指定安萃妍醫美現有及後續分館均列個人避買。可說 ETtoday 以媒體報導方式稱愛爾麗涉及偷拍案及相關處分／司法進程，但不可寫成法院終局定論。CTWANT 的 Page transparency 截圖只支持同一 Page ID 的「愛爾麗診所 台中+」至「安萃妍醫美 新竹館」歷史名稱承接；不得將此延伸為外部證實全體分館、法人、公司、醫療機構或服務均相同。searchable fields 僅保留使用者指定品牌／完整歷史頁名與可見 Page ID；不要把原因、媒體、法律程序、地址、電話或未限定服務泛稱放入 name、aliases 或 identifiers。",
+    lastReviewed: "2026-07-21",
+  }),
 ];

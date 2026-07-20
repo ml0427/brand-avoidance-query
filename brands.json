@@ -10548,5 +10548,42 @@
     ],
     "aiNotes": "此筆是 screenshot-only / user-directed personal group record。後續僅可說使用者提供截圖並指定將上述五個姓名列入個人避開；截圖只支持姓名，不確認五人的身分、職務、彼此關係、任何公司、行為、事件、動機或法律／行政狀態。searchable fields 僅保留五個完整姓名；不要加入任何其他人名、組織、職稱、事件、理由或法律／行政狀態詞。",
     "lastReviewed": "2026-07-20"
+  },
+  {
+    "id": "ancuiyan-aesthetic-medicine-brand-personal",
+    "name": "安萃妍醫美",
+    "aliases": [
+      "安萃妍醫美 新竹館",
+      "愛爾麗診所 台中+"
+    ],
+    "identifiers": [
+      "Facebook Page ID：969107102952616"
+    ],
+    "country": "",
+    "categories": [
+      "美妝／保健／生活零售"
+    ],
+    "avoidReasons": [
+      "使用者個人避買"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者指定將安萃妍醫美全品牌（含現有及後續分館）列為個人避買。ETtoday 於 2026-07-19 報導稱愛爾麗涉及偷拍案，並提及相關處分及司法進程；此處僅按媒體報導歸屬，不作法院終局定論。CTWANT 留存的 Facebook Page transparency 截圖顯示同一 Page ID 的歷史名稱由「愛爾麗診所 台中+」變為「安萃妍醫美 新竹館」，支持該 Page 的名稱承接。全品牌範圍為使用者個人偏好，不代表外部證實全體分館、法人、公司、醫療機構或服務均相同。",
+    "sources": [
+      {
+        "title": "ETtoday - 愛爾麗涉及偷拍案之報導",
+        "url": "https://www.ettoday.net/news/20260719/3203703.htm",
+        "date": "2026-07-19",
+        "note": "ETtoday 報導稱愛爾麗涉及偷拍案，並敘及相關處分及司法進程；此為媒體報導歸屬，僅支撐使用者的個人避買理由，不作法院終局定論或對其他實體的結論。"
+      },
+      {
+        "title": "CTWANT 留存 - Facebook Page transparency 截圖",
+        "url": "https://static.ctwant.com/images/content/89/489789/8a13124cc4091eb27165c779004e0d7c.jpg",
+        "date": "查核日 2026-07-21",
+        "note": "截圖可見 Page ID 969107102952616：建立名稱為「愛爾麗診所 台中+」（2026-01-28），並於 2026-06-11 改為「安萃妍醫美 新竹館」。此來源只支持同一 Page 的歷史名稱承接，不外推為全體分館、法人、公司、醫療機構或服務相同的外部證實。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed whole-brand personal avoidance：使用者指定安萃妍醫美現有及後續分館均列個人避買。可說 ETtoday 以媒體報導方式稱愛爾麗涉及偷拍案及相關處分／司法進程，但不可寫成法院終局定論。CTWANT 的 Page transparency 截圖只支持同一 Page ID 的「愛爾麗診所 台中+」至「安萃妍醫美 新竹館」歷史名稱承接；不得將此延伸為外部證實全體分館、法人、公司、醫療機構或服務均相同。searchable fields 僅保留使用者指定品牌／完整歷史頁名與可見 Page ID；不要把原因、媒體、法律程序、地址、電話或未限定服務泛稱放入 name、aliases 或 identifiers。",
+    "lastReviewed": "2026-07-21"
   }
 ]
