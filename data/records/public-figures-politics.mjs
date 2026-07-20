@@ -1021,4 +1021,27 @@ export const records = [
       "此筆是 user-directed personal screenshot group record。搜尋鍵刻意只保留五位姓名；不可把佀廣洋、幫加油、里長、參選人、桃園區、春日里、寶民里、新埔里、豐林里、中原里、Craig Wang、家人稱謂、截圖爭議詞或性別／職業相關貶抑語放入 name / aliases / identifiers，也不要為截圖脈絡補社群帳號或里別 identifiers。不可因既有 si-guangyang-kmt-taoyuan-candidate record 的其他爭議，推論五人涉入、背書或共同承擔；除非另有官方或本人公開來源，否則不要斷言五人的現任職務、候選資格、黨籍、里別、帳號歸屬或法律責任。",
     lastReviewed: "2026-07-07",
   }),
+  record({
+    id: "five-persons-screenshot-personal-2026-07-20",
+    name: "蔡清松／劉偉龍／洪堯昆／吳星澄／陳飛龍",
+    aliases: ["蔡清松", "劉偉龍", "洪堯昆", "吳星澄", "陳飛龍"],
+    country: "",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者提供截圖並指定將蔡清松、劉偉龍、洪堯昆、吳星澄、陳飛龍列入個人避開。截圖僅支持上述五個姓名；本筆不確認五人的身分、職務、彼此關係、任何公司、行為、事件、動機或法律／行政狀態。",
+    sources: [
+      source(
+        "使用者提供截圖 - 五人姓名",
+        "",
+        "2026-07-20",
+        "使用者提供截圖並指定個人避開；截圖僅可辨識蔡清松、劉偉龍、洪堯昆、吳星澄、陳飛龍五個姓名，不確認身分、職務、彼此關係、任何公司、行為、事件、動機或法律／行政狀態。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal group record。後續僅可說使用者提供截圖並指定將上述五個姓名列入個人避開；截圖只支持姓名，不確認五人的身分、職務、彼此關係、任何公司、行為、事件、動機或法律／行政狀態。searchable fields 僅保留五個完整姓名；不要加入任何其他人名、組織、職稱、事件、理由或法律／行政狀態詞。",
+    lastReviewed: "2026-07-20",
+  }),
 ];

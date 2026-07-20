@@ -890,4 +890,27 @@ export const records = [
       "此筆是 user-directed personal record。可說使用者指定將南僑產品列入個人避買；使用者未提供理由、SKU 或外部資料。不得對公司、集團、子公司、子品牌、門市、產品線或同名實體作關聯、身分或範圍推論。searchable fields 僅保留 name「南僑產品」與 alias「南僑」；不放 identifiers，country 留白。不要新增 NAN CHIAO、NAMCHOW、南僑企業、南僑集團、南僑油脂或任何泛稱、理由詞作 searchable field。",
     lastReviewed: "2026-07-20",
   }),
+  record({
+    id: "zhuojia-longan-shitang-screenshot-personal",
+    name: "卓家龍安食堂",
+    aliases: [],
+    country: "",
+    categories: ["餐飲／生活服務"],
+    avoidReasons: ["使用者個人避買"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供截圖並指定將卓家龍安食堂列入個人避買；截圖僅可見／標記店名『卓家龍安食堂』。未確認地址、店方與人物關係、現場情況、貼文主張／回覆、餐飲安全、服務品質、違規或法律責任，且不擴及同名或其他店家。",
+    sources: [
+      source(
+        "使用者提供截圖 - 卓家龍安食堂",
+        "",
+        "2026-07-20",
+        "使用者提供截圖並指定個人避買；畫面僅可見／標記店名『卓家龍安食堂』。未確認地址、店方與人物關係、現場情況、貼文主張／回覆、餐飲安全、服務品質、違規或法律責任，且不擴及同名或其他店家。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal store record。後續僅可說使用者提供截圖並指定個人避買，且截圖僅可見／標記店名『卓家龍安食堂』；未確認地址、店方與人物關係、現場情況、貼文主張／回覆、餐飲安全、服務品質、違規或法律責任，不擴及同名或其他店家。searchable fields 僅保留店名；不要加入帳號、地點、人物、現場、回覆、理由、餐飲安全、服務品質、違規或法律責任相關詞。",
+    lastReviewed: "2026-07-20",
+  }),
 ];
