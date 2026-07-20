@@ -10398,5 +10398,33 @@
     "reviewAfter": "2026-08-17",
     "temporaryAlertReason": "新竹市政府 2026-07-18 公告之特定品項／有效日期短期警示；期滿後依官方更新複查。",
     "lastReviewed": "2026-07-18"
+  },
+  {
+    "id": "namchow-products-user-directed-personal",
+    "name": "南僑產品",
+    "aliases": [
+      "南僑"
+    ],
+    "country": "",
+    "categories": [
+      "食品飲料",
+      "服飾生活"
+    ],
+    "avoidReasons": [
+      "使用者個人避買"
+    ],
+    "confidence": "low",
+    "status": "personal",
+    "summary": "使用者指定將「南僑產品」列入個人避買。使用者未提供理由、SKU 或外部資料；本筆僅記錄使用者指定，不對公司、集團、子公司、子品牌、門市、產品線或同名實體作關聯或身分推論。",
+    "sources": [
+      {
+        "title": "使用者指定 - 南僑產品個人避買",
+        "url": "",
+        "date": "2026-07-20",
+        "note": "使用者明確指定將「南僑產品」列入個人避買，未提供理由、SKU 或外部資料；此來源僅支撐使用者指定，不對公司、集團、子公司、子品牌、門市、產品線或同名實體作關聯或身分推論。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed personal record。可說使用者指定將南僑產品列入個人避買；使用者未提供理由、SKU 或外部資料。不得對公司、集團、子公司、子品牌、門市、產品線或同名實體作關聯、身分或範圍推論。searchable fields 僅保留 name「南僑產品」與 alias「南僑」；不放 identifiers，country 留白。不要新增 NAN CHIAO、NAMCHOW、南僑企業、南僑集團、南僑油脂或任何泛稱、理由詞作 searchable field。",
+    "lastReviewed": "2026-07-20"
   }
 ]
