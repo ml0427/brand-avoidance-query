@@ -18,6 +18,57 @@
 
 export const records = [
   record({
+    id: "fan-zhikun-screenshot-personal",
+    name: "范織坤",
+    aliases: ["范織坤"],
+    country: "",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開"],
+    confidence: "low",
+    status: "personal",
+    summary: "使用者提供截圖並指定將范織坤列入個人避開。",
+    sources: [
+      source(
+        "使用者提供截圖 - 范織坤",
+        "",
+        "2026-07-20",
+        "使用者提供截圖並指定個人避開；此來源僅記錄使用者的指示。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record；後續僅可說使用者提供截圖並指定個人避開。",
+    lastReviewed: "2026-07-20",
+  }),
+  record({
+    id: "pan-meng-an-user-directed-personal",
+    name: "潘孟安",
+    aliases: ["潘孟安"],
+    country: "",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者指定將潘孟安列入個人避開。總統府頁面列其為秘書長。中央社 2026-07-19 報導，他就當日上午互動表示先前已表明不受訪，因現場倉促與攝影者在前而舉手，可能造成不愉快並致歉；報導亦載有總統府對動線與設備的說明。完整、未剪輯的連續影像未取得；本筆只記錄使用者個人避開與上述有限脈絡，不認定動機、壓迫、挑事、推擠責任、灰色地帶、違法／違規或法律結論。",
+    sources: [
+      source(
+        "總統府 - 潘孟安",
+        "https://www.president.gov.tw/Page/54",
+        "查核日 2026-07-20",
+        "總統府頁面列潘孟安為秘書長；此來源只用於職務身分確認，不支撐當日上午互動的事實或責任認定。",
+      ),
+      source(
+        "中央社 - 潘孟安就上午互動致歉",
+        "https://www.cna.com.tw/news/aipl/202607190085.aspx",
+        "2026-07-19",
+        "報導稱潘孟安就當日上午互動表示先前已表明不受訪，因現場倉促與攝影者在前而舉手，可能造成不愉快並致歉；報導亦載有總統府對動線與設備的說明。完整、未剪輯的連續影像未取得；此來源僅支撐報導所載的說法與機關說明，不認定動機、壓迫、挑事、推擠責任、灰色地帶、違法／違規或法律結論。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed personal record。可說使用者指定將潘孟安列入個人避開，並可如實區分總統府的職務資料與中央社所載的當日上午互動說法及機關說明。完整、未剪輯的連續影像未取得；不可認定動機、壓迫、挑事、推擠責任、灰色地帶、違法／違規或法律結論。searchable fields 僅保留潘孟安。",
+    lastReviewed: "2026-07-20",
+  }),
+  record({
     id: "crazy-news-sexual-pun-personal",
     name: "狂新聞 / 卡提諾狂新聞",
     aliases: ["狂新聞", "卡提諾狂新聞", "Crazy News"],
