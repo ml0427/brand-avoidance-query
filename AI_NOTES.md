@@ -6,8 +6,8 @@
 
 - Record: `jiada-international-logistics-hong-kong-book-shipping-personal-202607`；`personal` / `medium`。使用者提供民視 Threads 截圖並指定個人避開。
 - 民視 2026-07-21 報導明確點名嘉達，稱公告要求寄港書籍提供完整書單、拒運未提供書單或被其判定違反相關規範的書籍，及不再向遭香港政府調查書店提供運輸；民視稱業者證實公告並說明香港海關查驗、貨物扣留風險背景。經濟日報／中央社 2026-07-22 轉述明報採訪，交叉確認通告與「無公司內部或港府禁書名單、顧慮海關抽查」的受訪說法。
-- 口徑：可將「公告以配合香港《維護國家安全法》為由」完整歸屬於媒體報導及業者受訪；不可寫成公司受中國／香港政府指示、確有配合中國政府審查、違法或所有服務都受限。第二張 Google／AI 摘要中的個人親屬／刑案內容未取得可靠原始來源與身分橋接，完全不可寫入公司紀錄或回覆。
-- 查詢：僅 `嘉達國際物流有限公司`、`嘉達國際物流`、`JAGUAR LOGISTICS`、`JAGUAR LOGISTICS CO., LTD.`、`jaguargp.com` 可命中；香港、國安法、維護國家安全法、書籍、拒運、禁書、中國、配合中國、ftvnews、Threads 不可命中。外部報告：`D:/AI_workspace/.hermes/profiles/amagi-line/cache/reports/jiada-logistics-source-report-20260722.md`；4 positive／4 expect／11 not-expect 均 PASS，warnings/errors 為 0。
+- 口徑：經濟部官方資料可直接確認楊智堯為嘉達的登記負責人，這項公司—職務關係可保留；可將「公告以配合香港《維護國家安全法》為由」完整歸屬於媒體報導及業者受訪。不可寫成公司受中國／香港政府指示、確有配合中國政府審查、違法或所有服務都受限。第二張 Google／AI 摘要中的親屬／刑案內容未取得可靠原始來源與身分橋接，完全不可寫入公司紀錄或回覆。
+- 查詢：僅 `嘉達國際物流有限公司`、`嘉達國際物流`、`JAGUAR LOGISTICS`、`JAGUAR LOGISTICS CO., LTD.`、`jaguargp.com` 可命中；登記負責人姓名只保留在來源敘事，不加入 alias／identifier。香港、國安法、維護國家安全法、書籍、拒運、禁書、中國、配合中國、ftvnews、Threads 不可命中。外部報告：`D:/AI_workspace/.hermes/profiles/amagi-line/cache/reports/jiada-logistics-source-report-20260722.md`；4 positive／4 expect／11 not-expect 均 PASS，warnings/errors 為 0。
 
 ## 2026-07-22 馬呈豪花蓮公共事件截圖：使用者個人避開、不可作個人歸責定論
 
