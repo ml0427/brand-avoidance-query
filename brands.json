@@ -10593,5 +10593,51 @@
     ],
     "aiNotes": "此筆是 user-directed whole-brand personal avoidance：使用者指定安萃妍醫美現有及後續分館均列個人避買。可說 ETtoday 以媒體報導方式稱愛爾麗涉及偷拍案及相關處分／司法進程，但不可寫成法院終局定論。CTWANT 的 Page transparency 截圖只支持同一 Page ID 的「愛爾麗診所 台中+」至「安萃妍醫美 新竹館」歷史名稱承接；不得將此延伸為外部證實全體分館、法人、公司、醫療機構或服務均相同。searchable fields 僅保留使用者指定品牌／完整歷史頁名與可見 Page ID；不要把原因、媒體、法律程序、地址、電話或未限定服務泛稱放入 name、aliases 或 identifiers。",
     "lastReviewed": "2026-07-21"
+  },
+  {
+    "id": "ma-chenghao-hualien-events-screenshot-personal",
+    "name": "馬呈豪",
+    "aliases": [
+      "馬呈豪",
+      "马呈豪"
+    ],
+    "country": "",
+    "categories": [
+      "政治／公眾人物"
+    ],
+    "avoidReasons": [
+      "使用者個人避開"
+    ],
+    "confidence": "low",
+    "status": "personal",
+    "summary": "使用者指定列入個人避開：使用者提供 Threads 截圖，將馬呈豪與花蓮光復救災義煮團受阻、花蓮豐年節舉牌者遭警方帶離的事件連結。公開來源可確認兩起事件各有報導，但未取得可將攔阻、帶離或決策指令歸責馬呈豪的直接來源。此筆只記錄使用者依截圖與有限公開脈絡採取的個人避開，不認定其下令、違法、官方認定或法律責任。",
+    "sources": [
+      {
+        "title": "使用者提供 Threads 截圖 - 馬呈豪與花蓮事件線索",
+        "url": "",
+        "date": "2026-07-22",
+        "note": "截圖可見帳號 chentiduchen 的貼文及 dennylu_tw 轉貼圖，文字將『花蓮原民處長：馬呈豪』與光復救災義煮團受阻、豐年節舉牌者遭警方帶離的事件連結；此來源僅支撐使用者提供社群線索與個人避開理由，不獨立證明馬呈豪下令、參與、違法或負有法律／行政責任。"
+      },
+      {
+        "title": "中央社 - 社福第一線馬呈豪接任花蓮原住民行政處長",
+        "url": "https://www.cna.com.tw/news/aloc/202411260107.aspx",
+        "date": "2024-11-26",
+        "note": "報導稱馬呈豪接任花蓮縣政府原住民行政處處長，並於 11 月 27 日正式接任；此來源僅支撐報導所載職務身分與時間點，不支撐兩起事件的決策或責任歸屬。"
+      },
+      {
+        "title": "公視 - 義煮團車輛遭警攔下無法出餐 花縣府：未來一律放行",
+        "url": "https://news.pts.org.tw/article/772703",
+        "date": "2025-09-29",
+        "note": "報導載明義煮團車輛曾遭警方攔下、縣府後稱表明用途後放行；此來源不支持馬呈豪個人作成攔阻、驅離或下令。"
+      },
+      {
+        "title": "公視 - 男子舉牌抗議花蓮豐年節 身攜山刀拒盤查遭警帶離",
+        "url": "https://news.pts.org.tw/article/818306",
+        "date": "2026-07-19",
+        "note": "報導載明豐年節現場有舉牌者遭警方帶離，並轉載警方對過程的說法；此來源不支持馬呈豪指揮、下令或應負責。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-source / user-directed personal record。可說使用者提供截圖，將馬呈豪與兩起花蓮公共事件連結，因此指定個人避開；公開來源可確認兩起事件曾被報導，但未取得可將攔阻、帶離或決策指令歸責馬呈豪的直接來源。不可寫成他趕走義煮團、下令逮捕、下令警方帶離、違法、官方認定或法律責任。searchable fields 僅保留馬呈豪與马呈豪；不要把原民處長、花蓮、光復、義煮團、豐年節、舉牌、逮捕、警察、chentiduchen、dennylu_tw、Threads 或事件／指控詞放入 aliases / identifiers。",
+    "lastReviewed": "2026-07-22"
   }
 ]
