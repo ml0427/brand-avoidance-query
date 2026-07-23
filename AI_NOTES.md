@@ -2,12 +2,6 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
-## 2026-07-23 何勝豐／劉育成／陳榮昌：社群截圖三人群組個人避開
-
-- Record: `he-shengfeng-liu-yucheng-chen-rongchang-screenshot-personal-20260723`；`personal` / `low`。使用者無文字提供社群截圖；依 ongoing 避雷 intake 視為指定加入個人避開。
-- 截圖僅作三人姓名與使用者指定個人避開的線索；本專案未取得可直接引用的獨立來源，因此只採 screenshot-only 個人偏好口徑，不確認三人身分、職務、彼此關係、任何事件、受影響人數、任何調查／處分／判決、政治關係或法律／行政責任。
-- 查詢只保留 `何勝豐`、`劉育成`、`陳榮昌`；地名、學校、職稱、事件、指控、數字、法律／政治詞、來源帳號與平台字詞不可命中。重生後全量與目標驗證均 PASS，`warnings: 0; errors: 0`。
-
 ## 2026-07-23 雅浩家具：售後／維修服務端的截圖個人避開
 
 - Record: `ystore-yahao-furniture-service-personal-20260723`；`personal` / `low`。範圍僅是雅浩／ystore雅浩家具的售後、維修與客服服務端，不是 Herman Miller、MillerKnoll、Aeron 或原廠保固避雷。

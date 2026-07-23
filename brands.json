@@ -10784,34 +10784,5 @@
     ],
     "aiNotes": "僅限使用者指定的雅浩／ystore雅浩家具售後、維修、客服服務端個人避開。事件理由來自使用者提供的 Threads hs.yao 截圖；不得把貼文對網布、十年保固、39999、3500 元運費、客服／門市溝通的說法寫成已驗證事實。雅浩自有網站自稱雅浩國際股份有限公司，並自稱為 MillerKnoll 在台灣的獨家認證代理；本次未取得 Herman Miller／MillerKnoll 原廠直接列名的台灣名錄，故只能描述為商家自述。禁止把 Herman Miller、MillerKnoll、Knoll、Aeron／Aeron 2.0、椅子、網布、保固、運費、客服、辦公家具、hs.yao、Threads、門市人員或道歉等放入可搜尋欄位；不得外推原廠產品、所有通路、其他門市／員工或未辨識交易。",
     "lastReviewed": "2026-07-23"
-  },
-  {
-    "id": "he-shengfeng-liu-yucheng-chen-rongchang-screenshot-personal-20260723",
-    "name": "何勝豐／劉育成／陳榮昌",
-    "aliases": [
-      "何勝豐",
-      "劉育成",
-      "陳榮昌"
-    ],
-    "country": "",
-    "categories": [
-      "政治／公眾人物"
-    ],
-    "avoidReasons": [
-      "使用者個人避開"
-    ],
-    "confidence": "low",
-    "status": "personal",
-    "summary": "使用者提供截圖並指定將何勝豐、劉育成、陳榮昌列入個人避開。此筆僅記錄使用者依截圖作出的個人偏好；不確認三人身分、職務、彼此關係、任何事件、受影響人數、調查／處分／判決、政治關係或法律／行政責任。",
-    "sources": [
-      {
-        "title": "使用者提供社群截圖 - 三人姓名圖卡",
-        "url": "",
-        "date": "2026-07-23",
-        "note": "截圖可見社群搜尋／轉貼畫面及含三人姓名的圖卡。此來源只支撐使用者提供的畫面內容與個人避開意向，不獨立證明三人身分、職務、彼此關係、任何事件、受影響人數、行政／司法程序、政治關係或任何法律責任。"
-      }
-    ],
-    "aiNotes": "此筆是 screenshot-only / user-directed finite group personal record。後續僅可說使用者提供截圖並指定將何勝豐、劉育成、陳榮昌列入個人避開；截圖不確認三人身分、職務、彼此關係、事件、受影響人數、任何調查／處分／判決、政治關係或法律／行政責任。searchable fields 僅保留三個完整姓名；不要把任何地名、學校、職稱、事件、指控、數字、法律／政治詞、來源帳號或平台字詞放入 name / aliases / identifiers。",
-    "lastReviewed": "2026-07-23"
   }
 ]

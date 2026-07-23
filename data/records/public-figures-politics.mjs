@@ -1126,27 +1126,4 @@ export const records = [
       "此筆是 user-directed personal record，僅限可交叉核對的台灣證券案件與 2024 年媒體所報最高法院定讞結果。可說朱國榮在該內線交易及操縱龍邦股價相關案件中判刑 16 年確定；不可寫成泰山對其個人案件負責，也不可納入或確認澳門、1980、1982、殺人、通緝、偷渡、身分證、中國人、朱子昭、龍邦、保勝、國寶集團、泰山企業、1218、foodiepapa.go、frenk223311、台灣新聞網、Threads 等未核實／公司關係／來源／理由詞。searchable fields 僅保留朱國榮。",
     lastReviewed: "2026-07-22",
   }),
-  record({
-    id: "he-shengfeng-liu-yucheng-chen-rongchang-screenshot-personal-20260723",
-    name: "何勝豐／劉育成／陳榮昌",
-    aliases: ["何勝豐", "劉育成", "陳榮昌"],
-    country: "",
-    categories: ["政治／個人避開"],
-    avoidReasons: ["使用者個人避開"],
-    confidence: "low",
-    status: "personal",
-    summary:
-      "使用者提供截圖並指定將何勝豐、劉育成、陳榮昌列入個人避開。此筆僅記錄使用者依截圖作出的個人偏好；不確認三人身分、職務、彼此關係、任何事件、受影響人數、調查／處分／判決、政治關係或法律／行政責任。",
-    sources: [
-      source(
-        "使用者提供社群截圖 - 三人姓名圖卡",
-        "",
-        "2026-07-23",
-        "截圖可見社群搜尋／轉貼畫面及含三人姓名的圖卡。此來源只支撐使用者提供的畫面內容與個人避開意向，不獨立證明三人身分、職務、彼此關係、任何事件、受影響人數、行政／司法程序、政治關係或任何法律責任。",
-      ),
-    ],
-    aiNotes:
-      "此筆是 screenshot-only / user-directed finite group personal record。後續僅可說使用者提供截圖並指定將何勝豐、劉育成、陳榮昌列入個人避開；截圖不確認三人身分、職務、彼此關係、事件、受影響人數、任何調查／處分／判決、政治關係或法律／行政責任。searchable fields 僅保留三個完整姓名；不要把任何地名、學校、職稱、事件、指控、數字、法律／政治詞、來源帳號或平台字詞放入 name / aliases / identifiers。",
-    lastReviewed: "2026-07-23",
-  }),
 ];
