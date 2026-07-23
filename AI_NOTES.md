@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-07-23 雅浩家具：售後／維修服務端的截圖個人避開
+
+- Record: `ystore-yahao-furniture-service-personal-20260723`；`personal` / `low`。範圍僅是雅浩／ystore雅浩家具的售後、維修與客服服務端，不是 Herman Miller、MillerKnoll、Aeron 或原廠保固避雷。
+- 使用者提供 Threads 截圖，發文者主張個人購買／維修經驗含網布、十年保固、3,500 元維修運費與客服／門市溝通；嵌入 email 未顯示寄收件人、日期或案件資料，故只作 screenshot-source 個人避開，不確認任何費用、保固、產品狀態、交易或責任。
+- 雅浩自有網站呈現雅浩國際股份有限公司／雅浩家具，並自稱為 MillerKnoll 台灣獨家認證代理與 Herman Miller 品牌專區；這是商家自述，未取得原廠直接列名的台灣授權資料，不得寫成原廠獨立背書。
+- 查詢僅雅浩、雅浩家具、ystore雅浩家具、雅浩國際股份有限公司、ystore.com.tw 可命中；Herman Miller、MillerKnoll、Aeron、椅子、網布、保固、3,500、39,999、客服、運費、hs.yao、Threads、門市人員、道歉、辦公家具不可命中。外部報告：`D:/AI_workspace/.hermes/profiles/amagi-line/cache/reports/yahao-herman-miller-service-screenshot-20260723.md`。
+
 ## 2026-07-23 蘇清泉：血壓／言論截圖僅作未核實補充
 
 - 更新既有 `su-chingchuan-antai-hospital-fire-indictment`，不建立重複人物卡，也不改變既有安泰醫院大火案的起訴／未定讞邊界。

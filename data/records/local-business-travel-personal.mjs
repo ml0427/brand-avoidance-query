@@ -1023,4 +1023,44 @@ export const records = [
       "此筆是 company-level / user-directed personal record。可說經濟部公開資料列楊智堯為嘉達的登記負責人，以及 2026 年 7 月公開媒體報導稱嘉達公告以配合香港《維護國家安全法》為由，對寄港書籍要求書單並採取特定拒運限制，業者向媒體說明其背景為香港海關查驗與貨物扣留風險。不可將『配合中國』寫成既定事實，不可說公司受中國／香港政府指示、曾違法、所有服務皆受限，或加入未經可靠原始來源與身分橋接的負責人個人親屬、刑案、同名裁判或 Google／AI 摘要內容。searchable fields 僅保留公司完整名稱、去公司尾碼名稱、英文名稱與完整網域；登記負責人姓名只存在來源／敘事邊界，不能作 aliases / identifiers；不要把嘉達、物流、香港、國安法、維護國家安全法、書籍、拒運、禁書、中國、配合中國、ftvnews、Threads 或其他事件／來源／理由詞放入 aliases / identifiers。",
     lastReviewed: "2026-07-22",
   }),
+  record({
+    id: "ystore-yahao-furniture-service-personal-20260723",
+    name: "雅浩家具",
+    aliases: [
+      "雅浩",
+      "ystore雅浩家具",
+      "雅浩國際股份有限公司",
+      "ystore.com.tw",
+    ],
+    country: "",
+    categories: ["居家生活", "家具"],
+    avoidReasons: ["使用者個人避開"],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 公開帳號 hs.yao 的截圖：發文者以個人購買／維修經驗主張 Herman Miller Aeron 2.0 網布破裂、原稱十年保固而收到 3500 元維修運費文字，並對其所稱的雅浩代理／客服與門市溝通表達不滿；嵌入 email 未顯示寄收件人、日期或案件資料。使用者指定僅列個人避開雅浩家具／ystore雅浩家具的售後、維修、客服服務端。本記錄不判定該主張真偽，不外推至 Herman Miller、MillerKnoll、Aeron、原廠產品、原廠保固或其他經銷商。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 雅浩服務經驗",
+        "",
+        "2026-07-23",
+        "截圖可見帳號 hs.yao 對其個人購買、維修運費與客服互動的主張；嵌入信件僅可見「本次維修運費為：3500元」等文字，未見寄件人、收件人、日期或案件資料。僅作個人避開的截圖來源，不確認費用、保固、產品狀態或責任。",
+      ),
+      source(
+        "雅浩家具 - 關於雅浩",
+        "https://www.ystore.com.tw/pages/about",
+        "查核日 2026-07-23",
+        "雅浩自有網站將其呈現為雅浩國際股份有限公司／雅浩家具，並自稱為 MillerKnoll 在台灣的獨家認證代理（Certified Dealer）；此為商家公開自述，用於辨識服務端，不視為原廠獨立授權證明，也不證明任何特定交易或維修案件。",
+      ),
+      source(
+        "雅浩家具 - Herman Miller 品牌頁",
+        "https://www.ystore.com.tw/collections/hermanmiller",
+        "查核日 2026-07-23",
+        "雅浩自有品牌頁以「Herman Miller ystore雅浩家具」呈現品牌專區；支持公開商家—品牌展示關聯，不外推至原廠、產品品質、保固或個案維修責任。",
+      ),
+    ],
+    aiNotes:
+      "僅限使用者指定的雅浩／ystore雅浩家具售後、維修、客服服務端個人避開。事件理由來自使用者提供的 Threads hs.yao 截圖；不得把貼文對網布、十年保固、39999、3500 元運費、客服／門市溝通的說法寫成已驗證事實。雅浩自有網站自稱雅浩國際股份有限公司，並自稱為 MillerKnoll 在台灣的獨家認證代理；本次未取得 Herman Miller／MillerKnoll 原廠直接列名的台灣名錄，故只能描述為商家自述。禁止把 Herman Miller、MillerKnoll、Knoll、Aeron／Aeron 2.0、椅子、網布、保固、運費、客服、辦公家具、hs.yao、Threads、門市人員或道歉等放入可搜尋欄位；不得外推原廠產品、所有通路、其他門市／員工或未辨識交易。",
+    lastReviewed: "2026-07-23",
+  }),
 ];
