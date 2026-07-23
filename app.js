@@ -6,6 +6,7 @@ import {
   normalizeBrandList,
   validateBrandRecord,
 } from "./app-core.mjs";
+import { shouldRenderResults } from "./query-display-state.mjs";
 
 const elements = {
   dataStatus: getRequiredElement("dataStatus"),
@@ -21,6 +22,7 @@ const elements = {
 };
 
 let brands = [];
+let blankQuerySubmitted = false;
 
 function getRequiredElement(id) {
   const element = document.getElementById(id);
@@ -262,8 +264,23 @@ function renderResults(filteredBrands) {
     brands.length === 0 ? "目前沒有可顯示的品牌資料。" : "沒有符合條件的品牌資料。";
 }
 
+function renderIdleResults() {
+  elements.resultCount.textContent = "結果計數：尚未查詢";
+  elements.results.replaceChildren();
+  elements.emptyState.hidden = false;
+  elements.emptyState.textContent = "請輸入關鍵字查詢；若要瀏覽全部資料，請在空白搜尋欄按 Enter。";
+}
+
 function updateResults() {
-  renderResults(filterBrands(brands, getCurrentFilters()));
+  const filters = getCurrentFilters();
+  const { query, ...activeFilters } = filters;
+
+  if (!shouldRenderResults({ query, filters: activeFilters, blankQuerySubmitted })) {
+    renderIdleResults();
+    return;
+  }
+
+  renderResults(filterBrands(brands, filters));
 }
 
 function collectValidationErrors(normalizedBrands) {
@@ -274,7 +291,20 @@ function collectValidationErrors(normalizedBrands) {
 }
 
 function bindFilterEvents() {
-  elements.searchInput.addEventListener("input", updateResults);
+  elements.searchInput.addEventListener("input", () => {
+    blankQuerySubmitted = false;
+    updateResults();
+  });
+
+  elements.searchInput.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || elements.searchInput.value.trim() !== "") {
+      return;
+    }
+
+    event.preventDefault();
+    blankQuerySubmitted = true;
+    updateResults();
+  });
 
   for (const select of [
     elements.confidenceFilter,
@@ -282,8 +312,13 @@ function bindFilterEvents() {
     elements.categoryFilter,
     elements.reasonFilter,
   ]) {
-    select.addEventListener("input", updateResults);
-    select.addEventListener("change", updateResults);
+    const updateFromFilter = () => {
+      blankQuerySubmitted = false;
+      updateResults();
+    };
+
+    select.addEventListener("input", updateFromFilter);
+    select.addEventListener("change", updateFromFilter);
   }
 }
 
