@@ -282,14 +282,19 @@ summary:focus-visible {
   color: var(--danger);
 }
 
-.summary {
+.summary-preview {
   margin: 12px 0;
   color: var(--text);
   line-height: 1.65;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow-wrap: anywhere;
 }
 
-.meta-grid {
+.meta-grid,
+.detail-meta-grid {
   display: grid;
   grid-template-columns: minmax(80px, 112px) minmax(0, 1fr);
   gap: 8px 12px;
@@ -297,12 +302,14 @@ summary:focus-visible {
   color: var(--muted);
 }
 
-.meta-grid dt {
+.meta-grid dt,
+.detail-meta-grid dt {
   color: var(--text);
   font-weight: 700;
 }
 
-.meta-grid dd {
+.meta-grid dd,
+.detail-meta-grid dd {
   min-width: 0;
   margin: 0;
   overflow-wrap: anywhere;
@@ -314,9 +321,13 @@ details {
   padding-top: 12px;
 }
 
-summary {
+.brand-card summary {
   width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   border-radius: 6px;
+  padding: 8px 10px;
   color: var(--accent);
   cursor: pointer;
   font-weight: 700;
@@ -327,13 +338,17 @@ details[open] summary {
   margin-bottom: 8px;
 }
 
+.full-summary,
 .sources,
-.ai-notes {
+.ai-notes,
+.detail-meta-section {
   color: var(--text);
 }
 
+.full-summary h3,
 .sources h3,
-.ai-notes h3 {
+.ai-notes h3,
+.detail-meta-section h3 {
   margin: 12px 0 6px;
   color: var(--text);
   font-size: 15px;
@@ -341,6 +356,7 @@ details[open] summary {
   letter-spacing: 0;
 }
 
+.full-summary p,
 .sources p,
 .ai-notes p {
   margin: 0;
@@ -408,7 +424,8 @@ a:hover {
 
   .filters,
   .filter-grid,
-  .meta-grid {
+  .meta-grid,
+  .detail-meta-grid {
     grid-template-columns: 1fr;
   }
 

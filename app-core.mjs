@@ -20,7 +20,7 @@ function cleanString(value) {
     return "";
   }
 
-  return String(value).normalize("NFKC").replace(/\s+/g, " ").trim();
+  return String(value).replace(/\s+/g, " ").trim();
 }
 
 function normalizeChoice(value, allowedValues, fallback) {
@@ -63,7 +63,7 @@ function normalizeSources(value) {
 }
 
 export function normalizeText(value) {
-  return cleanString(value).toLowerCase();
+  return cleanString(value).normalize("NFKC").toLowerCase();
 }
 
 export function asStringArray(value) {

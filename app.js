@@ -179,6 +179,44 @@ function createAiNotesSection(aiNotes) {
   return section;
 }
 
+function createFullSummarySection(summary) {
+  const section = createElement("div", "full-summary");
+  section.append(createElement("h3", "", "完整摘要"));
+  section.append(createElement("p", "", summary || "未提供摘要。"));
+  return section;
+}
+
+function createDetailMetaSection(brand) {
+  const section = createElement("section", "detail-meta-section");
+  const meta = createElement("dl", "detail-meta-grid");
+
+  section.append(createElement("h3", "", "辨識與審閱資料"));
+  appendMetaItem(meta, "別名", formatList(brand.aliases));
+  appendOptionalMetaItem(meta, "辨識編號", brand.identifiers);
+  appendMetaItem(meta, "最後檢查", brand.lastReviewed);
+  if (brand.temporaryUntil) {
+    appendMetaItem(meta, "短期警示到期", brand.temporaryUntil);
+  }
+  if (brand.reviewAfter) {
+    appendMetaItem(meta, "建議複查", brand.reviewAfter);
+  }
+  if (brand.temporaryAlertReason) {
+    appendMetaItem(meta, "短期警示原因", brand.temporaryAlertReason);
+  }
+
+  section.append(meta);
+  return section;
+}
+
+function disclosureLabel(brand) {
+  const name = brand.name || "未命名品牌";
+  const contents = brand.summary
+    ? "包含完整摘要、來源、AI備註與辨識及審閱資料"
+    : "未提供摘要（完整摘要欄位為空）；可查看來源、AI備註與辨識及審閱資料";
+
+  return `查看 ${name} 的完整資料：${contents}`;
+}
+
 function createBrandCard(brand) {
   const card = createElement("article", "brand-card");
   const header = createElement("div", "brand-card__header");
@@ -191,28 +229,27 @@ function createBrandCard(brand) {
   );
   header.append(title, badges);
 
-  const summary = createElement("p", "summary", brand.summary || "未提供摘要。");
-  const meta = createElement("dl", "meta-grid");
-  appendMetaItem(meta, "別名", formatList(brand.aliases));
-  appendOptionalMetaItem(meta, "辨識編號", brand.identifiers);
+  const summaryPreview = createElement("p", "summary-preview", brand.summary || "未提供摘要。");
+  summaryPreview.setAttribute("aria-hidden", "true");
+  const meta = createElement("dl", "meta-grid compact-meta-grid");
   appendMetaItem(meta, "分類", formatList(brand.categories));
   appendMetaItem(meta, "避買理由", formatList(brand.avoidReasons));
-  appendMetaItem(meta, "最後檢查", brand.lastReviewed);
   if (brand.temporaryUntil) {
     appendMetaItem(meta, "短期警示到期", brand.temporaryUntil);
   }
-  if (brand.reviewAfter) {
-    appendMetaItem(meta, "建議複查", brand.reviewAfter);
-  }
-  if (brand.temporaryAlertReason) {
-    appendMetaItem(meta, "短期警示原因", brand.temporaryAlertReason);
-  }
 
   const details = document.createElement("details");
-  details.append(createElement("summary", "", "資料來源與 AI 備註"));
-  details.append(createSourcesSection(brand.sources), createAiNotesSection(brand.aiNotes));
+  const disclosure = createElement("summary", "", "查看完整資料");
+  disclosure.setAttribute("aria-label", disclosureLabel(brand));
+  details.append(
+    disclosure,
+    createFullSummarySection(brand.summary),
+    createSourcesSection(brand.sources),
+    createAiNotesSection(brand.aiNotes),
+    createDetailMetaSection(brand),
+  );
 
-  card.append(header, summary, meta, details);
+  card.append(header, summaryPreview, meta, details);
   return card;
 }
 
