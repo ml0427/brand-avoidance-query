@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-07-23 蘇清泉：血壓／言論截圖僅作未核實補充
+
+- 更新既有 `su-chingchuan-antai-hospital-fire-indictment`，不建立重複人物卡，也不改變既有安泰醫院大火案的起訴／未定讞邊界。
+- 使用者提供 Threads 截圖可見與蘇清泉相關的健康／言論主張及 `cti 中天新聞` 浮水印，但未提供可核驗貼文 URL、原始影片、絕對日期或完整上下文。僅能寫「截圖稱…」／使用者個人避開補充；不確認醫療判斷、言論意圖、帳號歸屬、罵人、影片出處或其他人身事實。
+- 本次不新增任何可搜尋欄位；既有 canonical name／`country` 仍保留既有的安泰醫院大火案／台灣查詢路徑。截圖新增的血壓、130、正常值、罵人、帳號、絕食接力、Threads、CTi／中天等都不可命中 target。外部報告：`D:/AI_workspace/.hermes/profiles/amagi-line/cache/reports/su-chingchuan-blood-pressure-screenshot-20260722.md`。
+
 ## 2026-07-22 朱國榮：限於台灣定讞證券案件的個人避開
 
 - Record: `zhu-guorong-taiwan-securities-conviction-personal`；`personal` / `high`。使用者提供泰山／人物截圖後，查核採公司與個人完全分流。
