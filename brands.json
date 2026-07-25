@@ -11034,5 +11034,45 @@
     ],
     "aiNotes": "此筆是使用者明示升級的 personal product-line record：官方證據只確認連淨於 2026-07 的兩個具名苦茶油批次使用中國輸入苦茶籽；使用者採買標準為曾有一次可靠中國原料紀錄，即避開同製造端的苦茶油產品線。可說『連淨苦茶油產品線為使用者個人避買』，不可改寫為所有連淨產品、所有統一生機產品、所有現售連淨苦茶油皆使用中國原料，或中國原料必然造成苯駢芘超標。searchable fields 限連淨與完整苦茶油產品線名稱；不要加入中國、中國原料、苯駢芘、回收、下架、衛生局、食用油、原料等未限定泛稱。",
     "lastReviewed": "2026-07-24"
+  },
+  {
+    "id": "vola-weila-label-china-origin-apparel-personal",
+    "name": "VOLA / 維菈",
+    "aliases": [
+      "VOLA",
+      "維菈",
+      "Jin Yu International Co., Ltd."
+    ],
+    "identifiers": [
+      "網域：vola-shop.com"
+    ],
+    "country": "中國",
+    "categories": [
+      "服飾生活"
+    ],
+    "avoidReasons": [
+      "使用者個人避買",
+      "商品標籤顯示中國原產",
+      "使用者提供商品標籤"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者提供的 VOLA／維菈服飾商品標籤列原產地為中國，並列 Jin Yu International Co., Ltd. 為「進口商／委製商」；依使用者個人避買偏好，僅收錄這張標籤可確認的中國原產服飾商品。此筆不表示 VOLA／維菈全品牌、所有服飾、所有商品，或同一標籤所列公司之其他商品皆為中國原產。",
+    "sources": [
+      {
+        "title": "使用者提供商品標籤 - VOLA／維菈服飾",
+        "url": "",
+        "date": "2026-07-25",
+        "note": "標籤可見 VOLA 維菈、vola-shop.com、Jin Yu International Co., Ltd. 與原產地中國；公司角色只按標籤寫作「進口商／委製商」，不另作製造、品牌或產品線關係推論。"
+      },
+      {
+        "title": "vola-shop.com 根頁自呈現（存取受 TLS 憑證限制）",
+        "url": "https://vola-shop.com",
+        "date": "查核日 2026-07-25",
+        "note": "正常 HTTPS 連線因憑證名稱不符而受阻；診斷讀取根頁僅見「VOLA郵件 電子信箱」及中文公司頁尾，未見維菈、服飾目錄或可核對的產品頁。本來源只保存公開存取與自呈現限制，不作品牌或全產品線產地證明。"
+      }
+    ],
+    "aiNotes": "此筆只支持使用者提供標籤所對應的中國原產服飾商品之個人避買，不得推論所有 VOLA／維菈商品、所有同標籤公司商品或全產品線皆中國製。不可延伸為食安、違法、假標、禁售、中資／國資／中共控制等定論。網站根頁未能公開一致呈現 VOLA／維菈服飾品牌；不可把其中文公司頁尾與標籤英文公司名視為獨立法律身分橋接。searchable fields 僅保留 VOLA、維菈、標籤列出的英文公司名與網域；不要把服飾、中國製、Made in China、原產地、進口商、委製商、網域頁面的電子信箱或未橋接中文公司名放入 aliases / identifiers。",
+    "lastReviewed": "2026-07-25"
   }
 ]

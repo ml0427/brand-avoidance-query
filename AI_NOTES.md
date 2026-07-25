@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-07-25 VOLA／維菈中國原產服飾標籤：限於標籤可確認商品的個人避買
+
+- Record: `vola-weila-label-china-origin-apparel-personal`；`personal` / `high`。使用者無文字提供商品標籤；可讀到 `VOLA 維菈`、`vola-shop.com`、`Jin Yu International Co., Ltd.` 與「原產地：中國」。後者在標籤上只寫作「進口商／委製商」，不推論其製造、品牌或產品線地位。
+- 口徑：只收錄這張標籤所對應的中國原產服飾商品之個人避買；不可外推成 VOLA／維菈全品牌、所有服飾、所有商品，或同一標籤所列公司其他商品都是中國原產，也不可延伸為食安、違法、假標、禁售、中資／國資／中共控制。
+- `vola-shop.com` 可作為標籤上的穩定查詢字，但公開根頁 HTTPS 有憑證名稱不符，診斷讀取只見「VOLA郵件 電子信箱」與中文公司頁尾，未見維菈、服飾目錄或可核對產品頁；這只保存存取限制，不能當品牌或全產品線產地證據。未將未橋接中文公司名放入 aliases／identifiers，亦未研究或保存台灣公司稅籍號碼。
+- 查詢僅 `VOLA`、`維菈`、`Jin Yu International Co., Ltd.` 與 `vola-shop.com` 可命中；`服飾`、`中國製`、`Made in China`、`進口商`、`委製商`、未橋接中文公司名、`電子信箱`、`VOLA郵件` 不可命中本筆。重生後為 212 筆；全量 10 checks 及目標 12 checks 均 PASS，warnings/errors = 0。
+
 ## 2026-07-24 連淨／統一生機苦茶油：官方批次事實 + 使用者指定的連淨產品線避買
 
 - 具名事實卡保留兩張 product-and-lot-specific `personal` 卡片：`aconpure-organic-camellia-oil-250ml-china-seed-batch-26v224xw01-personal`（連淨有機苦茶油 250mL，批號 `26V224XW01`）及 `uni-organic-first-press-camellia-oil-250ml-china-seed-batch-26s624xw01-personal`（統一生機初榨苦茶油 250mL，批號 `26S624XW01`）。
