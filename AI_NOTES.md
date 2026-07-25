@@ -9,6 +9,12 @@
 - `vola-shop.com` 可作為標籤上的穩定查詢字，但公開根頁 HTTPS 有憑證名稱不符，診斷讀取只見「VOLA郵件 電子信箱」與中文公司頁尾，未見維菈、服飾目錄或可核對產品頁；這只保存存取限制，不能當品牌或全產品線產地證據。未將未橋接中文公司名放入 aliases／identifiers，亦未研究或保存台灣公司稅籍號碼。
 - 查詢僅 `VOLA`、`維菈`、`Jin Yu International Co., Ltd.` 與 `vola-shop.com` 可命中；`服飾`、`中國製`、`Made in China`、`進口商`、`委製商`、未橋接中文公司名、`電子信箱`、`VOLA郵件` 不可命中本筆。重生後為 212 筆；全量 10 checks 及目標 12 checks 均 PASS，warnings/errors = 0。
 
+## 2026-07-25 修復台灣稅籍號碼資料驗證器的空規則
+
+- 獨立覆核發現既有 `FORBIDDEN_TAIWAN_TAX_ID_PATTERNS` 陣列只有空註解，導致 `tax-id-data` 雖顯示 PASS，實際未掃描任何模式；這是既有基線問題，與 VOLA record 無關。
+- 已以 `tests/validate-brand-records-tax-id.test.mjs` 建立 CLI 回歸測試：帶有台灣稅籍標籤加 8 位數值的暫存資料必須造成 `tax-id-data` FAIL；單純「不保存統一編號／稅籍編號」政策文字不得誤報。測試先在空規則下失敗，再於修復後通過。
+- 規則現辨識繁簡統一編號、統編、稅籍編號／號碼與英文 Tax ID，僅在其後連帶 8 位數值時判定資料外洩；不以任意 8 位數字掃描所有欄位，避免將允許的條碼、日期或來源 URL 誤判。全量 validator 維持 212 筆、warnings/errors = 0。
+
 ## 2026-07-24 連淨／統一生機苦茶油：官方批次事實 + 使用者指定的連淨產品線避買
 
 - 具名事實卡保留兩張 product-and-lot-specific `personal` 卡片：`aconpure-organic-camellia-oil-250ml-china-seed-batch-26v224xw01-personal`（連淨有機苦茶油 250mL，批號 `26V224XW01`）及 `uni-organic-first-press-camellia-oil-250ml-china-seed-batch-26s624xw01-personal`（統一生機初榨苦茶油 250mL，批號 `26S624XW01`）。

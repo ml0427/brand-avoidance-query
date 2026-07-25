@@ -183,29 +183,10 @@ const GENERIC_SEARCH_FIELD_TERMS = [
 
 
 const FORBIDDEN_TAIWAN_TAX_ID_PATTERNS = [
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
-  //u,
+  /[統统]一\s*[編编]\s*[號号](?:\s|[:：#]|為|是){0,6}\d{8}(?!\d)/u,
+  /統編(?:\s|[:：#]|為|是){0,6}\d{8}(?!\d)/u,
+  /[稅税]\s*籍\s*(?:[編编]\s*[號号]|[號号]\s*碼)?(?:\s|[:：#]|為|是){0,6}\d{8}(?!\d)/u,
+  /\b(?:taiwan\s*)?(?:company\s*)?tax\s*id(?:\s|[:#]|is){0,6}\d{8}(?!\d)/iu,
 ];
 
 const GENERIC_ALIAS_TERMS = new Set(
