@@ -99,6 +99,17 @@ export const recordCleanups = new Map([
     "weichuan-foods",
     {
       removeAliases: ["萬丹"],
+      addAliases: ["木崗雞蛋"],
+      addSources: [
+        {
+          title: "使用者提供的 Threads 截圖：木崗高品質雞蛋",
+          url: "https://www.threads.com/@jax780824",
+          date: "2026-07-27",
+          note: "截圖可見帳號 jax780824、相對時間 19 小時及木崗高品質雞蛋包裝；發文者自稱曾任洗選蛋工廠員工並勸勿購買，另稱工廠已搬遷。未取得原貼 permalink、工廠名稱、作業細節、官方資料或可獨立核驗證據，僅作使用者個人避買線索，不確認食安、違法或搬遷後現況。",
+        },
+      ],
+      appendAiNotes: "2026-07-27 使用者再依 Threads 截圖指定木崗雞蛋全商品線個人避買；截圖中的匿名員工身分、洗選蛋工廠作業與搬遷後現況均未獨立證實，不得寫成食安、違法或官方認定。帳號、雞蛋泛稱、洗選蛋、工廠、頂新與相關原因詞不得作 searchable fields。",
+      lastReviewed: "2026-07-27",
     },
   ],
   [

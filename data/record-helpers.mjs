@@ -46,6 +46,35 @@ export function source(title, url, date, note) {
   return { title, url, date, note };
 }
 
+export function mergeCleanupMetadata(item, cleanup = {}) {
+  const sourceCandidates = [
+    ...(cleanup.sources ?? item.sources ?? []),
+    ...(cleanup.addSources ?? []),
+  ];
+  const seenSources = new Set();
+  const sources = sourceCandidates.filter((candidate) => {
+    const key = JSON.stringify(candidate);
+
+    if (seenSources.has(key)) {
+      return false;
+    }
+
+    seenSources.add(key);
+    return true;
+  });
+  const baseAiNotes = (cleanup.aiNotes ?? item.aiNotes ?? "").trim();
+  const appendedAiNotes = (cleanup.appendAiNotes ?? "").trim();
+  const aiNotes = appendedAiNotes && !baseAiNotes.includes(appendedAiNotes)
+    ? [baseAiNotes, appendedAiNotes].filter(Boolean).join(" ")
+    : baseAiNotes;
+
+  return {
+    sources,
+    aiNotes,
+    lastReviewed: cleanup.lastReviewed ?? item.lastReviewed,
+  };
+}
+
 export const categoryNormalization = new Map([
   ["科技／通訊／消費電子", "科技／通訊資安"],
   ["監控／AI／資安", "科技／通訊資安"],

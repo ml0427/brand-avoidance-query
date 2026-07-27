@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { normalizeCategories } from "../data/record-helpers.mjs";
+import { mergeCleanupMetadata, normalizeCategories } from "../data/record-helpers.mjs";
 import { broadCategoryOverrides, recordCleanups } from "../data/record-overrides.mjs";
 import { riskRecords } from "../data/records/index.mjs";
 
@@ -24,6 +24,7 @@ function applyRecordCleanup(item) {
   const removeAliases = new Set(cleanup.removeAliases ?? []);
   const removeIdentifiers = new Set(cleanup.removeIdentifiers ?? []);
   const aliases = uniqueStrings([...(item.aliases ?? []).filter((alias) => !removeAliases.has(alias)), ...(cleanup.addAliases ?? [])]);
+  const metadata = mergeCleanupMetadata(item, cleanup);
 
   return {
     ...item,
@@ -33,9 +34,10 @@ function applyRecordCleanup(item) {
       ...(cleanup.identifiers ?? []),
     ]),
     categories: normalizeCategories(broadCategoryOverrides.get(item.id) ?? item.categories),
-    sources: cleanup.sources ?? item.sources,
+    sources: metadata.sources,
     summary: cleanup.summary ?? item.summary,
-    aiNotes: cleanup.aiNotes ?? item.aiNotes,
+    aiNotes: metadata.aiNotes,
+    lastReviewed: metadata.lastReviewed,
   };
 }
 
