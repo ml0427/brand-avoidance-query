@@ -2,6 +2,14 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-07-29 金鴻富珠寶銀樓：單方社群純度主張的在地店家個人避開
+
+- Record: `jinhongfu-jewelry-gold-purity-social-claim-personal-20260729`；`personal` / `low`，`country` 留空，categories 為 `服飾生活`、`生活服務`，avoidReasons 僅 `使用者個人避開`，不設 identifiers。
+- d2 Jewels 店櫃頁可核對「金鴻富珠寶銀樓」與景美區位，列景文街101號；Google Maps 同名店家頁列景文街101之1號。兩者門牌有差異，紀錄保留差異但不判定正式門牌，也不把任一門牌作 searchable identifier。
+- Threads 原貼發布於 2026-07-28；其中 2024-02-27 是發文者自述的購買日，不是發文日。發文者單方自述與家人於景美金鴻富購買兩顆金元寶、購買時詢問是否999純金並稱店家回答是；後來家人欲出售其中一顆時，作者稱其他店家檢測該顆後告知純度為94，並另回覆稱保證書勾選999純金。作者也稱已回原店處理、原店將商品收購回去；此後續不代表店家承認貼文主張。未取得可讀完整保證書、獨立檢驗報告、發票／交易文件、店家回應、主管機關或法院認定，因此不確認純度94、999保證、價差、欺騙、詐騙、違法或責任。
+- Searchable fields 僅 `金鴻富珠寶銀樓` 與 `景美金鴻富珠寶銀樓`；`金鴻富` 可由實體名稱 substring 命中。帳號、平台、來源名、地址、黃金／金元寶等商品或材質泛稱、保證內容、純度數字、價差與指控詞均不作 aliases / identifiers。
+- 驗證：merge 連跑兩次皆為 211 個 source risk records、總數 217，`brands.json` SHA-256 兩次均為 `e23ebf0442d50e581a03d04b031392b1804d5ae7842e704f6539620f7000b5bb`，idempotent PASS。目標 validator 3 個正查與 11 個 target-specific `--not-expect` 全部通過（12 checks），全量 validator 10 checks 通過，兩者皆 `warnings: 0; errors: 0`；`node --test` 12/12 通過，`git diff --check` 通過。
+
 ## 2026-07-28 君樂寶／悅鮮活：中國乳品全品牌個人避買，三鹿僅作歷史股權脈絡
 
 - Record: `junlebao-yuexianhuo-china-dairy-whole-brand-personal`；`personal` / `high`。新華網 2025-05-19 稱「中國高端鮮奶領先品牌君樂寶悅鮮活」，記載悅鮮活 2019 年上市、2025 年進入香港；足以確認悅鮮活是君樂寶旗下中國乳品品牌。依使用者固定採買規則，中國製食品／中國食品品牌直接避買，故君樂寶與悅鮮活採全品牌個人避買範圍。
