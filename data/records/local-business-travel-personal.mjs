@@ -1098,4 +1098,64 @@ export const records = [
       "此筆是 user-directed local-business personal record。d2 Jewels 與 Google Maps 只支撐店名／景美區位識別；兩者分別列景文街101號與景文街101之1號，必須保留差異，不把任一門牌當作正式地址定論或 searchable identifier。Threads 原貼發布於2026-07-28；其中2024-02-27是發文者自述的購買日，不是發文日。原貼只支撐發文者 cccyy_0010 的公開自述；作者所稱原店將商品收購回去也不代表店家承認其主張。在未取得可讀完整保證書、獨立檢驗報告、發票／交易文件、店家回應、主管機關或法院認定前，不得確認純度94、999保證、價差、欺騙、詐騙、違法或任何一方責任。searchable fields 僅保留「金鴻富珠寶銀樓」與「景美金鴻富珠寶銀樓」兩個實體特定名稱；不設 identifiers，也不要把帳號、平台、來源、地址、商品／材質泛稱、保證內容、數字、價差或指控詞放入 aliases / identifiers。",
     lastReviewed: "2026-07-29",
   }),
+  record({
+    id: "opium-alchemy-su-tzuyi-bribery-first-instance-personal-20260731",
+    name: "OPIUM Champagne Bar / Alchemy Bar / 蘇子怡",
+    aliases: [
+      "OPIUM Champagne Bar",
+      "OPIUM CHAMPAGNE",
+      "OPIUM",
+      "Alchemy Bar",
+      "Alchemy",
+      "蘇子怡",
+    ],
+    country: "台灣",
+    categories: ["餐飲／生活服務", "司法／人物案件"],
+    avoidReasons: ["使用者個人避開", "經營者賄選案一審有罪判決", "同一經營者之酒吧品牌關聯"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者指定將 OPIUM Champagne Bar 與同一經營者關聯的 Alchemy Bar 列入個人避開。ETtoday 於 2026-01-16 具名報導蘇子怡在台北市信義區經營 Alchemy Bar、OPIUM Champagne Bar，並因涉嫌在員工 LINE 群組以一天公假或新台幣 1000 元獎金要求投票反罷免而遭起訴。自由時報於 2026-07-30 具名報導台北地方法院一審依對有投票權人行求賄賂而約其為一定投票權行使罪，判蘇子怡有期徒刑 3 年 4 月、褫奪公權 2 年；全案仍可上訴，並非定讞。本紀錄只將公開媒體直接橋接的兩個酒吧品牌與經營者列為使用者個人避開，不自行推定未核對的公司／商號、投資人、員工、藝人合夥人或其他同名店家負有刑事責任。",
+    sources: [
+      source(
+        "民視新聞網 - 跟姊領 1 千！信義區知名酒吧鼓勵員工反罷免，老闆娘下場曝光了",
+        "https://www.ftvnews.com.tw/news/detail/2026730W0497",
+        "2026-07-30",
+        "使用者 Threads 截圖內嵌圖卡所對應的民視新聞原文；圖卡與報導可確認 OPIUM 店面及一審 3 年 4 月事件線索，人物全名、兩品牌關聯與程序細節仍以其他具名來源交叉核對。",
+      ),
+      source(
+        "中央社 - 酒吧老闆要員工投反罷免領賞，北檢依選罷法起訴",
+        "https://www.cna.com.tw/news/asoc/202601160048.aspx",
+        "2026-01-16",
+        "記者林長順具名報導：北檢依起訴書指出蘇姓酒吧經營者在員工 LINE 群組提出投反罷免可領一天公假或 1000 元獎金，並依公職人員選舉罷免法起訴；此來源不支撐完整姓名或兩品牌名稱。",
+      ),
+      source(
+        "ETtoday - 給公假或獎金 1 千！要員工投票反罷免，信義區知名酒吧闆娘起訴",
+        "https://www.ettoday.net/news/20260116/3102072.htm",
+        "2026-01-16",
+        "記者劉昌松具名報導：蘇子怡在台北市信義區經營 Alchemy Bar 與 OPIUM Champagne Bar，檢方起訴指其在員工群組以公假或 1000 元獎金要求投票反罷免；此來源支持人物—兩品牌—起訴事件的直接橋接。",
+      ),
+      source(
+        "自由時報 - 鼓勵員工反罷免換千元鈔，台北信義區知名酒吧闆娘判 3 年 4 月",
+        "https://news.ltn.com.tw/news/society/breakingnews/5522524",
+        "2026-07-30",
+        "記者翁靖祐具名報導：Alchemy Bar 與 OPIUM 老闆蘇子怡遭台北地院一審判刑 3 年 4 月、褫奪公權 2 年，可上訴；此來源直接支持完整姓名、兩品牌、罪名、刑度與程序狀態。",
+      ),
+      source(
+        "聯合報 - 給 1000 元獎金要員工反罷免，時尚酒吧闆娘判 3 年 4 月",
+        "https://udn.com/news/story/7321/9660192",
+        "2026-07-30",
+        "記者王聖藜具名報導：蘇姓女子在台北 101 附近經營 Alchemy Bar 與 Opium Champagne Bar，台北地院一審判刑 3 年 4 月、褫奪公權 2 年，可上訴；此來源交叉確認兩品牌、事件內容與程序狀態，但不支撐完整姓名、女藝人合夥或公司登記關係。",
+      ),
+      source(
+        "鏡週刊 - 香檳接地氣遇上水餃，在台北 OPIUM Champagne Bar 喝酒不怕餓肚子",
+        "https://www.mirrormedia.mg/story/20200820wine002",
+        "2020-08-22",
+        "公開人物專訪將蘇子怡列為 OPIUM Champagne Bar 創辦人，可獨立支持人物與 OPIUM 品牌的創辦關聯；不支撐 Alchemy Bar 關聯或 2026 年刑事判決內容。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed personal record，收錄範圍為公開媒體直接橋接的 OPIUM Champagne Bar、Alchemy Bar 與蘇子怡。可說蘇子怡因對有投票權人行求賄賂而約其為一定投票權行使罪，獲台北地院一審判刑 3 年 4 月、褫奪公權 2 年；必須同時標註全案可上訴、尚未定讞。截至 2026-07-31，司法院裁判書查詢尚未出現可引用的本案新判決正文／固定案號頁；曾命中司法院『114年度選易字第2號』新聞稿，但正文是趙少康亮票案，已隔離為同號異案，不得引用。本案法律細節目前以中央社／ETtoday 起訴報導及自由時報／聯合報判決報導交叉核對；若後續裁判書公開、提起上訴或改判，應更新程序狀態。不得自行增加現有來源未支撐的沒收／追徵資訊，也不得把『掛名擁有』『與女藝人合夥』擴寫成已查明股權、公司登記或其他投資人刑責；不得外推到未具直接橋接的法人、商號、員工、女藝人合夥人、同址其他店家或其他同名 Alchemy／Opium 品牌。searchable fields 僅保留兩酒吧特定品牌名與蘇子怡姓名；不要把賄選、反罷免、酒吧、闆娘、台北、信義區、1000 元、公假、LINE、Threads、民視、聯合報、ETtoday、自由時報、女藝人或其他事件／來源／理由詞放入 aliases / identifiers。",
+    lastReviewed: "2026-07-31",
+  }),
 ];
