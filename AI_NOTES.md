@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-01 Mammut 與 Arc’teryx：依中資接管／重大治理影響指定個人避開
+
+- 新增 `mammut-cpe-china-acquisition-pending-personal-20260730`（`personal` / `high`）。Mammut 與賣方 Jacobs Capital 於 2026-07-30 公告已簽署出售協議，買方 CPE 為中國資產管理機構；賣方明載交易預計未來數月完成，仍受監管核准與交割條件拘束，財務條款及精確比例未公開。截至 2026-08-01 只能寫「已簽約、待交割」，不可寫成中資已完成 100% 收購、CPE 是國企／中國政府持有，或基金 LP 全部是中國資本。Mammut 總部與核心設計研發預定留在瑞士，不否定交易方向，但完成後仍須複查最終交割與比例。
+- 新增 `arcteryx-amer-sports-anta-major-shareholder-personal`（`personal` / `high`），並從既有 `anta` watchlist aliases 移除 Arc’teryx／始祖鳥名稱，避免查詢重複卡。2019 年是安踏、FountainVest、加拿大 Anamered 與騰訊組成的國際財團收購 Amer Sports 全部股本，不是安踏單獨全資收購；Amer Sports 於 2024 年重新上市。安踏 2025 年報披露 2026 年配股後 economic interest 約 37.77%，官方仍稱其為最大股東，20-F 另揭露依持股門檻計算的董事提名權，因此可支撐「中資重大持股與治理影響」的個人避開，但不可寫成目前 100% 中資持有或設計、製造、供應鏈與營運全部位於中國。
+- 查詢欄位只保留品牌與營運法人名稱；Mammut／猛瑪象／長毛象及 Arc’teryx／Arcteryx／始祖鳥可直接命中各自獨立卡。`中資`、`收購`、`中國`、`戶外用品`、`安踏`、`CPE`、`Amer Sports`、`瑞士`、`加拿大`等原因、關係或泛稱不得靠新卡 aliases／identifiers 命中。
+
 ## 2026-08-01 蘆洲中正路手工麵線：公開後續說明支撐曬製環境個人避買
 
 - Record: `luzhou-zhongzheng-road-handmade-noodles-drying-environment-personal`；`personal` / `medium`。使用者提供 Threads 截圖並明確要求加入避雷；本機 source records 與 `brands.json` 查重均未見蘆洲中正路手工麵線、`ivy.wn24`、精確門牌或相關貼文帳號既有紀錄。

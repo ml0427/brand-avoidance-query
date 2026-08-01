@@ -2024,10 +2024,6 @@
       "JACK WOLFSKIN",
       "狼爪",
       "Amer Sports",
-      "Arc'teryx",
-      "Arcteryx",
-      "始祖鳥",
-      "始祖鸟",
       "Salomon",
       "薩洛蒙",
       "萨洛蒙",
@@ -11586,6 +11582,106 @@
       }
     ],
     "aiNotes": "此筆是 source-backed / user-directed personal record。可說公開帳號 ivy.wn24 已自行把照片爭議橋接到自家『蘆洲中正路手工麵線』，並公開表示理解曬製環境引發的食品衛生疑慮、在改善前不再大力推廣及考慮增加遮蔽防護；使用者因此指定個人避買。不可寫成主管機關已認定違規、已裁罰、全部麵線均污染、掉落麵線仍販售、廢氣危害已經檢驗證實、改善已完成，或推定帳號持有人／長輩的真實身分。截圖雖顯示精確門牌，但疑似家庭製作地址且未由正式店名／品牌資料橋接，因此不保存、不作 searchable field。searchable fields 僅保留『蘆洲中正路手工麵線』與公開帳號 ivy.wn24；不要把 Ivy Wu、kk__ing19、blackcat168888888、水溝蓋麵線、曬麵、麵線、食品衛生、廢氣、機車、孫女、爺爺奶奶、遮蔽設施、地址或 Threads 作 standalone alias／identifier。",
+    "lastReviewed": "2026-08-01"
+  },
+  {
+    "id": "mammut-cpe-china-acquisition-pending-personal-20260730",
+    "name": "Mammut／猛瑪象／長毛象",
+    "aliases": [
+      "Mammut",
+      "MAMMUT",
+      "Mammut Sports Group",
+      "Mammut Sports Group AG",
+      "猛瑪象",
+      "長毛象",
+      "猛犸象",
+      "长毛象"
+    ],
+    "country": "",
+    "categories": [
+      "運動服飾",
+      "服飾"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "中國資產管理機構收購待交割"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者依中資接管風險指定 Mammut 個人避開。Jacobs Capital 於 2026-07-30 簽約將 Mammut 出售給中國資產管理機構 CPE；截至 2026-08-01 交易仍待監管核准與交割，官方未公開精確收購比例與價格。",
+    "sources": [
+      {
+        "title": "Mammut - Mammut Continues to Accelerate Growth With its New Partner CPE",
+        "url": "https://pr.mammut.com/mammut-continues-to-accelerate-growth-with-its-new-partner-cpe",
+        "date": "2026-07-30",
+        "note": "Mammut 官方稱 Jacobs Capital 已與中國資產管理機構 CPE 簽署出售 Mammut 的協議；公告並稱交易完成後，總部與核心創新、設計及研發功能仍留在瑞士。"
+      },
+      {
+        "title": "Jacobs Capital - Jacobs Capital to sell Swiss premium outdoor brand Mammut to CPE",
+        "url": "https://jacobscap.com/news/jacobs-capital-to-sell-swiss-premium-outdoor-brand-mammut-to-cpe-to-accelerate-global-expansion/",
+        "date": "2026-07-30",
+        "note": "賣方官方明確稱已簽署出售協議，交易預計未來數月完成，仍受一般監管核准與交割條件拘束；財務條款未公開。"
+      }
+    ],
+    "aiNotes": "此筆是使用者的個人採買風控。不得把已簽約改寫成已交割、已完成 100% 收購，或宣稱 CPE 是國企／中國政府持有、基金 LP 全部是中國資本。Mammut 保留瑞士法人、總部與設計研發，不否定交易方向，但交易完成後仍應複查最終交割與股權比例。",
+    "lastReviewed": "2026-08-01"
+  },
+  {
+    "id": "arcteryx-amer-sports-anta-major-shareholder-personal",
+    "name": "Arc’teryx／始祖鳥",
+    "aliases": [
+      "Arc’teryx",
+      "Arc'teryx",
+      "Arcteryx",
+      "ARC'TERYX",
+      "始祖鳥",
+      "始祖鸟"
+    ],
+    "country": "",
+    "categories": [
+      "運動服飾",
+      "服飾"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "中資最大股東／重大治理影響"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者因安踏對 Arc’teryx 母公司 Amer Sports 的重大持股與治理影響指定個人避開。2019 年安踏主導的國際財團收購 Amer Sports 全部股本；Amer Sports 其後於 2024 年重新上市，安踏官方年報披露 2026 年配股後經濟權益約 37.77%，仍是最大股東但不是單一或 100% 持有人。",
+    "sources": [
+      {
+        "title": "Amer Sports - Reports and releases 2016–2019",
+        "url": "https://www.amersports.com/newsroom/reports-and-releases/",
+        "date": "2019-09-05",
+        "note": "Amer Sports 官方歷史頁稱由安踏、FountainVest、Anamered Investments 與騰訊組成的國際投資財團收購 Amer Sports 全部股本；買方不是安踏單獨一家公司。"
+      },
+      {
+        "title": "ANTA Sports - Corporate Profile",
+        "url": "https://ir.anta.com/en/about.php",
+        "date": "查核日 2026-08-01",
+        "note": "安踏官方公司簡介稱其成立投資財團並於 2019 年完成收購 Amer Sports，目前仍是 Amer Sports 最大股東；頁面並將 Arc’teryx 列為 Amer Sports 旗下品牌。"
+      },
+      {
+        "title": "Amer Sports - 2025 Form 20-F",
+        "url": "https://www.sec.gov/Archives/edgar/data/1988894/000198889426000004/as-20251231.htm",
+        "date": "2026-02-26",
+        "note": "Amer Sports 申報文件列 Arc’teryx 為旗下品牌，確認普通股自 2024-02-01 起在紐約證交所上市，並揭露安踏等主要股東及依持股門檻計算的董事提名權；股東表基準日為 2026-02-20。"
+      },
+      {
+        "title": "Amer Sports - March 2026 Form 6-K",
+        "url": "https://www.sec.gov/Archives/edgar/data/1988894/000110465926023473/tm267992d1_6k.htm",
+        "date": "2026-03-04",
+        "note": "Amer Sports 官方申報確認已完成發行 23,695,055 股普通股，故 20-F 的較早主要股東比例須納入增發稀釋。"
+      },
+      {
+        "title": "ANTA Sports - Annual Report 2025",
+        "url": "https://manager.wisdomir.com/files/394/2026/0409/20260409170152_39658497_en.pdf",
+        "date": "2026-04-09",
+        "note": "安踏年報披露 Amer Sports 2026 年配股完成後，安踏的經濟權益由 39.37% 降至約 37.77%。"
+      }
+    ],
+    "aiNotes": "2019 年是安踏主導的國際財團收購 Amer Sports 全部股本，不可改寫成安踏單獨全資收購；財團包含加拿大投資人 Anamered，Amer Sports 亦已重新上市並有公開市場股東。37.77% 是配股後 economic interest，不等同 SEC beneficial ownership 口徑；董事提名權表示重大治理影響，也不等於 100% 所有權。不可外推 Arc’teryx 的設計、製造、供應鏈或營運全部位於中國。",
     "lastReviewed": "2026-08-01"
   }
 ]
