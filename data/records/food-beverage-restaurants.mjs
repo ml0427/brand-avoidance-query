@@ -18,6 +18,39 @@
 
 export const records = [
   record({
+    id: "luzhou-zhongzheng-road-handmade-noodles-drying-environment-personal",
+    name: "蘆洲中正路手工麵線／ivy.wn24",
+    aliases: ["蘆洲中正路手工麵線", "ivy.wn24"],
+    country: "",
+    categories: ["食品／飲料／農水產", "手工麵線／食品加工"],
+    avoidReasons: [
+      "使用者個人避買",
+      "公開社群貼文顯示曬麵環境疑慮",
+      "當事公開帳號後續說明擬改善防護",
+    ],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "2026-08-01 公開 Threads 貼文與附圖引發『蘆洲中正路手工麵線』曬製環境疑慮；畫面可見大量麵線在巷道路面與水溝蓋周邊架設曬製。公開帳號 ivy.wn24 隨後自稱代表家裡說明，確認事件指涉自家爺爺奶奶純手工製作的蘆洲中正路麵線，稱掉落地面或接觸非乾淨區域者會清理、不會包裝販售，並表示理解照片造成的食品衛生疑慮、在環境改善前不適合再大力推廣，未來會考慮增設更完善的遮蔽防護。使用者因此指定個人避買。未見主管機關稽查／裁罰、正式店名或品牌資料；本筆不定性為違規，不推定所有麵線均受污染，也不保存截圖中的精確門牌或辨識家庭成員。",
+    sources: [
+      source(
+        "Threads - kk__ing19 公開貼文：蘆洲中正路手工麵線曬製環境",
+        "https://www.threads.com/@kk__ing19/post/DbecuR-H2R3",
+        "2026-08-01",
+        "公開貼文文字批評麵線在水溝蓋周邊及有車輛經過的環境曬製，附圖可見巷道路面旁架設大量麵線及 ivy.wn24 的推廣留言截圖。此來源支撐公開爭議畫面與線索，不等同主管機關稽查、裁罰或污染檢驗結果。",
+      ),
+      source(
+        "Threads - Ivy Wu／ivy.wn24 公開後續說明",
+        "https://www.threads.com/@ivy.wn24/post/Dbe-8QIElGp",
+        "2026-08-01",
+        "帳號自稱代表家裡回應『蘆洲中正路手工麵線的曬麵環境』，稱自家爺爺奶奶多年純手工製作；掉落地面或接觸非乾淨區域者會清理、不會包裝販售；並表示理解食品衛生疑慮、已刪除原推廣留言，在環境改善前不適合再大力推廣，未來會思考更完善的遮蔽防護。這是經營家庭一方的公開說法，不是官方查核或已完成改善的證明。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 source-backed / user-directed personal record。可說公開帳號 ivy.wn24 已自行把照片爭議橋接到自家『蘆洲中正路手工麵線』，並公開表示理解曬製環境引發的食品衛生疑慮、在改善前不再大力推廣及考慮增加遮蔽防護；使用者因此指定個人避買。不可寫成主管機關已認定違規、已裁罰、全部麵線均污染、掉落麵線仍販售、廢氣危害已經檢驗證實、改善已完成，或推定帳號持有人／長輩的真實身分。截圖雖顯示精確門牌，但疑似家庭製作地址且未由正式店名／品牌資料橋接，因此不保存、不作 searchable field。searchable fields 僅保留『蘆洲中正路手工麵線』與公開帳號 ivy.wn24；不要把 Ivy Wu、kk__ing19、blackcat168888888、水溝蓋麵線、曬麵、麵線、食品衛生、廢氣、機車、孫女、爺爺奶奶、遮蔽設施、地址或 Threads 作 standalone alias／identifier。",
+    lastReviewed: "2026-08-01",
+  }),
+  record({
     id: "yolu-jamei-fresh-orange-juice-china-pulp-personal",
     name: "鮮榨柳橙汁／悠旅生活／佳美食品",
     aliases: ["鮮榨柳橙汁", "悠旅生活事業股份有限公司", "佳美食品工業股份有限公司"],
