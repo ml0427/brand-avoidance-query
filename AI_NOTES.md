@@ -2,6 +2,16 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-03 香帥蛋糕：疑似 AI 贊助影片全品牌個人避買
+
+- Record: `xiangshuai-cake-sponsored-video-screenshot-whole-brand-personal-20260803`；`personal` / `medium`。使用者提供社群截圖並明確指定香帥蛋糕全品牌避雷，理由是使用者認為以香帥蛋糕頁名義呈現的贊助影片品質低劣且疑似 AI 生成。
+- 截圖可直接確認名為「香帥蛋糕」的頁面、贊助標示、芋頭蛋糕文案、品牌圖樣、影片字幕「每一口都吃得到真材實料」、下方「用真心做最好」與「立即訂購」；影片定格中的深色器具由左側伸入蛋糕切面附近，其接觸邊界、形變與切割幾何呈現不自然觀感。單張截圖沒有原始貼文網址或完整影片，不能獨立確認頁面控制權、AI 生成、製作者、付款者或內部核准流程，也不延伸為食品品質、食安、違法、虛假廣告或主管機關認定。
+- 全品牌範圍是使用者指定的個人避買決定，不表示所有 SKU 均使用相同廣告。searchable fields 僅保留 `香帥蛋糕` 與繁簡變體 `香帅蛋糕`；`香帥`、芋頭蛋糕、芋泥蛋糕、蛋糕、AI、AI影片、生成式AI、低品質影片、爛影片、廣告、贊助、立即訂購、真材實料、刀具、切割、不自然、花蓮、食安、產品品質、違法等未限定泛稱／原因／文案不得額外作 alias／identifier。
+- 證據存檔：`evidence/user-submissions/2026-08-03-xiangshuai-cake-sponsored-ai-ad.png`；SHA-256 `edd7afc8e1d20aad7d1d40dce1354abb1bc9f96fd88c0708030d0bb9a929be8e`。
+- 獨立只讀審查後，將原本帶結論的 ID 改為中性 sponsored-video-screenshot ID；分類收斂為食品與糕點，`country` 留空，並把「品牌核准投放」改寫成可由截圖支撐的「以香帥蛋糕頁名義標示為贊助」。
+- `merge-risk-records.mjs` 會以現有 `brands.json` 為基底；record 改 ID 時，舊生成 ID 不會自動消失。本次精確移除舊生成卡後再合併，最終 source/generated 各僅1筆且內容一致。合併連跑兩次皆為221個 source risk records／總數227，`brands.json` SHA-256 均為 `18bc48bc1db68400930ecbca8cc2c4e7007920779933f03933f98c5d0971f847`。
+- 目標 validator 3個正查與15個 `--not-expect`、全量 validator 10 checks 均 PASS，兩者皆 `warnings: 0; errors: 0`；`node --test` 12/12、`git diff --check` 亦通過。
+
 ## 2026-08-02 源春製油廠代工／代料苦茶油：4品牌8批短期警示
 
 - 新增 `yuan-chun-oem-camellia-oil-bap-temporary-alert-202608`，`watchlist` / `high`，`temporaryUntil: 2026-08-31`、`reviewAfter: 2026-08-31`。使用者要求「限時避雷」，因此不升級為永久品牌避雷。
