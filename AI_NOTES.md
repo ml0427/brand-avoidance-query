@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-06 馥園民宿：相機處置指稱的旅宿個人避買
+
+- Record: `fuyuan-penghu-guesthouse-camera-disposal-screenshot-personal-20260806`；`personal` / `low`。使用者提供截圖並明確指定將「馥園民宿」列入個人避雷，理由是使用者指出民宿把別人的相機當垃圾丟掉。
+- 截圖中的 Google 店家卡可直接辨識「馥園民宿－澎湖馬公市區 人氣國旅卡特約民宿」、2 星級飯店分類、評分 3.2（198）；附圖是住宿空間，留言可見「看到這個照片就不會想住耶」。截圖沒有相機事件完整敘述、原始貼文或處置經過，因此不能把使用者指稱寫成已獨立確認、民宿承認或法律責任。
+- 收錄範圍限該店家，搜尋欄位只保留店名與必要完整變體；不保存地址或將相機、垃圾、丟掉、澎湖、民宿等理由／泛稱做 aliases／identifiers。證據存檔：`evidence/user-submissions/2026-08-06-fuyuan-penghu-guesthouse-camera-disposal.png`；SHA-256 `c4354d24fb87a19d6990e1f5558b2d18cbd52226a36956946df3dc5fdd79e232`。
+
 ## 2026-08-06 大王韓式烤鰻魚：使用者指出簡體字牌的店家個人避買
 
 - Record: `daewang-korean-eel-restaurant-simplified-sign-screenshot-personal-20260806`；`personal` / `low`。使用者提供截圖並明確指定將「大王韓式烤鰻魚」列入個人避雷，理由是使用者指出店家使用簡體字牌。
