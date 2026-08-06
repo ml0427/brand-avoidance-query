@@ -18,6 +18,33 @@
 
 export const records = [
   record({
+    id: "daewang-korean-eel-restaurant-simplified-sign-screenshot-personal-20260806",
+    name: "大王韓式烤鰻魚／대왕 장어구이",
+    aliases: ["大王韓式烤鰻魚", "大王韓式烤鰻魚 대왕 장어구이", "대왕 장어구이", "대왕장어구이"],
+    country: "",
+    categories: ["餐飲／生活服務", "韓式餐廳／烤鰻魚"],
+    avoidReasons: [
+      "使用者個人避買",
+      "使用者指出使用簡體字招牌／文字",
+      "使用者提供社群截圖線索",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供社群截圖並指定將『大王韓式烤鰻魚』列入個人避買，理由為使用者指出店家使用簡體字牌。截圖中的 Google 店家卡可辨識中文店名『大王韓式烤鰻魚』、韓文『대왕 장어구이』、類型『韓國餐廳』與評分資訊；店面照片可見門面與招牌，但解析度不足以獨立確認簡體字。Google 店家卡本身顯示的是繁體字，本筆不把簡體字使用寫成圖片已獨立證實，也不延伸為食安、服務品質、違法或所有同名店家都有問題。",
+    sources: [
+      source(
+        "使用者提供 - 大王韓式烤鰻魚店家截圖",
+        "",
+        "2026-08-06",
+        "截圖中的 Google 店家卡可讀到『大王韓式烤鰻魚』與韓文『대왕 장어구이』，並標示韓國餐廳；附圖可見店面門口與室內座位。使用者指定因店家使用簡體字牌而個人避買，但店家卡的中文顯示為繁體字，門面照片解析度不足以獨立確認簡體字；此來源只支撐店家識別與使用者指定範圍，不支撐食安、服務品質、違法或店家背景定論。證據存檔為 evidence/user-submissions/2026-08-06-daewang-korean-eel-simplified-sign.png。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal store record。可說使用者提供截圖並指定將『大王韓式烤鰻魚』／『대왕 장어구이』列入個人避買；Google 店家卡可直接辨識店名、韓文名與韓國餐廳分類。使用者指出店家使用簡體字牌，但目前截圖中的店家卡使用繁體字，門面照片解析度不足，不能說本專案已由圖片獨立確認簡體招牌、店家立場、食安、服務品質、違法或其他同名店家情況。searchable fields 僅保留店名與韓文店名變體；不要把簡體字、簡體、招牌、韓國、餐廳、烤鰻魚、鰻魚、Google Maps、Threads 或評分作 standalone alias／identifier。",
+    lastReviewed: "2026-08-06",
+  }),
+  record({
     id: "xiangshuai-cake-sponsored-video-screenshot-whole-brand-personal-20260803",
     name: "香帥蛋糕",
     aliases: ["香帥蛋糕", "香帅蛋糕"],

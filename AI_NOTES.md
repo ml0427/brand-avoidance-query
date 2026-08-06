@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-06 大王韓式烤鰻魚：使用者指出簡體字牌的店家個人避買
+
+- Record: `daewang-korean-eel-restaurant-simplified-sign-screenshot-personal-20260806`；`personal` / `low`。使用者提供截圖並明確指定將「大王韓式烤鰻魚」列入個人避雷，理由是使用者指出店家使用簡體字牌。
+- 截圖中的 Google 店家卡可直接辨識中文店名「大王韓式烤鰻魚」、韓文「대왕 장어구이」、韓國餐廳分類與評分；門面照片可見店面招牌但解析度不足。店家卡顯示的是繁體字，不能把簡體字使用寫成圖片已獨立證實。
+- 收錄範圍限該店家，搜尋欄位只保留中文店名與韓文店名變體；不保存地址或將簡體、招牌、韓國、餐廳等理由／泛稱做 aliases／identifiers。證據存檔：`evidence/user-submissions/2026-08-06-daewang-korean-eel-simplified-sign.png`；SHA-256 `07e927b7416455aae7de0ef63363bf5ab7f312d8fc87e97356f2e8f7432e371c`。
+
 ## 2026-08-03 香帥蛋糕：疑似 AI 贊助影片全品牌個人避買
 
 - Record: `xiangshuai-cake-sponsored-video-screenshot-whole-brand-personal-20260803`；`personal` / `medium`。使用者提供社群截圖並明確指定香帥蛋糕全品牌避雷，理由是使用者認為以香帥蛋糕頁名義呈現的贊助影片品質低劣且疑似 AI 生成。
