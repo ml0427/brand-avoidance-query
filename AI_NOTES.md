@@ -527,3 +527,11 @@
 - 主要來源：上下游新聞 `https://www.newsmarket.com.tw/blog/240800/`，頁面 2026-08-05 更新；原文直接寫小美「不願回應」、愛之味電話稱紅豆水來源台灣，並寫妞妞甜八寶／紅豆粉粿等甜湯使用阿根廷紅豆。愛之味官方頁只作產品與品牌自述交叉來源：萬丹紅豆水頁稱「嚴選屏東萬丹紅豆」，蒟蒻紅豆粉粿頁標示台灣製造但未提供紅豆原料國別。
 - 奇美紅豆酥餅只以使用者截圖作證據：可辨識成品標示台灣，但沒有紅豆原料國別；不可寫成已查明外國原料、食安或違法。截圖證據檔：`evidence/user-submissions/2026-08-07-red-bean-origin-unclear-products.png`。
 - SHA-256：`238413be339f4d71caa11851f40aa62a612b88c5676f38c30b88d5c9ff2614e8`。searchable fields 只收完整品牌＋產品名稱；不收單獨的紅豆、台灣、阿根廷、電話、來源不明、食安或其他理由／泛稱。
+
+## 2026-08-07 Love ME 樂米樂園簡體字／中國用語截圖補錄
+
+- Record：`loveme-land-simplified-language-screenshot-personal-20260807`；使用者以無文字 Threads 截圖指定將可辨識的「Love ME 樂米樂園／樂米樂園」列入個人避雷；範圍限截圖所指實體名稱，不自動擴張為所有分館、母公司或合作商。
+- 證據檔：`evidence/user-submissions/2026-08-07-loveme-land-screenshot.png`；SHA-256：`88f0564e9ce91f1f41c40771f8b22686a2671ba88d2c44251ca45cf282c96820`。
+- 截圖可辨識 Threads 帳號 `cake.jhan`、頁名「樂米樂園」及文字：使用者詢問是否為陸資，並指出場內簡體字、中國用語「燃氣灶／視頻」、未拍到的恐龍考古沙池玩具文字及音樂口音。這些是截圖中的使用者提問／觀感，不是本專案已證實的陸資、中資控制、政治立場、違法或服務品質結論。
+- 公開搜尋可辨識 Love ME 樂米樂園 Facebook 頁面 URL `https://www.facebook.com/Lovemecity/`；直接讀取遇 Facebook 登入頁，僅作品牌／頁面名稱的第一方呈現線索。104 職缺 `https://www.104.com.tw/job/7ks27` 將「樂米樂園」與「力行國際貿易有限公司」列於同一職缺標題，僅支撐公開品牌—職缺刊登公司關聯，不支撐所有權或陸資判定。
+- searchable fields 只收「樂米樂園」、`Love ME 樂米樂園`、`Love ME Land` 與完整變體；不收 `cake.jhan`、陸資、中資、中國、簡體字、燃氣灶、視頻、恐龍考古沙池、玩具、音樂、口音、分館地名或其他理由／泛稱。

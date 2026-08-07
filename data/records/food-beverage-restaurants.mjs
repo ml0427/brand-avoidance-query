@@ -18,6 +18,46 @@
 
 export const records = [
   record({
+    id: "loveme-land-simplified-language-screenshot-personal-20260807",
+    name: "Love ME 樂米樂園",
+    aliases: ["樂米樂園", "Love ME 樂米樂園", "Love ME Land", "樂米樂園 Love ME"],
+    country: "",
+    categories: ["娛樂／休閒", "親子樂園"],
+    avoidReasons: [
+      "使用者個人避買",
+      "使用者指出場館大量使用簡體字與中國用語",
+      "使用者指出部分玩具文字為簡體字及音樂口音疑慮",
+      "使用者對資本來源有疑慮",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖並指定將『Love ME 樂米樂園』列入個人避買。圖片可直接辨識貼文帳號 cake.jhan、頁名『樂米樂園』及貼文文字：『樂米樂園是陸資嗎？裡面怎麼一堆簡體字和中國用語（燃氣灶、視頻）』，另稱未拍到的恐龍考古沙池玩具也都是簡體字、音樂噴泉的歌是中國口音。公開搜尋可辨識 Love ME 樂米樂園及其公開品牌頁；104 職缺頁也將『樂米樂園』與『力行國際貿易有限公司』列於同一職缺標題，但目前沒有取得足以證明陸資／中資控制的可靠公開來源。『樂米樂園是陸資嗎？』在截圖中是提問，不是已證實結論；本筆只記錄使用者個人避買與截圖所示文字觀感，不延伸為資本來源、政治立場、違法、服務品質或所有分館均有相同問題的定論。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - Love ME 樂米樂園文字與場館票據",
+        "",
+        "2026-08-07",
+        "截圖可辨識 Threads 帳號 cake.jhan、頁名『樂米樂園』，貼文問『樂米樂園是陸資嗎？』並指出簡體字、中國用語（燃氣灶、視頻）、恐龍考古沙池玩具文字與音樂口音等使用者觀感；圖片另可見樂米樂園票券／收據及 2026-08-06 日期，但交易識別、地址、電話、QR code 與訂單資訊不作紀錄。此來源只支撐場館名稱與使用者提供的主觀避買理由，不支撐陸資／中資控制或其他客觀結論。證據存檔為 evidence/user-submissions/2026-08-07-loveme-land-screenshot.png。",
+      ),
+      source(
+        "Love ME 樂米樂園公開 Facebook 頁面",
+        "https://www.facebook.com/Lovemecity/",
+        "2026-08-07",
+        "公開搜尋結果可將此 URL 與『Love ME 樂米樂園』頁名連結；直接讀取時遇到 Facebook 登入頁，因此只作品牌／頁面名稱的第一方帳號呈現線索，不作所有權、資本來源或中資控制證明。",
+      ),
+      source(
+        "104 人力銀行 - 樂米樂園電商事業職缺",
+        "https://www.104.com.tw/job/7ks27",
+        "2026-08-07",
+        "公開職缺頁標題為『銷售人員- 樹林秀泰館（大型室內親子樂園）｜樂米樂園 電商事業_力行國際貿易有限公司』，可支撐品牌與該職缺刊登公司之公開關聯；不等同公司所有權、陸資／中資判定或整個品牌各分館的控制關係。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal venue record。收錄範圍限截圖可辨識的 Love ME 樂米樂園，不自動擴張成所有分館、母公司或合作商；『陸資』只在來源敘述中作為使用者提問／疑慮，不可寫成已證實。圖片文字可支撐使用者指出簡體字、中國用語、玩具文字與音樂口音，但不支撐逐一核驗每個設施或歌曲，也不支撐政治立場、資本控制、違法、服務品質或所有分館均有相同問題。searchable fields 僅保留『樂米樂園』、Love ME 樂米樂園、Love ME Land 與完整品牌變體；不要把 cake.jhan、Threads、陸資、中資、中國、簡體字、燃氣灶、視頻、恐龍考古沙池、玩具、音樂、口音、親子樂園、秀泰、樹林、新店、台中或理由／泛稱作 standalone alias／identifier；不保存收據上的地址、電話、QR code、訂單或交易識別。",
+    lastReviewed: "2026-08-07",
+  }),
+  record({
     id: "fuyuan-penghu-guesthouse-camera-disposal-screenshot-personal-20260806",
     name: "馥園民宿／馥園民宿－澎湖馬公市區",
     aliases: [
