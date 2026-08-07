@@ -511,3 +511,11 @@
 5. 更新本檔必要口徑。
 6. commit + push origin/main。
 7. 不做 Pages / Pinecone，除非使用者要求。
+
+## 2026-08-07 台灣網媒「轉載中國假新聞」截圖補錄
+
+- Record：`taiwan-media-china-influence-screenshot-list-personal-2026-07-08`；使用者要求把 2026-08-07 圖片中的 21 個可見網媒補入既有個人避雷紀錄，不另建重複 record。
+- 證據檔：`evidence/user-submissions/2026-08-07-taiwan-media-china-fake-news-list.png`。
+- SHA-256：`032c2c7699cd616041927255b7929bcdea7da28dcbe81a53d275059e50ea2267`。
+- 證據邊界：圖片標題稱「轉載中國假新聞之台灣網媒一覽表」，並聲稱原有 23 個、其中 18 個設立於台中；畫面實際可見 21 列。這只支撐圖片文字、可辨識媒體／公司名與使用者個人避雷範圍，不等於本專案已獨立證實假新聞、股權控制、違法或官方認定；未見的 2 個不補猜。
+- 查詢欄位只收可辨識的媒體／公司／團體正式名稱與穩定變體，不收「假新聞、中國假新聞、中資介入」等理由詞或泛稱；record 維持 `status: personal`、`confidence: low`。
