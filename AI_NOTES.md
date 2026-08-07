@@ -519,3 +519,11 @@
 - SHA-256：`032c2c7699cd616041927255b7929bcdea7da28dcbe81a53d275059e50ea2267`。
 - 證據邊界：圖片標題稱「轉載中國假新聞之台灣網媒一覽表」，並聲稱原有 23 個、其中 18 個設立於台中；畫面實際可見 21 列。這只支撐圖片文字、可辨識媒體／公司名與使用者個人避雷範圍，不等於本專案已獨立證實假新聞、股權控制、違法或官方認定；未見的 2 個不補猜。
 - 查詢欄位只收可辨識的媒體／公司／團體正式名稱與穩定變體，不收「假新聞、中國假新聞、中資介入」等理由詞或泛稱；record 維持 `status: personal`、`confidence: low`。
+
+## 2026-08-07 紅豆產品原料來源透明度截圖補錄
+
+- Records：`xiaomei-red-bean-jelly-icebar-origin-unanswered-personal-20260807`、`aizhiwei-wandan-red-bean-water-phone-response-personal-20260807`、`aizhiwei-niniu-red-bean-desserts-argentina-personal-20260807`、`chimei-red-bean-pastry-origin-unclear-screenshot-personal-20260807`；均為使用者指定的產品級 `personal` 避雷，不擴張成小美、愛之味或奇美全品牌。
+- 使用者規則：沒有明確交代紅豆原料來源的列入；新聞刊出後才以電話補充的愛之味紅豆水也列入。義美、青葉、福記、泰山、桂冠在原文明確回覆百分之百使用台灣紅豆，未列入本批。
+- 主要來源：上下游新聞 `https://www.newsmarket.com.tw/blog/240800/`，頁面 2026-08-05 更新；原文直接寫小美「不願回應」、愛之味電話稱紅豆水來源台灣，並寫妞妞甜八寶／紅豆粉粿等甜湯使用阿根廷紅豆。愛之味官方頁只作產品與品牌自述交叉來源：萬丹紅豆水頁稱「嚴選屏東萬丹紅豆」，蒟蒻紅豆粉粿頁標示台灣製造但未提供紅豆原料國別。
+- 奇美紅豆酥餅只以使用者截圖作證據：可辨識成品標示台灣，但沒有紅豆原料國別；不可寫成已查明外國原料、食安或違法。截圖證據檔：`evidence/user-submissions/2026-08-07-red-bean-origin-unclear-products.png`。
+- SHA-256：`238413be339f4d71caa11851f40aa62a612b88c5676f38c30b88d5c9ff2614e8`。searchable fields 只收完整品牌＋產品名稱；不收單獨的紅豆、台灣、阿根廷、電話、來源不明、食安或其他理由／泛稱。
