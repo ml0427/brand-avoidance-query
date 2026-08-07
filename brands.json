@@ -12111,5 +12111,63 @@
     ],
     "aiNotes": "此筆是 screenshot-only / user-directed personal venue record。收錄範圍限截圖可辨識的 Love ME 樂米樂園，不自動擴張成所有分館、母公司或合作商；『陸資』只在來源敘述中作為使用者提問／疑慮，不可寫成已證實。圖片文字可支撐使用者指出簡體字、中國用語、玩具文字與音樂口音，但不支撐逐一核驗每個設施或歌曲，也不支撐政治立場、資本控制、違法、服務品質或所有分館均有相同問題。searchable fields 僅保留『樂米樂園』、Love ME 樂米樂園、Love ME Land 與完整品牌變體；不要把 cake.jhan、Threads、陸資、中資、中國、簡體字、燃氣灶、視頻、恐龍考古沙池、玩具、音樂、口音、親子樂園、秀泰、樹林、新店、台中或理由／泛稱作 standalone alias／identifier；不保存收據上的地址、電話、QR code、訂單或交易識別。",
     "lastReviewed": "2026-08-07"
+  },
+  {
+    "id": "sun-jianhao-sun-an-zuo-public-cases-screenshot-personal-20260807",
+    "name": "孫健豪／孫安佐／Edward Sun",
+    "aliases": [
+      "孫健豪",
+      "孫安佐",
+      "Edward Sun",
+      "An-Tso Sun",
+      "孫華"
+    ],
+    "country": "台灣",
+    "categories": [
+      "媒體娛樂",
+      "YouTuber"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者提供人物案件截圖",
+      "公開來源可核對人物與案件程序脈絡"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者提供維基百科人物頁截圖並指定將『孫健豪／孫安佐／Edward Sun』列入個人避雷。人物身分可由美國司法部 2018 年官方新聞稿核對：An-Tso Sun 亦名 Edward Sun，為台灣籍交換學生；該稿記載他就聯邦『外國人非法持有彈藥』罪認罪，並記載其在賓州另就 terroristic threats 認罪、服刑後移送 ICE。ICE 官方頁面進一步記載 2018 年 11 月判刑服刑期滿後遣返台灣。ETtoday 2022 年報導士林地院就台灣後續未經許可製造手槍未遂案宣告公訴不受理，並指出判決理由當時尚待公布；這不寫成無罪或法院已完整認定無審判權。中央社 2026-07-30 報導其已改名孫健豪，因自製噴火槍、持有非制式霰彈槍等罪遭起訴後首次開庭；報導記載他只承認持有模擬槍、其餘犯行否認，案件仍在程序中，不是有罪定讞。截圖另列泰國、烏克蘭、格鬥賽等敘述，未全部取得獨立可靠來源，不在本筆當作已查證事實。",
+    "sources": [
+      {
+        "title": "使用者提供維基百科人物頁截圖 - 孫健豪／孫安佐",
+        "url": "",
+        "date": "2026-08-07",
+        "note": "截圖可辨識維基百科頁面標題『孫健豪』、英文名 Edward Sun、舊名／別名與人物簡介；內容另列美國案件、台灣程序、泰國、武器、格鬥與烏克蘭等段落。此來源只支撐截圖畫面與使用者指定個人避雷，不單獨支撐全部案件細節、法律定性或後續事件。證據存檔為 evidence/user-submissions/2026-08-07-sun-jianhao-screenshot.png。"
+      },
+      {
+        "title": "U.S. Department of Justice - Taiwanese Exchange Student Who Threatened to Shoot Up School Pleads Guilty to Federal Ammunition Charge",
+        "url": "https://www.justice.gov/usao-edpa/pr/taiwanese-exchange-student-who-threatened-shoot-school-pleads-guilty-federal-ammunition",
+        "date": "2018-08-28",
+        "note": "美國司法部東區賓州聯邦檢察官辦公室記載：An-Tso Sun，亦名 Edward Sun，為台灣籍交換學生；他就外國人非法持有彈藥的聯邦罪名認罪。正文也記載他在地方案件中就 terroristic threats 認罪並服刑 4 至 23 個月、折抵已服刑時間。此來源支撐認罪與程序，不把內容擴寫為台灣法院判決或其他後續事件。"
+      },
+      {
+        "title": "U.S. Immigration and Customs Enforcement - ICE removes Taiwanese exchange student who threatened to shoot up school",
+        "url": "https://www.ice.gov/news/releases/ice-removes-taiwanese-exchange-student-who-threatened-shoot-school",
+        "date": "2018-12-11",
+        "note": "ICE 官方頁面記載 An Tso Sun（亦名 Edward Sun）於 2018 年 11 月被判服刑期滿、移送 ICE，之後由 ERO 遣返台灣；頁面另記載其聯邦彈藥罪判刑與美國永久不得再入境效果。此來源支撐美國官方所述判刑／遣返，不支撐台灣後續案件或父母責任。"
+      },
+      {
+        "title": "ETtoday - 孫安佐在美涉製槍未遂：判決結果出爐",
+        "url": "https://www.ettoday.net/news/20220126/2178129.htm",
+        "date": "2022-01-26",
+        "note": "報導記載孫安佐 2020 年在台被起訴未經許可製造手槍未遂，士林地院於 2022-01-26 宣告公訴不受理；正文並寫判決理由尚待公布。可支撐報導所述程序結果，不寫成有罪、無罪或完整確定的管轄法律見解。"
+      },
+      {
+        "title": "中央社 - 涉槍砲等罪遭訴首出庭 孫安佐：無恐嚇大眾之意",
+        "url": "https://www.cna.com.tw/news/asoc/202607300267.aspx",
+        "date": "2026-07-30",
+        "note": "中央社記載孫安佐已改名孫健豪；士林地院首次開庭時，他只承認持有模擬槍，其餘犯行否認，並爭執犯罪故意、槍枝殺傷力與搜索合法性。報導同時記載士檢起訴其自製噴火裝置、持有非制式霰彈槍等案件，法院程序尚未終局。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed public-figure personal record，人物—別名—案件核心已由美國官方來源、ICE、中央社及具名媒體交叉辨識。美國部分可寫認罪、判刑與遣返；台灣 2022 部分只能寫 ETtoday 報導的公訴不受理及判決理由待公布；2026 部分只能寫遭起訴／首次開庭／當事人否認，不能寫成有罪定讞。截圖中的泰國私闖民宅、持有自製火槍、拳願評審／參賽、烏克蘭參軍等內容未全部取得獨立可靠來源，不作已查證事實。searchable fields 僅保留 `孫健豪`、`孫安佐`、`Edward Sun`、`An-Tso Sun`、`孫華`；不要把孫鵬、狄鶯、恐怖威脅、恐攻、槍、火槍、彈藥、泰國、烏克蘭、拳願、YouTuber、恐怖片、起訴、交保、法院、媒體名稱或其他案件／理由詞作 aliases／identifiers，也不把自然人的案件責任外溢到父母、合作人物、頻道或其他法人。",
+    "lastReviewed": "2026-08-07"
   }
 ]
