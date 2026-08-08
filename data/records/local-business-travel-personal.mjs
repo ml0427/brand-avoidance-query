@@ -1099,6 +1099,39 @@ export const records = [
     lastReviewed: "2026-07-29",
   }),
   record({
+    id: "xinshijie-eyewear-simplified-sign-screenshot-personal-20260809",
+    name: "新視界眼鏡／新視界驗光所",
+    aliases: ["新視界眼鏡", "新視界驗光所", "新视界眼镜", "新视界验光所"],
+    country: "",
+    categories: ["服飾生活", "生活服務"],
+    avoidReasons: [
+      "使用者個人避買",
+      "使用者指出店面使用簡體字宣傳文字",
+      "使用者提供 Threads 截圖線索",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖並指定將『新視界眼鏡／新視界驗光所』列入個人避買。截圖中的完整店名沒有清楚露出，店名『新視界』由使用者辨識，並以公開 Google Maps 同名店家搜尋結果作名稱存在的交叉線索；截圖可見眼鏡店宣傳吊牌與部分簡體中文用字，例如『贴心的眼镜管家』『专业技师 精准验光』，但畫面失焦且下方店招被遮住，無法確認具體分店。此筆只記錄使用者個人避買與圖片／名稱辨識線索，不延伸為店家違法、欺騙、服務品質、所有分店或全品牌均有問題的定論。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 新視界眼鏡宣傳吊牌",
+        "",
+        "2026-08-09",
+        "截圖可見眼鏡店宣傳吊牌，包含『新品上市』及部分簡體中文宣傳文字；完整店名與地址未清楚顯示，店名『新視界』由使用者辨識。證據檔為 evidence/user-submissions/2026-08-09-xinshijie-eyewear-screenshot.png，SHA-256 為 67bcaf15b67af300c39a56e546c1067b1a0fedede30951b772f8f64b765bc5c3。此來源只支撐圖片線索與使用者指定個人避買，不支撐違法、欺騙、服務品質或具體分店定論。",
+      ),
+      source(
+        "Google Maps - 新視界眼鏡搜尋結果",
+        "https://www.google.com/maps/search/%E6%96%B0%E8%A6%96%E7%95%8C%E7%9C%BC%E9%8F%A1",
+        "查核日 2026-08-09",
+        "公開搜尋結果可見『新視界眼鏡／新視界驗光所』及『新視界眼鏡』等同名店家條目；此來源只支撐名稱存在與同名條目，不足以將使用者截圖對應到其中任何一個分店，也不作全品牌／所有分店證明。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed local-business personal record。收錄範圍限使用者辨識的『新視界眼鏡／新視界驗光所』名稱線索，不自動擴張為所有分店、法人或全品牌。截圖下方店招失焦且被遮住，Google Maps 同名結果不代表具體分店橋接；因此 confidence low、country 留空、不設 identifiers。可說使用者依截圖中的宣傳文字與個人偏好指定避買；不可寫成已證實店家使用全部簡體字、違法、欺騙、服務品質問題、特定分店責任或所有同名店家均有問題。searchable fields 僅保留名稱與繁簡變體；不要把簡體字、宣傳、眼鏡、驗光、Threads、Google Maps、地址、分店或理由詞作 standalone alias / identifier。",
+    lastReviewed: "2026-08-09",
+  }),
+  record({
     id: "opium-alchemy-su-tzuyi-bribery-first-instance-personal-20260731",
     name: "OPIUM Champagne Bar / Alchemy Bar / 蘇子怡",
     aliases: [
