@@ -18,6 +18,33 @@
 
 export const records = [
   record({
+    id: "burger-co-daan-2chill-screenshot-personal-20260811",
+    name: "Burger & Co",
+    aliases: ["Burger & Co", "BURGER & Co"],
+    country: "台灣",
+    categories: ["餐飲", "生活服務"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供社群截圖線索",
+      "與截圖人物／政治社群內容的關聯線索",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者依社群截圖指定將台北大安區的 Burger & Co 漢堡店列入個人避雷。截圖文字稱 2chill／池宗亮在台北大安區開設 Burger & Co，並括註「瘦子有投資」；下方拼圖可見 Burger & Co 店面招牌與漢堡照片。此筆只記錄使用者對截圖所示具名店家的個人避開，不確認店家精確地址、實際所有／投資關係、政治關聯、服務／食品品質或食安問題；收錄範圍限 Burger & Co，不擴及瘦子、2chill 或其他漢堡店。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - Burger & Co 店家與 2chill 關聯線索",
+        "",
+        "2026-08-11",
+        "截圖文字稱「在台北大安區開了一家『Burger & Co』漢堡店（瘦子有投資）」；下方拼圖可見 Burger & Co 店面招牌、店內菜單／裝潢與漢堡照片。此來源只支撐截圖可見店名與文字主張，不獨立證明精確地址、實際所有／投資關係、政治關聯、服務／食品品質、食安或法律責任。證據檔：`evidence/user-submissions/2026-08-11-2chill-burger-co-screenshot.png`；SHA-256：`9a880eb23ee9d8b6859dd93b17f6d10b81cf9a17347f53cc2afc763cc865f8d5`。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record，收錄範圍限截圖中的 Burger & Co 具名店家。可說使用者依截圖將 Burger & Co 列入個人避開；不可寫成已獨立確認瘦子投資、2chill 經營、政治關聯、服務／食品品質、食安、違法或所有分店／同名店都有問題。searchable fields 僅保留 Burger & Co、BURGER & Co；不要把 2chill、池宗亮、Philip Chi、瘦子、柯文哲、民眾黨、台北、大安、漢堡、投資、政治、食安、Threads 或其他關聯／理由／泛稱作 aliases／identifiers。",
+    lastReviewed: "2026-08-11",
+  }),
+  record({
     id: "tucheng-sunmoonlight-plaza-parking-coupon-screenshot-personal-20260811",
     name: "土城日月光廣場",
     aliases: ["土城日月光廣場", "土城日月光", "日月光廣場"],

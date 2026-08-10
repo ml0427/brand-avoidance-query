@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-11 2chill／池宗亮／Philip Chi 與 Burger & Co：截圖個人避雷
+
+- Records: `2chill-philip-chi-screenshot-personal-20260811`、`burger-co-daan-2chill-screenshot-personal-20260811`；皆為 `personal` / `low`。使用者提供 Threads 截圖並以「避雷」指定主要人物 2chill／池宗亮／Philip Chi；截圖另具名 Burger & Co 店面，因此分開建立人物與店家紀錄。瘦子、吳卓源、柯文哲、民眾黨、簡幸甫只保留脈絡，不自動列入。
+- 截圖標題辨識「小草網紅／2chill／池宗亮／Philip Chi」，內文描述人物與瘦子、Burger & Co、柯文哲／民眾黨選舉影片及簡幸甫爭議直播的關聯；下方拼圖可見 Burger & Co 店面、男子影像與影片畫面。這些是截圖文字／拼圖線索，不是本專案獨立確認的人物身分、關係、投資、政治合作、直播內容、對他人指控或法律責任。
+- Burger & Co 紀錄範圍限截圖中的具名店家，不擴及 2chill、瘦子、其他漢堡店或同名店；未取得可直接開啟的官方／地圖店家頁，故兩筆皆維持 low confidence。人物 searchable fields 僅 `2chill`、`池宗亮`、`Philip Chi`，不把小草網紅、瘦子、Burger & Co、柯文哲、民眾黨、簡幸甫、偷拍、騙炮、直播、政治、Threads 等脈絡／理由／泛稱放入人物欄位；店家 searchable fields 僅 `Burger & Co`、`BURGER & Co`，不把 2chill、池宗亮、Philip Chi、瘦子、台北、大安、漢堡、投資、政治、食安、Threads 等關聯／理由／泛稱放入店家欄位。證據存檔：`evidence/user-submissions/2026-08-11-2chill-burger-co-screenshot.png`；SHA-256 `9a880eb23ee9d8b6859dd93b17f6d10b81cf9a17347f53cc2afc763cc865f8d5`。
+
 ## 2026-08-11 土城日月光廣場：停車折抵券管理方式個人避雷
 
 - Record: `tucheng-sunmoonlight-plaza-parking-coupon-screenshot-personal-20260811`；`personal` / `low`。使用者提供 Threads 截圖並明確指定將土城日月光廣場列入個人避雷；範圍限該購物中心／停車場場域，不擴及日月光集團、ASE 或其他據點。

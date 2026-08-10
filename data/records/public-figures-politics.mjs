@@ -18,6 +18,33 @@
 
 export const records = [
   record({
+    id: "2chill-philip-chi-screenshot-personal-20260811",
+    name: "2chill／池宗亮／Philip Chi",
+    aliases: ["2chill", "池宗亮", "Philip Chi"],
+    country: "",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供社群截圖線索",
+      "政治／社群內容觀感",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供社群截圖並指定將 2chill／池宗亮／Philip Chi 列入個人避雷。截圖標題以「小草網紅／2chill／池宗亮／Philip Chi」辨識人物，內文另描述其與歌手瘦子、Burger & Co、柯文哲／民眾黨選舉影片及簡幸甫爭議直播的關聯；下方拼圖可見 Burger & Co 店面、男子影像與影片畫面。此筆只記錄使用者依截圖對人物作個人避開，不確認截圖所述親屬／前任關係、店家投資、政治合作、政治立場、直播內容、對他人指控或本人法律責任；未取得原始貼文／影片或獨立公開來源，人物身分與關係鏈採低信心。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 2chill／池宗亮／Philip Chi",
+        "",
+        "2026-08-11",
+        "截圖標題可見「【小草網紅／2chill／池宗亮／Philip Chi】」，內文描述其與瘦子、Burger & Co、柯文哲／民眾黨選舉影片及簡幸甫爭議直播的關聯；下方拼圖可見 Burger & Co 店面、男子影像與影片畫面。此來源只支撐截圖可見文字與使用者個人避雷，不獨立證明人物身分、親屬／前任關係、投資、政治合作、直播內容、對他人指控或法律責任。證據檔：`evidence/user-submissions/2026-08-11-2chill-burger-co-screenshot.png`；SHA-256：`9a880eb23ee9d8b6859dd93b17f6d10b81cf9a17347f53cc2afc763cc865f8d5`。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record。可說使用者依截圖標題與內容將 2chill／池宗亮／Philip Chi 列入個人避開；不可寫成已獨立確認其身分、瘦子親屬／前任關係、Burger & Co 投資、柯文哲／民眾黨合作、政治立場、簡幸甫相關指控或直播護航內容、違法或法律責任。searchable fields 僅保留 2chill、池宗亮、Philip Chi；不要把小草網紅、瘦子、Burger & Co、柯文哲、民眾黨、簡幸甫、偷拍、騙炮、直播、政治、Threads 或其他脈絡／理由詞作 aliases／identifiers。",
+    lastReviewed: "2026-08-11",
+  }),
+  record({
     id: "lin-zhengfeng-niklas-lam-china-taiwan-screenshot-personal-20260810",
     name: "林正峰 / Niklas Lam",
     aliases: ["林正峰", "Lam Ching Fung", "Niklas Lam"],
