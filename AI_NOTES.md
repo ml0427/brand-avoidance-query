@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-11 土城日月光廣場：停車折抵券管理方式個人避雷
+
+- Record: `tucheng-sunmoonlight-plaza-parking-coupon-screenshot-personal-20260811`；`personal` / `low`。使用者提供 Threads 截圖並明確指定將土城日月光廣場列入個人避雷；範圍限該購物中心／停車場場域，不擴及日月光集團、ASE 或其他據點。
+- 截圖帳號 `iam_echia` 描述停車折抵券由留在機器供他人使用，改為有人站旁監督並要求投入桶內；照片可見停車折抵機、車道與現場人員。此只支持使用者對停車折抵管理方式的不便／不滿線索，不證明正式政策、全時段／所有入口一致、違法或不公平。
+- OpenStreetMap `way/543478037` 可作「土城日月光廣場」場域名稱橋接；searchable fields 僅保留 `土城日月光廣場`、`土城日月光`、`日月光廣場`，不保存 `日月光集團`、`ASE`、`iam_echia`、Threads、停車折抵券、監督、投入桶或其他理由／平台／泛稱。證據存檔：`evidence/user-submissions/2026-08-11-tucheng-ase-mall-parking-screenshot.png`；SHA-256 `ea6dcd9709af43c55859220608e09e6bb8ff56990577ffa72744bfc2f84c1dd9`。
+
 ## 2026-08-06 馥園民宿：相機處置指稱的旅宿個人避買
 
 - Record: `fuyuan-penghu-guesthouse-camera-disposal-screenshot-personal-20260806`；`personal` / `low`。使用者提供截圖並明確指定將「馥園民宿」列入個人避雷，理由是使用者指出民宿把別人的相機當垃圾丟掉。

@@ -18,6 +18,39 @@
 
 export const records = [
   record({
+    id: "tucheng-sunmoonlight-plaza-parking-coupon-screenshot-personal-20260811",
+    name: "土城日月光廣場",
+    aliases: ["土城日月光廣場", "土城日月光", "日月光廣場"],
+    country: "台灣",
+    categories: ["通路零售", "生活服務"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供社群截圖線索",
+      "停車折抵券管理方式造成不便",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者明確指定將土城日月光廣場列入個人避雷。Threads 帳號 `iam_echia` 貼文描述：過去停車費折抵足夠時，會把折抵券留在機器上讓其他人使用，自己折抵不足時也曾使用他人留下的券；貼文稱現在現場派人站在機器旁監督，並要求把折抵券投入桶內。附圖可見停車折抵機、車道與現場人員。此筆只記錄使用者因該停車折抵券管理方式造成不便／不滿而作的個人避雷，不確認這是場方正式且持續的全時段政策、所有入口均一致、違法／不公平或其他日月光據點也採相同做法；收錄範圍不擴及日月光集團／ASE。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 土城日月光停車折抵券管理線索",
+        "",
+        "2026-08-11",
+        "截圖可見 Threads 帳號 `iam_echia`、相對時間『3 小時』，文字描述停車折抵券原可留在機器供他人使用，現在由人員站旁監督並要求投入桶內；附圖可見停車折抵機、車道、車輛與現場人員。此來源只支撐截圖畫面與使用者個人避雷理由，不獨立證明正式政策、完整時段／入口適用範圍、違法或不公平。證據檔：`evidence/user-submissions/2026-08-11-tucheng-ase-mall-parking-screenshot.png`；SHA-256：`ea6dcd9709af43c55859220608e09e6bb8ff56990577ffa72744bfc2f84c1dd9`。",
+      ),
+      source(
+        "OpenStreetMap - 土城日月光廣場",
+        "https://www.openstreetmap.org/way/543478037",
+        "查核日 2026-08-11",
+        "公開地理資料將該場域命名為『土城日月光廣場』，類型標示為購物中心，位於新北市土城區；此來源只用於核對場域名稱，不支撐停車折抵券管理方式、現場人員行為或官方營運政策。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record，收錄範圍限土城日月光廣場這一場域。可說使用者依 `iam_echia` Threads 截圖，因停車折抵券由可留在機器供他人使用改為有人監督並要求投入桶內的描述，而指定個人避雷；不可寫成日月光廣場已正式公告該政策、所有時段／入口一致、違法、不公平、場方承認或其他日月光／ASE 據點均有相同問題。OpenStreetMap 只作場域名稱橋接。searchable fields 僅保留土城日月光廣場、土城日月光、日月光廣場；不要把日月光集團、ASE、停車、停車費、停車折抵券、折抵券、監督、投入桶、iam_echia、Threads 或其他理由／平台／泛稱作 aliases／identifiers。",
+    lastReviewed: "2026-08-11",
+  }),
+  record({
     id: "tree-party-tree-protection-public-figures",
     name: "樹黨／護樹公開代表人物名單",
     aliases: treeProtectionPublicFigureAliases,
