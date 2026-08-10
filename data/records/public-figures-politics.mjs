@@ -18,6 +18,39 @@
 
 export const records = [
   record({
+    id: "lin-zhengfeng-niklas-lam-china-taiwan-screenshot-personal-20260810",
+    name: "林正峰 / Niklas Lam",
+    aliases: ["林正峰", "Lam Ching Fung", "Niklas Lam"],
+    country: "香港",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供社群截圖線索",
+      "影片／貼文中的台灣政治標示疑慮",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖並指定將香港無綫電視藝員林正峰／Niklas Lam 列入個人避雷。截圖中帳號 `bajiong8307` 的貼文指稱林正峰來台灣拍攝時把台灣標成「中國台灣省」，嵌入影片縮圖可見人物畫面與「中國台灣」字樣；右側維基百科結果則提供「林正峰（香港）」身分線索。此筆只記錄使用者依截圖對人物作個人避開，不確認原始影片完整內容、縮圖文字的製作者、林正峰本人是否作出該標示、政治意圖、官方處分或法律定性。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 林正峰「中國台灣」影片線索",
+        "",
+        "2026-08-10",
+        "截圖可見 Threads 帳號 `bajiong8307`、貼文文字稱香港 TVB 藝人林正峰來台灣拍片並把台灣標成「中國台灣省」；嵌入影片縮圖可見人物畫面與黃色「中國台灣」字樣，旁邊另有「林正峰（香港）」維基百科結果。此來源只支撐截圖畫面與使用者個人避雷，不支撐原始影片完整內容、帳號以外的影片發布／製作責任、林正峰本人是否作出該標示、政治意圖、官方處分或法律定性。證據檔：`evidence/user-submissions/2026-08-10-lin-zhengfeng-china-taiwan-screenshot.png`；SHA-256：`ed4930b47787ca3bb35d679f83e7a5fafeb7fea76d3fa89b0fe43cb558165103`。",
+      ),
+      source(
+        "維基百科 - 林正峰（香港）",
+        "https://zh.wikipedia.org/wiki/%E6%9E%97%E6%AD%A3%E5%B3%B0_(%E9%A6%99%E6%B8%AF)",
+        "查核日 2026-08-10",
+        "頁面列林正峰的羅馬拼音為 Lam Ching Fung、英文名為 Niklas Lam，並列其為香港主持、演員及意見領袖，經紀公司欄列無綫電視；頁面本身顯示生者傳記來源不足等維護提示，因此本來源只作姓名、英文名、職業與無綫電視身分橋接，不支撐截圖所述影片內容或政治表態。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed personal record，收錄範圍限林正峰／Niklas Lam 本人。可說使用者依 Threads 截圖指出影片／貼文以「中國台灣」或「中國台灣省」標示台灣，因此指定個人避開；不可寫成已取得原始影片、已確認林正峰本人發言、政治意圖、統戰行為、官方處分、違法或法律責任。維基百科只作人物身分橋接，且頁面有來源不足提示。searchable fields 僅保留林正峰、Lam Ching Fung、Niklas Lam；不要把 bajiong8307、TVB、無綫電視、中國台灣、中國台灣省、台灣、統戰、政治、影片、Threads 或其他理由／平台／泛稱作 aliases／identifiers。",
+    lastReviewed: "2026-08-10",
+  }),
+  record({
     id: "sun-jianhao-sun-an-zuo-public-cases-screenshot-personal-20260807",
     name: "孫健豪／孫安佐／Edward Sun",
     aliases: ["孫健豪", "孫安佐", "Edward Sun", "An-Tso Sun", "孫華"],
