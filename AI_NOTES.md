@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-12 鹿港肉羹王（台中北屯區松義街）：餐盒文字截圖個人避雷
+
+- Record: `lugang-rougeng-wang-taichung-songyi-street-screenshot-personal-20260812`；`personal` / `low`。使用者明確指定將台中北屯區松義街的「鹿港肉羹王」列入個人避雷；範圍限該店家／該位置，不擴及同名店、其他分店、相關品牌或所有肉羹店。
+- 使用者提供的餐盒照片可直接辨識盒蓋上的「舌尖上的中國」與「吃出自己的味道」，並可見黃色「肉燥」貼紙；照片未清楚顯示「鹿港肉羹王」店名，因此店名與位置依使用者指定，不宣稱照片已獨立完成店家身分橋接。不可由包裝文字推定食品來源、食安、服務品質、違法或政治立場。
+- Searchable fields 僅保留完整店名、必要位置變體與「台中北屯區松義街」；不把包裝標語、肉燥、中國、分類、理由或泛稱放入 aliases／identifiers。證據檔：`evidence/user-submissions/2026-08-12-lugang-rougeng-wang-songyi-street.jpeg`；SHA-256 `e260b3a212a86a8bc997e88117730dc52bba411e374627137aa11e369e4f2e75`。
+
 ## 2026-08-11 2chill／池宗亮／Philip Chi 與 Burger & Co：截圖個人避雷
 
 - Records: `2chill-philip-chi-screenshot-personal-20260811`、`burger-co-daan-2chill-screenshot-personal-20260811`；皆為 `personal` / `low`。使用者提供 Threads 截圖並以「避雷」指定主要人物 2chill／池宗亮／Philip Chi；截圖另具名 Burger & Co 店面，因此分開建立人物與店家紀錄。瘦子、吳卓源、柯文哲、民眾黨、簡幸甫只保留脈絡，不自動列入。

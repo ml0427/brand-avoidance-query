@@ -12345,5 +12345,39 @@
     ],
     "aiNotes": "此筆是 screenshot-only / user-directed personal record，收錄範圍限截圖中的 Burger & Co 具名店家。可說使用者依截圖將 Burger & Co 列入個人避開；不可寫成已獨立確認瘦子投資、2chill 經營、政治關聯、服務／食品品質、食安、違法或所有分店／同名店都有問題。searchable fields 僅保留 Burger & Co、BURGER & Co；不要把 2chill、池宗亮、Philip Chi、瘦子、柯文哲、民眾黨、台北、大安、漢堡、投資、政治、食安、Threads 或其他關聯／理由／泛稱作 aliases／identifiers。",
     "lastReviewed": "2026-08-11"
+  },
+  {
+    "id": "lugang-rougeng-wang-taichung-songyi-street-screenshot-personal-20260812",
+    "name": "鹿港肉羹王（台中北屯區松義街）",
+    "aliases": [
+      "鹿港肉羹王",
+      "鹿港肉羹王 台中北屯區松義街"
+    ],
+    "identifiers": [
+      "台中北屯區松義街"
+    ],
+    "country": "",
+    "categories": [
+      "餐飲旅遊",
+      "台式小吃"
+    ],
+    "avoidReasons": [
+      "使用者個人避買",
+      "使用者指出餐盒印有『舌尖上的中國』字樣",
+      "使用者提供實體餐盒照片"
+    ],
+    "confidence": "low",
+    "status": "personal",
+    "summary": "使用者明確指定將台中北屯區松義街的『鹿港肉羹王』列入個人避雷。使用者提供的餐盒照片可直接辨識盒蓋上的『舌尖上的中國』與『吃出自己的味道』文字，並可見黃色『肉燥』貼紙；照片本身未清楚顯示『鹿港肉羹王』店名，因此店家名稱與位置依使用者提供，不宣稱照片已獨立完成店家身分橋接。收錄範圍限該店家／該位置，不擴及同名店、其他分店、相關品牌或所有肉羹店。",
+    "sources": [
+      {
+        "title": "使用者提供實體餐盒照片 - 台中北屯區松義街鹿港肉羹王",
+        "url": "",
+        "date": "2026-08-12",
+        "note": "照片可直接讀到盒蓋上的『舌尖上的中國』與『吃出自己的味道』文字，並可見黃色『肉燥』貼紙；照片未清楚顯示『鹿港肉羹王』店名。此來源只支持實體包裝可見文字與使用者指定的個人避雷範圍，不支撐店家名稱已由照片獨立確認、食品來源、食安、服務品質、違法或其他同名店家情況。證據檔：`evidence/user-submissions/2026-08-12-lugang-rougeng-wang-songyi-street.jpeg`；SHA-256：`e260b3a212a86a8bc997e88117730dc52bba411e374627137aa11e369e4f2e75`。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-only / user-directed local-business personal record。收錄範圍限使用者指定的『鹿港肉羹王（台中北屯區松義街）』，不自動擴及同名店、其他分店、母公司或相關品牌。照片只直接支持盒蓋上的『舌尖上的中國』、『吃出自己的味道』與『肉燥』文字，不直接支持店名、正式地址、食品來源、食安、服務品質、違法或政治立場定論；店家名稱與位置來自使用者指定。searchable fields 僅保留完整店名、必要位置變體與台中北屯區松義街；不要把舌尖上的中國、吃出自己的味道、肉燥、中國、台中、北屯、小吃、肉羹、照片或其他理由／泛稱作 standalone alias。",
+    "lastReviewed": "2026-08-12"
   }
 ]
