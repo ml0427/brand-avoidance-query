@@ -20,8 +20,8 @@ export const records = [
   record({
     id: "yuanju-company-ziv-screenshot-personal-20260813",
     name: "遠炬公司",
-    aliases: ["遠炬公司"],
-    country: "",
+    aliases: ["遠炬公司", "遠炬股份有限公司"],
+    country: "台灣",
     categories: ["公司／品牌", "運動休閒"],
     avoidReasons: [
       "使用者個人避開",
@@ -30,7 +30,7 @@ export const records = [
     confidence: "low",
     status: "personal",
     summary:
-      "使用者要求將遠炬公司列入個人避雷，理由延續對其董事長陳本偉政治立場的避開決定。使用者提供的 ZIV 運動眼鏡截圖明確出現「遠炬公司董事長陳本偉表示」，並將陳本偉的說法放在 ZIV 運動眼鏡品牌介紹段落中；因此本筆收錄遠炬公司作為截圖呈現的公司／品牌脈絡。截圖沒有明確寫出 ZIV 是遠炬唯一、全部或正式旗下品牌，也沒有提供遠炬公司的完整法定名稱、公司登記、其他品牌清單或本人政治表態；不作上述推論。收錄範圍限圖片可辨識的「遠炬公司」，不擴及未知子公司、關聯公司、所有產品或其他品牌。",
+      "使用者要求將遠炬公司列入個人避雷。經濟部商工行政資料的公司名稱查詢可核對正式名稱「遠炬股份有限公司」及登記負責人「陳本偉」；截圖另出現「遠炬公司董事長陳本偉表示」，職稱與官方 API 的登記欄位分開保存。Prohero Group 官方 About Us 頁明載 2014 年建立自有品牌 ZIV（in-house brand ZIV），並提到 New Look 配件業務及多項眼鏡／ODM 業務；但該頁沒有直接列出「遠炬股份有限公司」或完整旗下品牌清單，也未明確把 New Look 定義為正式品牌。因此可確認 ZIV 是 Prohero Group 公開呈現的自有品牌，不能把「遠炬旗下只有 ZIV」寫成已證明事實，也不能把產品／業務類別全部當成品牌。收錄範圍限遠炬公司本身，不擴及未知子公司、關聯公司、所有產品或其他未核實品牌。",
     sources: [
       source(
         "使用者明確指定 - 遠炬公司個人避雷",
@@ -42,11 +42,23 @@ export const records = [
         "使用者提供 ZIV 運動眼鏡宣傳截圖 - 遠炬公司與陳本偉線索",
         "",
         "2026-08-13",
-        "圖片可讀到：「亞洲人臉型設計自創『ZIV運動眼鏡』，震撼亞洲運動眼鏡市場。近年來為提升運動風氣，ZIV每年贊助國內活動賽事……」以及「遠炬公司董事長陳本偉表示，近年來台灣運動人口不斷成長……」。此文字將遠炬公司與陳本偉放在 ZIV 品牌介紹段落中，但未明確寫出 ZIV 是遠炬唯一／全部／正式旗下品牌，亦未提供完整法定公司名稱、公司登記或其他品牌清單。證據檔：evidence/user-submissions/2026-08-13-ziv-sports-eyewear-screenshot.png；SHA-256：d6e5b0a091752265159543b461ddf56aa974d61a5f5c4b62e76a47ac1ef58ba7。",
+        "圖片可讀到：「亞洲人臉型設計自創『ZIV運動眼鏡』，震撼亞洲運動眼鏡市場。近年來為提升運動風氣，ZIV每年贊助國內活動賽事……」以及「遠炬公司董事長陳本偉表示，近年來台灣運動人口不斷成長……」。此文字將遠炬公司與陳本偉放在 ZIV 品牌介紹段落中，但未單獨列出遠炬完整品牌清單。證據檔：evidence/user-submissions/2026-08-13-ziv-sports-eyewear-screenshot.png；SHA-256：d6e5b0a091752265159543b461ddf56aa974d61a5f5c4b62e76ac1ef58ba7。",
+      ),
+      source(
+        "經濟部商工行政資料開放平臺 - 遠炬公司登記關鍵字查詢",
+        "https://data.gcis.nat.gov.tw/od/data/api/6BBA2268-1367-4B42-9CCA-BC17499EBE8C?$format=json&$top=20&$filter=Company_Name%20like%20%E9%81%A0%E7%82%AC%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%20and%20Company_Status%20eq%2001",
+        "查核日 2026-08-13",
+        "公司名稱查詢端點回傳「遠炬股份有限公司」、公司狀態「核准設立」及登記負責人「陳本偉」。本來源只支持公司名稱／登記負責人橋接，不保存統一編號、地址或其他非必要公司資料。",
+      ),
+      source(
+        "Prohero Group 官方公司頁 - About us",
+        "https://www.proheroeyewear.com/company/about_us",
+        "查核日 2026-08-13",
+        "官方頁明載「2014 Build ZIV building.for our sports brand, ZIV」及「In 2014, we established our in-house brand ZIV」，可支持 ZIV 是 Prohero Group 公開呈現的自有品牌。頁面另提到「1998 New Look is established for Accessories business」及多項眼鏡產品／ODM 業務，但未直接列出「遠炬股份有限公司」、未提供完整品牌清單，也未明確將 New Look 定義為正式品牌；不據此列成遠炬的確定旗下品牌。",
       ),
     ],
     aiNotes:
-      "此筆是使用者明確指定的 company / brand personal record。截圖明確支持「遠炬公司」文字及「遠炬公司董事長陳本偉表示」的職務—姓名關係，也支持該引述出現在 ZIV 運動眼鏡介紹段落中；但截圖沒有說 ZIV 是遠炬唯一或全部品牌，不能推論遠炬只有 ZIV、ZIV 必然是正式旗下品牌、遠炬完整法定名稱、公司登記、所有子品牌或其他產品線。使用者指出的陳本偉支持傅崐萁只作個人避雷理由，不寫成公司或本人已獨立證實的政治事實。searchable fields 僅保留遠炬公司；不要把陳本偉、傅崐萁、ZIV、運動眼鏡、董事長、支持、政治、旗下、唯一、代工或其他理由／關聯詞放入 aliases／identifiers。",
+      "此筆是使用者明確指定的 company / brand personal record。截圖支持「遠炬公司」及「遠炬公司董事長陳本偉表示」的文字／職務線索；公開公司資料的公司名稱查詢支持正式名稱「遠炬股份有限公司」及登記負責人陳本偉。Prohero Group 官方公司頁明確稱 ZIV 為其 in-house brand，故可記錄 ZIV 是 Prohero Group 公開資料支持的自有品牌；但該頁未直接列出遠炬股份有限公司，也沒有完整旗下品牌清單，New Look 只明寫為配件業務，不能寫成遠炬只有 ZIV，也不能把所有產品／ODM 類別當成品牌。使用者指出的陳本偉支持傅崐萁只作個人避雷理由，不寫成公司或本人已獨立證實的政治事實。searchable fields 僅保留遠炬公司、遠炬股份有限公司；不要把 PROHERO GROUP、陳本偉、傅崐萁、ZIV、運動眼鏡、董事長、支持、政治、旗下、唯一、代工或其他理由／關聯詞放入 aliases／identifiers。",
     lastReviewed: "2026-08-13",
   }),
   record({
