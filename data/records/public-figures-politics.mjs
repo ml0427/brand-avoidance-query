@@ -18,6 +18,38 @@
 
 export const records = [
   record({
+    id: "chen-benwei-ziv-political-position-personal-20260813",
+    name: "陳本偉",
+    aliases: ["陳本偉"],
+    country: "",
+    categories: ["政治／公眾人物"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者指出支持傅崐萁的政治立場",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者明確要求將陳本偉列入個人避雷，並表示其支持傅崐萁；「亂台灣」是使用者對傅崐萁的政治評價，不作客觀或法律定論。ZIV 運動眼鏡宣傳截圖中可讀到「遠炬公司董事長陳本偉」，但該圖片只提供人物／職務文字線索，未取得陳本偉本人政治表態、原始貼文或獨立來源，不能把使用者的說法寫成已獨立確認的政治支持事實。收錄範圍限陳本偉本人，不擴及遠炬公司、ZIV、代工客戶或其他關聯人物。",
+    sources: [
+      source(
+        "使用者明確指定 - 陳本偉個人避雷",
+        "",
+        "2026-08-13",
+        "使用者明確要求將陳本偉列入個人避雷，並表示「他支持亂台灣的傅崐萁」。這是使用者的政治評價與個人避雷理由，不是獨立來源對陳本偉政治立場或支持行為的證明。",
+      ),
+      source(
+        "使用者提供 ZIV 運動眼鏡宣傳截圖 - 陳本偉身分線索",
+        "",
+        "2026-08-13",
+        "截圖文字出現「遠炬公司董事長陳本偉」；此來源只支撐圖片中的姓名／職務文字線索，不能獨立確認遠炬公司的完整法定名稱、職務現況、ZIV 品牌關係或陳本偉的政治表態／支持行為。證據檔：evidence/user-submissions/2026-08-13-ziv-sports-eyewear-screenshot.png；SHA-256：d6e5b0a091752265159543b461ddf56aa974d61a5f5c4b62e76a47ac1ef58ba7。",
+      ),
+    ],
+    aiNotes:
+      "此筆是使用者明確指定的 public-person personal record。可說使用者因其認為陳本偉支持傅崐萁而決定個人避雷；「亂台灣」只保留為使用者對傅崐萁的政治評價，不得寫成陳本偉已被獨立證實支持某政治人物、政治主張、政黨、違法或法律責任。ZIV 宣傳截圖只提供「遠炬公司董事長陳本偉」的圖片文字線索，未提供本人原始表態或完整身分橋接；範圍限陳本偉本人，不擴及遠炬、ZIV、代工客戶或其他關聯人物。searchable fields 僅保留陳本偉；不要把傅崐萁、亂台灣、遠炬、ZIV、運動眼鏡、政治、支持、政黨或其他理由／關聯詞放入 aliases／identifiers。",
+    lastReviewed: "2026-08-13",
+  }),
+  record({
     id: "2chill-philip-chi-screenshot-personal-20260811",
     name: "2chill／池宗亮／Philip Chi",
     aliases: ["2chill", "池宗亮", "Philip Chi"],
