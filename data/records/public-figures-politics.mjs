@@ -18,6 +18,33 @@
 
 export const records = [
   record({
+    id: "you-zhibin-finance-general-social-screenshot-personal-20260814",
+    name: "財經戰將游智彬",
+    aliases: ["游智彬"],
+    country: "",
+    categories: ["政治／公眾人物"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供公開社群貼文截圖",
+      "政治／社群內容觀感",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者明確要求將截圖中可辨識的公開帳號「財經戰將游智彬」列入個人避雷。截圖頁首顯示「財經戰將游智彬」、相對時間「16小時」及公開貼文圖示；影片畫面另有政治相關文字。此筆只記錄使用者對該公開帳號／顯示名稱的個人避開，不確認影片原始來源、完整內容與上下文、影片文字所指對象或任何政治主張的真實性，也不確認帳號實際控制人、線下本人身分、違法、官方認定或法律責任。收錄範圍限截圖所示帳號／名稱，不擴及同名者、節目、合作對象或其他媒體帳號。",
+    sources: [
+      source(
+        "使用者提供公開社群貼文截圖 - 財經戰將游智彬",
+        "",
+        "2026-08-14",
+        "截圖頁首可見「財經戰將游智彬」、相對時間「16小時」及公開貼文圖示；內嵌影片畫面帶有政治宣傳式文字。使用者後續明確要求「加避雷」。此來源只支撐截圖可見帳號標示與使用者個人避開決定，不獨立證明影片原始來源、完整內容、文字所指對象、政治主張真實性、帳號控制人或法律責任。證據檔：evidence/user-submissions/2026-08-14-you-zhibin-finance-general-screenshot.jpeg；SHA-256：1960b17e6f3757a47dafdde3b51add745c2621fb1b65129e523af43c5329aa44。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only／user-directed personal record，收錄範圍限截圖頁首顯示的「財經戰將游智彬」公開帳號／名稱。可說使用者因該社群截圖指定個人避開；不可把影片上的政治宣傳式文字、使用者的避雷決定或截圖頁面顯示，改寫成已確認的政治主張、事實、帳號實際控制人、線下真人身分、節目責任、違法、官方認定或法律結論。searchable fields 僅保留「財經戰將游智彬」與「游智彬」；不要把平台名稱、16小時、票投民進黨、孩子上戰場、親兒在美國、百姓嚐苦果、民進黨、戰場、政治、影片或其他理由／口號／泛稱放入 aliases／identifiers。",
+    lastReviewed: "2026-08-14",
+  }),
+  record({
     id: "chen-benwei-ziv-political-position-personal-20260813",
     name: "陳本偉",
     aliases: ["陳本偉"],
