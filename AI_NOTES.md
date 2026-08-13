@@ -8,6 +8,18 @@
 - 使用者提供的餐盒照片可直接辨識盒蓋上的「舌尖上的中國」與「吃出自己的味道」，並可見黃色「肉燥」貼紙；照片未清楚顯示「鹿港肉羹王」店名，因此店名與位置依使用者指定，不宣稱照片已獨立完成店家身分橋接。不可由包裝文字推定食品來源、食安、服務品質、違法或政治立場。
 - Searchable fields 僅保留完整店名、必要位置變體與「台中北屯區松義街」；不把包裝標語、肉燥、中國、分類、理由或泛稱放入 aliases／identifiers。證據檔：`evidence/user-submissions/2026-08-12-lugang-rougeng-wang-songyi-street.jpeg`；SHA-256 `e260b3a212a86a8bc997e88117730dc52bba411e374627137aa11e369e4f2e75`。
 
+## 2026-08-11 東元／TECO 除濕機：自燃／商品責任新聞截圖個人避買
+
+- Record: `teco-dehumidifier-fire-screenshot-personal-20260811`；`personal` / `medium`。使用者明確要求依民視新聞截圖加入避雷；收錄範圍限東元／TECO 除濕機產品線，不擴及東元其他家電或全品牌。
+- 截圖可讀到民視新聞網／FTV 標題「20年除濕機突自燃燒毀民宅！東元喊：10年就該換！法官打臉了」及內文對法院見解的轉述；原始網址在截圖中被截斷，本輪未取得判決全文或可直接開啟的 FTV 原文。因此只能寫「截圖／報導轉述」，不能寫成已由本專案獨立確認的終局法律事實，也不確認具體機型、起火原因、賠償金額、所有東元產品安全性或「10年應更換」為官方期限。
+- searchable fields 僅 `東元除濕機`、`TECO 除濕機`、`TECO dehumidifier`；不把東元、TECO、除濕機、自燃、火災、法院、消保法、民法、10年、20年、外出、保養、賠償、民視、FTV 或標題詞放入 aliases／identifiers。證據檔：`evidence/user-submissions/2026-08-11-teco-dehumidifier-fire-screenshot.png`；SHA-256 `217e5d2b061e5ad107aaa9e312c50222bc6f18c886230081604b382248906b85`。
+
+## 2026-08-13 ZIV 運動眼鏡：宣傳文字截圖個人避買
+
+- Record：`ziv-sports-eyewear-screenshot-personal-20260813`；`personal` / `low`。使用者以「避雷」指定將圖片中可辨識的 ZIV／ZIV 運動眼鏡列入個人避買；範圍限 ZIV 品牌，不自動擴及遠炬公司、陳本偉、代工客戶、賽事或其他運動眼鏡。
+- 圖片可讀到「亞洲人臉型設計自創『ZIV運動眼鏡』」、本土品牌、每年贊助國內活動賽事，以及「遠炬公司董事長陳本偉」的引述。這些只保存為圖片中的宣傳／轉述線索；未取得原始刊物、網址或獨立公開橋接，不確認遠炬公司的完整法定名稱、ZIV 品牌／公司關係、贊助紀錄、代工客戶、產品品質或陳本偉其他個人事實。
+- 搜尋欄位只收 `ZIV`、`ZIV 運動眼鏡`、`ZIV運動眼鏡`；不收遠炬、陳本偉、運動眼鏡、亞洲人臉型、贊助、鐵人三項、自行車、跑步、代工、國內活動或其他文案／脈絡詞作 aliases／identifiers。證據檔：`evidence/user-submissions/2026-08-13-ziv-sports-eyewear-screenshot.png`；SHA-256 `d6e5b0a091752265159543b461ddf56aa974d61a5f5c4b62e76a47ac1ef58ba7`。
+
 ## 2026-08-11 2chill／池宗亮／Philip Chi 與 Burger & Co：截圖個人避雷
 
 - Records: `2chill-philip-chi-screenshot-personal-20260811`、`burger-co-daan-2chill-screenshot-personal-20260811`；皆為 `personal` / `low`。使用者提供 Threads 截圖並以「避雷」指定主要人物 2chill／池宗亮／Philip Chi；截圖另具名 Burger & Co 店面，因此分開建立人物與店家紀錄。瘦子、吳卓源、柯文哲、民眾黨、簡幸甫只保留脈絡，不自動列入。
