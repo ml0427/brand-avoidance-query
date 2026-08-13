@@ -26,6 +26,12 @@
 - 「亂台灣」只保留為使用者對傅崐萁的政治評價，不寫成客觀或法律定論。使用者提供的 ZIV 宣傳截圖可讀到「遠炬公司董事長陳本偉」，但只是姓名／職務線索；未取得陳本偉本人政治表態、原始貼文或獨立身分橋接，不把「支持傅崐萁」寫成已獨立確認的政治事實。
 - 搜尋欄位只收 `陳本偉`；不收傅崐萁、亂台灣、遠炬、ZIV、運動眼鏡、政治、支持、政黨或其他理由／關聯詞作 aliases／identifiers。沿用證據檔：`evidence/user-submissions/2026-08-13-ziv-sports-eyewear-screenshot.png`；SHA-256 `d6e5b0a091752265159543b461ddf56aa974d61a5f5c4b62e76a47ac1ef58ba7`。
 
+## 2026-08-13 遠炬公司：ZIV 宣傳截圖公司脈絡個人避雷
+
+- Record：`yuanju-company-ziv-screenshot-personal-20260813`；`personal` / `low`。使用者明確要求將遠炬公司列入個人避雷，理由延續對其董事長陳本偉政治立場的避開決定；收錄範圍限圖片可辨識的「遠炬公司」，不擴及未知子公司、關聯公司、所有產品或其他品牌。
+- 截圖明確可讀到「遠炬公司董事長陳本偉表示」，且這段引述位於 ZIV 運動眼鏡品牌介紹中；截圖沒有明確寫出 ZIV 是遠炬唯一、全部或正式旗下品牌，也沒有提供遠炬完整法定名稱、公司登記或其他品牌清單，因此不得寫成遠炬只有 ZIV。
+- 搜尋欄位只收 `遠炬公司`；不收陳本偉、傅崐萁、ZIV、運動眼鏡、董事長、支持、政治、旗下、唯一、代工或其他理由／關聯詞作 aliases／identifiers。沿用證據檔：`evidence/user-submissions/2026-08-13-ziv-sports-eyewear-screenshot.png`；SHA-256 `d6e5b0a091752265159543b461ddf56aa974d61a5f5c4b62e76a47ac1ef58ba7`。
+
 ## 2026-08-11 2chill／池宗亮／Philip Chi 與 Burger & Co：截圖個人避雷
 
 - Records: `2chill-philip-chi-screenshot-personal-20260811`、`burger-co-daan-2chill-screenshot-personal-20260811`；皆為 `personal` / `low`。使用者提供 Threads 截圖並以「避雷」指定主要人物 2chill／池宗亮／Philip Chi；截圖另具名 Burger & Co 店面，因此分開建立人物與店家紀錄。瘦子、吳卓源、柯文哲、民眾黨、簡幸甫只保留脈絡，不自動列入。
