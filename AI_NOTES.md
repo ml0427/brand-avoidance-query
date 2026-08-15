@@ -601,3 +601,10 @@
 - 口徑：只記錄使用者依圖片／名稱辨識與個人偏好作出的避買決定；不寫成已證實店家使用全部簡體字、違法、欺騙、服務品質問題、特定分店責任或所有分店／全品牌均有問題。
 - 證據檔：`evidence/user-submissions/2026-08-09-xinshijie-eyewear-screenshot.png`；SHA-256 `67bcaf15b67af300c39a56e546c1067b1a0fedede30951b772f8f64b765bc5c3`。
 - 搜尋欄位只收「新視界眼鏡」「新視界驗光所」及繁簡變體；不收簡體字、宣傳、眼鏡、驗光、Threads、Google Maps、地址、分店或其他理由／泛稱作 aliases／identifiers，也不設分店 identifier。
+
+## 2026-08-16 曹中議：課程宣傳與教召言論社群截圖個人避雷
+
+- Record：`cao-zhongyi-recall-social-screenshot-personal-20260816`；`personal` / `low`。使用者明確要求將第一張課程宣傳圖可辨識的「角力選手 曹中議 教練」列入個人避雷；收錄範圍限曹中議本人，不擴及天母豐盛協會、壯世代課程、場館、其他教練或角力運動。
+- 第一張截圖可讀到「天母豐盛協會 社區照顧關懷據點」、「壯世代 你我的健康新主張」及「角力選手 曹中議 教練」，只支撐圖片中的姓名／職稱文字線索與使用者避雷決定，不獨立確認目前身分或課程主辦關係。
+- 第二張社群截圖轉述一名正在教召的角力國手，畫面另可見 `0809_tsao`，內容涉及繳稅、國家安全、人民自由與兵役／教召義務；本輪未取得原始貼文、完整限時動態、可重現的帳號—人物身分橋接或本人回應，因此不可把曹中議與該帳號／截圖所稱人物直接視為同一人，也不可寫成已確認的政治立場、完整言論、發布責任、違法或法律責任。
+- 搜尋欄位只保留 `曹中議`；不把 `0809_tsao`、天母豐盛協會、壯世代、課程、角力、教召、兵役、繳稅、國家安全、人民自由、義務、政治或其他理由／脈絡詞放入 aliases／identifiers。證據檔：`evidence/user-submissions/2026-08-16-cao-zhongyi-course-and-social-screenshots.jpeg`（SHA-256 `a852946c75d63dd1134f4085da7a4e0cd0af2e267dc11dd495ad1273d15d5484`）；`evidence/user-submissions/2026-08-16-cao-zhongyi-recall-social-screenshot.png`（SHA-256 `941f2040bba359010a5f8c6d7427ed0fc6b1396c01e63e061150559e18c08608`）。
