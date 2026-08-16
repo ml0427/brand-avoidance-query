@@ -8,6 +8,8 @@ import { records as judicialPoliticsListsRecords } from "./judicial-politics-lis
 import { records as officialCoachRosterPersonalRecords } from "./official-coach-roster-personal.mjs";
 import { records as localBusinessTravelPersonalRecords } from "./local-business-travel-personal.mjs";
 import { records as religiousOrganizationsPersonalRecords } from "./religious-organizations-personal.mjs";
+import { records as religiousPublicFiguresPersonalRecords } from "./religious-public-figures-personal.mjs";
+import { records as religiousReleaseOutcomesPersonalRecords } from "./religious-release-outcomes-personal.mjs";
 
 export const riskRecords = [
   ...techSecurityServicesRecords,
@@ -20,4 +22,6 @@ export const riskRecords = [
   ...officialCoachRosterPersonalRecords,
   ...localBusinessTravelPersonalRecords,
   ...religiousOrganizationsPersonalRecords,
+  ...religiousPublicFiguresPersonalRecords,
+  ...religiousReleaseOutcomesPersonalRecords,
 ];
