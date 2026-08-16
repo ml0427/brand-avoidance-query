@@ -7,6 +7,7 @@ import { records as publicFiguresPoliticsRecords } from "./public-figures-politi
 import { records as judicialPoliticsListsRecords } from "./judicial-politics-lists.mjs";
 import { records as officialCoachRosterPersonalRecords } from "./official-coach-roster-personal.mjs";
 import { records as localBusinessTravelPersonalRecords } from "./local-business-travel-personal.mjs";
+import { records as religiousOrganizationsPersonalRecords } from "./religious-organizations-personal.mjs";
 
 export const riskRecords = [
   ...techSecurityServicesRecords,
@@ -18,4 +19,5 @@ export const riskRecords = [
   ...judicialPoliticsListsRecords,
   ...officialCoachRosterPersonalRecords,
   ...localBusinessTravelPersonalRecords,
+  ...religiousOrganizationsPersonalRecords,
 ];
