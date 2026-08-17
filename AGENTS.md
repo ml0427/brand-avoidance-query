@@ -1,6 +1,6 @@
 # brand-avoidance-query 專案 AI 規則
 
-本檔是此專案的 AI / Hermes 專案內記憶入口。品牌避雷專案的工作流、口徑、驗證與近期經驗應優先留在本 repo；不要把細節散到全域 memory、Obsidian 或 Hermes skill。
+本檔是此專案的 AI / Hermes 單一權威入口；工作流、口徑、驗證與近期專案狀態以本 repo 為準。
 
 ## 專案來源
 
@@ -16,7 +16,7 @@
 
 - 預設收尾：本機 `node scripts/validate-brand-records.mjs` PASS，且 `warnings: 0; errors: 0`；commit 並 push 到 `origin/main`。
 - 不預設確認 GitHub Pages / 線上版。只有使用者明確要求、或正在排查線上版問題時，才查 Pages 發布結果。
-- 不把 Obsidian/Hermes skill/global memory 當作此專案的主要記憶位置；那些地方最多只留索引或通用偏好。
+- Obsidian 與 global memory 最多只留索引或通用偏好；Hermes skill 可保留可重用導引與案例，但不得保存唯一的現行專案狀態，與本 repo 衝突時一律以本 repo 為準。
 
 ## 判斷原則
 
@@ -30,12 +30,13 @@
 
 - 使用者明確說「加入避雷」「列入避買」「直接避雷」「全品牌避雷」「這些都加進去」等，即構成寫入授權，不重複確認。只要求分析、重新判斷、查證、詢問是否合理或先預覽內容，不構成入庫授權。
 - 在持續進行中的避雷收錄對話裡，只有圖片但可辨識明確品牌、店家、商品、人物或組織時，可視為 `personal` intake；沒有避雷上下文時先辨識與分析，不靜默寫入。
+- 公眾人物若涉及重大刑事、兒少傷害、性暴力、暴力、掩蓋、貪腐或官方失職指控，圖片／社群貼文只授權查核與研究，不得僅憑截圖或主觀 `personal` 理由發布。必須以可歸屬的官方資料或具名可信來源確認人物身分、角色與來源實際支持的窄幅事實；找不到可歸屬來源就不入庫。
 - 先辨識實體、理由與範圍；預設採最小可確認範圍。單一商品、店家或分店不得自行擴張為全品牌、集團、其他分店、合作對象或關係人，除非使用者明確指定。
 - 分開三層：圖片／來源直接可見事實、使用者個人理由與道德判斷、外部可驗證事實與法律定性。主觀理由足以建立 `personal` 紀錄，但未證實內容必須明確歸屬於使用者或來源。
 - 寫入前檢查 `data/records/*.mjs` 與 `brands.json`；已有相同實體時優先補充既有紀錄。必要時以官方頁面、公開地圖或可信來源完成身分橋接，但橋接來源不自動證明爭議主張。
 - 證據圖存入 `evidence/user-submissions/YYYY-MM-DD-<slug>.<ext>` 並保存 SHA-256；同步更新 source record 與本地 `AI_NOTES.md`，記錄範圍、身分橋接、證據邊界、搜尋欄位原則與雜湊。
 - `name`、`aliases`、`identifiers` 只放穩定實體名稱與必要識別；理由詞、情緒字、平台名、分類詞、事件詞及未確認指控不得作搜尋鍵。台灣公司稅籍號碼與非必要個資一開始就不查、不存。
-- 完成 source record 後依序執行 merge、target validator、`node --test`、`git diff --check`；必要時加入 `--expect`／`--not-expect`。只有 `warnings: 0; errors: 0`、無重複 ID、測試通過且 diff 僅含預期檔案時，才能 commit 並 push 到 `origin/main`。
+- 完成 source record 後，依下方「驗證與提交」的單一權威清單執行，不在此另設或重複驗證門檻。
 - 回報需說明收錄對象、範圍、狀態、證據邊界、驗證結果與提交狀態，並明確區分個人避雷決定與客觀確認事實。
 
 ## 入庫口徑
@@ -57,20 +58,18 @@
 
 ## 驗證與提交
 
-新增／修改紀錄後至少跑：
+新增／修改紀錄後依序執行：
 
 ```bash
 node scripts/merge-risk-records.mjs
 node scripts/validate-brand-records.mjs --target-id <record-id> --positive <明確查詢>
-```
-
-提交前檢查：
-
-```bash
+node --test
 git status --short --branch
 git diff --stat
 git diff --check
 ```
+
+必要時加入 `--expect`／`--not-expect`。只有 validator `warnings: 0; errors: 0`、無重複 ID、測試通過且 diff 僅含預期檔案時，才能 commit 並 push 到 `origin/main`。
 
 只 stage 本專案需要的檔案；不要把外部 Obsidian、Hermes skill、profile memory 或憑證檔混進 repo commit。
 
