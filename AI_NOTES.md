@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-17 個人化提示詞精簡與專案規則集中
+
+- 個人化初始提示詞必須保留道德判斷觸發器，讓代理先辨識是否命中使用者的避雷標準；同時只用短索引導向本 repo `AGENTS.md`／`AI_NOTES.md`，不在提示詞重複詳細入庫、證據、查重、驗證與提交流程。
+- 避雷判斷以實質待遇、資訊透明、合理期待及對消費者／動物／相對弱勢一方的影響為先；未違法、條款可解釋或商家能自圓其說，不等於符合使用者的個人道德與友善標準。
+- 個人避雷理由與客觀事實定性必須分開：主觀風險／價值已足以建立 `personal` 紀錄，證據不足只限制違法、官方認定或客觀不當等定性，不得用來否定使用者選擇避開。
+- 專案耐久紀錄固定留在 source records、`AI_NOTES.md` 與 git history。
+
 ## 2026-08-14 財經戰將游智彬：公開社群帳號截圖個人避開
 
 - Record：`you-zhibin-finance-general-social-screenshot-personal-20260814`；`personal` / `low`。使用者明確要求將截圖頁首可辨識的「財經戰將游智彬」加入個人避雷；範圍限該公開帳號／顯示名稱，不擴及同名者、節目、合作對象或其他媒體帳號。
@@ -303,7 +310,6 @@
 
 - 預設收尾標準：本機 validator PASS，`warnings: 0; errors: 0`，commit 並 push 到 `origin/main`。
 - 不預設查 GitHub Pages / 線上 `brands.json`。只有使用者要求，或正在處理線上版故障，才確認 Pages。
-- 不預設同步 Pinecone；除非使用者要求或 legacy 查詢需要。
 
 ## 2026-07-06 台灣公司稅籍號碼不查不存
 
@@ -532,7 +538,7 @@
   - `foodnext-cunext-tong-yi-chan-food-education-city-personal`（《食力 foodNEXT》／厚策思維／童儀展）
   - `foodnext-2026-food-education-city-partners-personal`
   - `fong-food-foundation-ting-hsin-personal`
-- KI 檢索：Pinecone `hermes-hudui` 的 `ai-notes` / `default` 預查與本機 source records 查重，原先未發現食力、厚策思維、童儀展、灃食或2026合作單位的既有直接紀錄。
+- 本機 source records 查重原先未發現食力、厚策思維、童儀展、灃食或2026合作單位的既有直接紀錄。
 - 《食力》2026-07-22官方文章明載食育力城市大調查由《食力》發起，並逐一列出7個「合作單位／共創夥伴」：中華民國營養師公會全國聯合會、全國家長會長聯盟、國教行動聯盟、荒野保護協會、康善基金會、台灣兒童食育協會、食農教育點子膠囊。7單位全部依使用者要求列入 personal 避雷。
 - 官方資料顯示宜蘭、嘉義、桃園、台中、新北共5個五星城市；台中為首度五星、六都中表現亮眼，不是全台唯一五星或全台單獨第一。
 - 使用者後續再次明確指定厚策思維、童儀展、灃食也列入個人避雷，因而恢復為可搜尋目標：CTWANT報導稱《食力》為厚策思維所有、代表人童儀展；關鍵評論網讀者投書提及童儀展的味全／灃食任職，但同頁有頂新方反駁，引用時必須標明來源層級。
@@ -560,7 +566,7 @@
 4. validator 正查、必要 `--expect` / `--not-expect`、exact generic field guard PASS。
 5. 更新本檔必要口徑。
 6. commit + push origin/main。
-7. 不做 Pages / Pinecone，除非使用者要求。
+7. 不做 Pages，除非使用者要求。
 
 ## 2026-08-07 台灣網媒「轉載中國假新聞」截圖補錄
 
