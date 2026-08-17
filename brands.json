@@ -12924,22 +12924,29 @@
     "id": "wang-xiang-bodybuilder-china-taiwan-self-description-personal-20260817",
     "name": "健美選手王翔",
     "aliases": [
+      "王翔",
       "王翔 健美",
-      "王翔 健美選手"
+      "王翔 健美選手",
+      "IFBB PRO 王翔",
+      "Siang Wang"
     ],
-    "country": "",
+    "identifiers": [
+      "Instagram：0226_wang_ifbbpro",
+      "抖音：55794646235"
+    ],
+    "country": "台灣",
     "categories": [
       "政治／公眾人物",
       "運動／人物"
     ],
     "avoidReasons": [
       "使用者個人避開",
-      "使用者指出當事人自稱『中國台灣』",
+      "本人公開抖音自介使用『來自中國台灣』",
       "使用者提供社群截圖線索"
     ],
-    "confidence": "low",
+    "confidence": "high",
     "status": "personal",
-    "summary": "使用者明確要求將截圖所指的健美選手王翔列入個人避雷，並補充唯一理由是當事人自稱『中國台灣』。截圖可直接確認 Threads 帳號 ding_ggggggggg 的貼文文字指名『王翔』，內嵌畫面可見健美選手、職業賽舞台及 IFBB Professional League、Olympia Qualifier、FoYes、慕際中國職業賽等字樣；但單張截圖沒有直接顯示『中國台灣』四字，也沒有原始影片、完整發言、永久連結或足以獨立橋接影片人物與王翔本人的官方資料。因此本筆只記錄使用者依其所見作出的個人避雷決定，不把『中國台灣』自稱、冠軍、赴中國發展、招收中國學生、國籍、政治立場、帳號控制權或其他人物事實寫成已獨立確認。收錄範圍限截圖所指的健美選手王翔本人，不擴及貼文帳號、賽事、教練、學生、合作單位或同名者。",
+    "summary": "使用者明確要求將健美選手王翔列入個人避雷，唯一理由是其自稱『中國台灣』。2026-08-17 查核時，顯示名稱為『IFBB PRO 王翔』、抖音號 55794646235 的公開首頁自介直接寫『大家好我是來自中國台灣的IFBB PRO王翔』；Instagram 公開頁 @0226_wang_ifbbpro 的標題為『IFBB PRO🇹🇼』，自介含『2023 IFBB PRO CARD Men’s Physique』。IFBB Professional League 官方 2026 Huanji Harbin China Pro 成績另列 #14 Siang Wang、Taiwan, China、男子健體公開組第一名，與使用者截圖中的 014 號選手及王翔姓名形成身分橋接。此筆只把公開帳號第一人稱自介使用『來自中國台灣』記為直接可見事實；不擴張成其公開宣布台灣屬於中國、自稱中國人、加入政治組織、違法、全面赴中發展、招收中國學生或已取得奧賽資格等結論。收錄範圍限王翔本人，不擴及轉貼帳號、賽事、教練、學生、合作單位或同名者。",
     "sources": [
       {
         "title": "使用者提供 Threads 截圖 - 健美選手王翔線索",
@@ -12951,10 +12958,28 @@
         "title": "使用者明確指定 - 健美選手王翔個人避雷",
         "url": "",
         "date": "2026-08-17",
-        "note": "使用者在要求『加到避雷』後明確更正避雷理由為『因為自稱中國台灣』。這是使用者的個人政治價值判斷與入庫授權；在原始發言／影片未取得前，不作當事人確實使用該詞、國籍、政治立場或其他客觀事實定論。"
+        "note": "使用者在要求『加到避雷』後明確更正避雷理由為『因為自稱中國台灣』。這是使用者的個人政治價值判斷與入庫授權；後續已取得本人公開抖音自介的直接來源，但避雷判斷仍屬個人價值選擇，不是違法、官方處分或更廣泛政治主張的證明。"
+      },
+      {
+        "title": "抖音公開個人頁 - IFBB PRO 王翔",
+        "url": "https://www.douyin.com/user/MS4wLjABAAAAFd-tZbqNXo3PUomZJ6vme70XNrN8kvF5VLfw9_sCipvTUkzkfMKxbI8bjkC_n4dk",
+        "date": "查核日 2026-08-17",
+        "note": "未登入公開頁顯示名稱『IFBB PRO 王翔』、抖音號 55794646235，第一人稱自介可直接讀到『大家好我是來自中國台灣的IFBB PRO王翔』。頁面未顯示自介設定／修改日期，不能判定何時開始使用；本次只確認首頁文字，不宣稱其在影片或訪談中口頭說過同一句話。證據檔：evidence/user-submissions/2026-08-17-wang-xiang-douyin-profile-china-taiwan.png；SHA-256：0d6eb224b4d5bcb4577229bbbf50b5dfc2e0b93d52027c1f84f986abd8db9027。"
+      },
+      {
+        "title": "Instagram 公開個人頁 - @0226_wang_ifbbpro",
+        "url": "https://www.instagram.com/0226_wang_ifbbpro/",
+        "date": "查核日 2026-08-17",
+        "note": "公開頁標題為『IFBB PRO🇹🇼（@0226_wang_ifbbpro）』，頁面描述含『2023 IFBB PRO CARD Men’s Physique』。此來源用於公開帳號與男子健體 IFBB Pro 身分橋接；不支持『中國台灣』自介、政治立場或其他主張。"
+      },
+      {
+        "title": "IFBB Professional League - 2026 Huanji Harbin China Pro",
+        "url": "https://www.ifbbpro.com/competition/2026-huanji-china-pro-4/",
+        "date": "2026-08-16；查核日 2026-08-17",
+        "note": "官方頁列 Harbin, China、August 16, 2026；男子健體公開組成績列 #14 Siang Wang、Taiwan, China、Place 1。此來源支持賽事、英文姓名、選手號碼與名次的身分橋接；其中『Taiwan, China』是賽事欄位，不能改寫成本人英文自稱 China Taiwan，也不單獨證明政治立場或奧賽資格。"
       }
     ],
-    "aiNotes": "此筆是 screenshot-only／user-directed public-person personal record。使用者已明確更正：避雷核心只限其所指的『自稱中國台灣』，不可替換成赴中發展、參賽、招生或與中國客戶往來。截圖本身未顯示『中國台灣』四字，且未取得原始影片、發言全文、永久連結、官方賽事名單或本人帳號，因此只能說使用者因其認為當事人自稱『中國台灣』而決定個人避雷；不可說本專案已獨立證實該表述、政治認同、國籍、冠軍、赴中發展或招生。收錄範圍限截圖所指的健美選手王翔，不擴及 ding_ggggggggg、影片抖音帳號、賽事、教練、學生、合作單位或其他同名者。searchable fields 僅保留健美選手王翔、王翔 健美、王翔 健美選手；不要把中國台灣、中國、台灣、健美、職業賽、冠軍、IG、線下學生、Threads、抖音、FoYes、慕際、Olympia、IFBB 或其他理由／平台／賽事泛稱放入 aliases／identifiers。",
+    "aiNotes": "此筆是 user-directed public-person personal record，已由本人公開帳號與 IFBB 官方成績補足直接來源及身分橋接。可以說：查核日顯示名稱為『IFBB PRO 王翔』、抖音號 55794646235 的公開首頁，以第一人稱自介使用『來自中國台灣』；使用者因此決定個人避雷。不可改寫成王翔公開宣布台灣屬於中國、自稱中國人、加入政治組織、違法、全面赴中發展、招收中國學生、在影片／訪談口頭說過同一句話或已取得奧賽資格。IFBB 頁面的『Taiwan, China』是賽事欄位，不是本人英文自稱。收錄範圍限王翔本人，不擴及 ding_ggggggggg、賽事、教練、學生、合作單位或同名者。searchable fields 僅保留健美選手王翔、王翔、王翔 健美、王翔 健美選手、IFBB PRO 王翔、Siang Wang、0226_wang_ifbbpro、55794646235；不要把中國台灣、中國、台灣、健美泛稱、職業賽、冠軍、IG、線下學生、Threads、抖音、FoYes、慕際、Olympia、IFBB 或其他理由／平台／賽事泛稱作 standalone alias／identifier。",
     "lastReviewed": "2026-08-17"
   }
 ]
