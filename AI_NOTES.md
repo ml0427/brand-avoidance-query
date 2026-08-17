@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-17 健美選手王翔：使用者指出自稱「中國台灣」的個人避雷
+
+- Record：`wang-xiang-bodybuilder-china-taiwan-self-description-personal-20260817`；`personal` / `low`。使用者先要求將截圖目標加入避雷，隨即明確更正唯一核心理由為「因為自稱中國台灣」；不可擅自改成赴中國發展、參賽、收中國學生或與中國客戶往來本身。
+- 截圖可直接讀到 Threads 帳號 `ding_ggggggggg`、顯示名稱「健美」、相對時間「8小時」，及貼文指名王翔、稱其取得職業賽冠軍並詢問是否往中國發展／收中國線下學生；內嵌畫面可見健美選手、選手號碼 014、IFBB Professional League、Olympia Qualifier、FoYes、慕際中國職業賽與抖音浮水印。截圖沒有直接顯示「中國台灣」四字，也未提供原始影片、完整發言或永久連結，因此該自稱只保留為使用者指出的個人避雷理由，不作已獨立確認的公開表態、政治認同、國籍或帳號控制權定論。
+- 收錄範圍限截圖所指的健美選手王翔本人，不擴及 `ding_ggggggggg`、影片抖音帳號、賽事、教練、學生、合作單位或其他同名者。searchable fields 只保留 `健美選手王翔`、`王翔 健美`、`王翔 健美選手`；中國台灣、中國、台灣、健美泛稱、職業賽、冠軍、IG、線下學生、Threads、抖音、FoYes、慕際、Olympia、IFBB 與其他理由／平台／賽事詞均不得命中本筆。證據檔：`evidence/user-submissions/2026-08-17-wang-xiang-bodybuilder-china-taiwan-screenshot.png`；SHA-256 `b44e9f5aacb7b6a7b213475f565859e8a529f93a2c701baf7e0cfe7934ff7dca`。
+
 ## 2026-08-17 個人化提示詞精簡與專案規則集中
 
 - 個人化初始提示詞必須保留道德判斷觸發器，讓代理先辨識是否命中使用者的避雷標準；同時只用短索引導向本 repo `AGENTS.md`／`AI_NOTES.md`，不在提示詞重複詳細入庫、證據、查重、驗證與提交流程。
