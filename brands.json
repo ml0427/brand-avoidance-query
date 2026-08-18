@@ -12981,5 +12981,43 @@
     ],
     "aiNotes": "此筆是 user-directed public-person personal record，已由本人公開帳號與 IFBB 官方成績補足直接來源及身分橋接。可以說：查核日顯示名稱為『IFBB PRO 王翔』、抖音號 55794646235 的公開首頁，以第一人稱自介使用『來自中國台灣』；使用者因此決定個人避雷。不可改寫成王翔公開宣布台灣屬於中國、自稱中國人、加入政治組織、違法、全面赴中發展、招收中國學生、在影片／訪談口頭說過同一句話或已取得奧賽資格。IFBB 頁面的『Taiwan, China』是賽事欄位，不是本人英文自稱。收錄範圍限王翔本人，不擴及 ding_ggggggggg、賽事、教練、學生、合作單位或同名者。searchable fields 僅保留健美選手王翔、王翔、王翔 健美、王翔 健美選手、IFBB PRO 王翔、Siang Wang、0226_wang_ifbbpro、55794646235；不要把中國台灣、中國、台灣、健美泛稱、職業賽、冠軍、IG、線下學生、Threads、抖音、FoYes、慕際、Olympia、IFBB 或其他理由／平台／賽事泛稱作 standalone alias／identifier。",
     "lastReviewed": "2026-08-17"
+  },
+  {
+    "id": "ours-cafe-kaohsiung-instagram-profile-personal-20260818",
+    "name": "奧爾司咖啡",
+    "aliases": [
+      "奧爾司咖啡",
+      "奧爾司咖啡 Ours Café",
+      "奧爾司咖啡 Ours Cafe",
+      "ourscafe.kaohsiung"
+    ],
+    "identifiers": [
+      "Instagram：ourscafe.kaohsiung",
+      "Facebook：facebook.com/OursCafe62",
+      "地址：高雄市新興區中東街62號"
+    ],
+    "country": "台灣",
+    "categories": [
+      "餐飲",
+      "咖啡／甜點"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者依店家公開社群頁面截圖指定避雷",
+      "使用者提供 Instagram 截圖線索"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者提供 Instagram 公開頁面截圖並明確指定將『奧爾司咖啡』加入個人避雷。截圖可直接辨識頁名『奧爾司咖啡』、帳號 `ourscafe.kaohsiung`、圓形 Ours Café 圖樣、高雄市新興區中東街 62 號，以及秋節禮盒貼文；貼文可見『有人還沒有訂到秋節禮盒的嗎』、『不喜歡傳統中式秋節禮盒內容』、『小奧自家烘焙咖啡禮盒』與促購文字。使用者未另行說明具體避雷理由，因此本筆只記錄使用者依該公開頁面截圖作出的個人避開決定，不推定是禮盒內容、文案風格、促銷方式、商品品質、服務品質、違法或其他客觀問題。收錄範圍限截圖可辨識的該店家／公開帳號，不擴及其他同名咖啡店。",
+    "sources": [
+      {
+        "title": "使用者提供 Instagram 截圖 - 奧爾司咖啡公開頁面與秋節禮盒貼文",
+        "url": "",
+        "date": "2026-08-18",
+        "note": "截圖可辨識『奧爾司咖啡』、Instagram 帳號 `ourscafe.kaohsiung`、Ours Café 圖樣、高雄市新興區中東街 62 號、電話及 Facebook 路徑；畫面下方另顯示該帳號的秋節禮盒貼文與促購文字。電話屬非必要識別，未寫入 searchable fields。使用者未說明具體避雷理由；此來源只支撐店家／帳號識別、畫面可見貼文文字與使用者指定範圍，不支撐商品／服務品質、違法、官方認定或其他客觀負面結論。證據檔：`evidence/user-submissions/2026-08-18-ours-cafe-kaohsiung-instagram-profile-post.png`；SHA-256：`43767785c70b8dcda25d2c049441e161aa5ec23403371766a37fd51b7915a301`。"
+      }
+    ],
+    "aiNotes": "此筆是 screenshot-only / user-directed personal local-store record。使用者只說『加到避雷』，未明示具體原因；不得自行把秋節禮盒、文案語氣、促銷頻率、咖啡／甜點品質或其他畫面內容指定為避雷理由。可說截圖直接辨識奧爾司咖啡、ourscafe.kaohsiung、Ours Café 圖樣、公開地址與秋節禮盒貼文，使用者依該頁面指定個人避開。收錄限高雄市新興區中東街 62 號之店家／該公開帳號，不擴及其他同名店。searchable fields 僅保留完整店名、店名加英文、官方帳號、Facebook 公開路徑及必要地址；不要把秋節禮盒、中秋、咖啡、甜點、小木屋、自家烘焙、廢文、促銷、Instagram、電話或其他理由／平台／泛稱作 standalone alias／identifier。若使用者後續補充理由，應以其明示內容更新並刪除任何舊推測。",
+    "lastReviewed": "2026-08-18"
   }
 ]

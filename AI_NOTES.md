@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-18 奧爾司咖啡：公開社群頁面截圖個人避雷
+
+- Record：`ours-cafe-kaohsiung-instagram-profile-personal-20260818`；`personal` / `medium`。使用者提供 Instagram 公開頁面截圖並明確說「加到避雷」，但未另行說明具體理由；因此只記錄其依該頁面作出的個人避開決定，不自行推定是秋節禮盒內容、文案語氣、促銷方式、商品／服務品質或其他問題。
+- 截圖可直接辨識頁名「奧爾司咖啡」、帳號 `ourscafe.kaohsiung`、Ours Café 圖樣、高雄市新興區中東街 62 號、電話、Facebook 路徑與下方秋節禮盒貼文。電話屬非必要識別，不寫入 searchable fields；收錄範圍限該地址之店家／該公開帳號，不擴及其他同名咖啡店，也不把貼文內容升格為違法、官方認定或客觀負面事實。
+- Searchable fields 僅保留 `奧爾司咖啡`、完整店名＋英文變體、`ourscafe.kaohsiung`、`facebook.com/OursCafe62` 與必要地址；秋節禮盒、中秋、咖啡、甜點、小木屋、自家烘焙、廢文、促銷、Instagram、電話及其他理由／平台／泛稱不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-18-ours-cafe-kaohsiung-instagram-profile-post.png`；SHA-256 `43767785c70b8dcda25d2c049441e161aa5ec23403371766a37fd51b7915a301`。
+
 ## 2026-08-17 健美選手王翔：本人抖音自介「來自中國台灣」的個人避雷
 
 - Record：`wang-xiang-bodybuilder-china-taiwan-self-description-personal-20260817`；`personal` / `high`。使用者先要求將截圖目標加入避雷，隨即明確更正唯一核心理由為「因為自稱中國台灣」；不可擅自改成赴中國發展、參賽、收中國學生或與中國客戶往來本身。
