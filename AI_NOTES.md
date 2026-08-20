@@ -2,6 +2,11 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-20 新莊復興路三段「專業看護中心」：名片圖片個人避雷
+
+- Record：`professional-care-center-xinzhuang-fuxing-road-screenshot-personal-20260820`；`personal` / `medium`。使用者隨名片圖片明確表示「避雷」，但未另行說明具體原因；因此只記錄其依名片對該特定服務作個人避開，不從病房場景、服務文案、聯絡人、電話或 QR 推定照護品質、收費、資格、合法性、詐騙或其他事件。
+- 名片可辨識名稱「專業看護中心」、新北市新莊區復興路三段 103 號，以及翻身拍背、灌食抽痰、中風復健、愛心照顧、24H 等自述服務；另有陳姓聯絡人、手機號碼與 LINE QR，但這些不作 searchable identifier。名稱高度泛用，僅以必要地址區分該服務，不擴及其他同名中心、地址內其他單位、個別看護或醫療院所。證據檔：`evidence/user-submissions/2026-08-20-xinzhuang-professional-care-center-card.png`；SHA-256 `cb3dab1cdb3a5dca551bcf912adcf9facc3144eed02f1f37c005f3a1a5651d28`。
+
 ## 2026-08-20 董氏基金會／台灣拒菸聯盟：《尼古喵喵》查處倡議的個人避雷
 
 - Records：`john-tung-foundation-yani-neko-animation-enforcement-personal-20260820`、`taiwan-tobacco-free-alliance-yani-neko-animation-enforcement-personal-20260820`；兩筆皆為 `personal` / `high`。使用者明確要求把財團法人董氏基金會與台灣拒菸聯盟分別加入避雷，理由為「真人不抓來抓動畫有病」；此句只保存為使用者對倡議／查處優先順序的價值判斷，不作兩組織具有逮捕權、從未處理真人菸害或客觀精神狀態之事實宣稱。
