@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-21 池上鄉農會湯泡飯－菠菜芙蓉：湯塊包產地含中國的單品避買
+
+- Record：`chishang-farmers-association-spinach-egg-rice-soup-china-ingredient-personal-20260821`；`personal` / `high`。使用者再次明確確認採買規則：食品圖片若已確定原產地或食品配料來源包含中國，就直接加入個人避買，不必先追查是否違法或等待主管機關處分。
+- 使用者截圖中的商品標籤可讀到品名「湯泡飯－菠菜芙蓉」、台東縣池上鄉農會、淨重 129 公克、成分欄「湯塊包（產地：台灣、中國）」及整體產品「原產地：台灣」。直接證據只確認這款商品所含湯塊包的產地標示涵蓋中國；標籤未逐項指出哪一種湯塊包成分來自中國，也不支撐整桶成品在中國製造、台灣原產地標示違法、食安、禁售或池上鄉農會其他商品含中國成分。
+- 收錄範圍限這款具名湯泡飯，不擴及池上鄉農會全商品。searchable fields 只保留農會名稱＋具名商品的組合及產品全名；中國、台灣、湯塊包、湯泡飯、農會、菠菜、食品、原產地等理由／分類泛稱不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-21-chishang-farmers-association-spinach-egg-rice-soup-china-ingredient.png`；SHA-256 `87a766fb6ff72fb08c1bf733502eb37b388858dacc7c087b458a8d526ad7be0f`。
+
 ## 2026-08-20 新莊復興路三段「專業看護中心」：名片圖片個人避雷
 
 - Record：`professional-care-center-xinzhuang-fuxing-road-screenshot-personal-20260820`；`personal` / `medium`。使用者隨名片圖片明確表示「避雷」，但未另行說明具體原因；因此只記錄其依名片對該特定服務作個人避開，不從病房場景、服務文案、聯絡人、電話或 QR 推定照護品質、收費、資格、合法性、詐騙或其他事件。
