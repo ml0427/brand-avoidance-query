@@ -18,6 +18,52 @@
 
 export const records = [
   record({
+    id: "red-ant-seafood-bbq-anping-indoor-smoking-thread-personal-20260821",
+    name: "紅螞蟻海鮮碳烤（安平店）",
+    aliases: [
+      "紅螞蟻海鮮碳烤",
+      "紅螞蟻海鮮碳烤 安平店",
+      "紅螞蟻海鮮碳烤安平店",
+      "紅螞蟻海鮮碳烤 安平",
+    ],
+    identifiers: ["地址：臺南市安平區安平路60號"],
+    country: "台灣",
+    categories: ["餐飲", "海鮮／燒烤"],
+    avoidReasons: [
+      "使用者個人避開",
+      "原發文者指稱餐廳室內密閉空間有人抽菸",
+      "原發文者指稱向店員反映後未獲妥善處理",
+      "二手煙用餐風險",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者提供的兩張 Threads 截圖，以及可直接讀回的公開原帖，顯示帳號 `lucky494204` 自述在台南某餐廳用餐時聞到濃重煙味，看到有人在室內密閉空間、冷氣出風口附近抽菸；發文者並稱向店員反映後，店員回覆『你隔壁也在抽啊』。原帖照片可見一名坐在餐桌旁的人手持香菸靠近嘴部；相連的第二則貼文以『紅螞蟻海鮮碳烤』為主題並寫『避雷』。回覆帳號 `linlin_o612` 稱『這間是安平的』，Google 地圖另列同名安平店於臺南市安平區安平路 60 號，因此本筆暫以安平店作低信心身分橋接。安平分店資訊不是原作者或店家親自確認；本筆只記錄使用者個人避開、原發文者陳述與照片可見內容，不將其寫成主管機關認定、已裁罰、店家承認、所有分店皆默許室內抽菸或其他已獨立證實的法律／服務事實。",
+    sources: [
+      source(
+        "Threads - lucky494204 台南餐廳室內抽菸用餐經驗貼文",
+        "https://www.threads.com/@lucky494204/post/DcRAEEvgdbo",
+        "2026-08-21",
+        "公開原帖自述在台南餐廳用餐時聞到濃重煙味，看到一組人在室內密閉空間、冷氣出風口附近抽菸；發文者另稱向店員反映後，得到『你隔壁也在抽啊』的回覆。貼文照片可見餐桌旁一人手持香菸靠近嘴部，但單憑照片不能獨立確認拍攝時間、地址、店員回應、現場完整狀況或法律責任。使用者截圖證據：`evidence/user-submissions/2026-08-21-red-ant-seafood-bbq-indoor-smoking-thread-part-1.png`；SHA-256：`8e252613bb95943d8348ea4e1ad8129281500e5c3f360c29f2f9cc0dd1dda61e`。",
+      ),
+      source(
+        "Threads - lucky494204 紅螞蟻海鮮碳烤避雷續帖與公開回覆",
+        "https://www.threads.com/@lucky494204/post/DcRBXr-AdxR",
+        "2026-08-21",
+        "相連貼文以『紅螞蟻海鮮碳烤』為主題並寫『避雷』，可將前一則用餐陳述連到該店名。公開回覆中，`linlin_o612` 稱『這間是安平的』；另有使用者詢問是永康或安平。『這間是安平的』是第三方回覆，不是原作者或店家確認，因此只作低信心分店線索。使用者截圖證據：`evidence/user-submissions/2026-08-21-red-ant-seafood-bbq-indoor-smoking-thread-part-2.png`；SHA-256：`a23bb59ccc95538cef6af275f0b3de93892a0dc89ad77786d3d19d9592ea5e7c`。",
+      ),
+      source(
+        "Google 地圖 - 紅螞蟻海鮮碳烤安平店公開商家資料",
+        "https://www.google.com/maps/search/?api=1&query=%E7%B4%85%E8%9E%9E%E8%9F%BB%E6%B5%B7%E9%AE%AE%E7%A2%B3%E7%83%A4+%E5%AE%89%E5%B9%B3%E8%B7%AF60%E8%99%9F",
+        "2026-08-21",
+        "Google 地圖公開商家結果列出『紅螞蟻海鮮碳烤』安平據點，地址為臺南市安平區安平路 60 號。此來源只支持同名安平店的存在與地址，不支持原帖事件確實發生於此處，也不支持店家默許、違法、裁罰或所有分店狀況。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-plus-public-post / user-directed personal local-store record。兩則 Threads 公開貼文可直接把發文者的室內抽菸／店員回應陳述連到『紅螞蟻海鮮碳烤』店名，但安平分店只由第三方回覆『這間是安平的』與同名地圖資料橋接，原作者與店家均未在可見內容中確認分店，故 confidence 維持 low。可說原發文者指稱在店內遭遇二手煙並對店員處理不滿，使用者據此個人避開；不可寫成照片已證明完整事件、店家承認、主管機關認定／裁罰、安平店已證實違法、永康店也發生或品牌所有分店一律默許抽菸。searchable fields 僅保留完整店名、安平店變體及必要地址；不要把台南、安平、餐廳、海鮮、碳烤、室內、抽菸、二手煙、禁菸、店員、避雷、Threads、發文帳號、留言帳號或其他理由／平台／泛稱作 standalone alias／identifier。若後續取得原作者或店家對分店的明確確認，才可提高分店身分信心。",
+    lastReviewed: "2026-08-21",
+  }),
+  record({
     id: "chishang-farmers-association-spinach-egg-rice-soup-china-ingredient-personal-20260821",
     name: "池上鄉農會 湯泡飯－菠菜芙蓉",
     aliases: [

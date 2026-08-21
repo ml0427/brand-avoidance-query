@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-21 紅螞蟻海鮮碳烤安平店：室內抽菸與店員處理陳述的個人避開
+
+- Record：`red-ant-seafood-bbq-anping-indoor-smoking-thread-personal-20260821`；`personal` / `low`。使用者提供兩張 Threads 串文截圖；可直接讀回帳號 `lucky494204` 的原帖與續帖。原帖自述在台南某餐廳室內密閉空間看到有人抽菸、聞到濃重煙味，並稱向店員反映後得到「你隔壁也在抽啊」的回覆；續帖以「紅螞蟻海鮮碳烤」為主題並寫「避雷」，支持店名橋接。
+- 分店線索只來自同串第三方帳號 `linlin_o612` 回覆「這間是安平的」，以及 Google 地圖列同名安平店於臺南市安平區安平路 60 號；原作者與店家沒有在可見內容中親自確認分店，因此紀錄雖暫以安平店命名，confidence 維持 low。不得寫成安平店已獨立證實違法、主管機關已認定／裁罰、店家承認、永康店也發生，或所有分店均默許室內抽菸。
+- Searchable fields 僅完整店名、安平店變體與必要地址；台南、安平、餐廳、海鮮、碳烤、室內、抽菸、二手煙、禁菸、店員、避雷、Threads、帳號及其他理由／平台／泛稱不得作 standalone alias／identifier。證據：`evidence/user-submissions/2026-08-21-red-ant-seafood-bbq-indoor-smoking-thread-part-1.png`（SHA-256 `8e252613bb95943d8348ea4e1ad8129281500e5c3f360c29f2f9cc0dd1dda61e`）、`evidence/user-submissions/2026-08-21-red-ant-seafood-bbq-indoor-smoking-thread-part-2.png`（SHA-256 `a23bb59ccc95538cef6af275f0b3de93892a0dc89ad77786d3d19d9592ea5e7c`）。
+
 ## 2026-08-21 池上鄉農會湯泡飯－菠菜芙蓉：湯塊包產地含中國的單品避買
 
 - Record：`chishang-farmers-association-spinach-egg-rice-soup-china-ingredient-personal-20260821`；`personal` / `high`。使用者再次明確確認採買規則：食品圖片若已確定原產地或食品配料來源包含中國，就直接加入個人避買，不必先追查是否違法或等待主管機關處分。
