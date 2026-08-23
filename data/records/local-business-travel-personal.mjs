@@ -18,6 +18,66 @@
 
 export const records = [
   record({
+    id: "exride-zhangxue-820rr-promotion-personal-20260823",
+    name: "EXRIDE 極限騎士專賣",
+    aliases: [
+      "EXRIDE",
+      "EXride",
+      "EXride 極限騎士專賣",
+      "極限騎士專賣",
+      "極限專賣EXshop",
+      "EXshop",
+      "Extshop",
+      "銘鋐科技股份有限公司",
+    ],
+    identifiers: ["exshop.com.tw", "exshop_tw"],
+    country: "台灣",
+    categories: ["店家／品牌", "機車用品／零售"],
+    avoidReasons: [
+      "使用者個人避開",
+      "與張雪機車 820-RR 有直接公開推廣／展示關聯",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者詢問截圖中的 EXRIDE 極限騎士專賣是否為『820 機車的車行』，並指定若有關聯即避雷。EXRIDE 已驗證 Facebook 帳號於 2026-07-01 直接宣布張雪機車 820-RR 將在其『極限一繩 X MIA』2026 重機展攤位現身，要求現場不要跨車，並以限量張雪機車周邊作抽獎；這足以確認 EXRIDE 對 820-RR 有直接宣傳、展示與活動推廣關聯。知新聞 2026-08-12 另具名引述 EXRIDE 對遭查扣的同一輛 820-RR 表示其以零件名義正式報關、合法繳稅，僅作賽道玩具或展示品，進一步支持其與該車事件的公開關聯。經濟部官方新聞確認曾就業者以中國大陸重型機車零組件分拆輸入、在臺組裝成車的案件查扣車輛，但官方稿未公布業者名稱。此筆因此依使用者標準將 EXRIDE 品牌／店家列入個人避雷；不把它寫成已證實的 820-RR 正式授權經銷商、整車販售車行、進口商、車主、組裝者或新北涉案營業場所，也不認定其已受裁罰、構成走私或其他法律責任。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - EXRIDE 極限騎士專賣／exshop_tw",
+        "",
+        "2026-08-23",
+        "截圖中的 Threads 貼文展示 exshop_tw 公開 profile，名稱為『EXRIDE 極限騎士專賣』，自介列運動相機、藍牙耳機、行車記錄器、手機架、中壢門市、台北門市、安裝服務及 linktr.ee/exshop_tw；貼文者稱其為車商並顯示已封鎖帳號。此來源可支撐使用者指定的品牌／帳號身分與 intake 脈絡，但截圖本身沒有顯示 820-RR、授權經銷、進口、車主、組裝、查扣或違法證據。證據檔：evidence/user-submissions/2026-08-23-exride-820rr-thread-screenshot.png；SHA-256：b3206d79faacbd4eb825cb9994c7bdeaa016cb4edaab2b83dd913a67568133c1。",
+      ),
+      source(
+        "EXride 極限騎士專賣已驗證 Facebook 貼文 - 張雪機車 820-RR 重機展展示",
+        "https://www.facebook.com/Extshop/posts/1461510246008325/",
+        "2026-07-01",
+        "已驗證官方帳號直接寫『沒錯，就是張雪機車的 820-RR 要現身了』，並稱老闆要求把車顧好、提醒不要隨便跨車；列出『極限一繩 X MIA 攤位』D7-03／D7-05，現場抽出限量張雪機車周邊，標籤含 #820RR、#EXRIDE、#張雪機車。此第一方來源直接確認 EXRIDE 對 820-RR 的宣傳、展示及活動推廣關聯；它沒有自稱正式授權經銷商、進口商、車主或整車販售商。",
+      ),
+      source(
+        "EXRIDE 極限騎士專賣官方網站 - 店面資訊與營業時間",
+        "https://www.exshop.com.tw/pages/aboutex",
+        "查核日 2026-08-23",
+        "官方頁標題為『店面資訊與營業時間』，列出台北店與中壢店；網站頁尾將營運公司列為銘鋐科技股份有限公司，首頁品牌標題為『極限騎士專賣EXRIDE』。此來源支撐品牌、官方網域、門市零售身分與公司名稱橋接；本專案不保存或發布稅籍號碼，也不把門市地址拿來推定經濟部所稱新北市涉案場所。",
+      ),
+      source(
+        "知新聞 - 張雪機車麗寶賽車場首試片！『太高調』遭查扣？重機車友正反激辯",
+        "https://www.knews.com.tw/news/3925DBB69CE96441A4847BAA812E2857",
+        "2026-08-12",
+        "報導具名引述臉書粉專『EXride 極限騎士專賣』表示，該車輛以零件名義正式報關、合法繳稅，且僅作為不掛牌、不上公路的賽道玩具或展示品，並質疑經濟部認定方式。此來源支持 EXRIDE 對遭查扣 820-RR 的公開回應與事件關聯；引述屬媒體轉述的店家說法，不等同官方認定其進口、所有、組裝或違法。",
+      ),
+      source(
+        "經濟部國際貿易署 - 經濟部聯手跨部會查緝 防杜中國大陸重型機車違規輸入",
+        "https://www.moea.gov.tw/MNS/populace/news/News.aspx?kind=1&menu_id=40&news_id=123602",
+        "2026-08-11",
+        "官方新聞確認聯合查緝小組於 8 月 7 日及 11 日赴新北市涉案營業場所查緝，當場查獲重型機車並依海關緝私條例扣押；經濟部稱涉案業者疑似將中國大陸重型機車拆件分批輸入後在臺組裝。官方稿沒有公布業者、車款、店家或 EXRIDE 名稱，因此只用來確認查扣事件與官方法律口徑，不作 EXRIDE 身分或責任歸屬來源。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 source-backed / user-directed shop-brand personal record。可說 EXRIDE 官方已驗證 Facebook 帳號直接宣傳張雪機車 820-RR 在其重機展攤位展示並抽張雪周邊，知新聞另具名引述 EXRIDE 為遭查扣的同一輛車辯護，因此可確認與 820-RR 有直接公開推廣／展示關聯，使用者依此指定避雷。不可寫成已證實正式授權經銷、整車販售、進口商、車主、組裝者、新北涉案營業場所、走私、違法定讞或已受裁罰；經濟部官方稿未具名 EXRIDE。收錄範圍限 EXRIDE 品牌／店家，不擴及極限一繩、MIA、展覽主辦方、媒體、一般員工、合作品牌或所有機車用品店。searchable fields 僅 EXRIDE／EXride、極限騎士專賣、極限專賣EXshop、EXshop／Extshop、銘鋐科技股份有限公司、exshop.com.tw 與 exshop_tw；不要把 820、820RR、820-RR、張雪機車、中國重機、重機展、車行、正式報關、合法繳稅、賽道玩具、展示品、查扣、走私、違法、Facebook、Threads 或其他理由／事件／平台／泛稱作 standalone alias／identifier。",
+    lastReviewed: "2026-08-23",
+  }),
+  record({
     id: "hengju-construction-future-city-bus-ad-personal-20260822",
     name: "恆聚建設",
     aliases: [

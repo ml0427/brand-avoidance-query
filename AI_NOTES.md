@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-23 EXRIDE 極限騎士專賣：張雪機車 820-RR 直接推廣關聯的個人避雷
+
+- Record：`exride-zhangxue-820rr-promotion-personal-20260823`；`personal` / `high`。使用者詢問截圖中的 EXRIDE 是否為「820 機車的車行」，並指定若有關聯即避雷。EXRIDE 已驗證 Facebook 帳號 2026-07-01 直接宣布張雪機車 820-RR 將在其「極限一繩 X MIA」重機展攤位展示，提醒不要跨車並以張雪機車周邊抽獎；知新聞 2026-08-12 另具名引述 EXRIDE 對遭查扣的同一輛 820-RR 表示其以零件名義正式報關、合法繳稅，僅作賽道玩具／展示品。因此可確認直接公開推廣／展示與事件回應關聯，足以依使用者標準列入個人避雷。
+- 證據邊界：目前沒有來源證明 EXRIDE 是 820-RR 的正式授權經銷商、整車販售車行、進口商、車主或組裝者。經濟部官方 2026-08-11 新聞確認新北市涉案營業場所查扣中國大陸重型機車拆件輸入／在臺組裝案件，但未具名 EXRIDE、車款或店家；EXRIDE 官網所列門市位於台北市與桃園市，不可自行把任何門市推定為該新北涉案場所，也不可寫成 EXRIDE 已被裁罰、走私或違法定讞。
+- 收錄範圍限 EXRIDE 品牌／店家，不擴及極限一繩、MIA、展覽主辦方、媒體、一般員工、合作品牌或所有機車用品店。searchable fields 僅 EXRIDE／EXride、極限騎士專賣、極限專賣EXshop、EXshop／Extshop、銘鋐科技股份有限公司、exshop.com.tw 與 exshop_tw；820、820RR、820-RR、張雪機車、中國重機、重機展、車行、查扣、走私、違法、Facebook、Threads 等理由／事件／平台／泛稱不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-23-exride-820rr-thread-screenshot.png`；SHA-256 `b3206d79faacbd4eb825cb9994c7bdeaa016cb4edaab2b83dd913a67568133c1`。
+
 ## 2026-08-22 恆聚建設／恆聚未來城：裸身意象公車廣告的個人避雷
 
 - Record：`hengju-construction-future-city-bus-ad-personal-20260822`；`personal` / `high`。使用者提供屏東客運公車車身廣告照片並明確表示「放裸女打廣告有夠噁心，恆聚建設」，因此將使用者所指的恆聚建設品牌列入個人避雷；理由是使用近似裸身女性圖像宣傳建案所引發的價值反感，不延伸成違法、色情、歧視或其他法律定性。
