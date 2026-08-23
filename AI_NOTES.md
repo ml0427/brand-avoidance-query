@@ -2,11 +2,11 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
-## 2026-08-23 碎碎念記帳 NaggingMoney：資料蒐集與政治內容疑慮的個人避雷
+## 2026-08-23 碎碎念記帳 NaggingMoney：政治內容／立場為主要理由的個人避雷
 
-- Record：`naggingmoney-app-data-collection-political-content-personal-20260823`；`personal` / `high`。使用者提供 Threads 串文截圖並明確要求避雷此記帳 App。官方 Google Play 與 Apple App Store 將名稱精確橋接到 Android 套件 `net.eclipse_tech.naggingmoney`、iOS bundle `net.eclipse-tech.NaggingMoney`、App Store ID `1018283816` 與官方網域 `naggingmoney.com`；Google Play 開發者顯示 Eclipse Technology, Inc.，Apple seller 顯示 Teng Wang Chang。收錄範圍限 App 本身，不擴及兩個商店主體的其他產品。
-- 官方隱私權政策聲明適用網站與 App，明列可能蒐集會員帳號、帳戶資訊、記帳紀錄、年齡、性別、出生年月日、消費模式、Cookie、IP、瀏覽器與裝置足跡；並可能使用 Google Analytics／廣告功能、個人化內容與廣告，以及與服務供應商、行銷合作夥伴或廣告商分享部分資料。這可直接支持個人財務／消費資料蒐集與廣告利用疑慮，但不得改寫成已證實資料外洩、偷偷出售個資、違法或遭主管機關裁罰。
-- 截圖可見帳號 `vladiv1024` 引用自己標示「碎碎念記帳 26/3/3」的貼文並寫「我決定刪掉這個記帳 APP」；其另主張 App 收集後台數據、具明顯政治立場，可能使資產狀況、購物習慣與興趣資訊外流。政治立場、實際後台傳輸與外流目前沒有完整原始通知、App 內畫面、封包分析或獨立技術證據，只能記為貼文者主張及使用者個人避雷理由。searchable fields 僅 App 完整／常用名稱、Android／iOS 套件、App Store ID 與官方網域；開發者／seller 名稱、記帳、App、資料收集、後台、外流、政治、廣告、Threads、帳號等不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-23-naggingmoney-threads-screenshot.png`；SHA-256 `29219eef3342515dfb8b18c7f8faddfa7e944bf4bd83b464d1eaa8f377723487`。
+- Record：`naggingmoney-app-data-collection-political-content-personal-20260823`；`personal` / `high`。使用者提供 Threads 串文截圖並明確要求避雷此記帳 App，後續更正「政治立場才是避雷重點」；因此主要理由固定為不接受記帳工具夾帶政治內容／立場，資料蒐集與廣告利用只作次要風險背景。官方 Google Play 與 Apple App Store 將名稱精確橋接到 Android 套件 `net.eclipse_tech.naggingmoney`、iOS bundle `net.eclipse-tech.NaggingMoney`、App Store ID `1018283816` 與官方網域 `naggingmoney.com`；收錄範圍限 App 本身，不擴及開發者／seller 的其他產品。
+- 截圖可見帳號 `vladiv1024` 引用自己標示「碎碎念記帳 26/3/3」的貼文並寫「我決定刪掉這個記帳 APP」；嵌入畫面可見「王定宇又陷緋聞風波了，說又呢…」等政治人物相關殘句，本次串文並主張 App 具明顯政治立場。這可忠實支撐使用者的個人避雷理由，但因畫面裁切且未取得完整原始通知、App 內畫面全貌或內容產生機制，不可斷言特定政黨傾向、文字必為 App 主動推播或開發者正式立場。
+- 官方隱私權政策另明列可能蒐集會員帳號、帳戶資訊、記帳紀錄、年齡、性別、出生年月日、消費模式、Cookie、IP、瀏覽器與裝置足跡，並可能用於 Google Analytics／廣告、個人化內容及部分資料分享；此為次要風險背景，不得改寫成已證實資料外洩、偷偷出售個資、違法或遭主管機關裁罰。searchable fields 僅 App 完整／常用名稱、Android／iOS 套件、App Store ID 與官方網域；開發者／seller 名稱、記帳、App、資料收集、後台、外流、政治、王定宇、廣告、Threads、帳號等不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-23-naggingmoney-threads-screenshot.png`；SHA-256 `29219eef3342515dfb8b18c7f8faddfa7e944bf4bd83b464d1eaa8f377723487`。
 
 ## 2026-08-23 EXRIDE 極限騎士專賣：張雪機車 820-RR 直接推廣關聯的個人避雷
 

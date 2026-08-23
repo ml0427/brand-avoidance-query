@@ -229,19 +229,19 @@ export const records = [
     categories: ["App／數位服務", "金融服務"],
     avoidReasons: [
       "使用者個人避開",
-      "個人財務／消費資料蒐集與廣告利用疑慮",
-      "政治內容／立場疑慮（來源為截圖貼文者主張）",
+      "政治內容／立場疑慮（使用者指定主要理由）",
+      "個人財務／消費資料蒐集與廣告利用疑慮（次要風險背景）",
     ],
     confidence: "high",
     status: "personal",
     summary:
-      "使用者依 Threads 串文截圖指定避雷「碎碎念記帳 NaggingMoney」。Google Play 與 Apple App Store 可將截圖中的 App 名稱精確橋接到 Android 套件 net.eclipse_tech.naggingmoney、iOS bundle net.eclipse-tech.NaggingMoney 與 App Store ID 1018283816。官方隱私權政策明列可能蒐集會員帳號、帳戶資訊、記帳紀錄、年齡、性別、出生年月日、消費模式、Cookie、IP、瀏覽器與裝置足跡，並可能使用 Google Analytics／廣告功能、提供個人化內容與廣告，以及與服務供應商、行銷合作夥伴或廣告商分享部分資料。這足以支持使用者對個人財務與消費資料蒐集／廣告利用的風險顧慮；但不等於已證實資料外洩、未經同意出售個資或違法。截圖貼文另主張 App 有明顯政治立場及可能使資產、購物習慣、興趣資訊外流；目前沒有取得完整原始通知或獨立技術證據，因此只保留為貼文者主張及使用者個人避雷理由。收錄範圍限本 App，不擴大到開發者其他產品、商店平台、Threads 發文者或留言者。",
+      "使用者依 Threads 串文截圖指定避雷「碎碎念記帳 NaggingMoney」，並後續明確更正：政治立場才是主要避雷重點，資料蒐集只是次要風險背景。截圖所引述的原貼文寫「我決定刪掉這個記帳 APP」，嵌入畫面可見「王定宇又陷緋聞風波了，說又呢…」等政治人物相關殘句；本次串文另主張 App 具明顯政治立場。這足以忠實記錄使用者因不接受記帳工具夾帶政治內容／立場而避雷，但因畫面裁切且未取得完整原始通知、App 內畫面全貌或內容產生機制，不能客觀斷言特定政黨傾向、文字必為 App 主動推播或開發者正式立場。Google Play 與 Apple App Store 可將 App 名稱精確橋接到 Android 套件 net.eclipse_tech.naggingmoney、iOS bundle net.eclipse-tech.NaggingMoney 與 App Store ID 1018283816。官方隱私權政策另明列多類個人、帳務、消費與裝置／瀏覽資料蒐集及廣告利用方式，作為次要風險背景；但不等於已證實資料外洩、未經同意出售個資或違法。收錄範圍限本 App，不擴大到開發者其他產品、商店平台、Threads 發文者或留言者。",
     sources: [
       source(
         "使用者提供 Threads 串文截圖 - 碎碎念記帳 NaggingMoney",
         "",
         "2026-08-23",
-        "截圖可見帳號 vladiv1024 引用自己標示為「碎碎念記帳 26/3/3」的貼文，寫「我決定刪掉這個記帳 APP」；本次文字另主張該 App 收集後台數據、具明顯政治立場，並擔憂資產狀況、購物習慣與興趣愛好等資訊外流。畫面可直接證明的是貼文者如此陳述及使用者指定避雷，不能單靠截圖證明實際後台傳輸、外洩、政治內容來源或技術責任。證據檔：evidence/user-submissions/2026-08-23-naggingmoney-threads-screenshot.png；SHA-256 29219eef3342515dfb8b18c7f8faddfa7e944bf4bd83b464d1eaa8f377723487。",
+        "截圖可見帳號 vladiv1024 引用自己標示為「碎碎念記帳 26/3/3」的貼文，寫「我決定刪掉這個記帳 APP」；嵌入畫面可見「王定宇又陷緋聞風波了，說又呢…」等政治人物相關殘句，本次文字另主張該 App 具明顯政治立場，並提及後台數據與資訊外流疑慮。使用者於 2026-08-23 後續明確更正政治立場才是避雷重點。畫面可直接證明的是貼文者如此陳述、嵌圖出現上述殘句及使用者的個人避雷理由；不能單靠截圖確認完整通知內容、特定政黨傾向、文字必為 App 主動推播、開發者正式立場、實際後台傳輸或資料外洩。證據檔：evidence/user-submissions/2026-08-23-naggingmoney-threads-screenshot.png；SHA-256 29219eef3342515dfb8b18c7f8faddfa7e944bf4bd83b464d1eaa8f377723487。",
       ),
       source(
         "Google Play - 碎碎念記帳 NaggingMoney",
@@ -263,7 +263,7 @@ export const records = [
       ),
     ],
     aiNotes:
-      "此筆是 source-backed / user-directed App personal record。可客觀說官方隱私權政策揭露蒐集與利用多類個人、帳務、消費及裝置／瀏覽資料，並可能用於分析、個人化內容、廣告及部分資料分享；不可把政策揭露改寫成已發生資料外洩、偷偷出售個資、監控特定政治傾向、違法或主管機關裁罰。政治立場與資產／購物／興趣資訊外流目前只來自使用者截圖中的貼文者主張，未取得完整原始通知、App 內畫面、封包分析或獨立技術報告。收錄範圍限碎碎念記帳 NaggingMoney App，不擴及 Eclipse Technology, Inc. 或 Teng Wang Chang 的其他產品，也不收錄 Threads 帳號。searchable fields 僅碎碎念記帳、NaggingMoney／Nagging Money、Android／iOS 套件識別、App Store ID 與 naggingmoney.com；不要把記帳、App、後台數據、資料收集、外流、資產狀況、購物習慣、興趣、政治立場、Google Analytics、廣告、Threads、vladiv1024、Eclipse Technology 或 Teng Wang Chang 作 standalone alias／identifier。",
+      "此筆是 source-backed / user-directed App personal record；依使用者後續明確更正，主要避雷理由是政治內容／立場，資料蒐集與廣告利用僅作次要風險背景。可說截圖中的原貼文嵌圖出現「王定宇又陷緋聞風波了，說又呢…」等殘句，貼文者主張 App 具明顯政治立場，使用者不接受記帳工具夾帶此類內容；但不可因裁切畫面而斷言完整通知內容、特定政黨傾向、文字必為 App 主動推播或開發者正式立場。可另客觀說官方隱私權政策揭露蒐集與利用多類個人、帳務、消費及裝置／瀏覽資料，並可能用於分析、個人化內容、廣告及部分資料分享；不可改寫成已發生資料外洩、偷偷出售個資、違法或主管機關裁罰。收錄範圍限碎碎念記帳 NaggingMoney App，不擴及 Eclipse Technology, Inc. 或 Teng Wang Chang 的其他產品，也不收錄 Threads 帳號。searchable fields 僅碎碎念記帳、NaggingMoney／Nagging Money、Android／iOS 套件識別、App Store ID 與 naggingmoney.com；不要把記帳、App、後台數據、資料收集、外流、資產狀況、購物習慣、興趣、政治立場、王定宇、Google Analytics、廣告、Threads、vladiv1024、Eclipse Technology 或 Teng Wang Chang 作 standalone alias／identifier。",
     lastReviewed: "2026-08-23",
   }),
 ];
