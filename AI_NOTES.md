@@ -2,6 +2,17 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-23 COCOMOMENT／佳果源避雷與 Vico Fresh 背景核對
+
+- 使用者提供兩張 COCOMOMENT Threads 截圖，並明確指定先加入避雷；新增 `cocoment-delgarden-china-brand-personal-20260823`，收錄範圍為 COCOMOMENT／佳果源品牌體系，理由是使用者依既定原則避買中國品牌食品。
+- 身分鏈分層保存：產品標籤可直接確認 `COCOMOMENT 100%椰子水`、原產地泰國、臺灣進口商購達行銷，以及 `Distributed by Shanghai Delgarden Beverage Co., Ltd.`；京東商品標題直接並列 `佳果源 cocoment 椰子水`；佳果源官方網站 `delgarden.com.cn` 頁尾列上海佳果源食品科技有限公司；International Taste Institute 將 Shanghai Delgarden Beverage Co., Ltd. 與上海佳果源食品科技有限公司並列。這足以支持 COCOMOMENT 與中國上海佳果源體系的直接關聯。
+- 不得把中國品牌等同中國製：本次 1L SKU 標籤明寫原產地泰國，官方佳果源網站也自述泰國椰青供應鏈。可說中國品牌／上海公司體系、泰國供應鏈；不可說這瓶中國製。
+- 截圖作者提及「假椰子水／糖分爭議」，目前沒有取得足以獨立證實的主管機關或可靠原始來源，因此不作避雷事實，也不推定不純、高糖、違法或健康危害。
+- 使用者另提供 Vico Fresh 實體產品照片並要求查背景。照片正面可直接辨識 `ACP`、`ASIA COCONUT PROCESSING`、`Vico Fresh`、`100%椰子水`；證據檔為 `evidence/user-submissions/2026-08-23-vico-fresh-user-product-photo.jpeg`（SHA-256：`e754a0532864477ef1253f040fb1aa63c52fa81b80dd75a1045319c7ebee0b42`）。
+- Vico Fresh 與 COCOMOMENT 是不同品牌。ACP 官網 `acp.com.vn` 的 Vico Fresh 產品頁明列 VICO FRESH 為 ACP 的 UHT 椰子水，並寫原料為天然椰子水、無防腐劑；同站公司歷史頁將公司列為越南 `Công ty Cổ phần Chế biến Dừa Á Châu`／`Asia Coconut Processing Joint Stock Company`，稱由越南 Asia Ingredients Group（AIG）於 2014-12-19 成立，總部／工廠在越南南部椰子產區。
+- AIG 投資人頁的 ownership structure（2026-08-23 查核）把 ACP 列為 AIG 持股 73.42% 的子公司；主要股東列兩名越南個人、MGCA FOODCO PTE. LTD（29%）與 ALL INGREDIENTS PTE. LTD（8.09%），未列 COFCO／中糧或其他中國公司為主要股東。AIG 官方沿革把 MGCA 描述為 Marubeni Growth Capital Asia 的投資；另有官方文章稱 AIG 與中國國企 COFCO Biotechnology 有二十多年策略合作。必須把商業合作與所有權／控制分開：目前可說有中糧業務合作，但沒有查到中糧持股、母公司或控制 Vico Fresh／ACP 的證據。
+- Vico Fresh 目前只作背景核對，使用者沒有指定把它加入避雷；不要建立 Vico 避雷紀錄，也不要因其母集團與中糧合作就稱為中資／中國品牌。若後續使用者以「任何中國國企策略合作即避買」為新標準，再依其明示範圍更新。
+
 ## 2026-08-23 碎碎念記帳 NaggingMoney：政治內容／立場為主要理由的個人避雷
 
 - Record：`naggingmoney-app-data-collection-political-content-personal-20260823`；`personal` / `high`。使用者提供 Threads 串文截圖並明確要求避雷此記帳 App，後續更正「政治立場才是避雷重點」；因此主要理由固定為不接受記帳工具夾帶政治內容／立場，資料蒐集與廣告利用只作次要風險背景。官方 Google Play 與 Apple App Store 將名稱精確橋接到 Android 套件 `net.eclipse_tech.naggingmoney`、iOS bundle `net.eclipse-tech.NaggingMoney`、App Store ID `1018283816` 與官方網域 `naggingmoney.com`；收錄範圍限 App 本身，不擴及開發者／seller 的其他產品。

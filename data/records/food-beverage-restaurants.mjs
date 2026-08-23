@@ -18,6 +18,69 @@
 
 export const records = [
   record({
+    id: "cocoment-delgarden-china-brand-personal-20260823",
+    name: "COCOMOMENT／佳果源",
+    aliases: [
+      "COCOMOMENT",
+      "Cocomoment",
+      "佳果源",
+      "佳果源 COCOMOMENT",
+      "佳果源 cocoment",
+    ],
+    identifiers: [
+      "delgarden.com.cn",
+      "上海佳果源食品科技有限公司",
+      "Shanghai Delgarden Beverage Co., Ltd.",
+      "Shanghai Jacco Juice Beverage Co., Ltd.",
+    ],
+    country: "中國品牌／本次標籤產品原產地泰國",
+    categories: ["食品／飲料／農水產"],
+    avoidReasons: [
+      "使用者個人避買",
+      "中國品牌／上海佳果源公司關聯",
+      "依使用者既定原則避開中國品牌食品",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供兩張連續 Threads 截圖並指定避雷 COCOMOMENT。第一張截圖把 COCOMOMENT 指為中國品牌、稱其為上海佳果源換包裝的品牌，並附有京東『佳果源官方旗艦店』與『佳果源／COCOMOMENT』商品畫面；第二張截圖中的實體產品中文標籤可辨識品名『COCOMOMENT 100%椰子水』、原產地泰國、臺灣進口商購達行銷股份有限公司，英文標籤另寫『Distributed by Shanghai Delgarden Beverage Co., Ltd.』。外部公開資料可獨立補強品牌橋接：京東商品標題使用『佳果源 cocoment 椰子水』，佳果源官方網站 `delgarden.com.cn` 頁尾列『上海佳果源食品科技有限公司』，品牌故事自述依托佳農集團並在泰國布局椰子供應鏈；International Taste Institute 產品頁則將『Shanghai Delgarden Beverage Co., Ltd.』與『上海佳果源食品科技有限公司』並列。據此可確認 COCOMOMENT 與中國上海佳果源品牌／公司體系的直接關聯，依使用者既定採買原則列全品牌個人避買；但本次截圖中的 1L 椰子水明確標示原產地泰國，不能寫成該瓶中國製。截圖作者另提及『假椰子水／糖分爭議』，目前未取得足以獨立證實的主管機關或可靠原始來源，因此不作避雷事實，也不推定產品不純、違法、危害健康或所有 SKU 均在同一國家製造。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - COCOMOMENT 中國品牌／佳果源關聯查核畫面",
+        "",
+        "2026-08-23",
+        "截圖可見發文者寫『這是一個完完全全的中資、中國品牌』及『這款 cocoment 只是上海佳果源換包裝的品牌』，並附京東『佳果源官方旗艦店』與『佳果源／COCOMOMENT』商品畫面。這是社群發文者的查核結論，單獨不等同品牌所有權或公司關聯已由該圖證實；本筆另以產品標籤、佳果源官方網站、京東商品頁與第三方評鑑頁交叉核對。證據檔：`evidence/user-submissions/2026-08-23-cocoment-china-brand-claim-screenshot.png`；SHA-256：`798fbd4c32c850baa141961b855068e3b1c650576ebe77de7e19b5f3d73a94c6`。",
+      ),
+      source(
+        "使用者提供 Threads 截圖 - COCOMOMENT 100%椰子水產品標籤",
+        "",
+        "2026-08-23",
+        "截圖中的實體瓶身標籤可讀到品名『COCOMOMENT 100%椰子水』、成分『椰子水』、容量 1000 ml、原產地泰國、臺灣進口商購達行銷股份有限公司；英文標籤可見『Distributed by Shanghai Delgarden Beverage Co., Ltd.』及上海地址。此來源直接支持具名產品的泰國原產地、臺灣進口商及上海公司經銷標示；不單獨證明最終商標所有權，也不支持『假椰子水』、高糖、違法或產品不純。證據檔：`evidence/user-submissions/2026-08-23-cocoment-label-thread-screenshot.png`；SHA-256：`2a621af6ce190ae967a8e0ed55fdfe6001f5e9f1637e229e4f96c6238d3db786`。",
+      ),
+      source(
+        "佳果源官方網站 - 品牌故事與公司頁尾",
+        "http://www.delgarden.com.cn/",
+        "2026-08-23",
+        "官方網站品牌故事自述佳果源依托佳農集團二十多年泰國椰青供應鏈，在泰國布局椰子種植園；頁尾列『上海佳果源食品科技有限公司 Shanghai Jacco Juice Beverage Co.,Ltd.』。此來源直接支持佳果源的中國上海公司主體與泰國供應鏈，不單獨顯示 COCOMOMENT 字樣；COCOMOMENT 橋接由瓶身上海 Delgarden 標示、京東商品標題及評鑑頁補足。",
+      ),
+      source(
+        "京東 - 佳果源 cocoment 椰子水商品頁",
+        "https://item.jd.com/10164849867819.html",
+        "2026-08-23",
+        "京東公開商品標題使用『佳果源 cocoment 椰子水 1L*6瓶』，可將佳果源與 COCOMOMENT 直接連於同一具名商品。京東是銷售平台而非公司登記或商標主管機關，因此品牌公司身分仍以官方網站與產品標籤交叉確認。",
+      ),
+      source(
+        "International Taste Institute - 上海佳果源／Shanghai Delgarden Beverage Co., Ltd. 產品頁",
+        "https://www.taste-institute.com/cn/awarded-products/product-details/9022863/product",
+        "2026-08-23",
+        "產品頁把『上海佳果源食品科技有限公司』與『Shanghai Delgarden Beverage Co., Ltd.』並列，可補強產品標籤英文上海公司名稱與佳果源中文公司名稱的身分橋接。此來源支持公司名稱對應，不表示評鑑機構認定中國品牌避雷、食安風險或本次椰子水品質。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 source-backed / user-directed whole-brand personal food record。可說 COCOMOMENT 與佳果源／上海佳果源食品科技有限公司品牌體系有直接公開橋接，使用者依『中國品牌食品直接避買』的既定原則指定全品牌避買。必須同時保留 SKU 原產地界線：使用者截圖中的 COCOMOMENT 100%椰子水標示原產地泰國，不能稱該瓶中國製；中國品牌／公司關聯與實際製造國是不同層次。截圖發文者所稱『假椰子水／糖分爭議』未獨立查證，不可寫成已證實的產品成分、違法或食安問題。searchable fields 僅保留 COCOMOMENT、佳果源的精確組合／大小寫變體、官方網域與可驗證公司名稱；不要把椰子水、100%、泰國、中國、中資、進口、京東、上海、假椰子水、糖、購達行銷、Threads、發文帳號或其他理由／平台／品類泛稱作 standalone alias／identifier。",
+    lastReviewed: "2026-08-23",
+  }),
+  record({
     id: "red-ant-seafood-bbq-anping-indoor-smoking-thread-personal-20260821",
     name: "紅螞蟻海鮮碳烤（安平店）",
     aliases: [
