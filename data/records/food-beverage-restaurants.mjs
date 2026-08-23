@@ -18,6 +18,55 @@
 
 export const records = [
   record({
+    id: "sweet-and-fresh-drinks-political-kiosk-screenshot-personal-20260824",
+    name: "甜又鮮",
+    aliases: [
+      "甜又鮮飲料",
+      "Sweet and Fresh Drinks",
+    ],
+    identifiers: ["sweetandfreshdrinks.com"],
+    country: "台灣",
+    categories: ["食品飲料"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供社群截圖線索",
+    ],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者在持續進行的避雷收錄對話中提供一張 Threads 截圖，因此依 image-only established-intake 規則將畫面具名的台南飲料品牌『甜又鮮』收為 personal 紀錄；使用者沒有另行文字明示自己的具體避雷動機或政治立場。貼文將甜又鮮稱為『草店』並表示不會再踏進去，附圖點餐機可直接看到一個售價 0 元的選項，使用柯文哲照片並寫『我們選 KP』，旁邊另可辨識『不帥又不完美但較實際』。甜又鮮官方菜單所列『噴射梅子綠』『花蜜檸檬香青茶』『水蜜桃青蘋果冰茶』『檸檬水蜜桃青茶』『獨家多多綠特調』與機台畫面多個品項逐一吻合，足以橋接截圖機台與甜又鮮品牌。官方網站同時列府前路一段與金華路四段兩個台南地址，但截圖沒有地址、店名招牌或分店標示，原 Threads 貼文未登入亦無法讀回完整內容，因此不能確認拍攝據點，也不能宣稱兩個公開據點都展示相同內容。此筆只記錄使用者在持續避雷收錄對話中依此圖將甜又鮮列為個人避開；政治人物照片與文字屬截圖直接可見內容，『草店／不會再踏進去』屬貼文作者陳述，不把兩者直接改寫成使用者本人的政治立場或具體避雷理由。也不把網友『草店』稱呼升格為店家、經營者、全體員工或兩間據點皆具有特定政黨隸屬，亦不推定政治獻金、正式競選合作、違法、食安或產品／服務品質問題。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 甜又鮮點餐機政治內容",
+        "",
+        "2026-08-24",
+        "截圖貼文文字為『台南知名飲料店 甜又鮮，原來是草店／我個人是不會再踏進去一步的』；附圖點餐機可見售價 0 元、柯文哲照片、『我們選 KP』及『不帥又不完美但較實際』。這可支持截圖所示未辨識據點的機台內容與貼文作者主張；沒有原始永久連結、地址或分店標示，不能外推全部據點或正式政黨隸屬。證據檔：evidence/user-submissions/2026-08-24-sweet-and-fresh-drinks-political-kiosk-thread.png；SHA-256：84e03260a651fde6b7dd3df703878c2f367e38c126aa8a07a9281faa7b2ea95d。",
+      ),
+      source(
+        "Sweet and Fresh Drinks 甜又鮮 - 官方網站",
+        "https://www.sweetandfreshdrinks.com/",
+        "查核日 2026-08-24",
+        "官方網站標題直接並列 Sweet and Fresh Drinks 與甜又鮮，頁尾自稱『台南甜又鮮飲料』並列府前路一段及金華路四段兩個地址；此來源只支撐品牌名稱與公開據點數，不支撐截圖拍攝分店或政治內容。",
+      ),
+      source(
+        "甜又鮮官方菜單",
+        "https://www.sweetandfreshdrinks.com/menu",
+        "查核日 2026-08-24",
+        "官方菜單列噴射梅子綠、花蜜檸檬香青茶、水蜜桃青蘋果冰茶、檸檬水蜜桃青茶及獨家多多綠特調等多個品項，與截圖點餐機可見品項逐一相符；此為機台—品牌身分橋接，不驗證機台所在分店。",
+      ),
+      source(
+        "甜又鮮官方故事",
+        "https://www.sweetandfreshdrinks.com/story",
+        "查核日 2026-08-24",
+        "官方故事稱品牌始於 2007 年台南和意路店面，2008 年搬至現址，並以第一人稱介紹現在的甜又鮮；只作品牌歷史與身分背景，不支撐政治立場或分店歸屬。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 image-only established-intake personal record。查詢欄位只收甜又鮮品牌的完整中文名稱、必要飲料名稱變體、官方英文名與官方網域；官方頁尾描述『台南甜又鮮飲料』只留在來源說明，不作 alias，以免裸查『台南』誤命中。不得把草店、小草、柯文哲、KP、我們選 KP、政治、民眾黨、點餐機、台南、飲料店、府前、金華、Threads、發文帳號、產品品項、地址、電話或其他理由／平台／泛稱另作 alias／identifier。回覆時應說截圖直接支持未辨識據點的機台內容；官方網站列兩個地址，但目前無法判定拍攝分店，因此不可說兩店均展示相同政治內容，也不可把貼文作者的『草店』標籤改寫成正式政黨歸屬。",
+    lastReviewed: "2026-08-24",
+  }),
+
+  record({
     id: "cocoment-delgarden-china-brand-personal-20260823",
     name: "COCOMOMENT／佳果源",
     aliases: [
