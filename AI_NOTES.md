@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-23 碎碎念記帳 NaggingMoney：資料蒐集與政治內容疑慮的個人避雷
+
+- Record：`naggingmoney-app-data-collection-political-content-personal-20260823`；`personal` / `high`。使用者提供 Threads 串文截圖並明確要求避雷此記帳 App。官方 Google Play 與 Apple App Store 將名稱精確橋接到 Android 套件 `net.eclipse_tech.naggingmoney`、iOS bundle `net.eclipse-tech.NaggingMoney`、App Store ID `1018283816` 與官方網域 `naggingmoney.com`；Google Play 開發者顯示 Eclipse Technology, Inc.，Apple seller 顯示 Teng Wang Chang。收錄範圍限 App 本身，不擴及兩個商店主體的其他產品。
+- 官方隱私權政策聲明適用網站與 App，明列可能蒐集會員帳號、帳戶資訊、記帳紀錄、年齡、性別、出生年月日、消費模式、Cookie、IP、瀏覽器與裝置足跡；並可能使用 Google Analytics／廣告功能、個人化內容與廣告，以及與服務供應商、行銷合作夥伴或廣告商分享部分資料。這可直接支持個人財務／消費資料蒐集與廣告利用疑慮，但不得改寫成已證實資料外洩、偷偷出售個資、違法或遭主管機關裁罰。
+- 截圖可見帳號 `vladiv1024` 引用自己標示「碎碎念記帳 26/3/3」的貼文並寫「我決定刪掉這個記帳 APP」；其另主張 App 收集後台數據、具明顯政治立場，可能使資產狀況、購物習慣與興趣資訊外流。政治立場、實際後台傳輸與外流目前沒有完整原始通知、App 內畫面、封包分析或獨立技術證據，只能記為貼文者主張及使用者個人避雷理由。searchable fields 僅 App 完整／常用名稱、Android／iOS 套件、App Store ID 與官方網域；開發者／seller 名稱、記帳、App、資料收集、後台、外流、政治、廣告、Threads、帳號等不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-23-naggingmoney-threads-screenshot.png`；SHA-256 `29219eef3342515dfb8b18c7f8faddfa7e944bf4bd83b464d1eaa8f377723487`。
+
 ## 2026-08-23 EXRIDE 極限騎士專賣：張雪機車 820-RR 直接推廣關聯的個人避雷
 
 - Record：`exride-zhangxue-820rr-promotion-personal-20260823`；`personal` / `high`。使用者詢問截圖中的 EXRIDE 是否為「820 機車的車行」，並指定若有關聯即避雷。EXRIDE 已驗證 Facebook 帳號 2026-07-01 直接宣布張雪機車 820-RR 將在其所宣傳的「極限一繩 X MIA」重機展攤位展示，提醒不要跨車並以張雪機車周邊抽獎；知新聞 2026-08-12 另具名引述 EXRIDE 就報導中的遭查扣 820-RR 表示其以零件名義正式報關、合法繳稅，僅作賽道玩具／展示品。因此可確認直接公開推廣／展示與事件回應關聯，足以依使用者標準列入個人避雷。使用者明確認定經濟部所述拆件分批輸入、在臺組裝以規避管制的行為就是走私。
