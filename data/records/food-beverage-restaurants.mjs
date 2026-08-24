@@ -18,6 +18,182 @@
 
 export const records = [
   record({
+    id: "xufa-food-tfda-pickled-vegetable-hygiene-manager-personal-20260824",
+    name: "旭發食品股份有限公司",
+    aliases: ["旭發食品"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["食品飲料"],
+    avoidReasons: [
+      "使用者個人避開",
+      "未依規定設置衛生管理人員",
+      "食品製造管理制度疑慮",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者於食藥署公布115年度醃漬蔬菜製造業稽查結果後，明確要求將有問題的廠商列入避雷。食藥署官方附件列明旭發食品股份有限公司未依規定設置衛生管理人員，已由衛生局裁處新臺幣3萬元，因此依使用者指示建立公司級 personal 避雷。官方表中該業者的食品業者登錄、GHP、產品責任險與抽驗品項均列為合格；整體專案71件產品抽驗亦全部符合規定。此筆主因是受裁罰的管理制度缺失，不寫成產品驗出有害物、全部產品不合格、未改善、停業、召回或其他未見於官方資料的結論。",
+    sources: [
+      source(
+        "食藥署－115年度醃漬蔬菜製造業稽查專案查核結果",
+        "https://www.fda.gov.tw/TC/siteContent.aspx?sid=13737",
+        "2026-08-24",
+        "食藥署說明本專案稽查47家製造業者，4家未依規定設置衛生管理人員、3件產品標示不符規定；71件產品抽驗皆符合規定，具名業者與裁處內容詳見官方附件。",
+      ),
+      source(
+        "食藥署附件－115年醃漬蔬菜製造業稽查專案資訊公開彙整表",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639229226526535451&type=4",
+        "2026-08-24",
+        "官方彙整表列明旭發食品股份有限公司未設置衛生管理人員，已由衛生局裁處3萬元；該列食品業者登錄、GHP、產品責任險及抽驗結果均為合格。",
+      ),
+    ],
+    severity: "high",
+    lastReviewed: "2026-08-24",
+    regionCoverage: "台灣",
+  }),
+  record({
+    id: "dianhan-industrial-tfda-pickled-vegetable-hygiene-manager-personal-20260824",
+    name: "典韓實業有限公司",
+    aliases: ["典韓實業"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["食品飲料"],
+    avoidReasons: [
+      "使用者個人避開",
+      "未依規定設置衛生管理人員",
+      "食品製造管理制度疑慮",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者於食藥署公布115年度醃漬蔬菜製造業稽查結果後，明確要求將有問題的廠商列入避雷。食藥署官方附件列明典韓實業有限公司未依規定設置衛生管理人員，已由衛生局裁處新臺幣3萬元，因此依使用者指示建立公司級 personal 避雷。官方表中該業者的食品業者登錄、GHP與產品責任險均列為合格；整體專案71件產品抽驗亦全部符合規定。此筆主因是受裁罰的管理制度缺失，不寫成產品驗出有害物、全部產品不合格、未改善、停業、召回或其他未見於官方資料的結論。",
+    sources: [
+      source(
+        "食藥署－115年度醃漬蔬菜製造業稽查專案查核結果",
+        "https://www.fda.gov.tw/TC/siteContent.aspx?sid=13737",
+        "2026-08-24",
+        "食藥署說明本專案稽查47家製造業者，4家未依規定設置衛生管理人員、3件產品標示不符規定；71件產品抽驗皆符合規定，具名業者與裁處內容詳見官方附件。",
+      ),
+      source(
+        "食藥署附件－115年醃漬蔬菜製造業稽查專案資訊公開彙整表",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639229226526535451&type=4",
+        "2026-08-24",
+        "官方彙整表列明典韓實業有限公司未設置衛生管理人員，已由衛生局裁處3萬元；該列食品業者登錄、GHP及產品責任險均為合格。",
+      ),
+    ],
+    severity: "high",
+    lastReviewed: "2026-08-24",
+    regionCoverage: "台灣",
+  }),
+  record({
+    id: "baosheng-xingye-tfda-pickled-vegetable-hygiene-manager-personal-20260824",
+    name: "堡晟興業有限公司",
+    aliases: ["堡晟興業"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["食品飲料"],
+    avoidReasons: [
+      "使用者個人避開",
+      "未依規定設置衛生管理人員",
+      "食品製造管理制度疑慮",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者於食藥署公布115年度醃漬蔬菜製造業稽查結果後，明確要求將有問題的廠商列入避雷。食藥署官方附件列明堡晟興業有限公司未依規定設置衛生管理人員，已由衛生局裁處新臺幣3萬元，因此依使用者指示建立公司級 personal 避雷。官方表中該業者的食品業者登錄、GHP與產品責任險均列為合格，現場未有醃漬蔬菜成品可供抽驗；整體專案71件產品抽驗全部符合規定。此筆主因是受裁罰的管理制度缺失，不寫成該業者產品抽驗不合格、有害、未改善、停業、召回或其他未見於官方資料的結論。",
+    sources: [
+      source(
+        "食藥署－115年度醃漬蔬菜製造業稽查專案查核結果",
+        "https://www.fda.gov.tw/TC/siteContent.aspx?sid=13737",
+        "2026-08-24",
+        "食藥署說明本專案稽查47家製造業者，4家未依規定設置衛生管理人員、3件產品標示不符規定；71件產品抽驗皆符合規定，具名業者與裁處內容詳見官方附件。",
+      ),
+      source(
+        "食藥署附件－115年醃漬蔬菜製造業稽查專案資訊公開彙整表",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639229226526535451&type=4",
+        "2026-08-24",
+        "官方彙整表列明堡晟興業有限公司未設置衛生管理人員，已由衛生局裁處3萬元；該列食品業者登錄、GHP及產品責任險均為合格，抽驗欄為現場無成品可供抽驗。",
+      ),
+    ],
+    severity: "high",
+    lastReviewed: "2026-08-24",
+    regionCoverage: "台灣",
+  }),
+  record({
+    id: "xiefahang-international-food-tfda-pickled-vegetable-hygiene-manager-personal-20260824",
+    name: "協發行國際食品有限公司",
+    aliases: ["協發行國際食品", "協發行泡菜"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["食品飲料"],
+    avoidReasons: [
+      "使用者個人避開",
+      "未依規定設置衛生管理人員",
+      "食品製造管理制度疑慮",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者於食藥署公布115年度醃漬蔬菜製造業稽查結果後，明確要求將有問題的廠商列入避雷。食藥署官方附件列明協發行國際食品有限公司未依規定設置衛生管理人員，已由衛生局裁處新臺幣3萬元，因此依使用者指示建立公司級 personal 避雷。官方表中該業者的食品業者登錄、GHP、產品責任險及胡麻泡菜、黃金泡菜、催淚泡菜抽驗均列為合格；整體專案71件產品抽驗亦全部符合規定。此筆主因是受裁罰的管理制度缺失，不寫成產品驗出有害物、全部產品不合格、未改善、停業、召回或其他未見於官方資料的結論。",
+    sources: [
+      source(
+        "食藥署－115年度醃漬蔬菜製造業稽查專案查核結果",
+        "https://www.fda.gov.tw/TC/siteContent.aspx?sid=13737",
+        "2026-08-24",
+        "食藥署說明本專案稽查47家製造業者，4家未依規定設置衛生管理人員、3件產品標示不符規定；71件產品抽驗皆符合規定，具名業者與裁處內容詳見官方附件。",
+      ),
+      source(
+        "食藥署附件－115年醃漬蔬菜製造業稽查專案資訊公開彙整表",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639229226526535451&type=4",
+        "2026-08-24",
+        "官方彙整表列明協發行國際食品有限公司未設置衛生管理人員，已由衛生局裁處3萬元；該列食品業者登錄、GHP、產品責任險及3件泡菜抽驗結果均為合格。",
+      ),
+    ],
+    severity: "high",
+    lastReviewed: "2026-08-24",
+    regionCoverage: "台灣",
+  }),
+  record({
+    id: "balejia-kimchi-tfda-labeling-personal-20260824",
+    name: "芭樂家泡菜館",
+    aliases: ["芭樂家泡菜"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["食品飲料"],
+    avoidReasons: [
+      "使用者個人避開",
+      "食品成分排序與過敏原標示不符規定",
+      "食品標示透明度疑慮",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者於食藥署公布115年度醃漬蔬菜製造業稽查結果後，明確要求將有問題的廠商列入避雷。食藥署官方附件列明芭樂家泡菜館的『黃金泡菜』等3件產品，內容物含量未依由高至低順序標示，且有未標示過敏原資訊等問題，已由衛生局裁處新臺幣5萬元，因此依使用者指示建立業者級 personal 避雷。具名媒體依食藥署資料補充另外兩件為韓式泡菜、黃金海帶絲；本紀錄的官方主張仍以官方附件的『黃金泡菜等3件』為準。官方表中該業者的食品業者登錄、GHP與產品責任險均列為合格，現場未有醃漬蔬菜成品可供抽驗；整體專案71件產品抽驗全部符合規定。此筆主因是受裁罰的標示透明度問題，不寫成產品驗出有害物、全部產品標示違規、未改善、停業、召回或其他未見於官方資料的結論。",
+    sources: [
+      source(
+        "食藥署－115年度醃漬蔬菜製造業稽查專案查核結果",
+        "https://www.fda.gov.tw/TC/siteContent.aspx?sid=13737",
+        "2026-08-24",
+        "食藥署說明本專案稽查47家製造業者，4家未依規定設置衛生管理人員、3件產品標示不符規定；71件產品抽驗皆符合規定，具名業者與裁處內容詳見官方附件。",
+      ),
+      source(
+        "食藥署附件－115年醃漬蔬菜製造業稽查專案資訊公開彙整表",
+        "https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639229226526535451&type=4",
+        "2026-08-24",
+        "官方彙整表列明芭樂家泡菜館的『黃金泡菜』等3件產品，內容物含量未由高至低分別標示及未標示過敏原資訊等，已由衛生局裁處5萬元；該列食品業者登錄、GHP及產品責任險均為合格，抽驗欄為現場無成品可供抽驗。",
+      ),
+      source(
+        "TVBS健康2.0－食藥署稽查醃漬蔬菜 3泡菜標示未依規定、沒標過敏原挨罰5萬",
+        "https://health.tvbs.com.tw/nutrition/365431",
+        "2026-08-24",
+        "具名媒體依食藥署資料列出3件產品為黃金泡菜、韓式泡菜、黃金海帶絲；此來源只補充品名，不取代官方附件對違規與裁處的認定。",
+      ),
+    ],
+    severity: "high",
+    lastReviewed: "2026-08-24",
+    regionCoverage: "台灣",
+  }),
+  record({
     id: "sweet-and-fresh-drinks-political-kiosk-screenshot-personal-20260824",
     name: "甜又鮮",
     aliases: [
