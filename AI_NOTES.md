@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-25 VIPTHINK／VIP THINK 豌豆思維：「中國台灣」地區選項與客服回覆的個人避雷
+
+- Record：`vipthink-china-taiwan-region-label-customer-service-personal-20260825`；`personal` / `high`。使用者提供與「VIP Think－最懂你的數學」LINE 帳號的對話截圖並明確要求避雷；核心理由固定為軟體國家／地區選項將台灣列為「中國台灣」，以及客服未正面說明是否更正該標示、轉而推介試聽與課程。
+- 截圖可直接看到使用者傳送的國家／地區選擇畫面含「中國台灣」，接著表示決定退出；客服回覆「軟體的登入界面我們在優化中，會涉及到審核的部分」，之後建議孩子先體驗、比較課程並傳送課程介紹；使用者最後寫「學術無國界，但我們不能讓孩子以為自己是中國台灣」。客服確實提到介面優化／審核，因此不可寫成完全沒有回應；但對話未見其說明是否會更正該標示。也不可擴張成客服明確拒改、品牌承認政治立場、故意誤導兒童、違法、主管機關認定，或所有 App／桌面版本均有相同選項。
+- 身分橋接：台灣官方站標題為 `TW-VIPTHINK`，繁體中文介紹 3–12 歲數理邏輯思維課並列客服／LINE；台灣官方下載中心的 Windows／macOS 學生端連結直接位於 `cdn.vipthink.cn`。Google Play 列 `VIPTHINK豌豆思維`、Android 套件 `com.klzz.vipthink.pad`、developer `WONDEREDU PRIVATE LIMITED`；Apple 公開商店資料列同名 App、bundle `com.vipthinkl.klzz`、App Store ID `1387156850`、seller `Happyseed Ins`；官方中國站標題使用「豌豆素質教育」。這些只支撐品牌／服務鏈與名稱變體，不用來推定各 developer／seller 間的最終法人所有權或公司國籍，故 record `country` 留空。
+- 收錄範圍限 VIPTHINK 品牌／課程與 App 服務，不擴及教師、員工、學員、家長、商店平台或各 seller／developer 的其他產品。searchable fields 只保留 VIPTHINK／VIP THINK／豌豆思維品牌名稱變體、`vip-think.com`／`vipthink.cn`、Android／iOS 套件與 App Store ID；「最懂你的數學」與「豌豆素質教育」只留在證據敘述，不作 alias，避免裸查數學／教育誤命中。中國台灣、中國、台灣、數學、教育、兒童、洗腦、政治、客服、試聽、LINE、Google Play、Apple、developer／seller 名稱、工作郵箱及其他理由／平台／聯絡資訊不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-25-vipthink-china-taiwan-line-conversation.png`；SHA-256：`081c5ef594cb8735088a0e2aa371deeb02601a3249186336437e33feee4530b5`。
+
 ## 2026-08-24 甜又鮮：點餐機政治內容截圖的個人避雷
 
 - Record：`sweet-and-fresh-drinks-political-kiosk-screenshot-personal-20260824`；`personal` / `medium`。使用者在持續進行的避雷收錄對話中只提供一張 Threads 截圖，因此依 image-only established-intake 規則，將畫面具名的台南飲料品牌「甜又鮮」列為個人避開。政治人物照片、政治文字及「草店／不再踏入」只記作截圖直接可見內容與貼文作者陳述；使用者沒有另行文字明示自己的具體避雷動機或政治立場，不可把貼文作者理由直接歸屬為使用者本人理由。

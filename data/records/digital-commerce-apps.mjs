@@ -266,4 +266,78 @@ export const records = [
       "此筆是 source-backed / user-directed App personal record；依使用者後續明確更正，主要避雷理由是政治內容／立場，資料蒐集與廣告利用僅作次要風險背景。可說截圖中的原貼文嵌圖出現「王定宇又陷緋聞風波了，說又呢…」等殘句，貼文者主張 App 具明顯政治立場，使用者不接受記帳工具夾帶此類內容；但不可因裁切畫面而斷言完整通知內容、特定政黨傾向、文字必為 App 主動推播或開發者正式立場。可另客觀說官方隱私權政策揭露蒐集與利用多類個人、帳務、消費及裝置／瀏覽資料，並可能用於分析、個人化內容、廣告及部分資料分享；不可改寫成已發生資料外洩、偷偷出售個資、違法或主管機關裁罰。收錄範圍限碎碎念記帳 NaggingMoney App，不擴及 Eclipse Technology, Inc. 或 Teng Wang Chang 的其他產品，也不收錄 Threads 帳號。searchable fields 僅碎碎念記帳、NaggingMoney／Nagging Money、Android／iOS 套件識別、App Store ID 與 naggingmoney.com；不要把記帳、App、後台數據、資料收集、外流、資產狀況、購物習慣、興趣、政治立場、王定宇、Google Analytics、廣告、Threads、vladiv1024、Eclipse Technology 或 Teng Wang Chang 作 standalone alias／identifier。",
     lastReviewed: "2026-08-23",
   }),
+  record({
+    id: "vipthink-china-taiwan-region-label-customer-service-personal-20260825",
+    name: "VIPTHINK／VIP THINK 豌豆思維",
+    aliases: [
+      "VIPTHINK",
+      "VIP THINK",
+      "VIP Think",
+      "VIPTHINK豌豆思維",
+      "VIPTHINK豌豆思维",
+      "VIP THINK 豌豆思維",
+      "豌豆思維",
+      "豌豆思维",
+    ],
+    identifiers: [
+      "vip-think.com",
+      "tw.vip-think.com",
+      "vipthink.cn",
+      "com.klzz.vipthink.pad",
+      "com.vipthinkl.klzz",
+      "App Store ID 1387156850",
+    ],
+    country: "",
+    categories: ["App／數位服務"],
+    avoidReasons: [
+      "使用者個人避開",
+      "軟體國家／地區選項將台灣列為「中國台灣」",
+      "客服未正面說明是否更正該標示，轉而推介課程與試聽",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供與『VIP Think－最懂你的數學』LINE 帳號的對話截圖並明確要求避雷。截圖中，使用者先傳送一張軟體國家／地區選擇畫面，畫面可見『中國台灣』選項，隨即表示『對不起，我決定退出』；客服回覆『軟體的登入界面我們在優化中，會涉及到審核的部分』，之後改為建議先讓孩子體驗、比較課程，並傳送課程介紹與影片。使用者最後明確表示『學術無國界，但我們不能讓孩子以為自己是中國台灣』。這足以支持使用者因軟體將台灣列為『中國台灣』，且客服沒有正面說明是否更正該標示、轉而推介課程與試聽，而將 VIPTHINK 品牌／課程服務列為個人避開。客服提到登入介面仍在優化與涉及審核，不能改寫成客服承認政治立場、拒絕修改、故意誤導兒童或已由主管機關認定不當。VIPTHINK 台灣官網、官方下載中心及 Google Play／Apple App Store 可將品牌橋接到 VIPTHINK豌豆思維及其官方數位服務；台灣下載中心的 Windows／macOS 下載連結位於 cdn.vipthink.cn，官方中國站標題使用『豌豆素質教育』。這些來源只支撐品牌／服務鏈與名稱變體，不用來推定未查明的法人所有權、國籍、違法或所有介面版本都出現相同標示。收錄範圍限 VIPTHINK 品牌／課程與其 App 服務，不擴及個別教師、一般員工、學員、家長或商店平台。",
+    sources: [
+      source(
+        "使用者提供 LINE 對話截圖 - VIPTHINK『中國台灣』地區選項與客服回覆",
+        "",
+        "2026-08-25",
+        "截圖頁首顯示『VIP Think－最懂你的數學…』及 VIPTHINK 圖樣。使用者傳送的軟體國家／地區選擇畫面可見『中國台灣』，並表示決定退出；客服先稱登入介面正在優化、會涉及審核，隨後建議試聽、比較課程，傳送課程說明與介紹影片。使用者最後寫『學術無國界，但我們不能讓孩子以為自己是中國台灣』。此來源直接支撐截圖所示畫面、對話與使用者的個人避雷理由；不能單靠截圖確認標示首次出現時間、所有平台／版本均相同、客服已明確拒絕修改、品牌正式政治立場或法律責任。證據檔：evidence/user-submissions/2026-08-25-vipthink-china-taiwan-line-conversation.png；SHA-256：081c5ef594cb8735088a0e2aa371deeb02601a3249186336437e33feee4530b5。",
+      ),
+      source(
+        "VIPTHINK 台灣官方網站",
+        "https://tw.vip-think.com/",
+        "查核日 2026-08-25",
+        "網站標題為『TW-VIPTHINK』，以繁體中文介紹 3 至 12 歲少兒數理邏輯思維試聽課，並列客服工作郵箱及 LINE 聯絡方式。此來源支撐台灣市場的官方品牌／課程服務身分，不支撐截圖中地區選項的當前狀態或客服處理結果。",
+      ),
+      source(
+        "VIPTHINK 台灣官方下載中心",
+        "https://tw.vip-think.com/download/zh_HANT",
+        "查核日 2026-08-25",
+        "頁面標題為『TW-VIPTHINK-下載中心』；Windows 與 macOS 的『立即下載』連結分別指向 cdn.vipthink.cn 上的 VIPTHINK 學生端安裝檔。此來源支撐台灣官網與 vipthink.cn 數位服務鏈的直接連結，不證明法人所有權、公司國籍或爭議標示在所有版本都存在。",
+      ),
+      source(
+        "Google Play - VIPTHINK豌豆思維",
+        "https://play.google.com/store/apps/details?id=com.klzz.vipthink.pad",
+        "查核日 2026-08-25",
+        "官方商店頁列 App 名稱『VIPTHINK豌豆思維』、Android 套件 com.klzz.vipthink.pad、教育類別與開發者欄位 WONDEREDU PRIVATE LIMITED，並連至 vipthink.hk。此來源用於 Android App 身分橋接，不支撐『中國台灣』標示、客服回覆、公司最終控制權或政治立場。",
+      ),
+      source(
+        "Apple App Store Taiwan - VIPTHINK豌豆思維",
+        "https://apps.apple.com/tw/app/id1387156850",
+        "查核日 2026-08-25",
+        "Apple 公開商店資料列 App 名稱『VIPTHINK豌豆思維』、App Store ID 1387156850、bundle com.vipthinkl.klzz 與 seller Happyseed Ins。此來源用於 iOS App 身分橋接，不支撐截圖爭議、法人所有權或政治立場。",
+      ),
+      source(
+        "VIPThink／豌豆素質教育官方中國站",
+        "https://web.vipthink.cn/index.html",
+        "查核日 2026-08-25",
+        "官方頁標題為『豌豆素質教育－一站式少兒素質教育在線學習平台』，描述益智、口才、編程等線上課程。此來源只支撐豌豆素質教育、vipthink.cn 與 VIPThink 數位服務名稱脈絡，不單獨證明台灣市場法律主體、公司國籍或截圖中標示的當前狀態。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed screenshot personal record。主因固定為截圖中的軟體國家／地區選項把台灣列為『中國台灣』；次因是客服提到登入介面優化／審核後，沒有正面說明是否更正該標示，轉而推介試聽與課程。不可寫成客服完全沒有回應介面問題，因其確實提到正在優化與審核；也不可擴張成客服明確拒絕修改、品牌承認特定政治立場、故意對兒童洗腦、違法、主管機關認定、所有 App／桌面版本均有相同選項，或已確認各商店 seller／developer 間的最終法人所有權。官方台灣下載中心直接連至 cdn.vipthink.cn，可支撐台灣官網與 vipthink.cn 服務鏈；Google Play／Apple App Store 支撐 VIPTHINK豌豆思維及套件／App Store 身分。收錄範圍限 VIPTHINK 品牌／課程與 App 服務，不擴及教師、員工、學員、家長、LINE、Google Play、Apple 或個別商店 seller／developer 的其他產品。searchable fields 僅 VIPTHINK／VIP THINK／豌豆思維品牌名稱變體、官方網域、Android／iOS 套件與 App Store ID；『最懂你的數學』及『豌豆素質教育』只留在證據敘述，不作 alias，避免裸查數學／教育誤命中。不要把中國台灣、中國、台灣、數學、教育、兒童、洗腦、政治、登入介面、審核、客服、試聽、LINE、Google Play、Apple、WONDEREDU PRIVATE LIMITED、Happyseed Ins、工作郵箱或其他理由／平台／聯絡資訊作 standalone alias／identifier。",
+    lastReviewed: "2026-08-25",
+  }),
 ];
