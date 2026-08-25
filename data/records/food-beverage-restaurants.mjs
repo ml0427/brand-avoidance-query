@@ -18,6 +18,45 @@
 
 export const records = [
   record({
+    id: "haishen-china-origin-food-whole-brand-personal-20260825",
+    name: "海神／海神煙燻鮭魚",
+    aliases: [
+      "海神",
+      "海神 煙燻挪威大西洋鮭魚切片",
+      "海神煙燻挪威大西洋鮭魚切片",
+      "海神 煙燻大西洋鮭魚切片",
+      "海神煙燻鮭魚",
+      "LOPIA 海神煙燻鮭魚",
+      "Lopia 海神煙燻鮭魚",
+      "LOPIA 煙燻鮭魚",
+      "LOPIA Taiwan 煙燻鮭魚",
+    ],
+    identifiers: [],
+    country: "中國製成品標籤（海神煙燻鮭魚 SKU）／台灣販售線索",
+    categories: ["食品／飲料／農水產"],
+    avoidReasons: [
+      "使用者個人避買",
+      "商品標籤顯示成品產地中國",
+      "中國製食品直接避買",
+      "使用者既定規則：品牌涉中國製食品即全品牌避雷",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者在持續進行的避雷收錄對話中提供 Threads 截圖；帳號 `bee_all_write` 的貼文顯示於『LOPIA Taiwan』主題，文字寫『Lopia 的煙燻鮭魚是中國製喔，望周知』。附圖賣場牌卡可辨識『煙燻鮭魚（小）』，包裝中文標籤清楚列品名『（海神）煙燻挪威大西洋鮭魚切片』、內容物『大西洋鮭（挪威產）、食鹽、砂糖』、淨重 100 公克、產地『中國』及進口商合陞水產股份有限公司。依使用者固定採買規則，中國製食品直接避買，且食品品牌只要有具名中國製商品證據即採全品牌避雷，因此本筆將海神列為全品牌個人避買。直接證據仍只確認這款海神煙燻鮭魚成品產地標示中國、鮭魚原料標示挪威產；全品牌範圍是使用者的個人採買政策，不表示海神每一款商品都已逐一確認中國製。LOPIA 販售關聯僅由這張賣場／Threads 截圖支撐，未取得 LOPIA 官方商品頁；本筆不將 LOPIA 列為全品牌避雷，也不擴及 LOPIA 其他煙燻鮭魚、合陞水產全部進口品，或作食安、不安全、違法、假標、禁售及官方裁罰結論。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－LOPIA Taiwan 煙燻鮭魚與中國產地標籤",
+        "",
+        "2026-08-25",
+        "截圖可見帳號 `bee_all_write` 的貼文顯示於『LOPIA Taiwan』主題，貼文寫『Lopia 的煙燻鮭魚是中國製喔，望周知』；附圖賣場牌卡可讀到『煙燻鮭魚（小）』與價格 179。包裝標籤可直接讀到：品名『（海神）煙燻挪威大西洋鮭魚切片』、內容物『大西洋鮭（挪威產）、食鹽、砂糖』、淨重 100 公克、產地『中國』、進口商合陞水產股份有限公司。標籤直接支持成品產地標示中國與鮭魚原料標示挪威產；LOPIA 販售關聯為截圖脈絡，未以官方商品頁獨立補強。證據檔：`evidence/user-submissions/2026-08-25-lopia-haishen-smoked-salmon-china-origin-thread.png`；SHA-256：`62d27b680b85481bffc2b012d6d3f03e9bb58b0bbb9b12318711f6a09392f4e3`。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 label-confirmed / screenshot-retail-context / user-directed whole-brand personal record。具名商品標籤直接顯示成品產地中國，原料大西洋鮭標示挪威產；依使用者『中國製食品直接避買、品牌涉中國製食品即全品牌避雷』的固定規則，海神採全品牌個人避買。全品牌範圍是使用者個人採買政策；不可改寫成海神每款商品皆已逐一確認中國製，也不可說鮭魚在中國養殖。LOPIA 只由截圖支撐販售脈絡，不可說 LOPIA 官方已確認，亦不得擴成 LOPIA 全店／所有煙燻鮭魚皆中國製、合陞水產全產品線相同，或推論食安、不安全、違法、假標、禁售及裁罰。searchable fields 保留海神品牌、完整商品名／穩定縮寫，以及 LOPIA＋海神／煙燻鮭魚的限定組合；`country` 只描述已確認的海神煙燻鮭魚 SKU 中國成品標籤／台灣販售線索。不要把煙燻鮭魚、鮭魚、中國製、產地、食品、Threads、bee_all_write、價格、進口商、合陞水產或電話／地址作 standalone alias／identifier。LOPIA 命中只用於找回此商品線索，不等於 LOPIA 全品牌避雷。",
+    lastReviewed: "2026-08-25",
+  }),
+  record({
     id: "xufa-food-tfda-pickled-vegetable-hygiene-manager-personal-20260824",
     name: "旭發食品股份有限公司",
     aliases: ["旭發食品"],

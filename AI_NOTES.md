@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-25 海神／LOPIA Taiwan 煙燻鮭魚：中國製 SKU 證據與海神全品牌個人避雷
+
+- Record：`haishen-china-origin-food-whole-brand-personal-20260825`；`personal` / `high`。使用者在持續進行的 image-only 避雷收錄中提供 Threads 截圖；帳號 `bee_all_write` 的貼文顯示於「LOPIA Taiwan」主題，稱 Lopia 煙燻鮭魚為中國製。附圖賣場牌卡可辨識「煙燻鮭魚（小）」與價格 179；包裝中文標籤可直接讀到品名「（海神）煙燻挪威大西洋鮭魚切片」、內容物「大西洋鮭（挪威產）、食鹽、砂糖」、淨重 100 公克、產地「中國」及進口商合陞水產股份有限公司。
+- 事實必須分層：標籤直接支持這款海神煙燻鮭魚成品產地標示中國，鮭魚原料標示挪威產。依使用者固定規則「中國製食品直接避買；食品品牌涉中國製商品即全品牌避雷」，本筆將海神列為全品牌個人避買；全品牌範圍是採買政策，不表示海神每款商品皆已逐一確認中國製。不可把品名中的「挪威」誤寫成成品在挪威製造，也不可把中國成品產地誤寫成鮭魚在中國養殖。
+- LOPIA 販售關聯來自這張賣場／Threads 截圖，未取得 LOPIA 官方商品頁；LOPIA 只作這一商品的販售查詢線索，不列全品牌避雷，也不擴及 LOPIA 其他煙燻鮭魚或合陞水產全部進口品，亦不作食安、不安全、違法、假標、禁售或主管機關裁罰結論。`name`／`aliases` 保留海神品牌、完整商品名／穩定縮寫，以及 LOPIA＋海神／煙燻鮭魚限定組合；`country` 只描述已確認的海神煙燻鮭魚 SKU 中國成品標籤／台灣販售線索。不要把煙燻鮭魚、鮭魚、中國製、產地、食品、Threads、`bee_all_write`、價格、進口商、合陞水產、電話或地址作 standalone alias／identifier。
+- 證據檔：`evidence/user-submissions/2026-08-25-lopia-haishen-smoked-salmon-china-origin-thread.png`；SHA-256：`62d27b680b85481bffc2b012d6d3f03e9bb58b0bbb9b12318711f6a09392f4e3`。
+
 ## 2026-08-25 VIPTHINK／VIP THINK 豌豆思維：「中國台灣」地區選項與客服回覆的個人避雷
 
 - Record：`vipthink-china-taiwan-region-label-customer-service-personal-20260825`；`personal` / `high`。使用者提供與「VIP Think－最懂你的數學」LINE 帳號的對話截圖並明確要求避雷；核心理由固定為軟體國家／地區選項將台灣列為「中國台灣」，以及客服未正面說明是否更正該標示、轉而推介試聽與課程。
