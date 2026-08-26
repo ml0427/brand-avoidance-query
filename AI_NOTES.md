@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-26 FaN's Plant／帆植：公開頁面截圖個人避雷
+
+- Record：`fans-plant-instagram-profile-personal-20260826`；`personal` / `medium`。使用者提供 Instagram 公開頁面截圖並明確表示「避雷」，後續指示「不用查」，因此不作外部查證，只依圖片直接可見資訊將 FaN's Plant／帆植品牌與帳號 `fan__plant` 列入個人避雷。
+- 截圖可辨識顯示名稱「FaN's Plant ==帆植®==」、帳號 `fan__plant`、品牌圖樣、龜甲龍相關自述、台中／彰化販售地點、台中／高雄出攤資訊，以及「台灣在地實生龜甲龍」「不賣進口龜」「無線上選購」「溫室沒開放」等頁面文字。使用者未說明具體避雷理由，所以這些只作畫面內容，不得自行改寫成使用者動機或動植物來源、檢疫、品質、服務、違法等負面結論。
+- 收錄範圍只限 FaN's Plant／帆植品牌與 `fan__plant` 公開帳號，不擴及頁面列出的手系工廠、SP 多肉、裏間植遊、清涼市集、追蹤者 `lucasfan.tw` 或其他龜甲龍賣家。searchable fields 僅保留 FaN's Plant、FaNs Plant、帆植及 `fan__plant`；商品、產地、植物泛稱、平台、地點、地址、市集、寄售對象及頁面文案不得作 standalone alias／identifier。
+- 證據檔：`evidence/user-submissions/2026-08-26-fans-plant-instagram-profile.png`；SHA-256：`b5e97cff0cfbc93b863c95b2eff0cd97e481210a6a9157f75de473a960e5f894`。
+
 ## 2026-08-25 海神／LOPIA Taiwan 煙燻鮭魚：中國製 SKU 證據與海神全品牌個人避雷
 
 - Record：`haishen-china-origin-food-whole-brand-personal-20260825`；`personal` / `high`。使用者在持續進行的 image-only 避雷收錄中提供 Threads 截圖；帳號 `bee_all_write` 的貼文顯示於「LOPIA Taiwan」主題，稱 Lopia 煙燻鮭魚為中國製。附圖賣場牌卡可辨識「煙燻鮭魚（小）」與價格 179；包裝中文標籤可直接讀到品名「（海神）煙燻挪威大西洋鮭魚切片」、內容物「大西洋鮭（挪威產）、食鹽、砂糖」、淨重 100 公克、產地「中國」及進口商合陞水產股份有限公司。

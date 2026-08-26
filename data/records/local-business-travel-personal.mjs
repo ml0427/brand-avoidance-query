@@ -18,6 +18,36 @@
 
 export const records = [
   record({
+    id: "fans-plant-instagram-profile-personal-20260826",
+    name: "FaN's Plant／帆植",
+    aliases: ["FaN's Plant", "FaNs Plant", "帆植"],
+    identifiers: ["fan__plant"],
+    country: "台灣（頁面自述）",
+    categories: ["通路零售", "生活用品"],
+    avoidReasons: ["使用者個人避開", "使用者依公開頁面截圖指定避雷"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者提供 FaN's Plant／帆植的 Instagram 公開頁面截圖並明確表示『避雷』，因此將該品牌／公開帳號列入個人避雷。截圖可直接辨識帳號 `fan__plant`、顯示名稱『FaN's Plant ==帆植®==』、龜甲龍相關自述、台中與彰化販售地點、定期市集資訊，以及『台灣在地實生龜甲龍』『不賣進口龜』『無線上選購』『溫室沒開放』等頁面文字。使用者未另行說明具體避雷理由，因此本筆只記錄其依該公開頁面作出的個人避開決定，不自行把商品種類、產地自述、販售方式、地址、市集安排或頁面文案推定為問題，也不認定任何違法、動植物來源爭議、商品品質、服務品質或其他客觀負面事實。收錄範圍限 FaN's Plant／帆植品牌與 `fan__plant` 公開帳號，不擴及頁面列出的寄售店、市集、追蹤者或其他龜甲龍賣家。",
+    sources: [
+      source(
+        "使用者提供 Instagram 公開頁面截圖－FaN's Plant／帆植",
+        "",
+        "2026-08-26",
+        "截圖可見帳號 `fan__plant`、顯示名稱『FaN's Plant ==帆植®==』、植物園分類與品牌圖樣；自介列『FaN'sPlant® 》》Grown with time』、台中手系工廠及彰化 SP 多肉販售地點、台中松竹站《裏間植遊》與高雄鳳山《清涼市集》出攤資訊、`#台灣在地實生龜甲龍`，以及《不賣進口龜》《無線上選購》《溫室沒開放》等文字。頁面另顯示 Shopee 短連結、Facebook 名稱『帆植 FaN's Plant』與帳號 `lucasfan.tw` 的追蹤狀態；後者只是畫面中的追蹤者，不屬於收錄對象。此來源只支撐公開頁面可見的品牌／帳號身分與自述內容，不獨立證明商品來源、營運方式、品質、合法性或任何負面指控。證據檔：`evidence/user-submissions/2026-08-26-fans-plant-instagram-profile.png`；SHA-256：`b5e97cff0cfbc93b863c95b2eff0cd97e481210a6a9157f75de473a960e5f894`。",
+      ),
+      source(
+        "使用者明確指定－FaN's Plant／帆植個人避雷",
+        "",
+        "2026-08-26",
+        "使用者隨公開頁面截圖明確表示『避雷』，構成將 FaN's Plant／帆植品牌與 `fan__plant` 公開帳號列入個人避雷的授權；使用者未另行說明具體理由，故不從頁面商品、產地自述、寄售地點、市集資訊或文案推測其動機。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-only / user-directed public-profile personal record。可說使用者依 Instagram 公開頁面截圖將 FaN's Plant／帆植及 `fan__plant` 列入個人避雷；不可把頁面上的龜甲龍、台灣在地實生、不賣進口龜、無線上選購、溫室沒開放、寄售地點、市集安排或 Shopee 連結自行改寫成避雷理由，也不可推論動植物來源、檢疫、商品品質、服務品質、違法或任何客觀負面事實。收錄限品牌／公開帳號，不擴及手系工廠、SP 多肉、裏間植遊、清涼市集、`lucasfan.tw`、合作或寄售對象。searchable fields 僅保留 FaN's Plant、FaNs Plant、帆植與 `fan__plant`；不要把龜甲龍、植物、植物園、台灣在地、進口、網路選購、溫室、台中、彰化、高雄、地址、市集、Instagram、Facebook、Shopee、連結、寄售店或追蹤者作 standalone alias／identifier。",
+    lastReviewed: "2026-08-26",
+  }),
+  record({
     id: "exride-zhangxue-820rr-promotion-personal-20260823",
     name: "EXRIDE 極限騎士專賣",
     aliases: [
