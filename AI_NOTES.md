@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-26 德適淨＋抗菌酒精擦：中國原產標籤單品避買
+
+- Record：`deshijing-antibacterial-alcohol-wipes-china-origin-personal-20260826`；`personal` / `high`。使用者在持續進行的 image-only 避雷收錄中提供商品標籤圖片；標籤可直接確認品名「德適淨＋抗菌酒精擦」、原產地「中國（台灣監製）」、數量 90 抽、規格 20 公分 × 15 公分，以及委製商／進口商／輸入業者／國內負責廠商「TCSBT 台灣中科生物技股份有限公司」。
+- 收錄範圍限這款具名商品；「台灣監製」不可改寫成台灣製造，也不擴及德適淨全品牌、台灣中科生物技其他產品或所有酒精擦。標籤只支持原產地文字，不延伸為品質、安全、成分／抗菌功效已獨立驗證、違法、假標、禁售、中資或主管機關認定。
+- Searchable fields 僅保留德適淨品牌與具名酒精擦商品；酒精擦、抗菌、食品級酒精、德國默克、中國、台灣監製、清潔用品、TCSBT、公司名、地址、電話及被遮擋的條碼不得作 standalone alias／identifier。
+- 證據檔：`evidence/user-submissions/2026-08-26-deshijing-antibacterial-alcohol-wipes-china-origin.png`；SHA-256：`ef90fe37879348b2db00aec29493a50a122712648a19299198aa9b2e117cbb0b`。
+
 ## 2026-08-26 FaN's Plant／帆植：公開頁面截圖個人避雷
 
 - Record：`fans-plant-instagram-profile-personal-20260826`；`personal` / `medium`。使用者提供 Instagram 公開頁面截圖並明確表示「避雷」，後續指示「不用查」，因此不作外部查證，只依圖片直接可見資訊將 FaN's Plant／帆植品牌與帳號 `fan__plant` 列入個人避雷。

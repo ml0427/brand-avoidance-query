@@ -18,6 +18,40 @@
 
 export const records = [
   record({
+    id: "deshijing-antibacterial-alcohol-wipes-china-origin-personal-20260826",
+    name: "德適淨＋抗菌酒精擦",
+    aliases: [
+      "德適淨",
+      "德適淨＋抗菌酒精擦",
+      "德適淨+抗菌酒精擦",
+      "德適淨 抗菌酒精擦",
+      "德適淨 酒精擦",
+    ],
+    identifiers: [],
+    country: "中國（標籤原產地；台灣監製）",
+    categories: ["清潔用品", "生活用品"],
+    avoidReasons: [
+      "使用者個人避買",
+      "商品標籤顯示原產地中國",
+      "使用者提供商品標籤圖片",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者在持續進行的避雷收錄對話中提供德適淨酒精擦商品標籤圖片；標籤可直接讀到品名『德適淨＋抗菌酒精擦』、原產地『中國（台灣監製）』、數量 90 抽、規格 20 公分 × 15 公分，以及委製商／進口商／輸入業者／國內負責廠商『TCSBT 台灣中科生物技股份有限公司』。依使用者對中國原產商品的個人採買偏好，將這款具名商品列入個人避買。直接證據只確認這款酒精擦的標籤原產地為中國；『台灣監製』不等於台灣製造。本筆不擴大成德適淨全品牌、台灣中科生物技全部產品或其他酒精擦，亦不延伸為品質、安全、功效、違法、假標、禁售、中資或主管機關認定。",
+    sources: [
+      source(
+        "使用者提供商品標籤圖片－德適淨＋抗菌酒精擦",
+        "",
+        "2026-08-26",
+        "圖片可見德適淨品牌與標籤文字：品名『德適淨＋抗菌酒精擦』；成分含 Water（EDI 超純水）、Ethanol（食品級酒精）、Phenoxyethanol、Cetylpyridinium Chloride（德國默克抗菌成分）及 Centella Asiatica Extract（積雪草萃取液）；數量 90 抽；規格 20 公分 × 15 公分；原產地『中國（台灣監製）』；委製商／進口商／輸入業者／國內負責廠商列『TCSBT 台灣中科生物技股份有限公司』。條碼右側部分被裁切／遮擋，未保存為 searchable identifier。此來源只支撐標籤可見內容，不獨立驗證成分、抗菌功效、製造流程、品牌與業者其他商品的產地或任何負面指控。證據檔：`evidence/user-submissions/2026-08-26-deshijing-antibacterial-alcohol-wipes-china-origin.png`；SHA-256：`ef90fe37879348b2db00aec29493a50a122712648a19299198aa9b2e117cbb0b`。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 label-confirmed / product-specific / user-directed personal record。可說使用者提供的『德適淨＋抗菌酒精擦』標籤直接顯示原產地中國、台灣監製，因此依使用者個人採買偏好列入避買；不可把台灣監製改寫為台灣製造，也不可擴大成德適淨全品牌、台灣中科生物技全部產品或所有酒精擦皆中國製。不可延伸為品質、安全、成分、抗菌功效、違法、假標、禁售、中資／國資／中共控制或主管機關認定。searchable fields 只保留德適淨品牌與具名酒精擦商品；不要把酒精擦、抗菌、食品級酒精、德國默克、中國、台灣監製、清潔用品、TCSBT、公司名、地址、電話或被遮擋的條碼作 standalone alias／identifier。",
+    lastReviewed: "2026-08-26",
+  }),
+  record({
     id: "li-ning",
     name: "李寧 / Li-Ning",
     aliases: ["李寧", "Li-Ning", "Way of Wade"],
