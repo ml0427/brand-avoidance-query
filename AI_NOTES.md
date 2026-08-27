@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-27 PSHT：退社對打死亡案與整體個人避雷
+
+- Record：`psht-organization-member-death-indictment-personal-20260827`；`personal` / `high`。使用者提供 Meta AI 回覆截圖並表示「避雷」，其後明確補充「我不相信這是個案，請不要指定是分部」，因此收錄主體改為 PSHT 整體，不限烏日分部。截圖只作案件線索；自由時報 2026-08-25 記者陳建志、ETtoday 2026-08-26 記者白珈陽均具名引述臺中地檢署起訴內容，將安姓 29 歲印尼男子稱為 PSHT 烏日分部管理者／最高管理者，並稱他要求欲退社、入社僅 3 個月的伊姓男子先與 9 名較高階社員依序對打，再違反社團對打規則踢擊伊男下巴，致伊男向後倒地、頭部撞地；伊男因左側硬腦膜下出血、腦水腫併發腦幹出血，於 2025-09-23 因中樞神經性休克死亡。兩家媒體均報導中檢依傷害致死罪嫌起訴安男，案件將由臺中地院國民法官法庭審理；程序只能寫遭起訴，不能寫成法院判刑、有罪或定讞。
+- PSHT 整體避雷是使用者的風險與價值判斷，不是檢方或法院對整體組織的認定。刑事責任只歸於安男本人；不能寫成其他分部、印尼中心、9 名對打社員、一般會員或整體組織曾下令、知情、參與本案、遭起訴或有罪。安男僅公開姓氏、年齡與分部角色，不建立人物卡、不補猜完整印尼姓名。臺中地檢署新聞稿及澄清專區於 2026-08-27 查核未見本案專屬公開稿，因此兩家媒體只能標為「媒體引述起訴內容」，不可改稱官方網頁直接確認。
+- `psht.or.id/tentang-kami/` 第一方介紹頁直接支持 `Persaudaraan Setia Hati Terate`、`PSHT` 與 `SH Terate` 名稱橋接及印尼組織背景；公開網路另見其他 PSHT 第一方網站、不同領導權主張與自稱 `PSHT Cabang Khusus Taiwan` 的歷史影音，因此該頁不能用來裁定所有使用 PSHT 名號者屬同一法律實體，也不能支持臺中烏日案件、正式隸屬鏈或上級治理責任。Searchable fields 僅 `PSHT`、`Persaudaraan Setia Hati Terate`、`Setia Hati Terate`、`SH Terate`；安男、伊男、印尼、武術、社團、退社、車輪戰、9 人、傷害致死、起訴、國民法官、烏日、台中、Meta AI、媒體名等不得作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-08-27-psht-wuri-branch-member-death-indictment-meta-ai.png`；SHA-256：`78c938dfe0cd487ebc2cc87a7a358673460e23ea8287ad429bfe885f2ba6f133`。
+
 ## 2026-08-27 飛虎科技／陳旻諺：不法出口高階 AI 伺服器案與管理層個人避雷
 
 - Records：`feihu-technology-ai-server-illegal-export-management-personal-20260827`、`chen-minyan-feihu-technology-ai-server-indictment-personal-20260827`；皆為 `personal` / `high`。使用者提供 Threads／自由時報畫面，要求找出截圖主體飛虎科技的管理層並全數加入避雷；因此建立公司卡，並為可完整具名的總經理陳旻諺建立人物卡。
