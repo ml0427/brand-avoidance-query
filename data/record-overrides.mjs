@@ -83,7 +83,7 @@ export const broadCategoryOverrides = new Map([
   ["anker", ["科技／通訊／消費電子"]],
   ["lalamove-taiwan-china-taiwan-labeling-watchlist", ["汽車／交通／能源"]],
   ["paris-evergreen-laurel-hotel-statement-event-personal", ["餐飲／生活服務"]],
-  ["cha-li-wang-zhengshan-xiaozhong-moli-longjing-sku-personal", ["食品／飲料／農水產"]],
+  ["cha-li-wang-china-origin-food-whole-brand-personal-20260827", ["食品／飲料／農水產"]],
   ["sunshine-womens-choir-china-taiwan-labeling-watchlist", ["社群／App／媒體娛樂"]],
   ["lin-bo-rui-public-figure-watchlist", ["社群／App／媒體娛樂"]],
   ["mecatron-joemars-iran-uav-ofac-sanctions", ["科技／通訊／消費電子"]],
