@@ -797,3 +797,12 @@
 - 臺中榮民總醫院官方醫師資料可直接核對中文姓名「廖致翔」、英文名 Chih-Hsiang Liao，並列於神經外科、職稱為主治醫師；官方來源只用於姓名／醫師身分橋接與降低同名誤收風險，不作避雷理由。
 - 收錄範圍限廖致翔本人，不擴及臺中榮民總醫院、神經外科、同事、病人或其他同名者；不可推測醫療糾紛、醫療疏失、醫德、政治立場、違法、處分、法院案件、服務品質或法律責任。
 - searchable fields 只保留完整姓名「廖致翔」；不收廖醫師、廖醫生、醫師、醫生、神經外科、主治醫師、臺中榮民總醫院、台中榮總、英文名、專長或其他職稱／機構泛稱。
+
+## 2026-08-28 王皓／王子老師／hao.613 多圖個人避雷
+
+- Record：`wang-hao-hao-613-swim-coach-social-screenshot-personal-20260828`；`personal` / `medium`。使用者在持續圖片避雷收錄中提供 Threads 串文、游泳教練宣傳圖及直接私訊截圖，並明確更正三圖為同一個人，故合併為單一人物紀錄。
+- 身分橋接：直接私訊頁首並列「王皓」與 `hao.613`；宣傳圖同版面顯示「王皓／王子老師」與 `hao_to_swim`。這足供 user-directed personal intake 合併，但不是外部獨立身分或跨平台帳號控制權驗證。
+- 帳號更正：第一張貼文本文寫 `hao.163`，但內嵌及後續直接私訊頁首均顯示 `hao.613`；以較直接的 `hao.613` 作 searchable identifier，`hao.163` 僅保留為來源差異，不納入 name／aliases／identifiers。
+- 證據邊界：私訊截圖可見外貌／身材貶抑、嘲諷及貶低文字，但不可改寫成騷擾成立、違法、完整對話、帳號控制權、本人承認、官方認定或法律責任。宣傳圖上的學校、證照、代表隊／競賽／教學經歷、課程與費用均只作圖片自述，不視為已獨立驗證。
+- 證據檔與 SHA-256：`evidence/user-submissions/2026-08-28-hao-613-harassment-thread-screenshot.png`（`7354399acea0724303b81ff7f7004aa90e1237194ccc6ac7e3a37a272fa7f2a0`）；`evidence/user-submissions/2026-08-28-hao-613-direct-message-screenshot.png`（`c0df6c39c9f860ce5fb1c0d0c178f4cfcc23714b571d6919038e913a08fefbea`）；`evidence/user-submissions/2026-08-28-wang-hao-swim-coach-profile.png`（`cbfaa6043fe7835e9ea2c4d15916d1bb2750523ba0b9bb025428c0ed78937fc1`）。宣傳圖證據副本已遮蔽電話與 QR Code，未保存或解碼其內容。
+- searchable fields 僅保留王皓、王子老師、`hao.613`、`hao_to_swim`；不收 `hao.163`、來源發文者、平台名、學校、證照、機構、地點、職業泛稱、事件理由或私訊用語。收錄範圍限王皓本人，不擴及國立清華大學、中華泳協、泳池、學員、合作對象或游泳界。

@@ -14339,5 +14339,55 @@
     ],
     "aiNotes": "此筆是 user-directed minimal-scope public-person personal record。使用者只指定廖致翔醫師本人，未說明原因；可說使用者將其列為個人避雷，官方醫院頁只核對完整姓名與醫師身分。不可自行補寫醫療糾紛、醫療疏失、醫德、政治立場、發言、違法、主管機關處分、法院案件、服務品質或任何未提供理由。searchable fields 僅保留完整姓名「廖致翔」；不要把廖醫師、廖醫生、醫師、醫生、神經外科、主治醫師、臺中榮民總醫院、台中榮總、Chih-Hsiang Liao、科別、專長或來源名稱作 alias／identifier。",
     "lastReviewed": "2026-08-28"
+  },
+  {
+    "id": "wang-hao-hao-613-swim-coach-social-screenshot-personal-20260828",
+    "name": "王皓",
+    "aliases": [
+      "王子老師"
+    ],
+    "identifiers": [
+      "hao.613",
+      "hao_to_swim"
+    ],
+    "country": "",
+    "categories": [
+      "媒體娛樂"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者提供社群私訊與人物宣傳截圖"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "在持續圖片避雷收錄脈絡中，使用者提供 Threads 串文截圖、游泳教練宣傳圖及直接私訊截圖，並明確更正三張圖片指向同一個人。直接私訊截圖頁首清楚並列「王皓」與 `hao.613`；宣傳圖同版面顯示「王皓／王子老師」及 Instagram `hao_to_swim`，因此依使用者更正合併為單一人物 personal 紀錄。第一張 Threads 貼文文字將帳號寫為 `hao.163`，但內嵌及後續直接私訊頁首均顯示 `hao.613`，故只把 `hao.613` 列為搜尋識別，`hao.163` 僅保留作來源差異。直接私訊截圖可見外貌／身材貶抑、嘲諷及貶低文字；但截圖是局部畫面，未獨立驗證真偽、完整對話、帳號實際控制者、訊息發送責任、持續騷擾、違法或法律責任。宣傳圖中的學校、證照、經歷、服務與課程資訊均只視為圖片自述，不作獨立查證。收錄範圍限使用者指定的王皓本人，不擴及國立清華大學、中華泳協、泳池、學員、合作對象或游泳界。",
+    "sources": [
+      {
+        "title": "使用者明確更正 - 三張圖片為同一個人",
+        "url": "",
+        "date": "2026-08-28",
+        "note": "使用者在補充游泳教練宣傳圖後明確回覆「同一個人」，支持本次把第一張串文所指目標、宣傳圖中的王皓／王子老師／`hao_to_swim`，以及後續直接私訊截圖中的王皓／`hao.613` 合併為單一 personal intake；此更正只支持使用者指定的收錄與合併方向，不是第三方獨立身分查證，也不證明跨平台帳號控制權、圖片自述或私訊事件真偽。"
+      },
+      {
+        "title": "使用者提供 Threads 串文截圖 - hao.163／hao.613 帳號文字差異與私訊指稱",
+        "url": "",
+        "date": "2026-08-28",
+        "note": "截圖可見發文帳號 `vicktseng` 的貼文文字將目標寫為 `hao.163`，並指稱因其留言未繫安全帶後遭惡意留言、私訊及外貌／言語攻擊；同一畫面的內嵌聊天頁首字樣視覺上則為 `hao.613`。此來源只支持畫面存在上述貼文指稱及帳號文字差異，不單獨確認正確帳號、人物身分、對話完整性、主觀惡意、持續騷擾、違法或法律責任。證據檔：evidence/user-submissions/2026-08-28-hao-613-harassment-thread-screenshot.png；SHA-256：7354399acea0724303b81ff7f7004aa90e1237194ccc6ac7e3a37a272fa7f2a0。"
+      },
+      {
+        "title": "使用者提供直接私訊截圖 - 王皓 / hao.613",
+        "url": "",
+        "date": "2026-08-28",
+        "note": "直接私訊截圖頁首清楚並列顯示名稱「王皓」與帳號 `hao.613`；畫面可見灰色訊息含外貌／身材貶抑、嘲諷及貶低文字。此來源只支持截圖中的頁首與可見訊息，不獨立驗證截圖真偽、完整上下文、帳號控制權、訊息實際發送責任、持續騷擾、違法或法律責任。證據檔：evidence/user-submissions/2026-08-28-hao-613-direct-message-screenshot.png；SHA-256：c0df6c39c9f860ce5fb1c0d0c178f4cfcc23714b571d6919038e913a08fefbea。"
+      },
+      {
+        "title": "使用者提供游泳教練宣傳圖 - 王皓 / 王子老師 / hao_to_swim",
+        "url": "",
+        "date": "2026-08-28",
+        "note": "宣傳圖同版面顯示「王皓／王子老師」、Instagram `hao_to_swim`，並列學校、證照、泳訓經歷、服務範圍、課程地點與費用等宣傳文字；此來源只支持圖中文字與身分呈現，不獨立驗證學歷／在學關係、證照真實性或有效性、任職／教學經歷、現行招生狀態、課程品質或專業能力。專案證據副本已遮蔽電話與 QR Code，未保存或解碼其內容。證據檔：evidence/user-submissions/2026-08-28-wang-hao-swim-coach-profile.png；SHA-256：cbfaa6043fe7835e9ea2c4d15916d1bb2750523ba0b9bb025428c0ed78937fc1。"
+      }
+    ],
+    "aiNotes": "此筆是 multi-image / user-directed public-person personal record。使用者明確更正三張圖指向同一個人；第三張直接私訊頁首清楚並列王皓與 hao.613，第二張宣傳圖同版面並列王皓、王子老師與 hao_to_swim，足供 personal intake 合併，但不是外部獨立身分驗證。第一張貼文本文的 hao.163 與內嵌／後續直接私訊畫面的 hao.613 不一致；以較直接的 hao.613 作 searchable identifier，hao.163 僅留在來源差異，不得作 name／alias／identifier。可說截圖可見外貌／身材貶抑與嘲諷文字；不可寫成騷擾成立、違法、完整對話、帳號控制權、本人承認、官方認定或法律責任。宣傳圖履歷只作圖片自述，不得改寫成已驗證學歷、證照、代表隊經歷或教學資格。searchable fields 僅王皓、王子老師、hao.613、hao_to_swim；不要把 hao.163、vicktseng、Threads、Instagram、國立清華大學、清華大學、中華泳協、游泳教練、泳池、學員、安全帶、惡意留言、私訊、外貌攻擊、身材、言語騷擾、嘲諷、違法、電話、QR Code 或其他理由／機構／泛稱作 alias／identifier。收錄範圍限使用者指定的王皓本人。",
+    "lastReviewed": "2026-08-28"
   }
 ]
