@@ -14306,5 +14306,38 @@
     ],
     "aiNotes": "此筆為 user-directed、source-backed 的 App personal record。可客觀說官方現行隱私／服務協議含中華人民共和國法律、人民法院及重慶市文字，官方隱私協議亦列姓名、電話、身分證號碼等資料類別；不可改寫成住戶資料已傳中國、已外洩、App 是中國公司、中共控制、已違法／裁罰，或台灣住戶從此完全只受中國法律管轄。91fun 只按官方頁面自稱保存，不推定其法律實體或與 App Store seller 的所有權關係。收錄範圍限易生活 Goezlife App；Guo Tai Apartment Building Management and Maintenance Co., Ltd.、91fun、物業公司、社區、Threads 帳號及開發者其他產品不列入本筆 searchable fields。搜尋欄位只保留官方 App 名稱的限定寫法、Goezlife 名稱、bundle、App Store ID 與官方網域；「易生活」雖為官方 App 名稱，可由 canonical name 的 substring 命中，但不另建同名 generic alias。不要把中華人民共和國、中國法律、重慶、人民法院、隱私協議、物業、社區、個資、身分證、91fun、notyet0627、Threads 等理由／平台／泛稱作 standalone alias／identifier。",
     "lastReviewed": "2026-08-28"
+  },
+  {
+    "id": "liao-zhixiang-doctor-user-directed-personal-20260828",
+    "name": "廖致翔",
+    "aliases": [
+      "廖致翔"
+    ],
+    "country": "",
+    "categories": [
+      "媒體娛樂"
+    ],
+    "avoidReasons": [
+      "使用者個人避開"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者明確要求將廖致翔醫師本人列入個人避雷，但未提供避雷原因；本紀錄因此只保存使用者的個人避開決定，不推測或附加任何爭議、政治立場、醫療行為、醫療品質、違法、處分或法律責任。臺中榮民總醫院官方醫師資料可直接核對完整姓名「廖致翔」、英文名 Chih-Hsiang Liao，以及神經外科主治醫師身分；該來源只用於避免同名誤收，不作避雷理由。收錄範圍限廖致翔本人，不擴及臺中榮民總醫院、科別、同事、病人或其他同名者。",
+    "sources": [
+      {
+        "title": "使用者明確指定 - 廖致翔醫師個人避雷",
+        "url": "",
+        "date": "2026-08-28",
+        "note": "使用者直接要求「廖致翔醫生加到避雷」。此來源只支持將具名人物本人列為使用者個人避開；使用者未提供理由，因此不支持任何爭議、政治、醫療、違法、處分或法律責任主張。"
+      },
+      {
+        "title": "臺中榮民總醫院全球資訊網 - 廖致翔醫師",
+        "url": "https://www.vghtc.gov.tw/DoctorInfoDetail/5994?stampId=5439D&OPDSECTION=NS",
+        "date": "查核日 2026-08-28",
+        "note": "臺中榮民總醫院官方醫師資料顯示中文姓名「廖致翔」、英文名 Chih-Hsiang Liao，並列於神經外科、職稱為主治醫師；此來源只用於人物姓名與醫師身分橋接，不支持任何避雷原因、爭議、醫療品質判斷或法律責任。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed minimal-scope public-person personal record。使用者只指定廖致翔醫師本人，未說明原因；可說使用者將其列為個人避雷，官方醫院頁只核對完整姓名與醫師身分。不可自行補寫醫療糾紛、醫療疏失、醫德、政治立場、發言、違法、主管機關處分、法院案件、服務品質或任何未提供理由。searchable fields 僅保留完整姓名「廖致翔」；不要把廖醫師、廖醫生、醫師、醫生、神經外科、主治醫師、臺中榮民總醫院、台中榮總、Chih-Hsiang Liao、科別、專長或來源名稱作 alias／identifier。",
+    "lastReviewed": "2026-08-28"
   }
 ]
