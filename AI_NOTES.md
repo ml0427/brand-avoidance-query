@@ -782,3 +782,11 @@
 - 一手來源為食藥署官方頁 `https://www.fda.gov.tw/TC/siteContent.aspx?sid=13737` 與官方附件 `https://www.fda.gov.tw/tc/includes/GetFile.ashx?id=f639229226526535451&type=4`。官方附件列明：旭發食品、典韓實業、堡晟興業、協發行國際食品均因未設置衛生管理人員，各裁處新臺幣 3 萬元；芭樂家泡菜館「黃金泡菜」等 3 件產品因內容物含量未由高至低標示及未標示過敏原資訊等，裁處 5 萬元。
 - 重要反向界線：本專案 71 件產品抽驗全部符合規定；四家未設衛生管理人員業者在官方表中的食品業者登錄、GHP、產品責任險欄均為合格。旭發食品與協發行國際食品的列名抽驗產品合格；堡晟興業與芭樂家泡菜館為現場無醃漬蔬菜成品可供抽驗，不能寫成其產品抽驗不合格或合格。不得把行政管理／標示裁罰改寫成產品有毒、全面不合格、召回、停業或未改善。
 - 芭樂家泡菜館另以 TVBS 健康 2.0 具名報導補充 3 件品名為黃金泡菜、韓式泡菜、黃金海帶絲；違規與裁處認定仍以食藥署官方附件為主。searchable fields 只收公司／業者正式名稱及窄別名，不把泡菜、醃漬蔬菜、食品、衛生管理人員、標示、過敏原、罰鍰等理由／泛稱加入 aliases 或 identifiers。
+
+## 2026-08-28 易生活 Goezlife App 中國法律／個資條款個人避雷
+
+- Record：`goezlife-app-prc-law-privacy-personal-20260828`；`personal` / `high`。使用者提供 Threads 截圖後明確要求將易生活 App 加入避雷。
+- 官方 `app.goezlife.com` 隱私協議現行文字約定適用中華人民共和國法律與人民法院管轄；同站服務協議另稱簽訂地為中華人民共和國重慶市並適用大陸地區法律。隱私協議列姓名、性別、年齡、手機、身分證號等註冊資料並提到「91fun」；Apple 台灣 App Store 則列開發者／供應商為 Guo Tai Apartment Building Management and Maintenance Co., Ltd.。
+- 證據邊界：可說官方條款含中國法律、人民法院及重慶市文字，以及公開頁面揭露的資料類型；不可寫成資料已傳中國、已外洩、違法、中資／中共控制，或中國條款在台灣當然完全有效。91fun 與 App Store seller 的法律關係尚未確認。
+- 證據檔：`evidence/user-submissions/2026-08-28-goezlife-prc-law-privacy-thread.png`；SHA-256：`7353e87c08f4ba8263dc7c102246e543e408fb7e08d687c62ccb232a1ff99a74`。
+- searchable fields 只保留限定 App 名稱、Goezlife、bundle、App Store ID 與官方網域；不把中國法律、重慶、人民法院、隱私協議、物業、社區、個資、91fun、Threads 或貼文帳號加入 aliases／identifiers。

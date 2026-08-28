@@ -340,4 +340,55 @@ export const records = [
       "此筆是 user-directed screenshot personal record。主因固定為截圖中的軟體國家／地區選項把台灣列為『中國台灣』；次因是客服提到登入介面優化／審核後，沒有正面說明是否更正該標示，轉而推介試聽與課程。不可寫成客服完全沒有回應介面問題，因其確實提到正在優化與審核；也不可擴張成客服明確拒絕修改、品牌承認特定政治立場、故意對兒童洗腦、違法、主管機關認定、所有 App／桌面版本均有相同選項，或已確認各商店 seller／developer 間的最終法人所有權。官方台灣下載中心直接連至 cdn.vipthink.cn，可支撐台灣官網與 vipthink.cn 服務鏈；Google Play／Apple App Store 支撐 VIPTHINK豌豆思維及套件／App Store 身分。收錄範圍限 VIPTHINK 品牌／課程與 App 服務，不擴及教師、員工、學員、家長、LINE、Google Play、Apple 或個別商店 seller／developer 的其他產品。searchable fields 僅 VIPTHINK／VIP THINK／豌豆思維品牌名稱變體、官方網域、Android／iOS 套件與 App Store ID；『最懂你的數學』及『豌豆素質教育』只留在證據敘述，不作 alias，避免裸查數學／教育誤命中。不要把中國台灣、中國、台灣、數學、教育、兒童、洗腦、政治、登入介面、審核、客服、試聽、LINE、Google Play、Apple、WONDEREDU PRIVATE LIMITED、Happyseed Ins、工作郵箱或其他理由／平台／聯絡資訊作 standalone alias／identifier。",
     lastReviewed: "2026-08-25",
   }),
+  record({
+    id: "goezlife-app-prc-law-privacy-personal-20260828",
+    name: "易生活 Goezlife App",
+    aliases: ["易生活 App", "易生活APP", "Goezlife", "Goezlife App", "goezlife"],
+    identifiers: [
+      "com.Goezlife.elife",
+      "App Store ID 6742345463",
+      "goezlife.com",
+      "app.goezlife.com",
+    ],
+    country: "",
+    categories: ["App／數位服務", "生活服務"],
+    avoidReasons: [
+      "使用者個人避開",
+      "官方協議約定適用中華人民共和國法律及中國法院管轄",
+      "住戶／訪客個資蒐集與揭露透明度疑慮",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖並明確要求將社區物業管理 App「易生活」加入避雷。截圖貼文指出其官方隱私協議約定適用中華人民共和國法律；2026-08-28 讀回 app.goezlife.com 現行隱私協議，確實可見「本協議的效力、解釋及糾紛的解決，適用於『中華人民共和國』法律」及提交有管轄權人民法院的文字；同站服務協議另稱簽訂地為中華人民共和國重慶市，並約定適用中華人民共和國大陸地區法律。隱私協議亦列姓名、性別、年齡、手機號碼、身分證號碼等註冊資料，並提到授權給「91fun」；但 Apple 台灣 App Store 的開發者／供應商欄位為 Guo Tai Apartment Building Management and Maintenance Co., Ltd.，公開頁面未清楚說明兩者法律關係與完整資料流向。此筆依使用者對中國法律條款、住戶／訪客個資與資訊透明的風險偏好，將易生活 App 列為個人避雷；不等於已證實資料傳往中國、資料外洩、違法、中資／中共控制，或中國條款在台灣當然完全有效。收錄範圍限易生活 Goezlife App，不擴及開發者、供應商、社區物業公司或其其他產品。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖 - 易生活隱私協議適用中華人民共和國法律",
+        "",
+        "2026-08-28",
+        "截圖可見帳號 notyet0627 的貼文，稱物業公司選用物業管理系統要慎選，並附易生活 App 介面與協議截圖；協議畫面可讀到「本協議的效力、解釋及糾紛的解決，適用於『中華人民共和國』法律」。此來源直接支持貼文與截圖可見文字及使用者避雷決定，不單獨證明資料已送往中國、社區只受中國法律管轄、違法或中資控制。證據檔：evidence/user-submissions/2026-08-28-goezlife-prc-law-privacy-thread.png；SHA-256：7353e87c08f4ba8263dc7c102246e543e408fb7e08d687c62ccb232a1ff99a74。",
+      ),
+      source(
+        "易生活官方隱私協議",
+        "https://app.goezlife.com/agreement.html?id=2",
+        "查核日 2026-08-28",
+        "官方動態頁現行內容約定協議效力、解釋及糾紛解決適用中華人民共和國法律，並稱爭議提交有管轄權人民法院；頁面另列姓名、性別、年齡、手機號碼、身分證號碼等註冊資料及「授權給91fun」文字。此來源支持協議公開文字，不證明實際蒐集每一欄位、完整資料流向、資料外洩、跨境傳輸或條款在台灣的最終效力。",
+      ),
+      source(
+        "易生活官方服務協議",
+        "https://app.goezlife.com/agreement.html?id=1",
+        "查核日 2026-08-28",
+        "同一官方網域的服務協議稱簽訂地為中華人民共和國重慶市，並約定成立、生效、履行、解釋及糾紛解決適用中華人民共和國大陸地區法律。此來源支持官方條款文字，不證明中國法院管轄條款在台灣當然有效。",
+      ),
+      source(
+        "Apple App Store Taiwan - 易生活",
+        "https://apps.apple.com/tw/app/id6742345463",
+        "查核日 2026-08-28",
+        "Apple 台灣商店列 App 名稱「易生活」、App Store ID 6742345463、bundle com.Goezlife.elife，以及開發者／供應商 Guo Tai Apartment Building Management and Maintenance Co., Ltd.；商店隱私標示列識別碼及診斷資料。此來源用於 App 身分橋接，不證明開發者最終所有權、91fun 法律身分、完整資料蒐集實作或爭議條款效力。",
+      ),
+    ],
+    aiNotes:
+      "此筆為 user-directed、source-backed 的 App personal record。可客觀說官方現行隱私／服務協議含中華人民共和國法律、人民法院及重慶市文字，官方隱私協議亦列姓名、電話、身分證號碼等資料類別；不可改寫成住戶資料已傳中國、已外洩、App 是中國公司、中共控制、已違法／裁罰，或台灣住戶從此完全只受中國法律管轄。91fun 只按官方頁面自稱保存，不推定其法律實體或與 App Store seller 的所有權關係。收錄範圍限易生活 Goezlife App；Guo Tai Apartment Building Management and Maintenance Co., Ltd.、91fun、物業公司、社區、Threads 帳號及開發者其他產品不列入本筆 searchable fields。搜尋欄位只保留官方 App 名稱的限定寫法、Goezlife 名稱、bundle、App Store ID 與官方網域；「易生活」雖為官方 App 名稱，可由 canonical name 的 substring 命中，但不另建同名 generic alias。不要把中華人民共和國、中國法律、重慶、人民法院、隱私協議、物業、社區、個資、身分證、91fun、notyet0627、Threads 等理由／平台／泛稱作 standalone alias／identifier。",
+    lastReviewed: "2026-08-28",
+  }),
 ];
