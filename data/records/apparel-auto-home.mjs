@@ -18,6 +18,93 @@
 
 export const records = [
   record({
+    id: "ideal-living-airdoctor-aquatru-temporary-personal-20260830",
+    name: "Ideal Living／AirDoctor／AquaTru",
+    aliases: [
+      "Ideal Living",
+      "Ideal Living LLC",
+      "Ideal Living Management LLC",
+      "Ideal Living Holdings LLC",
+      "AirDoctor",
+      "Air Doctor",
+      "AirDoctor LLC",
+      "AquaTru",
+      "Aqua Tru",
+      "AquaTru Pro",
+      "AquaTru Pro Series",
+    ],
+    identifiers: ["idealliving.com", "airdoctorpro.com", "aquatruwater.com"],
+    country: "美國",
+    categories: ["家電", "空氣清淨機", "濾水設備", "暫時個人避雷"],
+    avoidReasons: [
+      "使用者指定暫時個人避雷",
+      "現任共同創辦人與宗教組織及已定罪逃犯的歷史職務／保釋金關係",
+      "前員工提出公司資金與宗教組織關係等未決指控",
+      "新公開調查影片仍待後續交叉查證",
+    ],
+    confidence: "medium",
+    status: "personal",
+    temporaryUntil: "2027-02-28",
+    temporaryAlertReason:
+      "使用者指定先暫時避開並於一個月或半年後回頭追蹤；先於 2026-09-30 複查公開回應、訴訟文件與後續報導，最晚於 2027-02-28 重新決定是否延長、縮小或移除。",
+    reviewAfter: "2026-09-30",
+    summary:
+      "使用者在觀看 2026-08-27 新公開的 Reckless Ben 調查影片後，指定先將 Ideal Living 及目前官方列出的 AirDoctor、AquaTru／AquaTru Pro 品牌暫時列入個人避雷，並於一個月或半年後回頭追蹤。可獨立確認的歷史事實包括：Ideal Living 官網目前仍將 Peter Spiegel 列為共同創辦人兼共同執行長；Hays Free Press 2011 年報導稱 Spiegel 當時是 Barsana Dham 的 treasury secretary，曾提供 100 萬美元現金保釋金讓 Prakashanand Saraswati 在定罪後等待宣判，Saraswati 未到庭逃亡後該保釋金遭沒收；Spiegel 也曾於 2008 年提供 1,000 萬美元擔保，使 Saraswati 在候審期間可赴印度。Saraswati 因對兩名兒童共 20 項 indecency with a child 指控遭陪審團定罪並被判 280 年，且目前仍可在 INTERPOL 公開紅色通報資料中查得。前員工 Myra Nishizaki 於 2023 年民事訴狀另主張公司與 Spiegel 的宗教組織存在財務關係、宗教組織成員獲聘及較佳待遇等；這些是原告主張，不是法院認定，相關案件依 2025 年法院文件所述已於 2025 年 4 月保密和解。影片進一步宣稱 Ideal Living 資助『世界最大人口販運集團』、媒體與執法機關壓案等，目前沒有足夠獨立證據可作客觀定論；本筆暫時避雷不以該等最強指控已證實為前提，也不把刑事責任歸於公司、品牌、一般員工或消費者。",
+    sources: [
+      source(
+        "Ideal Living - Our Team",
+        "https://idealliving.com/our-team/",
+        "查核日 2026-08-30",
+        "Ideal Living 官方頁目前將 Peter Spiegel 與 Katie Williams 列為共同創辦人及共同執行長；此頁只支撐現行公司角色，不證明影片中的資金、犯罪或媒體壓制指控。",
+      ),
+      source(
+        "Ideal Living - Our Brands",
+        "https://idealliving.com/our-brands/",
+        "查核日 2026-08-30",
+        "官方品牌頁列 AirDoctor、AquaTru 與 AquaTru Pro Series；本筆只依目前官方可確認品牌範圍暫時避雷，不自行擴張到已停止、已出售或未列名產品線。",
+      ),
+      source(
+        "Hays Free Press - Missing guru sentenced to 280 years in prison",
+        "https://www.haysfreepress.com/article/18636,missing-guru-sentenced-to-280-years-in-prison",
+        "2011-03-09",
+        "報導 Saraswati 未到庭並遭判 280 年；稱 Peter Spiegel 是 Barsana Dham treasury secretary，已損失其為 Saraswati 提供的 100 萬美元現金保釋金，且 2008 年亦曾提供 1,000 萬美元個人擔保讓 Saraswati 候審期間赴印度。報導不證明 Spiegel 知情協助逃亡或 Ideal Living 公司資金流向。",
+      ),
+      source(
+        "Voice of America - Hindu Guru Charged With Child Molestation Allowed to Leave US",
+        "https://www.voanews.com/a/a-13-2008-05-21-voa1/350340.html",
+        "2008-05-21",
+        "報導 Peter Spiegel 願以 1,000 萬美元擔保 Saraswati 會返回美國受審；當時仍是起訴及候審階段，不能把此報導改寫成 Spiegel 已知對方有罪或預知其日後逃亡。",
+      ),
+      source(
+        "INTERPOL - Red Notice 2011/49171: Saraswati",
+        "https://ws-public.interpol.int/notices/v1/red/2011-49171",
+        "查核日 2026-08-30",
+        "INTERPOL 公開紅色通報資料列姓氏 SARASWATI、出生日期 1929-01-15、印度／美國國籍及美國簽發的兒童猥褻接觸罪逮捕令；資料中的 forename 拼作 PRAKASHANDAND。紅色通報是國際協尋逮捕請求，不是 INTERPOL 自行定罪，也不等於『世界最大人口販運集團』已獲認定。",
+      ),
+      source(
+        "Myra Nishizaki v. Ideal Living Management LLC et al. - Complaint for Damages（RECAP／CourtListener）",
+        "https://www.courtlistener.com/docket/66737557/183/7/airdoctor-llc-v-lonni-inc/",
+        "2023-09-01",
+        "前員工訴狀主張 Ideal Living 與 Spiegel 的宗教組織存在財務關係，宗教組織成員獲聘及較佳待遇，並提出宗教歧視、吹哨報復、誹謗等請求。這是原告 allegations，不是證據裁判或法院認定。",
+      ),
+      source(
+        "AirDoctor v. Lonni - Ex Parte Application for Protective Order（RECAP／CourtListener）",
+        "https://www.courtlistener.com/docket/66737557/183/1/airdoctor-llc-v-lonni-inc/",
+        "2025-09-24",
+        "Ideal Living／AirDoctor 在另一聯邦案件提交的文件稱 Nishizaki 案、Najar 案及 restraining-order proceeding 已於 2025 年 4 月和解並含保密條款；文件同時否認宗教組織相關指控。此為訴訟一方的法院陳述，可確認案件存在與所述程序狀態，不足以單獨裁定任一方實體主張真偽。",
+      ),
+      source(
+        "Reckless Ben - Exposing the largest human trafficking ring in the world",
+        "https://www.youtube.com/watch?v=ES82FWeOnU4",
+        "2026-08-27",
+        "新公開調查影片訪談 Nishizaki、David Najar 並對 Ideal Living、Spiegel、JKP／Radha Madhav Dham 提出重大指控。影片是本次暫時避雷及後續複查的主要線索，不是司法文件；『世界最大人口販運集團』、公司資助犯罪、FBI 不作為及媒體遭壓制等最強主張仍須獨立查證。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed / temporary / company-and-current-brands personal record。2026-09-30 起先查 Ideal Living／Peter Spiegel 是否有正式回應、新法院卷宗、執法機關公開資訊、可靠具名媒體調查及 Reckless Ben 後續證據；2027-02-28 前完成半年複查。可說 Peter Spiegel 與 Barsana Dham 的歷史職務、100 萬美元現金保釋金及 1,000 萬美元擔保有同期報導支持，也可說 Nishizaki 確實提告並提出公司財務／宗教關係主張；不可把 plaintiff allegations、影片敘事、沉默或保密和解改寫成 Ideal Living／AirDoctor／AquaTru 已被認定資助性侵、人口販運、協助逃亡、滅證、威脅記者或妨礙司法。『世界最大』與『人口販運集團』不是目前已驗證客觀分類。searchable fields 僅公司、品牌與官方網域；Peter Spiegel、Katie Williams、Saraswati、JKP、Barsana Dham、Radha Madhav Dham、人口販運、兒童性侵、FBI、Newsweek、LA Times、Reckless Ben、影片名與法院案號不得作 standalone alias／identifier。",
+    lastReviewed: "2026-08-30",
+  }),
+  record({
     id: "deshijing-antibacterial-alcohol-wipes-china-origin-personal-20260826",
     name: "德適淨＋抗菌酒精擦",
     aliases: [

@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-08-30 Ideal Living／AirDoctor／AquaTru：一個月初查、半年到期的暫時個人避雷
+
+- Record：`ideal-living-airdoctor-aquatru-temporary-personal-20260830`；`personal` / `medium`。使用者觀看 2026-08-27 Reckless Ben 調查影片後，明確指定先暫時避雷並於一個月或半年後回頭追蹤。收錄範圍限 Ideal Living 及官方現行品牌頁可確認的 AirDoctor、AquaTru／AquaTru Pro；`reviewAfter: 2026-09-30`，`temporaryUntil: 2027-02-28`。一個月先查公司／當事人正式回應、新法院卷宗、執法機關公開資訊、具名可靠媒體調查與影片後續證據；半年時完整重評是否延長、縮小或移除。
+- 可獨立確認的歷史關係：Ideal Living 官網目前仍列 Peter Spiegel 為共同創辦人／共同執行長；Hays Free Press 2011-03-09 稱 Spiegel 是 Barsana Dham treasury secretary，曾提供 100 萬美元現金保釋金讓 Prakashanand Saraswati 在定罪後等待宣判，Saraswati 未到庭後保釋金遭沒收；Spiegel 也曾於 2008 年提供 1,000 萬美元擔保讓 Saraswati 候審期間赴印度。INTERPOL 公開 Red Notice 2011/49171 目前仍可查得 Saraswati。
+- 前員工 Myra Nishizaki 2023 年民事訴狀確有提出公司資金／宗教關係、宗教組織成員獲聘與較佳待遇等主張；相關訴訟依 2025 年另一法院文件所述已於 2025 年 4 月保密和解。這些只算原告 allegations 與程序事實，不是法院實體認定；但本專案的個人暫時避雷不以司法判決為前提。影片的『世界最大人口販運集團』、Ideal Living 資助犯罪、FBI 不作為與媒體遭壓制等最強主張尚無足夠獨立證據，不得升格為客觀定論或歸責一般員工／消費者。Searchable fields 只放公司、現行品牌與官方網域，不把人物、組織、犯罪詞、媒體名、影片名或案號作 standalone alias／identifier。
+
 ## 2026-08-29 PASSION 24／果力醒：品牌所屬公司中國合作工廠與全品牌個人避買
 
 - Record：`passion24-yun-ding-china-partner-factories-whole-brand-personal-20260829`；`personal` / `high`。使用者提供紫色 PASSION 24 WAKE 罐裝飲料照片，正面可辨識 APPLE PASSIONFRUIT FUNCTIONAL JUICE、果力醒 99% 果汁及零咖啡因／零添加糖圖示。蕓鼎企業官方自有品牌頁直接將 PASSION 24 列為自有品牌；同公司官方『工廠與夥伴』頁明列台灣 1 間自有工廠與中國 2 間合作工廠，足以確認品牌所屬公司的食品飲料製造網絡涉中國合作工廠。
