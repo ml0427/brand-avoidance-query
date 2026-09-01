@@ -10,6 +10,7 @@ import { records as localBusinessTravelPersonalRecords } from "./local-business-
 import { records as religiousOrganizationsPersonalRecords } from "./religious-organizations-personal.mjs";
 import { records as religiousPublicFiguresPersonalRecords } from "./religious-public-figures-personal.mjs";
 import { records as religiousReleaseOutcomesPersonalRecords } from "./religious-release-outcomes-personal.mjs";
+import { records as environmentalCivicOrganizationsPersonalRecords } from "./environmental-civic-organizations-personal.mjs";
 
 export const riskRecords = [
   ...techSecurityServicesRecords,
@@ -24,4 +25,5 @@ export const riskRecords = [
   ...religiousOrganizationsPersonalRecords,
   ...religiousPublicFiguresPersonalRecords,
   ...religiousReleaseOutcomesPersonalRecords,
+  ...environmentalCivicOrganizationsPersonalRecords,
 ];

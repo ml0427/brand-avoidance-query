@@ -761,12 +761,6 @@ export const tppCouncilListAliases20260626 = [
 export const treeProtectionPublicFigureAliases = [
   "樹黨",
   "Trees Party",
-  "台灣護樹團體聯盟",
-  "社團法人台灣森林城市協會",
-  "台灣森林城市協會",
-  "森林城市協會",
-  "城市森林協會",
-  "高雄愛樹人",
   "土城護樹者聯盟",
   "幸町百年老樹聯盟",
   "莊傑任",
