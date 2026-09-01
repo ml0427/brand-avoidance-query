@@ -18,6 +18,73 @@
 
 export const records = [
   record({
+    id: "white-rabbit-candy-china-brand-historical-formaldehyde-melamine-personal-20260901",
+    name: "大白兔／White Rabbit（使用者全品牌避雷）",
+    aliases: [
+      "大白兔",
+      "大白兔奶糖",
+      "大白兔糖",
+      "White Rabbit",
+      "White Rabbit Candy",
+      "White Rabbit Creamy Candy",
+    ],
+    identifiers: [],
+    country: "中國（上海起源食品品牌）",
+    categories: ["食品／飲料／農水產", "糖果／奶糖"],
+    avoidReasons: [
+      "使用者個人避買",
+      "中國食品品牌",
+      "使用者既定規則：中國製食品／中國食品品牌直接避買",
+      "2007 年印尼主管機關曾檢出甲醛並封存相關樣品",
+      "2008 年香港檢出三聚氰胺及美國召回",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "大白兔是源自上海的中國糖果品牌；依使用者固定採買規則，中國製食品／中國食品品牌直接避買，因此本筆將大白兔／White Rabbit 列為全品牌個人避買。歷史食安主張需按年份與主管機關分開：印尼食品藥品監督管理局 2007 年公告曾在 White Rabbit Creamy Candy／White Rabbit Candy 等抽樣中檢出甲醛並封存待銷毀；但新加坡農糧獸醫局同年檢出的是微量甲醛，依 WHO 每日可耐受量判定正常食用不構成健康風險，並稱沒有證據顯示甲醛被當作防腐劑添加。因此不能把『大白兔多次驗出甲醛』寫成所有國家、所有批次或現售商品的一致結論。2008 年香港食物安全中心在 454 克大白兔奶糖樣本檢出三聚氰胺 16 ppm，高於當時 2.5 ppm 上限，並要求停止販售及由進口商回收；美國 FDA 保存的廠商召回公告亦記載 White Rabbit Candy 因三聚氰胺污染而召回。這些是 2007／2008 年歷史抽驗、封存與召回事實，不代表現售商品仍含甲醛或三聚氰胺，也不能直接改寫成目前仍在多國禁售。CNA 2026 年報導 White Rabbit 官方區域經銷商在新加坡設快閃店並販售多種口味奶糖，足以反證『目前在新加坡仍全面禁售』；本次未找到足以證明 2026 年仍有多國全面禁售的主管機關資料。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－大白兔奶糖甲醛、三聚氰胺及多國禁售主張",
+        "",
+        "2026-09-01",
+        "截圖中的 Threads 貼文稱大白兔奶糖多次驗出甲醛與三聚氰胺、早已在許多國家下架和禁售，並呼籲台灣消費者不要購買。此圖只作主張來源與查核線索；外部查核支持 2007 年部分地區甲醛事件及 2008 年三聚氰胺召回，但不支持把歷史下架改寫成 2026 年仍多國全面禁售。證據檔：`evidence/user-submissions/2026-09-01-white-rabbit-candy-formaldehyde-melamine-thread.png`；SHA-256：`70cdb9088e6b383285416eec222520d63041c1c8e4cca9b42d692602f2c64974`。",
+      ),
+      source(
+        "印尼食品藥品監督管理局－中國進口食品含甲醛公共警告 No. KH.01.04.53.094（JICA 法規資料庫存檔）",
+        "https://web.archive.org/web/20131224101148/http://rulebook-jica.ekon.go.id/english/3195_KH.01.04.53.094_e.html",
+        "2007-07-24",
+        "公告稱抽驗 39 項中國進口糖果、蜜餞與乾果，7 項檢出甲醛，其中包括散裝無許可 White Rabbit Creamy Candy、具許可號與無許可的 White Rabbit Candy；主管機關已在販售點封存相關產品待銷毀，並呼籲不要食用列名產品。此來源只支持印尼當時抽樣及處置，不代表所有國家、批次或現售大白兔均含甲醛。",
+      ),
+      source(
+        "新加坡農糧獸醫局－White Rabbit Creamy Candy and Bairong Grape Biscuits from China Safe for Consumption（歷史 PDF 存檔）",
+        "https://web.archive.org/web/20131224091900/http://www.ava.gov.sg/NR/rdonlyres/4E7371F2-DBDF-489D-879B-163038DC11A3/13681/WHITERABBITCREAMYCANDYANDBAIRONGGRAPEBISCUITSFROMC.pdf",
+        "2007-07-20",
+        "AVA 因菲律賓就可能甲醛污染撤回產品的報導而抽驗新加坡販售樣品；結果在大白兔奶糖檢出微量甲醛，但依 WHO 每日可耐受量判定正常食用不構成健康風險，並稱沒有證據顯示甲醛被當作防腐劑添加。此結果與印尼公告不同，故必須保留地區、樣本與風險判定差異。",
+      ),
+      source(
+        "香港食物安全中心－奶類產品樣本最新檢測結果",
+        "https://web.archive.org/web/20131224102845/http://www.cfs.gov.hk/sc_chi/press/2008_09_24_1_c.html",
+        "2008-09-24",
+        "香港食安中心公布一個 454 克、食用期限至 2009-11-20 的大白兔奶糖樣本檢出三聚氰胺 16 ppm，高於當時 2.5 ppm 法定上限；中心稱已要求業界停止販售、進口商回收，並建議市民停止食用。這是具名樣本與歷史處置，不代表現售商品或其他批次仍相同。",
+      ),
+      source(
+        "美國 FDA 存檔－QFCO, Inc. Recalls White Rabbit Candy Because of Possible Health Risk",
+        "https://web.archive.org/web/20131125161453/http://www.fda.gov/Safety/Recalls/ArchiveRecalls/2008/ucm112508.htm",
+        "2008-09-26",
+        "FDA 保存的廠商召回公告稱 QFCO 召回在美國多州銷售的 White Rabbit Candy，原因是產品受三聚氰胺污染；公告列原味與多種口味包裝，並稱當時未接獲相關疾病通報。此來源支持 2008 年美國召回，不支持目前仍禁售或現售商品仍污染。",
+      ),
+      source(
+        "CNA Lifestyle－Singapore's first White Rabbit-themed pop-up store launches at Plaza Singapura",
+        "https://cnalifestyle.channelnewsasia.com/living/white-rabbit-pop-plaza-singapura-584681",
+        "2026-06-17",
+        "CNA 報導 White Rabbit 是源自上海、1959 年起存在的糖果品牌；White Rabbit 產品官方區域經銷商 Hao Food SG 在新加坡設快閃店，現場販售原味、抹茶、巧克力、薄荷、咖啡、椰子、紅豆、芒果及香蕉口味糖果。此來源可確認品牌中國上海起源及 2026 年新加坡公開販售，反證新加坡目前仍全面禁售的廣泛說法。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 regulator-confirmed historical food-safety / China-food-brand whole-brand-policy personal record。主要且充分理由是大白兔為源自上海的中國食品品牌，依使用者『中國製食品／中國食品品牌直接避買』規則採全品牌個人避買；2007 年甲醛與 2008 年三聚氰胺事件只作歷史補強。可說印尼 2007 年部分 White Rabbit 樣品檢出甲醛並封存、香港 2008 年具名樣本檢出 16 ppm 三聚氰胺且要求停售回收、美國同年有召回；必須同時保留新加坡 2007 年抽驗只見微量甲醛、正常食用風險判定安全且無證據顯示作為防腐劑添加的反向結果。CNA 2026 年報導官方經銷商在新加坡販售大白兔糖果，因此不得回答成目前仍在新加坡或多國全面禁售。本次查核沒有證明現售商品、所有口味、所有批次仍含甲醛／三聚氰胺，也不作現行違法、不安全或禁售定論。searchable fields 只保留大白兔與 White Rabbit 品牌／完整產品名稱；不要把奶糖、糖果、甲醛、三聚氰胺、中國、上海、禁售、下架、召回、Threads、帳號名或主管機關作 standalone alias／identifier。",
+    lastReviewed: "2026-09-01",
+  }),
+  record({
     id: "passion24-yun-ding-china-partner-factories-whole-brand-personal-20260829",
     name: "PASSION 24／果力醒",
     aliases: [
