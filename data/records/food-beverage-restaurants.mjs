@@ -18,6 +18,63 @@
 
 export const records = [
   record({
+    id: "gion-zenin-sukiyaki-japan-lineage-transparency-personal-20260902",
+    name: "祇園・禪院壽喜燒專門店",
+    aliases: [
+      "祇園.禪院壽喜燒專門店",
+      "祇園禪院壽喜燒專門店",
+      "禪院壽喜燒專門店",
+      "禪院ZEN SAN",
+      "ZEN SAN",
+    ],
+    identifiers: ["zenin.sukiyaki.tw"],
+    country: "台灣",
+    categories: ["餐飲／壽喜燒", "品牌溯源／透明度"],
+    avoidReasons: [
+      "日本投資、日方監修及百年名店技轉對應對象不透明的第三方質疑（未獨立驗證）",
+      "使用者個人避開",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者在避雷入庫流程中提供一張 Threads 公開貼文截圖，因此將畫面具名的祇園・禪院壽喜燒專門店列為個人避開。截圖中的第三方發文者把該店描述為主打日本京都祇園百年壽喜燒傳承、具有日本投資與日方監修的高檔壽喜燒，並表示自行查找後仍不知道哪一日方負責投資、技轉及哪家百年名店教導；同一畫面內嵌的 `zenin.sukiyaki.tw` 店家頁面自介，實際可見文字則是「禪院ZEN SAN傳承自日本京都祇園百年壽喜燒品牌精神」。兩者措辭層級不同：前者的日本投資、日方監修、單一股東及百年名店技轉說法均屬第三方貼文陳述；截圖沒有附原始廣告、投資文件、監修名單、技轉契約、公司資料頁或具名日本合作店家，現有可讀身分來源也不足以獨立驗證這些說法。公開 Instagram 頁面標題及 Google Maps 可橋接同名店家與 `zenin.sukiyaki.tw` 帳號，但只證明店家身分與餐廳存在，不支撐第三方質疑為事實。故本紀錄只保存使用者的個人避開決定及來源透明度疑問，不判定店家造假、違法、確有或沒有日本投資／監修／技轉，也不把留言者對日本壽喜燒料理方式的個人意見當成專業認定。使用者後續補充二本松、橋山與祇園禪院為同一位老闆，且三者社群會互相發文介紹；此為使用者提供的待驗證關係線索。Google Maps 另顯示二本松涮涮屋本館與橋山壽喜燒的獨立店家頁在查核時使用同一支公開聯絡電話，可支持兩者有直接營運關聯，但不能單獨證明共同所有權，也未直接橋接祇園禪院。範圍仍限具名餐廳／帳號，不自動擴張至二本松、橋山、發文者、留言者、inline、京都祇園其他店家、未具名股東或任何日本業者。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－祇園・禪院壽喜燒專門店日本傳承與投資監修透明度疑問",
+        "",
+        "2026-09-02",
+        "截圖可見 Threads 發文者 `rojiace` 稱該店主打日本京都祇園百年壽喜燒傳承，並聲稱有日本投資、日方監修，但表示查找後仍無法識別日方投資／技轉對象及百年名店；此為發文者陳述，未附底層文件。內嵌店家頁面顯示已驗證帳號 `zenin.sukiyaki.tw`、名稱「祇園.禪院壽喜燒專門店」及自介「禪院ZEN SAN傳承自日本京都祇園百年壽喜燒品牌精神」；該畫面自介沒有直接顯示具名日本投資方、監修方或合作名店。下方一則留言對加高湯及日本壽喜燒作法提出個人意見，只作截圖脈絡，不支撐真偽判斷。證據檔：`evidence/user-submissions/2026-09-02-gion-zenin-sukiyaki-threads-transparency-question.png`；SHA-256：`15b254b8554feb105061dba1af22395bd46b1c3d0db8808546859ef3ee84a7a0`。",
+      ),
+      source(
+        "Instagram－祇園.禪院壽喜燒專門店（@zenin.sukiyaki.tw）",
+        "https://www.instagram.com/zenin.sukiyaki.tw/",
+        "查核日 2026-09-02",
+        "公開頁面標題直接顯示「祇園.禪院壽喜燒專門店（@zenin.sukiyaki.tw）」，只用於橋接店名與帳號；頁面受登入介面限制，本次未把未讀到的貼文或自介內容當成證據，也不由頁面標題推定日本投資、監修、技轉或百年名店關係。",
+      ),
+      source(
+        "Google Maps－祇園.禪院壽喜燒專門店",
+        "https://www.google.com/maps/search/%E7%A5%87%E5%9C%92+%E7%A6%AA%E9%99%A2%E5%A3%BD%E5%96%9C%E7%87%92%E5%B0%88%E9%96%80%E5%BA%97",
+        "查核日 2026-09-02",
+        "Google Maps 可讀頁面顯示同名餐廳位於臺北市大安區，並連到 inline 預約服務；只用於店家存在、名稱、類型及區位橋接。本紀錄不保存電話、完整地址或 Plus Code，Maps 也不支撐日本投資、日方監修、技轉、股東結構或百年名店關係。",
+      ),
+      source(
+        "使用者補充關係線索－二本松、橋山、祇園禪院",
+        "",
+        "2026-09-02",
+        "使用者明確指出二本松、橋山與祇園禪院是同一位老闆，且三者社群會互相發文介紹。此線索予以保存供未來查核，但目前未取得可引用的共同所有權文件或可重現的三方社群互推貼文，因此不改寫成已獨立證實的公司關係，也不據此把祇園禪院紀錄的個人避開範圍自動擴張至二本松或橋山。",
+      ),
+      source(
+        "Google Maps－二本松涮涮屋 本館／橋山.壽喜燒",
+        "https://www.google.com/maps/search/%E4%BA%8C%E6%9C%AC%E6%9D%BE%E6%B6%AE%E6%B6%AE%E5%B1%8B",
+        "查核日 2026-09-02",
+        "分別查閱二本松涮涮屋本館與橋山.壽喜燒的 Google Maps 店家頁；兩頁是相鄰區位的不同餐廳，查核時顯示同一支公開聯絡電話，可支持兩者存在直接營運聯繫。為避免不必要個資，本紀錄不保存電話號碼或完整地址；同一電話仍不足以單獨證明股權、共同老闆，也不能橋接祇園禪院。橋山頁面：`https://www.google.com/maps/search/%E6%A9%8B%E5%B1%B1+%E9%A4%90%E5%BB%B3+%E5%8F%B0%E5%8C%97`。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 image-only / Threads-public-post / local-restaurant / marketing-lineage-transparency personal intake。使用者在已建立的避雷入庫流程中傳送截圖，足以授權建立 personal record，但未以文字另述理由；因此 avoidReasons 只保留截圖所呈現的第三方透明度質疑與使用者個人避開，不把第三方的日本投資、日方監修、單一股東、技轉或百年名店說法改寫成已查證事實。必須區分：店家內嵌自介直接可見的是「傳承自日本京都祇園百年壽喜燒品牌精神」，並非畫面內可見的具名百年品牌授權、投資或技轉證明。Instagram 與 Google Maps 只橋接店名／帳號／餐廳存在，不驗證爭議。使用者另指二本松、橋山、祇園禪院同一老闆且社群互推；這是 durable relationship lead，尚待共同所有權或原始跨帳號貼文確認。Maps 同電話只支持二本松與橋山有營運聯繫，不證明 owner identity 或祇園禪院關係。未查詢、保存或輸出台灣統編、股東個資、公開電話數值、完整地址；不得因貼文或關係線索另查或保存不必要識別碼。範圍限祇園・禪院壽喜燒專門店／`zenin.sukiyaki.tw`，不外溢二本松、橋山、發文者、留言者、inline、其他京都祇園餐廳、未具名投資人或日本業者。searchable fields 只保留店名必要標點變體、ZEN SAN 與店家帳號；不要把二本松、橋山、`rojiace`、`rekka_tsai`、Threads、inline、日本投資、日方監修、百年、技轉、股東、加高湯、火鍋、京都、祇園其他店家或地址作 alias／identifier。證據 PNG 已移除 EXIF／XMP、建立／修改時間、DPI 與自由文字 metadata，只保留 ICC 色彩描述；RGBA 像素未改變，pixel SHA-256 為 `8cf29bc7e5e4cca3dcca561f3cf6eb266b9c985feed32dfb0e5a936a5e995663`。",
+    lastReviewed: "2026-09-02",
+  }),
+  record({
     id: "silver-rabbit-soup-curry-xinyi-owner-reply-personal-20260902",
     name: "銀兔湯咖哩 信義店",
     aliases: [
