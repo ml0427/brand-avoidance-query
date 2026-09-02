@@ -2,6 +2,18 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-02 區桂芝：台視電話訪問畫面個人避雷
+
+- Record：`qu-guizhi-ttv-phone-interview-screenshot-personal-20260902`；`personal` / `medium`。使用者提供社群影片播放介面的截圖並明確說「避雷老師」，因此只將畫面具名的區桂芝本人列為個人避開。截圖中的台視新聞電話訪問版型右側標示「北一女教師 區桂芝」，左側標示「台視記者 陳蜀強」，中央有「電話訪問」，下方字幕為「那現在有一個演講技巧這麼好的人」。畫面沒有原始貼文帳號、永久連結、發布日期、完整影片、前後問答或訪問主題；故不推測字幕所指人物、事件、政策或政治立場，也不自行把使用者理由補成課綱、中國認同、統一、軍購或其他爭議。
+- 北一女官方 2022-12-07 語文競賽公告直接列「區桂芝老師指導」，只用於橋接姓名與該公告時間點的北一女教師身分，不證明台視畫面的日期、訪談內容或目前任職狀態。收錄範圍限區桂芝本人，不擴及北一女、其他教師／學生、台視、記者陳蜀強、新聞節目或同名者。Searchable fields 只保留區桂芝／区桂芝；北一女、教師、老師、台視、TTV NEWS、陳蜀強、電話訪問、演講技巧、政治、課綱、中國、統一、軍購、平台與互動數字不得作 alias／identifier。
+- 證據檔：`evidence/user-submissions/2026-09-02-qu-guizhi-ttv-phone-interview-screenshot.png`；SHA-256：`d6cfca08638417b9e04bcb63457dbea0949993e9d1604cde0a5c0be91bcf2576`。原 PNG 的 EXIF orientation、XMP 建立／修改時間、DPI 與 Screenshot 自由文字已從公開副本移除，只保留 ICC 色彩描述；RGBA 像素未改變，pixel SHA-256：`b9ee67e7887382ed989d76d16b0d59ffacfd131eecbfa0ad029615fdb0ddce89`。
+
+## 2026-09-02 銀兔湯咖哩信義店：業主嘲諷式回覆截圖個人避雷
+
+- Record：`silver-rabbit-soup-curry-xinyi-owner-reply-personal-20260902`；`personal` / `medium`。使用者明確說「避雷」並提供 Threads 截圖；內嵌 Google Maps 畫面可見一星評論者陳述餐點、服務費、僅收現金及刷載具時需讓店家拿走手機等體驗，並標示「業主回應」。回覆文字可辨識「可以不要刷載具」及「請問在哭餓紗？」等嘲諷性字句；前半句另有疑似輸入錯字／難辨字，不自行補正。使用者個人避雷的核心理由固定置首為不接受畫面所示的業主回覆態度。
+- 截圖沒有原始 Threads 串文或 Google Maps 評論永久連結、完整評論頁、付款憑證、菜單／收費規則或店家另行說明；故餐點品質、服務費、僅收現金與載具操作流程都只作評論者單方陳述，不寫成違法、客觀已證實、店家承認或主管機關認定。畫面下方其他一星評論與文字有裁切，不補全未顯示內容。Google 地圖公開商家頁可確認「銀兔湯咖哩 信義店」、日式咖哩餐廳分類及臺北市信義區忠孝東路四段 553 巷區位，只作分店身分橋接，不驗證評論、帳號控制權或爭議內容。收錄只限信義店，不擴及銀兔湯咖哩其他分店、員工、評論者或同名店家。
+- Searchable fields 只保留具名信義店與必要「咖喱」字形變體；銀兔湯咖哩單獨、餐廳、咖哩、信義、服務費、現金、載具、手機、平板、哭餓紗、Threads、Google Maps、評論者姓名／帳號、地址及其他理由／平台／泛稱不得另作 standalone alias／identifier。證據檔：`evidence/user-submissions/2026-09-02-silver-rabbit-soup-curry-xinyi-owner-reply-thread.png`；SHA-256：`76bb6682715d81fa498a30828305f960366fa01b95530c9f92b636b2d4bce9f8`。原 PNG 的 EXIF orientation、XMP 建立／修改時間、DPI 與 Screenshot 自由文字已從公開副本移除，只保留 ICC 色彩描述；RGBA 像素未改變，pixel SHA-256：`02f6acdc27c3e452e523d6301234464decf53bffd7d7145313c8e3db70c651b4`。
+
 ## 2026-09-01 國立清華大學水木餐廳公共用餐區：浙江衛視畫面截圖個人避雷
 
 - Record：`nthu-waterwood-restaurant-zhejiang-tv-screen-thread-personal-20260901`；`personal` / `medium`。使用者在持續進行的 image-only 避雷收件脈絡中提供 Threads 截圖，因此依 established-intake 規則將畫面具名的水木餐廳公共用餐區列為個人避開。原帖 `jqpqj` 於 2026-08-30 21:45（台灣時間）發布，以「清華大學」為主題，文字稱水木餐廳播放浙江衛視節目、另一台電視播中視新聞；公開 permalink 為 `https://www.threads.com/@jqpqj/post/DcqpOj_E0mB`，頁面內嵌媒體是約 14.6 秒影片。
