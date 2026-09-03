@@ -31,7 +31,7 @@ export const records = [
     ],
     identifiers: ["tataearth_0301", "tataearth.0301", "linktr.ee/tataearth"],
     country: "",
-    categories: ["餐飲／生活服務", "寵物住宿／美容"],
+    categories: ["餐飲", "生活服務"],
     avoidReasons: ["使用者明確指定踏踏地球品牌個人避雷", "使用者未說明具體理由"],
     confidence: "medium",
     status: "personal",
