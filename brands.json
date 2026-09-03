@@ -15401,5 +15401,57 @@
     ],
     "aiNotes": "此筆是 image-only / Threads-public-post / local-restaurant / marketing-lineage-transparency personal intake。使用者在已建立的避雷入庫流程中傳送截圖，足以授權建立 personal record，但未以文字另述理由；因此 avoidReasons 只保留截圖所呈現的第三方透明度質疑與使用者個人避開，不把第三方的日本投資、日方監修、單一股東、技轉或百年名店說法改寫成已查證事實。必須區分：店家內嵌自介直接可見的是「傳承自日本京都祇園百年壽喜燒品牌精神」，並非畫面內可見的具名百年品牌授權、投資或技轉證明。Instagram 與 Google Maps 只橋接店名／帳號／餐廳存在，不驗證爭議。使用者另指二本松、橋山、祇園禪院同一老闆且社群互推；這是 durable relationship lead，尚待共同所有權或原始跨帳號貼文確認。Maps 同電話只支持二本松與橋山有營運聯繫，不證明 owner identity 或祇園禪院關係。未查詢、保存或輸出台灣統編、股東個資、公開電話數值、完整地址；不得因貼文或關係線索另查或保存不必要識別碼。範圍限祇園・禪院壽喜燒專門店／`zenin.sukiyaki.tw`，不外溢二本松、橋山、發文者、留言者、inline、其他京都祇園餐廳、未具名投資人或日本業者。searchable fields 只保留店名必要標點變體、ZEN SAN 與店家帳號；不要把二本松、橋山、`rojiace`、`rekka_tsai`、Threads、inline、日本投資、日方監修、百年、技轉、股東、加高湯、火鍋、京都、祇園其他店家或地址作 alias／identifier。證據 PNG 已移除 EXIF／XMP、建立／修改時間、DPI 與自由文字 metadata，只保留 ICC 色彩描述；RGBA 像素未改變，pixel SHA-256 為 `8cf29bc7e5e4cca3dcca561f3cf6eb266b9c985feed32dfb0e5a936a5e995663`。",
     "lastReviewed": "2026-09-02"
+  },
+  {
+    "id": "tata-earth-pet-services-user-directed-personal-20260903",
+    "name": "踏踏地球 Ta Ta Earth",
+    "aliases": [
+      "踏踏地球",
+      "Ta Ta Earth",
+      "TaTa Earth",
+      "TA TA EARTH",
+      "踏踏地球 第一行星",
+      "踏踏地球－第一行星",
+      "踏踏第一行星館"
+    ],
+    "identifiers": [
+      "tataearth_0301",
+      "tataearth.0301",
+      "linktr.ee/tataearth"
+    ],
+    "country": "",
+    "categories": [
+      "餐飲旅遊",
+      "寵物住宿／美容"
+    ],
+    "avoidReasons": [
+      "使用者明確指定踏踏地球品牌個人避雷",
+      "使用者未說明具體理由"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者直接表示『踏踏地球 避雷』，因此將踏踏地球 Ta Ta Earth 品牌列入個人避雷。使用者未另行說明具體理由，故本筆只記錄其個人避開決定，不自行推定服務品質、餐飲品質、寵物照護、收費、衛生、合法性、消費糾紛或其他客觀負面事實。品牌公開 Linktree 自稱『踏踏地球TaTa Earth』，並將寵物餐廳、寵物美容、寵物住宿、總店、踏踏地球第一行星／踏踏第一行星館，以及 Instagram `tataearth_0301`、Facebook `tataearth.0301` 放在同一品牌入口；因此本次品牌範圍包含該入口明確列出的總店與第一行星據點及官方帳號。外部頁面只支撐品牌身分與服務範圍，不是避雷理由，也不擴及員工、顧客、合作對象、其他寵物店、餐廳或未確認關係的同名業者。",
+    "sources": [
+      {
+        "title": "使用者明確指定－踏踏地球品牌個人避雷",
+        "url": "",
+        "date": "2026-09-03",
+        "note": "使用者直接表示『踏踏地球 避雷』，構成將踏踏地球 Ta Ta Earth 品牌列入個人避雷的明確授權。使用者未提供具體理由或事件資料，因此此來源只支持個人避開決定與品牌層級範圍，不支持任何服務、餐飲、寵物照護、收費、衛生、違法、詐騙、裁罰或其他客觀負面主張。"
+      },
+      {
+        "title": "踏踏地球 Ta Ta Earth 公開 Linktree",
+        "url": "https://linktr.ee/tataearth",
+        "date": "查核日 2026-09-03",
+        "note": "頁面標題與主標題使用『踏踏地球TaTa Earth』，自述提供住宿、寵物美容與廚房服務；頁面將『踏踏地球 Ta Ta Earth 總店』的寵物餐廳、美容、住宿，『踏踏地球-第一行星』的美容、貓咪住宿、居家到府服務，以及 Instagram `tataearth_0301`、Facebook `tataearth.0301` 放在同一入口。此來源只支撐品牌名稱、官方社群帳號、服務自述與兩個據點的品牌關係，不證明服務品質、實際營業狀態、公司／商業登記、法律主體、負面事件或使用者避雷理由。"
+      },
+      {
+        "title": "PetoPlay－踏踏地球 Ta Ta Earth",
+        "url": "https://petoplay.com/petshop/taichung/4/17613",
+        "date": "查核日 2026-09-03",
+        "note": "第三方寵物店資料頁將『踏踏地球 Ta Ta Earth』列為台中市西區提供寵物住宿、美容、食品與寵物友善餐廳等服務的店家，並連向同名 Facebook 頁。此來源只作店名與服務類型的交叉辨識，不是官方登記資料，也不支持任何爭議、品質、責任或使用者避雷理由。"
+      }
+    ],
+    "aiNotes": "此筆是 text-only / user-directed brand-wide personal record。可說使用者直接將踏踏地球 Ta Ta Earth 品牌列入個人避雷；使用者未說明原因，不可自行補成服務品質、餐飲、寵物照護、住宿、美容、收費、衛生、消費糾紛、違法、詐騙或其他客觀負面事實。公開 Linktree 把踏踏地球總店、踏踏地球第一行星／踏踏第一行星館、Instagram `tataearth_0301` 與 Facebook `tataearth.0301` 放在同一品牌入口，因此品牌層級範圍包含這些明確橋接的據點與官方帳號；但不得擴及員工、顧客、合作對象、其他寵物店／餐廳或未確認關係的同名業者。Linktree 與 PetoPlay 只支撐品牌身分和服務自述，不是避雷理由，也不證明法律主體或任何負面事件。searchable fields 僅保留踏踏地球、Ta Ta Earth／TaTa Earth／TA TA EARTH、踏踏地球第一行星／踏踏第一行星館及 `tataearth_0301`、`tataearth.0301`、`linktr.ee/tataearth`；不要把寵物、餐廳、住宿、美容、到府、台中、地址、Linktree、Instagram、Facebook、PetoPlay 或其他服務／平台／泛稱另作 standalone alias／identifier。",
+    "lastReviewed": "2026-09-03"
   }
 ]

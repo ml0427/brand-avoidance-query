@@ -18,6 +18,50 @@
 
 export const records = [
   record({
+    id: "tata-earth-pet-services-user-directed-personal-20260903",
+    name: "踏踏地球 Ta Ta Earth",
+    aliases: [
+      "踏踏地球",
+      "Ta Ta Earth",
+      "TaTa Earth",
+      "TA TA EARTH",
+      "踏踏地球 第一行星",
+      "踏踏地球－第一行星",
+      "踏踏第一行星館",
+    ],
+    identifiers: ["tataearth_0301", "tataearth.0301", "linktr.ee/tataearth"],
+    country: "",
+    categories: ["餐飲／生活服務", "寵物住宿／美容"],
+    avoidReasons: ["使用者明確指定踏踏地球品牌個人避雷", "使用者未說明具體理由"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者直接表示『踏踏地球 避雷』，因此將踏踏地球 Ta Ta Earth 品牌列入個人避雷。使用者未另行說明具體理由，故本筆只記錄其個人避開決定，不自行推定服務品質、餐飲品質、寵物照護、收費、衛生、合法性、消費糾紛或其他客觀負面事實。品牌公開 Linktree 自稱『踏踏地球TaTa Earth』，並將寵物餐廳、寵物美容、寵物住宿、總店、踏踏地球第一行星／踏踏第一行星館，以及 Instagram `tataearth_0301`、Facebook `tataearth.0301` 放在同一品牌入口；因此本次品牌範圍包含該入口明確列出的總店與第一行星據點及官方帳號。外部頁面只支撐品牌身分與服務範圍，不是避雷理由，也不擴及員工、顧客、合作對象、其他寵物店、餐廳或未確認關係的同名業者。",
+    sources: [
+      source(
+        "使用者明確指定－踏踏地球品牌個人避雷",
+        "",
+        "2026-09-03",
+        "使用者直接表示『踏踏地球 避雷』，構成將踏踏地球 Ta Ta Earth 品牌列入個人避雷的明確授權。使用者未提供具體理由或事件資料，因此此來源只支持個人避開決定與品牌層級範圍，不支持任何服務、餐飲、寵物照護、收費、衛生、違法、詐騙、裁罰或其他客觀負面主張。",
+      ),
+      source(
+        "踏踏地球 Ta Ta Earth 公開 Linktree",
+        "https://linktr.ee/tataearth",
+        "查核日 2026-09-03",
+        "頁面標題與主標題使用『踏踏地球TaTa Earth』，自述提供住宿、寵物美容與廚房服務；頁面將『踏踏地球 Ta Ta Earth 總店』的寵物餐廳、美容、住宿，『踏踏地球-第一行星』的美容、貓咪住宿、居家到府服務，以及 Instagram `tataearth_0301`、Facebook `tataearth.0301` 放在同一入口。此來源只支撐品牌名稱、官方社群帳號、服務自述與兩個據點的品牌關係，不證明服務品質、實際營業狀態、公司／商業登記、法律主體、負面事件或使用者避雷理由。",
+      ),
+      source(
+        "PetoPlay－踏踏地球 Ta Ta Earth",
+        "https://petoplay.com/petshop/taichung/4/17613",
+        "查核日 2026-09-03",
+        "第三方寵物店資料頁將『踏踏地球 Ta Ta Earth』列為台中市西區提供寵物住宿、美容、食品與寵物友善餐廳等服務的店家，並連向同名 Facebook 頁。此來源只作店名與服務類型的交叉辨識，不是官方登記資料，也不支持任何爭議、品質、責任或使用者避雷理由。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 text-only / user-directed brand-wide personal record。可說使用者直接將踏踏地球 Ta Ta Earth 品牌列入個人避雷；使用者未說明原因，不可自行補成服務品質、餐飲、寵物照護、住宿、美容、收費、衛生、消費糾紛、違法、詐騙或其他客觀負面事實。公開 Linktree 把踏踏地球總店、踏踏地球第一行星／踏踏第一行星館、Instagram `tataearth_0301` 與 Facebook `tataearth.0301` 放在同一品牌入口，因此品牌層級範圍包含這些明確橋接的據點與官方帳號；但不得擴及員工、顧客、合作對象、其他寵物店／餐廳或未確認關係的同名業者。Linktree 與 PetoPlay 只支撐品牌身分和服務自述，不是避雷理由，也不證明法律主體或任何負面事件。searchable fields 僅保留踏踏地球、Ta Ta Earth／TaTa Earth／TA TA EARTH、踏踏地球第一行星／踏踏第一行星館及 `tataearth_0301`、`tataearth.0301`、`linktr.ee/tataearth`；不要把寵物、餐廳、住宿、美容、到府、台中、地址、Linktree、Instagram、Facebook、PetoPlay 或其他服務／平台／泛稱另作 standalone alias／identifier。",
+    lastReviewed: "2026-09-03",
+  }),
+  record({
     id: "947-phone-repair-jingmei-invoice-surcharge-claim-personal-20260901",
     name: "947修手機－台北景美門市",
     aliases: [

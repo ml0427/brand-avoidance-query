@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-03 踏踏地球 Ta Ta Earth：無具體理由的品牌個人避雷
+
+- Record：`tata-earth-pet-services-user-directed-personal-20260903`；`personal` / `medium`。使用者直接表示「踏踏地球 避雷」，因此將踏踏地球 Ta Ta Earth 品牌列入個人避雷。使用者沒有提供具體理由或事件資料，本筆只保存個人避開決定，不自行補成服務品質、餐飲品質、寵物照護、住宿、美容、收費、衛生、消費糾紛、違法、詐騙、裁罰或其他客觀負面事實。
+- 公開 Linktree 標題與主標題使用「踏踏地球TaTa Earth」，並把總店的寵物餐廳／美容／住宿、踏踏地球第一行星的美容／貓咪住宿／到府服務、Instagram `tataearth_0301` 與 Facebook `tataearth.0301` 放在同一入口；PetoPlay 第三方頁也以同名及寵物住宿、美容、食品、寵物友善餐廳等服務交叉辨識。因此使用者指定的品牌範圍包含該入口明確橋接的總店、第一行星據點及官方帳號，但不擴及員工、顧客、合作對象、其他寵物店／餐廳或未確認關係的同名業者。這些外部來源只支撐品牌身分與服務範圍，不是避雷理由，也不證明公司登記、法律主體、實際營業狀態或負面事件。
+- Searchable fields 僅保留踏踏地球、Ta Ta Earth／TaTa Earth／TA TA EARTH、踏踏地球第一行星／踏踏第一行星館及 `tataearth_0301`、`tataearth.0301`、`linktr.ee/tataearth`；寵物、餐廳、住宿、美容、到府、台中、地址、Linktree、Instagram、Facebook、PetoPlay 等服務／平台／泛稱不作 standalone alias／identifier。
+
 ## 2026-09-02 祇園・禪院壽喜燒專門店：日本投資／監修／百年傳承透明度疑問
 
 - Record：`gion-zenin-sukiyaki-japan-lineage-transparency-personal-20260902`；`personal` / `low`。使用者在既有避雷入庫流程中傳送 Threads 截圖，故只將畫面具名的祇園・禪院壽喜燒專門店／`zenin.sukiyaki.tw` 列為個人避開。第三方發文者稱該店主打京都祇園百年壽喜燒傳承，並有日本投資、日方監修，但表示自行查找後仍不知道日方投資／技轉對象及百年名店；這些是貼文陳述，截圖沒有底層文件。畫面內嵌店家自介直接可見的文字較窄，是「禪院ZEN SAN傳承自日本京都祇園百年壽喜燒品牌精神」；不能改寫成具名品牌授權、投資、監修或技轉已被證實。
