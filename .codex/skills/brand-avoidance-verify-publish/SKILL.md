@@ -17,6 +17,7 @@ Run from `D:\AI_workspace\brand-avoidance-query`:
 
 ```powershell
 node .\scripts\merge-risk-records.mjs
+node .\scripts\validate-brand-records.mjs --target-id <record-id> --positive <明確查詢> --positive <另一明確查詢> --not-expect "<不應命中查詢=>record-id>"
 node --check .\scripts\merge-risk-records.mjs
 node --check .\app-core.mjs
 node --check .\app.js
@@ -55,7 +56,7 @@ Before committing:
 ```powershell
 git status -sb
 git diff --stat
-git diff -- scripts/merge-risk-records.mjs app-core.mjs brands.json
+git diff -- data/records scripts/merge-risk-records.mjs app-core.mjs brands.json AI_NOTES.md evidence/user-submissions
 ```
 
 Confirm:
@@ -70,7 +71,7 @@ Confirm:
 Only after checks pass:
 
 ```powershell
-git add app-core.mjs brands.json scripts/merge-risk-records.mjs
+git add data/records app-core.mjs brands.json scripts/merge-risk-records.mjs AI_NOTES.md evidence/user-submissions
 git commit -m "<concise English commit message>"
 git push origin main
 git status -sb

@@ -1,6 +1,6 @@
 ---
 name: brand-avoidance-record-edit
-description: Record editing workflow for D:\AI_workspace\brand-avoidance-query. Use when the user asks to add, update, tighten, remove, or normalize brand-avoidance database records after targets or evidence have been selected. This skill edits scripts/merge-risk-records.mjs, regenerates brands.json, and may adjust app-core.mjs generic query blocklist. It does not perform broad proactive news/social discovery, final verification, commit, or push.
+description: Record editing workflow for D:\AI_workspace\brand-avoidance-query. Use when the user asks to add, update, tighten, remove, or normalize brand-avoidance database records after targets or evidence have been selected. This skill edits data/records/*.mjs, regenerates brands.json, and may adjust app-core.mjs generic query blocklist. It does not perform broad proactive news/social discovery, final verification, commit, or push.
 ---
 
 # Brand Avoidance Record Edit
@@ -15,7 +15,8 @@ Do not claim completion until the verification-publish skill has run local check
 
 ## Source Of Truth
 
-- Canonical source: `scripts/merge-risk-records.mjs`.
+- Canonical records: `data/records/*.mjs`.
+- Aggregator/generator: `scripts/merge-risk-records.mjs`.
 - Generated output: `brands.json`.
 - Do not hand-edit `brands.json` as the source of truth.
 - Preserve unrelated dirty files.
@@ -48,10 +49,10 @@ Never describe a `personal` record as CCP-linked, PRC-state-linked, illegal, san
 
 ```powershell
 git status -sb
-rg -n "<target variants>" brands.json scripts/merge-risk-records.mjs app-core.mjs
+rg -n "<target variants>" brands.json data/records app-core.mjs
 ```
 
-2. Edit `scripts/merge-risk-records.mjs` with `apply_patch`.
+2. Edit the appropriate topical file under `data/records/*.mjs` with `apply_patch`.
 
 Required record fields:
 
