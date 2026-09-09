@@ -4,10 +4,11 @@
 
 ## 2026-09-09 LG webOS 智慧電視：ACR廣告資料、網路掃描與待機語音風險
 
-- Record：`lg-webos-smart-tv-privacy-acr-personal-20260909`；`personal` / `high`。使用者提供 BlockTempo 報導並明確要求避雷。範圍只限 LG 品牌 webOS 智慧電視，不擴及 LG 冰箱、洗衣機、顯示器等其他產品，也不擴及其他採用 webOS 的電視品牌。Searchable fields 只放 LG＋webOS／Smart TV／智慧電視／OLED／G5／G3 的具名組合；ACR、Alphonso、廣告、麥克風、待機、網路掃描、Wi-Fi、漏洞、監聽等理由／技術詞不作 alias／identifier。
-- 已確認核心：LG 2022 年官方宣布把 LG Ads Solutions 自有 ACR 部署至27國數百萬台 LG 智慧電視，稱去識別化的家庭層級觀看資料可供廣告觸及、頻率與成效分析。德州總檢察長 2026-05-11 宣布與 LG Electronics U.S.A. 達成協議，要求 ACR 觀看資料收集前取得明確知情同意、用途揭露及容易退出的方式；協議限德州，且 Agreed Final Judgment 明載不構成 LG 承認違法、過失或責任。
-- 2026 年技術調查界線：Gamers Nexus 與合作研究者以零售 LG OLED 電視、封包分析與韌體檢視，報告原生功能列舉 LAN 裝置及附近 Wi-Fi；另在啟用語音功能後取得轉錄，並以研究用遠端存取／漏洞情境展示待機、網路斷線時仍可收音及本機保存。Ars Technica、The Verge、The Register 都是對同一原始調查的具名報導，不是三組獨立重現。LG 曾否認收集、錄製或保存環境對話，稱語音辨識為可選且由使用者啟用；LG 官方 Always Ready 文件只確認部分2022年後型號若啟用 Always Ready 及語音辨識，螢幕關閉模式仍可使用語音辨識，拔除電源線則不會啟用。
-- 不得把上述材料改寫成所有 LG 電視、出廠預設都持續偷錄，或所有掃描資料皆已證實傳送給 LG。研究者以 root／漏洞示範遠端麥克風的情境、尚在負責任揭露的 RCE／zero-day，必須與 LG 原生資料功能分開；目前不寫成公開漏洞已獨立驗證、LG 官方惡意竊聽、全面違法或德州協議等同認罪。
+- Record：`lg-webos-smart-tv-privacy-acr-personal-20260909`；`personal` / `high`。使用者提供 BlockTempo 報導並明確要求避雷。範圍只限 LG 品牌 webOS 智慧電視，不擴及 LG 冰箱、洗衣機、顯示器等其他產品，也不擴及其他採用 webOS 的電視品牌。Searchable fields 只放 LG＋webOS／Smart TV／智慧電視／OLED／G5／G3／QNED 的具名組合；ACR、Alphonso、廣告、麥克風、待機、網路掃描、Wi-Fi、漏洞、監聽等理由／技術詞不作 alias／identifier。
+- 已確認核心：LG 台灣及美國 Smart TV 法律文件明載，連網電視即使未接受選用附加協議，仍會接收部分裝置、基本使用及 LG Channels 資料；同意觀看資訊協議後，ACR／Live Plus 可將觀看、裝置及基本使用資訊提供給 Alphonso，並可能用於分析、廣告、資料擴充及商業化；另同意感興趣／跨裝置廣告後，可向與電視共用 IP 的手機、平板或電腦投放廣告。美國版同時明確區分：ACR 分析電視喇叭 soundboard 的播放訊號，不直接取用電視或遙控器麥克風。LG 2022 年官方另宣布把自有 ACR 部署至27國數百萬台 LG 智慧電視。
+- 德州總檢察長 2026-05-11 宣布與 LG Electronics U.S.A. 達成協議，要求 ACR 觀看資料收集前取得明確知情同意、用途揭露及容易退出的方式；協議限德州，且 Agreed Final Judgment 明載不構成 LG 承認違法、過失或責任。ACR 可透過撤回觀看資訊協議並關閉 Live Plus 停用；跨裝置廣告另可撤回感興趣廣告、啟用 Limit Ad Tracking 及重設 AD ID，但這些控制依地區、型號與 webOS 版本不同。
+- 2026 年技術調查界線：Gamers Nexus 與合作研究者以 G5、G3、QNED73B 等零售 LG 電視、封包分析與韌體檢視，報告原生功能列舉 LAN 裝置及附近 Wi-Fi；另在啟用語音功能後取得轉錄，並以研究用遠端存取／漏洞情境展示待機、網路斷線時仍可收音及本機保存。Ars Technica 與 The Register 是對同一原始調查的具名報導，不是獨立重現；LG 經 Ars 只承認同網路相容裝置掃描是裝置連線、內容分享與智慧家庭功能，未承認把未配對全網及附近 Wi-Fi 詳細資料送往廣告部門。
+- 不得把上述材料改寫成所有 LG 電視、出廠預設都持續偷錄，或所有掃描資料皆已證實傳送給 LG。研究者以 root／漏洞示範遠端麥克風的情境、離線錄音重新連線後由研究者取檔，以及尚在負責任揭露的 RCE／zero-day，必須與 LG 原生資料功能分開；目前不寫成原生服務自動上傳房間錄音、公開漏洞已獨立驗證、LG 官方惡意竊聽、全面違法或德州協議等同認罪。LG 曾否認收集、錄製或保存環境對話；官方 Voice Commands／Always Ready 文件則確認部分型號若啟用 Direct Voice Recognition 及 Always Ready／Quick Start，螢幕關閉時仍可等待喚醒詞。
 
 ## 2026-09-09 民進黨宜蘭縣黨部違紀參選提報名單：9人個人避雷
 

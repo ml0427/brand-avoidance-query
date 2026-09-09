@@ -15832,6 +15832,9 @@
       "LG OLED evo",
       "LG G5 OLED",
       "LG G3 OLED",
+      "LG QNED TV",
+      "LG QNED",
+      "LG QNED73B",
       "樂金智慧電視",
       "樂金電視"
     ],
@@ -15847,7 +15850,7 @@
     ],
     "confidence": "high",
     "status": "personal",
-    "summary": "使用者提供 BlockTempo 文章並明確指定避雷；本筆只收錄 LG 品牌的 webOS 智慧電視，不擴及 LG 冰箱、洗衣機、顯示器等其他產品，也不擴及採用 webOS 的其他電視品牌。LG 於2022年官方宣布把 LG Ads Solutions 自有 ACR（自動內容辨識）部署至27國、數百萬台 LG 智慧電視，並稱其去識別化的家庭層級觀看資料可供廣告觸及、頻率與成效分析。美國德州總檢察長於2026年5月宣布與 LG Electronics U.S.A. 達成協議，要求在德州收集 ACR 觀看資料前取得明確知情同意並提供簡單退出方式；協議文本同時明載這不是 LG 承認違法或責任。Gamers Nexus 與合作研究者於2026年9月公布零售 LG OLED 電視測試，報告原生功能會列舉區域網路裝置與附近 Wi‑Fi 資訊；調查也在啟用語音功能後取得語音轉錄，並另以研究用遠端存取／漏洞情境展示螢幕待機、網路斷線時仍可收音及本機保存。Ars Technica、The Verge、The Register 均將這些內容明確歸屬於該團隊報告。現有公開材料仍不足以證明所有 LG 型號、出廠預設狀態都會持續偷錄環境聲音，或所有掃描所得資料都會傳送給 LG；LG 曾否認收集、錄製或保存環境對話，並稱語音辨識是使用者啟用才處理。LG 官方支援文件則確認，2022年後部分型號啟用 Always Ready 與語音辨識設定時，螢幕關閉的 Always Ready 模式仍可使用語音辨識。本筆個人避開理由以已確認的 ACR 廣告資料商業化、德州同意機制整改，以及新技術調查呈現的居家裝置盤點與待機語音風險為限；不把『全面竊聽』、遠端攻擊可行性或尚在負責任揭露中的漏洞當成已獲獨立驗證的事實。",
+    "summary": "使用者提供 BlockTempo 文章並明確指定避雷；本筆只收錄 LG 品牌的 webOS 智慧電視，不擴及 LG 冰箱、洗衣機、顯示器等其他產品，也不擴及採用 webOS 的其他電視品牌。LG 官方 Smart TV 法律文件明載：連網電視即使未接受選用附加協議，仍會接收部分裝置資訊、基本使用資訊及 LG Channels 資料；同意觀看資訊協議後，ACR／Live Plus 可辨識廣播、串流、機上盒、遊戲機與 HDMI 等來源內容，觀看、裝置及基本使用資訊可提供給 Alphonso，並可能用於分析、廣告、資料擴充與商業化；另同意感興趣／跨裝置廣告後，可向與電視共用 IP 的其他裝置投放廣告。美國版文件同時明確說 ACR 分析的是電視喇叭 soundboard 的播放訊號，不直接取用電視或遙控器麥克風；語音功能則需另行同意／啟用。LG 於2022年也官方宣布把 LG Ads Solutions 自有 ACR 部署至27國、數百萬台 LG 智慧電視。美國德州總檢察長於2026年5月宣布與 LG Electronics U.S.A. 達成協議，要求在德州收集 ACR 觀看資料前取得明確知情同意並提供簡單退出方式；協議文本明載這不是 LG 承認違法或責任。Gamers Nexus 與合作研究者於2026年9月公布 G5、G3、QNED73B 等零售 LG 電視測試，報告原生功能會列舉區域網路裝置與附近 Wi‑Fi 資訊；調查也在啟用語音功能後取得語音轉錄，並另以研究用遠端存取／漏洞情境展示螢幕待機、網路斷線時仍可收音及本機保存。Ars Technica 與 The Register 均將這些內容歸屬於該團隊報告；LG 經 Ars 表示同網路裝置掃描是為裝置連線、內容分享及智慧家庭功能。現有公開材料仍不足以證明所有 LG 型號、出廠預設狀態都會持續偷錄環境聲音，或所有掃描所得資料都會傳送給 LG；LG 曾否認收集、錄製或保存環境對話。LG 官方支援文件則確認，部分型號啟用 Direct Voice Recognition、Always Ready 或 Quick Start 後，螢幕關閉時仍可等待喚醒詞。本筆個人避開理由以官方確認的裝置／使用資料處理、ACR 觀看資料與跨裝置廣告商業化、德州同意機制整改，以及新技術調查呈現的居家裝置盤點與受控入侵後待機收音風險為限；不把 ACR 寫成房間麥克風錄音，也不把『全面竊聽』、自動上傳離線房間錄音、遠端攻擊可行性或尚在負責任揭露中的漏洞當成已獲獨立驗證的事實。",
     "sources": [
       {
         "title": "BlockTempo - LG webOS TV 待機麥克風、網路掃描與 ACR 隱私報導",
@@ -15859,19 +15862,13 @@
         "title": "Gamers Nexus - LG webOS TV privacy investigation",
         "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
         "date": "查核日 2026-09-09",
-        "note": "原始技術調查；團隊以零售 LG OLED 電視、封包分析與韌體檢視報告 LAN／Wi‑Fi 掃描及 ACR，另在啟用語音功能後取得轉錄，並以研究用遠端存取／漏洞情境展示待機、離線收音與本機保存；尚未公開漏洞仍在負責任揭露期。"
+        "note": "原始技術調查；團隊以 G5、G3、QNED73B 等零售 LG 電視、封包分析與韌體檢視報告 LAN／Wi‑Fi 掃描及 ACR，另在啟用語音功能後取得轉錄，並以研究用遠端存取／漏洞情境展示待機、離線收音與本機保存；尚未公開漏洞仍在負責任揭露期。"
       },
       {
         "title": "Ars Technica - LG TV shown capable of tracking user activity, even when offline",
         "url": "https://arstechnica.com/gadgets/2026/09/lg-tv-shown-capable-of-tracking-user-activity-even-when-offline/",
         "date": "2026-09-08",
-        "note": "具名科技媒體整理 Gamers Nexus 測試，指出 G5 等 LG OLED 電視列舉 LAN 裝置；也明確保留是否把全部資訊傳給 LG、用途是否只限廣告或診斷仍不清楚。"
-      },
-      {
-        "title": "The Verge - LG TVs caught spying even when offline or on standby",
-        "url": "https://theverge.com/tech/991190/lg-tv-spying-standby-recording-wi-fi-scanning-gamers-nexus",
-        "date": "2026-09-08",
-        "note": "具名科技媒體整理同一調查的零售 LG OLED 測試、LAN／Wi‑Fi 掃描、待機語音與 ACR；屬對原始調查的報導，不是另一組獨立重現。"
+        "note": "具名科技媒體整理 Gamers Nexus 測試；LG 經 Ars 表示同網路掃描用於裝置連線、內容分享及智慧家庭功能。Ars 同時保留是否把全部掃描資訊傳給 LG、用途是否超出廣告或診斷仍不清楚。"
       },
       {
         "title": "The Register - LG accused of egregious invasion of privacy over TV data collection",
@@ -15884,6 +15881,18 @@
         "url": "https://www.lg.com/global/newsroom/news/media-entertainment-solution/lg-smart-tvs-get-a-new-acr-solution-legacy-technology-replaced-by-lg-ads-solutions",
         "date": "2022-09-15",
         "note": "LG 官方確認自有 ACR 部署至27國數百萬台智慧電視，家庭層級觀看資料供品牌進行廣告觸及、頻率與成效分析；LG 稱資料已去識別化並符合法規。"
+      },
+      {
+        "title": "LG Legal Documents (Smart TV) - Taiwan",
+        "url": "https://tw.lgappstv.com/main/terms",
+        "date": "上次更新 2026-01；查核日 2026-09-09",
+        "note": "台灣版官方文件說明未接受附加協議時仍接收部分裝置、基本使用與 LG Channels 資料；同意觀看資訊後，ACR／Live Plus 會把觀看、裝置及基本使用資訊提供給 Alphonso；另同意感興趣廣告後可向共用 IP 的其他裝置投放廣告。"
+      },
+      {
+        "title": "LG Legal Documents (Smart TV) - United States",
+        "url": "https://us.lgappstv.com/main/terms",
+        "date": "上次更新 2026-05；查核日 2026-09-09",
+        "note": "美國版官方 ACR、語音與跨裝置廣告協議；明載 ACR 分析 soundboard 播放訊號而非直接取用麥克風、語音麥克風預設關閉且須同意才能啟用，並說明撤回觀看資訊、關閉 Live Plus、Limit Ad Tracking 等選項。"
       },
       {
         "title": "Texas Attorney General - Agreement with LG on Smart TV ACR",
@@ -15902,9 +15911,21 @@
         "url": "https://www.lg.com/us/support/help-library/lg-tv-how-to-use-the-always-ready-function--20153870949064",
         "date": "查核日 2026-09-09",
         "note": "LG 官方說明部分2022年後型號啟用 Always Ready 後，遙控關機會進入該模式；若另啟用語音辨識設定，螢幕關閉時仍可使用語音辨識。拔除電源線則不會啟用。"
+      },
+      {
+        "title": "LG USA Support - Using Voice Commands",
+        "url": "https://www.lg.com/us/support/help-library/lg-tv-using-voice-commands-CT10000018-20153219134177",
+        "date": "2026-07-17",
+        "note": "LG 官方確認支援 Direct Voice Recognition 的電視，可在關閉時透過 Hi LG 喚醒；需啟用語音辨識，且依年份另須 Always Ready 或 Quick Start／Quick Start+。"
+      },
+      {
+        "title": "TechRadar - LG statement on ambient conversations",
+        "url": "https://www.techradar.com/televisions/lgs-gaming-monitors-and-tvs-are-facing-a-user-revolt",
+        "date": "2026-07-22更新",
+        "note": "TechRadar 刊載 LG 電郵聲明：LG 電視不收集、錄製或儲存環境對話；語音辨識是可選、由使用者啟動的功能。此為媒體保存的廠商聲明，不是 LG 官方永久頁面。"
       }
     ],
-    "aiNotes": "本筆是 LG 品牌 webOS 智慧電視產品線的 personal 避雷，不是 LG 全集團或所有 webOS 授權品牌。可直接陳述 LG 官方 ACR 商業化與德州同意機制協議；LAN／Wi‑Fi 掃描、離線／待機語音與漏洞內容須歸屬於 Gamers Nexus 及其合作研究者。不得把研究者以 root／漏洞示範的遠端麥克風情境寫成 LG 出廠預設持續竊聽，也不得聲稱所有掃描資訊都已證實傳給 LG、漏洞已公開驗證，或協議等同 LG 承認違法。",
+    "aiNotes": "本筆是 LG 品牌 webOS 智慧電視產品線的 personal 避雷，不是 LG 全集團或所有 webOS 授權品牌。可直接陳述 LG 官方 Smart TV 條款中的基礎裝置／使用資料、同意後的 ACR／Alphonso 資料分享與跨裝置廣告、LG 官方 ACR 商業化及德州同意機制協議。ACR 使用電視播放 soundboard 訊號，不得寫成 ACR 本身透過房間麥克風偷聽。LAN／附近 Wi‑Fi 詳細列舉、離線／待機收音與漏洞內容須歸屬於 Gamers Nexus 及其合作研究者；LG 只經 Ars 承認同網路相容裝置探索是標準智慧功能。不得把研究者以 root／漏洞示範的遠端麥克風情境寫成 LG 出廠預設持續竊聽，也不得聲稱離線錄音會由原生服務自動上傳、所有掃描資訊都已證實傳給 LG、漏洞已公開驗證，或德州協議等同 LG 承認違法。",
     "lastReviewed": "2026-09-09"
   }
 ]
