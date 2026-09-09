@@ -36,7 +36,7 @@ export const records = [
     ],
     identifiers: ["AChenggoose", "acheng.com.tw"],
     country: "",
-    categories: ["餐飲／鵝肉", "政治內容／品牌文宣"],
+    categories: ["餐飲／生活服務", "政治／統戰／公眾人物"],
     avoidReasons: [
       "使用者個人避開",
       "土城總店經營體系官方管道發布／承認帶有同胞、兩岸三地、歸於故土等用語的香港文宣",
