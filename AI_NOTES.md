@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-10 首頁保留外部「候選人前科查核站」連結
+
+- 使用者指定在避雷站內保留原始網址 `https://guilty.policy2026.workers.dev/`。該站頁面標題為「候選人前科查核站｜2026縣市長・議員選舉候選人查核」，自述彙整符合其條件的候選人公開司法程序資料；它不是勞動黨名冊來源，也不宜掛到單一人物或政黨紀錄，因此放在首頁獨立的「外部候選人司法查核資源」區塊。
+- 首頁以原始網址建立可點擊外連，使用 `target="_blank"` 與 `rel="noreferrer"`；文字提醒內容由外部網站維護，應依站內原始來源及最新程序交叉核對。網址不加入 `brands.json` 的 aliases／identifiers，避免使用者搜尋網址或「前科」時誤命中某張避雷卡。
+- TDD／驗證：新增首頁外連測試先因連結不存在而 RED；完成後精確網址、可點擊屬性與搜尋隔離測試均 GREEN。重生資料集為 308 筆 source risk records／總數 314；全量 validator 10 checks 通過、`warnings: 0; errors: 0`，Node tests 14/14 通過，`git diff --check` 通過。
+
 ## 2026-09-10 勞動黨第10屆中央／中央監察委員：32人公開名冊個人避雷
 
 - 新增 `labor-party-tenth-central-committee-roster-personal-20260910`；`personal` / `high`。使用者明確要求「勞動黨 所有人避雷」；依臺灣士林地方法院 2023-07-19 法人變更登記公告，收錄第10屆主席1人、副主席2人、中央常務委員6人、中央委員16人、中央監察主任委員1人、中央監察委員6人，共32個不重複姓名。吳榮元由既有 `labor-party-wu-rongyuan` confirmed卡承接，新卡aliases放其餘31人；canonical name保留勞動黨名單識別。
