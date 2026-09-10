@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-10 勞動黨第10屆中央／中央監察委員：32人公開名冊個人避雷
+
+- 新增 `labor-party-tenth-central-committee-roster-personal-20260910`；`personal` / `high`。使用者明確要求「勞動黨 所有人避雷」；依臺灣士林地方法院 2023-07-19 法人變更登記公告，收錄第10屆主席1人、副主席2人、中央常務委員6人、中央委員16人、中央監察主任委員1人、中央監察委員6人，共32個不重複姓名。吳榮元由既有 `labor-party-wu-rongyuan` confirmed卡承接，新卡aliases放其餘31人；canonical name保留勞動黨名單識別。
+- 內政部政黨資訊網截至2026-09-10仍列勞動黨狀態一般、負責人吳榮元，最近法人變更登記日期2023-07-18。『所有人』的可查證上限固定為最新可取得的完整法定中央／中央監察委員公開名冊；一般黨員沒有完整公開名單，不由活動出席、合照、聲援、合作或受訪關係推定黨籍。依名冊納入只代表使用者按公開政黨職務關聯作個人避雷，不得改寫成32人皆有相同個人言論、中共／統戰關聯、違法、有罪或共同法律責任。
+- TDD／驗證：新增前 target validator 如預期因目標ID與人物查詢尚未存在而RED；直接讀回司法院公告原文後，以官方逐列姓名校正名單，並用程式比對官方32名與本地32名，`missing`／`extra`均為空且順序一致。最終32個 `query=>id` expectations全部命中，23個舊誤列姓名均不再命中目標卡；target與全量validator皆 `warnings: 0; errors: 0`，20個syntax checks通過，`node --test` 12/12通過。merge連跑兩次皆為308個source risk records／總數314，`brands.json` SHA-256均為 `f40b2a45f7a933b702ee6f25141025682d16ab2cc62f0ff7dbbb621c9a6a7e8b`，idempotent PASS。姓名「藍博洲」另命中既有同人物作家卡，「李中」另命中既有國民黨議員名單，「王正」因substring另命中「茶裏王正山小種」品牌卡；目標名單均有命中，這些是既有多卡／substring搜尋模型下的同名同字歧義，不能刪除官方姓名。
+
 ## 2026-09-09 LG webOS 智慧電視：ACR廣告資料、網路掃描與待機語音風險
 
 - Record：`lg-webos-smart-tv-privacy-acr-personal-20260909`；`personal` / `high`。使用者提供 BlockTempo 報導並明確要求避雷。範圍只限 LG 品牌 webOS 智慧電視，不擴及 LG 冰箱、洗衣機、顯示器等其他產品，也不擴及其他採用 webOS 的電視品牌。Searchable fields 只放 LG＋webOS／Smart TV／智慧電視／OLED／G5／G3／QNED 的具名組合；ACR、Alphonso、廣告、麥克風、待機、網路掃描、Wi-Fi、漏洞、監聽等理由／技術詞不作 alias／identifier。
