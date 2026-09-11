@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-11 弘記肉燥飯舖左營立文路本店：賴瑞隆署名賀榜的個人政治價值避雷
+
+- Record：`hung-chi-rice-shop-zuoying-politician-banner-personal-20260911`；`personal` / `medium`。使用者提供 `xiao_guodong` Threads 截圖並明確要求避雷圖中的弘記肉燥飯舖。畫面兩張附圖分別顯示「弘記肉燥飯舖／HUNG CHI RICE SHOP」店面與紅色「高雄之光」賀榜；賀榜右側可辨識弘記肉燥飯舖及米其林指南必比登推介文字，左側署名「立法委員 賴瑞隆」。本筆只支持使用者不接受同一貼文並列該店店面照與具名政治人物賀榜照而作出的個人消費選擇；兩張照片沒有拍出賀榜與店面的同一空間，不能斷言實際張貼位置，也不得改寫成店家已正式替賴瑞隆、特定政黨或候選人背書、捐款、站台、合作或違法。
+- 公開 profile GraphQL 查核可確認 `xiao_guodong` 帳號資料，但目標貼文已不在公開主貼清單，因此沒有 permalink、精確發文時間或原始附圖；截圖「2 小時」只保留為相對時間，不換算。發文者所稱朋友關係、「高雄好幾十家分店」及回覆文字不是店家官方陳述，也沒有獨立證實，均不作品牌關係或收錄範圍依據。高雄市政府觀光局高雄旅遊網與米其林指南均把同名餐廳橋接到高雄市左營區立文路 96 號，故範圍固定為該本店，不外溢 VASO 弘肉燥飯舖、柏弘肉燥、其他可能分店、員工、發文者、賴瑞隆、柯市長或同名店家。
+- Searchable fields 僅放弘記肉燥飯舖必要店名／英文名、左營／立文路分店稱法及完整地址；`xiao_guodong`、高天賜、Threads、高雄市長、賴瑞隆、立法委員、柯市長、高雄之光、米其林、必比登、政治、分店、鐵拳無敵與其他理由／人物／平台／泛稱均不作 alias／identifier。證據檔：`evidence/user-submissions/2026-09-11-hung-chi-rice-shop-politician-congratulatory-banner.png`，由 1290×2796 原圖裁成 1250×1270，只保留發文帳號／主題、正文、店面與賀榜，排除手機狀態列、Threads 頂部導覽、第三方留言、回覆輸入列與底部導覽；metadata 僅含 ICC profile。SHA-256：`99ce53ff8faa809b90018e9e7ee0bf52cc44f672ac810222f78d3553f1d5a852`。
+- TDD／驗證：新增前 target-only validator 因 ID 與「弘記肉燥飯舖」均不存在而 exit 1（預期 RED）；新增後 merge 為 312 筆 risk records／總數 318。完整 validator 12 項通過、`warnings: 0; errors: 0`；「弘記肉燥飯舖」、`HUNG CHI RICE SHOP`、完整地址均命中目標卡，`VASO 弘肉燥飯舖`、`柏弘肉燥`、`賴瑞隆`、`米其林`、`xiao_guodong` 均不命中目標卡；20 個 Node syntax checks 與 `git diff --check` 通過。
+
 ## 2026-09-11 香港青丘教狐仙堂／高雄青丘狐仙堂：超自然服務不信任的分卡個人避雷
 
 - Records：`qingqiu-religion-hong-kong-same-sex-ritual-services-personal-20260911`（`personal` / `medium`）、`qingqiu-fox-fairy-hall-kaohsiung-divination-personal-20260911`（`personal` / `low`）。使用者提供 `offline.4045` Threads 截圖，畫面地點卡顯示高雄仁智街「青丘狐仙堂｜大仙問事堂｜通靈問事｜元辰宮改運｜狐仙請供」，並明確補充香港青丘教狐仙堂以「香港唯一專門保佑同志的法科門派」為定位、自己判定不可信而要求直接避雷。為避免名稱相似造成誤傷，香港品牌與高雄場所分卡；沒有證據證明兩者是分堂、同一經營者、同一法律實體或正式關聯，不互作 alias、不共享指控。
