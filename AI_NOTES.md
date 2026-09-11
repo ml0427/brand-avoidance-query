@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-11 香港青丘教狐仙堂／高雄青丘狐仙堂：超自然服務不信任的分卡個人避雷
+
+- Records：`qingqiu-religion-hong-kong-same-sex-ritual-services-personal-20260911`（`personal` / `medium`）、`qingqiu-fox-fairy-hall-kaohsiung-divination-personal-20260911`（`personal` / `low`）。使用者提供 `offline.4045` Threads 截圖，畫面地點卡顯示高雄仁智街「青丘狐仙堂｜大仙問事堂｜通靈問事｜元辰宮改運｜狐仙請供」，並明確補充香港青丘教狐仙堂以「香港唯一專門保佑同志的法科門派」為定位、自己判定不可信而要求直接避雷。為避免名稱相似造成誤傷，香港品牌與高雄場所分卡；沒有證據證明兩者是分堂、同一經營者、同一法律實體或正式關聯，不互作 alias、不共享指控。
+- 香港卡以使用者個人不信任為主因。官方 `8fortuneteller.com` 可確認品牌自稱「青丘教狐仙堂｜傳統民間祈願服務｜香港」，服務涵蓋男女、同性、第三者及複雜感情關係，並列感情復合、化解第三者、招財轉運等儀式，部分標價 HK$18,000／38,000／68,000；官網也明載結果無法保證。查核時沒有找到「香港唯一專門保佑同志」完整原句，故只保存為使用者概括，不稱官網逐字宣稱，也不寫成詐騙、違法、必然無效、邪教或主管機關定性。
+- 高雄卡只保存使用者對截圖具名場所的個人避開。原貼 permalink `https://www.threads.com/@offline.4045/post/DdHV4E4CUmS` 發布於 2026-09-11 01:10（UTC+8）；後續 `https://www.threads.com/@offline.4045/post/DdHe72Jk48Q` 於 02:30 以「大仙」稱呼對象，附圖中 `lunababy_8686` 自稱「我們是大仙娘娘」。這些只屬第三方／帳號自述，不證明真實身分、正式成員、治理關係、具體不當、疾病因果、詐騙或法律責任。證據檔：`evidence/user-submissions/2026-09-11-qingqiu-fox-fairy-hall-kaohsiung-thread.png`；裁成 1290×1800，只保留發文者、正文、地點卡、服務照片與地址；metadata 只保留 ICC。SHA-256：`e7dbf71e145df92c0a3b9f9b0ae1e3f75ef28b84fb96496dae8aa3f739c718a0`；pixel SHA-256：`f60fdcdfaa7f70471cff5c3eb51ac27c584120081f97cc09d4b28266b072e295`。
+- Searchable fields：香港卡只放青丘教狐仙堂、官網直接使用的必要名稱變體與 `8fortuneteller.com`；高雄卡只放具名場所組合與完整公開場所地址。同志、同性、第三者、法科、唯一、詐騙、假的、問事、通靈、改運、請供、Threads 帳號、評論分數、服務者／成員名稱及其他理由詞不另作 alias／identifier。TDD 先以兩個 target-only validator 確認 ID 與明確查詢均不存在（各 exit 1，預期 RED），再新增 source records。最終兩筆 target validator 與全量 validator 都是 `warnings: 0; errors: 0`；Node tests 14/14；source／generated 各恰一筆；重生資料為 311 筆 risk records／總數 317，兩次 `brands.json` SHA-256 均為 `960aa622ae8eeac5ac5d91b2431ea9a29a24d78871b2dbf872cf916c9b22e4c0`；`git diff --check` 與 added-lines 安全掃描均通過。
+
 ## 2026-09-10 犀牛盾／RHINOSHIELD：客製政治文字訂單判讀與客服說明爭議
 
 - Record：`rhinoshield-custom-order-content-review-personal-20260910`；`personal` / `medium`。使用者在持續進行的避雷收錄對話中無文字提供 wentengchang 於 2024-01-16 發布的 Threads 截圖，因此將犀牛盾／RHINOSHIELD 品牌列入個人避開。原帖 `https://www.threads.com/@wentengchang/post/C2JqpXqP245` 於查核日回傳 HTTP 200，頁面 metadata 直接顯示 Wenteng Chang（@wentengchang）與完整正文；台視與壹蘋新聞網逐段保存相同事件與犀牛盾後續回應，官方網站則完成品牌／網域身分橋接。
