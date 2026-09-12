@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-12 李明依：力挺蔣萬安之子交換學生資格的個人避雷
+
+- Record：`li-mingyi-chiang-wanan-exchange-student-defense-personal-20260912`；`personal` / `high`。使用者提供 `hsieh_han_.tw` Threads 截圖並明確說「這人避雷」。畫面嵌入 `nextapplenews` 影片，標題可讀到李明依力挺蔣萬安之子赴美及「不該因爸爸是誰扼殺孩子夢想」；壹蘋新聞網、TVBS、三立新聞網三家 2026-09-11 同場受訪報導交叉確認，李明依稱蔣萬安做得對、小朋友有能力申請就應該給他、不應因父親身分扼殺孩子夢想，並以台美雙重國籍者很多回應國籍爭議，另公開表態會投蔣萬安。這些足以支持使用者依其公開辯護內容將李明依本人列為個人避雷。
+- 事件時間線與證據邊界：公視新聞網 2026-09-02 直接記載蔣萬安與太太、兒子共同討論後決定不領相關補助；中央社另確認北市教育局國際交換學生計畫名額僅 25 名，當時有美國籍、公費申請及利益衝突迴避等質疑，廉政署表示須揭露關係，監察院專員亦向教育局詢問，教育局長答詢稱本案沒有補助。因此不可寫成李明依支持實際領取公費；外界質疑及廉政署／監察院查詢也不等於主管機關已認定特權、違法、利益衝突或甄選不公，反之亦不能把李明依發言當成甄選公平的證明。範圍限李明依本人，不擴及蔣萬安、蔣得立、慈善晚會、台灣優質生命協會、媒體、發文者或其他支持者。
+- Searchable fields 只保留李明依；蔣萬安、蔣得立、交換學生、公費赴美、美國籍、雙重國籍、25名、夢想、特權、利益迴避、Threads 帳號與媒體帳號均不命中此卡。證據檔：`evidence/user-submissions/2026-09-12-li-mingyi-chiang-wanan-exchange-student-thread.png`，由 1290×2796 原圖裁成 1290×1765，只保留目標貼文、內嵌新聞畫面與互動數字，移除手機狀態列、Threads 導覽、上方無關帳號及下方無關貼文；metadata 只保留 ICC profile。SHA-256：`9f16df26b0ce1f3a1d7c23fa84abf1e5d3edb4212424a93f49e8c5f311e56823`；pixel SHA-256：`78b31a56b1fba79ad76d7a2697f6ecc81aa3772b827377e523b1aca12eae542c`。
+- TDD／驗證：新增前 target-only validator 因 ID 與「李明依」均不存在而 exit 1（預期 RED）；新增後 merge 為 313 筆 risk records／總數 319。target validator 正查與 14 個理由／人物／平台／地區隔離 probes 通過；完整 validator 10 項通過，兩者皆 `warnings: 0; errors: 0`；20 個 Node syntax checks 與 Node tests 14/14 通過。source／generated 各恰一筆且內容一致；merge 連跑後 `brands.json` SHA-256 均為 `3562c75f0b2846beddfca91a1a23e952435470bd37fc30ca1bd5dd5e0c1dec0e`，idempotent PASS；`git diff --check` 與 added-lines 安全掃描通過。
+
 ## 2026-09-11 弘記肉燥飯舖左營立文路本店：賴瑞隆署名賀榜的個人政治價值避雷
 
 - Record：`hung-chi-rice-shop-zuoying-politician-banner-personal-20260911`；`personal` / `medium`。使用者提供 `xiao_guodong` Threads 截圖並明確要求避雷圖中的弘記肉燥飯舖。畫面兩張附圖分別顯示「弘記肉燥飯舖／HUNG CHI RICE SHOP」店面與紅色「高雄之光」賀榜；賀榜右側可辨識弘記肉燥飯舖及米其林指南必比登推介文字，左側署名「立法委員 賴瑞隆」。本筆只支持使用者不接受同一貼文並列該店店面照與具名政治人物賀榜照而作出的個人消費選擇；兩張照片沒有拍出賀榜與店面的同一空間，不能斷言實際張貼位置，也不得改寫成店家已正式替賴瑞隆、特定政黨或候選人背書、捐款、站台、合作或違法。
