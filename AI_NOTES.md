@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-13 泰飽爺中科國安店：外送餐點疑似有蟲與處理態度的單方主張
+
+- Record：`taibaoye-zhongke-guoan-food-contamination-claim-personal-20260913`；`personal` / `low`。使用者在持續進行的圖片避雷流程中無文字提供 `p.ju_n` Threads 截圖。發文者稱同學透過 Uber 外送點餐後「整碗飯都是蛆」，店家沒有道歉、只表示補送一份，並要求向 Uber 反應；同帳號置頂續文標示「泰飽爺 台中」，作者回覆稱已通報衛生局。兩張餐點照片只可直接描述肉、飯與盤面有多個細小淺色物體；單張低解析度截圖不足以鑑定是否為蟲體、種類、數量、污染來源或交付時狀態。
+- 沒有原帖 permalink、訂單／配送資料、店家或平台對話原文、衛生局案件編號、稽查結果或裁處；故餐點狀況、店家回應與通報都只能寫成發文者單方主張，不得升格為店家承認、Uber 認定、衛生局確認、食品污染或違法成立。Mula Kitchens 公開點餐／Q&A、公開點餐頁與 Uber Eats 可把「泰飽爺 台中」橋接到台中市西屯區國安一路 128 號 1 樓的「泰飽爺泰式平價料理中科國安店」，但只證明店名、地址與外送服務，不驗證本次事件。
+- 避雷範圍限中科國安店，不擴及泰飽爺其他縣市分店、總部、Mula Kitchens 其他店家、Uber Eats、foodpanda、員工或外送員。Searchable fields 只保留具名分店、截圖中的「泰飽爺 台中」與完整地址；蛆、蟲、異物、食安、衛生局、Uber、外送、道歉、補送、泰式料理、Threads 與帳號均不作 alias／identifier。證據檔：`evidence/user-submissions/2026-09-13-taibaoye-zhongke-guoan-food-contamination-claim-thread.png`；SHA-256：`52a7b1775bb54d2798e168d5d1aabc31dc4cf723a06f05ab16415573a9f465e9`；pixel SHA-256：`56ee52d1f7d89f8ecc63f86d1a1fd35140557723a327e67af2934dd3edb37689`。公開副本裁除手機狀態列、頂部導覽及大部分底部輸入區，metadata 只保留 ICC。
+
 ## 2026-09-13 張倩：公開政治貶稱與強烈負面措辭的個人避雷
 
 - Record：`zhang-qian-political-facebook-posts-personal-20260913`；`personal` / `high`。使用者提供 `sima.xuan` Threads 截圖並要求把畫面中沒聽過的藝人避雷。內嵌 Facebook 畫面顯示已驗證「張倩」頁面，正文為「這樣有印堂發黑嗎？」，張倩作者留言寫「哇！我都遮成這樣了！那群鳥蛙是有多怕呀🙄」。同一公開頁 `changchien1919` 的搜尋索引另可重現一則標題含「果然是蠢爛鳥蛙！」的本人頁面貼文，以及另一則批評「深信民進黨鬼話的人」並索引到「那群蠢爛鳥蛙該有報應」回覆的公開貼文。這些足以支持使用者因其公開政治評論語氣與對特定政治群體的貶稱，把張倩本人列為個人避雷。
