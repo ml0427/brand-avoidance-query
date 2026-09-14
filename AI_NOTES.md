@@ -2,6 +2,12 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-14 大陸建設：購屋呈現、成屋品質與未具名台中社區漏水主張
+
+- Record：`dalu-construction-resident-quality-claims-personal-20260914`；`personal` / `medium`。使用者在持續進行的 image-only 避雷收件脈絡中提供 `luleader51` Threads 截圖，畫面明確具名大陸建設，故 personal 範圍採大陸建設品牌。截圖正文稱購買其預售屋是後悔決定，並指稱建商聯合其他住戶詆毀發聲者；布條以廣告／交屋比較列「孔雀藍變水溝黑」「大理石變鋁板」「落地窗變牆面」「還沒入住就漏水」；引用卡中的 `yenxson` 批評交屋品質，`wei_lin_03_21` 自稱工班並批評售價、趕工與品質。截圖沒有建案名、地址、原帖 permalink、契約、圖說、建材表、鑑定、修繕文件、建商對話原文或主管機關認定，也不能驗證留言者任職身分；所有爭議措辭須保留為購屋者／住戶／發文者／留言者主張，不得寫成詐欺、違約、施工瑕疵、打壓住戶或法律責任已證實。
+- 身分與來源分層：大陸建設官方作品頁只用來確認「大陸建設」品牌、正式公司名「大陸建設股份有限公司」與官方網域；雖然該頁本身是豐蒔作品頁，但本輪來源沒有把使用者截圖、`luleader51/Db5WJ3_k8Ay`、`yenxson/Dbu8Mk4E0yA` 或 `luleader51/DcrCLBaEyfx` 明確橋接到豐蒔或其他具名建案，因此 record、generated data、證據檔名與 searchable fields 均不作專案歸屬。`Db5WJ3_k8Ay` 只支持大陸建設相關購屋者對外牆顏色、材質與窗型落差的第一人稱主張；`Dbu8Mk4E0yA` 只支持 `yenxson` 的一句品質批評；`DcrCLBaEyfx` 只支持另一個未具名台中大陸建設社區的室內漏水與處理狀況仍待確認主張，不得與截圖建案合併。公開 live posts 分別是七張靜態圖輪播、三張靜態圖輪播及單張靜態圖；repo 裁切 PNG 是使用者另行提供的聚合截圖，不是三則 live post 媒體的完整保存副本。
+- Searchable fields 只保留大陸建設／大陸建設股份有限公司、Continental Development 與 `continental-propertydevelopment.com`；豐蒔、`belleepoque.com.tw`、其他建案名、大陸工程、欣陸投控、海悅、RDAI、孔雀藍、漏水、鋁板、落地窗、詐騙、住戶、帳號、預售屋、豪宅、地址與其他理由／事件／平台／泛稱不作 standalone alias／identifier。公開證據檔：`evidence/user-submissions/2026-09-14-dalu-construction-resident-claims-thread.png`，由 1290×2796 原圖裁成 1290×1960，只保留貼文、布條、引用留言與兩層互動數字，移除手機狀態列、導覽、搜尋主題與回覆區；metadata 只保留 ICC。SHA-256：`b3f2c10546d1852725241bbb838cae42813d24899a79b93eb4dc77decd12fae1`。source／generated 各恰一筆且舊豐蒔 ID 已移除，merge 產生 318 筆 risk records／總數 324；`brands.json` SHA-256：`a1d18ff5d3bcfb756ac0d1a5e136544b86bdb14e67ded817c8a88c1c9f955b61`。
+
 ## 2026-09-14 穆木 Mummu 台南裕農路店：砧板／醋飯桶主張與店家器具汰換回覆
 
 - Record：`mummu-tainan-mold-hygiene-claim-personal-20260914`；`personal` / `medium`。使用者在持續進行的圖片避雷收件流程中無文字提供 `since_1997_0323` Threads 截圖。原帖 permalink `https://www.threads.com/@since_1997_0323/post/DdOY0VYFAvr` 於 2026-09-13 18:51（UTC+8）發布，發文者稱第一次進店時看到其認為發霉的砧板與醋飯桶，並稱店家老闆影片中的砧板也發霉。截圖附圖有兩個並排媒體預覽：左側可見深色矩形表面上的橘白色食物、黃褐色圓形開口容器及近景深色斑駁物體；右側影片封面影格可見一名未辨識人物持著帶淺色握柄的長條銀色物件。不能由畫面鑑定黴菌、砧板或醋飯桶，也不能判定人物身分、器具用途、拍攝日期、污染情形或供餐使用；影片只保存封面影格，未保存完整播放內容。
