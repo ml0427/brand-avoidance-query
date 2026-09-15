@@ -2,6 +2,19 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-15 艾維 AVIL：柯志恩競選主題曲共同主唱個人避雷
+
+- Record：`avil-hot-hawks-ko-chih-en-campaign-song-personal-20260915`；`personal` / `high`。使用者要求把截圖所指樂團的負責人或主唱避雷；採最小完整查證範圍，只收艾維 AVIL 本人。柯志恩官方 YouTube 的《世界高雄》2026 高雄市長競選主題曲說明欄直接把林子麟 Buljanljuyan、艾維AVIL 並列為主唱；台鋼雄鷹 TSG HAWKS 官方 YouTube 的火熱雄鷹樂團開球儀式說明直接列「火熱雄鷹 艾維 主唱」，足以橋接同一藝名的樂團主唱身分與本次競選歌曲演唱活動。這只支持公開記名演唱，不得擴張成艾維是樂團負責人／老闆／管理者、候選人競選團隊或政黨成員，也不得推定其全部政治信念、未記載的背書行為、整個樂團製作歌曲或其他成員共同負責。
+- 使用者 Threads 截圖只作 intake trigger，原帖 permalink 未取得；畫面 `austin0302` 稱「柯志恩競選主題曲，由火熱雄鷹樂團操刀，並包牌了高雄音樂人」，但官方 MV credit 分列製作人、作詞、作曲、編曲與主唱，故不採「樂團操刀／包牌高雄音樂人」為已核實事實。Searchable fields 只保留 `艾維 AVIL` 與官方 credit 無空格變體 `艾維AVIL`；火熱雄鷹、柯志恩、世界高雄、高雄、競選主題曲、主唱、歌手、樂團、政治、國民黨、候選人、Threads、發文帳號及其他關聯／事件／理由／平台詞均不作 alias／identifier；`country` 留空，避免用台灣活動地點推定人物國籍。
+- Sanitized evidence：`evidence/user-submissions/2026-09-15-avil-ko-chih-en-campaign-song-thread-trigger.png`，由 1290×2796 原始截圖裁成 1242×435，只保留目標原發文者、22 小時相對時間、正文與互動數字，排除手機狀態列、Threads 導覽／主題列及下方全部第三方留言、頭像與回覆輸入列；RGBA、metadata 只保留 ICC profile。SHA-256：`d465e54ee740b1fbebde287c975b6b2bcda9afe1b05333c9469d5c538217d10e`；pixel SHA-256：`5ada8ff45e85560aa469e14eac32a06f666a9876429bb851a6d73058c0ddb8a0`。
+
+## 2026-09-14～15 鮨板前手作 日式料理（雲林麥寮）：兩則貼文呈現兩版業主回覆的個人避雷
+
+- Record：`sushi-itamae-handmade-mailiao-owner-replies-personal-20260914`；`personal` / `medium`。來源已拆為同帳號 `haha0808__` 的兩則公開 Threads 貼文：原帖 `https://www.threads.com/@haha0808__/post/DdQLTMDI_7r` 於 2026-09-14T03:31:43.000Z（台灣時間 2026-09-14 11:31:43）發布，只有一項媒體，呈現第一版 Google「業主」回覆；後續貼文 `https://www.threads.com/@haha0808__/post/DdSLvDfEyk7` 於 2026-09-14T22:14:00.000Z（台灣時間 2026-09-15 06:14:00）發布，也只有一項媒體，呈現第二版回覆；這是獨立後續貼文，不是原帖 `DdQLTMDI_7r` 的附件。
+- 兩張各自歸屬不同貼文的 Google 評論畫面均顯示店名「鮨板前手作 日式料理」與「業主」標籤。第一版回覆稱工作人員放餐時不小心倒出、現場已重做並會加強訓練，之後質疑評論者五星領取免費餐點後改一星；後續貼文呈現的第二版稱出餐畫面沒有用丟的、可公開影片，並指稱對方開小號、對其他店家留一星及以「奧客」稱呼對方。兩則貼文都只直接支持可見文字與平台標籤；後續貼文仍是發文者呈現的 Google 評論截圖，不獨立證實評論者出餐敘述、免費餐點條件、任何帳號控制、其他評論或完整事件真相，不得寫成違法、欺騙、強迫五星或任何一方說法已證實。
+- 使用者個人避雷核心固定為不接受畫面所示業主對消費者的公開回覆態度。官方 Facebook 同名頁、公開餐飲文章與 foodpanda 菜單頁只把同名餐飲店橋接到雲林麥寮中興路；電話與地址只作 identity bridge，不保存電話、不把地址作 alias／identifier，也不在公開摘要暴露完整聯絡資訊。範圍只限這家具名麥寮店，不外溢發文者、評論者、員工個人、麥寮星巴克、其他店家或同名業者。Searchable fields 只保留「鮨板前手作 日式料理」及必要空格變體；Threads、Google、`haha0808__`、評論者姓名、地址、電話、五星、奧客、免費餐點、開小號、惡意評論、星巴克、日式料理泛稱與其他理由／平台／人物詞均不作 alias／identifier。
+- Sanitized evidence：`evidence/user-submissions/2026-09-14-sushi-itamae-handmade-mailiao-owner-reply-version-1.jpg` 為 1080×2348 RGB，已在原圖座標 `[42,710,900,852]` 用不透明純色遮罩不可逆移除評論者完整姓名、頭像與在地嚮導／評論／相片統計，仍完整保留店名、平台「業主」標籤與第一版回覆；SHA-256 `474bb8e1da324bdb569474407bd4835e5498b084a5181178b94823f23d0f1a11`，pixel SHA-256 `1e1887402b50b9689d0546fcf889541ff4dc4b7b16bf9b81f1e78d5559f6b37b`。`evidence/user-submissions/2026-09-15-sushi-itamae-handmade-mailiao-owner-reply-followup.jpg` 為 1080×879 RGB，對應台灣時間 2026-09-15 後續貼文；未含評論者姓名、頭像、profile stats、電話、地址或帳號，檔案 bytes 未改，SHA-256 `f661b79d89867cb25706d62b421234a82199d05b1eb36845db830f37c39fe64f`，pixel SHA-256 `66e277ec275602af86e4be76d2ac59c9005b16cd8ba9d4b32ec94dd601c4c082`。兩張均無 EXIF／XMP／自由文字 metadata，只保留非敏感 JFIF／progressive 結構。
+
 ## 2026-09-14 陳宜謙／索爾斯科技：程式合作付款主張與官方民事裁判
 
 - Record：`chen-yichian-soers-technology-programming-payment-claims-personal-20260914`；`personal` / `medium`。使用者提供 `lin_6543_` Threads 截圖並要求加入後整理公開事蹟。原帖 `https://www.threads.com/@lin_6543_/post/DdQGcNLgQjo` 於 2026-09-14 10:49（UTC+8）發布，作者具名陳宜謙／`teemokayy`，稱程式開發工作與成果已交付，但付款遭拖延且仍有款項未結清，並稱保存合作、交付與付款對話。這只有合作方單方陳述，未公開本次合約、交付物、帳單、匯款、完整對話、本人回應或對應案號；不得寫成詐騙、惡意欠款、累犯、刑事犯罪或本次債權已由司法確認。

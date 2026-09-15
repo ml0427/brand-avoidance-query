@@ -18,6 +18,45 @@
 
 export const records = [
   record({
+    id: "avil-hot-hawks-ko-chih-en-campaign-song-personal-20260915",
+    name: "艾維 AVIL",
+    aliases: ["艾維AVIL"],
+    identifiers: [],
+    country: "",
+    categories: ["媒體／娛樂／公眾人物", "政治／個人避開"],
+    avoidReasons: [
+      "使用者個人避開",
+      "公開擔任柯志恩2026高雄市長競選主題曲《世界高雄》共同主唱",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者要求把截圖所指樂團的負責人或主唱列入避雷；在可直接核實的最小範圍內，只將艾維 AVIL 本人列為個人避開。柯志恩官方 YouTube 於《世界高雄》競選主題曲 MV 說明欄直接把「艾維AVIL」與林子麟 Buljanljuyan 並列為主唱；台鋼雄鷹 TSG HAWKS 官方 YouTube 先前又在火熱雄鷹樂團開球儀式說明中列「投手：火熱雄鷹 艾維 主唱」，足以把同一公開藝名橋接為火熱雄鷹主唱及該競選主題曲共同主唱。使用者提供的 Threads 截圖只作收件觸發，畫面發文者稱競選主題曲由火熱雄鷹樂團操刀並包牌高雄音樂人；因未取得原帖永久連結，且官方 MV credit 把製作人、作詞、作曲、編曲與主唱分列，本紀錄不採用截圖的樂團整體製作說法。這是使用者因已公開記名的競選歌曲演唱活動所作政治／價值型個人避雷，不表示艾維是樂團負責人、老闆或管理者，也不推定其政黨身分、全部政治信念、未記載的背書行為或其他成員責任。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－火熱雄鷹樂團與柯志恩競選主題曲說法",
+        "",
+        "2026-09-15（收件日；畫面僅顯示相對時間 22 小時）",
+        "截圖顯示 Threads 帳號 `austin0302`、顯示名稱「政治歸政治傑尼龜傑尼」及正文「柯志恩競選主題曲，由火熱雄鷹樂團操刀，並包牌了高雄音樂人。」；未取得原帖永久連結，故只作使用者指定與查核線索，不把「樂團操刀」或「包牌高雄音樂人」當成已核實事實。Sanitized evidence 已裁除手機狀態列、Threads 導覽／主題列及下方所有第三方留言與回覆輸入列，只保留原發文者、相對時間、正文與互動數字：`evidence/user-submissions/2026-09-15-avil-ko-chih-en-campaign-song-thread-trigger.png`；1242×435 RGBA；metadata 只保留 ICC profile；SHA-256：`d465e54ee740b1fbebde287c975b6b2bcda9afe1b05333c9469d5c538217d10e`；pixel SHA-256：`5ada8ff45e85560aa469e14eac32a06f666a9876429bb851a6d73058c0ddb8a0`。",
+      ),
+      source(
+        "柯志恩官方 YouTube－《世界高雄》官方MV！作伙拚出咱的世界舞台｜柯志恩2026高雄市長競選主題曲",
+        "https://www.youtube.com/watch?v=2jeEuWUDJaY",
+        "2026-09-14（台灣時間）",
+        "柯志恩官方頻道的影片題名直接標示為 2026 高雄市長競選主題曲；YouTube metadata 發布時間為 2026-09-13T19:08:29-07:00，換算台灣時間為 2026-09-14。完整說明欄分列製作人吳坤龍、作詞 Fairy、作曲林子麟 Buljanljuyan 暨高雄音樂人、編曲林子麟 Buljanljuyan／吳坤龍，以及主唱林子麟 Buljanljuyan／艾維AVIL。此來源直接支持艾維是該競選主題曲的共同主唱，不支持把全部製作工作歸給她或火熱雄鷹樂團，也不證明政黨黨籍或超出本次演唱的政治立場。",
+      ),
+      source(
+        "台鋼雄鷹 TSG HAWKS 官方 YouTube－【10/5賽前】開球儀式：火熱雄鷹樂團",
+        "https://www.youtube.com/watch?v=WzW2xdsGWns",
+        "2025-10-05（台灣時間）",
+        "台鋼雄鷹 TSG HAWKS 官方頻道影片說明直接列「投手：火熱雄鷹 艾維 主唱／打者：火熱雄鷹 麟 主唱」；YouTube metadata 發布時間為 2025-10-05T02:49:07-07:00，換算台灣時間仍為 2025-10-05。此來源只用來橋接艾維的火熱雄鷹主唱身分，不代表她是樂團負責人、老闆、管理者，亦不把樂團其他成員納入避雷。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 official-source-backed / user-directed entertainer-person / political-performance personal record。最小可確認對象只有艾維 AVIL：柯志恩官方 YouTube 直接把她列為 2026 高雄市長競選主題曲《世界高雄》的共同主唱，台鋼雄鷹 TSG HAWKS 官方 YouTube 又直接列「火熱雄鷹 艾維 主唱」，完成藝名與樂團主唱身分橋接。使用者截圖只作 intake trigger；因無原帖 permalink，不採其「火熱雄鷹樂團操刀／包牌高雄音樂人」為事實，且官方 MV credit 明確把製作人、詞曲、編曲與主唱分列。不得擴張成艾維是樂團負責人、老闆、管理者、候選人競選團隊成員或政黨黨員；不得推定其全部政治信念、超出已記錄演唱活動的背書行為，也不得讓火熱雄鷹其他成員承擔本筆責任。country 留空，避免把台灣活動地點誤作人物國籍。searchable fields 只保留「艾維 AVIL」與官方 credit 使用的無空格變體「艾維AVIL」；不要加入火熱雄鷹、柯志恩、世界高雄、高雄、競選主題曲、主唱、歌手、樂團、政治、國民黨、候選人、Threads、`austin0302` 或其他人物／樂團／政治／事件／理由／平台詞。公開證據圖由 1290×2796 原始截圖裁成 1242×435，只保留目標 Threads 原發文者、22 小時相對時間、正文與互動數字，移除手機狀態列、Threads 導覽／主題列、下方第三方留言者／留言文字／頭像及回覆輸入列；metadata 只保留 ICC profile。RGBA pixel SHA-256：`5ada8ff45e85560aa469e14eac32a06f666a9876429bb851a6d73058c0ddb8a0`。",
+    lastReviewed: "2026-09-15",
+  }),
+  record({
     id: "zhang-qian-political-facebook-posts-personal-20260913",
     name: "張倩",
     aliases: [],
