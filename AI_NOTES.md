@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-15 歐元花藝氣球設計：公開商業帳號政治文字個人避雷
+
+- Record：`euro-garden-floral-balloon-political-thread-personal-20260915`；`personal` / `medium`。使用者截圖顯示帳號 `europegarden`、相對時間「8 小時」及文字「民進黨都先求選上，然後事後再找理由推辭，反正大家的記憶都大概 2-3 天，然後不斷重複，就有數不盡的油水入口袋」。唯一核心理由是使用者不接受該公開商業帳號發表這段批評民進黨的文字，因而將「歐元花藝氣球設計」列為個人避雷；這是個人政治價值與消費選擇，不表示文字內容為真，也不構成違法、非法利益、貪腐、政黨隸屬、經營者自然人身分或完整政治信念的認定。內層原始 permalink 與絕對時間不可得，只保留截圖相對「8 小時」，不作回推。
+- Threads、Instagram、Facebook 三個第一方 profile 分別顯示相同 handle、商業名稱或會場佈置服務，合併橋接截圖帳號與「歐元花藝氣球設計」；每個 source note 只描述自身頁面的 title／display、handle 與服務自述，不在 note 內作跨來源比較。Facebook 頁面自稱「歐元花藝氣球設計企業社 | Tainan」，其中「企業社」只屬頁面自我呈現，不是已核實商業登記。
+- Searchable fields 只保留 canonical name「歐元花藝氣球設計」、頁面自稱「歐元花藝氣球設計企業社」與 `@europegarden`。canonical name 本身含「花藝氣球」子字串，因此查詢會依 substring 命中，但未另將「花藝氣球」加入 standalone alias／identifier。`country` 刻意留空，因 country 會被查詢；台南／Tainan 等商家所在地脈絡只保留在個別第一方來源自我描述，不作可搜尋地理欄位。
+- Sanitized evidence：`evidence/user-submissions/2026-09-15-euro-garden-floral-balloon-political-post.png`，由 1290×2796 RGBA 原始截圖依原圖座標 `[0,1030,670,1265]` 裁成 670×235，並在輸出座標 `[0,0,82,112]`、`[608,0,669,112]` 以不透明白色遮罩移除左側帳號頭像區與右側選單區；保留 handle、相對時間與完整正文，未重排像素，排除裁切範圍外的裝置狀態列、其他帳號、留言、非必要影像、聯絡文字／浮水印、回覆輸入及第三方人臉。metadata 僅保留非敏感 ICC profile；SHA-256：`4a1d8f14457a1b7dbd4d968afc3ee29eb626b03f30ec48bf483273fb359a9bb4`；pixel SHA-256：`a56e233f41866644055fb9ff0047a01935ff73db04ebb660160a916b78898846`。
+
 ## 2026-09-15 艾維 AVIL：柯志恩競選主題曲共同主唱個人避雷
 
 - Record：`avil-hot-hawks-ko-chih-en-campaign-song-personal-20260915`；`personal` / `high`。使用者要求把截圖所指樂團的負責人或主唱避雷；採最小完整查證範圍，只收艾維 AVIL 本人。柯志恩官方 YouTube 的《世界高雄》2026 高雄市長競選主題曲說明欄直接把林子麟 Buljanljuyan、艾維AVIL 並列為主唱；台鋼雄鷹 TSG HAWKS 官方 YouTube 的火熱雄鷹樂團開球儀式說明直接列「火熱雄鷹 艾維 主唱」，足以橋接同一藝名的樂團主唱身分與本次競選歌曲演唱活動。這只支持公開記名演唱，不得擴張成艾維是樂團負責人／老闆／管理者、候選人競選團隊或政黨成員，也不得推定其全部政治信念、未記載的背書行為、整個樂團製作歌曲或其他成員共同負責。

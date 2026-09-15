@@ -18,6 +18,51 @@
 
 export const records = [
   record({
+    id: "euro-garden-floral-balloon-political-thread-personal-20260915",
+    name: "歐元花藝氣球設計",
+    aliases: ["歐元花藝氣球設計企業社"],
+    identifiers: ["@europegarden"],
+    country: "",
+    categories: ["餐飲／生活服務"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者依截圖所示公開商業帳號批評民進黨的文字作出個人消費選擇",
+    ],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者提供的截圖顯示帳號 `europegarden`、相對時間『8 小時』，以及文字：『民進黨都先求選上，然後事後再找理由推辭，反正大家的記憶都大概 2-3 天，然後不斷重複，就有數不盡的油水入口袋』。Threads、Instagram 與 Facebook 三個第一方 profile 分別呈現相同 handle、商業名稱或會場佈置服務，合併橋接截圖帳號與『歐元花藝氣球設計』；Facebook 頁的『歐元花藝氣球設計企業社』只是頁面自我呈現，不是本專案已核實的商業登記。使用者因不接受該公開商業帳號發表這段批評民進黨的文字，將『歐元花藝氣球設計』列為個人避雷；這是個人政治價值與消費選擇，不表示文字內容為真，也不構成違法、非法利益、貪腐、政黨隸屬、經營者自然人身分或完整政治信念的認定。內層原始 permalink 與絕對時間不可得，只保留截圖可見的相對『8 小時』，不作回推。`country` 刻意留空，因該欄位會被查詢；商家所在地脈絡只保留在個別第一方來源的自我描述，不作可搜尋地理欄位。",
+    sources: [
+      source(
+        "使用者提供截圖－歐元花藝氣球設計公開商業帳號政治文字",
+        "",
+        "截圖提供日 2026-09-15；內嵌畫面顯示相對時間 8 小時",
+        "截圖像素標示帳號 `europegarden`、相對時間『8 小時』，並完整顯示『民進黨都先求選上，然後事後再找理由推辭，反正大家的記憶都大概 2-3 天，然後不斷重複，就有數不盡的油水入口袋』。這只記錄截圖可見像素；內層原始 permalink 與絕對時間不可得，文字內容真實性亦未由截圖驗證。公開證據檔：`evidence/user-submissions/2026-09-15-euro-garden-floral-balloon-political-post.png`；由 1290×2796 RGBA 原始截圖依原圖座標 `[0,1030,670,1265]` 裁成 670×235，並在輸出座標 `[0,0,82,112]`、`[608,0,669,112]` 以不透明白色遮罩移除左側帳號頭像區與右側選單區，只保留 handle、相對時間及完整正文；metadata 僅保留非敏感 ICC profile。SHA-256：`4a1d8f14457a1b7dbd4d968afc3ee29eb626b03f30ec48bf483273fb359a9bb4`；pixel SHA-256：`a56e233f41866644055fb9ff0047a01935ff73db04ebb660160a916b78898846`。",
+      ),
+      source(
+        "Threads－歐元花藝氣球設計公開 profile",
+        "https://www.threads.com/@europegarden",
+        "查核日 2026-09-15",
+        "公開 profile title 為『歐元花藝氣球設計（@europegarden）』；profile description 自述『大大小小會場佈置經驗迄今近20年，歡迎洽詢教學，佈置等相關需求』。",
+      ),
+      source(
+        "Instagram－歐元花藝氣球設計公開 profile",
+        "https://www.instagram.com/europegarden/",
+        "查核日 2026-09-15",
+        "公開頁 display name 為『歐元花藝氣球設計』、handle 為 `@europegarden`；頁面自述在台南提供會場佈置服務。",
+      ),
+      source(
+        "Facebook－歐元花藝氣球設計企業社公開頁",
+        "https://www.facebook.com/europegarden.deco?locale=zh_TW",
+        "查核日 2026-09-15",
+        "公開頁 title 為『歐元花藝氣球設計企業社 | Tainan』；頁面自述『道具出租，花藝氣球教學，婚禮周邊廠商洽詢』。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-led / public-business-account political-text / user-directed personal record。唯一核心理由是使用者不接受截圖所示帳號 `europegarden` 發表的民進黨批評文字；截圖只證明可見 handle、相對『8 小時』與文字像素，內層原始 permalink／絕對時間不可得，不能由相對時間回推。Threads、Instagram 與 Facebook 三個第一方 profile 才共同把截圖 handle 橋接到『歐元花藝氣球設計』的商業名稱與服務；各 source note 必須只描述自身來源，不在單一 note 內作跨來源比較。Facebook 的『企業社』只屬頁面自我呈現，不是已核實商業登記。這是使用者個人政治價值與消費選擇，不採文字內容為真，也不認定違法、非法利益、貪腐、黨籍、經營者自然人身分或完整政治信念。searchable fields 只保留 canonical name『歐元花藝氣球設計』、頁面自稱『歐元花藝氣球設計企業社』及 `@europegarden`；canonical name 本身含『花藝氣球』子字串，故查詢會依 substring 命中，但未另將『花藝氣球』加入 standalone alias／identifier。`country` 刻意留空，因 country 會被查詢；商家所在地脈絡只留在個別來源自我描述，不作可搜尋欄位。",
+    lastReviewed: "2026-09-15",
+  }),
+  record({
     id: "chen-yichian-soers-technology-programming-payment-claims-personal-20260914",
     name: "陳宜謙／索爾斯科技",
     aliases: [
