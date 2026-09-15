@@ -18,6 +18,39 @@
 
 export const records = [
   record({
+    id: "cha-shan-xiao-liuzhangli-parking-retaliation-claims-personal-20260915",
+    name: "茶山小（台北六張犁）",
+    aliases: ["茶山小"],
+    identifiers: [],
+    country: "",
+    categories: ["餐飲／生活服務"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者依公開 Threads 貼文對該店占用他人店家門口、報復及提告／和解方式的主張作出個人消費選擇",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      "使用者在持續進行的圖片式避雷收件流程中提供 Threads 截圖；原帖 `miho.lai` 明確指向『台北六張犁的茶山小飲料店』，並主張該店長期占用他人店家門口、惡意報復、濫用司法提告商圈居民、私下恐嚇逼迫和解，以及對外宣稱刑事局大隊長是其大伯。使用者因不接受貼文所述的停車、報復及提告／和解方式，將這家『茶山小』列為個人避雷。以上都是發文者公開主張；本專案沒有取得完整新聞影片、停車紀錄、監視器原檔、司法文件、和解資料、店家回應、警政機關說明或主管機關認定，不能據此認定霸占、惡意報復、濫訴、恐嚇、特權關係、違法或刑事責任成立。截圖及原帖未提供足以核實經營者自然人身分的資料，故收錄範圍只限貼文具名的台北六張犁店家，不建立老闆、親屬、刑事警察人員、發文者或留言者紀錄。一次一般搜尋及一次替代搜尋均未取得可可靠重現的店家第一方頁面，因此不補入官方帳號、地址、公司名或經營者姓名，可信度維持 low。`country` 留空，避免新增不必要的國別搜尋詞；台北六張犁只作同名店家範圍辨識。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－茶山小停車、報復及提告／和解方式主張",
+        "",
+        "截圖提供日 2026-09-15；畫面顯示相對時間 13 小時",
+        "公開證據裁圖可見 `miho.lai`、主題『亂停車』、相對時間『13 小時』及完整正文。這只保存發文者對台北六張犁『茶山小』的公開主張，不證明相關行為、動機、親屬或法律責任成立。證據檔：`evidence/user-submissions/2026-09-15-cha-shan-xiao-liuzhangli-parking-claims-thread.png`；由 1290×2796 RGBA 原始截圖依原圖座標 `[20,380,1270,840]` 裁成 1250×460，並在輸出座標 `[0,0,170,160]` 以不透明深色遮罩移除頭像，只保留發文帳號、主題、相對時間與正文；排除手機狀態列、Threads 導覽、新聞影像／人物、QR code、互動數、留言者與回覆列。metadata 僅保留非敏感 ICC profile。SHA-256：`0bcde001b0976b84388e274957d2141d5f18fb6cc09fc23f5c208c5167b42fde`；pixel SHA-256：`19702670bc326dbdb2eb771522fcbf25affed6ed712faeec0701a97914c05618`。",
+      ),
+      source(
+        "Threads－miho.lai：茶山小停車、報復及提告／和解方式主張",
+        "https://www.threads.com/@miho.lai/post/DdSs8M_kkiO",
+        "2026-09-15 11:05:20（UTC+8）；查核日 2026-09-15",
+        "公開原帖頁與 metadata 可直接重現發文帳號、店名、地點及完整正文；它只證明 `miho.lai` 公開提出這些說法。頁面沒有提供足以獨立確認停車情形、報復、司法程序、和解、恐嚇、親屬關係、經營者身分或法律責任的底層文件。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 screenshot-led / named-local-business / third-party parking-and-retaliation claims / user-directed personal record。核心理由限使用者不接受 `miho.lai` 原帖所述的停車、報復及提告／和解方式；所有爭議措辭均歸因於發文者，不採為客觀事實，也不認定恐嚇、濫訴、特權或任何違法成立。原帖直接具名『台北六張犁的茶山小飲料店』，足以建立 low-confidence 的最小店家紀錄；一次一般搜尋及一次替代搜尋未取得可靠第一方店家頁後即停止，不追查旁支貼文、案件、人物或親屬。新聞縮圖、其他貼文及留言不作核心來源。截圖沒有可靠自然人身分橋接，故不保存任何老闆、親屬、警政人員、發文者或留言者為 target／alias。searchable fields 只由 canonical name『茶山小（台北六張犁）』及 alias『茶山小』構成；台北／六張犁是 canonical name 內必要的同名範圍辨識，亂停車、霸占、報復、提告、和解、恐嚇、刑事局、大隊長、飲料店、Threads 與來源帳號均不作 alias／identifier。`country` 刻意留空。",
+    lastReviewed: "2026-09-15",
+  }),
+  record({
     id: "euro-garden-floral-balloon-political-thread-personal-20260915",
     name: "歐元花藝氣球設計",
     aliases: ["歐元花藝氣球設計企業社"],
