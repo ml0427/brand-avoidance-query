@@ -18,6 +18,46 @@
 
 export const records = [
   record({
+    id: "gao-junjun-meta-ai-political-summary-personal-20260915",
+    name: "高鈞鈞",
+    aliases: ["鈞鈞啦啦隊"],
+    identifiers: ["@jingjinggau"],
+    country: "",
+    categories: ["媒體／娛樂／公眾人物", "政治／個人避開"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者採納截圖中 Meta AI 對其影片政治內容的摘要作為個人避雷依據",
+      "本人 Threads 公開頁持續發布民進黨、台灣、中國與台海主權等政治內容",
+    ],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者明確要求將高鈞鈞加入避雷，並指定截圖中的 Meta AI 轉述作為本次個人判斷事實基礎。截圖顯示已驗證 `@meta.ai` 回覆：左側人物所講的是個人政治評價，並將其核心摘要為討厭民進黨是因為認為民進黨欺壓、打壓在野黨及貪污腐敗；認為民進黨造謠中國很落後，而中國很多地方很先進；並不希望台灣拒絕學習中國先進之處。Meta AI 同時把右側人物所述中國在國際打壓台灣與 WHO、奧運正名及國際賽事紀錄區分為另一層，並提醒不能把左側主觀指控當成既定客觀事實。另一張使用者截圖顯示已驗證『高鈞鈞』公開頁並列 YouTube `@jingjinggau`；`@jingjinggau` Threads 公開頁又直接顯示姓名高鈞鈞、顯示名稱『鈞鈞啦啦隊』及同一 YouTube handle，完成身分橋接。該第一方 Threads 頁公開列出『民進黨網紅、新聞媒體被meta網路官方封禁』『台灣竟偷偷又要造冊動員學生嗎？』『中國大陸正式擁有台海主權管理權』『傳史瓦帝尼要跟中國大陸建交』等本人帳號貼文標題，足以支持其公開持續發布兩岸與政黨政治內容。本紀錄依使用者指示採 Meta AI 摘要作為 personal 避雷依據，但不把摘要升格為影片逐字稿、司法／主管機關認定、本人國籍證明，亦不判定摘要內對民進黨、中國或台灣的客觀真假。收錄只限高鈞鈞本人，不外溢 Meta AI、`bigjerrrymoon`、`awang_0127`、影片右側人物或其他留言者。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－Meta AI 對高鈞鈞影片政治內容的摘要",
+        "",
+        "截圖提供日 2026-09-15；Meta AI 回覆顯示相對時間 8 小時",
+        "裁切證據完整保存已驗證 `Meta AI`／`@meta.ai` 回覆。Meta AI 將左側人物內容摘要為：討厭民進黨是因為認為其欺壓、打壓在野黨及貪污腐敗；認為民進黨造謠中國很落後、中國很多地方很先進；不希望台灣拒絕學習中國先進之處。回覆同時明說這些是個人政治評價、不能當成既定事實。使用者明確指示接受這段 AI 轉述作為本次 personal 避雷依據。證據檔：`evidence/user-submissions/2026-09-15-gao-junjun-meta-ai-political-summary.png`；由 1290×2796 RGBA 原始截圖依座標 `[150,930,1270,1930]` 裁成 1120×1000，只保留 Meta AI 名稱、驗證標記、handle、相對時間、完整摘要與互動列，排除其他帳號、留言者、頭像、裝置狀態列及回覆輸入列；metadata 僅保留 ICC profile。SHA-256：`93cdb137abd52c7177baf28c1c50d55a3322595ef36bcf188a2b95f47d05645a`；pixel SHA-256：`e32ac0180369bda19218e9bf77308cbf768d68cb32a9cd8b4819d74044ef6b58`。",
+      ),
+      source(
+        "使用者提供公開 profile 截圖－高鈞鈞與 @jingjinggau 身分橋接",
+        "",
+        "截圖提供日 2026-09-15",
+        "去識別裁圖保留已驗證姓名『高鈞鈞』及本人公開的 YouTube `@jingjinggau`，用於橋接人物姓名與公開 handle；人像、追蹤／貼文數、身高體重三圍及其他非必要個資均已遮除。證據檔：`evidence/user-submissions/2026-09-15-gao-junjun-public-profile-identity.png`；由 1290×2796 RGBA 原始截圖依座標 `[20,1180,1270,2030]` 裁成 1250×850，再以不透明白色遮罩移除頂端人像殘影、頭像、動態數字、身體資料、標點殘影與底部無關內容；metadata 僅保留 ICC profile。SHA-256：`c5b0baa56c3329b23153cfac1bcd76ffff0b9d5f91f69f8bda2a9fa47243664c`；pixel SHA-256：`dfe6f16e20f626298d5875a1b5cc17297b2cf06b160d081789c14b1a2c1d3421`。",
+      ),
+      source(
+        "Threads－高鈞鈞／鈞鈞啦啦隊公開 profile",
+        "https://www.threads.com/@jingjinggau",
+        "查核日 2026-09-15",
+        "第一方公開 profile 直接並列 handle `jingjinggau`、顯示名稱『鈞鈞啦啦隊』、姓名『高鈞鈞』及 `youtube.com/@jingjinggau`。公開頁另列 2026-06-12 至 2026-06-15 的政治貼文標題，包括『民進黨網紅、新聞媒體被meta網路官方封禁』『台灣竟偷偷又要造冊動員學生嗎？』『中國大陸正式擁有台海主權管理權』『傳史瓦帝尼要跟中國大陸建交』。此來源支持身分與本人帳號公開發布政治內容，不證明每個標題或影片陳述的客觀真實性。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed / verified-public-profile / Meta-AI-summary political personal record。依使用者即時更正，截圖中的 Meta AI 轉述直接作為本次 personal 避雷依據；記錄的是『Meta AI 做出此摘要，且使用者接受它作為個人消費／支持判斷』，不改寫為已取得影片逐字稿或官方事實查核。人物身分由使用者 profile 截圖與第一方 `@jingjinggau` Threads profile 的高鈞鈞／鈞鈞啦啦隊／YouTube 同 handle 完成橋接；第一方 profile 同時列出多則民進黨、台灣、中國及台海主權相關貼文標題。範圍只限高鈞鈞本人，不外溢 Meta AI、`bigjerrrymoon`、`awang_0127`、影片右側人物或其他留言者，也不由畫面推定國籍、政黨黨籍、違法或任何法律責任。searchable fields 只保留『高鈞鈞』、『鈞鈞啦啦隊』及 `@jingjinggau`；民進黨、中國、台灣、台海、政治、Meta AI、Threads、影片、左邊、右邊及留言帳號均不作 alias／identifier。`country` 留空，不由政治立場推定國籍。",
+    lastReviewed: "2026-09-15",
+  }),
+  record({
     id: "avil-hot-hawks-ko-chih-en-campaign-song-personal-20260915",
     name: "艾維 AVIL",
     aliases: ["艾維AVIL"],

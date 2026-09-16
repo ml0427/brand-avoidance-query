@@ -2,6 +2,13 @@
 
 此檔保存品牌避雷專案的耐久工作流記憶。未來處理本專案時，優先讀本檔與 `AGENTS.md`；全域 memory 只保留索引，不保存本專案細節。
 
+## 2026-09-15 高鈞鈞：Meta AI 政治內容摘要與本人公開政治貼文的個人避雷
+
+- Record：`gao-junjun-meta-ai-political-summary-personal-20260915`；`personal` / `medium`。使用者明確要求將高鈞鈞加入避雷，並即時更正「AI 轉述是事實」，指定截圖中的 Meta AI 摘要作為本次個人判斷依據。Meta AI 將影片左側人物核心摘要為：討厭民進黨是因為認為其欺壓、打壓在野黨及貪污腐敗；認為民進黨造謠中國很落後、中國很多地方很先進；不希望台灣拒絕學習中國先進之處。紀錄保存的是 Meta AI 做出此摘要且使用者接受它作為 personal 避雷依據；沒有取得影片逐字稿，因此不把摘要升格為逐字引言、司法／主管機關認定，也不判定摘要內各項政治主張的客觀真假。
+- 身分由兩層直接橋接：使用者 profile 截圖顯示已驗證「高鈞鈞」並列 YouTube `@jingjinggau`；第一方 `https://www.threads.com/@jingjinggau` 又直接並列 handle `jingjinggau`、顯示名稱「鈞鈞啦啦隊」、姓名「高鈞鈞」及相同 YouTube handle。該公開頁另列「民進黨網紅、新聞媒體被meta網路官方封禁」「台灣竟偷偷又要造冊動員學生嗎？」「中國大陸正式擁有台海主權管理權」「傳史瓦帝尼要跟中國大陸建交」等本人帳號政治貼文標題，支持其公開持續發布兩岸與政黨政治內容，但不證明標題／影片主張客觀為真。
+- 範圍只限高鈞鈞本人，不外溢 Meta AI、`bigjerrrymoon`、`awang_0127`、影片右側人物或其他留言者，也不由政治內容推定國籍、黨籍、違法或法律責任。Searchable fields 只保留「高鈞鈞」、「鈞鈞啦啦隊」及 `@jingjinggau`；民進黨、中國、台灣、台海、政治、Meta AI、Threads、影片、左邊、右邊及留言帳號均不作 alias／identifier；`country` 留空。
+- Sanitized evidence：`evidence/user-submissions/2026-09-15-gao-junjun-meta-ai-political-summary.png` 為 1120×1000 RGBA，只保留已驗證 Meta AI 的完整摘要，SHA-256 `93cdb137abd52c7177baf28c1c50d55a3322595ef36bcf188a2b95f47d05645a`、pixel SHA-256 `e32ac0180369bda19218e9bf77308cbf768d68cb32a9cd8b4819d74044ef6b58`；`evidence/user-submissions/2026-09-15-gao-junjun-public-profile-identity.png` 為 1250×850 RGBA，只保留姓名、驗證標記與 YouTube `@jingjinggau`，已遮除全部人像、動態數字、身高體重三圍、標點殘影及其他非必要內容，SHA-256 `c5b0baa56c3329b23153cfac1bcd76ffff0b9d5f91f69f8bda2a9fa47243664c`、pixel SHA-256 `dfe6f16e20f626298d5875a1b5cc17297b2cf06b160d081789c14b1a2c1d3421`；兩檔 metadata 均只保留 ICC profile。
+
 ## 2026-09-15 茶山小（台北六張犁）：停車、報復及提告／和解方式主張的個人避雷
 
 - Record：`cha-shan-xiao-liuzhangli-parking-retaliation-claims-personal-20260915`；`personal` / `low`。使用者在持續進行的圖片式避雷流程中提供 Threads 截圖；原帖 `https://www.threads.com/@miho.lai/post/DdSs8M_kkiO` 於 2026-09-15 11:05:20（UTC+8）發布，直接具名「台北六張犁的茶山小飲料店」，並主張該店長期占用他人店家門口、惡意報復、濫用司法提告商圈居民、私下恐嚇逼迫和解，以及對外宣稱刑事局大隊長是其大伯。使用者依貼文所述的停車、報復及提告／和解方式作出個人避開決定；所有爭議措辭均屬發文者公開主張，本專案沒有取得完整新聞影片、停車紀錄、監視器原檔、司法／和解文件、店家回應、親屬資料、警政機關說明或主管機關認定，不得改寫成霸占、惡意報復、濫訴、恐嚇、特權關係、違法或刑事責任成立。
