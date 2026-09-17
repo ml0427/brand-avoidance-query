@@ -47,6 +47,39 @@ function treeGroupRecord({
   });
 }
 
+const localTreeGroupsEvidencePath =
+  "evidence/user-submissions/2026-09-17-taiwan-tree-groups-local-old-tree-post.png";
+const localTreeGroupsEvidenceSha256 =
+  "67c2c3b364162603b93cc2b2c1c0a06750a8652f53f957b6711357a933d8e14e";
+
+function localTreeGroupRecord({ id, name }) {
+  return record({
+    id,
+    name,
+    aliases: [],
+    country: "",
+    categories: ["環境倡議／公民團體"],
+    avoidReasons: [
+      "使用者明確指定圖片中列出的護樹／環境團體個人避雷",
+    ],
+    confidence: "low",
+    status: "personal",
+    summary:
+      `使用者提供「台灣護樹團體聯盟」社群貼文截圖並明確表示「這些團體都避雷」；畫面在「台北有很多護樹團體」的回答中直接列出「${name}」，並概括這些民間團體持續守護在地老樹。因此依使用者授權，將這個具名團體列為個人避開。這只支持來源帳號曾如此列名及使用者的個人決定，不證明團體法律身分、固定聯盟關係、個別成員身分、具體活動參與、負面事件、違法、裁罰或客觀不當。`,
+    sources: [
+      source(
+        `使用者提供社群截圖－台灣護樹團體聯盟列出的「${name}」`,
+        "",
+        "畫面可見 8月26日下午7:42；截圖提供日 2026-09-17",
+        `截圖顯示發文帳號「台灣護樹團體聯盟」、標題「護樹答客問」及「純文字版」；正文在回答台北砍樹應如何靜悄悄時，將「${name}」列為台北多個護樹團體之一，並稱這些民間團體持續守護在地老樹。使用者隨圖明確表示「這些團體都避雷」。來源沒有提出本團體的具體負面事件；本筆只保存可見列名與 personal 授權。證據檔：\`${localTreeGroupsEvidencePath}\`；SHA-256：\`${localTreeGroupsEvidenceSha256}\`。`,
+      ),
+    ],
+    aiNotes:
+      `此筆是 screenshot-led / user-directed organization personal record。使用者沒有說明個別避雷理由，不得替使用者推定其反對護樹、老樹保存、公園保存、都市開發、地方自治、環境法律倡議或特定政治立場。台灣護樹團體聯盟的貼文只證明來源帳號如此列名，不等於「${name}」共同發布、同意全文、固定隸屬聯盟或參與任何未具名事件。收錄只限這個具名團體，不外溢到成員、志工、學生、家長、法律人、代表人物、合作對象、其他清單團體或所有環境倡議者。searchable fields 只保留「${name}」；護樹、團體、聯盟、協會、公園、自救會、法律人、守護隊、老樹、麵包樹、Facebook、貼文帳號、台北、淡水、雙和、青潭及其他分類／來源／地區／理由詞不作 standalone alias／identifier。`,
+    lastReviewed: "2026-09-17",
+  });
+}
+
 export const records = [
   treeGroupRecord({
     id: "taiwan-tree-people-association-list-screenshot-personal-20260901",
@@ -225,5 +258,25 @@ export const records = [
         "新聞稿的聲援團體欄直接列出『城南老樹巡守隊、筑樹小丘護樹工作室、幸町老樹保護行動』，與截圖同段可見的前兩個名稱及截斷字串順序一致，支持把『幸町老樹保護……』補全為『幸町老樹保護行動』。此來源不證明它與歷史名稱『幸町百年老樹聯盟』或另見的『幸町老樹守護行動』是同一法律／組織實體，因此兩者都不作本卡 alias。",
       ),
     ],
+  }),
+  localTreeGroupRecord({
+    id: "chengli-needs-trees-local-old-tree-post-personal-20260917",
+    name: "城裡要有樹",
+  }),
+  localTreeGroupRecord({
+    id: "tamsui-gongqi-park-self-help-association-local-old-tree-post-personal-20260917",
+    name: "淡水公七公園自救會",
+  }),
+  localTreeGroupRecord({
+    id: "environmental-lawyers-association-local-old-tree-post-personal-20260917",
+    name: "環境法律人協會",
+  }),
+  localTreeGroupRecord({
+    id: "shuanghe-tree-protection-alliance-local-old-tree-post-personal-20260917",
+    name: "雙和護樹聯盟",
+  }),
+  localTreeGroupRecord({
+    id: "qingtan-elementary-old-breadfruit-tree-guardian-team-local-old-tree-post-personal-20260917",
+    name: "青潭國小老麵包樹守護隊",
   }),
 ];
