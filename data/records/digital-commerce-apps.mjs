@@ -391,4 +391,49 @@ export const records = [
       "此筆為 user-directed、source-backed 的 App personal record。可客觀說官方現行隱私／服務協議含中華人民共和國法律、人民法院及重慶市文字，官方隱私協議亦列姓名、電話、身分證號碼等資料類別；不可改寫成住戶資料已傳中國、已外洩、App 是中國公司、中共控制、已違法／裁罰，或台灣住戶從此完全只受中國法律管轄。91fun 只按官方頁面自稱保存，不推定其法律實體或與 App Store seller 的所有權關係。收錄範圍限易生活 Goezlife App；Guo Tai Apartment Building Management and Maintenance Co., Ltd.、91fun、物業公司、社區、Threads 帳號及開發者其他產品不列入本筆 searchable fields。搜尋欄位只保留官方 App 名稱的限定寫法、Goezlife 名稱、bundle、App Store ID 與官方網域；「易生活」雖為官方 App 名稱，可由 canonical name 的 substring 命中，但不另建同名 generic alias。不要把中華人民共和國、中國法律、重慶、人民法院、隱私協議、物業、社區、個資、身分證、91fun、notyet0627、Threads 等理由／平台／泛稱作 standalone alias／identifier。",
     lastReviewed: "2026-08-28",
   }),
+  record({
+    id: "portaly-founder-unemployment-public-reply-personal-20260920",
+    name: "Portaly",
+    aliases: ["Portaly", "Portaly 傳送門", "Portaly.cc"],
+    identifiers: ["portaly.cc"],
+    country: "",
+    categories: ["App／數位服務", "創作者商務平台"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者不接受創辦人對失業者的公開回覆態度",
+    ],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者提供社群截圖並明確指定將 Portaly 列入避雷。截圖中的已驗證帳號 `CW Lin`／`@cw.lin_` 回覆一則談長期失業與生活壓力的貼文，寫道一旦開始沒工作、發現社會安全可以溫飽，然後更難回到社會化的工作狀態，也開始接納沒有工作加睡路邊的狀況，最後寫『恭喜你進入遊民的宇宙了』。Portaly 官方 About 頁直接記載 Portaly 由 CW 林啟維創立，官方個人頁也列林啟維為 Founder／CEO @ Portaly.cc；公開 Threads 個人頁則將 `@cw.lin_` 與 `@portaly.cc` 創辦人自述並列，足以完成帳號、自然人與品牌角色的最小身分橋接。使用者因不接受創辦人面對失業處境的公開回覆態度，將 Portaly 品牌列為個人避開。截圖沒有原始回覆永久連結、精確發布時間或完整討論串，因此只保存畫面可見文字，不判定完整語境、言論動機、違法、歧視或法律責任；也不把這段個人回覆改寫成 Portaly 公司政策，或外溢到共同創辦人、員工、投資人、平台創作者與一般使用者。",
+    sources: [
+      source(
+        "使用者提供社群截圖－Portaly 創辦人 CW Lin 對失業貼文的公開回覆",
+        "",
+        "2026-09-20",
+        "截圖可見已驗證顯示名稱 `CW Lin`、帳號 `@cw.lin_` 及完整回覆；第一段為『一旦開始沒工作，發現社會安全可以溫飽，然後更難回到社會化的工作狀態，也開始接納沒有工作 + 睡路邊的狀況…』，下一段為『恭喜你進入遊民的宇宙了。』畫面只支持該帳號曾顯示上述回覆；沒有原始 permalink、精確時間或完整討論串，不足以判定完整語境、主觀動機、違法、歧視或 Portaly 公司政策。去識別證據檔：`evidence/user-submissions/2026-09-20-portaly-founder-public-reply.png`；尺寸 1180×525 RGBA；SHA-256：`7d67bb608edd7a04bbf83c65fab427bb33eacbef2fb764506ca3b97ffd0431da`；pixel SHA-256：`5b95f6332dace65cf5dfbb8310c726908eae5c1efc08250603457ff8b41fa005`。公開副本只保留顯示名稱、帳號、驗證勾與完整回覆，已移除頭像、相對時間、互動圖示／數字、原發文者、轉貼者、其他留言及裝置介面，metadata 僅保留 ICC profile。",
+      ),
+      source(
+        "Portaly 官方 About Us",
+        "https://portaly.cc/en/about",
+        "查核日 2026-09-20",
+        "Portaly 官方頁記載 Portaly 由 CW 林啟維於 2022 年創立，並由台灣團隊真實引擎開發與營運。此來源只支撐品牌、創辦人與營運身分，不證明截圖回覆的完整語境或公司政策。",
+      ),
+      source(
+        "林啟維 Portaly 官方個人頁",
+        "https://portaly.cc/cwl",
+        "查核日 2026-09-20",
+        "Portaly 官方網域頁面列 `Chi Wei Lin 林啟維` 及 `Founder / CEO @ Portaly.cc`。此來源只作姓名與品牌角色橋接，不證明截圖回覆的客觀合理性或法律責任。",
+      ),
+      source(
+        "Threads－CW Lin 公開個人頁",
+        "https://www.threads.com/@cw.lin_",
+        "查核日 2026-09-20",
+        "公開個人頁將 `CW Lin`、`@cw.lin_`、`Founder`、`@portaly.cc 創辦人` 與 `portaly.cc/cwl` 並列，可將截圖帳號橋接至 Portaly 創辦人公開身分；此頁不提供本次回覆的 permalink、時間與完整串文。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 user-directed、source-backed 的品牌 personal record。主因固定為使用者不接受 Portaly 創辦人 `CW Lin`／`@cw.lin_` 對失業者貼文的公開回覆態度；官方來源只用於橋接林啟維、CW 與 Portaly 創辦人／CEO 身分。不可把截圖文字改寫成 Portaly 公司政策、全體團隊立場、違法、歧視已成立、仇恨言論、主管機關認定或完整人生觀，也不外溢共同創辦人、員工、投資人、創作者與使用者。沒有原始回覆 permalink 與完整串文，精確時間不可回推。searchable fields 只保留 Portaly 品牌名稱、必要變體與 `portaly.cc`；林啟維、CW Lin、cw.lin_、真實引擎、失業、社會安全、遊民、睡路邊、宇宙、Threads 等人物／公司／理由／平台詞不作 alias／identifier。",
+    lastReviewed: "2026-09-20",
+  }),
 ];

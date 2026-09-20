@@ -17110,5 +17110,110 @@
     ],
     "aiNotes": "此筆是 official-identity-backed / user-directed / judge-person personal record。官方只支持蕭筠蓉目前為臺灣屏東地方法院刑四庭法官及其事務分配；避雷本身來自使用者明確指定。使用者稱其為「法官媽」並說三圖是一組，但沒有可靠公開來源確認蕭筠蓉與陳嘉偉為夫妻、子女家長或其他親屬，也沒有來源顯示她參與制服事件、向老師傳話、聯絡議員／教育局長／校長、施壓、違法、失職或遭懲戒；所有這些都不得寫成事實。不得以 Facebook 已婚欄位、同組截圖或人像相似作身分／關係推斷。責任只限使用者對蕭筠蓉本人的 personal avoidance，不外溢屏東地院、同庭法官、司法人員、家屬、陳嘉偉、診所、學校、議員或教育局。searchable fields 只保留蕭筠蓉；不要把蕭筠蓉法官、屏東地院、刑四庭、法官、法官媽、陳嘉偉、制服、施壓、議員、教育局、學校、媽媽、太太、妻子、配偶、親屬、Facebook 或其他職務／關係／事件詞作 alias／identifier，以免職稱泛稱透過 substring 污染查詢。",
     "lastReviewed": "2026-09-18"
+  },
+  {
+    "id": "portaly-founder-unemployment-public-reply-personal-20260920",
+    "name": "Portaly",
+    "aliases": [
+      "Portaly",
+      "Portaly 傳送門",
+      "Portaly.cc"
+    ],
+    "identifiers": [
+      "portaly.cc"
+    ],
+    "country": "",
+    "categories": [
+      "App／數位服務",
+      "創作者商務平台"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "使用者不接受創辦人對失業者的公開回覆態度"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者提供社群截圖並明確指定將 Portaly 列入避雷。截圖中的已驗證帳號 `CW Lin`／`@cw.lin_` 回覆一則談長期失業與生活壓力的貼文，寫道一旦開始沒工作、發現社會安全可以溫飽，然後更難回到社會化的工作狀態，也開始接納沒有工作加睡路邊的狀況，最後寫『恭喜你進入遊民的宇宙了』。Portaly 官方 About 頁直接記載 Portaly 由 CW 林啟維創立，官方個人頁也列林啟維為 Founder／CEO @ Portaly.cc；公開 Threads 個人頁則將 `@cw.lin_` 與 `@portaly.cc` 創辦人自述並列，足以完成帳號、自然人與品牌角色的最小身分橋接。使用者因不接受創辦人面對失業處境的公開回覆態度，將 Portaly 品牌列為個人避開。截圖沒有原始回覆永久連結、精確發布時間或完整討論串，因此只保存畫面可見文字，不判定完整語境、言論動機、違法、歧視或法律責任；也不把這段個人回覆改寫成 Portaly 公司政策，或外溢到共同創辦人、員工、投資人、平台創作者與一般使用者。",
+    "sources": [
+      {
+        "title": "使用者提供社群截圖－Portaly 創辦人 CW Lin 對失業貼文的公開回覆",
+        "url": "",
+        "date": "2026-09-20",
+        "note": "截圖可見已驗證顯示名稱 `CW Lin`、帳號 `@cw.lin_` 及完整回覆；第一段為『一旦開始沒工作，發現社會安全可以溫飽，然後更難回到社會化的工作狀態，也開始接納沒有工作 + 睡路邊的狀況…』，下一段為『恭喜你進入遊民的宇宙了。』畫面只支持該帳號曾顯示上述回覆；沒有原始 permalink、精確時間或完整討論串，不足以判定完整語境、主觀動機、違法、歧視或 Portaly 公司政策。去識別證據檔：`evidence/user-submissions/2026-09-20-portaly-founder-public-reply.png`；尺寸 1180×525 RGBA；SHA-256：`7d67bb608edd7a04bbf83c65fab427bb33eacbef2fb764506ca3b97ffd0431da`；pixel SHA-256：`5b95f6332dace65cf5dfbb8310c726908eae5c1efc08250603457ff8b41fa005`。公開副本只保留顯示名稱、帳號、驗證勾與完整回覆，已移除頭像、相對時間、互動圖示／數字、原發文者、轉貼者、其他留言及裝置介面，metadata 僅保留 ICC profile。"
+      },
+      {
+        "title": "Portaly 官方 About Us",
+        "url": "https://portaly.cc/en/about",
+        "date": "查核日 2026-09-20",
+        "note": "Portaly 官方頁記載 Portaly 由 CW 林啟維於 2022 年創立，並由台灣團隊真實引擎開發與營運。此來源只支撐品牌、創辦人與營運身分，不證明截圖回覆的完整語境或公司政策。"
+      },
+      {
+        "title": "林啟維 Portaly 官方個人頁",
+        "url": "https://portaly.cc/cwl",
+        "date": "查核日 2026-09-20",
+        "note": "Portaly 官方網域頁面列 `Chi Wei Lin 林啟維` 及 `Founder / CEO @ Portaly.cc`。此來源只作姓名與品牌角色橋接，不證明截圖回覆的客觀合理性或法律責任。"
+      },
+      {
+        "title": "Threads－CW Lin 公開個人頁",
+        "url": "https://www.threads.com/@cw.lin_",
+        "date": "查核日 2026-09-20",
+        "note": "公開個人頁將 `CW Lin`、`@cw.lin_`、`Founder`、`@portaly.cc 創辦人` 與 `portaly.cc/cwl` 並列，可將截圖帳號橋接至 Portaly 創辦人公開身分；此頁不提供本次回覆的 permalink、時間與完整串文。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed、source-backed 的品牌 personal record。主因固定為使用者不接受 Portaly 創辦人 `CW Lin`／`@cw.lin_` 對失業者貼文的公開回覆態度；官方來源只用於橋接林啟維、CW 與 Portaly 創辦人／CEO 身分。不可把截圖文字改寫成 Portaly 公司政策、全體團隊立場、違法、歧視已成立、仇恨言論、主管機關認定或完整人生觀，也不外溢共同創辦人、員工、投資人、創作者與使用者。沒有原始回覆 permalink 與完整串文，精確時間不可回推。searchable fields 只保留 Portaly 品牌名稱、必要變體與 `portaly.cc`；林啟維、CW Lin、cw.lin_、真實引擎、失業、社會安全、遊民、睡路邊、宇宙、Threads 等人物／公司／理由／平台詞不作 alias／identifier。",
+    "lastReviewed": "2026-09-20"
+  },
+  {
+    "id": "yuzhenfang-tainan-longjie-public-post-personal-20260920",
+    "name": "御珍坊（台南安南區安和路店）",
+    "aliases": [
+      "御珍坊",
+      "御珍坊 台南安南區",
+      "御珍坊炒飯專賣店"
+    ],
+    "identifiers": [
+      "facebook.com/YZF219",
+      "台南市安南區安和路一段60號"
+    ],
+    "country": "",
+    "categories": [
+      "餐飲旅遊",
+      "政治價值／個人選擇"
+    ],
+    "avoidReasons": [
+      "使用者個人避開（限台南安南區安和路店／官方頁面）",
+      "使用者不接受店家公開發文『換龍介仙登場』並刊登合照"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者提供御珍坊 Facebook 限時動態截圖並明確要求將店家列入避雷。截圖頁面名稱清楚顯示『御珍坊』，店家文字寫『今晚下班，明天見』、『換龍介仙登場』，接著稱自己經營生意沒有政治立場，無論紅、橙、黃、綠、藍、靛、紫都是一樣天空、不一樣的人，百姓過好生活即可；原圖並附兩人合照。使用者因不接受店家以『龍介仙』稱呼對象並公開刊登合照，而將御珍坊列為個人避開。公開 Facebook 頁 `@YZF219`、台南市政府冠軍炒飯報導及具名媒體可將同名店家橋接至台南安南區安和路店；本筆只收錄該店／官方頁面，不擴及成功店、其他可能分店、店主自然人、員工、顧客或合照人物。人物不依臉部辨識；本筆也不把『龍介仙』稱呼逕自升格為任何特定自然人身分、候選合作、正式背書、捐款、政黨隸屬、違法或全體員工政治立場。",
+    "sources": [
+      {
+        "title": "使用者提供 Facebook 限時動態截圖－御珍坊『換龍介仙登場』貼文",
+        "url": "",
+        "date": "2026-09-20",
+        "note": "截圖可見頁面名稱『御珍坊』、標示『AI 內容・12 小時』，正文為：『今晚下班，明天見』『換龍介仙登場』，以及店家稱經營生意沒有政治立場、無論紅橙黃綠藍靛紫、百姓過好生活即可的文字；原圖下方附兩人合照。此來源支持店家頁面曾顯示上述文字與合照，不靠臉部辨識確認人物，也不證明正式政治背書、政黨關係、捐款、合作或違法。『12 小時』只保留為截圖相對時間，不回推精確發布時間。去識別證據檔：`evidence/user-submissions/2026-09-20-yuzhenfang-tainan-longjie-post.png`；尺寸 1250×755 RGBA；SHA-256：`4dbd16a0cbaba97c3586a7f129f06a8bc36298f31856fc73977ab577249ef2a0`；pixel SHA-256：`8e5f93aac4822c15abf7ea35b91add70ad85699ffb82aa0ef3b22b3d72b1d53a`。公開副本只保留店名、相對時間與完整正文，已排除頭像、所有人像、留言、互動數、裝置介面及不必要個資；metadata 僅保留 ICC profile。"
+      },
+      {
+        "title": "御珍坊官方 Facebook 頁",
+        "url": "https://www.facebook.com/YZF219/",
+        "date": "查核日 2026-09-20",
+        "note": "公開頁面標題為『御珍坊 | Tainan』，並列台南市安南區安和路一段 60 號。此來源只支撐店名、官方頁面與本店位置橋接，不獨立證明截圖發文完整脈絡或合照人物身分。"
+      },
+      {
+        "title": "臺南市政府－御珍坊勇奪台灣炒飯王",
+        "url": "https://www.tainan.gov.tw/news_content.aspx?n=13370&s=7861547",
+        "date": "查核日 2026-09-20",
+        "note": "臺南市政府具名報導御珍坊獲台灣炒飯王經典組冠軍及市長赴店祝賀，用於交叉確認台南御珍坊餐飲店身分；此來源不支撐本次社群貼文、政治立場或合照人物。"
+      },
+      {
+        "title": "三立新聞網－台南安南區御珍坊炒飯報導",
+        "url": "https://www.setn.com/news/1309730",
+        "date": "查核日 2026-09-20",
+        "note": "具名報導將御珍坊列為台南市安南區店家並介紹其炒飯競賽經歷，用於排除同名酒類、糕餅或其他店家；不支撐本次社群文字、政治關係或合照人物身分。"
+      }
+    ],
+    "aiNotes": "此筆是 user-directed、source-backed 的單店 personal record。直接可見事實限御珍坊頁面自行寫『換龍介仙登場』及後續沒有政治立場、各色一樣天空等文字，原圖附兩人合照；人物不得依長相辨識，也不把『龍介仙』稱呼自動等同特定政治人物。個人避雷主因是使用者不接受店家這項公開發文／合照行為，不代表本專案認定店家正式背書候選人、加入政黨、接受捐款、違法或員工共同表態。收錄範圍限 Facebook `YZF219` 對應的台南安南區安和路店，不擴及成功店、其他分店、店主本人、員工、顧客或照片人物。searchable fields 只保留店名必要變體、官方 Facebook 頁與公開地址；龍介仙、謝龍介、政治、紅橙黃綠藍靛紫、炒飯王、候選人、Facebook、合照等人物／理由／平台／事件詞不作 standalone alias／identifier。",
+    "lastReviewed": "2026-09-20"
   }
 ]

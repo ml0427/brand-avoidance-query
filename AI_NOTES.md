@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-20｜Portaly 與台南御珍坊個人避雷
+
+- 新增 `portaly-founder-unemployment-public-reply-personal-20260920`：使用者因 Portaly 創辦人 `CW Lin`／`@cw.lin_` 對失業貼文公開回覆「恭喜你進入遊民的宇宙了」等文字，指定 Portaly 品牌個人避雷。Portaly 官方 About／個人頁與 Threads 公開 profile 可直接橋接林啟維、CW、`@cw.lin_` 與 Portaly 創辦人／CEO；截圖沒有原始回覆 permalink、精確時間與完整串文，因此只保存可見回覆，不作違法、歧視或公司政策定性，也不外溢員工、共同創辦人、投資人、創作者及使用者。
+- 新增 `yuzhenfang-tainan-longjie-public-post-personal-20260920`：御珍坊頁面截圖自行寫「換龍介仙登場」，並稱經營生意沒有政治立場、各色一樣天空、百姓過好生活即可，原圖附兩人合照。避雷只限 `YZF219` 對應的台南安南區安和路店／官方頁面；不靠臉部辨識人物，不把「龍介仙」自動等同特定自然人，也不外溢成功店、其他分店、店主、員工、顧客或照片人物，不宣稱正式政治背書、捐款、政黨隸屬或違法。
+- 去識別證據：`2026-09-20-portaly-founder-public-reply.png`（1180×525 RGBA；SHA-256 `7d67bb608edd7a04bbf83c65fab427bb33eacbef2fb764506ca3b97ffd0431da`；pixel SHA-256 `5b95f6332dace65cf5dfbb8310c726908eae5c1efc08250603457ff8b41fa005`）只保留顯示名稱、帳號、驗證勾與完整回覆，並移除頭像、相對時間與互動圖示／數字；`2026-09-20-yuzhenfang-tainan-longjie-post.png`（1250×755 RGBA；SHA-256 `4dbd16a0cbaba97c3586a7f129f06a8bc36298f31856fc73977ab577249ef2a0`；pixel SHA-256 `8e5f93aac4822c15abf7ea35b91add70ad85699ffb82aa0ef3b22b3d72b1d53a`）只保留店名、相對時間及完整正文。兩圖均移除人物／頭像、其他帳號、留言、互動數與裝置 UI，metadata 僅 ICC profile。
+
 ## 2026-09-18｜陳嘉偉與蕭筠蓉個人避雷
 
 - 使用者明確表示三張截圖屬同一組，要求蕭筠蓉直接加入個人避雷，並要求查明陳嘉偉醫師現職後加入。
