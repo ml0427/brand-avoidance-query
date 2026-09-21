@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-21｜FUNGO 芳菓：水煮瓜子中國內蒙古產地與全品牌個人避買
+
+- 新增 `fungo-china-origin-food-whole-brand-personal-20260921`；`personal` / `high`。使用者在持續進行的圖片式避雷流程中無文字提供 Threads 截圖；照片中的 165 公克 `FUNGO芳菓水煮瓜子` 可直接見到部分掀起的白色「原產地：台灣」貼紙，底層原包裝印刷則寫「原產地：中國 內蒙古」，並列負責廠商萬鑫企業股份有限公司。萬鑫企業官方同名商品頁另列相同重量及條碼，直接標示產地中國內蒙古，足以獨立確認這款 SKU 的產地與品牌／商品身分。
+- 依使用者固定規則「中國製食品直接避買；品牌涉中國製食品即全品牌避雷」，FUNGO 芳菓採全品牌個人避買。直接證據仍只確認這款水煮瓜子，不表示每款 FUNGO 商品均已逐一確認中國製；不外溢萬鑫企業其他品牌、丸什產品線、通路或所有瓜子商品。單張照片不能判定台灣貼紙由誰、何時、在哪個流通環節貼上，也不能寫成蓄意隱瞞、假標、違法、食安、污染、召回、禁售或主管機關處分。
+- 去識別證據：`evidence/user-submissions/2026-09-21-fungo-water-boiled-sunflower-seeds-origin-label.png`，由 1290×2796 原始截圖裁切商品區域為 1075×1460 RGBA，以不透明遮罩移除完整地址、電話與條碼影像；保留品牌／品名、台灣貼紙、底層中國內蒙古印刷產地、淨重及負責廠商。社群帳號、頭像、互動數、手機 UI 與其他貼文均排除，metadata 僅 ICC profile。SHA-256：`703f938d1fc710761f3e897e6c0825fe7ec8307bb5153145b4c0fa4f9ab45a2c`；pixel SHA-256：`7794d632f0bd09cdf3420862b359d0746193e82791f29b5a6d603dd97d70ad9e`。
+
 ## 2026-09-20｜Portaly 與台南御珍坊個人避雷
 
 - 新增 `portaly-founder-unemployment-public-reply-personal-20260920`：使用者因 Portaly 創辦人 `CW Lin`／`@cw.lin_` 對失業貼文公開回覆「恭喜你進入遊民的宇宙了」等文字，指定 Portaly 品牌個人避雷。Portaly 官方 About／個人頁與 Threads 公開 profile 可直接橋接林啟維、CW、`@cw.lin_` 與 Portaly 創辦人／CEO；截圖沒有原始回覆 permalink、精確時間與完整串文，因此只保存可見回覆，不作違法、歧視或公司政策定性，也不外溢員工、共同創辦人、投資人、創作者及使用者。
