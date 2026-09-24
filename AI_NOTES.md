@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-24｜郝哲偉：撈王胭脂鴨血公開說明的個人避雷
+
+- 新增 `hao-zhewei-laowang-duck-blood-statement-personal-20260924`；`personal` / `high`。使用者提供社群影片播放器截圖並明確要求「把這督導避雷」。TVBS 畫面直接標示「連鎖火鍋『撈王』督導 郝哲偉」，字幕為「表面會呈現鮮紅色因為是新鮮的鴨血」；TVBS 2026-09-23 具名報導另記錄他以撈王督導身分說明胭脂鴨血採台灣本土生鮮鴨血、與牛乳調和、未添加其他色素，鮮紅色源於新鮮鴨血。使用者依此公開說法將郝哲偉本人列為個人避雷。
+- 證據邊界：這只確認郝哲偉受訪時的姓名、職稱與公開說法，不證明說法正確或錯誤。報導只稱台北市衛生局將派員稽查，沒有本輪可確認的稽查／檢驗結果；不得寫成郝哲偉說謊、鴨血含人工色素、來自中國、是假鴨血、食品不安全、違法，亦不得反向稱業者說法已獲主管機關或實驗室證實。範圍只限郝哲偉本人；撈王品牌由既有全品牌個人避雷卡獨立承接。
+- 去識別證據：`evidence/user-submissions/2026-09-24-hao-zhewei-laowang-duck-blood-tvbs-still.png`，975×645 RGBA；只保留食物畫面、TVBS 識別、郝哲偉姓名職稱與主要字幕，排除社群播放器、互動數字及大部分無關新聞 ticker，QR code 已以不透明遮罩移除，metadata 僅 ICC profile。SHA-256：`cd57ade4d85674e3eb6690a17176d0472e6a36a32829b68394b0ed3ff5922691`；pixel SHA-256：`d76106b1b5ce5118d5e58bee869ad2352224b4700d35ed08af380c340e2eb793`。
+
 ## 2026-09-24｜阿爾法餐飲關聯五品牌：逐品牌全品牌個人避雷
 
 - 使用者提供 Threads 截圖並明確要求「這些都避雷」；畫面具名撈王、雞湯大叔、雞湯桑、麵屋一燈、賴山嶼。既有撈王卡保留，本次新增四張獨立 `personal` / `high` 卡：`broth-master-alpha-group-personal-20260924`、`tori-san-alpha-group-personal-20260924`、`menya-itto-alpha-license-personal-20260924`、`lai-shan-yu-alpha-group-personal-20260924`。逐品牌分卡，避免把關聯品牌互塞 aliases 造成查詢與責任外溢。
