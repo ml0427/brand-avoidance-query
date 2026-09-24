@@ -80,6 +80,97 @@ export const records = [
     lastReviewed: "2026-09-23",
   }),
   record({
+    id: "broth-master-alpha-group-personal-20260924",
+    name: "雞湯大叔",
+    aliases: ["雞湯大叔火鍋店"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["餐飲／生活服務", "火鍋／連鎖餐廳"],
+    avoidReasons: [
+      "使用者個人全品牌避開",
+      "與阿爾法餐飲集團之品牌營運關係",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖後，明確要求把畫面列出的撈王、雞湯大叔、雞湯桑、麵屋一燈與賴山嶼全部避雷。本筆只收雞湯大叔全品牌；104 的阿爾法餐飲公司頁直接刊載雞湯大叔職缺，具名專訪並稱阿爾法從雞湯大叔起家。避雷是使用者基於品牌關聯所作的個人消費選擇；不表示雞湯大叔使用撈王的鴨血、與撈王共用全部食材，或有食安不合格、違法、主管機關處分等事實。",
+    sources: [
+      source("使用者明確指定－雞湯大叔全品牌個人避雷", "", "2026-09-24", "使用者針對所提供截圖列出的五個品牌明確表示「這些都避雷」；雞湯大叔因此列為全品牌 personal 個人避雷。此授權不等於使用者對品牌提出特定違法或食安指控。"),
+      source("使用者提供 Threads 截圖－阿爾法餐飲五品牌關係主張", "", "2026-09-24", "截圖正文把撈王、雞湯大叔、雞湯桑、麵屋一燈、賴山嶼列為阿爾法集團旗下品牌，並呼籲避雷。截圖只支持畫面有此關係主張，不單獨證明股權、授權範圍或食品供應鏈。Sanitized evidence：`evidence/user-submissions/2026-09-24-alpha-dining-five-brands-user-directed-thread.png`，1250×970 RGBA；保留完整關係文字與五個品牌名稱，排除帳號、頭像、裝置介面、趨勢列、互動數、留言與回覆框；metadata 僅 ICC profile。SHA-256：`6d58435c593ad3bef45f9531ee811a8b343c81c2641e2236d8d2f88305fb367b`；pixel SHA-256：`a91c4b180d2171e77d90f78c087cec28e76e761caf7393a9b7792e62913db7cc`。"),
+      source("104 人力銀行－阿爾法餐飲股份有限公司", "https://www.104.com.tw/company/1a2x6bm6l3", "查核日 2026-09-24", "阿爾法餐飲公司頁直接刊載雞湯大叔多間門市職缺，支持品牌由該公司營運；本來源不證明撈王鴨血來源、食材共用或任何食安問題。"),
+      source("TALKace－專訪阿爾法餐飲集團創辦人賴三禹", "https://talkacemedia.com/article/52218", "2026-07", "具名專訪稱阿爾法餐飲集團從雞湯大叔起家，並把雞湯大叔列入其多品牌營運脈絡；只支持品牌關係與營運背景。"),
+    ],
+    aiNotes:
+      "explicit-user-directed whole-brand personal record。雞湯大叔須獨立建卡，不把其他關聯品牌放入 aliases／identifiers。不得把使用者對撈王的中國假鴨血說法外溢到雞湯大叔，也不得寫成共用鴨血、共用全部食材、食安不合格、違法、召回或主管機關認定。",
+    lastReviewed: "2026-09-24",
+  }),
+  record({
+    id: "tori-san-alpha-group-personal-20260924",
+    name: "雞湯桑",
+    aliases: ["TORI SAN", "TORi SAN"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["餐飲／生活服務", "拉麵／連鎖餐廳"],
+    avoidReasons: ["使用者個人全品牌避開", "與阿爾法餐飲集團之品牌營運關係"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖後，明確要求把畫面列出的五個品牌全部避雷。本筆只收雞湯桑全品牌；104 阿爾法餐飲公司頁直接刊載雞湯桑門市職缺，具名專訪亦將雞湯桑列入阿爾法的多品牌版圖。避雷是使用者個人選擇，不表示雞湯桑使用撈王的鴨血、與撈王共用全部食材，或存在食安不合格、違法或主管機關處分。",
+    sources: [
+      source("使用者明確指定－雞湯桑全品牌個人避雷", "", "2026-09-24", "使用者針對截圖列出的五個品牌明確表示「這些都避雷」；雞湯桑因此列為全品牌 personal 個人避雷。"),
+      source("使用者提供 Threads 截圖－阿爾法餐飲五品牌關係主張", "", "2026-09-24", "截圖正文列出撈王、雞湯大叔、雞湯桑、麵屋一燈、賴山嶼。Sanitized evidence：`evidence/user-submissions/2026-09-24-alpha-dining-five-brands-user-directed-thread.png`；1250×970 RGBA；SHA-256 `6d58435c593ad3bef45f9531ee811a8b343c81c2641e2236d8d2f88305fb367b`；pixel SHA-256 `a91c4b180d2171e77d90f78c087cec28e76e761caf7393a9b7792e62913db7cc`。截圖只支持畫面中的關係主張。"),
+      source("104 人力銀行－阿爾法餐飲股份有限公司", "https://www.104.com.tw/company/1a2x6bm6l3", "查核日 2026-09-24", "阿爾法餐飲公司頁直接刊載雞湯桑多間門市職缺，支持品牌由該公司營運。"),
+      source("TALKace－專訪阿爾法餐飲集團創辦人賴三禹", "https://talkacemedia.com/article/52218", "2026-07", "專訪把雞湯桑列入阿爾法從雞湯大叔延伸建立的多品牌營運脈絡。"),
+    ],
+    aiNotes:
+      "explicit-user-directed whole-brand personal record。關聯品牌須分卡。不得把撈王鴨血主張外溢成雞湯桑的食材或食安事實；阿爾法關係只支持營運脈絡，不等於五品牌是同一法律主體。",
+    lastReviewed: "2026-09-24",
+  }),
+  record({
+    id: "menya-itto-alpha-license-personal-20260924",
+    name: "麵屋一燈",
+    aliases: ["麵屋一灯", "MENYA ITTO", "Menya Itto"],
+    identifiers: [],
+    country: "日本",
+    categories: ["餐飲／生活服務", "拉麵／連鎖餐廳"],
+    avoidReasons: ["使用者個人全品牌避開", "阿爾法餐飲營運及全球專屬授權關係"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖後，明確要求把畫面列出的五個品牌全部避雷。本筆只收麵屋一燈全品牌。公開資料顯示麵屋一燈是日本品牌，阿爾法餐飲自 2022 年接手台灣營運，並於 2026 年取得除既有特定市場外的全球專屬授權；這不是阿爾法自創或完整持有該日本品牌的證明。避雷是使用者基於授權與營運關聯所作的個人選擇，不表示麵屋一燈使用撈王的鴨血、與撈王共用全部食材，或存在食安不合格、違法或主管機關處分。",
+    sources: [
+      source("使用者明確指定－麵屋一燈全品牌個人避雷", "", "2026-09-24", "使用者針對截圖列出的五個品牌明確表示「這些都避雷」；麵屋一燈因此列為全品牌 personal 個人避雷。"),
+      source("使用者提供 Threads 截圖－阿爾法餐飲五品牌關係主張", "", "2026-09-24", "截圖正文列出撈王、雞湯大叔、雞湯桑、麵屋一燈、賴山嶼。Sanitized evidence：`evidence/user-submissions/2026-09-24-alpha-dining-five-brands-user-directed-thread.png`；1250×970 RGBA；SHA-256 `6d58435c593ad3bef45f9531ee811a8b343c81c2641e2236d8d2f88305fb367b`；pixel SHA-256 `a91c4b180d2171e77d90f78c087cec28e76e761caf7393a9b7792e62913db7cc`。"),
+      source("食力 foodNEXT－麵屋一燈海外發展交由阿爾法餐飲", "https://www.foodnext.net/news/industry/paper/6591143778", "2026-01-15", "報導稱麵屋一燈 2022 年起由阿爾法接手台灣營運，2026 年雙方簽署除既有特定市場外的全球專屬授權；並明確指出日本仍有品牌方與創辦人，故不得改寫成阿爾法完整持有品牌。"),
+      source("看雜誌－阿爾法餐飲集團取得麵屋一燈全球專屬授權", "https://www.watchinese.com/article/2026/28256", "2026-01-15", "報導列明授權涵蓋商標使用、直營與加盟、區域授權、品牌管理、國際行銷與關鍵原物料供應，但有特定區域例外。"),
+    ],
+    aiNotes:
+      "explicit-user-directed whole-brand personal record。安全關係用語為台灣營運與特定範圍全球專屬授權，不得寫成阿爾法擁有日本母品牌。不得把撈王鴨血主張外溢到麵屋一燈。",
+    lastReviewed: "2026-09-24",
+  }),
+  record({
+    id: "lai-shan-yu-alpha-group-personal-20260924",
+    name: "賴山嶼",
+    aliases: ["賴山嶼麻辣燙"],
+    identifiers: [],
+    country: "台灣",
+    categories: ["餐飲／生活服務", "麻辣燙／連鎖餐廳"],
+    avoidReasons: ["使用者個人全品牌避開", "阿爾法餐飲打造及營運品牌"],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖後，明確要求把畫面列出的五個品牌全部避雷。本筆只收賴山嶼全品牌；具名公開資料稱賴山嶼為阿爾法餐飲推出、打造的青花椒麻辣燙品牌，104 阿爾法公司頁亦直接刊載多間賴山嶼門市職缺。避雷是使用者基於品牌關聯所作的個人消費選擇，不表示賴山嶼使用撈王的鴨血、與撈王共用全部食材，或有食安不合格、違法或主管機關處分。",
+    sources: [
+      source("使用者明確指定－賴山嶼全品牌個人避雷", "", "2026-09-24", "使用者針對截圖列出的五個品牌明確表示「這些都避雷」；賴山嶼因此列為全品牌 personal 個人避雷。"),
+      source("使用者提供 Threads 截圖－阿爾法餐飲五品牌關係主張", "", "2026-09-24", "截圖正文列出撈王、雞湯大叔、雞湯桑、麵屋一燈、賴山嶼。Sanitized evidence：`evidence/user-submissions/2026-09-24-alpha-dining-five-brands-user-directed-thread.png`；1250×970 RGBA；SHA-256 `6d58435c593ad3bef45f9531ee811a8b343c81c2641e2236d8d2f88305fb367b`；pixel SHA-256 `a91c4b180d2171e77d90f78c087cec28e76e761caf7393a9b7792e62913db7cc`。"),
+      source("104 人力銀行－阿爾法餐飲股份有限公司", "https://www.104.com.tw/company/1a2x6bm6l3", "查核日 2026-09-24", "阿爾法餐飲公司頁直接刊載賴山嶼多間門市與管理職缺，支持品牌由該公司營運。"),
+      source("看雜誌－青花椒麻辣燙新品牌賴山嶼", "https://www.watchinese.com/article/2025/28006", "2025", "具名文章稱阿爾法餐飲集團推出全新青花椒麻辣燙品牌賴山嶼，並把它與雞湯大叔、雞湯桑、麵屋一燈及撈王列於集團品牌脈絡。"),
+    ],
+    aiNotes:
+      "explicit-user-directed whole-brand personal record。賴山嶼與其他四品牌分卡；不得把撈王鴨血主張外溢成賴山嶼的食材或食安事實。",
+    lastReviewed: "2026-09-24",
+  }),
+  record({
     id: "sushi-itamae-handmade-mailiao-owner-replies-personal-20260914",
     name: "鮨板前手作 日式料理",
     aliases: [
