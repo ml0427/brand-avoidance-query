@@ -1,5 +1,12 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-27｜Mo高雄甜點工作室：中秋禮盒疑似發霉與日期標示主張
+
+- 新增 `mo-kaohsiung-dessert-mold-claim-personal-20260927`；`personal` / `medium`。使用者在持續進行的圖片式避雷收錄中，無文字提供 `yangweiyubros` Threads 截圖；原帖 `https://www.threads.com/@yangweiyubros/post/DdyIjCGE0DH` 具名「Mo高雄甜品工作室」，稱收到「柿柿如意」中秋禮盒後發現內容物全部長霉，並稱禮盒製作日期為 2026/10/15，而貼文正文所載當日為 2026/9/27。依 established image-only intake，範圍只收 Mo高雄甜點工作室／`eat_cookies10` 個人避雷。
+- 圖片可直接描述個別包裝的深色圓形糕點表面有大片白灰與黃綠色不規則斑塊，但不能據此鑑定黴菌種類、污染來源、保存／運送責任、健康危害或整批商品狀況；截圖沒有拍到製造日期標籤，日期只能歸屬為發文者文字主張。沒有訂單、保存／運送紀錄、店家回應、稽查、抽驗或裁罰，故不得寫成店家承認、標示造假、食品違規、所有禮盒污染或主管機關認定。
+- 身分橋接：Instagram 與 Threads 第一方公開頁直接並列「Mo高雄甜點工作室」及帳號 `eat_cookies10`；官方 2026-08-04 中秋禮盒貼文只支持該帳號當年度確有中秋禮盒商品，不驗證原帖個案。搜尋欄只保留店名空格／大小寫變體及官方帳號，不收「柿柿如意」、發霉、中秋、高雄、甜點、工作室、Threads 或發文者帳號等理由／地區／品類／平台詞。
+- 去識別證據：`evidence/user-submissions/2026-09-27-mo-kaohsiung-dessert-mold-claim-thread.png`，1250×1670 RGBA；保留公開帳號、完整正文、平台識別與兩張食品照片，裁除手機狀態列、導覽、互動數、留言及回覆框，並以不透明遮罩移除頭像；metadata 僅 ICC profile。SHA-256：`f65a30cfbc6253127ff6a37f6e53343a4c2d90c1f38ca1455158c0920e64d5ad`；pixel SHA-256：`451ac5c752d8221128cfef65f80314dec4a59f4ed47f7becef7b1f96576c40e3`。
+
 ## 2026-09-25｜沈富雄：使用者直接指定本人個人避雷
 
 - 新增 `shen-fuhsiung-former-legislator-user-directed-personal-20260925`；`personal` / `high`。使用者提供沈富雄的繁體中文維基百科人物頁並明確表示「避雷」。立法院官方歷屆委員頁直接列出沈富雄為第 3 屆立法委員，完成最小身分核對。
