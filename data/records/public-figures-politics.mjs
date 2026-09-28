@@ -18,6 +18,45 @@
 
 export const records = [
   record({
+    id: "yi-yuanpei-educator-user-directed-personal-20260928",
+    name: "易元培",
+    aliases: [],
+    identifiers: [],
+    country: "",
+    categories: ["教育／人物", "媒體／娛樂／公眾人物"],
+    avoidReasons: [
+      "使用者個人避開",
+      "使用者提供具名新聞節目畫面並明確指定易元培本人避雷",
+    ],
+    confidence: "high",
+    status: "personal",
+    summary:
+      "使用者提供 Threads 截圖並明確表示「這人避雷」。畫面中的新聞節目影格直接標示「暨南大學教授 易元培」，足以辨識使用者所指人物為易元培；國立暨南國際大學現行官方教職員查詢頁則將易元培列為通識教育中心兼任講師，國立臺中教育大學通識教育中心官方師資頁列為兼任專業技術講師。正式職稱依兩校官方資料記錄，不把新聞畫面的「教授」標示當成已確認的正式教員等級。使用者本次沒有指定任何特定言論、事件、政黨立場、違法或不當行為作為理由；原始 Threads 截圖的政治評論是發文者文字，裁切影格也沒有完整節目片段或逐字稿，因此本紀錄只保存使用者對易元培本人的個人避雷決定與最小身分資訊，不把發文者評論、畫面字幕或未取得完整語境的節目內容改寫成易元培本人主張，也不擴及國立暨南國際大學、國立臺中教育大學、三立新聞、Threads 發文者、沈伯洋或其他人物。",
+    sources: [
+      source(
+        "使用者提供 Threads 截圖－新聞節目畫面標示易元培",
+        "",
+        "2026-09-28",
+        "原始截圖可見 Threads 貼文與一段新聞節目影片影格，影格直接標示「暨南大學教授 易元培」；使用者另以文字明確表示「這人避雷」。Threads 發文者對國民黨、沈伯洋、網紅與 YouTube 課程的評論只屬第三方文字，沒有原始貼文永久連結、完整節目片段或逐字稿，不作易元培本人言論或客觀事實。Sanitized evidence：`evidence/user-submissions/2026-09-28-yi-yuanpei-ncnu-tv-identification.png`；由1290×2796原始JPEG裁切為810×355 RGB PNG，只保留易元培公開新聞畫面與「暨南大學教授 易元培」識別，排除手機狀態列、Threads 帳號／正文、互動數、留言、回覆框、播放器UI及其他人物；metadata僅ICC profile。SHA-256：`77d009be8e1ecb6a848a9779d20d6347c606a44e987a3775b7b1fa8b0662516f`；pixel SHA-256：`6fbdbe098270638a76d878424ed72afe129a9ceb3c6549c2c141fd0768115e9b`。",
+      ),
+      source(
+        "國立暨南國際大學－校內各單位及教職員工查詢：通識教育中心",
+        "https://ccweb.ncnu.edu.tw/telquery/unitQuery.asp?uid=U000",
+        "查核日 2026-09-28",
+        "校方現行官方查詢頁直接列出易元培為通識教育中心「兼任講師」。此來源只用於確認姓名、現行公開任教單位與職稱；頁面沒有支持截圖發文者的政治評論，也不證明新聞節目所用「教授」是正式教員等級。",
+      ),
+      source(
+        "國立臺中教育大學通識教育中心－社會人文領域師資",
+        "https://ge.ntcu.edu.tw/teacher?cate=1",
+        "查核日 2026-09-28",
+        "校方官方師資頁直接列出易元培為「兼任專業技術講師」，研究專長包含口語表達藝術、華語文教學、即席演說、朗讀與電視主持實務等。此來源只用於交叉確認人物身分與另一項公開任教職稱，不作政治立場或特定言論判定。",
+      ),
+    ],
+    aiNotes:
+      "此筆是 official-identity-backed / explicit-user-directed / educator-person personal record。使用者只說「這人避雷」；不得自行把 Threads 發文者對國民黨、沈伯洋、網紅、YouTube課程或優越感的評論寫成易元培本人言論或避雷理由。原始截圖只含新聞節目影格，沒有完整影音、節目日期、原始貼文permalink或逐字稿；畫面字幕也不能在脫離語境下轉述為完整立場。身分以國立暨南國際大學現行官方頁的通識教育中心兼任講師為核心，並以國立臺中教育大學官方頁的兼任專業技術講師交叉確認；新聞畫面的「暨南大學教授」只按畫面標示保存，不取代正式職稱。範圍只限易元培本人，不外溢兩校、三立新聞、Threads發文者、沈伯洋、國民黨、節目主持人、其他來賓或合作單位。searchable fields只保留姓名易元培；不要把暨南大學、臺中教育大學、教授、講師、老師、沈伯洋、國民黨、網紅、YouTube、Threads、新聞線或其他職稱／組織／人物／平台／理由詞作alias／identifier。country留空，避免「台灣」等泛詞命中人物卡。",
+    lastReviewed: "2026-09-28",
+  }),
+  record({
     id: "shen-fuhsiung-former-legislator-user-directed-personal-20260925",
     name: "沈富雄",
     aliases: [],

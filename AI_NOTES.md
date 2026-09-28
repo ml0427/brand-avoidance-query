@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-28｜易元培：使用者直接指定本人個人避雷
+
+- 新增 `yi-yuanpei-educator-user-directed-personal-20260928`；`personal` / `high`。使用者提供 Threads 截圖並明確表示「這人避雷」；新聞節目影格直接標示「暨南大學教授 易元培」。國立暨南國際大學現行官方教職員查詢頁將易元培列為通識教育中心兼任講師，國立臺中教育大學通識教育中心官方師資頁則列為兼任專業技術講師；正式職稱依兩校官方資料，不把新聞畫面的「教授」當成已確認的正式教員等級。
+- 使用者本次沒有指定特定言論、事件、政黨立場或不當行為；原始 Threads 文字是發文者對國民黨、沈伯洋、網紅與 YouTube 課程的評論，且沒有原始貼文 permalink、完整節目片段或逐字稿，不得改寫成易元培本人言論。範圍只限易元培本人，不外溢兩校、三立新聞、Threads 發文者、沈伯洋、國民黨、節目主持人、其他來賓或合作單位。searchable fields 只保留 canonical name「易元培」；aliases／identifiers／country 留空。
+- 去識別證據：`evidence/user-submissions/2026-09-28-yi-yuanpei-ncnu-tv-identification.png`，由 1290×2796 原始 JPEG 裁切為 810×355 RGB PNG，只保留易元培公開新聞畫面與「暨南大學教授 易元培」識別，排除手機狀態列、Threads 帳號／正文、互動數、留言、回覆框、播放器 UI 及其他人物；metadata 僅 ICC profile。SHA-256：`77d009be8e1ecb6a848a9779d20d6347c606a44e987a3775b7b1fa8b0662516f`；pixel SHA-256：`6fbdbe098270638a76d878424ed72afe129a9ceb3c6549c2c141fd0768115e9b`。
+
 ## 2026-09-27｜朱政騏：遭除名後競選文宣與看板撤除爭議的個人避雷補充
 
 - 新增 `zhu-zhengqi-campaign-materials-personal-20260927`；`personal` / `high`。為避免朱政騏後續個別爭議顯示在其他四人名下，將他從既有 `taipei-dpp-five-disciplinary-resignation-candidates-personal-20260913` 的 name／aliases 拆出，改由獨立人物卡承接；舊 ID 為維持穩定不更名，但可搜尋人物只剩陳怡君、簡麗花、陳峙穎、紀建漢。聯合新聞網與 ETtoday 於 2026-09-26 具名報導，民進黨台北市黨部稱朱政騏的宣傳車、團隊背心、競選看板、布條及文宣仍使用民進黨黨徽，或可能使選民誤認其受黨提名，並稱已寄存證信函要求停止及撤除；朱政騏表示與沈伯洋合照看板於 8 月初上刊、尚未收到調整通知或存證信函，並以支持沈伯洋及質疑法律依據回應。使用者因此維持對朱政騏本人的個人避雷。
