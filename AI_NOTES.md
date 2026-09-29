@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-29｜傳沏：中國製冷萃單叢茶與全品牌個人避買
+
+- 新增 `chuanqi-cold-brew-dancong-tea-china-origin-whole-brand-personal-20260929`；`personal` / `high`。使用者在持續進行的圖片式避雷收錄中無文字提供商品照片；瓶身可直接辨識品名「傳沏冷萃單叢烏龍茶無糖」、內容量 260 毫升、原產地中國、進口商／國內負責廠商捷盟行銷股份有限公司及 EAN-13 `6925303785826`。條碼以 ZXing 解碼並通過 EAN-13 檢查碼驗證。
+- 統一企業（中國）官方產品頁列出「传沏」、冷萃单丛无糖茶與 260 毫升 BC 罐；臺灣 7-ELEVEN 2026 年官方活動頁把「傳沏」列在統一品牌品項中；智慧財產局公開資料鏡像列臺灣第 032 類「傳沏」商標權人為統一企業（中國）投資有限公司（註冊號 `02321802`）。依使用者固定規則「中國製食品直接避買；食品品牌涉中國製商品即全品牌避雷」，傳沏採全品牌個人避買。直接商品證據只確認具名 260 毫升 SKU，不表示每款傳沏商品都已逐一確認中國製；不外溢統一企業、統一企業（中國）、7-ELEVEN、捷盟行銷或其他關係品牌，也不作食安、違法、假標、禁售或裁罰定論。
+- 去識別證據：`evidence/user-submissions/2026-09-29-chuanqi-dancong-oolong-china-origin-label.png`，由 1290×2796 原始照片裁切商品標籤區域為 1080×1340 RGB，以不透明遮罩移除營養標示、服務電話與完整地址；保留品名、原料、容量、原產地、進口商／國內負責廠商及條碼，社群帳號、頭像、互動數、手機 UI 與人物臉部均不在裁切範圍，metadata 僅 ICC profile。SHA-256：`1120a5c08fe156ea71840de8e85de05eb9411a3a2d1b55d25a7554ad7d1708c8`；RGB pixel SHA-256：`340c86b585b4d373950cc385bbb30a12937c9ddc6e49ea43a71e99ae96fcb5f9`。
+
 ## 2026-09-29｜陳怡君、朱政騏：再次指定避雷與人物卡隔離
 
 - 使用者提供 Threads 截圖並明確表示「這兩人避雷」。只依截圖可見文字辨識為陳怡君、朱政騏，不使用人臉辨識；新增陳怡君獨立卡 `chen-yijun-campaign-materials-personal-20260929`，既有朱政騏獨立卡 `zhu-zhengqi-campaign-materials-personal-20260927` 則補記本次再次指定。為避免個別文宣／看板事件外溢，陳怡君已從 `taipei-dpp-five-disciplinary-resignation-candidates-personal-20260913` 的 searchable fields 拆出；該舊 ID 為穩定性保留，現只承接簡麗花、陳峙穎、紀建漢。
