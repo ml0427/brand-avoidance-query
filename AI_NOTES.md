@@ -1,5 +1,12 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-29｜陳怡君、朱政騏：再次指定避雷與人物卡隔離
+
+- 使用者提供 Threads 截圖並明確表示「這兩人避雷」。只依截圖可見文字辨識為陳怡君、朱政騏，不使用人臉辨識；新增陳怡君獨立卡 `chen-yijun-campaign-materials-personal-20260929`，既有朱政騏獨立卡 `zhu-zhengqi-campaign-materials-personal-20260927` 則補記本次再次指定。為避免個別文宣／看板事件外溢，陳怡君已從 `taipei-dpp-five-disciplinary-resignation-candidates-personal-20260913` 的 searchable fields 拆出；該舊 ID 為穩定性保留，現只承接簡麗花、陳峙穎、紀建漢。
+- 客觀時間線：中央社確認陳怡君於 2026-02-04 遭停權 2 年 6 個月、02-25 遭撤銷此次黨內參選資格、09-24 公布遭民進黨中評會除名；ETtoday 09-26 具名報導陳怡君、朱政騏的文宣仍有民進黨黨徽，與沈伯洋合體看板亦未撤，並記錄民進黨台北市黨部稱已寄存證信函要求更正與撤除。前述文宣與通知只按媒體及黨部說法歸屬，不寫成法院、選務機關或商標主管機關已認定違法、冒用、侵權或誤導。
+- 截圖發文者所稱「合成沈伯洋的看板」及其他評論只屬發文者主張，不是陳怡君或朱政騏的原始言論，也不作技術鑑定或客觀定性；正式資料只採具名媒體的「與沈伯洋合體看板」口徑。兩張獨立人物卡的 searchable fields 各自只保留 canonical name，aliases／identifiers／country 留空；沈伯洋、民進黨、看板、黨徽及其他候選人均不得命中兩卡。
+- 去識別證據：`evidence/user-submissions/2026-09-29-chen-yijun-zhu-zhengqi-user-directed-thread.png`，由 1290×2796 原始 PNG 裁切為 1040×68 RGB PNG，只保留發文者點名陳怡君、朱政騏並主張兩人已非民進黨的單一文字行，排除帳號、頭像、手機狀態列、互動數、人物照片、回覆框、沈伯洋及其他候選人姓名；metadata 僅 ICC profile。SHA-256：`3e0bdc184b6d7ba99544576d45eb8de90ea5b3284f19cca4ce78af61498e5287`；pixel SHA-256：`e21bd8f42d53444c2c4342eb3bb5ea9ced77470c107edd7671fa724f731bf1de`。
+
 ## 2026-09-28｜易元培：使用者直接指定本人個人避雷
 
 - 新增 `yi-yuanpei-educator-user-directed-personal-20260928`；`personal` / `high`。使用者提供 Threads 截圖並明確表示「這人避雷」；新聞節目影格直接標示「暨南大學教授 易元培」。國立暨南國際大學現行官方教職員查詢頁將易元培列為通識教育中心兼任講師，國立臺中教育大學通識教育中心官方師資頁則列為兼任專業技術講師；正式職稱依兩校官方資料，不把新聞畫面的「教授」當成已確認的正式教員等級。
