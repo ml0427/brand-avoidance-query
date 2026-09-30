@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-30｜阮程昭：第三方轉貼留言的先行本人個人避雷
+
+- 新增 `ruan-chengzhao-social-comment-personal-20260930`；`personal` / `low`。使用者明示「就先避雷好嗎 如果不是他 本人會出來澄清」，授權先列阮程昭本人，不因帳號本人尚未直接橋接而延誤。核心理由是使用者不接受轉貼截圖所呈現對女性身體與生育的貶低語氣；原圖放大核對留言為「生過幾個小孩？自然生嗎？生越多越鬆喔。留下手機號碼吧。」不能將使用者的先行避開策略、沒有澄清或第三方指認寫成本人承認或已核實的本人發言。
+- 身分與歸屬分層：龍泉分院官方醫師查詢頁 `https://www.vhlc.gov.tw/News_Content.aspx?n=B111B447B957CE3C&sms=A051A81412121623&s=B17716C05CEFCD61` 直接列阮程昭與婦產科，只核實具名醫師身分與院方公開單位／科別。第三方原帖 `https://www.threads.com/@jumbojhan/post/Dd392X_E_4b` 的頁面title指認姓名、chengzhaoruan、婦產科與龍泉分院，但正文unavailable，帳號profile受登入牆限制；目前仍未直接核實帳號控制、留言歸屬、原始回覆permalink、絕對日期或完整上下文。不得反推診療場景、病患關係、醫療失職、違法、性騷擾認定、裁罰或懲戒。範圍只限阮程昭本人，不外溢醫院、其他醫師、留言女性、病患、轉貼者或其他留言者。
+- 搜尋欄只保留 canonical name「阮程昭」；aliases／identifiers／country全部留空。chengzhaoruan只是非搜尋來源指認資訊，不當成已核實官方帳號；醫院、龍泉分院、醫師、婦產科、Threads、其他帳號、人物與理由詞均不得命中本卡。
+- 證據最小化：由 `D:/AI_workspace/.hermes/profiles/amagi-line/cache/images/img_499c4e1260d6.png`（1290×2796 RGBA）分別原位裁切，沒有拼接或重排像素。`evidence/user-submissions/2026-09-30-ruan-chengzhao-comment-screenshot.png`：原圖座標 `[185,548,1080,790]`，895×242 RGBA，只保留留言核心；檔案SHA-256 `de3ddaed5b5dd1fbf334554606730d3ba3729126a74a7b680b9846ea88f06856`；RGBA pixel SHA-256 `400f03e9de9e7db2f1b15d193d4463b2a09eba15df30d1e827dd1b0e7574686e`。`evidence/user-submissions/2026-09-30-ruan-chengzhao-third-party-identification.png`：原圖座標 `[290,1975,1120,2195]`，830×220 RGBA，只保留第三方指認的姓名／帳號／職業；檔案SHA-256 `10120a170f745280d8065f4f590f909a85e92ec43ba511de5e9a6790b761853b`；RGBA pixel SHA-256 `95c0797834696382be3749fcd0db2b9db80996f1eaa65ef70c6fb8cb646010e4`。兩檔metadata皆空，全部頭像、第三方帳號、互動數、手機通知／UI、其他留言、人物照片及病患相關資料均排除於裁切外；公開副本不留原圖通知內容或其他帳號。
+- 驗證：merge為348筆source risk records／總數354；target validator（停用default smoke與全案syntax）1個姓名正查＋14個`--not-expect`通過，`warnings: 0; errors: 0`。`node --test` 14/14、來源檔`node --check`與`git diff --check`通過；source/generated各恰一筆且deep-equal，排除本筆後的所有generated records與HEAD基線完全相同，runtime `getSearchText()`只含「阮程昭」。兩張裁切像素與原圖相同區域逐bytes一致，各檔案／原生RGBA像素雜湊在source、generated、筆記各恰一處。merge重跑冪等，`brands.json` SHA-256為 `de7c6dcde3e250617a9750e849b40fe6cdc14b5e0e54d6b872b9b7af8a60b825`。
+- 主控收尾驗證：完整 validator 12 checks、20 個來源語法檢查通過，`warnings: 0; errors: 0`；Node tests 14/14。主控另核兩張證據與原始裁切像素逐 bytes 一致、檔案／原生像素雜湊在來源、產生檔與筆記各恰一處；獨立唯讀審查 PASS，無 blocker。此筆只改來源紀錄、sanitized evidence、本地筆記與重生資料，不改程式或版號；提交範圍排除原已存在的他人 untracked 證據 `evidence/user-submissions/2026-09-11-kevin-huanting-keng-political-reply-thread.png`。
+
 ## 2026-09-29｜維義：中國製烹鮮鮮調味料與全品牌個人避買
 
 - 新增 `weiyi-pengxianxian-seasoning-china-origin-whole-brand-personal-20260929`；`personal` / `high`。使用者在持續進行的圖片式避雷收錄中無文字提供商品照片；瓶身可直接辨識品名「維義烹鮮鮮調味料」、淨含量 100 公克、保存期限 18 個月、原產地中國及進口商維義事業股份有限公司。原圖沒有拍到條碼，不建立條碼識別。
