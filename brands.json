@@ -18357,5 +18357,51 @@
     ],
     "aiNotes": "high只指官方中國研發據點事實及明確個人避雷授權，不是全球控制鏈可信度。社群截圖只作線索，不作股權、控制或藥品安全客觀證據，也不保存公開圖副本。制度與政治風險已足以承接personal，不以中共直接控股證據作入庫門檻；中文譯名分歧只作必要實體辨識，不否定核心理由。不外溢股東、資產管理機構、合作企業或其他醫藥品牌；不提供停藥或替藥建議。搜尋只留品牌名稱，country空，理由、國家、研發據點及關係企業不作搜尋鍵。",
     "lastReviewed": "2026-09-30"
+  },
+  {
+    "id": "chenkang-nanchang-kanghua-china-medical-personal-20260930",
+    "name": "晨康 CHENKANG",
+    "aliases": [
+      "晨康",
+      "CHENKANG",
+      "南昌市康華衛材有限公司",
+      "南昌市康华卫材有限公司",
+      "Nanchang Kanghua Health Materials Co., Ltd"
+    ],
+    "identifiers": [],
+    "country": "",
+    "categories": [
+      "醫療器材",
+      "個人避開"
+    ],
+    "avoidReasons": [
+      "使用者個人避開",
+      "中國品牌與醫材製造營運的制度風險"
+    ],
+    "confidence": "high",
+    "status": "personal",
+    "summary": "使用者依晨康 CHENKANG 的中國品牌與醫材製造營運背景，對中共體制下制度、監管與政治風險作出個人判斷，選擇晨康品牌個人避雷。南昌市康華衛材有限公司官網明載以晨康為註冊商標，位於中國江西進賢縣醫療器械科技園區，生產一次性醫療用品；供應商頁並列英文公司名與自有品牌 Chenkang。晨康是商標、康華是公司名的正常品牌關係，不是兩名稱詐騙的證據。此筆不認定產品未滅菌、不安全、違法或認證合格，也不推定所有醫療器材均為中國製。",
+    "sources": [
+      {
+        "title": "使用者提供 - 晨康 CHENKANG 品牌 logo",
+        "url": "",
+        "date": "2026-09-30",
+        "note": "使用者提供截圖並依已核中國品牌／廠商背景指定個人避雷；裁切只證明畫面可見晨康 CHENKANG logo，不證明影片工人、場地或產品屬於該公司。公開證據 evidence/user-submissions/2026-09-30-chenkang-brand-logo-screenshot.png，由1290×2796 RGB JPEG依原圖座標[300,2090,1010,2525]原位裁成710×435 RGB PNG，未拼接、重畫或改動像素，metadata僅icc_profile；排除頭像、帳號、互動數、其他回覆、未核指控、工人照片與底部UI。檔案SHA-256 fbf3b60ea3c7b1dd618079cd7f9d72bbf73fd489e200e513e7fff9b053a76599；原生RGB pixel SHA-256 b30704a9c6cba2e8adcd7546a7084a0b06c19b3de1eecbf882be7246091034a7。"
+      },
+      {
+        "title": "南昌市康华卫材有限公司 | 麻醉科耗材 | 泌尿类耗材 | 母婴类耗材",
+        "url": "https://www.jxkh.cn/",
+        "date": "查核日 2026-09-30",
+        "note": "官方原文：『南昌市康华卫材有限公司成立于2000年，以晨康为注册商标，是具有多年生产一次性医疗用品经验的专业企业。公司坐落于进贤县医疗器械科技园区』。頁面另自述十萬級淨化生產車間；淨化車間不是產品已完成滅菌或合格的證明。只支持品牌／公司關係與中國醫材製造背景，不將頁面自述當作獨立認證查核；查核日不是發布日。"
+      },
+      {
+        "title": "Nanchang Kanghua Health Materials Co., Ltd - Company Profile",
+        "url": "https://kanghuamed.en.made-in-china.com/company-Nanchang-Kanghua-Health-Materials-Co-Ltd-.html",
+        "date": "查核日 2026-09-30",
+        "note": "供應商自述公司2000年成立、生產一次性醫療耗材；Business Type為Manufacturer/Factory，地址Medical Device Technology Park, Moonlight Road, Nanchang, Jiangxi, China，R&D Capacity列OEM、ODM、Own Brand(Chenkang)。只支持英文公司名、自有品牌及中國廠商身分，不是獨立認證或滅菌證明；查核日不是發布日。"
+      }
+    ],
+    "aiNotes": "high限定已核品牌／公司身分與官方中國醫材製造營運事實，不表示任何安全指控成立。未取得品牌完整滅菌流程、先後或批次證據；單一靜幀未呈現滅菌不等於沒執行，也不能證明完成或合格。留言指控不採為入庫主因；不替影片工序合格背書，不認定圖中工人在該公司。不外溢江蘇康華醫療器材、建德康華、廣東康華或其他同名公司、股東、其他品牌及全部中國製醫材。搜尋只放晨康品牌及已橋接完整公司名，不將康華／康华泛称、Chenkang0、Pfizer、制度風險、滅菌或器材品類加入搜尋鍵。",
+    "lastReviewed": "2026-09-30"
   }
 ]

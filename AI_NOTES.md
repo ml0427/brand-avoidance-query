@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-30｜晨康 CHENKANG：中國醫材品牌／製造營運背景個人避雷
+
+- 主控收尾：完整validator PASS（364筆、12項檢查、20個來源語法檢查，warnings: 0; errors: 0），Node tests 14/14通過，3個品牌／公司正查與4個指定負查通過。主控核原363筆與HEAD完全一致、新卡唯一；logo視覺確認只有品牌，裁切原生像素、尺寸、RGB、metadata與檔案／像素雜湊符合紀錄。一輪獨立唯讀審查PASS、無blocker，另核5正查／16負查、source/generated一致、舊來源未變，審查前後diff及證據hash一致。提交範圍僅本輪來源、brands、本地筆記與logo PNG，Kevin無關untracked圖排除，不改應用程式或版本。
+
+- 新增 `chenkang-nanchang-kanghua-china-medical-personal-20260930`，晨康 CHENKANG，`personal` / `high`；主因是使用者依已核中國品牌與醫材製造營運背景，選擇避開中共體制下制度、監管與政治風險。high限定身分與官方中國業務事實，不是安全爭議證實。晨康獨立於輝瑞卡，不外溢股東、其他品牌、同名康華公司或全部中國製醫材。
+- 沿用主控已讀回官網 `https://www.jxkh.cn/`（2000年成立、晨康為註冊商標、進賢縣醫療器械科技園區、生產一次性醫療用品），與供應商 `https://kanghuamed.en.made-in-china.com/company-Nanchang-Kanghua-Health-Materials-Co-Ltd-.html`（英文公司名、2000年成立、南昌江西中國地址、Manufacturer/Factory、Own Brand(Chenkang)）。晨康是商標、康華是公司名，不採兩名稱詐騙說法；供應商自述不是獨立認證。查核日不是頁面發布日。
+- 未查到品牌完整滅菌流程、先後或批次證據；十萬級淨化車間不證明已滅菌，單一靜幀未呈現不等於沒執行，也不能證明完成或合格。不認定影片工人、工廠或產品屬於該公司，不將留言的未殺菌／直接封口主張當成已證事實，也不替影片工序合格背書。不納入正文403的產品滅菌摘要或與未知產品無直接關係的一般EO資料。
+- aliases僅晨康、CHENKANG、南昌市康華衛材有限公司、南昌市康华卫材有限公司、Nanchang Kanghua Health Materials Co., Ltd；identifiers與country空。康華／康华未作standalone alias，但因完整公司名含有該字串，既有substring查詢仍可能命中；不等於其他同名企業納入。Chenkang0、其他康華公司、滅菌、醫療器材、理由與中國不作搜尋鍵。
+- 最小logo證據 `evidence/user-submissions/2026-09-30-chenkang-brand-logo-screenshot.png`：1290×2796 RGB JPEG依[300,2090,1010,2525]原位裁為710×435 RGB PNG，metadata僅icc_profile；未拼接、重画或改像素，原圖區域與PNG像素逐bytes相同。中文／英文品牌名稱完整可辨，底部圓弧因原圖UI覆蓋不全，不補畫；排除帳號、頭像、互動、其他回覆、指控文字、工人照片與底部UI。檔案SHA-256 `fbf3b60ea3c7b1dd618079cd7f9d72bbf73fd489e200e513e7fff9b053a76599`；原生RGB pixel SHA-256 `b30704a9c6cba2e8adcd7546a7084a0b06c19b3de1eecbf882be7246091034a7`。logo只證明品牌可見，不證明影片公司歸屬或安全。
+- Worker驗證：source語法與merge通過，358筆source risk records／總數364；5個正查唯一命中、16個target負查全部通過，source/generated唯一且deep-equal、全案ID無重複；排除新卡後原363筆與HEAD完全相同。merge重跑冪等，brands SHA-256 `dc0fda8d844cd4553f72a788f7f031cf1008428272371f4e64e765251854d4c7`；`git diff --check`通過。首次基線讀取碰到Node execFileSync預設buffer不足，改32MiB後完整核對通過。依指示未跑完整validator／全案tests，未stage／commit／push，不改應用與版號，Kevin無關untracked保留不動。
+
 ## 2026-09-30｜輝瑞 Pfizer：中國研發營運的制度與政治風險個人避雷
 
 - 主控收尾：完整validator PASS（363筆、12項檢查、20個來源語法檢查，warnings: 0; errors: 0），Node tests 14/14通過。3個品牌正查與4個指定負查通過；主控另核source/generated逐筆一致，新增卡唯一、既有362筆與HEAD完全相同。一輪獨立唯讀審查PASS、無blocker，另核3個正查／17個負查及舊來源內容不變，審查前後diff hash一致。僅提交本輪來源、brands與本地筆記，無關Kevin untracked圖不納入；不改應用程式或版號。
