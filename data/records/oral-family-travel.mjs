@@ -18,6 +18,25 @@
 
 export const records = [
   record({
+    id: "pfizer-china-rd-political-risk-personal-20260930",
+    name: "輝瑞 Pfizer",
+    aliases: ["輝瑞製藥", "輝瑞", "Pfizer"],
+    identifiers: [],
+    country: "",
+    categories: ["醫藥", "個人避開"],
+    avoidReasons: ["使用者個人避開", "中國研發營運的制度與政治風險"],
+    confidence: "high",
+    status: "personal",
+    summary: "使用者因輝瑞在中國設有研發與營運據點，承受中共體制下的制度、監管與政治風險，選擇輝瑞品牌個人避雷。上述風險評估屬使用者個人政治與制度判斷；輝瑞中國官方頁可確認中國研發中心及上海、武漢據點，全球官方研發頁另列美國與英國主要園區，並非全球研發都在中國。此筆不認定輝瑞為中資、中共持股或直接掌控全球，也不推定全品項中國製、疫苗或藥品不安全。",
+    sources: [
+      source("使用者更正 - 中國營運的制度與政治風險個人避雷", "", "2026-09-30", "使用者更正：『只要在中國，哪裡沒有受到中共控制，你在跟我開玩笑嗎』。本筆忠實承接使用者對中國營運之制度、監管與政治風險的個人判斷及品牌避雷授權，不將此觀點寫成官方證實輝瑞全球控制鏈。"),
+      source("CRDC Shanghai | Pfizer China", "https://pfizer.com.cn/en/science-en/crdc-en/crdc-sh-en", "查核日 2026-09-30", "官方原文：『Pfizer China R&D Center was established on October 31, 2005, at Shanghai Zhangjiang High-tech Park Zone.』及『the center provides support services for Pfizer's global biological and chemical pharmaceutical research and development projects.』後文列武漢 Biolake 附屬據點。頁面未見發布日期；查核日不是發文日，頁內超過1,800名研發同仁的自述不當作查核日即時人數。只支持中國研發與據點事實，不證明中共持股或全球直接控制。"),
+      source("Research Sites | Pfizer", "https://www.pfizer.com/science/centers", "查核日 2026-09-30", "官方原文：『Each of our R&D centers specializes in a different area of scientific exploration. We have several major campuses located throughout the U.S. and U.K.』支持美國與英國仍有主要研發園區，不能稱輝瑞全球研發都在中國；查核日不是頁面發布日。"),
+    ],
+    aiNotes: "high只指官方中國研發據點事實及明確個人避雷授權，不是全球控制鏈可信度。社群截圖只作線索，不作股權、控制或藥品安全客觀證據，也不保存公開圖副本。制度與政治風險已足以承接personal，不以中共直接控股證據作入庫門檻；中文譯名分歧只作必要實體辨識，不否定核心理由。不外溢股東、資產管理機構、合作企業或其他醫藥品牌；不提供停藥或替藥建議。搜尋只留品牌名稱，country空，理由、國家、研發據點及關係企業不作搜尋鍵。",
+    lastReviewed: "2026-09-30",
+  }),
+  record({
     id: "cosmed-china-origin-oral-care-skus-2026-06-28",
     name: "中國產地口腔清潔 SKU 名單（2026-06-28）",
     aliases: cosmedChinaOriginOralCareSkuAliases20260628,

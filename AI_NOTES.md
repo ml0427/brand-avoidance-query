@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-30｜輝瑞 Pfizer：中國研發營運的制度與政治風險個人避雷
+
+- 主控收尾：完整validator PASS（363筆、12項檢查、20個來源語法檢查，warnings: 0; errors: 0），Node tests 14/14通過。3個品牌正查與4個指定負查通過；主控另核source/generated逐筆一致，新增卡唯一、既有362筆與HEAD完全相同。一輪獨立唯讀審查PASS、無blocker，另核3個正查／17個負查及舊來源內容不變，審查前後diff hash一致。僅提交本輪來源、brands與本地筆記，無關Kevin untracked圖不納入；不改應用程式或版號。
+
+- 新增 `pfizer-china-rd-political-risk-personal-20260930`，品牌「輝瑞 Pfizer」，`personal` / `high`。使用者糾正「只要在中國，哪裡沒有受到中共控制，你在跟我開玩笑嗎」後，主因固定為已確認中國研發營運據點與使用者對中共體制下制度、監管、政治風險的個人判斷；不再以未證中共直接控股否定個人避雷。high只表示官方中國研發據點事實與授權明確，不表示全球控制鏈已證實。
+- 一手佐證沿用主控已讀回的輝瑞中國 `https://pfizer.com.cn/en/science-en/crdc-en/crdc-sh-en`（2005-10-31上海張江研發中心、支援全球研發及武漢Biolake附屬據點），及全球 `https://www.pfizer.com/science/centers`（美國與英國主要研發園區）。兩官頁URL與必要原文存於sources.note；不另製完整HTML或文本證據副本。2026-09-30是查核日，不是頁面發布日；不把中國頁超過1,800名同仁自述當作當日即時人數，也不稱全球研發都在中國。
+- 社群圖只作線索，不採為控制、股權或藥品安全事實，不公開保存圖片。範圍只限輝瑞品牌；不稱中資、中共持股或直接掌控全球，不推全品中國製或疫苗／藥品不安全，不提供停藥／替藥建議，不外溢BlackRock、Blackstone等股東、資管機構或合作企業。譯名分歧只需必要實體辨識，不否定核心理由。
+- 通用SOP：確實在中國營運／研發所生的制度與政治風險，可依使用者明確選擇列personal；中國據點事實與使用者風險判斷分層歸屬，不把避雷需求改成必須證明中共直接控股。搜尋欄只放品牌名稱；aliases為輝瑞製藥／輝瑞／Pfizer，country及identifiers空，地理、理由、研發、醫藥與關係企業不作搜尋鍵。
+- Worker驗證：來源`node --check`與merge通過，357筆source risk records／總數363；app-core正查3筆唯一命中、負向隔離17筆通過，source/generated各唯一且deep-equal，排除新卡後既有362筆與HEAD完全一致、全案無重複ID；`git diff --check`通過。brands.json SHA-256：`3845fe42c33bd2a6f5bc1435af89af23b6332515f3ca02128d5c97daad725154`。依本輪指示不跑完整validator、不stage／commit／push，不改應用程式／版號，Kevin無關untracked圖保留不動。
+
 ## 2026-09-30｜世新校級治理主管：補齊董事長、副校長、學務長與主任秘書
 
 - 使用者追問「決策只需要兩個人而已喔？」後，收錄範圍改為校級治理主管，不把最初兩人當成完整決策名單。共8張獨立本人personal卡：周成虎（董事長）、陳清河（校長）、賴正能（副校長兼教務長）、黃英哲（副校長）、林恒志（副校長）、翁逸泓（學生事務長）、李宗道（總務長）、呂慧芳（主任秘書）。六張補充卡confidence medium，原兩卡high僅表示身分與指定明確，不是參與本案決策的證明。
