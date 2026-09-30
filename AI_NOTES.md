@@ -1,5 +1,24 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-09-30｜世新校級治理主管：補齊董事長、副校長、學務長與主任秘書
+
+- 使用者追問「決策只需要兩個人而已喔？」後，收錄範圍改為校級治理主管，不把最初兩人當成完整決策名單。共8張獨立本人personal卡：周成虎（董事長）、陳清河（校長）、賴正能（副校長兼教務長）、黃英哲（副校長）、林恒志（副校長）、翁逸泓（學生事務長）、李宗道（總務長）、呂慧芳（主任秘書）。六張補充卡confidence medium，原兩卡high僅表示身分與指定明確，不是參與本案決策的證明。
+- 名稱逐人查重無既有卡；新增ID分別為zhou-chenghu、lai-zhengneng、huang-yingzhe、lin-hengzhi、weng-yihong、lu-huifang接`-shu-governance-role-personal-20260930`。全部搜尋只各自姓名，aliases／identifiers／country空，互不作alias；未泛列其他董事、院長、一般承辦人、教師或學生代表。
+- 主控讀回校方現任副校長頁05／06／07、學務長頁、秘書室單位主管頁與董事長頁，逐人確認職務；黃英哲總務長為曾任，現任總務長是李宗道；林恒志不標現任代理校長。官方組織規程第4、5、6、18、19條只支持治理與行政制度，第18條49人校務會議與第19條行政會議不能倒推9/30措施曾上會或任一人親自贊成／核定。
+- 共用前段公告證據與檔案／RGB像素hash，每張人物卡逐筆核對；除角色與使用者個人判斷外，不增寫「打壓、阻擋媒體、違法、永久封校」定論，個人提案、簽核、表決、親自決策都維持未知。
+- 主控完整驗證：validator PASS，362筆、10項檢查、20個來源語法檢查，warnings: 0; errors: 0；Node tests 14/14通過。8個姓名各唯一命中、152個負向隔離檢查通過，source/generated逐人deep-equal，排除新增8筆後原354筆與HEAD完全一致；公告原裁切像素、尺寸、RGB、metadata與兩個SHA-256均核對通過。
+- 一輪獨立唯讀審查PASS、無blocker；另核8個正查與264個負查、既有來源紀錄不變、審查前後diff hash一致。僅提交本輪來源、brands、本地筆記與公告裁切，Kevin無關untracked圖不納入；不改應用程式／版本。
+
+## 2026-09-30｜陳清河、李宗道：依現任主管職務指定的本人個人避雷
+
+- 初輪先核實兩人；後續已在上段補齊8名角色主管，本段保留最初兩卡建立過程，不是全部決策者或最終名單。新增陳清河 `chen-qinghe-shu-campus-governance-personal-20260930` 與李宗道 `li-zongdao-shu-campus-entry-policy-personal-20260930` 各自獨立本人卡，均為 `personal` / `high`。使用者提供總務處身分查驗公告並要求校長等相關主管避雷，核心是使用者不接受此次門禁與治理做法，依現任校長／公告單位主管職務作出個人避開選擇；confidence只指官方現任身分與明確授權，不是本人親自拍板或不當行為的證明。
+- 現職橋接：世新現行校長介紹 `https://www.shu.edu.tw/SHU-Principal-01.aspx` 直接列陳清河；總務處現行總務長 `https://ga.web.shu.edu.tw/%E7%B8%BD%E5%8B%99%E9%95%B7/` 與聯絡我們 `https://ga.web.shu.edu.tw/%E8%81%AF%E7%B5%A1%E6%88%91%E5%80%91/` 均列李宗道；2026-09-10校方新聞 `https://www.shu.edu.tw/Spotlight.aspx?from=06&sID=32783` 交叉確認兩人。不得錯用舊搜尋摘要的黃英哲；初輪兩卡未擴列其他人；後續由主控核實並以各自獨立卡補齊。
+- 證據邊界：公告稱本校非開放性校園、近期校外人士未經確認進校，9月30日星期三11:00至13:00演練供後續規劃，師生APP識別／證件查驗，洽公訪客等依指引身分確認／登記。緯來新聞網2026-09-30 13:38（編輯黃任強）直接記錄校方宣布查驗。沒有本事件具名簽核或會議紀錄，不能認定兩人親自決定、阻擋媒體、打壓學生或法律責任；不能寫成永久封校、禁止所有訪客或已成功排除媒體，亦不綁入系辦縮編、盜版、威脅就業等延伸指控。
+- 搜尋只留兩人各自本名；兩卡aliases／identifiers／country皆空，互不作alias。另一人姓名、世新／世新大學、校長、總務長、總務處、董事、安全、學生、黃英哲、林恒志及事件詞均不得命中目標卡；非搜尋來源中的同列主管不構成共同決策或連坐。
+- 共享已去識別公告 `evidence/user-submissions/2026-09-30-shu-campus-id-check-notice.png`，主控由1290×2796 RGB JPEG座標[85,730,1215,2320]原位裁為1130×1590 RGB PNG，完整公告且無社群／手機UI；metadata僅icc_profile，未拼接或重排像素。檔案SHA-256 `34295a8687cbcc4531ca8818456454726441ab47898dc9f841eb7e454454f6f8`；RGB pixel SHA-256 `024cbd5c55652bbc75115a338c1476ad74c61d01a1819b9f5ccda07b7fefd53c`。同一證據供兩卡使用，來源與產生檔按每卡各一處／共兩處檢查，筆記一處，不用全檔恰一處規則。
+- Worker目標驗證：`node scripts/merge-risk-records.mjs`重生350筆source risk records／總數356；以app-core的normalizeBrandList／filterBrands／getSearchText直接驗證2個姓名各自唯一命中、30個target-ID負向probes全部通過，source/generated各一筆且deep-equal；排除兩筆新卡後，其餘354筆與HEAD的brands逐筆deep-equal。`node --check data/records/public-figures-politics.mjs`與`git diff --check`通過；共享證據尺寸1130×1590、RGB、metadata僅icc_profile及檔案／原生RGB像素hash核對通過。未跑完整validator或Node全案tests，留主控一次執行。
+- 本輪只改來源紀錄、重生brands與本地筆記，沿用主控證據，不改程式／版本；不stage、不commit、不push，不跑完整validator，留主控串行補卡後一次完整驗證與發布。保留阮程昭等所有既有紀錄，無關Kevin untracked證據不動。
+
 ## 2026-09-30｜阮程昭：第三方轉貼留言的先行本人個人避雷
 
 - 新增 `ruan-chengzhao-social-comment-personal-20260930`；`personal` / `low`。使用者明示「就先避雷好嗎 如果不是他 本人會出來澄清」，授權先列阮程昭本人，不因帳號本人尚未直接橋接而延誤。核心理由是使用者不接受轉貼截圖所呈現對女性身體與生育的貶低語氣；原圖放大核對留言為「生過幾個小孩？自然生嗎？生越多越鬆喔。留下手機號碼吧。」不能將使用者的先行避開策略、沒有澄清或第三方指認寫成本人承認或已核實的本人發言。
