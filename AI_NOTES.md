@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-02｜鐵火燒肉：北車餐點異物陳述的最小個人避雷
+
+- 主控完整validator PASS（391筆、11項檢查、20項來源語法檢查，warnings: 0; errors: 0），Node tests 14/14通過；修去『肉烤熟就沒事』的店員歸因（原帖語句來源不明，不移作店員背書）。修句後merge、來源node --check、diffcheck及獨立資料驗證通過：391 IDs唯一、舊390筆不變、source/generated逐欄一致、2正查與10負查通過；證據尺寸RGB／metadata／原生裁切bytes及兩hash通過。最終brands SHA-256 `f251630256a74c66284bff79060712851c55306d2f6b1f3b64c07dd81f640f87`；source SHA-256 `1b44bd07aaa3fb22c80dd388cd2aa5f251791b45a08d1e4034145dba46bde2b8`，下方worker hash為修句前歷史。一輪絕對唯讀審查PASS、無blocker，獨立核391 unique、舊390與HEAD逐筆含順序一致、新卡source/generated等同、2正查10負查、影像目視最小化與原生裁切像素／mode／metadata／兩hash通過；前後diff git hash-object `b7ade945ff279604a39824583878334b36eefaba` 與來源／產生檔／兩張untracked證據hash穩定，Kevin圖未動，index空。
+
+- 新增 `tekka-yakiniku-beiche-food-foreign-object-personal-20261002`，鐵火燒肉 personal／low；aliases僅鉄火燒肉，country／identifiers空。品牌由使用者指認，原帖沒有品牌名、餐盤紅TEKKA僅模糊線索；分店未確認，官頁現名「新光三越北車店」與intro微風舊地址矛盾，2020舊食記／相同handle只橋接品牌與分店歷史，不能據以定本案分店。不擴樂軒、系列其他品牌或所有分店同樣問題。
+- 沿用主控已讀原帖正文與time：2026-10-01T13:10:25.000Z／台灣2026-10-01T21:10:25+08:00；source date是發文日，原作者稱「中秋連假」但實際用餐日期未知。蛞蝓、員工說法、免單與送肉均為原作者陳述，不是店家承認／官方認定。作者後續回覆受登入牆限制，未取得更正或正式店家回應，不說沒有更正／沒有回應。暗色物不可鑑定物種／廣東住血線蟲／感染／違法，圖片文字中的疾病只屬作者疑慮。
+- 複製主控vision已PASS最小裁切至 `evidence/user-submissions/2026-10-02-tekka-food-complaint-crop.png`，不重新製作或保存完整原圖；1290×2796 RGB原圖[0,545,1290,1860]原位裁為1290×1315 RGB，metadata僅icc_profile，照片下緣局部裁切，核心文字與暗色物／餐盤TEKKA保留，無帳號頭像、相對時間、互動數、音訊控制或手機UI。worker核原生裁切像素逐bytes相同。檔案SHA-256 `abf9d659f383141de6cd3adbc1eb99055e04265b33b1b4409d5cab4e26f7a6ae`；RGB pixel SHA-256 `a7b6971bd04e2c3bf09cdc99a6807897602dd31496bed9a0ea3233780600ad5e`。
+- 局部驗證：390→391筆，source risk records 385；391個ID唯一、新卡source/generated各一且deep-equal、validateBrandRecord空錯誤，原390筆全部與HEAD逐筆相同。鐵火燒肉／鉄火燒肉2個正查各唯一，10個target負查（北車、微風、新光三越、樂軒、餐廳、異物、蛞蝓、廣東住血線蟲、Threads、hairq.exe）全部排除；現有substring搜尋使「燒肉」必然命中canonical鐵火燒肉，不能宣稱此泛稱負查通過，未修改搜尋器。source node --check、兩次merge冪等及diffcheck通過；brands SHA-256 `2b943740ecd81d46dbb449d30be1636f3887aa60ee50da98ff64e890893ee034`。scratchmanifest `D:/AI_workspace/.hermes/profiles/amagi-line/cache/scratch/tekka-20261002/manifest.json`。
+- 僅來源、brands、本地筆記、指定最小PNG；未跑完整validator／全案tests，未stage／commit／push，不改應用／版本，Kevin舊untracked證據不動。首次patch因CRLF含換行比對失敗，改用唯一無換行錨點後成功；首次驗證390≠391是插入尚未成功，修正後局部全通過。
+
 ## 2026-10-01｜12名中國國慶相關表態：拆8張本人卡、新增3名、補強黃安
 
 - 主控驗證：完整validator PASS（390筆、11項檢查、20項語法檢查，warnings: 0; errors: 0），12姓名正查與Node tests 14/14通過。主控獨立核12個姓名唯一命中、393個target負查、26個移出aliases及77個保留aliases雙向隔離、source/generated一致，其他舊377筆完全不變。主控修正逐來源note，民視沒有的祝賀逐字原句不掛在民視來源，陳／張分開預告可見內容；朱孝天為夫妻合照附五星旗圖案，非已證與實體旗幟合照。12摘要補明原貼／原影片缺口。修句後merge、source語法、diffcheck與上述獨立資料／查詢驗證再次通過；全量validator/tests為修句前同一批資料檢查，不重跑全案。一輪最終絕對唯讀審查PASS、無blocker，獨立核13張相關卡一致、旧377未變，12正查、132他人隔離、396目標負查、26移出與77保留aliases雙向隔離通過；吳五個舊source及原證據bytes不變、前後快照穩定，審查diff git hash-object `4cefaea06f8de585200c5c21f5c84468e7d7a1ed`。最終brands SHA-256 `fddefdddf2a1afcec97db10c51fc6a24956538201c7eaa8c6057623082833baf`，source SHA-256 `8f7837906ed6736ea0350c0d29acea8646311ad9dacf282fd9e847a8c76b2c79`。下方worker hashes是修句前歷史。主控查詢測試首次把filterBrands第二參數錯傳字串，改為{query}後通過，未改產品搜尋器。
