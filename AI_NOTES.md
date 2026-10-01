@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-01｜12名中國國慶相關表態：拆8張本人卡、新增3名、補強黃安
+
+- 主控驗證：完整validator PASS（390筆、11項檢查、20項語法檢查，warnings: 0; errors: 0），12姓名正查與Node tests 14/14通過。主控獨立核12個姓名唯一命中、393個target負查、26個移出aliases及77個保留aliases雙向隔離、source/generated一致，其他舊377筆完全不變。主控修正逐來源note，民視沒有的祝賀逐字原句不掛在民視來源，陳／張分開預告可見內容；朱孝天為夫妻合照附五星旗圖案，非已證與實體旗幟合照。12摘要補明原貼／原影片缺口。修句後merge、source語法、diffcheck與上述獨立資料／查詢驗證再次通過；全量validator/tests為修句前同一批資料檢查，不重跑全案。一輪最終絕對唯讀審查PASS、無blocker，獨立核13張相關卡一致、旧377未變，12正查、132他人隔離、396目標負查、26移出與77保留aliases雙向隔離通過；吳五個舊source及原證據bytes不變、前後快照穩定，審查diff git hash-object `4cefaea06f8de585200c5c21f5c84468e7d7a1ed`。最終brands SHA-256 `fddefdddf2a1afcec97db10c51fc6a24956538201c7eaa8c6057623082833baf`，source SHA-256 `8f7837906ed6736ea0350c0d29acea8646311ad9dacf282fd9e847a8c76b2c79`。下方worker hashes是修句前歷史。主控查詢測試首次把filterBrands第二參數錯傳字串，改為{query}後通過，未改產品搜尋器。
+
+- 使用者明示「都補阿」，本輪沿用主控已讀的 TVBS、自由娛樂、民視新聞網 2026-10-01 正文，不重跑研究。新增何潤東、劉樂妍、朱孝天三名；劉畊宏、林瑞陽、張庭、汪東城、歐陽娣娣、吳慷仁、陳妍希、張晨光八名從舊共用卡拆成獨立本人 personal／medium，八人的26個原穩定姓名變體全部移走。黃安只補既有 `huang-an-public-figure`，原 confirmed／high、aliases、country 與舊來源保留；今年內容只歸因媒體報導，不當成第一手核實或原 confirmed 的新增升格依據。
+- 共用卡 `taiwan-entertainers-long-term-mainland-china-market` 原ID與剩餘77個aliases保留，不附本輪國慶／個人動作；吳慷仁簽約與「沒戲拍」邊界全移個人卡，原 Threads截圖、Facebook、台視、鏡週刊、NOWnews五個source物件逐欄完整保留。原證據檔不搬動、不改bytes，SHA-256仍為 `71f4a0c4358dad91ddcf0c6ec6438972b9b0da9ee6451b21418f1f2cd3e43c88`。劉畊宏HK01移本人卡；林／張RFA各承接夫婦商業背景，不作罪責證據。兩項2025中央社背景保留共用，拆卡繼承者窄註不證本人逐項發言；王耀慶UDN仍留共用，不扩其他名單成員。
+- 所有今年新增summary、source.note、aiNotes明示「據媒體報導／引述」。林瑞陽／張庭是夫婦共同引述，不稱各自獨立發布同句；歐陽娣娣僅民視具名轉央視貼文，不補原句／原貼時間；劉樂妍不補逐字原句；朱孝天合照不擴家屬。吳慷仁9/30是工作室轉發／發布，不是本人帳號、本人親筆或已證授權。陳妍希是長城宣傳ID引句與預計演唱《我的祖國》；張晨光是廈門ID喊節目名稱「中國夢・家國情」，不挪用陳的「祖國」引句，兩人不稱已完成演出。
+- 微博單篇URL、精確帳號／認證、原貼時戳未取得；張／陳完整宣傳原影片未讀，僅媒體預告。TVBS與自由娛樂文句近，不稱獨立採訪三重確證。民視來源為娛樂中心／彭期正，不誤標三立。personal／medium是使用者政治價值避開，不作罪責、違法、官方認定、自願動機或完整政治信念已證實。11張新本人卡country與identifiers皆空，aliases只原穩定姓名變體（split8）或空（new3）。
+- 真實局部驗證：379→390筆，source risk records 384；新增11張卡＝8拆卡＋3新對象，12名目標正查各唯一命中。13張本輪有關卡（12本人＋旧共用）source/generated各唯一且deep-equal、validateBrandRecord皆空錯誤；390筆全案ID唯一。26個split aliases雙向排除與77個留下aliases排除新11卡通過，528個target-ID負向／他人隔離probes通過；黃安42個基線行為probes一致、不強改舊country。除黃安及舊共用卡外，舊377筆與HEAD逐筆完全相同。
+- source `node --check`、兩次merge與`git diff --check`通過，兩次brands SHA-256均為 `5779efe38fd49db0d795ee0b6fd3fff3454dd15b9fc1efa2d207bb5903d9a2f4`；source SHA-256 `caece522681df9d54ec2f4dd236d8b6436c49fbb2720ff3f9f75f1fa9d1a8719`。HEAD基線與完整query→ID／移除aliases／留下aliases／counts／hashes／執行結果manifest在 `D:/AI_workspace/.hermes/profiles/amagi-line/cache/scratch/national-day-20261001/manifest.json`。
+- 僅改來源、brands、本地筆記，不改app／version、不新增公開圖片，不stage／commit／push，未跑完整validator與全案tests，留主控收尾。無關Kevin untracked原樣保留不碰。
+
 ## 2026-10-01｜七名里長／參選人先行避雷：新增六卡、既有王健陞保留
 
 - 主控收尾：完整validator PASS（379筆、11項檢查、20個來源語法檢查，warnings: 0; errors: 0），7名正查及Node tests 14/14通過。主控核六新增source/generated逐欄一致、既有373筆與HEAD完全相同、3 confirmed/high與3 personal/low數量正確。修正劉進明摘要「圖卡的合併3年」為「早期判決包含行賄部分的合併3年刑度」（圖卡未列刑度）；merge同步後，來源node --check及diffcheck通過，重新核來源／產生檔一致及舊373筆未變。一輪獨立唯讀審查PASS、無blocker，以修正後穩定快照覆核6姓名正查與204目標負查，三低信心卡未升格定罪、王健陞及同名教練名冊未改，僅3指定檔diff、Kevin untracked未動。最終brands SHA-256 `ca25841e7655872653d8abec573c1c2032e559e778c8ae9d842d1d0d3dcb6014`，source SHA-256 `a4264848e7eb0760a450ab35d6fc7d05a012fda219f414ca392b0687c6c6c89e`；下方worker hashes是修句前歷史快照。提交範圍只來源、brands、本地筆記，不改app／版號，不發布多人原圖，不擴侯鳳翔。
