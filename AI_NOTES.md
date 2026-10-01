@@ -1,5 +1,18 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-01｜七名里長／參選人先行避雷：新增六卡、既有王健陞保留
+
+- 主控收尾：完整validator PASS（379筆、11項檢查、20個來源語法檢查，warnings: 0; errors: 0），7名正查及Node tests 14/14通過。主控核六新增source/generated逐欄一致、既有373筆與HEAD完全相同、3 confirmed/high與3 personal/low數量正確。修正劉進明摘要「圖卡的合併3年」為「早期判決包含行賄部分的合併3年刑度」（圖卡未列刑度）；merge同步後，來源node --check及diffcheck通過，重新核來源／產生檔一致及舊373筆未變。一輪獨立唯讀審查PASS、無blocker，以修正後穩定快照覆核6姓名正查與204目標負查，三低信心卡未升格定罪、王健陞及同名教練名冊未改，僅3指定檔diff、Kevin untracked未動。最終brands SHA-256 `ca25841e7655872653d8abec573c1c2032e559e778c8ae9d842d1d0d3dcb6014`，source SHA-256 `a4264848e7eb0760a450ab35d6fc7d05a012fda219f414ca392b0687c6c6c89e`；下方worker hashes是修句前歷史快照。提交範圍只來源、brands、本地筆記，不改app／版號，不發布多人原圖，不擴侯鳳翔。
+
+- 使用者明示「先加入，寧願錯殺不要放過」，本輪串行承接圖中七名本人，不把授權當成七人都有定讞案底。王健陞既有 `wang-jiansheng-wufenli-candidate-sexual-offense-final-conviction` confirmed/high原樣保留、不重複；新增六卡，總數由373至379，source risk records為373。未加入侯鳳翔，不擴家屬、同事、機關、受害者或同名者。
+- 新增confirmed/high三卡：劉進明 `liu-jinming-guangrongli-profit-sexual-offense-final-conviction`（容留性交、猥褻以營利1年定讞；行賄更審無罪確定，不採合併3年／行賄前科）；郭永城 `guo-yongcheng-xiangpoli-sexual-harassment-final-conviction`（性騷擾拘役30日、2026-02-03確定；逾期上訴駁回不是實體二審，跨案80日不是本罪）；陳證閎 `chen-zhenghong-benyangli-stalking-final-conviction`（跟蹤騷擾拘役30日定讞；不把民事3萬元當刑事罰金）。連既有王健陞，本次七名中4張confirmed/high。
+- 新增personal/low三卡：陳秉義 `chen-bingyi-furongli-candidate-user-directed-personal-20261001`、陳翰笙 `chen-hansheng-yiheli-candidate-user-directed-personal-20261001`、謝春敏 `hsieh-chunmin-eluanli-user-directed-personal-20261001`。前二人的參選人與同名刑事被告同一人橋接未完成；謝春敏未獨立閉合完整姓名與遮名裁判，亦未確認定讞，具名媒體明載一審未定讞。三卡摘要開頭、各相關source.note與aiNotes都保留缺口，不把同名被告有罪改寫成參選人已定罪。
+- 可歸屬來源沿用主控已讀ETtoday記者杜冠霖2026-09-25正文 `https://www.ettoday.net/news/20260925/3243828.htm`：屬轉述台灣前進圖鑑，不是獨立查案。其他來源為已讀法院／選委會／區公所／具名媒體URL，逐條記載證據邊界。福榮里不用誤植「芙蓉」；罪名用「容留」，不用「留容」。同名被告原名陳建達／陳國豪不作aliases。既有 `official-coach-roster-personal.mjs` 的陳翰笙同名字串保留不動，未證是同一人，教練人事事實與指控不移入參選人卡。
+- 六新卡搜尋只canonical name；aliases、identifiers、country全空，職稱、里名、罪詞、法院、圖鑑、舊名及另一人都不作搜尋鍵。七名正查通過；陳翰笙額外命中舊教練名冊 `taiwan-sports-ministry-unfit-coaches-official-roster-personal-2026-07-16` 是既有同名字串，不算本輪新增重複，不改舊卡。
+- 證據最小化：不公開保存多人原圖／肖像／刑事指控紅字／性犯罪標題／UI，亦不另製裁切，採可歸屬的媒體與法院URL作最小來源。原始intake JPEG只留本機快取，不入repo；1290×2796 RGB，檔案SHA-256 `4b3e040629a9d8845cccc65c31fdbc0f271244bef50992bed9bc6aa06a463adb`，原生RGB pixel SHA-256 `51914d4c24a53989143184e05975f91b858fcefc7e79a0c6b2fb28201c010a0c`；這只是intake完整性，不是任何人的犯罪確證。
+- 實際目標驗證：source node --check、merge及重跑冪等、git diff --check通過；7張source/generated各唯一且deep-equal，7張validateBrandRecord回傳空錯誤，379筆全案ID無重複；排除新增六卡後既有373筆與HEAD逐筆deep-equal，來源移除插入段後與HEAD相同、教練來源與HEAD相同。7個正查通過；168個新卡target-ID負查全排除，另28個王健陞基線一致性probes通過（舊卡含法院案號identifier，法院查詢本來會命中，依指示原樣保留而非強改成name-only）。首次負查器誤把新卡限制套到王健陞，改為舊卡與HEAD行為比較後通過，不是產品資料修正。
+- brands.json SHA-256 `b6c439c38d6edd8b42d79dcb247b52174f014301bdfc69bc5d7481d250675ca2`；來源 `data/records/judicial-politics-lists.mjs` SHA-256 `7d820c6c1f8b351b663b74fbe029a440a95954f14527d67eb00a9ef396f28c60`。只改來源、brands、本地筆記，不改app／版號；未stage／commit／push、未跑完整validator／全案tests，留主控收尾。無關Kevin untracked證據原樣保留不碰。Git CRLF提示非資料錯誤。
+
 ## 2026-10-01｜日本餐飲圖卡第1級：9品牌獨立個人避雷
 
 - 主控收尾：完整validator PASS（373筆、11項檢查、20個來源語法檢查，warnings: 0; errors: 0），9個指定品牌正查通過，Node tests 14/14通過。主控依預先保存的9品牌清單核新增數／名稱一致、7 medium與2 low、source/generated相等，既有364筆與HEAD完全相同；共享PNG視覺及原生裁切像素、尺寸、RGB、metadata、兩個SHA-256核對通過。一輪獨立唯讀審查PASS、無blocker，另核25正查／189目標負查、舊來源未變及前後diff／證據hash一致。SUKIYA字串既有搜尋亦可命中SUKIYAKI禪院舊卡，不當成本輪重複實體，未改舊卡。僅提交本輪來源、brands、本地筆記與第1級裁切，Kevin無關untracked圖排除，不改應用程式或版本。
