@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-01｜日本餐飲圖卡第1級：9品牌獨立個人避雷
+
+- 主控收尾：完整validator PASS（373筆、11項檢查、20個來源語法檢查，warnings: 0; errors: 0），9個指定品牌正查通過，Node tests 14/14通過。主控依預先保存的9品牌清單核新增數／名稱一致、7 medium與2 low、source/generated相等，既有364筆與HEAD完全相同；共享PNG視覺及原生裁切像素、尺寸、RGB、metadata、兩個SHA-256核對通過。一輪獨立唯讀審查PASS、無blocker，另核25正查／189目標負查、舊來源未變及前後diff／證據hash一致。SUKIYA字串既有搜尋亦可命中SUKIYAKI禪院舊卡，不當成本輪重複實體，未改舊卡。僅提交本輪來源、brands、本地筆記與第1級裁切，Kevin無關untracked圖排除，不改應用程式或版本。
+
+- 使用者明示「把一級加避雷」，新增9張獨立 personal（7張medium；すき家／なか卯2張low）：CoCo壱番屋、松屋、すき家 SUKIYA、なか卯 NAKAU、大戶屋 OOTOYA、やよい軒 YAYOI、Joyfull ジョイフル、串カツ田中、魚民。只第1級，不擴第2／3級或母集團；查重僅既有SUKIYAKI禪院substring誤命中，非本輪實體，不改既有卡。
+- 圖卡稱第1級公司明確承認使用中國產蔬菜，歸屬第三方圖卡；初輪未定位原文；主控研究後已定位DailyShincho 2026-09-29報導（取自《週刊新潮》2026-09-17號），各卡補來源。7品牌有具名中國產蔬菜報導；串カツ田中／魚民稱沒有中國白菜。すき家／なか卯原文僅Zensho部分業態使用，未確認具體品牌／菜單，圖卡仍點名故維持使用者指定personal，但兩卡low，不寫成本品牌承認。企業原始調查回覆／原表仍未取得。不是產地標籤或政府／食品安全危害分級。事實範圍只日本餐飲調查，不稱所有食材中國製、台灣門市同供應、違法或不安全；品牌級個人選擇與客觀供應鏈分層。
+- 主控已讀回YAYOI台灣官網中文正文與同站日文頁，橋接彌生軒／YAYOI彌生軒與やよい軒，僅加入本品牌alias與官方來源，查核日2026-10-01非發布日，不擴台灣其他法人或供應事實。搜尋只各品牌必要名字；country／identifiers空，不含母集團、其他等級、來源／事件／理由詞，CoCo不作裸alias。
+- 共享證據 `evidence/user-submissions/2026-10-01-japan-chain-china-vegetables-tier1.png`：1290×2796 RGB原圖[0,968,1290,1220]原位裁1290×252 RGB，metadata僅icc_profile，保留完整第1級文字及9品牌，未拼接／重畫／改像素，排除第2級與手機／互動UI。檔案SHA-256 `3740c36ca73f602cf81cd8d80915aa97ba5fa492456fcfac48204b489f359cf9`；RGB pixel SHA-256 `6b994d73bf9860395825fed7629918857ca5232c227d5d1a2d022f180071bd82`。9卡逐張共用。
+- Worker目標驗證：來源node --check、merge與git diff --check通過；367筆source risk records／總數373，新增9卡source/generated各唯一且deep-equal，全案無重複ID，既有364筆與HEAD完全一致。25個正查、189個target負查通過，merge重跑冪等，brands SHA-256 `3d2693619c1af9f1a01c6f83aefd0e67d6b5203523247895bef30e7fc8c56e29`。視覺核對證據完整第1級9品牌與分級文字，含圖卡標題，無第2級／手機UI／互動數；原始裁切與PNG原生像素逐bytes相同。僅Git換行提示非資料錯誤。
+- 本輪只來源、brands、本地筆記及裁切證據；不改應用／版本，不stage／commit／push，不跑完整validator或全案tests，留主控收尾；Kevin無關untracked圖不動。
+
 ## 2026-09-30｜晨康 CHENKANG：中國醫材品牌／製造營運背景個人避雷
 
 - 主控收尾：完整validator PASS（364筆、12項檢查、20個來源語法檢查，warnings: 0; errors: 0），Node tests 14/14通過，3個品牌／公司正查與4個指定負查通過。主控核原363筆與HEAD完全一致、新卡唯一；logo視覺確認只有品牌，裁切原生像素、尺寸、RGB、metadata與檔案／像素雜湊符合紀錄。一輪獨立唯讀審查PASS、無blocker，另核5正查／16負查、source/generated一致、舊來源未變，審查前後diff及證據hash一致。提交範圍僅本輪來源、brands、本地筆記與logo PNG，Kevin無關untracked圖排除，不改應用程式或版本。
