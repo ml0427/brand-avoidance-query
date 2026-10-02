@@ -18,6 +18,24 @@
 
 export const records = [
   record({
+    id: "nicky-wu-tiananmen-national-day-personal-20261002",
+    name: "吳奇隆",
+    aliases: ["吳奇隆", "吴奇隆", "Nicky Wu"],
+    identifiers: [],
+    country: "",
+    categories: ["媒體／娛樂／公眾人物"],
+    avoidReasons: ["使用者個人避開", "中國國慶天安門揮旗相關媒體報導", "長期中國市場發展背景"],
+    confidence: "medium",
+    status: "personal",
+    summary: "據自由娛樂 2026-10-02 報導，吳奇隆於前一日（10 月 1 日）到北京天安門廣場揮舞五星旗，祝『國慶節快樂！』。使用者依此公開政治表態相關媒體報導及個人政治價值選擇避開本人；原共用名單中本人的個人避開範圍由本卡承接，長期中國市場發展背景不等於各項政治發言已逐一核實。本輪未直接取得原始微博／抖音單篇、精確帳號、原貼時戳或完整影片；不把第三方評論當成本人原話，不推定國籍、動機、違法或完整政治信念，也不外溢家屬、其他藝人或球團。",
+    sources: [
+      source("自由娛樂 - （獨家）吳奇隆相隔33年再赴天安門高調揮舞五星旗 回台開球恐惹議", "https://ent.ltn.com.tw/news/breakingnews/5592657", "2026-10-02", "娛樂頻道／綜合報導，07:50 發布。正文稱吳奇隆昨（1 日）到北京天安門廣場揮五星旗祝『國慶節快樂！』；照片說明為『吳奇隆到天安門廣場慶祝中國「十一」國慶。（翻攝自微博）』。本卡採媒體歸因，未直接核原社群單篇或完整影片；開球只屬報導預告，不是本卡避雷理由，也不能據此推定球團立場。"),
+      source("使用者截圖內嵌自由娛樂照片與說明（最小裁切）", "evidence/user-submissions/2026-10-02-nicky-wu-tiananmen-crop.png", "查核日 2026-10-02", "只保留截圖內嵌新聞照片與照片說明，排除外層帳號及評論；裁圖本身無發文日期，檔名日期為查核日，不還原原貼時戳。1010×1301 RGB，metadata 僅 icc_profile。SHA-256：64e7e0eb443e0bd421d78d0e844351afe85aaa31afae8ffe85760e6194632ede；RGB pixel SHA-256：f03ce1a86fe98d85bbccde0237bcb564274a9a59af719b6908a4f7e21d384ce9。"),
+    ],
+    aiNotes: "本卡承接吳奇隆／吴奇隆／Nicky Wu 原個人避開範圍，並記錄自由娛樂報導的 2026 中國國慶天安門揮旗事件；personal／medium 不代表第一手社群已核、官方認定或法律定性。原共用卡舊來源與群體背景仍留原卡，不當成本人逐項發言證據。『祖國生日快樂』為外層第三方評論，不歸為本人逐字原話；不補中國國籍、動機、家屬或球團同立場。原微博／抖音單篇、精確帳號、原貼時戳、完整影片未讀；開球預告不是避雷理由、不當成已完成。searchable fields 只放本人三個穩定姓名，媒體、平台、天安門、國慶、五星旗與球團均不作 alias／identifier。",
+    lastReviewed: "2026-10-02",
+  }),
+  record({
     "id": "liu-kenghung-china-national-day-personal-20261001",
     "name": "劉畊宏",
     "aliases": [
@@ -2924,7 +2942,7 @@ export const records = [
   record({
     "id": "taiwan-entertainers-long-term-mainland-china-market",
     "name": "台灣娛樂公眾人物長期中國大陸市場發展名單",
-    "aliases": longTermMainlandChinaEntertainmentAliases.filter((alias) => !["劉畊宏", "刘畊宏", "Will Liu", "林瑞陽", "林瑞阳", "Lin Ruiyang", "張庭", "张庭", "張淑琴", "张淑琴", "Zhang Ting", "汪東城", "汪东城", "Jiro Wang", "歐陽娣娣", "欧阳娣娣", "Didi Ouyang", "吳慷仁", "吴慷仁", "Chris Wu", "陳妍希", "陈妍希", "Michelle Chen", "張晨光", "张晨光", "Zhang Chenguang"].includes(alias)),
+    "aliases": longTermMainlandChinaEntertainmentAliases.filter((alias) => !["劉畊宏", "刘畊宏", "Will Liu", "林瑞陽", "林瑞阳", "Lin Ruiyang", "張庭", "张庭", "張淑琴", "张淑琴", "Zhang Ting", "汪東城", "汪东城", "Jiro Wang", "歐陽娣娣", "欧阳娣娣", "Didi Ouyang", "吳慷仁", "吴慷仁", "Chris Wu", "陳妍希", "陈妍希", "Michelle Chen", "張晨光", "张晨光", "Zhang Chenguang", "吳奇隆", "吴奇隆", "Nicky Wu"].includes(alias)),
     "identifiers": [
         "mainland-china-entertainment-market-list",
         "long-term-mainland-china-market-presence",
@@ -2941,7 +2959,7 @@ export const records = [
     ],
     "confidence": "medium",
     "status": "personal",
-    "summary": "使用者個人避開用的台灣藝人名單；只承接留在 aliases 的其餘人物長期中國市場發展背景，不把市場發展本身寫成親共、中共黨政關聯、違法或制裁事實。已拆出的八名人物改由獨立本人卡承接，不在本共用卡記錄個別事件。",
+    "summary": "使用者個人避開用的台灣藝人名單；只承接留在 aliases 的其餘人物長期中國市場發展背景，不把市場發展本身寫成親共、中共黨政關聯、違法或制裁事實。已拆出的八名人物改由獨立本人卡承接，不在本共用卡記錄個別事件。吳奇隆亦已移出，原本人個人避開範圍由其獨立卡承接。",
     "sources": [
         {
             "title": "中央社 - 台灣藝人近年親中表態一覽",
@@ -2962,7 +2980,7 @@ export const records = [
             "note": "報導王耀慶 2011 年轉往中國大陸發展並多年未在台灣推出影視作品。"
         }
     ],
-    "aiNotes": "此筆保留原 ID 與其餘成員，用於使用者依長期中國市場發展背景選擇個人避開。已拆出劉畊宏、林瑞陽、張庭、汪東城、歐陽娣娣、吳慷仁、陳妍希、張晨光的全部原姓名變體；其個別來源與事件由獨立卡承接，不套用留在共用卡的其他成員。共用中央社來源只作群體背景，聯合報王耀慶来源仍保留；不推定所有成員發表同一言論，不作違法或罪責定論。",
+    "aiNotes": "此筆保留原 ID 與其餘成員，用於使用者依長期中國市場發展背景選擇個人避開。已拆出劉畊宏、林瑞陽、張庭、汪東城、歐陽娣娣、吳慷仁、陳妍希、張晨光的全部原姓名變體；其個別來源與事件由獨立卡承接，不套用留在共用卡的其他成員。共用中央社來源只作群體背景，聯合報王耀慶来源仍保留；不推定所有成員發表同一言論，不作違法或罪責定論。另移出吳奇隆／吴奇隆／Nicky Wu 至獨立本人卡；本卡其餘成員、舊來源與原背景文字保留，不附吳奇隆個別國慶事件。",
     "lastReviewed": "2026-10-01"
 }),
   record({

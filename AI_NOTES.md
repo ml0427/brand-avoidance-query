@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-02｜吳奇隆：天安門國慶揮旗的獨立本人個人避雷
+
+- 主控完整 validator PASS：392筆、11項檢查、20項來源語法檢查、warnings: 0; errors: 0；Node tests 14/14通過。獨立唯讀審查實測內容 probes 全通過：392 IDs唯一、新卡與共用卡source/generated正規化一致、其他舊390筆含順序不變、3姓名唯一正查、19負查、74保留aliases與3移出aliases雙向隔離、12其他人物基線、PNG原生RGB裁切逐bytes／雜湊／metadata與目視最小化通過。首次審查工具預算未完成內容核對，補核後僅後快照程式因Windows反斜線跳脫SyntaxError未執行，不冒稱代理完整PASS；主控以forward-slash路徑完成後快照：brands／source／PNG SHA-256與代理實測相同、HEAD不變、index空、tracked diff僅3預期檔、diffcheck通過，完成收尾gate。brands SHA-256 `9556d4ecb65ce04f022827f82c0512149713dd04b3c05bf6ee02dc1326f9baee`；source SHA-256 `baaa7aa106ed32c3be96dfb144f3b082745a851c0f63dd8fd83c99b7cba9e175`。下方不commit／不完整validator是writer工作界線，不是主控發布狀態。
+
+- 拆出 `nicky-wu-tiananmen-national-day-personal-20261002`，personal／medium；承接共用長期中國市場名單中的本人個人避開範圍，僅移走吳奇隆／吴奇隆／Nicky Wu 三個 aliases，helper 不改，其餘人物、舊來源與原背景文字保留，只附移出說明。新卡 country／identifiers 空，搜尋鍵僅三個穩定姓名，不新增其他人或球團。
+- 沿用主控已讀自由娛樂 2026-10-02 07:50、娛樂頻道／綜合報導 `https://ent.ltn.com.tw/news/breakingnews/5592657`：正文稱昨（1日）到北京天安門廣場揮五星旗祝「國慶節快樂！」，照片說明「吳奇隆到天安門廣場慶祝中國『十一』國慶。（翻攝自微博）」。以媒體報導歸因，不稱第一手已核；原微博／抖音單篇、精確帳號、原貼時戳與完整影片未讀。不把外層 Threads 評論「祖國生日快樂」當本人逐字原話，不補中國國籍、動機、家屬、其他藝人或球團同立場。
+- 主控另已讀 TSNA 吳政紘 LINE TODAY 2026-10-01 `https://today.line.me/tw/v3/article/nXpqq11?referral=TOPIC-BaseballTW`，文稱富邦悍將預計4日邀吳奇隆到新莊開球、原8月8日因雨延賽；最新官方 Facebook 未讀成功，不稱官宣已核或開球已完成。此為預告邊界，不是避雷理由，不添加至卡片 sources、不擴球團。
+- 公開證據僅複製主控 vision 已 PASS 的最小裁圖 `evidence/user-submissions/2026-10-02-nicky-wu-tiananmen-crop.png`：原圖[180,963,1190,2264]原生裁切，1010×1301 RGB，metadata 僅 icc_profile，只保留新聞照片與說明、無外層帳號及評論；裁圖本身無發文日，2026-10-02 是查核日。檔案 SHA-256 `64e7e0eb443e0bd421d78d0e844351afe85aaa31afae8ffe85760e6194632ede`；RGB pixel SHA-256 `f03ce1a86fe98d85bbccde0237bcb564274a9a59af719b6908a4f7e21d384ce9`。
+- 本輪只做局部驗證與 merge，詳細實際結果寫入當前 profile scratch `nicky-wu-20261002/manifest.json`；不重新研究，不跑完整 validator／全案 tests，不 stage／commit／push，不改應用或版號，無關 Kevin 舊 untracked 圖不碰。
+
 ## 2026-10-02｜鐵火燒肉：北車餐點異物陳述的最小個人避雷
 
 - 主控完整validator PASS（391筆、11項檢查、20項來源語法檢查，warnings: 0; errors: 0），Node tests 14/14通過；修去『肉烤熟就沒事』的店員歸因（原帖語句來源不明，不移作店員背書）。修句後merge、來源node --check、diffcheck及獨立資料驗證通過：391 IDs唯一、舊390筆不變、source/generated逐欄一致、2正查與10負查通過；證據尺寸RGB／metadata／原生裁切bytes及兩hash通過。最終brands SHA-256 `f251630256a74c66284bff79060712851c55306d2f6b1f3b64c07dd81f640f87`；source SHA-256 `1b44bd07aaa3fb22c80dd388cd2aa5f251791b45a08d1e4034145dba46bde2b8`，下方worker hash為修句前歷史。一輪絕對唯讀審查PASS、無blocker，獨立核391 unique、舊390與HEAD逐筆含順序一致、新卡source/generated等同、2正查10負查、影像目視最小化與原生裁切像素／mode／metadata／兩hash通過；前後diff git hash-object `b7ade945ff279604a39824583878334b36eefaba` 與來源／產生檔／兩張untracked證據hash穩定，Kevin圖未動，index空。
