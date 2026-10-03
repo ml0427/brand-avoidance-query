@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-03｜逸祥：模仿沈伯洋爭議與本人澄清的最小個人避雷
+
+- 主控完整validator PASS：394筆、11項檢查、20項來源語法檢查、warnings: 0、errors: 0；Node tests 14/14通過。單輪最終絕對唯讀審查PASS、無內容blocker：source/generated原始及正規化一致、394 IDs唯一、舊393筆含順序與HEAD不變、來源移除新增段與HEAD相同、2姓名唯一正查／20負查、澄清與日期歸因、PNG原生RGB像素／bytes／metadata及目視最小化通過。finally前後HEAD、status、兩層diff與148個檔案hash一致，Kevin圖未變；主控發布前核四檔與實測快照相同。審查第三批shell引號錯誤，補呼叫完成實測，超出原定批次／時間上限，不冒稱符合時間預算。下方未完整validator／未commit是writer限制，不是主控發布狀態。
+
+- 新增 `yi-xiang-shen-puma-imitation-personal-20261003`，逸祥 personal／medium；alias僅黃逸祥，country／identifiers空，只收本人，不擴沈伯洋、陳德烈、節目、TVBS、三立或平台。沿用主控完成的跨來源、override、generated與筆記查重及已讀來源，不重新研究、不改helper或override。
+- 三個URL分層：本人Threads澄清否認要醜化、攻擊候選人或替任何人助選／反對任何人，並希望角色模仿不要直接等同個人政治立場；公開profile黃逸祥／「我叫逸祥」只橋接公開姓名、藝名及演藝身分，不是戶籍認證。三立2026-10-02 20:46記載10/1預告、10/2同篇下澄清，只屬媒體日期，不是Facebook機器時間；錄影日未知。本人原貼絕對時間未核，相對15h不回推。
+- 主因為使用者依模仿爭議及本人公開澄清選擇個人避開；不寫「沒有政治立場」、親共、政黨隸屬、蓄意醜化或違法定論。已讀澄清段未見明確道歉字句，不推成從未道歉；網友的「垃圾」「吹捧國民黨」不移作本人言論／事實。
+- 指定最小PNG `evidence/user-submissions/2026-10-03-yixiang-clarification-text-crop.png` 僅「逸祥也透過社群發聲澄清了」，只支持媒體轉述有澄清，不支持原句或裁去的其他內容。原圖[30,554,650,620]原生RGB裁切620×66，metadata僅icc_profile；目視無帳號、UI、人像或罵人標題；原生裁切像素及供給PNG檔案bytes逐一相同。檔案SHA-256 `e22effda98ac6ddfca0b2beb15c6e39ddb146edaa8286213c78cd54c949331c4`；RGB pixel SHA-256 `92dabbd382bd7d2890b90057d6943a74777f912f33e200953c6ff80ea84d4da0`。
+- 實際局部驗證PASS：393→394筆、394 IDs唯一、舊393筆含順序與HEAD逐筆deep-equal、来源移除新增段後與HEAD相同，新卡source/generated各唯一deep-equal、validateBrandRecord空錯誤；逸祥／黃逸祥2正查各唯一，指定20項目標負查全排除；兩次merge冪等、來源node --check、diffcheck通過。brands SHA-256 `95c1272e91b4924720d7a668b827fce9a3ed13de351e4091039ef15b79512fae`。
+- 本輪僅來源、brands、本地筆記及指定PNG；不stage／commit／push，不跑完整validator或全案tests，不改app／version。無關Kevin舊untracked圖保留不動，完整驗證與發布由主控收尾。
+
+
 ## 2026-10-03｜吳東霖：中國市場網球教學推廣線索的最小本人個人避雷
 
 - 主控完整validator PASS：393筆、11項檢查、20项來源語法檢查、warnings: 0; errors: 0；Node tests 14/14通過。單輪最終絕對唯讀審查PASS、無blocker：393 IDs唯一、舊392筆含順序與HEAD不變、來源移除新增段與HEAD相同、新卡source/generated各唯一deep-equal、局部schema、2姓名唯一正查、20目標負查、PNG原生RGBA裁切bytes／模式／metadata／兩hash及目視最小化通過。finally前後HEAD、status、diff與147個檔案hash完全一致，Kevin圖未變，diffcheck通過；主控發布前核reviewed brands/source/notes/PNG快照一致。writer manifest notes hash為補寫前歷史（最後刷新腳本SyntaxError未執行），不當現行依據；本輪審查實測notes SHA-256 `a4d325427d02aa4addc53d5b4c1ba8510321af283eccf02884a1a295a0b3617a` 是追加本段收尾筆記前值。下方未commit／未完整validator為writer工作限制，不是主控發布狀態。

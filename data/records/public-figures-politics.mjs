@@ -18,6 +18,53 @@
 
 export const records = [
   record({
+    "id": "yi-xiang-shen-puma-imitation-personal-20261003",
+    "name": "逸祥",
+    "aliases": [
+        "黃逸祥"
+    ],
+    "identifiers": [],
+    "country": "",
+    "categories": [
+        "媒體娛樂"
+    ],
+    "avoidReasons": [
+        "使用者個人避開"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者依逸祥模仿沈伯洋的爭議及本人公開澄清，選擇個人避開逸祥本人。本人表示沒有要醜化、攻擊任何候選人，也沒有要替任何人助選或反對任何人，並希望不要把節目上的角色模仿直接等同於個人的政治立場。這是使用者的個人判斷，不代表蓄意醜化、親共、政黨隸屬、違法或完整政治信念已獲證實；不外溢其他人物、節目、媒體或平台。",
+    "sources": [
+        {
+            "title": "逸祥本人 Threads 公開澄清",
+            "url": "https://www.threads.com/@yixiang2474/post/Dd_4JA1E7RK",
+            "date": "查核日 2026-10-03",
+            "note": "本人寫道「但我沒有要醜化、攻擊任何候選人，也沒有要替任何人助選或反對任何人。」「但希望大家不要把一段節目上的角色模仿，直接等同於我個人的政治立場。」「如果今天有人覺得不好笑，我接受；如果有人覺得不舒服，我也理解。」只記本人公開說法，不證明其動機或完整政治立場；未核絕對發文時間，不以相對時間回推。"
+        },
+        {
+            "title": "逸祥 Threads 公開個人頁：黃逸祥",
+            "url": "https://www.threads.com/@yixiang2474",
+            "date": "查核日 2026-10-03",
+            "note": "公開個人頁顯示名稱黃逸祥，自介「我叫逸祥」及演藝經歷，只橋接公開姓名、藝名與藝人身分，不是戶籍認證，也不證明爭議主張或政治立場。"
+        },
+        {
+            "title": "三立新聞網 - 模仿沈伯洋被罵爆！逸祥挨轟「醜化」急澄清 網不買單狠嗆：垃圾",
+            "url": "https://www.setn.com/news/1916465",
+            "date": "2026-10-02",
+            "note": "媒體於2026-10-02 20:46發布，記載逸祥模仿沈伯洋引發爭議，稱昨（1）日於Facebook預告、今（2）日於同篇下澄清。前述為媒體記載日期，不是已核Facebook機器時間，錄影日期未知。標題與正文中的負面評語屬網友批評，不歸為本人發言或客觀定論。"
+        },
+        {
+            "title": "使用者截圖媒體轉述澄清文字（最小裁切）",
+            "url": "evidence/user-submissions/2026-10-03-yixiang-clarification-text-crop.png",
+            "date": "查核日 2026-10-03",
+            "note": "裁圖僅見「逸祥也透過社群發聲澄清了」，只支持該媒體轉述有澄清，不證明澄清原句、動機或政治立場。620×66原生RGB，metadata僅icc_profile；無帳號、人物、罵人標題或手機UI。SHA-256：e22effda98ac6ddfca0b2beb15c6e39ddb146edaa8286213c78cd54c949331c4；RGB pixel SHA-256：92dabbd382bd7d2890b90057d6943a74777f912f33e200953c6ff80ea84d4da0。"
+        }
+    ],
+    "aiNotes": "使用者明示「這藝人避雷」，僅收逸祥本人personal／medium。公開profile橋接藝名逸祥與黃逸祥，不稱戶籍認證；搜尋僅兩個穩定姓名，country／identifiers空，不加入帳號、其他人物、節目、媒体、平台、事件或理由詞。本人否認有意醜化、攻擊候選人或助選，希望不要將角色模仿等同個人政治立場；不得改寫為「沒有政治立場」。已讀澄清段未見明確道歉字句，不作其從未道歉的廣義定論。原貼絕對時間、Facebook機器時間及錄影日期未核；新聞發布日期與查核日分開。網友批評不移作本人發言或事實定性。",
+    "lastReviewed": "2026-10-03"
+}),
+
+  record({
     id: "wu-tung-lin-shanghai-coaching-personal-20261003",
     name: "吳東霖",
     aliases: ["吴东霖"],
