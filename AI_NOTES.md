@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-03｜吳東霖：中國市場網球教學推廣線索的最小本人個人避雷
+
+- 主控完整validator PASS：393筆、11項檢查、20项來源語法檢查、warnings: 0; errors: 0；Node tests 14/14通過。單輪最終絕對唯讀審查PASS、無blocker：393 IDs唯一、舊392筆含順序與HEAD不變、來源移除新增段與HEAD相同、新卡source/generated各唯一deep-equal、局部schema、2姓名唯一正查、20目標負查、PNG原生RGBA裁切bytes／模式／metadata／兩hash及目視最小化通過。finally前後HEAD、status、diff與147個檔案hash完全一致，Kevin圖未變，diffcheck通過；主控發布前核reviewed brands/source/notes/PNG快照一致。writer manifest notes hash為補寫前歷史（最後刷新腳本SyntaxError未執行），不當現行依據；本輪審查實測notes SHA-256 `a4d325427d02aa4addc53d5b4c1ba8510321af283eccf02884a1a295a0b3617a` 是追加本段收尾筆記前值。下方未commit／未完整validator為writer工作限制，不是主控發布狀態。
+
+- 新增 `wu-tung-lin-shanghai-coaching-personal-20261003`，吳東霖 personal／low，alias僅吴东霖，country／identifiers空；依使用者明示只收本人，不擴學院、家屬、其他球員或轉貼者。寫前跨來源、override、generated與筆記姓名查重無既有卡，不改helper或override。
+- 沿用主控已讀宣傳：內層署名『乐乐-明熙网球』（連字號），稱『重大喜讯！职业球员吴东霖正式落地大虹桥·明熙网球学院』，列青少年1/2/3梯隊及成人進階球員可接受職業選手面對面指導、對標職業訓練體系，末署『明熙网球学院｜大虹桥』。只採廣告所稱；原公告、帳號官方性、合作真實安排與原時戳未讀，不稱正式聘任或已實際授課。
+- 上海與每小時6500台幣含場地是外層Threads轉貼者說法，未核，不作官價或避雷判定基礎，不把外層文字歸給公開裁圖；理由是使用者依中國市場教學推廣線索選擇本人個人避開，不推親共、國籍、違法或其他人同立場。相對17小時／1分鐘不可回推日期，2026-10-03只是查核日。
+- 沿用主控已讀彰化師大官方 `https://www.ncue.edu.tw/p/406-1000-9826,r93.php?Lang=zh-tw`，標題『賀本校吳東霖同學於112年4月10日榮登為臺灣網球球王』，正文列運動健康研究所學生與ATP164；只橋接歷史人物身分，不證上海合作、現職或現今排名。112/4/10是標題排名基準，頁面發布日未核。
+- 公開只複製主控vision已PASS的內層宣傳最小裁圖 `evidence/user-submissions/2026-10-03-wu-tung-lin-shanghai-coaching-crop.png`；原圖[170,1014,740,1890]原位裁切，570×876原生RGBA，metadata僅icc_profile，無人物照、外層帳號價格或手機UI。檔案SHA-256 `72e276808bb76d687b0b7f07799f2f181b51469e37746266ad8df971215ea554`；RGBA pixel SHA-256 `cdabd4991523b3081d183b2589ed2e789f6fdb9a5490c1a23dd126593e953584`。
+- 實際局部驗證PASS：392→393筆，387筆source risk records，393 IDs唯一；舊392筆含順序與HEAD逐筆deep-equal，來源移除新卡插入段後與HEAD相同。新卡source/generated各唯一且逐欄一致，validateBrandRecord空錯誤；吳東霖／吴东霖2姓名各唯一正查，20項target負查全部排除（學院、上海、中國、網球、球王、ATP、6500、發文者、親共、平台與其他人物等）。PNG原生RGBA裁切bytes及供給裁圖檔案bytes逐一相同，mode／尺寸／metadata／兩hash與source、generated、筆記各一處一致。來源node --check、diffcheck與兩次merge冪等通過；brands SHA-256 `debd8913ebcc0fab6c9d15623e9dc1ba786f296f422f50212edeb01e6da4902f`；source SHA-256 `95dae8c039a1eaad9b6f1dd9e637030266ed243dd2aee9c2e386d402af065a75`。
+- 本輪局部驗證與實際query→IDs／冪等／舊392筆基線／syntax／diffcheck／PNG原生bytes及hash結果存當前profile scratch `wu-tung-lin-20261003/manifest.json`；不重新研究、不跑完整validator／全案tests，不stage／commit／push，不改應用或版號，無關Kevin舊untracked圖不碰。
+
 ## 2026-10-02｜吳奇隆：天安門國慶揮旗的獨立本人個人避雷
 
 - 主控完整 validator PASS：392筆、11項檢查、20項來源語法檢查、warnings: 0; errors: 0；Node tests 14/14通過。獨立唯讀審查實測內容 probes 全通過：392 IDs唯一、新卡與共用卡source/generated正規化一致、其他舊390筆含順序不變、3姓名唯一正查、19負查、74保留aliases與3移出aliases雙向隔離、12其他人物基線、PNG原生RGB裁切逐bytes／雜湊／metadata與目視最小化通過。首次審查工具預算未完成內容核對，補核後僅後快照程式因Windows反斜線跳脫SyntaxError未執行，不冒稱代理完整PASS；主控以forward-slash路徑完成後快照：brands／source／PNG SHA-256與代理實測相同、HEAD不變、index空、tracked diff僅3預期檔、diffcheck通過，完成收尾gate。brands SHA-256 `9556d4ecb65ce04f022827f82c0512149713dd04b3c05bf6ee02dc1326f9baee`；source SHA-256 `baaa7aa106ed32c3be96dfb144f3b082745a851c0f63dd8fd83c99b7cba9e175`。下方不commit／不完整validator是writer工作界線，不是主控發布狀態。
