@@ -1,5 +1,26 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-04｜童儀展：共用卡拆本人、補雞蛋文章審稿角色
+
+- 主控合併收尾：396筆完整validator PASS，13項檢查、20項來源syntax，warnings: 0／errors: 0；14/14 Node tests通過。林玉婷395筆階段獨立審查PASS；童儀展最終獨立核對396唯一ID、原非group393筆含順序不變、林卡與拆卡前快照不變、兩姓名唯一正查、童20項負查、媒體公司雙向隔離、歷史sources與反方聲明、審稿／日期／Q5歸因及finally前後148檔穩定全部通過，但混合parity與硬編碼分類的探針回傳false，未能單獨閉合，故代理未簽整體PASS。主控另以isDeepStrictEqual逐欄及normalizeBrandList實測三卡rawEqual=true、normalizedEqual=true、diffs=[]，確認沒有資料不一致，不修改資料來迎合錯誤分類期待；發布前實核source／brands／notes與代理穩定hash相同、HEAD94ec0a7、index空，完成主控收尾，不冒稱代理已獨立通過未完成項。下方不完整validator／未提交是writer限制。
+
+- 拆出 `tong-yi-chan-foodnext-egg-welfare-personal-20261004`，personal／medium，僅姓名可查，aliases／identifiers／country空。承接原卡已指定的本人個人避開範圍，不限本篇、不是新增避雷人物。舊group ID不變，移出name／alias童儀展，四個媒體公司aliases、域名、country、分類與全部舊sources保留；summary只附拆卡說明，aiNotes修正搜尋鍵。2026-10-04的lastReviewed僅資料整理，不是重查舊關係。
+- 沿用主控已讀精確雞蛋文章，發布2025-11-13；採訪／撰文林玉婷、審稿編輯童儀展。只摘要Q5飼養環境、污染風險與動物福祉論述，使用者因署名審稿角色與動物福祉價值不符選擇本人個人避開；不當成本人親口逐字發言、作者／受訪專家或總編逐字創作，不認定收錢、業配、違法或科學已被官方判錯。新事件只放童本人卡；林玉婷待提交卡字串及全部欄位不變。
+- CTWANT 2021-06-17、關鍵評論網2021-08-05兩項source原物件完整複製供歷史身分／舊個人選擇橋接，保留讀者投書及2021-09-04反方反駁；本輪未重讀，沿用既有已核歷史，非今日再查或現職證據，不擴官方控制／犯罪；司法、平台及其他媒體公司來源不搬動。
+- 局部實測PASS：396筆／396 IDs唯一＝HEAD394＋林新增1＋童拆卡1（非兩新增避雷人）；三卡source/generated各唯一逐欄一致、validateBrandRecord空錯誤。舊393非group逐筆含順序與HEAD不變，林卡與writer起始快照完全不變，來源除group與童新增段外字串不變。兩本人姓名各唯一正查，童卡20項target負查全排除（涵蓋指定15項及歷史機構）；移出童姓名／留下四公司alias與域名雙向隔離通過。兩次merge冪等、來源node --check與git diff --check通過。
+- brands SHA-256 `44361993c8109d10b1804503cdbafb54ce6923662163d11f56071094d4a345c4`；source SHA-256 `2d9b6f68db9c5fd1e593455aa2ff6ca6cf8ce784992af7aba31a81aa36f460fe`。實測query→IDs與基線manifest在當前profile scratch `tong-writer-20261004/manifest.json`。
+- 僅來源、brands、本地筆記；不研究、不完整validator／全案tests、不stage／commit／push、不app／version／helper／override／PNG；Kevin原untracked圖不碰。原定四批後驗證器CRLF邊界擷取失敗，追加一批修正驗證器後通過，不冒稱符合四批上限。首次skill spillover解析截斷、TMPDIR誤指系統Temp與跨碟move失敗，已清除自建Temp副本並改指定profile scratch。
+
+
+
+## 2026-10-04｜林玉婷：雞蛋文章Q5動物福祉價值的本人個人避雷
+
+- 跨來源、override、generated與筆記查重，林玉婷／林郁婷／精確來源編號均無既有命中；新增 `lin-yu-ting-foodnext-egg-welfare-personal-20261004`，personal／medium，只收該文署名作者林玉婷，不擴媒體、受訪專家、其他作者或運動員林郁婷。搜尋只保留本名，aliases／identifiers／country空，無未橋接英文名、帳號或職稱。
+- 沿用主控已讀精確URL `https://www.foodnext.net/news/newsfalse/paper/6591128679`，發布日2025-11-13，署名採訪、撰文為林玉婷；來源note只摘要Q5的飼養環境、污染與福祉說法，不當成本人親口逐字引語、作者專家資格或本專案認可的科學結論。Q5未個別具名專家。
+- 理由僅為使用者認為Q5對活動自由與雞隻福祉的處理不符合其動物福祉價值；不研究或認定作者收錢、業配、利益關係、違法、犯罪或科學內容已被官方判定錯誤。不新增公開图片或合成證據，只保留可歸因URL。
+- 本輪只改来源、brands、本地筆記；不改app／version／helper／override，不stage／commit／push，不跑完整validator／全案tests，留主控收尾；Kevin舊untracked圖不碰。
+- 實際局部驗證PASS：394→395筆，395 IDs唯一，舊394筆含順序與HEAD逐筆deep-equal，來源移除新增段後與HEAD相同；新卡source/generated各唯一且deep-equal，validateBrandRecord空錯誤。姓名原字及前後空白2正向probes各唯一命中（僅1個獨立姓名搜尋鍵，不新增別名）；Q5／放牧／平飼／籠飼／雞蛋／食力／foodNEXT／畜產專家／收錢／業配／動物福祉／林郁婷／奧運／拳擊／記者15項target負查全排除。來源node --check、兩次merge冪等通過，brands SHA-256 `0d64abb28eae14ab22ac05391322fafce649fa8a5a25012ff11d10ac9e738bb8`。
+
 ## 2026-10-03｜逸祥：模仿沈伯洋爭議與本人澄清的最小個人避雷
 
 - 主控完整validator PASS：394筆、11項檢查、20項來源語法檢查、warnings: 0、errors: 0；Node tests 14/14通過。單輪最終絕對唯讀審查PASS、無內容blocker：source/generated原始及正規化一致、394 IDs唯一、舊393筆含順序與HEAD不變、來源移除新增段與HEAD相同、2姓名唯一正查／20負查、澄清與日期歸因、PNG原生RGB像素／bytes／metadata及目視最小化通過。finally前後HEAD、status、兩層diff與148個檔案hash一致，Kevin圖未變；主控發布前核四檔與實測快照相同。審查第三批shell引號錯誤，補呼叫完成實測，超出原定批次／時間上限，不冒稱符合時間預算。下方未完整validator／未commit是writer限制，不是主控發布狀態。
