@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-05｜陳士樺、徐佩雯：截圖指控的疑似待核個人避雷
+
+- 主控完整驗證：399筆validator PASS，13項checks／20項syntax，warnings: 0／errors: 0；Node tests 14/14通過，diffcheck通過。writer實際6 calls／249秒，超原定4批／3分鐘；遇skill spillover JSON截斷後改讀完整檔恢復，無剩餘blocker，不冒稱符合預算。主控後續只釐清兩卡aiNotes搜尋鍵敘述，不新增事實或改查詢欄位；final review PASS：399唯一ID、舊397筆含序不變；两卡raw13欄及normalized16欄逐欄一致，分類policy另驗、3姓名唯一正查／各23負查、疑似與未核歸因／本人界線／收件日界線、兩RGB裁圖原生像素及metadata均通過。finally五個目標檔＋Kevin bytes、HEAD／index／status／tracked diff穩定，發布前主控實核五檔hash及HEAD／index與審查快照相符。review實際5 calls／196秒超原定3批／2分鐘，曾將source.date錯測為纯ISO，按實際收件日標記修正記憶體斷言完成重驗，未改資料；如實記錄預算偏差。下方不完整validator／tests／提交為writer階段限制，不是主控未執行。
+
+- 使用者研究後最新明示「你就加」「用疑似就好」，特定覆蓋本案先前缺原帖不入庫 gate；只准兩位截圖所指本人 `personal`／`low` 疑似待核記錄，不許犯罪定論或 confirmed。本指示只記本地筆記，不改 AGENTS 或全域政策，不外推其他案件。沿用已完成研究，未找到可歸屬原帖、本案可信具名新聞或警政原件；不重研究，不列未直接讀過的官方PDF。
+- 兩卡只歸因於未具名發文者的截圖指控：陳被指教唆帶隊砸車；徐被指教唆毆打，並有搶手機及威脅的敘述，不認定徐本人實際搶手機／威脅。姓名及關係只來自截圖，原作者、身分、日期、影片及司法結果未核；不認定犯罪、起訴、定讞或警方消極，也不由缺證反推虛假／清白。高虹安、施淑婷及警方主張不納卡，不外溢同名者、家人、其他人物或政黨。陳只姓名繁簡可查；徐只本名，無配偶或現任角色搜尋鍵，country／identifiers均空。
+- `evidence/user-submissions/2026-10-05-chen-shih-hua-suspected-allegation-text.png`：原圖[178, 352, 1248, 638]原位1070×286 RGB，無mask，metadata僅icc_profile，原生裁圖pixels相同；SHA-256 `87779cdbb0f8b409c8541ffd03be7309b71fe3815fe3b719e4af073dde762193`；RGB pixel SHA-256 `a7a673624f1bb1b17ee3e795a130442f495d6c4593ac0f28b7a71cd69272036f`。只公開各本人最小可讀指控，不公開原圖、照片、頭像、UI、第三人、另一姓名段或hashtags。source.date「收件日 2026-10-05」不是發文／事件日。
+- `evidence/user-submissions/2026-10-05-hsu-pei-wen-suspected-allegation-text.png`：原圖[178, 644, 1248, 938]原位1070×294 RGB，無mask，metadata僅icc_profile，原生裁圖pixels相同；SHA-256 `2df1438c472d5c4d478324fbe2bbe5e5b5d85c578488cd4f526e35c2969e84e2`；RGB pixel SHA-256 `6fdc04a3948de4171daaeae43b6149fec9e460e45b4e6fb56e8a32d80ca37bf0`。只公開各本人最小可讀指控，不公開原圖、照片、頭像、UI、第三人、另一姓名段或hashtags。source.date「收件日 2026-10-05」不是發文／事件日。
+- 局部實測：399筆／399 IDs唯一，舊397筆含序逐筆不變；2卡source/generated raw及normalized逐欄一致（13欄），分類policy另驗通過；3姓名正查唯一命中，兩卡各23項target負查全排除；2次merge冪等、source語法及git diff --check通過。僅3 data/docs＋2PNG，不研究、不完整validator／全案tests、不stage／commit／push、不改版號／app／helper／override；Kevin舊untracked不碰，完整validator及tests由主控收尾。
+
+
 
 ## 2026-10-05｜鄭方形：兒童影像同意詢問回覆態度的本人個人避雷
 
