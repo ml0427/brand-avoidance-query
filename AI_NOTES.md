@@ -1,5 +1,18 @@
 # AI_NOTES — brand-avoidance-query
 
+
+## 2026-10-05｜鄭方形：兒童影像同意詢問回覆態度的本人個人避雷
+
+- 主控完整收尾：397筆validator PASS，11項檢查／20項syntax、warnings: 0／errors: 0；Node tests 14/14通過。最終單輪獨立唯讀審查PASS、無內容blocker：397 IDs唯一，舊396筆含順序及原來源不變；新卡13欄source/generated逐欄及正規化一致、局部schema空錯誤，2姓名唯一正查與23負查通過；風險優先／同人对稱未知／發文者封鎖說法與日期歸因、兩PNG原生RGB裁切／含端點遮罩重建／metadata／目視最小化通過。finally前後150檔、HEAD、index、status與兩層diff穩定，Kevin未動；主控發布前核五檔與審查快照相符。代理遇一次shell引號錯誤後改記憶體subprocess完成全部斷言與finally，未改資料；超出原定時間預算，不冒稱符合預算。下方不完整validator／未提交為writer階段限制，並非主控收尾狀態；舊writer hash只代表主控補入最新對稱未知措辭前的歷史值。
+
+- 跨source、generated、override及筆記查重無既有；新增 `zheng-fang-xing-child-privacy-reply-personal-20261005`，personal／low，只本人，不擴家屬、園方、孩子、發文者或政黨。搜尋僅鄭方形／郑方形；country／identifiers空，政治／公眾人物只分類，帳號、地區、職稱、理由與犯罪詞不作搜尋鍵。
+- 沿用主控已讀profile與發文者原帖，只橋接公開自介、姓名與帳號；不當正式候選登記、現任議員、黨籍或所有自述已證。原帖主帖時間2026-10-04T11:55:44.000Z／台灣2026-10-04 19:55:44+08:00是發文時間，不是回覆或封鎖發生時間；封鎖僅發文者說法。本人原始回覆permalink及完整上下文未直接讀，不冒稱獨立直接核本人回覆。主因僅使用者不接受截圖呈現的回覆態度；詢問不證無家長同意、侵害或幼童受害。
+- 主控承接使用者最新糾正：個人避雷採具體負面線索優先，不因未定讞或同人缺口替本人排除風險。摘要及aiNotes保留「同名判決與候選人是否同一人尚未確認；未證實是本人，也未證實不是本人」，而非「不是本人／已證無關／清白」；不自行宣告司法有罪，不列未核案號刑度或曾用名。原刑案圖不公開。主控已讀第三方查核站現行條目，其自述暫不收同名判決，只證該站保留身分疑點，不證本人有罪或清白。刑案代理研究完成，起訴原文與後續刑事判決未取得，起訴不當有罪。本卡五sources為profile、發文者原帖、第三方身分限制說明及2PNG，各note只承載各來源實際內容；無罪／有罪皆不由缺證反推。
+- 證據1 `evidence/user-submissions/2026-10-05-zheng-fangxing-consent-question-crop.png`：原圖[229,1705,1115,1850]原位886×145 RGB未遮罩，完整兩行詢問、無帳號／頭像／UI；SHA-256 `5e8694f3511cf1b0b544c734a0f38ebb25cc999c20b99247c7185fcb0a49500b`；RGB pixel SHA-256 `11c16b05b67746107ac33059d02c86b03a33da136bfe795a11b38166a9ed746d`。
+- 證據2 `evidence/user-submissions/2026-10-05-zheng-fangxing-reply-crop.png`：原圖[62,2000,750,2235]原位688×235 RGB，相對[0,0,149,131]／[550,0,688,130]白色遮罩（Pillow含端點），保留完整帳號及回覆，不是未mask無損裁。SHA-256 `d73e7487dced204f69417a5b1ecea0ac68a04bc40804ee901e7b64418b0dccc2`；RGB pixel SHA-256 `97fba160f0acd58a245c85db40bf867771e813679f42aad5a551626673c3040f`。兩PNG metadata僅icc_profile，重建裁切＋遮罩後原生pixels相同；供給與repo bytes相同，不露幼童、網友頭像、手機UI或刑案圖卡。
+- 局部實測PASS：397唯一ID、舊396筆含順序與HEAD不變、來源移除新增段後原bytes不變、新卡source/generated各唯一逐欄一致、local schema空錯誤、2姓名各唯一正查與23項target負查全排除、兩次merge冪等、來源node --check。brands SHA-256 `b5b782ecb836938186ce5ba55646f3b27c9a8eed9c20592a75d9e79977a898e0`；source SHA-256 `765f43b3b9d9329acd0d61e049b6c4c9e327377682af70e0aa9e393e45a82963`。最後finally實核HEAD／index與允許變動範圍及最終hash，diffcheck由同批收尾執行。
+- 僅來源、brands、本地筆記與指定2PNG，不研究、不完整validator／全案tests、不stage／commit／push，不改app／版號／helper／override，Kevin舊untracked不碰。第三批影像重建斷言採錯Pillow矩形端點，第四批改驗供給原遮罩含端點後PASS，不修改供給像素；總4批。
+
 ## 2026-10-04｜童儀展：共用卡拆本人、補雞蛋文章審稿角色
 
 - 主控合併收尾：396筆完整validator PASS，13項檢查、20項來源syntax，warnings: 0／errors: 0；14/14 Node tests通過。林玉婷395筆階段獨立審查PASS；童儀展最終獨立核對396唯一ID、原非group393筆含順序不變、林卡與拆卡前快照不變、兩姓名唯一正查、童20項負查、媒體公司雙向隔離、歷史sources與反方聲明、審稿／日期／Q5歸因及finally前後148檔穩定全部通過，但混合parity與硬編碼分類的探針回傳false，未能單獨閉合，故代理未簽整體PASS。主控另以isDeepStrictEqual逐欄及normalizeBrandList實測三卡rawEqual=true、normalizedEqual=true、diffs=[]，確認沒有資料不一致，不修改資料來迎合錯誤分類期待；發布前實核source／brands／notes與代理穩定hash相同、HEAD94ec0a7、index空，完成主控收尾，不冒稱代理已獨立通過未完成項。下方不完整validator／未提交是writer限制。
