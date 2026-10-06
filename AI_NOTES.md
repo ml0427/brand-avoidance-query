@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-06｜陳宜民：公開減害政策爭議發言的最小本人個人避雷
+
+- 主控完整收尾：單輪獨立驗收 PASS，400筆validator 11項檢查／20項syntax，warnings: 0／errors: 0；Node tests 14/14通過、diffcheck通過。400唯一ID、舊399筆含序不變；新卡raw13欄／normalized16欄及完整記憶體generation parity一致，分類policy另驗；兩姓名唯一正查、15項target負查隔離通過。標題裁圖原生RGB／ICC／檔案及像素hash一致，finally五檔含Kevin與HEAD／index／status／diff穩定；主控發布前另實核五檔hash與review快照吻合，重現400唯一／原399不變／raw parity／2姓名查詢。本段新增僅驗收紀錄，無事實或搜尋鍵變更；以下未fullvalidator／未提交是writer階段限制，最終提交以git歷史為準。writer實際6批／約189秒、reviewer實際6批／約350秒，均超原定預算；review遇Bash引號及切段／JSON省略undefined探針誤判，修scratch驗證碼後通過，沒有改正式資料迎合測試，完整validator／tests各只跑一次。
+
+- 四層查重（source／generated／override／notes）無既有本人，新增 `chen-yi-min-drug-harm-reduction-remarks-personal-20261006`，personal／medium，只本人本次公開公共衛生／減害政策爭議發言，不擴黃晶晶／晶食堂、其他人物、政黨、醫院或媒體。
+- 沿用主控已直接核聯合報 https://udn.com/news/story/124652/9796680 ，2026-10-06 00:00，沈能元／廖靜清／鄭媁，事件10月5日。報導列台灣減害協會創會長、前立委陳宜民，稱沈伯洋把毒品解釋為美沙冬有點硬拗；同段保留他稱國民黨「從來沒有反對減害計畫」。只屬媒體報導，不冒稱親自核完整原節目影音，不改成本人／所有黨員反對減害；不判定蔡英文／沈伯洋主張真偽，不推違法、故意造謠、醫學結論或舊爭議。不採先前錯配／未核URL。
+- 搜尋只陳宜民／陈宜民；country／identifiers空，政治／公眾人物只分類，原因、職稱、其他人、政黨、醫院、媒體和事件詞不作搜尋鍵。
+- 指定PNG `evidence/user-submissions/2026-10-06-chen-yi-min-harm-reduction-headline.png`：1290×2796 RGB原圖[32,550,1245,960]原位裁成1213×410原生RGB，不縮放、不轉色、無mask，metadata僅icc_profile且保留原ICC，原生pixels一致。完整新聞標題，不含日期署名、人像、網站標誌、UI或下方資訊，不公開原圖；source.date「收件日 2026-10-06」不是發文／事件日。SHA-256 `ae88693b09694a0c2eb60648386047cfd07b40810e7199780ec0161b75efd28a`；RGB pixel SHA-256 `5d6423f9ba250bc07edd716d2063fda90b9780fbe16b1be553050dbb43e0061f`。
+- writer局部驗證結果與實際命令、兩姓名正查／15項target負查、399→400舊筆含序基線、新ID與source/generated raw／normalized逐欄一致、local schema、兩次merge冪等／syntax／diffcheck詳存當前profile scratch `chen-yi-min-20261006/writer-report.json`。只來源、brands、本地筆記與指定PNG；未執行完整validator／全案tests，待獨立審查後主控收尾；未stage／commit／push，未發布，不改app／helper／override／version，Kevin舊untracked原樣保留。
+
 ## 2026-10-05｜陳士樺、徐佩雯：截圖指控的疑似待核個人避雷
 
 - 主控完整驗證：399筆validator PASS，13項checks／20項syntax，warnings: 0／errors: 0；Node tests 14/14通過，diffcheck通過。writer實際6 calls／249秒，超原定4批／3分鐘；遇skill spillover JSON截斷後改讀完整檔恢復，無剩餘blocker，不冒稱符合預算。主控後續只釐清兩卡aiNotes搜尋鍵敘述，不新增事實或改查詢欄位；final review PASS：399唯一ID、舊397筆含序不變；两卡raw13欄及normalized16欄逐欄一致，分類policy另驗、3姓名唯一正查／各23負查、疑似與未核歸因／本人界線／收件日界線、兩RGB裁圖原生像素及metadata均通過。finally五個目標檔＋Kevin bytes、HEAD／index／status／tracked diff穩定，發布前主控實核五檔hash及HEAD／index與審查快照相符。review實際5 calls／196秒超原定3批／2分鐘，曾將source.date錯測為纯ISO，按實際收件日標記修正記憶體斷言完成重驗，未改資料；如實記錄預算偏差。下方不完整validator／tests／提交為writer階段限制，不是主控未執行。
