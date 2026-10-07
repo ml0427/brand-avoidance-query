@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-07｜戚冠民：具名兒少案件起訴報導的最小本人個人避雷
+
+- 最終驗收由獨立內容核對＋主控補驗閉合：全量validator 401筆、12項checks／20項syntax、warnings: 0／errors: 0，Node tests實跑14/14通過，兩者各一次。reviewer原報BLOCKED而非PASS：測試解析器只認TAP，漏讀spec reporter「ℹ」摘要；full-array探針將4笔舊來源自有aliases:undefined與JSON省略欄位作物件直接比較，誤報不一致，主控實診斷不是換行問題。只修scratch解析／expected JSON序列化比較，未改正式資料迎合測試；補驗401唯一、全陣列記憶體重建、舊400含序不變、raw／normalized parity及schema、分類政策、姓名唯一／15負查、旧source／notes不變全部通過。獨立來源邊界、原生RGB／ICC／hash／目視與finally穩定快照已通過；主控補驗前後四檔＋Kevin、HEAD／index／status／diff亦穩定。真實報告為scratch `chi-coach-20261007/review-report.json`及`controller-closure-report.json`；不將reviewer原BLOCKED改稱獨立PASS、不重跑全量、不重派第二輪。writer4批約182秒，review4批約179秒但未有首批時鐘，時間/預算不冒稱全面符合。以下未提交為writer階段限制，發布以Git收尾為準。
+
+- 新增 `chi-kuan-min-child-abuse-indictment-personal-20261007`，personal／medium；只本人本案，不擴政黨、學校、家屬或其他人。搜尋只有戚冠民，aliases／identifiers／country空；分類source採司法／公眾人物案件，由既有helper正規化為司法／人物案件，非政治。
+- 沿用主控已browser全文核對兩篇2026-05-14具名媒體：TVBS3204500編輯梁雪婷、壹蘋F7D3533A4910266AA13B1DF2B80FB876記者張欽。指控只據媒體轉述起訴內容；5月報導士檢起訴、移審羈押，不是法院已認定犯罪。精確5月13日起訴僅依TVBS，壹蘋首段今／後段昨天矛盾，不合稱兩篇精確同日。53是整案被害數，不是53人全遭性侵；截至2026-10-07本輪未取得本案司法原件／全文／案號，未確認有罪定讞，不把未取得說成文件不存在；不寫已定讞或刑度，5月來源不能證10月延押2月或認罪，外層政黨掩蓋猜測不作事實。
+- 標題證據 `evidence/user-submissions/2026-10-07-chi-kuan-min-child-abuse-headline.png`：1290×2796原圖[198,2350,1205,2484]原位裁成1007×134原生RGB，不縮放、不轉色、無mask，metadata僅icc_profile且保留原ICC；裁圖只呈新聞標題、無姓名日期完整URL，不證最新程序。排除外層政治猜測、帳號頭像、手機UI及示意圖，不公開原圖；收件日2026-10-07不是發文或事件日。SHA-256 `a4d0abb72538ff8ee257215036543e4d253def47521b12607184511a1eede663`；RGB pixel SHA-256 `a9f7eca23aa8cab1bebd15493a85f69aa6654de580eec6ef9336a18677083a24`。
+- 本輪僅來源、brands、本地筆記與指定PNG；局部真實驗證的命令、401唯一ID、舊400筆含序不變、parity／schema／姓名唯一正查及15項target負查、兩次merge冪等／syntax／diffcheck、四檔最終hash詳存當前profile scratch `chi-coach-20261007/writer-report.json`，各項結果以實際報告為準。不重新研究、不完整validator／全案tests、不stage／commit／push、不改app／helper／version；Kevin舊untracked保留不動，完整驗收留獨立reviewer及主控。
+
 ## 2026-10-06｜陳宜民：公開減害政策爭議發言的最小本人個人避雷
 
 - 主控完整收尾：單輪獨立驗收 PASS，400筆validator 11項檢查／20項syntax，warnings: 0／errors: 0；Node tests 14/14通過、diffcheck通過。400唯一ID、舊399筆含序不變；新卡raw13欄／normalized16欄及完整記憶體generation parity一致，分類policy另驗；兩姓名唯一正查、15項target負查隔離通過。標題裁圖原生RGB／ICC／檔案及像素hash一致，finally五檔含Kevin與HEAD／index／status／diff穩定；主控發布前另實核五檔hash與review快照吻合，重現400唯一／原399不變／raw parity／2姓名查詢。本段新增僅驗收紀錄，無事實或搜尋鍵變更；以下未fullvalidator／未提交是writer階段限制，最終提交以git歷史為準。writer實際6批／約189秒、reviewer實際6批／約350秒，均超原定預算；review遇Bash引號及切段／JSON省略undefined探針誤判，修scratch驗證碼後通過，沒有改正式資料迎合測試，完整validator／tests各只跑一次。
