@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-07｜蘇恆：主辦方公開傳記和平統一立場的本人個人避雷
+
+- 最終驗收為獨立內容核對＋主控補驗閉合：完整validator只跑一次，402筆、12项checks／20项syntax，warnings: 0／errors: 0；Node tests只跑一次，14/14通過，fail／cancelled／skipped／todo均0。402 IDs唯一、舊401筆含序不變、target raw／normalized parity、完整記憶體generation parity、schema、2姓名唯一正查／15負查、來源歸因與本人scope、PNG原生RGB crop／hash／目視、指定來源與筆記插入範圍、finally HEAD／status／index／diff／四檔與Kevin穩定均通過。獨立原結果仍為BLOCKED，唯一未閉合是其他source工作樹raw bytes直接與Git blob相比不同；主控實診斷core.autocrlf=true，13個其他source中5個工作樹CRLF而HEAD blob LF，逐檔僅換行差異且13/13 Git clean-filter hash與HEAD一致，沒有內容改動。只修scratch補驗，不改正式卡、其他來源或換行設定，不重跑全量或另派審查；保留原review-report.json，不冒稱獨立PASS。主控補驗存scratch `su-heng-20261007/controller-crlf-closure.json`。writer約318秒／review約204秒，超原定預算，整案亦未符合15分鐘上限，如實留記。以下未full驗證／未提交是writer階段限制，發布以Git收尾為準。
+
+- 新增 `su-heng-peaceful-unification-personal-20261007`，personal／medium，只本人；主因為使用者依主辦方2023公開傳記所載長期推動兩岸和平統一選擇個人避開，不是違法、官方認定或完整政治信念的定論。來源分類政治／個人避開，由既有helper正規化政治／公眾人物；搜尋僅蘇恆／苏恒，country／identifiers空，不擴野禮、新黨、媒體或其他來賓。
+- 沿用主控已核來源packet：主辦方2023手冊PDF第51頁（印刷49頁）列蘇恆／SU HENG、曾任新黨副秘書長、多年致力兩岸和平統一與創立野禮；僅2023角色，不當現職。2023-06-30是論壇活動日期，不是出版日，PDF出版時間未取得。太報2023-11-09鄭惠元報導僅身分／節目橋接，蔡正元言論不套給本人。
+- 原片唯讀worker兩批檢索未找到匹配字幕的原影片，永久URL／標題／日期／時間碼／發言歸因未核，已停止原片線。本輪未取得原片，不將截圖問句歸本人或完整立場；一國兩制也不採，不採頻道索引或猜男性姓名。兩張使用者截圖只作避雷意圖和查核線索，不當公共證據，不公開原圖、中天或留言者；網友說法、總經理、生日、2018選區均不採。
+- 公開PNG `evidence/public-sources/2026-10-07-su-heng-forum-bio-excerpt.png` 是主辦方2023手冊於2026-10-07渲染的最小文字節錄，不是使用者截圖或本人原片。原PDF SHA-256 `23aff5b74263bcdde035bc76d292874e40e811807db0d7697ddf639f4f818c45`；主控提供原RGB render144dpi，第51頁原位裁[437,451,920,602]成483×151，不縮放、不轉色、不合成、無mask；重開核mode／native pixels一致，原render與裁圖均無ICC。已目視僅英文首段5行，無人像、選區或段落外文字，不移動座標；PNG SHA-256 `c09a4f6a04a649712a64cd6d47999a5ec5d7f67cb8db74332e696f2ec78499e7`，RGB pixel SHA-256 `54611e7dd5ea5cbc9ae6fee3c2eb5ddba773b3c513b044cefed9e442415d30ec`。原render可見metadata dpi=(96.012,96.012)，不以此替代主控提供的144dpi渲染設定；渲染日與活動／出版日分開。
+- writer局部實測：兩次merge冪等；402筆／402唯一ID，原401筆含順序逐筆deep-equal不變；新卡source/generated raw13欄與normalized一致，local schema空錯誤；兩姓名各唯一本人命中，15項target負查均排除此卡；source node --check與git diff --check通過，來源移除新增段後原bytes不變。真實結果、命令與四檔最終hash存當前profile scratch `su-heng-20261007/writer-report.json`；完整驗收留獨立review與主控，沒有執行完整validator／node --test／研究／stage／commit／push，不改app／helper／version／override／其他notes，Kevin既有untracked原圖不動。本段只記writer局部結果，不宣稱完整PASS。實際6批，超4批上限：第四批三引號衝突未執行repo寫入；第五批Node execFileSync git基線超預設buffer而停止於探針；第六批只修scratch探針maxBuffer並接續驗證、筆記與報告，未為迎合測試改正式卡；未有首批時鐘，不冒稱總時間符合約2分鐘。
+
+
 ## 2026-10-07｜戚冠民：具名兒少案件起訴報導的最小本人個人避雷
 
 - 最終驗收由獨立內容核對＋主控補驗閉合：全量validator 401筆、12項checks／20項syntax、warnings: 0／errors: 0，Node tests實跑14/14通過，兩者各一次。reviewer原報BLOCKED而非PASS：測試解析器只認TAP，漏讀spec reporter「ℹ」摘要；full-array探針將4笔舊來源自有aliases:undefined與JSON省略欄位作物件直接比較，誤報不一致，主控實診斷不是換行問題。只修scratch解析／expected JSON序列化比較，未改正式資料迎合測試；補驗401唯一、全陣列記憶體重建、舊400含序不變、raw／normalized parity及schema、分類政策、姓名唯一／15負查、旧source／notes不變全部通過。獨立來源邊界、原生RGB／ICC／hash／目視與finally穩定快照已通過；主控補驗前後四檔＋Kevin、HEAD／index／status／diff亦穩定。真實報告為scratch `chi-coach-20261007/review-report.json`及`controller-closure-report.json`；不將reviewer原BLOCKED改稱獨立PASS、不重跑全量、不重派第二輪。writer4批約182秒，review4批約179秒但未有首批時鐘，時間/預算不冒稱全面符合。以下未提交為writer階段限制，發布以Git收尾為準。
