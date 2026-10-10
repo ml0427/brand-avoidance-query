@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-10｜辣奶火鍋：截圖「台湾省」標題的本人個人避雷
+
+- 主控完整驗證：403筆validator PASS，11項檢查／20項來源語法，warnings: 0／errors: 0；Node tests 14/14通過，fail／cancelled／skipped／todo均0，兩姓名各唯一命中新卡，git diff --check通過。全量validator與tests各只跑一次。獨立覆核已讀diff與目視PNG、確認文字邊界與本人scope，原結論為BLOCKED（scratch覆核程式巢狀字串SyntaxError，非已確認資料缺陷），不改稱獨立PASS；主控以獨立scratch補驗閉合：403唯一ID、旧402含序不變、source/generated raw及normalized parity、完整記憶體generation parity、schema、兩姓名唯一正查與15負查、scope/index/diffcheck、原生RGB裁切／metadata／兩雜湊通過。主控開場與代理五檔hash／HEAD／status／diff相同，finally前後五檔、HEAD、index、status及diff穩定，Kevin未動。補驗存 `lanai-20261010/controller-closure.json`，原獨立快照保留 `review-report.json`；只补scratch，不為迎合測試改正式卡、不重跑全量或重派覆核。本段只追加收尾筆記，不改其他來源／生成／證據；提交與遠端狀態以Git讀回為準。
+
+- 使用者明示「入庫啊」，新增 `lanai-hotpot-taiwan-province-title-personal-20261010`，personal／low，只限截圖所指本人。主因為使用者依影片標題使用「台湾省」稱呼選擇個人避開，不是違法、官方認定或完整政治立場已證。搜尋只有辣奶火鍋／辣奶火锅，country／identifiers空；source分類政治／個人避開，由既有helper正規化，不改helper。
+- 單一使用者截圖可見UP名稱「辣奶火锅」與標題穩定片段「台湾省的新人V想开播」。原影片永久連結、時戳、標題是否本人設定、原始歸屬及YouTube帳號同人橋接未核，不寫成本人親口表態；沒有外部來源、不研究、不捏造URL。收件日2026-10-10不是發文／事件日，相對20小時前不回推；不採外層「放棄台灣市場／紅不起來／底邊」動機與評價，不新增本名、不外溢其他人物、同名店家或平台。
+- 沿用主控製作的PNG `evidence/user-submissions/2026-10-10-lanai-hotpot-bilibili-title-crop.png`：757×711 RGB原圖[79,375,477,470]原位裁成398×95 RGB，metadata空，保留原截圖已有紅圈、標題與帳號，不重畫、不轉色、不縮放、不合成、無mask；重開實核原生pixels一致。檔案SHA-256 `f75cf7803c796ee19d6ad64c027f02c47562ffca827995a0b102e71f021700ec`；RGB pixel SHA-256 `0d3af90e2df8857dcd464eb7682aac9c86b798d9b6c0c2279d7b2d277012589a`。
+- writer局部實測通過：403筆／403唯一ID，舊402筆含順序不變；新卡source/generated raw及normalized一致、local schema空錯誤；兩姓名各唯一本人命中、15項事件／第三人／平台詞target負查排除此卡；兩次merge冪等、source node --check及git diff --check通過，来源除新增段外不變。實際查詢結果與最終三檔hash存當前profile scratch `lanai-20261010/writer-report.json`。本輪只改来源、brands、本地筆記，使用指定已有裁圖、不改其bytes，Kevin既有untracked圖不動；不完整validator／node --test、不stage／commit／push、不改其他source／app／version／README，完整驗收留主控。
+
 ## 2026-10-07｜蘇恆：主辦方公開傳記和平統一立場的本人個人避雷
 
 - 最終驗收為獨立內容核對＋主控補驗閉合：完整validator只跑一次，402筆、12项checks／20项syntax，warnings: 0／errors: 0；Node tests只跑一次，14/14通過，fail／cancelled／skipped／todo均0。402 IDs唯一、舊401筆含序不變、target raw／normalized parity、完整記憶體generation parity、schema、2姓名唯一正查／15負查、來源歸因與本人scope、PNG原生RGB crop／hash／目視、指定來源與筆記插入範圍、finally HEAD／status／index／diff／四檔與Kevin穩定均通過。獨立原結果仍為BLOCKED，唯一未閉合是其他source工作樹raw bytes直接與Git blob相比不同；主控實診斷core.autocrlf=true，13個其他source中5個工作樹CRLF而HEAD blob LF，逐檔僅換行差異且13/13 Git clean-filter hash與HEAD一致，沒有內容改動。只修scratch補驗，不改正式卡、其他來源或換行設定，不重跑全量或另派審查；保留原review-report.json，不冒稱獨立PASS。主控補驗存scratch `su-heng-20261007/controller-crlf-closure.json`。writer約318秒／review約204秒，超原定預算，整案亦未符合15分鐘上限，如實留記。以下未full驗證／未提交是writer階段限制，發布以Git收尾為準。
