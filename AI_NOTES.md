@@ -1,5 +1,13 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-13｜外交部軟體中國來源案：三公司與四人物獨立個人避雷
+
+- 使用者明示「找出報導問題公司加入避雷，然後交保的人也避雷」，未逐名指定；依具名媒體辨識安和科技、坤侑科技、鎰威科技、呂宜坤、江家德、吳聲振、詹仲昕，共7張獨立 personal 卡。前6張medium、詹仲昕low。理由為使用者依本案軟體中國來源透明度、採購與資安風險選擇個人避開，不作客觀有罪判定。三公司只是媒體報導的被搜索／涉嫌對象，不寫公司交保；四人據媒體2026-10-12約談、10-13複訊後交保及限制出境出海，未確認起訴／定罪，不保存交保金額。
+- 沿用實際讀回source-packet正文：TVBS陳冠宇、聯合報張宏業具名角色；鎰威與吳聲振後續維護用TVBS支撐，呂宜坤實際負責人僅依TVBS、不冒稱登記資料已核。公視保存坤侑稱遭廠商隱瞞產品技術來源、將配合調查之回應，保留在坤侑及江卡，僅公司回應，不稱江親口聲明或原件已核。公視／中央社轉述外交部：上網電腦無機敏資訊、連線紀錄无異常，未認定已洩密／入侵／通敵或動機。官方發布原件／起訴書／裁判本輪未取得，不等於不存在。
+- 詹仲昕為TVBS／聯合報字形，壹蘋寫詹種昕；官方姓名正字本輪未取得，採TVBS與聯合報所載的詹仲昕，summary、source.note與aiNotes保留缺口，另一字形不作alias。七卡搜尋只各自canonical，aliases／identifiers／country空，不補法人全稱、英文或網域、不互alias；不擴廣州溢信、IP-guard／ITS、外交部、其他員工或家屬。來源同檔tech-security-services，分類使用既有helper正規化科技／通訊資安與司法／人物案件，不改helper。
+- 完整validator與Node tests各一次通過：410筆、11項檢查／20項來源語法、warnings: 0／errors: 0、exit 0，14/14 tests且fail／cancelled／skipped／todo皆0。單輪獨立覆核的機械、来源歸因、410唯一ID、舊403含序不變、七卡raw／normalized及完整記憶體generation parity、7姓名唯一命中／147項target負查、詹種昕排除與前後156檔／HEAD／index／status／diff穩定均通過；原結論BLOCKED，唯一阻擋是本地筆記誤稱使用者逐名指定。主控依實際指令局部訂正以上兩句，資料／來源／圖片不改，保留原review-report.json結論、不重派審查或重跑全案；主控補驗閉合及發布以實際Git讀回為準。全案超過15分鐘，未宣稱符合預算。父控先前網路已讀與工具行號自述均撤回，不作證；事實基礎為researcher實際HTTP正文packet、主控讀回及實際browser公視全文。
+- writer局部實測：403→410筆、410唯一ID，舊403逐筆含序不變；7卡source/generated raw與normalized一致、local schema空錯誤；7名稱各唯一命中，42項彼此target排除與105項事件詞target負查通過；兩次merge冪等、來源與scratch探針node --check、git diff --check通過。實測命令／query→IDs／manifest與hashes存當前profile scratch mofa-20261013/writer-report.json。只改來源、brands、本地筆記，不新增圖片／公開原圖，Kevin既有untracked PNG不動；不完整validator／node --test，不stage／commit／push，不改app／版本；完整驗收留獨立review與主控。本段只是writer局部結果，非完整驗收PASS。
+
 ## 2026-10-10｜辣奶火鍋：截圖「台湾省」標題的本人個人避雷
 
 - 主控完整驗證：403筆validator PASS，11項檢查／20項來源語法，warnings: 0／errors: 0；Node tests 14/14通過，fail／cancelled／skipped／todo均0，兩姓名各唯一命中新卡，git diff --check通過。全量validator與tests各只跑一次。獨立覆核已讀diff與目視PNG、確認文字邊界與本人scope，原結論為BLOCKED（scratch覆核程式巢狀字串SyntaxError，非已確認資料缺陷），不改稱獨立PASS；主控以獨立scratch補驗閉合：403唯一ID、旧402含序不變、source/generated raw及normalized parity、完整記憶體generation parity、schema、兩姓名唯一正查與15負查、scope/index/diffcheck、原生RGB裁切／metadata／兩雜湊通過。主控開場與代理五檔hash／HEAD／status／diff相同，finally前後五檔、HEAD、index、status及diff穩定，Kevin未動。補驗存 `lanai-20261010/controller-closure.json`，原獨立快照保留 `review-report.json`；只补scratch，不為迎合測試改正式卡、不重跑全量或重派覆核。本段只追加收尾筆記，不改其他來源／生成／證據；提交與遠端狀態以Git讀回為準。
