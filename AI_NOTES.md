@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-14｜林香檸：中國品牌背景與來源透明度的個人避雷
+
+- 收尾：單輪獨立覆核PASS；完整validator及node tests各一次，411筆、10項檢查／20項語法、warnings: 0／errors: 0、14/14 tests。raw／normalized與從HEAD完整記憶體generation parity通過，舊410筆含序不變，繁簡兩項唯一正查與14項target負查通過。審查期間HEAD／index／diff／三檔hash與Kevin圖不變；CRLF初始scratch探針已依clean-filter核對訂正，未改正式資料。主控讀回報告並逐檔比對審查結束hash一致後，只追加本收尾筆記，來源／生成資料不再改；發布以Git遠端讀回為準。全案超過15分鐘，未宣稱符合預算。
+
+- 新增 `lam-heung-ling-china-brand-background-personal-20261014`，personal／medium，只林香檸品牌；主因為中國品牌背景與來源透明度的個人消費選擇。香港01黃文琪2024-04-03採訪（04-04更新）記述赴湛江總部學師、香港自主獨家代理與新Logo；Esquire HK Katie Ho2024-08-21訪問稱品牌來自內地。只沿用source-packet研究者HTTP實取正文與限制；查核日2026-10-14與出版日分開。
+- 小雞上工雇主頁只橋接一中店線索及保存「創立於台香港」原文的平台自述差異，帳號控制與官方授權未核；不新增店法人、不存地址／公司號碼。恒隆商場刊有香港門市，只證商戶listing，不證現場營業或完整店數。保留香港代理的真實角色，不定性假香港、冒牌、詐騙或非法代理；不推台灣授權、全品中國製、股權／國籍、2019成立或海外總部香港。
+- 搜尋只林香檸／林香柠，country／identifiers空；外文名無直接正文支持故省略，不混同LINLEE林里，不納社群handles、店法人、香港／中國等泛詞。圖片僅intake，公開媒體／商場URL已能支撐主因，依證據最小化不公開原圖或另製裁圖，避免外層帳號、評論、地址與路人資料。
+- 本輪只改food來源、brands、本地筆記；不改app／版本／override、不完整validator／node --test、不stage／commit／push。完整驗收留reviewer與主控；局部真實結果、查詢IDs、命令與hashes見當前profile scratch `lamheungling-20261014/writer-report.json`，不將局部檢查稱完整驗收PASS。Kevin既有untracked PNG不動。
+- 局部實測通過：410→411筆／411唯一ID，舊410逐筆含序不變；新卡raw／normalized parity一致，local schema空錯誤；2品牌字形各唯一正查、14項target負查排除此卡；兩次merge冪等、source／scratch探針語法及diffcheck通過。此段只記writer局部結果，不是完整驗收PASS。
+
+
 ## 2026-10-13｜外交部軟體中國來源案：三公司與四人物獨立個人避雷
 
 - 使用者明示「找出報導問題公司加入避雷，然後交保的人也避雷」，未逐名指定；依具名媒體辨識安和科技、坤侑科技、鎰威科技、呂宜坤、江家德、吳聲振、詹仲昕，共7張獨立 personal 卡。前6張medium、詹仲昕low。理由為使用者依本案軟體中國來源透明度、採購與資安風險選擇個人避開，不作客觀有罪判定。三公司只是媒體報導的被搜索／涉嫌對象，不寫公司交保；四人據媒體2026-10-12約談、10-13複訊後交保及限制出境出海，未確認起訴／定罪，不保存交保金額。
