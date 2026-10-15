@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-15｜圤智雨／talk168：本次政治貼文的本人個人避雷
+
+- 收尾：單輪獨立驗收PASS；完整validator及node --test各一次，413筆、11項檢查／20項語法、warnings: 0／errors: 0，14/14 tests且失敗／取消／跳過皆0。413唯一ID、舊412筆含序不變、新卡raw／normalized及全量記憶體generation parity、schema、3唯一正查／25項target負查、三來源與研究正文對位均通過。審查前後156檔hash、HEAD、index、status、diff穩定，Kevin圖未動。主控讀回報告並獨立比對156檔hash與HEAD／diff，再重現413唯一及舊412不變後，只追加本收尾筆記，不改來源／生成資料；發布及遠端狀態以Git讀回為準。完整alias內含persona，既有substring可命中，不宣稱裸persona負查排除；未將其列為裸alias。不冒稱全案符合15分鐘預算。
+
+- 新增 `pu-chih-yu-talk168-political-posts-personal-20261015`，personal／medium，只圤智雨本人。使用者依本次對沈伯洋夜市宣傳的評論及後續藍綠都不投等公開說法選擇本人個人避開，不推沒有政治立場、實際黨派、造謠、收錢、帶風向成立、違法或評論真偽。
+- 寫前完整讀回研究者browser實取正文的source-packet.json及research-report.json，不冒稱writer或主控直接open原帖。profile同頁顯示圤智雨 persona／talk168，只證公開呈現，不猜法定本名或自介資格。正字為圤，不把誤讀姓名列alias。四層source／generated／override／notes共17檔查重無命中。
+- 沈文主帖UTC 2026-10-15T03:03:53.000Z／台北11:03:53，蔣文UTC 06:01:20.000Z／台北14:01:20；均精確permalink主帖機器時間，不用收件日或相對時間回推。保留本人稱看人選、不管藍綠；後發文否認上次投蔣、本次更不投，稱藍綠都不投、曾支持陳水扁市長時期及關注柯p第一任但沒投。不當投票史獨立核實、道歉或撤文。公開未登入僅部分回覆，未見作者回覆不等於從未回應／更正；編輯歷史及原始版本未知。
+- 搜尋僅圤智雨、圤智雨 persona、talk168，country／identifiers空；第三人、平台、地點、職稱、政黨與事件理由不作鍵。不擴qiyedesign、沈、蔣、其他人物、Podcast同伴或平台。公開原帖足以歸因，依證據最小化不新增／裁切／公開三張原圖。
+- 本輪只改來源、brands、本地筆記，不改app／helper／版本／override／README，不跑Tauri；不完整validator／node --test，留獨立reviewer各一次，不stage／commit／push／發布。Kevin既有untracked PNG完全不動。局部實測命令、結果、查詢IDs與最終hash見當前profile scratch `talk168-20261015/writer-report.json`；局部驗證不等於完整驗收。
+
 ## 2026-10-15｜夏林清：受害方保護與公開回應方式的本人個人避雷
 
 - 收尾：單輪獨立覆核PASS；完整validator及node --test各一次，412筆、10項檢查／20項語法、warnings: 0／errors: 0，14/14 tests且無失敗、取消或跳過。新卡raw／normalized及從HEAD完整記憶體generation parity、舊411筆含序不變、412唯一ID、姓名唯一正查及43項target負查均通過；官方來源、有利判決及預告時間邊界亦通過。主控讀回review-report並比對全部156檔hash及HEAD仍與審查結束一致後，只追加本收尾筆記，來源／生成資料不再修改；Kevin既有圖未動。發布與遠端狀態以Git讀回為準，不宣稱全案符合15分鐘預算。
