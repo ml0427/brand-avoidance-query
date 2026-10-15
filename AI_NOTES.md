@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-15｜夏林清：受害方保護與公開回應方式的本人個人避雷
+
+- 收尾：單輪獨立覆核PASS；完整validator及node --test各一次，412筆、10項檢查／20項語法、warnings: 0／errors: 0，14/14 tests且無失敗、取消或跳過。新卡raw／normalized及從HEAD完整記憶體generation parity、舊411筆含序不變、412唯一ID、姓名唯一正查及43項target負查均通過；官方來源、有利判決及預告時間邊界亦通過。主控讀回review-report並比對全部156檔hash及HEAD仍與審查結束一致後，只追加本收尾筆記，來源／生成資料不再修改；Kevin既有圖未動。發布與遠端狀態以Git讀回為準，不宣稱全案符合15分鐘預算。
+
+- 新增 `hsia-lin-ching-victim-response-personal-20261015`，personal／medium，只夏林清本人。使用者依監院2017具名記載的保護輔導不足、公開反擊與責備方式選擇個人避開；只採可歸屬本人行為，不將其他處理者、學校全部缺失歸她負責。行政監察記載不是夏性侵犯罪、刑事案底或吃案成立，不採外層情慾流動、逼道歉與人格診斷等未核強說法。
+- 沿用研究者實取全文source-packet並讀回正文、支持段落與research-report。完整保留2019-04-11北高行107訴401勝訴撤銷（04-12新聞稿），理由含外部壓力、不當考量、未載理由與大學自治，非單純格式；2020-06-04最高行109判312就教育部核准部分上訴駁回，學校停聘通知部分因私法爭議廢棄移送新北地院。本次未查移送後民事結果；所讀是法院新聞稿及2019新聞稿PDF，非完整判決書。不稱2017停聘仍有效、全部撤銷確定、不算勝訴或全部處理行為無問題。
+- 學會官方單篇2026-10-12公告，預定2026-11-15 15:50～17:30與談，夏題目『面對性別治理：輔心事件案外案的公文鬥爭與依法鬥爭』，只作預告背景；不寫已出席／已發表、不將整段介紹歸成夏原話，不外溢其他與談者、主持、主辦或場地。
+- 寫前跨source／generated／override／notes查重0；搜尋只夏林清，繁簡同字不重複，aliases／identifiers／country空，其他人物、職稱、組織、事件及刑案詞不作鍵。圖片僅intake，正文來源充分，依證據最小化不公開原圖或另製裁圖，避免公開第三人與受害方資訊。
+- 局部實測通過：411→412筆、412唯一ID，舊411筆逐筆含序不變；新卡source/generated raw及normalized parity一致、local schema空錯誤；同一本名及前後空白2正查各唯一命中，43項target負查全排除此卡；兩次merge冪等、source語法與diffcheck通過，來源及筆記除插入段外不變。命令stdout、查詢IDs及hashes見當前profile scratch `hsia-lin-ching-20261015/writer-report.json`，這只是writer局部結果，不稱完整驗收PASS。
+- 本輪僅來源、brands、本地筆記；完整validator與Node tests留reviewer各一次，本輪不跑、不stage／commit／push、不發布，不改app／版本／override，Kevin既有untracked PNG不動。
+
 ## 2026-10-14｜林香檸：中國品牌背景與來源透明度的個人避雷
 
 - 收尾：單輪獨立覆核PASS；完整validator及node tests各一次，411筆、10項檢查／20項語法、warnings: 0／errors: 0、14/14 tests。raw／normalized與從HEAD完整記憶體generation parity通過，舊410筆含序不變，繁簡兩項唯一正查與14項target負查通過。審查期間HEAD／index／diff／三檔hash與Kevin圖不變；CRLF初始scratch探針已依clean-filter核對訂正，未改正式資料。主控讀回報告並逐檔比對審查結束hash一致後，只追加本收尾筆記，來源／生成資料不再改；發布以Git遠端讀回為準。全案超過15分鐘，未宣稱符合預算。
