@@ -18,6 +18,40 @@
 
 export const records = [
   record({
+    id: "chao-shih-huang-laure-chao-post-personal-20261017",
+    name: "趙世煌",
+    aliases: ["laure_chao"],
+    identifiers: [],
+    country: "",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "不接受本次公開貼文文字及配圖呈現"],
+    confidence: "medium",
+    status: "personal",
+    summary: "使用者不接受laure_chao公開貼文「小小賴清德拿下」的文字及配圖呈現，選擇個人避開公開顯示名為趙世煌的該帳號所指本人。公開個人頁同頁顯示趙世煌與laure_chao，只作公開名稱與帳號橋接，不是法定姓名認證。原帖公開畫面為靜態照片，可見手指在螢幕人物頭部上下方；不以面孔確認照片人物，也不推論手勢動機。同作者後續另篇以「網軍邏輯」比較幫黃國昌辦喪禮與他人發這句話的不同標準，僅保存其說法，不視為對第三人的指控已證。這是使用者個人價值選擇，不是犯罪、威脅、暴力、違法或黨派認定；只限本人，不擴及職務、機構或其他人。",
+    sources: [
+      {
+        title: "趙世煌公開Threads個人頁",
+        url: "https://www.threads.com/@laure_chao",
+        date: "查核日 2026-10-17",
+        note: "研究者以browser取得個人頁正文，同頁顯示「趙世煌」與「laure_chao」，writer讀回其source-packet正文；僅橋接公開顯示名與帳號，不是法定實名或自介職務認證，不採旁支發文。標題為客觀描述，非聲稱逐字HTML title。"
+      },
+      {
+        title: "laure_chao：小小賴清德拿下",
+        url: "https://www.threads.com/@laure_chao/post/DekIEGAkkH2",
+        date: "2026-10-17",
+        note: "研究者browser實取單篇正文，作者laure_chao、文字「小小賴清德拿下」；機器時間2026-10-16T17:59:38.000Z，換算台北2026-10-17 01:59:38（UTC+08:00），date採台北日期。研究者目視公開畫面一張靜態IMG照片，手指在螢幕人物頭部上下方；不以面孔確認人物、不推動機或法律定性。writer讀回研究packet，不冒稱直接open或自行目視原頁。完整留言受登入提示限制，未取得所有作者回覆。標題為客觀描述。"
+      },
+      {
+        title: "laure_chao：後續公開回應",
+        url: "https://www.threads.com/@laure_chao/post/DelKDuQid2K",
+        date: "2026-10-17",
+        note: "研究者browser實取同作者另篇正文：「網軍邏輯：我們可以幫黃國昌辦喪禮，但是其他人不能發小小賴清德拿下喔！」機器時間2026-10-17T03:36:18.000Z，台北2026-10-17 11:36:18（UTC+08:00）。只保存其對政治表達採不同標準的比較說法，文中對他人的指控不視為已證事件；這是另篇發文，不是原帖reply。不認定為道歉、撤回或完整立場，未遍歷完整回覆與歷史，不宣稱從未更正。writer讀回研究packet；標題為客觀描述。"
+      }
+    ],
+    aiNotes: "依使用者2026-10-17明示避雷授權建立personal／medium最小本人卡；理由只是不接受這則公開貼文文字與配圖呈現，不推犯罪、黨派、動機、威脅、暴力或違法。沿用研究者browser實取三來源並讀回source-packet與research-report，不冒稱writer直接open。公開顯示名非實名認證，不新增職務、年齡或學校背景；不擴及機構及其他人。保留原帖UTC與台北跨日時間及另篇後續比較說法；未取得完整留言或遍歷全部回覆，不認定道歉、撤回或從未更正。搜尋只趙世煌／laure_chao，country／identifiers空；理由、平台、職稱與第三人不作鍵。公開原帖已足夠歸因，證據最小化，不公開三張使用者原圖、不製作裁圖或搬入研究截圖。",
+    lastReviewed: "2026-10-17"
+  }),
+  record({
     id: "lanai-hotpot-taiwan-province-title-personal-20261010",
     name: "辣奶火鍋",
     aliases: ["辣奶火锅"],

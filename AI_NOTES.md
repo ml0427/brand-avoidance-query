@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-17｜趙世煌／laure_chao：本次公開貼文的本人個人避雷
+
+- 收尾：單輪獨立驗收PASS、無blocker；完整validator及node --test各一次，414筆、11項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。414唯一ID、舊413筆含序不變、新卡raw／normalized及完整記憶體generation parity、schema、兩姓名／handle唯一正查及15項target負查、逐來源正文與UTC／台北時間及另篇後續邊界均通過。審查前後155 tracked＋Kevin untracked檔案hash、HEAD／index／status／diff穩定；主控讀回review-report並獨立比對155 tracked及7研究artifacts hash、HEAD及空index一致，再重現414唯一與舊413逐筆含序不變後，只追加本收尾筆記，不改來源／生成資料。三張用戶圖及研究截圖未公開，Kevin未動。提交與遠端結果以Git實際讀回為準；以下未完整驗證／未提交為writer階段限制。
+
+- 使用者明示避雷，新增 `chao-shih-huang-laure-chao-post-personal-20261017`，personal／medium，只公開帳號所指本人。理由為不接受「小小賴清德拿下」文字及配圖呈現，不推犯罪、黨派、動機、威脅、暴力或違法，不擴職務、機構及其他人。
+- writer完整讀回研究者browser實取的source-packet.json與research-report.json，不冒稱直接open。三來源逐一承載公開名／handle橋接、原帖、同作者另篇後續比較說法；公開名不是法定實名或職務認證。原帖UTC 2026-10-16T17:59:38.000Z＝台北2026-10-17 01:59:38，後續UTC 2026-10-17T03:36:18.000Z＝台北11:36:18。後續對他人的指控不當已證事件，不認定道歉、撤回或完整立場；原帖留言受登入限制，未遍歷完整回覆，不稱從未更正。
+- 寫前source／generated／override／notes搜尋趙世煌、赵世煌、laure_chao均無命中。搜尋只趙世煌／laure_chao，country／identifiers空，不新增簡體名、職務、年齡、學校或旁支背景。公開原帖足夠歸因，依證據最小化不公開三張原圖、不製裁圖、不搬研究截圖。
+- 本輪只來源、brands、本地筆記；局部驗證實際commands／outputs、before manifest及最終三檔hash見當前profile scratch `laure-chao-20261017/writer/report.json`。局部結果不等於完整驗收；完整validator與node --test留後續reviewer各一次，本writer不跑、不stage／commit／push／發布，不改app／版本／helper／override／README，Kevin既有untracked PNG保持bytes與untracked不動。
+
 ## 2026-10-15｜圤智雨／talk168：本次政治貼文的本人個人避雷
 
 - 收尾：單輪獨立驗收PASS；完整validator及node --test各一次，413筆、11項檢查／20項語法、warnings: 0／errors: 0，14/14 tests且失敗／取消／跳過皆0。413唯一ID、舊412筆含序不變、新卡raw／normalized及全量記憶體generation parity、schema、3唯一正查／25項target負查、三來源與研究正文對位均通過。審查前後156檔hash、HEAD、index、status、diff穩定，Kevin圖未動。主控讀回報告並獨立比對156檔hash與HEAD／diff，再重現413唯一及舊412不變後，只追加本收尾筆記，不改來源／生成資料；發布及遠端狀態以Git讀回為準。完整alias內含persona，既有substring可命中，不宣稱裸persona負查排除；未將其列為裸alias。不冒稱全案符合15分鐘預算。
