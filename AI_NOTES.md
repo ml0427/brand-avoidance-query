@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-19｜TN flower 臺南花藝花植美學：公開店家帳號回覆的個人避雷
+
+- 收尾：單輪獨立唯讀驗收PASS，無阻擋；完整validator（含target-positive）與node --test各一次，417筆／417唯一ID、舊416筆含序全值不變、11項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。raw／normalized／全量記憶體generation parity、6正查及38項target負查、四來源逐claim／UTC台北時間及抱歉早於第二則的邊界通過；實測canonical與handle內臺南、花藝、花植、美學、flower及Tainan仍會substring命中，不假稱排除。報告為當前profile scratch `tn-flower-20261019/reviewer/review-report.json`；主控讀回並核report SHA、155 tracked＋Kevin及15份既有artifacts hash、HEAD／空index／status／scope穩定後，只追加本收尾筆記，不改來源／生成卡。以下未完整驗證／未提交字樣是writer階段限制；最終提交推送以Git及遠端精確讀回為準。不公開圖片、不查Pages、Kevin保持原bytes及untracked。
+
+- 使用者『ㄅㄧˋㄌㄟˊ』及圖片明示授權，新增 `tn-flower-tainan-florist-personal-20261019`，personal／medium，僅同頁公開店名／tainan_florist帳號，不查經營者本名、稅籍或法律旁支。主因是使用者不接受本次兩則公開回覆的表達，選擇個人消費避開，不自行補動機、黨籍或雙面人定性。
+- writer讀回研究者真browser DOM的profile、兩則原回覆及另串抱歉正文、URL／title／times與packet、report，不冒稱writer或主控直接open。第一則UTC03:28:37／台北11:28:37，第二則UTC04:17:11／台北12:17:11，日期均2026-10-19；原文『我也投給柯文哲』不修成沒，選票僅帳號自述、不獨立認證。拒小草標籤不等於沒有政治立場，不套用該固定規則。
+- 另串抱歉UTC04:14:43／台北12:14:43，針對刪除自己留言，早於第二則，不稱其後更正或政治言論撤回。未登入有限視野不等於從未道歉／澄清。外層雙面人、小草地圖及第三人旁支不採為已證，profile其他政治貼文不加理由；不擴其他人物、候選人、政黨或店家。
+- 寫前source／override／generated／notes四層查重四名稱均0。搜尋只店名、TN flower、tainan_florist，aliases不增大小寫重複，country／identifiers空；理由、情境、人物、政黨、平台及泛詞不另作鍵。canonical內臺南、花藝、花植等substring仍可命中，不宣稱這些負查排除。公開URL足供歸因，不公開原圖或研究圖、不製裁圖。
+- 本輪只來源、brands.json、本地筆記，不改app／helper／README／version，不跑build／Tauri，不stage／commit／push。完整validator與node --test留獨立review各一次，writer局部檢查不稱完整驗收PASS。before tracked＋Kevin hash、舊416筆、查重、實際命令與結果、parity／417唯一／舊416含序／正負查／兩次merge冪等及限制存當前profile scratch `tn-flower-20261019/writer/report.json`；Kevin既有untracked PNG bytes與status保留不動。
+
 ## 2026-10-19｜高至成：官方兒童傷害致死有罪確定的本人個人避雷
 
 - 收尾：單輪獨立唯讀驗收PASS，無阻擋；完整validator及node --test各一次，416筆／416唯一ID、舊415筆全值含序不變、10項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。raw／normalized／全量記憶體generation parity、2正查唯一命中及31項target負查、六份正文逐claim與刑度衝突／日期／確定範圍／歷史管束／媒體身分橋接邊界通過。報告為當前profile scratch `kao-chih-cheng-20261019/reviewer/review-report.json`；主控核其自hash、54份既有artifacts及155 tracked＋Kevin bytes、HEAD／空index／status／scope穩定後，只依非阻擋提醒將aiNotes「明示授權」改成持續避雷對話圖片intake及獨立來源，重生生成檔並做決定性局部覆驗，不另跑第二輪review。以下未完整驗收／未提交字樣是writer階段限制，不代表收尾狀態；最終提交及推送以Git與遠端讀回為準。只三檔、不公開圖片、Kevin保持untracked。

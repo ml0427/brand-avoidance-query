@@ -18,6 +18,48 @@
 
 export const records = [
   record({
+    id: "tn-flower-tainan-florist-personal-20261019",
+    name: "TN flower 臺南花藝花植美學",
+    aliases: ["TN flower", "tainan_florist"],
+    identifiers: [],
+    country: "",
+    categories: ["餐飲／生活服務"],
+    avoidReasons: ["使用者個人避開", "使用者不接受該公開店家帳號本次回覆的表達，選擇個人消費避開"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者不接受公開店家帳號 tainan_florist 本次回覆的表達，選擇將『TN flower 臺南花藝花植美學』列為個人消費避開。該帳號於2026-10-19台北時間11:28:37回覆『你自己開心就好⋯但不要說我是小草。我不是』，12:17:11另回覆『我本來就不是，我沒投給民眾黨。我也投給柯文哲』；後句保留原文『我也投給』，選票敘述只是帳號自述，未獨立核實實際投票或黨籍。拒絕小草標籤不等於自稱沒有政治立場，不推定隱藏立場、動機、雙面人或違法。另串12:14:43可見該帳號就刪除自己留言表示抱歉；時間早於第二則，不能當成第二則的後續更正或政治言論撤回。公開未登入視野有限，未遍歷全部回覆、刪文或編輯歷史，不稱從未道歉、澄清或更正。範圍只限同頁店名及handle對應的公開店家帳號，不認證經營者本名或法律登記，不擴其他人物、候選人、政黨、留言者或其他店家。",
+    sources: [
+      source(
+        "Threads－TN flower 臺南花藝花植美學公開 profile",
+        "https://www.threads.com/@tainan_florist",
+        "查核日 2026-10-19",
+        "研究者實際browser DOM正文同頁並列『TN flower 臺南花藝花植美學』與tainan_florist，並自述花店日常；只橋接公開店家帳號呈現，不證法定本名、商業登記或帳號控制者身分。此頁其他政治貼文不納入本次避雷理由。",
+      ),
+      source(
+        "Threads－tainan_florist：拒絕小草標籤的原回覆",
+        "https://www.threads.com/@tainan_florist/post/DeqSxGXmhi4",
+        "2026-10-19 11:28:37（UTC+8）；UTC 2026-10-19T03:28:37.000Z",
+        "研究者實際browser DOM正文可見該帳號回覆『你自己開心就好⋯但不要說我是小草。我不是』，同一permalink的time元素給出發布時間。僅支持此公開回覆，不把拒絕標籤改寫為沒有政治立場，也不採外層留言者指控。",
+      ),
+      source(
+        "Threads－tainan_florist：選票自述原回覆",
+        "https://www.threads.com/@tainan_florist/post/DeqYU6ZGlnY",
+        "2026-10-19 12:17:11（UTC+8）；UTC 2026-10-19T04:17:11.000Z",
+        "研究者實際browser DOM正文可見『我本來就不是，我沒投給民眾黨。我也投給柯文哲』，同一permalink的time元素給出發布時間。原文確為『我也投給』，不修成『我沒投給』；只記帳號自述，不認證實際選票、黨籍或完整政治信念。",
+      ),
+      source(
+        "Threads－tainan_florist：另串就刪除自己留言表示抱歉",
+        "https://www.threads.com/@tainan_florist/post/DeqYC0_mgDY",
+        "2026-10-19 12:14:43（UTC+8）；UTC 2026-10-19T04:14:43.000Z",
+        "研究者實際browser DOM正文可見該帳號稱刪除後無法恢復，並說『好吧我跟市長妹妹抱歉。對不起我不應該把我自己留言刪了！！』。只記可見抱歉與其所述刪留言，不確認刪除內容或第三人身分；時間早於第二則選票自述，不是其後續更正或政治言論撤回。有限未登入視野不等於從未另有道歉、澄清或更正。",
+      ),
+    ],
+    aiNotes:
+      "使用者以『ㄅㄧˋㄌㄟˊ』及圖片明示授權，僅建立店家／公開帳號personal、medium卡。writer讀回研究者真實browser DOM四份正文與對應URL、title及time，沿用source-packet，不冒稱writer或主控直接open。主因是使用者不接受本次兩則公開回覆的表達；來源自述與個人選擇分層，不套用沒有政治立場固定規則、不評判實際選票或黨籍。另串抱歉早於第二則，僅針對刪除自己留言；不當撤回或從未澄清。外層雙面人、小草地圖及所有第三人旁支不當已證，不擴其他人或政黨責任。搜尋僅店名、TN flower與tainan_florist；country、identifiers空，不加大小寫重複alias、理由、情境、政黨、人物、平台或裸泛詞。canonical內既有臺南／花藝／花植等子字串仍會按既有substring搜尋命中，不宣稱可排除這些字串。不公開使用者原圖或研究截圖，不查本名、稅籍及法律旁支。",
+    lastReviewed: "2026-10-19",
+  }),
+  record({
     id: "cha-shan-xiao-liuzhangli-parking-retaliation-claims-personal-20260915",
     name: "茶山小（台北六張犁）",
     aliases: ["茶山小"],
