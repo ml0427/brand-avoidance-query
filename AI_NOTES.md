@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-19｜桃園六位列名對象：五位新增與簡士強拆出獨立個人卡
+
+- 收尾：單輪獨立唯讀驗收PASS、無阻擋；完整validator含六姓名expect及target-positive與node --test各一次，423筆／423唯一ID、12項檢查／20項語法、warnings: 0／errors: 0、14/14 tests，無失敗／取消／跳過。舊其餘416筆全值含序不變、raw／normalized／全量記憶體generation parity、12正查／34交叉隔離／162項target負查及來源逐claim通過。簡專屬爭議與來源已離開共用卡、其他四人保留，另五位不承擔簡發言。主控讀回當前profile scratch si-kuang-yang-village-roster-20261019/reviewer/review-report.json，核155 tracked、Kevin原bytes與untracked、44份既有artifacts、HEAD／空index／status／diff hash與review結束一致後，只追加本收尾筆記，不改來源或生成資料。研究與審查各只對其實取／讀回範圍負責，不宣稱全案符合15分鐘；以下未完整驗收／未提交是writer階段限制，最終提交推送與遠端精確內容以Git讀回為準。僅三檔，不公開圖片、不查Pages。
+
+- 使用者「這群避雷」是類別授權，六姓名歸因圖片文字與hmmmmm8891原帖，不稱逐名口頭指定。簡士強、張玉華、鄭西元、衛佳文、蕭愛圓、丁柔淳各自獨立personal；簡medium僅具名媒體窄幅報導，另五low，摘要開頭明示「原帖列名與使用者個人避開；支持／出席尚未獨立核實」。不採「挺霸凌」與辱詞為事實，不認臉或推照片活動日期、出席、共同立場，不擴新增留言人物。
+- writer讀回研究者實取的原帖browser DOM、新頭殼browser DOM、三立fresh-media-2.txt主文道歉全文及官方packet，並實際解析官方HTML六列；非writer或主控直接open原頁。原帖時間2026-10-18T13:53:47Z／台北21:53:47；未完整遍歷回覆，不稱從未澄清。公所頁title「桃園市桃園區公所-聯絡資訊」，第3屆里長表更新2022-12-29，只橋接里別姓名，未獨立核2026異動；2022候選登記不是當選／現職證明，本輪不另列公開來源。
+- 新頭殼詹家威2026-07-08 07:08主要轉述張育萌對簡士強聲援與回嗆的批評，未直接取得Facebook原留言或錄音；時區未標不硬轉UTC。三立陳又瑞同日17:16／18:11更新刊道歉全文，保留致歉、反省與接受批評；家屬遭攻擊僅聲明主張，機器+00:00衝突不硬轉精確UTC。簡本人專屬發言不套另五人，不認定犯罪或性騷擾。
+- 簡士強承接舊共用卡個人理由及專屬「簡士強社群留言畫面」來源；舊ID taoyuan-local-figures-si-guangyang-support-screenshot-personal保留，只剩簡郁陞、劉宗樺、李珮瑜、王秀璞，移除簡姓名、專屬來源及爭議註記，不重新調查其他四人。佀廣洋既有卡原值保留。實際是五名新人物＋一既有成員拆卡，417→423筆，不報六名新增人物。
+- 寫前source／override／generated／notes逐名查重：簡只在共用卡與歷史筆記，其餘五無既有。六卡canonical純姓名，aliases／identifiers／country空，不納職稱、里別、第三人或事件詞。僅來源、brands.json、本筆記，不公開原圖／研究圖／HTML，不改app／helper／README／版本，不build／Tauri，不stage／commit／push；Kevin既有untracked PNG原bytes與狀態保留。
+- writer局部實測通過：兩次merge冪等、423唯一ID、舊其餘416筆全值含序不變、六卡raw／normalized及全量記憶體generation parity／局部schema、12姓名含空白唯一正查、34彼此及舊四人雙向排除、162項target負查、來源與scratch探針syntax及git diff --check。before tracked原bytes／HEAD／index及Kevin保護、舊JSON、查重、實際命令stdout與最終hash存當前profile scratch si-kuang-yang-village-roster-20261019/writer/。完整validator及node --test留單輪獨立review各一次；本局部結果不是完整驗收PASS。
+
+
 ## 2026-10-19｜TN flower 臺南花藝花植美學：公開店家帳號回覆的個人避雷
 
 - 收尾：單輪獨立唯讀驗收PASS，無阻擋；完整validator（含target-positive）與node --test各一次，417筆／417唯一ID、舊416筆含序全值不變、11項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。raw／normalized／全量記憶體generation parity、6正查及38項target負查、四來源逐claim／UTC台北時間及抱歉早於第二則的邊界通過；實測canonical與handle內臺南、花藝、花植、美學、flower及Tainan仍會substring命中，不假稱排除。報告為當前profile scratch `tn-flower-20261019/reviewer/review-report.json`；主控讀回並核report SHA、155 tracked＋Kevin及15份既有artifacts hash、HEAD／空index／status／scope穩定後，只追加本收尾筆記，不改來源／生成卡。以下未完整驗證／未提交字樣是writer階段限制；最終提交推送以Git及遠端精確讀回為準。不公開圖片、不查Pages、Kevin保持原bytes及untracked。
