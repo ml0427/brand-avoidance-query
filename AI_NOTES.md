@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-19｜高至成：官方兒童傷害致死有罪確定的本人個人避雷
+
+- 收尾：單輪獨立唯讀驗收PASS，無阻擋；完整validator及node --test各一次，416筆／416唯一ID、舊415筆全值含序不變、10項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。raw／normalized／全量記憶體generation parity、2正查唯一命中及31項target負查、六份正文逐claim與刑度衝突／日期／確定範圍／歷史管束／媒體身分橋接邊界通過。報告為當前profile scratch `kao-chih-cheng-20261019/reviewer/review-report.json`；主控核其自hash、54份既有artifacts及155 tracked＋Kevin bytes、HEAD／空index／status／scope穩定後，只依非阻擋提醒將aiNotes「明示授權」改成持續避雷對話圖片intake及獨立來源，重生生成檔並做決定性局部覆驗，不另跑第二輪review。以下未完整驗收／未提交字樣是writer階段限制，不代表收尾狀態；最終提交及推送以Git與遠端讀回為準。只三檔、不公開圖片、Kevin保持untracked。
+
+- 新增 `kao-chih-cheng-personal-20261019`，personal／high，只限高至成本人；主摘要置首官方已確認有罪確定、成年人故意對兒童犯傷害致人於死罪及7年6月，使用者依此個人避開。high不消除刑度文書衝突，不推殺人罪、黨籍、候選資格或家屬責任。
+- writer讀回研究者真實browser DOM實取的六份正文、source-packet.json與research-report.json；不是writer或主控直接open。四官方文書當事人欄明文高至成；聯合報郭韋綺2026-10-16與知新聞王勇超2026-10-15橋接宣布參選鼎西里與2014年本案，不靠同名或人臉。僅媒體參選消息，官方候選登記／資格／黨籍未核。
+- 高雄地院104訴639於2016-12-29主文7年6月，高雄高分院106上訴236於2017-09-06駁回並記7年6月；最高法院107台上2107於2018-06-28主文駁回，但理由一轉述7年2月，與其餘官方文書衝突。2023-03-29高分院112聲保55明載7年6月經二三審駁回確定後移送執行並裁定假釋付保護管束。未取得更正裁定，不稱改判或擅當筆誤；精確判決確定日未取得，不以2018-07-02正本證明日或2023裁定日替代。未核目前管束狀態或服刑完畢，不稱2026仍管束。知新聞導言2018事件、三審7月與官方不同，採官方2014-07-08事件及2018-06-28判決日。無殺人故意，不是殺人罪定讞。
+- 寫前source／override／generated／notes查重無命中。搜尋僅高至成，aliases／identifiers／country空；情境、指控、家屬、地方、黨籍不作鍵，不外溢父親、其他人或居民。不公開原圖、研究圖或HTML，不納被害人姓名、和解金、政治立場或不必要旁支。
+- 本輪僅來源、brands.json、本地筆記；不stage／commit／push，不改app／helper／README／version，不跑build／Tauri。完整validator及node --test留獨立review各一次；writer只做局部檢查，不宣稱完整驗收PASS。before tracked＋Kevin hash、舊415筆快照、查重、精確命令結果、parity／唯一ID／舊筆含序／正負查及兩次merge冪等與限制存當前profile scratch `kao-chih-cheng-20261019/writer/report.json`；Kevin既有untracked PNG保持bytes與status不動。
+
 ## 2026-10-19｜林忠裕／isaac.llin：使用者指定姓名先行收錄，同人未驗證
 
 - 初版僅帳號是主控自行縮限，不是使用者指定。使用者得知身分缺口後明示「你就納入姓名，備註寫好沒驗證過就好了」；本案依此納入林忠裕及isaac.llin，沿用ID `isaac-llin-reply-personal-20261019`，改為personal／low。摘要開頭與來源／AI註記明示姓名與帳號是否同人尚未驗證、未證實是亦未證實不是；姓名只是第三人指認，不能把帳號發言當具名人物已確認行為。不擴任職單位或同名者，不認定已報案、提告、有罪或黨派。
