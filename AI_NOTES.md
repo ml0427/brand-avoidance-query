@@ -1,5 +1,12 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-19｜林忠裕／isaac.llin：使用者指定姓名先行收錄，同人未驗證
+
+- 初版僅帳號是主控自行縮限，不是使用者指定。使用者得知身分缺口後明示「你就納入姓名，備註寫好沒驗證過就好了」；本案依此納入林忠裕及isaac.llin，沿用ID `isaac-llin-reply-personal-20261019`，改為personal／low。摘要開頭與來源／AI註記明示姓名與帳號是否同人尚未驗證、未證實是亦未證實不是；姓名只是第三人指認，不能把帳號發言當具名人物已確認行為。不擴任職單位或同名者，不認定已報案、提告、有罪或黨派。
+- writer及主控讀回isaac-research以browser DOM實取的source-packet.json及research-report.json；公開卡採profile、精確reply與外層指認三來源，分別支持帳號識別、原回覆與第三人姓名指認，不冒稱主控直接open。reply UTC 2026-10-18T17:43:02.000Z＝台北2026-10-19 01:43:02；外層指認UTC 2026-10-18T21:19:43.000Z＝台北05:19:43。外層曾編輯，原始版本及改動時間未核、附件未作橋接；有限上下文不等於完整遍歷，不稱從未道歉或更正。不採主控先前未交付的工具成功／失敗敘述。
+- 原研究四層查重林忠裕及isaac.llin均0；初版writer對handle四層17檔亦0。修訂姓名為林忠裕、alias為isaac.llin，identifiers／country空；兩項均須唯一命中新卡。原15項負查移除使用者指定姓名，保留14項target負查。原回覆歸屬已核、姓名同人未核，按使用者知情指示先記，不重新要求相同缺件；不改專案預設gate。不公開原圖、不製圖、不搬研究截圖。
+- 姓名修正版收尾：單輪獨立唯讀驗收PASS、無blocker；完整validator及node --test各一次，415筆、415唯一ID、舊414筆含序全值不變，11項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。新卡raw／normalized及完整記憶體generation parity、schema、姓名與handle含空白共4正查唯一命中及14項target負查全過。三來源正文／UTC台北時間／指認與編輯邊界逐項對位通過。正式修正版驗收報告見當前profile scratch `isaac-llin-20261019/reviewer/review-report.json`；`writer/report.json`僅是更正前帳號版局部證據，不作修正版完整驗收。主控讀回review並逐一比對155 tracked與19研究artifacts hash、HEAD及空index、scope與Kevin bytes一致後，只更正本收尾筆記，不再改來源或生成資料。僅來源、brands.json、本地筆記；不改app／helper／override／README／版本，不公開圖片，Kevin維持untracked。提交與推送結果以Git實際讀回為準。
+
 ## 2026-10-17｜趙世煌／laure_chao：本次公開貼文的本人個人避雷
 
 - 收尾：單輪獨立驗收PASS、無blocker；完整validator及node --test各一次，414筆、11項檢查／20項語法、warnings: 0／errors: 0、14/14 tests且失敗／取消／跳過皆0。414唯一ID、舊413筆含序不變、新卡raw／normalized及完整記憶體generation parity、schema、兩姓名／handle唯一正查及15項target負查、逐來源正文與UTC／台北時間及另篇後續邊界均通過。審查前後155 tracked＋Kevin untracked檔案hash、HEAD／index／status／diff穩定；主控讀回review-report並獨立比對155 tracked及7研究artifacts hash、HEAD及空index一致，再重現414唯一與舊413逐筆含序不變後，只追加本收尾筆記，不改來源／生成資料。三張用戶圖及研究截圖未公開，Kevin未動。提交與遠端結果以Git實際讀回為準；以下未完整驗證／未提交為writer階段限制。

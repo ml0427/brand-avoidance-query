@@ -18,6 +18,40 @@
 
 export const records = [
   record({
+    id: "isaac-llin-reply-personal-20261019",
+    name: "林忠裕",
+    aliases: ["isaac.llin"],
+    identifiers: [],
+    country: "",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開", "不接受針對他人識字與教育的貶抑回覆"],
+    confidence: "low",
+    status: "personal",
+    summary: "姓名與帳號是否為同一人尚未驗證：林忠裕為發文者對isaac.llin的指認，未確認同人，也未證明不是本人。使用者知悉此缺口，仍指定納入姓名及帳號作個人避開備忘。已核實isaac.llin在公開回覆中以「你不識字」及「沒有受過義務教育和家庭教育」貶抑他人的表達；不把該帳號發言當成林忠裕本人已確認的行為。這是個人價值選擇，不是違法、犯罪、已提告或黨派認定；不擴及任職單位或其他同名者。",
+    sources: [
+      {
+        title: "isaac.llin公開帳號個人頁",
+        url: "https://www.threads.com/@isaac.llin",
+        date: "查核日 2026-10-19",
+        note: "研究者isaac-research以browser DOM實取公開個人頁正文，可確認handle為isaac.llin；writer讀回source-packet正文，不冒稱自行直接open。頁面未提供可採的實際姓名及職務橋接，不從自介符號推職業。只作帳號識別，不採其他發文；標題為客觀描述。"
+      },
+      {
+        title: "isaac.llin：針對他人識字與教育的公開回覆",
+        url: "https://www.threads.com/@isaac.llin/post/DepPwMDkxYO",
+        date: "2026-10-19",
+        note: "研究者isaac-research以browser DOM實取精確permalink正文、作者isaac.llin、機器時間及有限父串上下文；writer讀回source-packet與research-report，不冒稱直接open原帖。回覆可見「你不識字」與「沒有受過義務教育和家庭教育」；機器時間2026-10-18T17:43:02.000Z，台北2026-10-19 01:43:02（UTC+08:00），date採台北日期。僅支持此帳號發出本次回覆，不把其餘政治或宗教說法當事實，不核旁支事件。公開頁含登入提示，未遍歷完整回覆、編輯歷史或作者後續立場，不宣稱從未道歉或更正。標題為客觀描述。"
+      },
+      {
+        title: "tiffanyeeyee：指認姓名及表達報案計畫的貼文",
+        url: "https://www.threads.com/@tiffanyeeyee/post/DepojS5E3ug",
+        date: "2026-10-19",
+        note: "研究者以browser DOM實取正文，主控讀回source-packet。發文者寫出「林忠裕先生」並表達報案計畫；只證明發文者如此指認，不證姓名與帳號為同一人、任職屬實、已報案、已提告或有罪。機器時間2026-10-18T21:19:43.000Z＝台北2026-10-19 05:19:43；標題為描述性標題。研究資料顯示本文曾編輯，原始版本與修改時間未核；未採附件作姓名橋接。"
+      }
+    ],
+    aiNotes: "使用者在得知姓名與帳號未橋接後，明示仍納入姓名並備註未驗證；依本案指定先行收錄為personal／low，不將此例外套成已確認同人。林忠裕是第三人指認，與isaac.llin是否同人尚未確認；未證實是，也未證實不是。已核事實僅為isaac.llin帳號的特定公開回覆，個人避開理由為不接受針對他人識字與教育的貶抑表達；不把發言直接歸責給姓名本人，不推職務、黨派、心理動機或法律責任。研究者browser DOM實取profile、精確reply與外層指認貼文，writer及主控讀回packet，不冒稱自行直接open。保留UTC／台北時間與有限上下文、編輯及後續立場缺口。搜尋僅使用者指定姓名林忠裕及字面handle isaac.llin，identifiers／country空，不加理由、平台、職務或其他人搜尋鍵。不公開使用者原圖、不製圖或搬研究截圖。",
+    lastReviewed: "2026-10-19"
+  }),
+  record({
     id: "chao-shih-huang-laure-chao-post-personal-20261017",
     name: "趙世煌",
     aliases: ["laure_chao"],
