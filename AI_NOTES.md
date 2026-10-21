@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-21｜黃宏軒：選舉政治資訊言論的本人個人避雷
+
+- 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含姓名target-positive與handle expect、node --test各實跑一次，424筆／424唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊423筆含序全值不變、raw／normalized／全量記憶體generation parity、2正查／26項target負查與三來源逐claim通過。主控讀回當前profile scratch huang-hong-xuan-20261021/reviewer/review-report.json，核報告SHA、155 tracked原bytes／Kevin原bytes與untracked、8份研究來源artifact、HEAD／空index及plain diff hash ad4d125c4a05993c753651b4ebcdd65b6df7a880均與審查結果一致後，只追加本收尾筆記，不改來源或生成卡。以下未完整驗收／未提交是writer階段限制；最終限定三檔提交推送與精確遠端原始blob讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
+
+- 使用者原話「沒政治立場就是支持比較爛的人啊」及最新「直接避雷」授權本人personal／medium；前句是使用者效果與價值判斷，不是黃自稱無立場或支持某黨的證據。主因置首為不接受以擾民、喋喋不休形容選舉政治資訊，及不接受以不針對立場的澄清免除公共責任。僅本人，不擴公司、作品、家屬，不推黨籍、實際選票、暗中支持或犯罪。
+- writer讀回研究者browser DOM實取的source-packet、research-report、profile、clarification及media-ettoday正文，不冒稱writer或主控直接open。profile同頁公開名稱／handle橋接，不是法律姓名鑑定。本人澄清2026-10-20T10:25:41.000Z／台北18:25:41，前一時間屬parent，不套用。保留歉意與約十分鐘刪文自述；原句「並沒有針對任何立場」不等於自稱沒有政治立場，戶籍變更與無投票資格未外部核實。未完整遍歷回覆，不稱從未更正。
+- ETtoday星光雲孟育民2026-10-21 07:29 +08報導（07:29:05更新）支持原帖擾民、喋喋不休用語及刪文道歉，原帖永久連結與精確時間未取得；媒體日期不是原帖日期，不冒稱第一方完整原文。公開URL已足，未公開原圖、裁圖或研究DOM。
+- 寫前source／override／generated／notes查重黃宏軒、黄宏轩、xuan_0814均0；新ID huang-hong-xuan-personal-20261021。搜尋僅姓名與handle，country／identifiers空，不加職稱、理由、政黨或第三人鍵；Xuan為handle substring，不虛報負查排除。
+- writer僅三檔，不stage／commit／push，不改app／helper／README／版本，不跑build／Tauri；完整validator與node --test留單輪review各一次，本輪局部驗證不稱完整驗收PASS。before tracked／HEAD／空index／Kevin與舊423筆快照、真命令與結果、兩次merge冪等、424唯一、舊筆含序全值不變、raw／normalized／全量generation parity、局部schema、姓名與handle正查及敏感target負查、hash與限制存當前profile scratch huang-hong-xuan-20261021/writer/report.json；Kevin既有untracked PNG原bytes與狀態保留。提交狀態仍未提交，完整結果以報告實測為準。
+
 ## 2026-10-19｜桃園六位列名對象：五位新增與簡士強拆出獨立個人卡
 
 - 收尾：單輪獨立唯讀驗收PASS、無阻擋；完整validator含六姓名expect及target-positive與node --test各一次，423筆／423唯一ID、12項檢查／20項語法、warnings: 0／errors: 0、14/14 tests，無失敗／取消／跳過。舊其餘416筆全值含序不變、raw／normalized／全量記憶體generation parity、12正查／34交叉隔離／162項target負查及來源逐claim通過。簡專屬爭議與來源已離開共用卡、其他四人保留，另五位不承擔簡發言。主控讀回當前profile scratch si-kuang-yang-village-roster-20261019/reviewer/review-report.json，核155 tracked、Kevin原bytes與untracked、44份既有artifacts、HEAD／空index／status／diff hash與review結束一致後，只追加本收尾筆記，不改來源或生成資料。研究與審查各只對其實取／讀回範圍負責，不宣稱全案符合15分鐘；以下未完整驗收／未提交是writer階段限制，最終提交推送與遠端精確內容以Git讀回為準。僅三檔，不公開圖片、不查Pages。
