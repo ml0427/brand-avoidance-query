@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-21｜駱燕玲：退黨與決定加入國民黨的本人個人避雷
+
+- 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含姓名target-positive／expect與node --test各實跑一次，425筆／425唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊424筆含序全值不變、raw／normalized／全量記憶體generation parity、2正查／27項target負查及三來源單獨歸因通過。主控讀回當前profile scratch luo-yan-ling-20261021/reviewer/review-report.json，核報告SHA、155 tracked、24份既有scratch、Kevin原bytes、plain diff hash a1af2ad78fde5cb0a33e3b9676fbc082b65f6ec3與審查結束一致後，只追加本收尾筆記，不改來源或生成卡。以下未完整驗收／未提交是writer階段限制；最終限定三檔提交推送與精確遠端原始blob讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
+
+- 使用者提供內嵌新聞圖片後原話「避雷」構成授權；只駱燕玲本人personal／medium，主因置首為退出民進黨、決定加入國民黨的政治選擇，不是外層musiclin_1107，不發明偽善、對價、欺騙、犯罪或違法動機，不擴政黨、公所、第三人或家屬。
+- writer親讀研究者Python requests＋BeautifulSoup實取的source-packet、research-report、original-article、udn與official相關正文並核SHA；不是writer或主控直接open原頁。東台灣新聞網張柏東10月20日15:46:42發布／20:16:39更新（+08）轉載三點聲明與黨部聲明，記者敘事19日退出與所載本人今日20日正式退出有日序差異，不選定無爭議退黨日；不沿用張峻錯誤職稱，未播放嵌影音或取得第一方聲明原頁。聯合報王思慧同日18:52保留本人稱對張峻個人沒有意見、跟游淑貞關係很好，以及陳景豊否認強制支持誰、稱她誤會的相反說法，不裁決任一方、不改寫成本人撤回。國民黨部僅接受申請待程序，不稱中央核准或黨籍生效；有限搜尋不是窮盡後續。
+- 官方本屆代表頁列駱燕玲主席只作花蓮秀林身分橋接，不證政黨、候選資格或已排除人事異動；頁內無本文日期／任期，頁尾本站更新不是本頁日期，source.date明示2026-10-21查取。研究者因TLS憑證鏈錯誤僅官方域verify=False重取，取用限制保留於來源，不納無關個資。
+- 四層source／override／generated／notes寫前查重駱燕玲、骆燕玲、駱燕伶、luo-yan-ling均0；新ID luo-yan-ling-personal-20261021，僅canonical可搜，aliases／identifiers／country空，不猜別字。只改public-figures-politics來源、brands.json、本筆記；不公開圖片、裁圖、研究全文，不改app／helper／README／version，不跑build／Tauri，不stage／commit／push。完整validator與node --test留單輪review各一次；writer局部結果不冒稱完整驗收。
+- before HEAD 7497762d75d27da56961454b8985236887ed8331、155 tracked原bytes、空index、既有Kevin untracked PNG SHA256 4b6e019a1f31f05906711f349b2d3e56cd47f15307afc0052c571adf7a0af499及舊424筆快照已保存。source-packet SHA256 c7b46acc5e0bc06a7ce75aad5055b03b48ae45307dd586cb36a4eab1da085c09；research-report a535ea6d574241e6805dfd2d6e25e4f10a1d869f2cad0bafa6c0b12e613a198a；original-article 1e3ab6da12e9643620cb09c80b989fe814a3113c6195940319ea4945b63c9ce1；udn f1dafe38cf2dcfada01e8229ee85d6a3cf68d8537bd3d05801316b2366d61995；official 677147b0ecc2b55313828dd0cc43ec49b8c7524011b2d74917159959a6019012。真命令exit／stdout、425唯一、舊424含序全值、raw／normalized／全量generation parity、局部schema、正負查、兩次merge冪等與保護核對以當前profile scratch luo-yan-ling-20261021/writer/report.json實測為準；未提交，完整驗收待review。
+
+
 ## 2026-10-21｜黃宏軒：選舉政治資訊言論的本人個人避雷
 
 - 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含姓名target-positive與handle expect、node --test各實跑一次，424筆／424唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊423筆含序全值不變、raw／normalized／全量記憶體generation parity、2正查／26項target負查與三來源逐claim通過。主控讀回當前profile scratch huang-hong-xuan-20261021/reviewer/review-report.json，核報告SHA、155 tracked原bytes／Kevin原bytes與untracked、8份研究來源artifact、HEAD／空index及plain diff hash ad4d125c4a05993c753651b4ebcdd65b6df7a880均與審查結果一致後，只追加本收尾筆記，不改來源或生成卡。以下未完整驗收／未提交是writer階段限制；最終限定三檔提交推送與精確遠端原始blob讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
