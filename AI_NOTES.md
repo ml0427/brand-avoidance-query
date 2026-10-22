@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-22｜澎恰恰：參與兩岸活動宣傳的本人個人避雷
+
+- 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含target-positive／expect與node --test各實跑一次，426筆／426唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊425筆含序全值不變、raw／normalized／全量記憶體generation parity、schema、2姓名正查／22項target負查、兩媒體單來源歸因及完整相關澄清通過。主控讀回當前profile scratch peng-chia-chia-20261022/reviewer/review-report.json，核報告SHA、155 tracked、20份既有scratch、Kevin原bytes與untracked、HEAD／空index／status及plain diff hash a88954b061236e13f95bcaddf1b266f862a4aaac與審查結束一致後，只追加本收尾筆記，不改來源或生成卡。以下未完整驗收／未提交為writer階段限制；最終限定三檔提交推送與精確遠端原始blob讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
+
+- 持續避雷對話的無字圖片intake，僅澎恰恰本人personal／medium；不是使用者口頭明示避雷或提出還債收錢理由。主因置首為使用者不接受參與海峽兩岸電商科技文化節宣傳並引導鎖定中國台灣網的個人價值判斷，不擴下方評論者、媒體、網站、活動、其他藝人、家屬或作品。
+- writer逐正文讀回研究者Python requests＋BeautifulSoup實取的source-packet、research-report、source-1與source-2，非writer或主控直接open。壹新聞編輯中心2026-10-21T16:50:35+08:00發布更新，非簡名杉具名文字稿；TVBS黃盈容2026-10-20T19:52:29+08:00發布更新，同藝名橋接行為與本人澄清。只依媒體報導，不冒稱原片或第一方本人原文已核。
+- 完整保留相關澄清意思：中國台灣網是網站、兩岸電商科技文化交流、只是開幕祝賀、去掉網字意思不同；不簡化成直接主張中國台灣、沒有政治立場或完整政治認同已核。TVBS稱20日發文僅媒體日期；拍攝與首發日、本人原社群permalink／機器時間及完整原片未得，報導日不當事件日；不稱從未更正。不採債務、金額、報酬、動機、受雇中共、官方主辦或犯罪等旁支推論。
+- 主控已完成source／override／generated／notes四層查重澎恰恰、彭恰恰、peng-chia-chia、peng-qia-qia皆0。新ID peng-chia-chia-personal-20261022；搜尋僅穩定藝名，aliases／identifiers／country空，不猜本名、別字alias或事件詞。原Threads只有metadata／標題橋接、正文與原片未看且時間未知，不列公開來源。公開只兩篇媒體URL，不公開原圖、裁圖、影音、HTML或研究全文。
+- 寫前HEAD 8be52d5c0dd4bd53557bee78c811903c41594490、155 tracked原bytes、空index、Kevin既有untracked PNG及舊425筆含序快照hash，保存在當前profile scratch peng-chia-chia-20261022/writer/before-manifest.json與局部artifacts。實際命令、426唯一、舊425含序全值、raw／normalized與全量記憶體generation parity、局部schema、姓名正查及target負查、兩次merge冪等、語法／diffcheck與保護核對以writer/report.json實測為準；局部結果不是完整驗收。
+- 僅改public-figures-politics來源、brands.json、本筆記；完整validator與node --test留單輪review各一次，本writer不執行、不stage／commit／push、不改app／helper／README／版本、不跑build／Tauri；Kevin維持原bytes與untracked。未提交，完整驗收待review。
+
 ## 2026-10-21｜駱燕玲：退黨與決定加入國民黨的本人個人避雷
 
 - 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含姓名target-positive／expect與node --test各實跑一次，425筆／425唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊424筆含序全值不變、raw／normalized／全量記憶體generation parity、2正查／27項target負查及三來源單獨歸因通過。主控讀回當前profile scratch luo-yan-ling-20261021/reviewer/review-report.json，核報告SHA、155 tracked、24份既有scratch、Kevin原bytes、plain diff hash a1af2ad78fde5cb0a33e3b9676fbc082b65f6ec3與審查結束一致後，只追加本收尾筆記，不改來源或生成卡。以下未完整驗收／未提交是writer階段限制；最終限定三檔提交推送與精確遠端原始blob讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
