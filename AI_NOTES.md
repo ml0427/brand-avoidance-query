@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-22｜陳昌輝：「我要買票」競選主標的本人個人避雷
+
+- 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含target／positive／expect與node --test各實跑一次，427筆／427唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests。舊426筆含序全值不變、raw／normalized／全量記憶體generation parity、schema、2姓名正查／27項target負查及三媒體單來源歸因、完整澄清與五項政見通過。主控讀回當前profile scratch chen-chang-hui-20261022/reviewer/review-report.json，核報告SHA-256、155 tracked、29份既有artifacts、Kevin原bytes與untracked、HEAD／空index／三檔scope及plain diff hash 407c0b726bcd9c979f7f48f573707a82996dcee8均與review結束一致，才僅追加本收尾筆記。以下未提交／未完整驗收為writer階段限制；最終限定三檔commit/push與遠端精確commit原始blob逐bytes讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
+
+- 持續避雷對話的無字圖片intake，新增chen-chang-hui-personal-20261022，personal／medium，只限陳昌輝本人；主因置首為使用者不接受「我要買票」作競選宣傳主標的個人價值判斷，不是口頭明示賄選指控，也不是認定實際賄選。不擴轉貼者、7-ELEVEN、家屬、政黨或其他人物。
+- writer逐正文讀回研究者Python urllib HTTPS GET實取的source-packet、research-report、source-1（聯合報萬于甄8月9日）、source-6（Newtalk黃博郎8月11日）與source-7（自由王姝琇8月9日），不冒稱writer或主控直接open。UDN實取帶from參數，og:url橋接canonical；只用發布日期，未沿用packet補00秒。UDN 8月9日只預告11日記者會，Newtalk 8月11日才稱已開會，分源歸因。
+- 完整保留本人「我要買的是希望，不是賄選；我要買的是台南更好的未來！」及台南人情味、超越高雄進步、超越政黨人民第一、無詐騙與煙毒害治安、無惡意檢舉裁罰／人身安全與交通流暢的相關訴求意思；這是本人政見，不是本專案已核台南現況，不改成買選民信任、無政治立場、道歉或撤回。假鈔只是媒體所述看板意象，不說本圖也有或發放真鈔。
+- 8月報導前台聯主委、宣布無黨籍參選第八選區僅歷史媒體身分，不當今日黨籍、登記、現職或當選已核。本圖全部小字、具體設置者／設置日未核，不稱就是8月報導其中一面。原Threads metadata主文橋接但機器時間、完整媒體組數與是否混有影片未核，留內部、不倒算日期；有限研究不代表從未更正。公開只三媒體URL，不公開原圖、裁圖、HTML、全文、電話或QR。
+- 主控寫前source／override／generated／notes查重陳昌輝、陈昌辉、chen-chang-hui、kykw_ze全0；搜尋僅canonical陳昌輝，aliases／identifiers／country空。target負查只表示排除此卡，不冒稱全庫無命中；完整substring行為不改。
+- 寫前HEAD b0660cb1aa48ed0e9ab5aa6595a0860c77a0c460、155 tracked原bytes、空index、Kevin既有untracked PNG與舊426筆含序快照存當前profile scratch chen-chang-hui-20261022/writer/before-manifest.json及before artifacts。兩次merge冪等、427唯一、舊426含序全值不變、raw／normalized／全量記憶體generation parity、局部schema、2姓名正查與27項target負查、語法／diffcheck及保護核對，以writer/report.json實測結果為準；局部結果不是完整驗收。
+- 僅改public-figures-politics來源、brands.json、本筆記；不stage／commit／push，不改app／helper／README／版本，不build／Tauri；Kevin原bytes與untracked保留。完整validator與node --test留單輪獨立review各一次，writer未執行，尚未提交／完整驗收。
+
 ## 2026-10-22｜澎恰恰：參與兩岸活動宣傳的本人個人避雷
 
 - 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含target-positive／expect與node --test各實跑一次，426筆／426唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊425筆含序全值不變、raw／normalized／全量記憶體generation parity、schema、2姓名正查／22項target負查、兩媒體單來源歸因及完整相關澄清通過。主控讀回當前profile scratch peng-chia-chia-20261022/reviewer/review-report.json，核報告SHA、155 tracked、20份既有scratch、Kevin原bytes與untracked、HEAD／空index／status及plain diff hash a88954b061236e13f95bcaddf1b266f862a4aaac與審查結束一致後，只追加本收尾筆記，不改來源或生成卡。以下未完整驗收／未提交為writer階段限制；最終限定三檔提交推送與精確遠端原始blob讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
