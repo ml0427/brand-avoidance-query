@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-22｜白士傑：協會主任角色與官方台灣稱謂文宣的本人個人避雷
+
+- 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含target／positive／expect與node --test各一次，428筆／428唯一ID、12檢查／20語法、warnings 0／errors 0、14/14 tests。舊427筆含序全值不變、raw／normalized／全量記憶體generation parity與schema通過；4正查、實際21項target負查通過，士杰既有名冊substring命中保留。三來源單源歸因及協會文案不冒稱親筆／親口通過。主控讀回當前profile scratch french-exhibition-20261022/reviewer/review-report.json，核報告SHA-256、opening＝final、155 tracked／28份既有artifacts、Kevin原bytes／untracked、HEAD／空index／status／三檔scope及plain diff hash 82110c457e07dca5f16e96e1884c5403a5a1df60一致後，僅追加本收尾筆記。以下未完整驗收／未提交為writer階段限制；最終限定三檔commit/push、遠端精確commit及原始blob逐bytes讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
+
+- 使用者明示授權，僅新增 bai-shi-jie-bastien-ratat-personal-20261022，personal／medium；canonical白士傑，aliases白士杰、士杰、Bastien Ratat，country／identifiers空。松松不是其alias，不列其他成員、協會、轉貼者或場所；組織、活動、網址與政治理由不作搜尋鍵。主控四層查重已無既有本人。
+- writer逐正文讀回主控真實browser取得的official-about.txt、official-event.txt及主控urllib取得的named-media.txt與source packet；官網白士杰主任、點新聞轉載大公報賀鵬飛的白士傑（Bastien Ratat）／世界回聲會長只橋接姓名與角色。使用者因其主任關聯與協會官方文宣的中國台灣／台灣重歸中國框架個人避開；文案屬協會頁，未證其親筆或親口逐字發言，不認臉，不稱全團隊同責。
+- 10月23日活動在10月22日查核時尚未舉行，只是預告；官方about／event公開發布時間未核，5月5日媒體日期只作身分來源。不收中國台北、台灣省台北市、五星旗、收錢、受指揮、違法統戰、洗腦或入境規定為事實；原片及鏡頭同人未核。公開僅三URL，原圖與Facebook材料含無關個資只作內部intake，不公開圖片、全文或台灣公司稅籍／個資。
+- 寫前HEAD／tracked原bytes／空index／Kevin既有untracked PNG與舊427筆含序快照存當前profile scratch french-exhibition-20261022/writer/。僅來源、brands.json、本筆記；兩次merge及局部schema、raw／normalized／全量記憶體generation parity、姓名唯一正查與target負查、語法／diffcheck和保護核對以writer/report.json實測為準，不冒稱完整驗收。完整validator與node --test留獨立review各一次，本writer未跑；不stage／commit／push，不build／Tauri或改版本，Kevin原bytes／untracked保留。
+
 ## 2026-10-22｜陳昌輝：「我要買票」競選主標的本人個人避雷
 
 - 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含target／positive／expect與node --test各實跑一次，427筆／427唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests。舊426筆含序全值不變、raw／normalized／全量記憶體generation parity、schema、2姓名正查／27項target負查及三媒體單來源歸因、完整澄清與五項政見通過。主控讀回當前profile scratch chen-chang-hui-20261022/reviewer/review-report.json，核報告SHA-256、155 tracked、29份既有artifacts、Kevin原bytes與untracked、HEAD／空index／三檔scope及plain diff hash 407c0b726bcd9c979f7f48f573707a82996dcee8均與review結束一致，才僅追加本收尾筆記。以下未提交／未完整驗收為writer階段限制；最終限定三檔commit/push與遠端精確commit原始blob逐bytes讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
