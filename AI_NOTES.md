@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-23｜趙正平：候選人差異與公共責任的本人個人避雷
+
+- 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator與node --test各實跑一次，429筆／429唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊428筆全值含序不變、raw／normalized／完整記憶體generation parity、schema、2姓名正查與20項target負查、單來源歸因及個人政治效果／自述背景邊界通過。主控讀回本profile scratch zhao-zheng-ping-20261023/reviewer/report.json，核報告SHA-256 079fd7378f1c53b93786ff5d1bdc220b961b68e61f1b91a171efd067fbec2049、155 tracked／20研究與writer artifacts、Kevin原bytes／untracked、HEAD／空index／status及plain diff hash 3d59196e4854b4090388860c7a40d57116dc7baf均與review結束相符後，僅追加本收尾筆記。以下未完整驗收／未提交是writer階段限制；限定三檔commit/push及遠端精確commit、原始blob逐bytes讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
+
+- 持續避雷對話的無字圖片intake，承接使用者糾正不必重複授權後的續作，不是把最新反問當新授權，也不是使用者逐字明示姓名。主控原先只查核未入庫是流程失誤。本次僅新增zhao-zheng-ping-personal-20261023，趙正平本人personal／medium；主因置首為使用者不接受以兩名候選人半斤八兩、政治文化爛等說法淡化差異與公共責任，這是個人政治效果判斷摘要，不冒稱使用者逐字說過整段，也不推實際支持對象。不收窄為只因家族八大，不擴評論者、補充圖影片講者、政黨或家屬。
+- writer完整讀回研究者Python urllib HTTPS GET實取的source-article.txt、source-packet.json及report.json，核packet SHA256 755eb48febe363cee369ded38b975e61f7592116e1c31c2adc4fd052e93dc27a、article SHA256 d19929afc9436209f3ec5c4aff945cbdc523e13f3f49ae7e21d465ba8e4ce21c；非writer或主控直接open。娛樂星聞／三立蔡維歆2026-10-23具名報導，顯示07:59與metadata Z衝突，只用日期不硬換時區。半斤八兩是報導歸述，政治文化爛得要死是所載引言；藍綠一樣爛不是逐字原話，政治冷漠是記者敘事，不改為本人自稱沒有立場。
+- 保留他對兩候選人各自評論；20年未投、家族八大受掃黃影響及馬英九延續而不投僅受訪自述背景，不認證實際票史，不推暗挺蔣、本人營業、犯罪或涉黑，不保存警察紅包指控。未取得第一方完整原片，後續回應未核，有限來源不代表從未澄清；不採旁支民調。三張補圖只表達使用者判準，不核G6／29%／0%，不當本人發言證據、不新增人物。公開僅一新聞URL與必要摘要，不公開原圖、HTML或研究全文，不查台灣公司稅籍。
+- 研究者四層趙正平／赵正平／兩slug／新聞ID查重全0；搜尋只繁體趙正平，aliases／identifiers／country空，分類沿用既有政治／公眾人物helper，不改搜尋器。負查只保證target卡排除，不冒稱全庫0。
+- 寫前HEAD 9b5911ad10b972efd5a8af4cb0c58f89cabdcc4d、155 tracked原bytes、空index、Kevin既有untracked PNG與舊428筆全值含序快照存當前profile scratch zhao-zheng-ping-20261023/writer/。兩次merge、429唯一、舊428含序不變、raw／normalized／完整記憶體generation parity、局部schema、姓名含空白2正查／packet 20項target負查、語法／diffcheck及保護核對以writer/report.json實測為準，不稱完整驗收。完整validator與node --test留單輪獨立review各一次，本writer未跑。僅來源、brands.json、本筆記；不stage／commit／push，不改app／helper／README／版本、不build／Tauri、不查Pages，Kevin原bytes／untracked保留。
+
 ## 2026-10-22｜白士傑：協會主任角色與官方台灣稱謂文宣的本人個人避雷
 
 - 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator含target／positive／expect與node --test各一次，428筆／428唯一ID、12檢查／20語法、warnings 0／errors 0、14/14 tests。舊427筆含序全值不變、raw／normalized／全量記憶體generation parity與schema通過；4正查、實際21項target負查通過，士杰既有名冊substring命中保留。三來源單源歸因及協會文案不冒稱親筆／親口通過。主控讀回當前profile scratch french-exhibition-20261022/reviewer/review-report.json，核報告SHA-256、opening＝final、155 tracked／28份既有artifacts、Kevin原bytes／untracked、HEAD／空index／status／三檔scope及plain diff hash 82110c457e07dca5f16e96e1884c5403a5a1df60一致後，僅追加本收尾筆記。以下未完整驗收／未提交為writer階段限制；最終限定三檔commit/push、遠端精確commit及原始blob逐bytes讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
