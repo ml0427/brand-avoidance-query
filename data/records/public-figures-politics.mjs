@@ -18,6 +18,28 @@
 
 export const records = [
   record({
+    id: "tsai-shih-ping-personal-20261027",
+    name: "蔡詩萍",
+    aliases: [],
+    identifiers: [],
+    country: "",
+    categories: ["政治／個人避開"],
+    avoidReasons: ["使用者個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary: "使用者指定蔡詩萍本人為個人避開對象；本次未指定具體事件或理由。2026年10月27日查取的臺北市政府文化局原始首長介紹列其姓名、職稱「局長」及任職單位「臺北市政府文化局」，僅作身分辨識；不是部長。這是使用者個人選擇，不代表違法、犯罪或特定爭議已證實，亦不擴及機關、同事、政黨或家屬。",
+    sources: [
+      {
+        title: "臺北市政府文化局 -首長介紹-蔡詩萍",
+        url: "https://culture.gov.taipei/News_Content_Leader.aspx?n=80926E98DB1784C7&s=8F0972C8F4B799BC&sms=7CAF6BD4D3E48630",
+        date: "查取日 2026-10-27",
+        note: "官方原始首長介紹明列姓名蔡詩萍、職稱局長及任職單位臺北市政府文化局；不是臺北市政府新聞稿，只核名冊所列身分職務，不作爭議或避雷理由證據。研究者以Python urllib HTTPS GET及HTMLParser實取頁面可見正文，writer讀回official-profile-page.txt、official-profile-identity.txt與研究報告，不冒稱writer或主控直接open。2026-10-27是查取日，不是發布日；頁列資料更新113-10-24、資料檢視115-10-07，與頁尾全站更新分開。未另核人事任免令，不保證網頁零延遲。"
+      }
+    ],
+    aiNotes: "使用者原話『蔡詩萍 好像是什麼部長 避雷』明示本人個人避開；未指定具體事件或理由，不代補政治、爭議或道德理由。官方首長頁只作姓名及文化局局長身分橋接，不是犯罪、政黨、動機或事件證明；personal／medium只反映身分可歸屬與使用者指定，不表示未給理由獲證實。本人獨立卡，搜尋僅繁體姓名，aliases／identifiers／country空；不另加職稱、機關、地名、政黨、他人或事件鍵，不擴及機關、同事、政黨及家屬。研究者urllib及HTMLParser實取、writer讀回正文，不是writer或主控直接open。2026-10-27為查取日，未另核人事任免令，保留頁面更新時滯可能。公開僅官方URL及必要身分摘要，不公開圖片、研究全文或無關個資。",
+    lastReviewed: "2026-10-27"
+  }),
+  record({
     id: "zhao-zheng-ping-personal-20261023",
     name: "趙正平",
     aliases: [],

@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-27｜蔡詩萍：未指定事由的本人最小個人避雷
+
+- 收尾：單輪獨立唯讀驗收PASS、無must-fix；完整validator含target／姓名positive實跑一次，430筆／430唯一ID、11項檢查／20項語法、warnings 0／errors 0；node --test實跑一次14/14，失敗／取消／跳過皆0。2項姓名正查／19項target負查、來源逐claim、raw／normalized／全量記憶體generation parity、舊429筆全值含序不變通過。主控讀回reviewer/report.json並核SHA256 2635b0969302ea52c506c5f44611c4763c5cb463e7475ddc2224e0eb5b9af688、155 tracked／12研究與writer artifacts、Kevin原bytes與untracked、HEAD／空index／status及plain diff hash df77ac5de6ef8a208fa610103e4511f210a04ba40e048330df9b64c836425c39一致後，只追加本收尾筆記，不改卡片或生成資料。以下未完整驗收／未提交為writer階段限制；最終三檔限定commit/push與遠端exact commit及blob逐bytes核對以Git與publish-report.json為準。不查Pages。
+
+- 使用者原話「蔡詩萍 好像是什麼部長 避雷」，只新增 tsai-shih-ping-personal-20261027，本人 personal／medium；未給具體事件或理由，不代補政治、爭議或犯罪理由，avoidReasons僅使用者個人避開。不擴及機關、同事、政黨或家屬；搜尋僅繁體姓名，aliases／identifiers／country空，不加職稱、地名或他人鍵。
+- writer親讀研究者Python urllib HTTPS GET＋HTMLParser實取的official-profile-page.txt、official-profile-identity.txt與report.json，不冒稱writer或主控直接open。官方原始首長介紹明列蔡詩萍、局長、臺北市政府文化局，只作身分辨識，不是部長，亦非市府新聞稿、犯罪／政黨／事件或避雷理由證據。2026-10-27是查取日，頁列資料更新113-10-24與資料檢視115-10-07，不以頁尾全站更新當發布日；未另核任免令，不保證網頁零延遲。
+- 寫前四層繁簡姓名與兩slug查重均0，先行probe確認source／generated／姓名查詢無本卡；HEAD 7c7d3a71ea4928b10e101a7f9972d7a96e56d56d、155 tracked hashes／空index／Kevin既有untracked PNG原bytes及舊429筆含序快照存當前profile scratch tsai-shih-ping-20261027/writer/。兩次merge冪等、430唯一ID、舊429筆含序全值不變、raw／normalized及完整記憶體generation parity、局部schema、2姓名含空白正查唯一命中與16項target負查通過；負查只排本卡，不保證全庫0。generated分類依既有helper為政治／公眾人物，對應README政治／統戰／公眾人物正規化，不改helper。首輪scratch generation比較誤把未序列化undefined鍵與JSON直接比較，僅更正探針依實際JSON序列化比較後通過，正式資料未迎合探針修改。
+- 僅來源、brands.json與本節筆記，不公開圖片／研究全文，不改app／helper／override／README／版本，不build／Tauri，不stage／commit／push／發布，Kevin原bytes及untracked保留。真實命令exit／stdout／stderr、before manifest、局部結果與最後保護核對見writer/report.json；完整validator與node --test留單輪獨立review各一次，本writer未跑，局部結果不冒稱完整驗收。
+
 ## 2026-10-23｜趙正平：候選人差異與公共責任的本人個人避雷
 
 - 收尾：單輪獨立唯讀review PASS、無阻擋；完整validator與node --test各實跑一次，429筆／429唯一ID、12項檢查／20項語法、warnings 0／errors 0、14/14 tests且失敗／取消／跳過皆0。舊428筆全值含序不變、raw／normalized／完整記憶體generation parity、schema、2姓名正查與20項target負查、單來源歸因及個人政治效果／自述背景邊界通過。主控讀回本profile scratch zhao-zheng-ping-20261023/reviewer/report.json，核報告SHA-256 079fd7378f1c53b93786ff5d1bdc220b961b68e61f1b91a171efd067fbec2049、155 tracked／20研究與writer artifacts、Kevin原bytes／untracked、HEAD／空index／status及plain diff hash 3d59196e4854b4090388860c7a40d57116dc7baf均與review結束相符後，僅追加本收尾筆記。以下未完整驗收／未提交是writer階段限制；限定三檔commit/push及遠端精確commit、原始blob逐bytes讀回以Git及publish-report.json為準。不公開圖片、不查Pages。
