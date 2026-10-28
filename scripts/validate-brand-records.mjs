@@ -6,10 +6,12 @@ import { fileURLToPath } from "node:url";
 import {
   asStringArray,
   filterBrands,
+  identityTerms,
   normalizeBrandList,
   normalizeText,
   validateBrandRecord,
 } from "../app-core.mjs";
+import { compileRecords } from "../data/compile-records.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -18,8 +20,8 @@ const DEFAULT_POSITIVE_SMOKE_TESTS = [
   { query: "味全", expectedIds: ["weichuan-foods"] },
   { query: "TikTok", expectedIds: ["bytedance"] },
   { query: "國民黨", minMatches: 1 },
-  { query: "柬埔寨", minMatches: 1 },
-  { query: "韓國旅遊風險", minMatches: 1 },
+  { query: "Palladium", expectedIds: ["kp-global-palladium-k-swiss"] },
+  { query: "蔡詩萍", minMatches: 1 },
 ];
 
 const GENERIC_SEARCH_FIELD_TERMS = [
@@ -225,11 +227,10 @@ function usage() {
   node scripts/validate-brand-records.mjs [options]
 
 Default checks:
-  - parse and normalize brands.json
+  - compile and normalize source records with compileRecords()
   - validate every record with app-core validateBrandRecord()
-  - detect duplicate IDs
-  - verify README record count, if present
-  - run node --check for app-core.mjs, app.js, scripts/*.mjs, and data/**/*.mjs
+  - detect unsafe and duplicate IDs, invalid dates and forbidden tax-ID data
+  - run node --check for app-core.mjs, this validator, and data/**/*.mjs
   - run default positive smoke queries
   - check exact generic searchable fields so record authors do not add bare generic aliases / identifiers
   - run git diff --check when inside a git repository
@@ -243,15 +244,9 @@ Record-specific checks:
   --expect-any <query>      Query must return at least one record.
 
 Control:
-  --data <path>             brands JSON path, default: brands.json
-  --readme <path>           README path, default: README.md
   --no-default-smoke        Skip built-in positive smoke tests.
-  --no-default-negatives    Deprecated compatibility no-op; generic query blocking is no longer default behavior.
   --no-syntax-check         Skip node --check checks.
   --no-git-diff-check       Skip git diff --check.
-  --strict-generics         Deprecated compatibility flag; exact generic searchable fields are errors by default.
-  --allow-warnings          Exit zero even if warnings exist; for investigation only, not publish gates.
-  --fail-on-warnings        Compatibility flag; warnings are fatal by default.
   --json                    Output machine-readable JSON only.
   --help                    Show this help.
 
@@ -264,8 +259,6 @@ Examples:
 
 function parseArgs(argv) {
   const options = {
-    dataPath: "brands.json",
-    readmePath: "README.md",
     targetIds: [],
     positives: [],
     negatives: [],
@@ -273,11 +266,8 @@ function parseArgs(argv) {
     notExpects: [],
     expectAny: [],
     defaultSmoke: true,
-    defaultNegatives: false,
     syntaxCheck: true,
     gitDiffCheck: true,
-    strictGenerics: false,
-    allowWarnings: false,
     json: false,
     help: false,
   };
@@ -294,14 +284,6 @@ function parseArgs(argv) {
     const arg = argv[index];
 
     switch (arg) {
-      case "--data":
-        options.dataPath = takeValue(argv, index, arg);
-        index += 1;
-        break;
-      case "--readme":
-        options.readmePath = takeValue(argv, index, arg);
-        index += 1;
-        break;
       case "--target-id":
         options.targetIds.push(...takeValue(argv, index, arg).split(",").map((item) => item.trim()).filter(Boolean));
         index += 1;
@@ -343,23 +325,11 @@ function parseArgs(argv) {
       case "--no-default-smoke":
         options.defaultSmoke = false;
         break;
-      case "--no-default-negatives":
-        options.defaultNegatives = false;
-        break;
       case "--no-syntax-check":
         options.syntaxCheck = false;
         break;
       case "--no-git-diff-check":
         options.gitDiffCheck = false;
-        break;
-      case "--strict-generics":
-        options.strictGenerics = true;
-        break;
-      case "--allow-warnings":
-        options.allowWarnings = true;
-        break;
-      case "--fail-on-warnings":
-        options.allowWarnings = false;
         break;
       case "--json":
         options.json = true;
@@ -428,23 +398,6 @@ function idsForQuery(brands, query) {
   return filterBrands(brands, { query }).map((brand) => brand.id);
 }
 
-function extractReadmeCount(readmeText) {
-  const patterns = [
-    /`brands\.json`\s*目前有\s*(\d+)\s*筆資料/u,
-    /brands\.json[^\n]*?(\d+)\s*筆資料/u,
-    /目前有\s*(\d+)\s*筆資料/u,
-  ];
-
-  for (const pattern of patterns) {
-    const match = readmeText.match(pattern);
-    if (match) {
-      return Number(match[1]);
-    }
-  }
-
-  return null;
-}
-
 function formatList(items, limit = 10) {
   if (items.length <= limit) {
     return items.join(", ");
@@ -452,20 +405,12 @@ function formatList(items, limit = 10) {
   return `${items.slice(0, limit).join(", ")} ... (+${items.length - limit})`;
 }
 
-function main() {
-  const options = parseArgs(process.argv.slice(2));
-
-  if (options.help) {
-    console.log(usage());
-    return 0;
-  }
-
+export function validateRecords(raw, options = {}) {
+  options = { ...parseArgs([]), ...options };
   const errors = [];
   const warnings = [];
   const passed = [];
   const details = {
-    dataPath: path.relative(rootDir, resolveFromRoot(options.dataPath)) || options.dataPath,
-    readmePath: path.relative(rootDir, resolveFromRoot(options.readmePath)) || options.readmePath,
     count: 0,
     positiveQueries: {},
     negativeQueries: {},
@@ -473,39 +418,52 @@ function main() {
   };
 
   const fail = (check, message, extra = undefined) => errors.push({ check, message, ...(extra ? { extra } : {}) });
-  const warn = (check, message, extra = undefined) => warnings.push({ check, message, ...(extra ? { extra } : {}) });
   const pass = (check, message) => passed.push({ check, message });
 
-  const dataPath = resolveFromRoot(options.dataPath);
-  let raw;
   let brands;
 
   try {
-    raw = JSON.parse(fs.readFileSync(dataPath, "utf8"));
-    pass("json", `${details.dataPath} parses as JSON`);
+    brands = normalizeBrandList(raw);
+    details.count = brands.length;
+    pass("normalize", `normalized ${brands.length} source records`);
   } catch (error) {
-    fail("json", `Failed to parse ${details.dataPath}: ${error.message}`);
-  }
-
-  if (raw !== undefined) {
-    try {
-      brands = normalizeBrandList(raw);
-      details.count = brands.length;
-      pass("normalize", `normalized ${brands.length} records`);
-    } catch (error) {
-      fail("normalize", error.message);
-    }
+    fail("normalize", error.message);
   }
 
   if (brands) {
-    const validationErrors = brands.flatMap((brand, index) =>
-      validateBrandRecord(brand).map((error) => ({ index, id: brand.id, name: brand.name, error })),
+    const validationErrors = raw.flatMap((brand, index) =>
+      validateBrandRecord(brand).map((error) => ({ index, id: brand?.id, name: brand?.name, error })),
     );
 
     if (validationErrors.length > 0) {
       fail("record-validation", `${validationErrors.length} record validation error(s)`, validationErrors);
     } else {
       pass("record-validation", "all records pass validateBrandRecord()");
+    }
+
+    const unsafeIds = raw.flatMap((record, index) => {
+      const id = record?.id;
+      return typeof id === "string" && /^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(id)
+        && !/^(?:con|prn|aux|nul|com[0-9]|lpt[0-9])$/u.test(id)
+        ? [] : [{ index, id }];
+    });
+    if (unsafeIds.length > 0) {
+      fail("record-ids", `${unsafeIds.length} missing or unsafe record ID(s)`, unsafeIds);
+    } else {
+      pass("record-ids", "all source records have safe explicit IDs");
+    }
+
+    const invalidDates = raw.flatMap((record, index) =>
+      ["lastReviewed", "temporaryUntil", "reviewAfter"].flatMap((field) => {
+        const value = record?.[field];
+        return value === undefined || value === "" || isCalendarDate(value)
+          ? [] : [{ index, id: record?.id, field, value }];
+      }),
+    );
+    if (invalidDates.length > 0) {
+      fail("record-dates", `${invalidDates.length} invalid calendar date(s)`, invalidDates);
+    } else {
+      pass("record-dates", "record review/alert dates are valid YYYY-MM-DD calendar dates");
     }
 
     const seenIds = new Map();
@@ -526,14 +484,8 @@ function main() {
 
     const genericSearchFieldHits = [];
     for (const brand of brands) {
-      const searchableFields = [
-        { field: "name", value: brand.name },
-        ...asStringArray(brand.aliases).map((value) => ({ field: "aliases", value })),
-        ...asStringArray(brand.identifiers).map((value) => ({ field: "identifiers", value })),
-      ];
-
-      for (const { field, value } of searchableFields) {
-        if (GENERIC_ALIAS_TERMS.has(normalizeText(value))) {
+      for (const { field, value, key } of identityTerms(brand)) {
+        if (GENERIC_ALIAS_TERMS.has(key)) {
           genericSearchFieldHits.push({ id: brand.id, name: brand.name, field, value });
         }
       }
@@ -541,11 +493,11 @@ function main() {
 
 
     const taxIdDataHits = [];
-    for (const brand of brands) {
-      const serialized = JSON.stringify(brand);
+    for (const brand of raw) {
+      const textValues = recordTextValues(brand);
       for (const pattern of FORBIDDEN_TAIWAN_TAX_ID_PATTERNS) {
-        if (pattern.test(serialized)) {
-          taxIdDataHits.push({ id: brand.id, name: brand.name, pattern: String(pattern) });
+        if (textValues.some((value) => pattern.test(value))) {
+          taxIdDataHits.push({ id: brand?.id, name: brand?.name, pattern: String(pattern) });
         }
       }
     }
@@ -557,7 +509,7 @@ function main() {
         taxIdDataHits.slice(0, 20),
       );
     } else {
-      pass("tax-id-data", "no Taiwanese tax-id data in generated records");
+      pass("tax-id-data", "no Taiwanese tax-id data in source records, including metadata");
     }
 
     if (genericSearchFieldHits.length > 0) {
@@ -569,22 +521,6 @@ function main() {
     } else {
       pass("generic-search-fields", "no exact generic searchable fields from the built-in guard list");
     }
-  }
-
-  const readmePath = resolveFromRoot(options.readmePath);
-  if (brands && fs.existsSync(readmePath)) {
-    const readmeText = fs.readFileSync(readmePath, "utf8");
-    const readmeCount = extractReadmeCount(readmeText);
-
-    if (readmeCount === null) {
-      pass("readme-count", `README has no volatile record-count line; skipped count consistency check`);
-    } else if (readmeCount !== brands.length) {
-      fail("readme-count", `README says ${readmeCount} records but ${details.dataPath} has ${brands.length}`);
-    } else {
-      pass("readme-count", `README count matches brands.json (${brands.length})`);
-    }
-  } else if (!fs.existsSync(readmePath)) {
-    warn("readme-count", `${details.readmePath} not found; skipped README count check`);
   }
 
   if (brands) {
@@ -610,7 +546,7 @@ function main() {
       const ids = idsForQuery(brands, query);
       details.negativeQueries[query] = ids;
       if (ids.length > 0) {
-        fail("negative-query", `generic/negative query "${query}" unexpectedly matched [${formatList(ids)}]`);
+        fail("negative-query", `negative query "${query}" unexpectedly matched [${formatList(ids)}]`);
       }
     }
     if (negativeQueries.length > 0) {
@@ -674,12 +610,75 @@ function main() {
     }
   }
 
+  return finalizeResult({ errors, warnings, passed, details });
+}
+
+function recordTextValues(value) {
+  if (typeof value === "string") {
+    return [normalizeText(value)];
+  }
+  if (Array.isArray(value)) {
+    return value.flatMap(recordTextValues);
+  }
+  if (value && typeof value === "object") {
+    return Object.entries(value).flatMap(([key, child]) => [
+      normalizeText(typeof child === "string" || typeof child === "number" ? `${key} ${child}` : key),
+      ...recordTextValues(child),
+    ]);
+  }
+  return [];
+}
+
+function isCalendarDate(value) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/u.test(value)) {
+    return false;
+  }
+  const [year, month, day] = value.split("-").map(Number);
+  const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  return year > 0 && month >= 1 && month <= 12 && day >= 1 && day <= days[month - 1];
+}
+
+function finalizeResult({ errors, warnings, passed, details }) {
+  details.warnings = warnings;
+  return {
+    ok: errors.length === 0 && warnings.length === 0,
+    summary: { records: details.count, passed: passed.length, warnings: warnings.length, errors: errors.length },
+    passed,
+    warnings,
+    errors,
+    details,
+  };
+}
+
+export function main(argv = process.argv.slice(2)) {
+  const options = parseArgs(argv);
+  if (options.help) {
+    console.log(usage());
+    return 0;
+  }
+
+  let validation;
+  try {
+    validation = validateRecords(compileRecords(), options);
+    validation.passed.unshift({ check: "compile", message: "compiled records directly from source modules" });
+  } catch (error) {
+    validation = finalizeResult({
+      errors: [{ check: "compile", message: error.message }],
+      warnings: [],
+      passed: [],
+      details: { count: 0, positiveQueries: {}, negativeQueries: {} },
+    });
+  }
+  const { errors, warnings, passed, details } = validation;
+  const fail = (check, message, extra = undefined) => errors.push({ check, message, ...(extra ? { extra } : {}) });
+  const warn = (check, message) => warnings.push({ check, message });
+  const pass = (check, message) => passed.push({ check, message });
+
   if (options.syntaxCheck) {
     const syntaxFiles = [
       "app-core.mjs",
-      "app.js",
-      "scripts/merge-risk-records.mjs",
-      "scripts/validate-brand-records.mjs",
+      ...listMjsFiles("scripts"),
       ...listMjsFiles("data"),
     ];
     const syntaxResults = syntaxFiles.map(checkSyntax);
@@ -705,22 +704,8 @@ function main() {
     }
   }
 
-  details.warnings = warnings;
-
-  const ok = errors.length === 0 && (options.allowWarnings || warnings.length === 0);
-  const result = {
-    ok,
-    summary: {
-      records: details.count,
-      passed: passed.length,
-      warnings: warnings.length,
-      errors: errors.length,
-    },
-    passed,
-    warnings,
-    errors,
-    details,
-  };
+  const result = finalizeResult(validation);
+  const { ok } = result;
 
   if (options.json) {
     console.log(JSON.stringify(result, null, 2));
@@ -732,21 +717,21 @@ function main() {
     if (passed.length > 0) {
       console.log("\nPassed:");
       for (const item of passed) {
-        console.log(`  ✓ ${item.check}: ${item.message}`);
+        console.log(`  PASS ${item.check}: ${item.message}`);
       }
     }
 
     if (warnings.length > 0) {
       console.log("\nWarnings:");
       for (const item of warnings) {
-        console.log(`  ⚠ ${item.check}: ${item.message}`);
+        console.log(`  WARN ${item.check}: ${item.message}`);
       }
     }
 
     if (errors.length > 0) {
       console.log("\nErrors:");
       for (const item of errors) {
-        console.log(`  ✗ ${item.check}: ${item.message}`);
+        console.log(`  FAIL ${item.check}: ${item.message}`);
       }
     }
 
@@ -768,9 +753,11 @@ function main() {
   return ok ? 0 : 1;
 }
 
-try {
-  process.exitCode = main();
-} catch (error) {
-  console.error(`Brand avoidance validation: FAIL\n${error.stack ?? error.message}`);
-  process.exitCode = 1;
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  try {
+    process.exitCode = main();
+  } catch (error) {
+    console.error(`Brand avoidance validation: FAIL\n${error.stack ?? error.message}`);
+    process.exitCode = 1;
+  }
 }

@@ -137,7 +137,7 @@ export function validateBrandRecord(brand) {
 
 export function normalizeBrandList(records) {
   if (!Array.isArray(records)) {
-    throw new TypeError("brands.json must contain a JSON array");
+    throw new TypeError("records must contain an array");
   }
 
   return records.map((record, index) => normalizeBrand(record, index));
@@ -169,6 +169,10 @@ export function collectOptions(brands, field) {
   });
 }
 
+export const IDENTIFIER_LABELS = new Set([
+  "條碼", "barcode", "sku", "型號", "網域", "地址", "公開帳號", "官方網站",
+]);
+
 function searchableIdentifierText(value) {
   const cleaned = cleanString(value);
 
@@ -176,9 +180,9 @@ function searchableIdentifierText(value) {
     return "";
   }
 
-  const parts = cleaned.split(/[:：]/u).map((part) => part.trim()).filter(Boolean);
-  if (parts.length > 1) {
-    return parts.slice(1).join(" ");
+  const match = cleaned.match(/^([^:：]+)[:：]\s*(.+)$/u);
+  if (match && IDENTIFIER_LABELS.has(normalizeText(match[1]))) {
+    return match[2];
   }
 
   return cleaned;
@@ -193,7 +197,6 @@ function buildSearchText(brand) {
     [
       brand.name,
       ...asStringArray(brand.aliases),
-      brand.country,
       ...asStringArray(brand.identifiers).map(searchableIdentifierText),
     ].join(" "),
   );
@@ -205,6 +208,32 @@ export function getSearchText(brand) {
   }
 
   return brand[SEARCH_TEXT_CACHE] ?? buildSearchText(brand);
+}
+
+export function identityTerms(record) {
+  const terms = [];
+  for (const field of ["name", "aliases", "identifiers"]) {
+    const raw = record?.[field];
+    const values = Array.isArray(raw) ? raw : raw === null || raw === undefined ? [] : [raw];
+    for (const value of values) {
+      if (typeof value !== "string") continue;
+      const key = normalizeText(field === "identifiers" ? searchableIdentifierText(value) : value);
+      if (key) terms.push({ field, value, key });
+    }
+  }
+  return terms;
+}
+
+export function matchRecords(records, query, { mode = "exact" } = {}) {
+  if (!["exact", "partial"].includes(mode)) throw new TypeError("Unknown matching mode");
+  const key = normalizeText(query);
+  if (!key || !Array.isArray(records)) return [];
+  return records.flatMap((record) => {
+    const matchedTerms = identityTerms(record)
+      .filter((term) => mode === "exact" ? term.key === key : term.key.includes(key))
+      .map((term) => ({ ...term, kind: mode }));
+    return matchedTerms.length ? [{ recordId: record.id, record, matchedTerms }] : [];
+  });
 }
 
 export function filterBrands(brands, filters = {}) {
@@ -224,7 +253,8 @@ export function filterBrands(brands, filters = {}) {
       return false;
     }
 
-    if (query && !getSearchText(brand).includes(query)) {
+    if (query && !identityTerms(brand).some((term) =>
+      filters.mode === "exact" ? term.key === query : term.key.includes(query))) {
       return false;
     }
 

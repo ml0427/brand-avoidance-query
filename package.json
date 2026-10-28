@@ -1,0 +1,14 @@
+{
+  "name": "brand-avoidance-query",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "validate": "node scripts/validate-brand-records.mjs",
+    "build": "node scripts/build-ai-site.mjs",
+    "validate:site": "node scripts/validate-ai-site.mjs",
+    "test": "node --test",
+    "test:reader": "python -m unittest discover -s clients -p test_*.py"
+  },
+  "devDependencies": { "ajv": "^8.17.1" }
+}

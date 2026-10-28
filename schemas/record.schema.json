@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:brand-avoidance:record:1",
+  "type": "object",
+  "required": ["schemaVersion", "record", "sourceLinks"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "record": { "$ref": "urn:brand-avoidance:common:1#/$defs/record" },
+    "sourceLinks": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["sourceIndex", "originalUrl", "url"],
+        "properties": {
+          "sourceIndex": { "type": "integer", "minimum": 0 },
+          "originalUrl": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

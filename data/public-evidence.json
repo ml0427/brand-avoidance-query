@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "evidence/public-sources/2026-10-07-su-heng-forum-bio-excerpt.png",
+      "sha256": "c09a4f6a04a649712a64cd6d47999a5ec5d7f67cb8db74332e696f2ec78499e7"
+    },
+    {
+      "path": "evidence/user-submissions/2026-08-27-cha-li-wang-moli-longjing-china-origin-thread.png",
+      "sha256": "40d6df3b89a835b0f1eae7826a9bcaeaf9412c173e05632045a1ae1783231fba"
+    },
+    {
+      "path": "evidence/user-submissions/2026-09-21-fungo-water-boiled-sunflower-seeds-origin-label.png",
+      "sha256": "703f938d1fc710761f3e897e6c0825fe7ec8307bb5153145b4c0fa4f9ab45a2c"
+    },
+    {
+      "path": "evidence/user-submissions/2026-09-29-chuanqi-dancong-oolong-china-origin-label.png",
+      "sha256": "1120a5c08fe156ea71840de8e85de05eb9411a3a2d1b55d25a7554ad7d1708c8"
+    },
+    {
+      "path": "evidence/user-submissions/2026-09-29-weiyi-pengxianxian-seasoning-china-origin-label.png",
+      "sha256": "e516613b106c02dddcd1b7436621366abd1f8ae74cb7c9f8ae7129ec033ce677"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-02-nicky-wu-tiananmen-crop.png",
+      "sha256": "64e7e0eb443e0bd421d78d0e844351afe85aaa31afae8ffe85760e6194632ede"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-03-wu-tung-lin-shanghai-coaching-crop.png",
+      "sha256": "72e276808bb76d687b0b7f07799f2f181b51469e37746266ad8df971215ea554"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-03-yixiang-clarification-text-crop.png",
+      "sha256": "e22effda98ac6ddfca0b2beb15c6e39ddb146edaa8286213c78cd54c949331c4"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-05-chen-shih-hua-suspected-allegation-text.png",
+      "sha256": "87779cdbb0f8b409c8541ffd03be7309b71fe3815fe3b719e4af073dde762193"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-05-hsu-pei-wen-suspected-allegation-text.png",
+      "sha256": "2df1438c472d5c4d478324fbe2bbe5e5b5d85c578488cd4f526e35c2969e84e2"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-05-zheng-fangxing-consent-question-crop.png",
+      "sha256": "5e8694f3511cf1b0b544c734a0f38ebb25cc999c20b99247c7185fcb0a49500b"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-05-zheng-fangxing-reply-crop.png",
+      "sha256": "d73e7487dced204f69417a5b1ecea0ac68a04bc40804ee901e7b64418b0dccc2"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-06-chen-yi-min-harm-reduction-headline.png",
+      "sha256": "ae88693b09694a0c2eb60648386047cfd07b40810e7199780ec0161b75efd28a"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-07-chi-kuan-min-child-abuse-headline.png",
+      "sha256": "a4d0abb72538ff8ee257215036543e4d253def47521b12607184511a1eede663"
+    },
+    {
+      "path": "evidence/user-submissions/2026-10-10-lanai-hotpot-bilibili-title-crop.png",
+      "sha256": "f75cf7803c796ee19d6ad64c027f02c47562ffca827995a0b102e71f021700ec"
+    }
+  ]
+}

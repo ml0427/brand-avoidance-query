@@ -1,215 +1,66 @@
 ---
 name: brand-avoidance-active-discovery
-description: Proactive discovery workflow for D:\AI_workspace\brand-avoidance-query. Use when the user asks to actively scan current public sources for high-signal brand-avoidance candidates. This skill discovers and reports candidates only; it does not edit records, regenerate brands.json, run final local validation, commit, or push.
+description: Discover precise brand-avoidance candidates from current public sources. Read AGENTS.md first. Report evidence and uncertainty only; do not edit records, build, commit, push, or publish.
 ---
 
 # Brand Avoidance Active Discovery
 
-## Boundary
+## Authority And Boundary
 
-Use this skill for **主動查**: finding new candidates from current public sources that may cross the user's avoidance-value boundaries.
+先讀專案根目錄 `AGENTS.md`，依其個人價值、入庫授權、重大人物指控、證據分層、最小範圍及稅籍資料防線執行。本技能只作主動探索，不另定狀態門檻。
 
-Do not use this as the local verification step. Do not edit `scripts/merge-risk-records.mjs`, `brands.json`, or `app-core.mjs`. Do not commit or push.
+只找候選、核對來源並回報；不得修改來源、編譯器、匹配核心、證據清單、筆記或產物，不執行 build、提交或推送。探索結果及建議分級不是寫入授權，必須等使用者接受明確候選後才交給 record-edit。
 
-Allowed local checks:
+可唯讀查看 `git status --short --branch`、以 rg 檢查 `data/records/`，並依 `compileRecords()` 與共用 `matchRecords()` 核對清理後本地紀錄。不讀退役全集或用舊格式查庫。精準規則見 `docs/ai-reader-contract.md`；若使用已建好的本地站，依 `clients/brand-avoidance-query/SKILL.md` 查 manifest／索引／單筆，不拿遠端站證明未推送來源已更新。
 
-- `git status -sb` to understand workspace state.
-- A quick duplicate check with `rg` or `filterBrands()` so the discovery report can say whether a candidate appears already covered.
+## Discovery Strategy
 
-## Core Principle
+以高訊號、低誤判為原則，候選必須是可辨識的品牌、公司、人物、店家、產品／SKU、App、作品、公開帳號或網域，不用泛稱／事件詞冒充實體。
 
-Prefer **high-signal, low-false-positive discovery**.
+1. 每日固定：制裁、資安、出口管制、主管機關檢驗與法院／主要新聞原始來源。
+2. 每週或線索觸發：所有權／控制、國資、黨建、年報與公司官方聲明。
+3. 個案觸發：臺灣標示、政治表態、產品原產地、店家或人物爭議。不每日無差別掃所有藝人、政黨成員或關係人。
 
-Do not run broad outrage-driven searches as the default. Use a layered strategy:
-
-1. **Daily fixed scan:** government sanctions, cybersecurity, export-control, inspection, court, and major-news original sources.
-2. **Weekly or lead-triggered scan:** ownership/control, PRC state ownership, CCP/party-building, company registration, annual reports, official statements.
-3. **Case-triggered scan only:** Taiwan-label disputes, public political-compliance statements, SKU/origin records, shop/person/social controversies.
-
-Every candidate must be an exact entity: brand, company, person, shop, media work, app/package, product, SKU, domain, company number, or other narrow identifier.
-
-## Discovery Targets
-
-Search for candidates that match the user's value boundaries:
-
-- PRC state ownership, SOE/central SOE/local SOE control, state-backed investment/control.
-- CCP party-building, party-enterprise integration, or official CCP governance links, when tied to a precise company/brand/control chain.
-- Sanctions, export controls, national-security lists, cybersecurity warnings, surveillance, human-rights, forced-labor, censorship, or data-security concerns.
-- Taiwan-label downgrading or political-compliance wording: `中國台灣`, `台灣地區`, `中華人民共和國台灣地區`, `一國兩制`, `九二共識`, `反台獨`, official party-state slogans.
-- Red-media / Want Want group and directly controlled brands or outlets.
-- Precise product/SKU origin concerns, including China-origin ingredient, concentrate, oil, tea, or raw-material issues, only when there is a precise product/SKU target.
-- Political shop/person records only when there is direct public evidence and they are clearly personal/political preference records, not objective CCP/security risk.
-
-### Explicitly narrow these boundaries
-
-- Do **not** treat `Made in China` alone as PRC state/CCP/security risk. It may be a SKU/origin or personal-avoid signal only.
-- Do **not** treat a Taiwanese artist's mere China-market work as a candidate. Require official-media reposts, unification propaganda, Taiwan-label downgrading, CCP official event participation, or comparable political-compliance evidence.
-- Do **not** broadly scan all KMT/TPP politicians, relatives, or affiliated businesses. Require direct ownership/control, executive role, family-business control evidence, brand authorization, or explicit user interest.
-- Do **not** expand one hotel, shop, product, app, or subsidiary incident to all same-group brands unless control/brand scope is proven.
-- Do **not** put generic categories or origins into aliases: `水`, `飲料`, `茶`, `中國製`, `中國茶`, `CNC`, `藝人`, `餐廳`, etc.
+延續既有探索方向：中國國資／中共治理關聯、監控／人權／強迫勞動／審查／資料安全、臺灣標示與政治配合、旺旺等紅媒集團的可證明直接控制對象，以及精確商品原產地。店家或人物政治偏好只作可歸屬的 personal 候選，不冒充中共／國安風險；不因國民黨／民眾黨身分或親屬關係就擴張到企業，須有直接角色／控制證據或使用者明確指定。
 
 ## Search Lanes
 
-### Lane A — Daily fixed: sanctions / security / official warnings
+### A: Sanctions, Security And Official Notices
 
-Run first for daily scans. These have the highest signal and can support `confirmed` when official.
+優先查 OFAC／美國財政部、BIS、FCC、國安／強迫勞動名單，以及臺灣資安、食藥、法院、採購與檢驗原始公告。確認名單實際對象、日期、措施及適用範圍；公告存在不自動證明其他未提及指控。
 
-Preferred sources:
+例：`site:ofac.treasury.gov/recent-actions "<target>"`、`site:bis.gov "<target>"`、`site:moda.gov.tw "<target>"`、`site:fda.gov.tw "<product>"`。
 
-- OFAC / U.S. Treasury recent actions and press releases.
-- BIS Entity List / export-control notices.
-- U.S. State Department sanctions releases.
-- FCC Covered List, DoD Chinese Military Companies, forced-labor and national-security lists when relevant.
-- Taiwan MODA/ACS cybersecurity notices, FSC/MOEA/TFDA/courts/procurement/inspection pages.
-- Major news original articles that quote or link official actions.
+### B: Ownership, State Control And Party Links
 
-Example queries:
+以公司官網、投資人關係、MOPS／證交所、CNINFO、HKEX、SEC、年報或官方黨建頁核對可歸屬的控制鏈。只採來源直接支持的關聯，不將投資、通路、授權或親屬關係等同控制。
 
-```text
-site:ofac.treasury.gov/recent-actions Taiwan company sanctions
-site:home.treasury.gov/news/press-releases Taiwan sanctions Iran UAV CNC
-site:bis.doc.gov Entity List Taiwan company China
-site:state.gov sanctions Taiwan company Iran UAV
-site:moda.gov.tw 資安 高風險 App 中國
-site:cert.tanet.edu.tw 中國 App 資安 風險
-site:fda.gov.tw 中國 產地 食品 裁罰 品牌
-```
+例：`"<target>" 股權 結構`、`"<target>" 年報 黨建`、`site:hkexnews.hk "<target>"`。不查、不保存台灣公司稅籍號碼，不以該號碼作身分橋接或搜尋鍵。
 
-### Lane B — Weekly or lead-triggered: ownership / SOE / CCP links
+### C: Taiwan Labels And Public Political Statements
 
-Use for known candidates, parent companies, or periodic deeper scans. Do not attempt full-database scans every day.
+查品牌條款、註冊流程、官方公告、具可歸屬性的公開貼文與可信原始報導；頁面變動時找可核對的存檔。藝人在中國工作本身不等於政治配合；須有直接表態、轉發或活動參與證據。
 
-Preferred sources:
+例：`"<target>" "中國台灣"`、`"<target>" "九二共識"`、`"<target>" 國台辦 央視`。
 
-- Official company websites and investor relations.
-- Taiwan company registration, stock exchange filings, MOPS.
-- CNINFO, HKEX, SEC filings, annual reports.
-- SASAC / 國資委 sources when the ownership target is precise.
-- Official party-building pages, but only as evidence for the entity actually covered by the page.
+### D: Product, Origin And Ingredient
 
-Example queries:
+只有精確商品、SKU、包裝、條碼、產品頁或使用者指定目標才查。原產地／原料資料只支持已確認品項，不擴大到全部同品牌商品，也不因中國原產推定食安、違法、國資或中共控制。全家商品可轉 family-foodsafety-lookup。
 
-```text
-"<target>" 母公司
-"<target>" 股權 結構
-"<target>" 統編 負責人 董事
-"<target>" 年報 黨建
-"<target>" 黨支部
-"<target>" 國資委
-site:cninfo.com.cn "<target>" 黨建
-site:hkexnews.hk "<target>" annual report
-```
+### E: Social Leads, Shops And People
 
-### Lane C — Periodic / lead-triggered: Taiwan-label and political compliance
+社群截圖、論壇與圖卡先作線索，尋找原始公開貼文、明確人物／店家及可歸屬來源。依 AGENTS，重大刑事、兒少傷害、性暴力、暴力、掩蓋、貪腐或官方失職指控，不得以純截圖或 personal 偏好跳過事實查核。
 
-Use when there is a brand/media/app/person target or a major current event. Do not broadly trawl all artists or all parties.
+## Evidence And Scope Check
 
-Preferred sources:
+- 優先使用政府／法院／官方名單、企業與當事人原始公開資料，再以具名可信報導補脈絡。社群線索不自行升為來源確認。
+- 每個來源保留直接 URL、日期、種類及實際支持的窄幅事實；身分橋接與爭議主張分開。
+- 分開來源可見事實、使用者個人判斷、外部可驗證事實與法律定性；建議狀態與 confidence 依 AGENTS，不因未違法就否定個人避開理由。
+- 單一店家／分店／SKU 不擴成全品牌、集團或關係人；制裁／檢驗也只按公告範圍。
+- 快速檢查既有來源及清理後紀錄，重複或被 umbrella 紀錄涵蓋時回報既有 ID；較窄新線索可建議補來源，不再造重複紀錄。partial 命中只作候選，無命中不表示安全。
 
-- Brand official terms, registration flows, app screens, archived pages when a live page was changed.
-- Official statements, press releases, and verified social posts.
-- Government responses and major news original reports.
-- China official media posts only when the target's participation or repost is directly evidenced.
+## Report And Stop
 
-Example queries:
+以繁體中文回報候選名稱／精確類型、lane、建議分級、個人理由與來源事實、直接來源與日期、既有 recordId 或未確認、範圍、未證實事項及下一步。資料不足寫 lead／hold／needs evidence，不假裝已入庫。
 
-```text
-"<target>" "中國台灣"
-"<target>" "台灣地區"
-"<target>" "中華人民共和國台灣地區"
-"<target>" "九二共識"
-"<target>" "一國兩制"
-"<target>" "反台獨"
-"<target>" site:weibo.com 央視 台灣必歸
-"<target>" 國台辦 人民日報 央視
-```
-
-### Lane D — Case-triggered only: SKU / origin / ingredient
-
-Use only when there is a precise brand/product/SKU, product page, package photo, channel listing, official reply, or user-provided target.
-
-Preferred sources:
-
-- Official product page and manufacturer/owner page.
-- Package photos, ingredient/origin labels, product barcodes, channel product codes.
-- Convenience-store / retailer product pages or food-safety pages.
-- TFDA or inspection pages when available.
-
-Example queries:
-
-```text
-"<product/SKU>" 產地 中國
-"<product/SKU>" 原料 中國
-"<product/SKU>" 茶葉 中國
-"<product/SKU>" 濃縮汁 中國
-"<product/SKU>" 製造商 負責廠商
-"<product/SKU>" 條碼 產品頁
-```
-
-### Lane E — Leads only: social / personal / shop-politics
-
-Use social/community sources only as leads unless the user explicitly accepts personal-scope evidence.
-
-Acceptable use:
-
-- Identify a shop/person/brand lead.
-- Find a public original post, photo, statement, or media report to verify.
-- Recommend `hold`, `lead`, or `personal`, not `confirmed`, unless stronger sources exist.
-
-Example queries:
-
-```text
-"<shop/person>" 反罷免
-"<shop/person>" 不同意罷免
-"<shop/person>" 青鳥
-"<shop/person>" 店家 聲明
-"<shop/person>" Threads Facebook 原始貼文
-```
-
-## Evidence-to-Status Gate
-
-Use this gate in discovery reports. The report can recommend a status, but record-edit makes the final database decision.
-
-- `confirmed`: official sanctions/security/government notices, court/inspection/corporate filings, official company/self-disclosed sources, or original public statements directly supporting the risk claim.
-- `watchlist`: major-news original reporting or official-source quotations are credible, but original/archived/identifier evidence is incomplete.
-- `personal`: the case fits the user's personal avoidance values but does not prove objective illegality, sanctions, PRC state/CCP control, or safety/security risk.
-- `lead` / `hold`: social screenshots, anonymous claims, forum lists, unclear target identity, unresolved same-name risk, or insufficient source quality.
-
-Never label a candidate `confirmed` only because social media or a single commentary article says so.
-
-## Source Standard
-
-Prefer sources in this order:
-
-1. Government, sanction, court, company registration, stock exchange, procurement, inspection, cybersecurity, or official list pages.
-2. Official brand/company/person/app websites, announcements, verified posts, app stores, product pages, package/origin evidence.
-3. Major news original articles, especially those quoting or linking official sources.
-4. The person's or shop's own public social post.
-5. Social screenshots, list images, PTT, Dcard, Threads, Facebook discussions as leads only unless the user explicitly accepts personal-scope evidence.
-
-For each candidate, capture direct URLs, dates, source type, and exactly what the source proves. Do not use a source to prove more than it actually supports.
-
-## Duplicate and Scope Check
-
-Before reporting a candidate, quickly check whether it is already covered locally:
-
-- Prefer `filterBrands()` for user-facing matching behavior.
-- Use `rg` only as a quick secondary text check.
-- If a broad query matches an existing umbrella record, report that and avoid duplicate recommendations.
-- If the new lead is narrower than an existing umbrella record, recommend `hold` or `source update`, not a duplicate record.
-
-## Output
-
-Return a concise candidate report in Traditional Chinese:
-
-- `候選`: exact target name.
-- `類型`: brand/company/person/shop/media/product/SKU/app/etc.
-- `lane`: A sanctions/security, B ownership/CCP, C Taiwan-label/political-compliance, D SKU/origin, or E social/personal lead.
-- `建議分級`: lead/hold/personal/watchlist/confirmed.
-- `可能原因`: which user boundary it may cross.
-- `來源`: direct URLs and dates when available.
-- `已在本機清單`: yes/no/unknown from quick duplicate check.
-- `建議下一步`: add as personal/watchlist/confirmed, update source, hold, or needs more evidence.
-- `不確定性`: what is not proven and what would be needed to upgrade.
-
-Stop after the report unless the user or orchestration explicitly invokes the record-edit skill.
+回報後停止。只有使用者依 AGENTS 給予寫入授權，才由 router 轉 record-edit；主動探索不自動發布。

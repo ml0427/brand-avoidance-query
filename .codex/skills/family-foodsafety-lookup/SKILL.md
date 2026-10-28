@@ -7,6 +7,8 @@ description: Look up Taiwan FamilyMart food-safety product data from https://foo
 
 Use this skill to query the Taiwan FamilyMart "全家食在購安心" site before making claims about FamilyMart product supplier, source, ingredient origin, or package/source labels.
 
+先讀專案根目錄 `AGENTS.md`；入庫授權、最小適用範圍、主觀／客觀證據、稅籍資料禁令與完整驗證 gate 以該檔為唯一權威。本技能只查全家商品來源，不自動入庫或發布；以下實際全家 API 與 bundled script 的使用方式不變。
+
 ## Quick Start
 
 Run the bundled script from the repo root:
@@ -44,7 +46,7 @@ When using this data for brand-avoidance records, treat it as source/supplier ev
 1. Search by exact product name, package wording, barcode, or `CMNO`.
 2. If the query returns multiple products, narrow by product name, category, volume, barcode, or `CMNO`.
 3. Fetch details for each candidate with `QueryFsProductByItem`.
-4. Cross-check the supplier name against the local avoidance database with `filterBrands()` when the user's question is about avoid/allow decisions.
+4. When the question concerns avoidance, cross-check the exact supplier/product identity using the manifest/index/record reader described in `docs/ai-reader-contract.md` and `clients/brand-avoidance-query/SKILL.md`. For unpublished changes, use the current local `_site/` snapshot produced by the complete verification workflow, or inspect `compileRecords()` with the shared `matchRecords()` rules; never use the remote site to prove local edits. Exact hits still require the full record and scope; partial results are candidates, and no match does not imply safety. Do not use retired whole-dataset files or legacy URL fallback. This replaces only the local database lookup, not the FamilyMart query script or API calls.
 5. Keep aliases narrow if adding records: use product-qualified names, supplier names, `CMNO`, barcode, and exact package wording. Do not add generic aliases such as `水`, `瓶裝水`, `飲料`, `全家產品`, or `全家自有品牌`.
 
 ## Caveats

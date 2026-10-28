@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-28",
+  "baselineCommit": "fd9cec26a98ee4eddc0028176f08562bf72ec4b6",
+  "baselineRecords": 430,
+  "compiledRecords": 430,
+  "recordsUnchanged": true,
+  "canonicalRecordsSha256": "a6b0d47ab408e0dea55467c084dbf9f4fe2d628a865a6e2f20d596264059507a",
+  "publishedEvidence": 15,
+  "untrackedEvidencePreservedSha256": "4b6e019a1f31f05906711f349b2d3e56cd47f15307afc0052c571adf7a0af499",
+  "browser": [
+    {
+      "viewport": "desktop",
+      "page": "entry",
+      "noJavaScript": true,
+      "title": "品牌／公眾人物風險資料",
+      "mainCount": 1,
+      "scripts": 0,
+      "overflow": false,
+      "links": 6
+    },
+    {
+      "viewport": "desktop",
+      "page": "record",
+      "noJavaScript": true,
+      "title": "KP Global / Palladium / K-Swiss",
+      "mainCount": 1,
+      "scripts": 0,
+      "overflow": false,
+      "links": 6
+    },
+    {
+      "viewport": "mobile",
+      "page": "entry",
+      "noJavaScript": true,
+      "title": "品牌／公眾人物風險資料",
+      "mainCount": 1,
+      "scripts": 0,
+      "overflow": false,
+      "links": 6
+    },
+    {
+      "viewport": "mobile",
+      "page": "record",
+      "noJavaScript": true,
+      "title": "KP Global / Palladium / K-Swiss",
+      "mainCount": 1,
+      "scripts": 0,
+      "overflow": false,
+      "links": 6
+    }
+  ],
+  "scaling": [
+    {
+      "records": 10000,
+      "elapsedMs": 1688,
+      "files": 20266,
+      "shards": 128,
+      "maximumShardBytes": 65428,
+      "exactQueryArtifactRequests": 3,
+      "heapMiB": 70
+    },
+    {
+      "records": 50000,
+      "elapsedMs": 7537,
+      "files": 101284,
+      "shards": 637,
+      "maximumShardBytes": 65298,
+      "exactQueryArtifactRequests": 3,
+      "heapMiB": 137
+    }
+  ],
+  "scope": "Local migration, browser and scaling evidence only; not a live deployment or rollback claim.",
+  "nodeTests": {
+    "passed": 36,
+    "failed": 0,
+    "skipped": 0
+  },
+  "pythonReaderTests": {
+    "passed": 32,
+    "failed": 0
+  },
+  "installedReader": {
+    "installedReaderRecordsChecked": 430,
+    "httpRequests": 1291,
+    "evidenceRequests": 0,
+    "elapsedMs": 15502,
+    "manifestVersion": "e44fb9a479dcda6be4460f12e0dfc0c0108976724cde823f1ac6f3e14604fa8a"
+  },
+  "review": {
+    "mustFixFindings": 2,
+    "resolved": 2,
+    "reviewer": "Harvey",
+    "remainingMustFix": 0
+  }
+}

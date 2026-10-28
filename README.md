@@ -1,147 +1,108 @@
-# 品牌／公眾人物避雷查詢
+# 品牌／公眾人物避雷資料站
 
-這是一個純靜態的避雷查詢頁，用來查詢使用者設定的個人避買品牌、公眾人物、政黨人物名單、旅遊目的地風險提醒，以及公開來源可支持的中共政權關聯風險廠商或政治表態風險項目。
+本專案以 AI 查詢為主，提供純靜態個人避雷資料及無 JavaScript 的原文頁，整理品牌、商品、公眾人物、組織與旅遊風險的來源、個人判斷及適用限制。它不是動態搜尋 API，也不需要啟動本機專案才能讀取公開資料。
 
-線上版：
+站點入口：[品牌／公眾人物避雷資料站](https://ml0427.github.io/brand-avoidance-query/)；工具型 AI 從 [manifest](https://ml0427.github.io/brand-avoidance-query/manifest.json) 開始。這些是發布目標網址，不代表本次改版已經遠端部署或驗收；實際可用版本以成功部署及實際取得的 manifest 為準，push 成功不等於上線。
 
-```text
-https://ml0427.github.io/brand-avoidance-query/
-```
+## 判讀邊界
 
-頁面讀取同資料夾的 `brands.json`，提供品牌／人物／政黨名單搜尋、可信度篩選、狀態篩選、大分類篩選、避買理由篩選與資料來源顯示。
+這是使用者的個人風險偏好、道德選擇與消費備忘，不是法院判決、行政處分、官方黑名單、法律定論或商業抵制號召。
 
-## 改版規劃
+- `personal`（個人避買）：使用者依個人價值或風險容忍度選擇避開，不表示已證實違法、不當或食安問題。
+- `watchlist`（觀察中）：有待追蹤、補充來源或釐清脈絡的資訊，不是定論。
+- `confirmed`（來源確認）：來源支持該紀錄所列的特定事實或關聯，並非所有指控、商品、分店或關係人均獲確認，也不等於法律認定。
 
-[GitHub AI-first 資料站改版計畫](docs/ai-first-github-plan.md) 定義 GitHub Pages 的靜態資料契約、AI 讀取方式、發布與驗收條件。採一次切換，不保留舊格式或舊網址相容；目前只有規劃文件，尚未改變現行網站。
+狀態與 confidence 分開閱讀。每筆的 summary、aiNotes、sources.note、適用對象及日期都屬必要內容，不能只讀名稱或索引就下結論。同名、集團別名、名單成員或單一 SKU 命中，不證明公司控制、個人涉案或全品牌適用。
 
-## 重要聲明
+公開資訊可能過時、更正或不完整；資料未收錄不表示安全、清白或適合購買。內容不構成法律、投資、採購或消費建議。更正／下架請透過 repository 的 issue 或 pull request 提供可核對的來源與範圍。
 
-本專案是個人風險偏好與查詢備忘工具，協助整理公開來源與使用者自行設定的避買／觀察線索；不是法院判決、行政處分、官方黑名單、事實終局認定，也不是對任何品牌、公司、人物、地區或商品的商業抵制號召。
+## 工具型 AI 讀取
 
-資料狀態僅代表本專案內部的整理層級：
+完整格式見 [AI Reader Contract v1](docs/ai-reader-contract.md)，可分發的查詢技能與 reader 見 [clients/brand-avoidance-query](clients/brand-avoidance-query/)。
 
-- `personal`／「個人避買」：代表使用者基於主觀偏好、風險容忍度或個人線索選擇避開；不必然表示該對象違法、受官方處分或存在客觀不當事實。
-- `watchlist`／「觀察中」：代表有待追蹤或仍需補充脈絡的公開資訊或疑慮；不應解讀為定論。
-- `confirmed`／「來源確認」：代表公開來源可支持本專案所列的特定關聯、標示或風險理由；仍不等同法院或主管機關的法律認定，也不代表所有商品、分支或關係人均有相同情況。
+直接使用 reader：`python clients/search_brand.py "查詢名稱"`；部分候選加 `--mode partial`。更新本機 Codex 查詢技能可執行 `./scripts/install-query-skill.ps1`，安裝器只同步 SKILL.md 與 reader，保留其餘技能設定；需要指定目錄時使用 `-SkillRoot`。腳本原始碼維護在 `clients/search_brand.py`，不另手動維護安裝副本。
 
-本專案盡量保留來源、採取保守措辭，並避免將未確認指控寫成定論；但公開資料可能已過時、不完整、被後續更正，或因同名、相似名稱、品牌授權、代理商、分店、人物重名等情況產生碰撞。讀者在採取任何行動前，應自行查證最新官方公告、當事人說明與原始來源。
+1. 取得 `manifest.json`，確認支援的 schemaVersion／searchVersion，記下 dataVersion、sourceCommit 與 recordCount。它只指向目前部署的一份快照。
+2. 依索引描述的 firstKey／lastKey 選片，驗證回應原始 bytes、大小與 SHA-256 後解析。exact 預設只讀唯一涵蓋鍵值的分片；partial 必須掃描所有分片。
+3. 讀取所有命中 recordId 的完整 JSON，驗證其描述，再讀 record 與 sourceLinks；不要把索引名稱當成完整證據。依 recordId 去重，不能依 name 合併同名紀錄。
+4. 回報資料版本、來源提交、matched field／value、模式、狀態、信心、範圍、證據限制與來源；套 limit 前先算 totalMatches，並列 returnedMatches／hasMore。
 
-本專案內容不構成法律意見、投資建議、採購建議或消費建議。任何搜尋結果只供個人判斷參考，使用者與讀者應自行承擔查證與決策責任。
+索引只涵蓋 `name`、`aliases`、`identifiers`。正規化使用合併空白、trim、NFKC 與 Unicode 小寫；identifier 只剝除契約明列的展示標籤，不任意拆除 URL 協定、埠號或冒號前綴。country、分類、摘要、理由、來源文字與 aiNotes 不算實體命中。
 
-如當事人或讀者認為資料有錯誤、已改善、需要補充脈絡，或希望更正／下架特定項目，歡迎透過 GitHub issue、pull request，或此 repository 所列的 contact 方式提出說明。提出時建議附上可查證來源、官方公告、判決／處分變更、品牌授權或更正資料，以便維護者保守更新。
+exact 是完整正規化名稱／別名／識別碼相等；partial 是 substring 候選，不是身分確認。可以用泛稱探索，但不能只憑候選宣告對象適用某筆風險。完整查詢無命中只表示該快照未直接收錄。
 
-## 使用方式
+站內 artifact URL 都相對於包含它的 JSON 文件解析，並限制在 manifest 所屬 origin 與專案路徑；外部原始來源則依 sourceLinks 閱讀。本地證據只存在快照內，來源原值保留供稽核，不使用舊根目錄證據 URL。不預先下載證據圖片或全體紀錄。
 
-在搜尋框輸入品牌名、公司名、公眾人物姓名、旅遊目的地、常見別名或辨識編號即可查詢，例如：
+遇到 404、雜湊／大小不符、無效 JSON／schema／版本或資料不一致時，丟棄該次資料、重讀 manifest，從頭重試一次；仍失敗就回報「資料不可用／無法確認」，不是「沒有收錄」。站點只保留目前快照，舊版路徑可能失效；不回退舊格式或以空陣列假成功。
 
-- `TikTok`
-- `MG4`
-- `DJI Mini`
-- `味全`
-- `4710088473141`
-- `成龍`
-- `統促黨`
-- `王耀慶`
-- `黃國昌`
-- `國民黨`
-- `柬埔寨`
-- `韓國旅遊風險`
+## 無 JavaScript 閱讀
 
-搜尋框查名稱、別名與辨識編號，並允許使用者用泛稱探索，例如 `拉麵`、`餐廳`、`果汁`、`統一` 可能回傳名稱或別名含有該詞的紀錄。資料品質改由入庫驗證把關：沒有品牌限定的普通商品名，例如水果品種、鳳梨酥、熱水壺、行動電源，不應被寫成獨立 `aliases` / `identifiers`。辨識編號搜尋保留給使用者常查的條碼、食品業者登錄字號、網域、地址、官方帳號或正式案號；台灣公司稅籍號碼一律不查、不存、不作搜尋鍵。
+從站點首頁或 [llms.txt](https://ml0427.github.io/brand-avoidance-query/llms.txt) 找到目前快照的靜態目錄，再循每個名稱的真實連結讀取完整單筆 HTML。目錄有分片導覽，不需要搜尋框、表單、canvas 或 JavaScript。
 
-## 開發預覽
+無法執行 reader 的瀏覽型 AI 仍可循連結讀取；若工具截斷、無法遍歷全部必要目錄、不能核對版本或有紀錄不可讀，必須標示「未完成查詢」及具體限制，不能宣稱完整無命中。llms.txt 是可分享入口，不保證每個 AI 會自動發現或遵守。
 
-請用 HTTP 靜態伺服器開啟，不要直接雙擊 `index.html`。
+## 日期與短期警示
 
-PowerShell：
+特定食品／批號公告預設是短期品項警示，不擴大為全品牌永久避雷。使用 temporaryUntil、reviewAfter 與 temporaryAlertReason 保留期限與原因。
 
-```powershell
-.\start-server.ps1
-```
+以查詢時 Asia/Taipei 曆日判斷：temporaryUntil 當日仍在期限內，次日起提示歷史警示；reviewAfter 當日即待複查。這些提示不改寫原狀態或法律判斷。靜態 HTML 保存日期與規則，不會自動跨日更新；日期未知的讀取端只列期限，不猜有效／過期。
 
-開啟：
+## 來源與建置產物
+
+唯一紀錄來源為 `data/records/*.mjs`；共用 `data/compile-records.mjs` 的 `compileRecords()` 套用 cleanup、override、重複 ID 檢查與 ID 排序。來源驗證、builder 與測試使用同一份編譯結果，保留單筆全部欄位與內部陣列順序。
+
+建置產生：
 
 ```text
-http://localhost:4173/
+_site/
+  index.html
+  llms.txt
+  manifest.json
+  v1/<dataVersion>/
+    inventory.json
+    schemas/...
+    index/0000.json ...
+    catalog/index.html
+    catalog/0000.html ...
+    records/<id>.json
+    records/<id>.html
+    evidence/...
 ```
 
-若 4173 已被使用：
+dataVersion 是 canonical inventory.json bytes 的 SHA-256。版本化檔案保留相對連結，不含建置時鐘或 sourceCommit；提交資訊在根 manifest。inventory 列相對路徑、bytes 與 SHA-256，不列自己。索引每片最多 65,536 bytes，同一鍵不拆片。
+
+只發布經驗證的 `_site/`，不提交產物或發布整個 repo。公開證據由 `data/public-evidence.json` 的核准路徑與 SHA-256 控管；本地筆記、技能、未追蹤檔與未核准證據不進站點。公開 repo 本身及 Git 歷史不因這項限制變成私人資料。
+
+本次採單一契約：不提供 brands.json、merge／舊 gen、record-order、舊陣列 adapter、legacy URL 或自動 fallback。一次切換及整站回退見 [部署操作](docs/deployment.md)；[改版計畫](docs/ai-first-github-plan.md) 留作設計與遷移歷史，現行規則以 AGENTS 與 reader contract 為準。
+
+## 本地建置與驗證
+
+需要 Node.js 24、npm 及 Python 3.13（CI 使用版本）。從 repo 根目錄執行：
 
 ```powershell
-.\start-server.ps1 -Port 4174
+npm ci
+npm run validate
+node --test
+python -m unittest discover -s clients -p test_*.py
+npm run build
+npm run validate:site
+git status --short --branch
+git diff --stat
+git diff --check
 ```
 
-## 資料
-
-`brands.json` 是由 `data/records/*.mjs` 產生的查詢資料；實際筆數與完整內容以來源紀錄與產生檔為準。README 只維護用途、使用方式與穩定收錄原則，不列總筆數或完整資料清單，避免每次新增資料都要同步改公開文件。
-
-資料狀態用來標示收錄邊界：
-
-- `confirmed`：公開來源可支持特定收錄理由。
-- `watchlist`：可信線索或觀察項目，尚不作定論。
-- `personal`：使用者個人避買／避開偏好，不等同違法、官方認定或客觀黑名單。
-
-低信心或只有調查性質的項目應放 `watchlist`，不要寫成法律定罪。此清單是避買查詢工具，不是法律裁判，也不代表台灣禁售或證明每項商品都有問題。
-
-食藥署或其他主管機關公布的特定食品、油品、批號或效期不合格公告，預設視為短期品項警示，不直接擴大成整個品牌永久避雷；資料可用 `temporaryUntil` 與 `reviewAfter` 標示約 30 天高亮與複查期限，並以 `temporaryAlertReason` 說明短期警示原因。若到期後沒有新事件，應降為歷史警示或複查；只有反覆出包、拒不回收、系統性管理問題或使用者明確指定時，才升級成品牌層級的長期觀察／避開。
-
-## 資料欄位原則
-
-- `aliases` 只放品牌名、公司名、明確系列名或常見通路名稱。
-- 公眾人物只放本名、藝名、常用外文名或正式組織名。
-- 沒有品牌限定的普通商品名，例如水果品種、鳳梨酥、熱水壺、行動電源，不放 `aliases`。
-- `藝人`、`政治人物`、`主持人`、`主席`、`候選人`、`歌手`、`演員` 等泛稱或職稱，不放 `aliases`。
-- 政黨名單可以放政黨名與可核對姓名，但不把一般黨員、職稱、地方議員或候選人泛稱硬塞成 alias。
-- 旅遊目的地風險可以放國家／地區名與明確風險查詢語，例如 `柬埔寨旅遊風險`；不把 `旅遊`、`旅行`、`出國`、`國家`、`機票` 等泛稱作有效命中。
-- `identifiers` 顯示為「辨識編號」且會被搜尋，只放使用者常查的條碼、食品業者登錄字號、網域、地址、官方帳號或正式案號；台灣公司稅籍號碼一律不放入任何紀錄欄位。
-- `temporaryUntil`、`reviewAfter`、`temporaryAlertReason` 用於短期食安／品項公告；日期使用 `YYYY-MM-DD`，且短期到期日必須搭配原因說明。
-- 搜尋框只查品牌名、別名與辨識編號；分類與避買理由用下拉篩選。
-- `categories` 使用大類，不放細項。
-
-現有分類固定為：
-
-- 食品／飲料／農水產
-- 科技／通訊／消費電子
-- 監控／AI／資安
-- 電商／App／數位服務
-- 家電／智慧家庭
-- 汽車／交通／能源
-- 服飾／玩具／生活零售
-- 餐飲／生活服務
-- 媒體／娛樂／公眾人物
-- 政治／統戰／公眾人物
-- 政治／政黨人物名單
-- 體育／協會治理
-
-## 更新資料
-
-若要重跑本輪親共／中共政權關聯風險資料合併，來源資料位於 `data/records/*.mjs`，共用 helper 與清理規則位於 `data/record-helpers.mjs`、`data/record-overrides.mjs`：
+預覽只服務產物目錄，不能把 repo 根目錄當新站：
 
 ```powershell
-node .\scripts\merge-risk-records.mjs
+python -m http.server 4173 --directory _site --bind 127.0.0.1
 ```
 
-重跑後執行固定驗證腳本：
+開啟 [本地資料站](http://127.0.0.1:4173/)；連接埠被占用時改用其他埠。建置中的 sourceDirty 可揭露本地工作區異動；正式 CI manifest 必須 sourceDirty 為 false、sourceCommit 等於該次 GITHUB_SHA。不得把髒來源強制標為乾淨。
 
-```powershell
-node .\scripts\validate-brand-records.mjs
-```
+## 維護與發布
 
-需要針對新紀錄做目標查詢矩陣時，可加上 target、正查、預期命中與預期不命中：
+入庫授權、主觀與客觀分層、證據保存、稅籍資料禁令及完整 gate 一律先讀 [AGENTS.md](AGENTS.md)。只做分析或主動探索不自動入庫；修改來源後，validator 必須 warnings: 0、errors: 0，且所有測試、build、站點驗證及 diff 檢查通過才能依授權提交／推送。
 
-```powershell
-node .\scripts\validate-brand-records.mjs --target-id <record-id> --positive <品牌名> --positive <公司名> --expect "<泛稱>=> <record-id>" --not-expect "<廣義查詢>=> <不應命中的 record-id>"
-```
+名稱／別名／識別碼只放穩定實體鍵，不放未確認指控、事件詞或無限定泛稱。台灣公司稅籍號碼與非必要個資不查、不存、不作搜尋鍵；來源中看到也略過。
 
-這個腳本會自動執行：
-
-- `brands.json` JSON parse、normalize 與 `validateBrandRecord()`。
-- duplicate ID 檢查。
-- README 筆數一致性檢查。
-- 預設正查 smoke tests。
-- 入庫欄位品質檢查，避免 `牙膏`、`水`、`旅遊`、`政治人物` 等普通詞被寫成 exact `aliases` / `identifiers`；使用者查詢端允許泛稱探索。
-- `node --check app-core.mjs`、`node --check app.js`、`node --check scripts\*.mjs`、`node --check data\**\*.mjs`。
-- `git diff --check`。
-- 發布 gate 必須是 0 errors、0 warnings；`--allow-warnings` 只用於調查，不可作為自動發布依據。
-
-正式交辦的入庫／更新任務，在驗證腳本 PASS（0 errors、0 warnings）且 diff 只包含預期檔案後，提交並推送到 `origin/main`。主動探索候選仍不可自動入庫或自動發布，必須等使用者確認候選。
+PR 與 push main 都執行完整 CI。成功的 PR 可下載審查 artifact，但不部署；main 重新建置的本次 artifact 才能部署，失敗停住。外部查詢技能須在同一發版窗口另行同步，repo push 不會自動安裝。預設提交後不輪詢線上站，遠端部署／回退是否成功須有另外授權與實測證據。
