@@ -12,7 +12,7 @@ https://ml0427.github.io/brand-avoidance-query/
 
 ## 改版規劃
 
-[GitHub AI-first 資料站改版計畫](docs/ai-first-github-plan.md) 定義 GitHub Pages 的靜態資料契約、AI 讀取方式、遷移順序、發布與驗收條件。目前只有規劃文件，尚未改變現行網站。
+[GitHub AI-first 資料站改版計畫](docs/ai-first-github-plan.md) 定義 GitHub Pages 的靜態資料契約、AI 讀取方式、發布與驗收條件。採一次切換，不保留舊格式或舊網址相容；目前只有規劃文件，尚未改變現行網站。
 
 ## 重要聲明
 
