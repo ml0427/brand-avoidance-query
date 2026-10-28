@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-28 GitHub AI-first 資料站規劃
+
+- 計畫入口：`docs/ai-first-github-plan.md`。本次只有規劃文件、README 入口與本節索引，不修改紀錄、查詢核心、技能或部署設定。
+- 方向：GitHub 儲存、Actions 驗證建置、Pages 發布靜態 JSON 與無 JavaScript 目錄；不依賴使用者電腦，不新增後端／資料庫。先修來源重建與規則落差，再切換網站；完整任務、證據範圍、版本一致性、回退與驗收以計畫為準。
+- 此文件是未來實作規格，不代表改版已完成或已上線；現行操作與入庫規則仍以 `AGENTS.md` 為準。
+
 ## 2026-10-27｜蔡詩萍：未指定事由的本人最小個人避雷
 
 - 收尾：單輪獨立唯讀驗收PASS、無must-fix；完整validator含target／姓名positive實跑一次，430筆／430唯一ID、11項檢查／20項語法、warnings 0／errors 0；node --test實跑一次14/14，失敗／取消／跳過皆0。2項姓名正查／19項target負查、來源逐claim、raw／normalized／全量記憶體generation parity、舊429筆全值含序不變通過。主控讀回reviewer/report.json並核SHA256 2635b0969302ea52c506c5f44611c4763c5cb463e7475ddc2224e0eb5b9af688、155 tracked／12研究與writer artifacts、Kevin原bytes與untracked、HEAD／空index／status及plain diff hash df77ac5de6ef8a208fa610103e4511f210a04ba40e048330df9b64c836425c39一致後，只追加本收尾筆記，不改卡片或生成資料。以下未完整驗收／未提交為writer階段限制；最終三檔限定commit/push與遠端exact commit及blob逐bytes核對以Git與publish-report.json為準。不查Pages。
