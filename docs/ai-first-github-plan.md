@@ -112,6 +112,15 @@ HTML 是 canonical record 的完整呈現，不是第二份人工摘要；不需
 
 索引 entry 依正規化 key 的 UTF-8 bytes 排序。每片最多 65,536 bytes，包含 JSON 包裝；同一 key 的所有 matches 不拆片。單一 entry 超限須報明確錯誤，不截斷。manifest 列出每片的 key 範圍，exact 查詢只需下載相關片；substring 探索必須掃描全部相關片，不能假定只查第一字就完整。
 
+`indexes` 固定為分片描述的陣列，即使只有一片也不改成另一種格式。每個描述包含 `url`、`sha256`、`bytes`、`firstKey`、`lastKey`、`entryCount`；兩個邊界均包含在範圍內。exact 的完整選片步驟如下：
+
+1. 依本節規則取得查詢 key，再比較它的 UTF-8 bytes，不使用依執行環境而異的 locale 排序。
+2. 找到唯一滿足 `firstKey <= key <= lastKey` 的分片；下載並驗證該片，再以整個 key 相等取出全部 matches。
+3. key 落在所有範圍之外、或有效分片中沒有相等 entry，才可回報這個 key 無 exact 命中。這不表示 substring 探索無結果。
+4. 分片有重疊、排序錯誤、缺必要欄位、無效雜湊或讀取失敗，屬資料錯誤，不視為無命中。validator 必須證明所有已索引 key 恰好落入一片且無遺漏。
+
+不建立「第 0 片包含全部名字」的第二份全集；那會隨資料成長再次要求下載全部名稱。分片數由實際產物 bytes 決定，不因目前只有幾百筆就假定必然只有一片。
+
 64 KiB 是本計畫的單次讀取預算，不是所有 AI 的通用限制，也不是達到某個筆數就必須換資料庫的標準。
 
 ### 4.3 單筆內容與時間性
@@ -122,17 +131,33 @@ HTML 是 canonical record 的完整呈現，不是第二份人工摘要；不需
 
 日期以 Asia/Taipei 曆日比較；`temporaryUntil` 當日仍在警示期限內，次日改顯示歷史警示；`reviewAfter` 當日即列待複查。這只改變呈現提示，不重判原紀錄狀態。
 
+不得在版本化 JSON／HTML 中以建置時的 `Date.now()` 固化 `temporaryExpired` 等「目前已過期」旗標：這會破壞跨時間可重建性，而且靜態頁留在線後仍會再次過時。版本化內容保存日期、時區與判讀規則；HTML 以 `<time datetime>` 明示期限，不能沒有重建就聲稱自己會動態降級。工具型 AI 在查詢時以明確的 `evaluationDate` 計算並回傳時間提示；日期未知的讀取端只列期限，不猜測 active／expired。測試需證明同份 bytes 在到期前後查詢可得到不同時間提示，重建版本本身不受當下日期影響。
+
 可執行程式的 AI 若輸出查詢 JSON，回傳 `totalMatches`、`returnedMatches`、`hasMore` 與查詢模式，禁止把 limit 後的筆數當完整總數。這是客戶端的結果格式，不是 GitHub Pages 提供的遠端函式。
 
 ### 4.4 瀏覽型 AI 的最低可用路徑
 
 首頁與 `llms.txt` 明確連結 manifest、完整目錄、狀態定義與原始來源。靜態目錄按索引分片產生，以可見名稱與真實 `<a href>` 連到紀錄頁；前後頁與完整分片清單均可直接讀取，不靠表單、canvas 或 JavaScript。
 
+首頁不是舊搜尋應用，也不是只有空白容器：直接呈現專案名稱、個人避雷／非法律定論的邊界、資料版本入口、JSON／文字目錄及原有外部查核連結。每筆紀錄維持一個 HTML，不以分類合集替代。
+
+所有 HTML 固定使用 `<!doctype html>`、`<html lang="zh-Hant">`、置於 head 前段的 `<meta charset="utf-8">`、有名稱的 `<title>` 與單一 `<main>`。紀錄頁以 `<article data-record-id>`、`<h1>`、`<dl>/<dt>/<dd>`、分段文字、來源 `<ol>` 與 `<time datetime>` 表達資料，不把全集包成無標記的 `<pre>`。每個值依文字／屬性情境 escape，所有 URI 經允許規則處理。驗收包含 UTF-8 中文、實體編碼、完整欄位及不執行 JS 的 HTMLParser 讀取；不把設定 lang 本身宣稱為 token 節省保證。
+
 不能執行程式的 AI 可以循連結定位，但不保證其瀏覽工具支援站內搜尋、完整下載或雜湊驗證。工具截斷索引、未遍歷完整目錄或無法讀取資料時，要回報「未完成查詢」，不能宣稱完整無命中。`llms.txt` 是明確提供給使用者分享的說明入口，不是存取控制或所有 AI 都會自動遵守的標準。
+
+### 4.5 llms.txt 與爬蟲政策
+
+`llms.txt` 採 Jeremy Howard 的 llms.txt v2 提案核心 Markdown 結構：H1 專案名稱、blockquote 短摘要、非 heading 的判讀說明，再以 H2 檔案清單列出 Markdown 連結與用途。發布位置是本專案的 `/brand-avoidance-query/llms.txt`，涵蓋專案路徑；HTML head 加入指向它的 `rel="describedby"`。第一版提供本計畫已定的 JSON 與無 JS HTML，不額外維護全站第三套 Markdown，也不宣告不存在的 `.md` alternate。
+
+`llms.txt` 與 `robots.txt` 不是同一種機制。依 RFC 9309，爬蟲規則位於 origin 的 `/robots.txt`；目前 Pages project site 對應的是 `https://ml0427.github.io/robots.txt`，不是 `/brand-avoidance-query/robots.txt`。本 repo 不藉放一份子路徑檔案假裝能控制整個 origin，也不擅自修改其他 repository。若日後確實能管理 origin 根路徑，另行確認既有規則與授權後才修改。
+
+本次不以 Disallow 阻斷查核必需的公開證據，也不把 robots 當成隱私保護。減少無用下載靠不將圖片塞入索引、清楚的讀取順序與只發布已核准證據；不應公開的內容仍需真正移除／限制存取，不能只寫爬蟲約定。
 
 ## 5. 實作任務、依賴與交付物
 
 所有任務目前均未執行。實作依 T1 至 T6 收斂，不以完成這份文件冒稱網站改版完成。
+
+T1 是第一個不動網站介面的資料編譯提交，補回孤兒紀錄、抽共用編譯入口與改寫 merge 都是它本身的交付物，不另設一個內容相同的 T0。主實作代理負責修改，獨立審查代理核對 baseline 與 clean rebuild；主代理完成最終 gate。T1 的全欄位／順序等值及冪等證據未通過前，不合入後續建置或啟用 workflow。只驗證舊 ID 集合是新集合的子集不足以驗收，因為仍可能多出錯誤紀錄或改壞欄位值。
 
 | 任務 | 必須完成的變更 | 完成證據 |
 | --- | --- | --- |
@@ -153,10 +178,21 @@ T2 在 `app-core.mjs` 增加獨立、可測試的 identity matching 函式，先
 
 工作流程固定為：checkout -> 安裝鎖定的建置依賴 -> merge -> 驗證來源及相容產物 -> tests -> build `_site/` -> validate AI-site -> upload artifact -> deploy。
 
+T4 開始、建立 workflow 前先完成唯讀部署核查並留下結果：目前 Pages source／branch／path／domain、允許使用的 Actions、repo／組織對 token 權限的限制、`github-pages` environment 與保護／核准規則、部署者能否在 T6 切換設定。核查不是現在就更改設定；Pages source 在 T6 才切換，無權核查者明列缺口，不要求使用者提前逐項操作。
+
+| 事件 | 必須跑的 check job | Artifact 與 deploy |
+| --- | --- | --- |
+| pull_request | 安裝鎖定依賴、merge、檢查 brands.json 無未提交差異、完整 validator、node --test、真實 build `_site/`、AI-site validator | 成功後上傳以 PR／SHA 命名的可下載審查 artifact；不可部署 |
+| push main | 和 PR 相同的完整建置與驗證，不沿用 PR 的產物 | T4 至 T5 只上傳 artifact；T6 之後才讓 deploy job 使用本次成功 artifact |
+| 受保護手動發布／回退 | 核對指定固定 SHA、模式與部署條件，按本節對應方式打包／驗證 | 驗證成功且經所需核准才發布，不得直接信任外部提供的 artifact |
+
+PR 的「不部署」由 job 條件與權限隔離保證，不新增一個略過實際 build 的 `--dry-run` 作替代。PR artifact 不直接提升為正式站；fork 若需 GitHub 核准，保持等待或明確失敗，不靠開放更多權限繞過。
+
 - `pull_request` 只執行驗證，不給 Pages 寫入權限，不發布 fork 內容，不使用 `pull_request_target` 執行提交中的程式。
 - `push` 到 main 或手動 workflow 才可進部署；部署 job 明確依賴驗證／建置 job 成功。
 - T4 至 T5 的正式部署開關預設關閉，main 只產待驗 artifact；T6 核對前置條件後才啟用，不能在 T4 就把新首頁部署到正式站。
 - build job 使用 `contents: read`；部署 job 才授予所需 `pages: write`、`id-token: write`，使用 `github-pages` environment。
+- 不以 repo 的預設 Workflow permissions 改成全面 Read and write 當前置條件。按 job 宣告最低必要 scopes；組織限制不允許時回報設定缺口，不把 PR token 或所有 job 放寬。
 - Actions 不替本地 commit／push，不把 `_site/` 回寫 main，避免機器人循環提交。root `brands.json` 仍由既有維護流程產生並檢查與來源一致。
 - 同一站點的部署要序列化並略過過時、尚未部署的候選；不可讓較舊的排隊工作在新版後覆蓋新版。
 - 切換前確認 GitHub Settings 的 Pages source 可設為 GitHub Actions，及 environment／分支規則；這是設定前置檢查，不假定本機檔案能自行變更。
@@ -203,3 +239,23 @@ T2 在 `app-core.mjs` 增加獨立、可測試的 identity matching 函式，先
 - [GitHub 固定提交連結](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files)。回退與歷史稽核使用固定 SHA，不把 main 當不可變版本。
 - [Node.js 發布與支援狀態](https://nodejs.org/en/about/previous-releases)。修訂版於實作時再核對，不永久鎖死本機歷史版本。
 - [Ajv 的 JSON Schema 版本支援](https://ajv.js.org/json-schema.html)。使用相符的 2020-12 驗證器，不只發布沒有實際驗證的 schema 檔。
+- [llms.txt v2 提案](https://llmstxt.org/)。採核心 Markdown 結構與可指定子路徑的定位；不是 Anthropic 專屬格式，也不是存取控制。
+- [RFC 9309 的 robots.txt 位置與安全邊界](https://datatracker.ietf.org/doc/html/rfc9309#section-2.3)。origin 根路徑規則與專案子路徑不同，不以 robots 代替權限控制。
+- [GitHub Actions 的 GITHUB_TOKEN 最小權限](https://docs.github.com/en/actions/tutorials/authenticate-with-github_token)。權限由 workflow／job 明確指定，不把 repo 整體開放讀寫當成必要步驟。
+
+## 10. 2026-10-28 外部規劃審查處置
+
+以目前已提交計畫為準核對 `plan-review.md`，外部審查是意見來源，不是自動執行授權。處置如下：
+
+| 外部項目 | 核對結果與決定 |
+| --- | --- |
+| 1 補 6 筆的時序 | T1 已明列；補強成第一個原子資料編譯提交及依賴 gate，不重複設 T0，也不只驗 ID 子集 |
+| 2 merge 真正重建 | T1 與 compileRecords 已明列；補主實作／獨立審查／主代理的責任及完整等值門檻 |
+| 3 Pages 核查 | 補 T4 建 workflow 前的唯讀核查；不提早切換 Pages、不全面開啟讀寫權限 |
+| 4 llms.txt／robots | 明定 v2 核心格式、專案路徑與 origin-root robots 邊界；不新增無效的子路徑 Disallow |
+| 5 索引選片 | 已有範圍欄位；補索引陣列契約、UTF-8 含邊界比較與異常處理，不再增加全名字第 0 片 |
+| 6 HTML 粒度 | 原本已是每筆一頁；補 charset、lang、語意標記與無 JS 解析驗收 |
+| 7 建置時計算過期 | 不採用 Date.now 固化旗標；改明訂讀取端依查詢日期評估，確保同資料跨日重建不變 |
+| 8 PR Actions | 補 PR／main／手動矩陣；PR 必須真實 build、驗證並提供 artifact，不給部署權限 |
+
+這次只修訂規劃及本地筆記，未執行 T1 至 T6，也未改 GitHub 設定。外部審查所列「必須補」不代表目前文件完全缺失；已涵蓋內容不重複建另一套流程。
