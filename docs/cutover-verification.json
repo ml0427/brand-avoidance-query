@@ -91,5 +91,13 @@
     "resolved": 2,
     "reviewer": "Harvey",
     "remainingMustFix": 0
+  },
+  "hermesInstalledReader": {
+    "readerPath": "D:\\AI_workspace\\.hermes\\profiles\\amagi-line\\skills\\productivity\\brand-avoidance-query\\scripts\\search_brand.py",
+    "installedReaderRecordsChecked": 430,
+    "httpRequests": 1291,
+    "evidenceRequests": 0,
+    "elapsedMs": 13974,
+    "manifestVersion": "e44fb9a479dcda6be4460f12e0dfc0c0108976724cde823f1ac6f3e14604fa8a"
   }
 }

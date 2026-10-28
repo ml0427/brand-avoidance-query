@@ -6,6 +6,7 @@
 - 六筆原先只在產物的紀錄已移回 baseline-records；430 筆逐 ID 所有欄位與內部陣列順序對照 fd9cec2 無變更。只發布原已引用且追蹤的 15 份證據，核准 SHA-256 固定；Kevin 既有未追蹤 PNG 不變、不入庫、不 stage、不發布。遷移證據在 docs/cutover-verification.json，不用固定總筆數測試阻止日後正常新增。
 - Beauvoir 負責來源／來源 validator；Anscombe 負責 Python reader／fixture tests／查詢技能；Avicenna 負責文件、五份專案技能與 Actions；主代理負責契約、建置、公開驗證、整合、安裝技能及最終驗證。Harvey 獨立唯讀審查；各代理完成後關閉。
 - 查詢技能的唯一維護來源為 clients/search_brand.py 與 clients/brand-avoidance-query/SKILL.md，scripts/install-query-skill.ps1 同步到實際技能目錄並比對雜湊，不覆寫其餘 metadata。查詢只讀 manifest → 相關分片 → 單筆紀錄；exact 與 partial 分開、先算全量命中再 limit，整輪最多重試一次，錯誤不得當無命中。
+- 已知安裝目錄為 Codex `C:/Users/ml042/.codex/skills/brand-avoidance-query` 與 Hermes amagi-line `D:/AI_workspace/.hermes/profiles/amagi-line/skills/productivity/brand-avoidance-query`，同一安裝器同步且核對雜湊。Hermes 既有 records 技能及 web-data-collection 的本機入口改為先讀 repo；舊案例只保留研究／證據方法，不得再執行 merge、brands.json 或 country 搜尋流程。
 - 本機 Node／Python gate、發布目錄及桌面／手機無 JS 讀取依實際命令驗證；1 萬／5 萬合成紀錄擴量不寫入正式來源。Pages 切換前已核 main 根目錄 legacy 發布、repo token 預設 read、environment 允許 main；一次性恢復包存 .cutover-work，不放進新站或正常建置。正式發布證據以該提交的 Actions 結果為準，不把本機驗證或 push 成功冒稱遠端已驗收。
 
 ## 2026-10-28 GitHub AI-first 資料站規劃
