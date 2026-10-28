@@ -11,8 +11,10 @@ import { records as religiousOrganizationsPersonalRecords } from "./religious-or
 import { records as religiousPublicFiguresPersonalRecords } from "./religious-public-figures-personal.mjs";
 import { records as religiousReleaseOutcomesPersonalRecords } from "./religious-release-outcomes-personal.mjs";
 import { records as environmentalCivicOrganizationsPersonalRecords } from "./environmental-civic-organizations-personal.mjs";
+import { records as baselineRecords } from "./baseline-records.mjs";
 
 export const riskRecords = [
+  ...baselineRecords,
   ...techSecurityServicesRecords,
   ...oralFamilyTravelRecords,
   ...digitalCommerceAppsRecords,

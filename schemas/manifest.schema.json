@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:brand-avoidance:manifest:1",
+  "type": "object",
+  "required": ["schemaVersion", "searchVersion", "dataVersion", "sourceCommit", "sourceCommitTime", "sourceDirty", "recordCount", "inventory", "indexes", "catalog", "recordBase", "schemas"],
+  "properties": {
+    "schemaVersion": { "const": 1 }, "searchVersion": { "const": 1 },
+    "dataVersion": { "$ref": "urn:brand-avoidance:common:1#/$defs/sha" },
+    "sourceCommit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "sourceCommitTime": { "type": "string", "minLength": 1 },
+    "sourceDirty": { "type": "boolean" },
+    "recordCount": { "type": "integer", "minimum": 0 },
+    "recordBase": { "type": "string", "minLength": 1 },
+    "inventory": { "$ref": "urn:brand-avoidance:common:1#/$defs/descriptor" },
+    "catalog": { "$ref": "urn:brand-avoidance:common:1#/$defs/descriptor" },
+    "indexes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "sha256", "bytes", "firstKey", "lastKey", "entryCount"],
+        "properties": {
+          "url": { "type": "string", "minLength": 1 },
+          "sha256": { "$ref": "urn:brand-avoidance:common:1#/$defs/sha" },
+          "bytes": { "type": "integer", "minimum": 1, "maximum": 65536 },
+          "firstKey": { "type": "string", "minLength": 1 },
+          "lastKey": { "type": "string", "minLength": 1 },
+          "entryCount": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "schemas": { "type": "object", "minProperties": 4, "additionalProperties": { "$ref": "urn:brand-avoidance:common:1#/$defs/descriptor" } }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,108 @@
+name: Validate and Publish Pages
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  CI: 'true'
+  PYTHONDONTWRITEBYTECODE: '1'
+  PAGES_ARTIFACT_NAME: pages-${{ github.event.pull_request.number || 'main' }}-${{ github.sha }}-${{ github.run_attempt }}
+
+jobs:
+  check:
+    name: Validate and Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the tested commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Set up Node.js 24
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          check-latest: true
+          package-manager-cache: false
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.13'
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Validate compiled source records
+        run: npm run validate
+      - name: Run Node.js tests
+        run: node --test
+      - name: Run Python reader tests
+        run: python -m unittest discover -s clients -p test_*.py
+      - name: Require an unchanged source checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git status --porcelain --untracked-files=normal)"
+      - name: Build the static site
+        run: npm run build
+      - name: Validate the complete site
+        run: npm run validate:site
+      - name: Verify release provenance
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { readFileSync } from 'node:fs';
+          const manifest = JSON.parse(readFileSync('_site/manifest.json', 'utf8'));
+          assert.equal(manifest.sourceCommit, process.env.GITHUB_SHA);
+          assert.equal(manifest.sourceDirty, false);
+          NODE
+      - name: Upload only the validated site
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
+          path: _site
+          retention-days: 7
+          include-hidden-files: true
+
+  deploy:
+    name: Deploy Current Main
+    needs: check
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.check.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    steps:
+      - name: Skip superseded commits after entering the deployment queue
+        id: current
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          current_sha=$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/main" --jq '.object.sha')
+          if [ "$current_sha" = "$GITHUB_SHA" ]; then
+            echo 'publish=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'publish=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::Skipping this artifact because main has advanced.'
+          fi
+      - name: Deploy this run's verified main artifact
+        if: ${{ steps.current.outputs.publish == 'true' }}
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}

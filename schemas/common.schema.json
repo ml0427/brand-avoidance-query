@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:brand-avoidance:common:1",
+  "$defs": {
+    "sha": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "descriptor": {
+      "type": "object",
+      "required": ["url", "sha256", "bytes"],
+      "properties": {
+        "url": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha" },
+        "bytes": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "record": {
+      "type": "object",
+      "required": ["id", "name", "country", "categories", "avoidReasons", "confidence", "status", "summary", "sources", "aiNotes", "lastReviewed"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "aliases": { "$ref": "#/$defs/strings" },
+        "identifiers": { "$ref": "#/$defs/strings" },
+        "country": { "type": "string" },
+        "categories": { "$ref": "#/$defs/strings" },
+        "avoidReasons": { "$ref": "#/$defs/strings" },
+        "confidence": { "enum": ["low", "medium", "high"] },
+        "status": { "enum": ["personal", "watchlist", "confirmed"] },
+        "summary": { "type": "string" },
+        "aiNotes": { "type": "string" },
+        "lastReviewed": { "type": "string" },
+        "temporaryUntil": { "type": "string" },
+        "reviewAfter": { "type": "string" },
+        "temporaryAlertReason": { "type": "string" },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "url", "date", "note"],
+            "properties": {
+              "title": { "type": "string" }, "url": { "type": "string" },
+              "date": { "type": "string" }, "note": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "strings": { "type": "array", "items": { "type": "string" } }
+  }
+}
