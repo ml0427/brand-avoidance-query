@@ -7,8 +7,8 @@ const ROOT = "catalog/index.html";
 const escapeHtml = (value) => String(value).replace(/[&<>"']/gu, (char) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
 })[char]);
-const unescapeHtml = (value) => value.replace(/&(amp|lt|gt|quot|#39);/gu, (_, entity) => ({
-  amp: "&", lt: "<", gt: ">", quot: '"', "#39": "'",
+const unescapeHtml = (value) => value.replace(/&(amp|lt|gt|quot|#39|#96);/gu, (_, entity) => ({
+  amp: "&", lt: "<", gt: ">", quot: '"', "#39": "'", "#96": "`",
 })[entity]);
 const renderer = (title, body, llmsHref) => Buffer.from(`<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><title>${escapeHtml(title)}</title><link rel="describedby" href="${escapeHtml(llmsHref)}"></head><body><main>${body}</main></body></html>`, "utf8");
 const match = (recordId, name, field = "name", value = name) => ({
@@ -54,8 +54,8 @@ function assertGraph(files, budget = CATALOG_PAGE_LIMIT) {
       if (link.target.startsWith("catalog/")) queue.push(link.target);
       else assert.match(link.target, /^records\/[a-z0-9][a-z0-9._-]*\.html$/u);
     }
-    for (const row of content(files, file).matchAll(/<li><code>(.*?)<\/code> <a href="([^"]+)">(.*?)<\/a> <small>(.*?)<\/small><\/li>/gu)) {
-      rows.push([unescapeHtml(row[1]), resolve(file, row[2]), unescapeHtml(row[3]), unescapeHtml(row[4])]);
+    for (const row of content(files, file).matchAll(/<li data-key="([^"]*)" data-match-field="([^"]*)" data-record-name="([^"]*)">[\s\S]*?<a href="([^"]+)">([^<]*)<\/a>/gu)) {
+      rows.push([unescapeHtml(row[1]), resolve(file, row[4]), unescapeHtml(row[5]), `欄位：${unescapeHtml(row[2])}；紀錄：${unescapeHtml(row[3])}`]);
     }
   }
   assert.deepEqual([...visited].sort(), [...files.keys()].sort(), "Every generated page must be reachable");
@@ -95,8 +95,9 @@ test("Chinese first-character navigation reaches the full name and record withou
   const files = build(entries);
   const group = follow(files, ROOT, "文");
   assert.equal(follow(files, group, "文姿雲"), "records/fixture-wen.html");
-  assert(content(files, ROOT).includes('<a href="6587/index.html">文</a> <small>1 個查詢鍵</small>'));
-  assert(content(files, group).includes("欄位：name；紀錄：文姿雲"));
+  assert(content(files, ROOT).includes('<a href="6587/index.html">文</a>'));
+  assert(!content(files, ROOT).includes("個查詢鍵"));
+  assert(content(files, group).includes('data-match-field="name" data-record-name="文姿雲"'));
   assert.equal(files.size, 2);
   assertAllRows(files, entries);
 });
@@ -105,11 +106,26 @@ test("root separates A-Z, Chinese initials, numbers, and other text or symbols",
   const entries = [entry("文一", "han"), entry("@sample", "symbol"), entry("7sample", "number"), entry("éclair", "other"), entry("alpha", "alpha", "ALPHA"), entry("zulu", "zulu", "Zulu")];
   const files = build(entries);
   const root = content(files);
-  for (const section of ["A-Z", "中文首字", "數字", "其他文字／符號"]) assert(root.includes(`<h2>${section}</h2>`));
+  for (const section of ["A-Z", "中文首字", "數字", "其他文字／符號"]) assert(root.includes(`${section}</h2>`));
   for (const label of ["A", "Z", "文", "7", "@", "é"]) assert(files.has(follow(files, ROOT, label)));
   assert(root.indexOf("A-Z") < root.indexOf("中文首字"));
   assert(root.indexOf("中文首字") < root.indexOf("數字"));
   assert(root.indexOf("數字") < root.indexOf("其他文字／符號"));
+  assertAllRows(files, entries);
+});
+
+test("ASCII tree branches preserve sibling indentation and mark each final child", () => {
+  const entries = [entry("alpha", "a"), entry("beta", "b"), entry("文姿雲", "wen")];
+  const files = build(entries);
+  const branches = [...content(files).matchAll(/<span class="tree-branch" aria-hidden="true">(.*?)<\/span>/gu)]
+    .map((match) => unescapeHtml(match[1]));
+  assert.deepEqual(branches, ["|-- ", "|   |-- ", "|   `-- ", "`-- ", "    `-- "]);
+  for (const bytes of files.values()) {
+    const html = bytes.toString();
+    assert(!html.includes("catalog-prefixes"));
+    assert(!html.includes("查詢鍵"));
+    assert(html.includes('class="catalog-tree"'));
+  }
   assertAllRows(files, entries);
 });
 
@@ -122,9 +138,10 @@ test("normalized keys stay unchanged while name, aliases, and identifiers retain
   ];
   const files = build(entries);
   const alpha = follow(files, ROOT, "A");
-  assert(content(files, alpha).includes("<code>alpha</code>"));
-  assert(!content(files, alpha).includes("<code>ALPHA</code>"));
-  assert(content(files).includes("全目錄查詢鍵數：4；紀錄數：1。"));
+  assert(content(files, alpha).includes('data-key="alpha"'));
+  assert(!content(files, alpha).includes('data-key="ALPHA"'));
+  assert(content(files).includes("共 1 筆紀錄。"));
+  assert(!content(files).includes("查詢鍵"));
   assert.equal(follow(files, follow(files, ROOT, "文"), "文別名"), "records/same.html");
   assert.equal(follow(files, follow(files, ROOT, "4"), "條碼：4710000000000"), "records/same.html");
   assert.equal(follow(files, follow(files, ROOT, "H"), "https://example.test:8443/shop"), "records/same.html");
@@ -136,7 +153,7 @@ test("colliding names preserve multiple record IDs and every matched field", () 
   const files = build(entries);
   const group = follow(files, ROOT, "同");
   assert.equal(links(files, group).filter((link) => link.label === "同名").length, 3);
-  assert(content(files).includes("全目錄查詢鍵數：1；紀錄數：2。"));
+  assert(content(files).includes("共 2 筆紀錄。"));
   assertAllRows(files, entries);
 });
 
@@ -170,7 +187,7 @@ test("terminal keys coexist with longer keys and preserve all matches", () => {
   const files = build(entries, { maxPageBytes: budget });
   const first = follow(files, ROOT, "A");
   assert.equal(follow(files, first, "a"), "records/terminal.html");
-  assert(content(files, first).includes("完整查詢鍵"));
+  assert(content(files, first).includes("完整名稱／識別碼"));
   assertAllRows(files, entries, budget);
 });
 
@@ -252,14 +269,17 @@ test("astral codepoints are whole initials and safely escaped on crowded child l
   assertAllRows(files, entries, budget);
 });
 
-test("empty catalogs and explicit record counts use distinct semantic counts", () => {
+test("catalogs show only the root record total, without lookup-key counters", () => {
   const files = build([], { recordCount: 7 });
   assert.equal(files.size, 1);
-  assert(content(files).includes("全目錄查詢鍵數：0；紀錄數：7。"));
-  assert(content(files).includes("沒有查詢鍵。"));
+  assert(content(files).includes("共 7 筆紀錄。"));
+  assert(content(files).includes("沒有目錄項目。"));
+  assert(!content(files).includes("查詢鍵"));
   assertAllRows(files, []);
   const entries = [entry("alpha", "a")];
-  assert(content(build(entries, { recordCount: 9 })).includes("全目錄查詢鍵數：1；紀錄數：9。"));
+  const populated = build(entries, { recordCount: 9 });
+  assert(content(populated).includes("共 9 筆紀錄。"));
+  assert(!content(populated, follow(populated, ROOT, "A")).includes("筆紀錄"));
 });
 
 test("final Buffer length is an inclusive limit and undersized budgets reject explicitly", () => {
@@ -277,7 +297,7 @@ test("final Buffer length is an inclusive limit and undersized budgets reject ex
 
 test("a single indivisible match or initial row throws instead of truncating", () => {
   assert.throws(() => build([entry("a", "huge", "字".repeat(2000))], { maxPageBytes: 1300 }), /row exceeds maxPageBytes/u);
-  const renderPage = (title, body, llms) => renderer(title, body.includes("個查詢鍵") ? body + "x".repeat(3000) : body, llms);
+  const renderPage = (title, body, llms) => renderer(title, body.includes('class="catalog-tree"') ? body + "x".repeat(3000) : body, llms);
   assert.throws(() => build([entry("a", "a")], { renderPage, maxPageBytes: 1300 }), /row exceeds maxPageBytes/u);
 });
 

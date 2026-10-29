@@ -22,22 +22,26 @@ function sectionFor(character) {
 function matchRows(entries) {
   return entries.flatMap((entry) => entry.matches.map((match) => ({
     section: "",
-    render: (file) => `<li><code>${escapeHtml(entry.key)}</code> <a href="${escapeHtml(relativeHref(file, `records/${match.recordId}.html`))}">${escapeHtml(match.value)}</a> <small>欄位：${escapeHtml(match.field)}；紀錄：${escapeHtml(match.name)}</small></li>`,
+    render: (file, branch) => `<li data-key="${escapeHtml(entry.key)}" data-match-field="${escapeHtml(match.field)}" data-record-name="${escapeHtml(match.name)}"><span class="tree-branch" aria-hidden="true">${branch}</span><span class="tree-label"><a href="${escapeHtml(relativeHref(file, `records/${match.recordId}.html`))}">${escapeHtml(match.value)}</a>${match.name !== match.value ? ` <small>(${escapeHtml(match.name)})</small>` : ""}</span></li>`,
   })));
 }
 
 function renderRows(rows, file) {
   let body = "";
-  let section;
-  for (const row of rows) {
-    if (row.section !== section) {
-      if (section !== undefined) body += "</ul></section>";
-      section = row.section;
-      body += `<section>${section ? `<h2>${escapeHtml(section)}</h2>` : ""}<ul${row.prefix ? ' class="catalog-prefixes"' : ""}>`;
+  for (let start = 0; start < rows.length;) {
+    let end = start + 1;
+    while (end < rows.length && rows[end].section === rows[start].section) end++;
+    const section = rows[start].section;
+    const continues = end < rows.length;
+    const indent = section ? (continues ? "|   " : "    ") : "";
+    body += `<section>${section ? `<h2 class="tree-heading"><span class="tree-branch" aria-hidden="true">${continues ? "|-- " : "&#96;-- "}</span>${escapeHtml(section)}</h2>` : ""}<ul class="catalog-tree">`;
+    for (let index = start; index < end; index++) {
+      body += rows[index].render(file, `${indent}${index + 1 < end ? "|-- " : "&#96;-- "}`);
     }
-    body += row.render(file);
+    body += "</ul></section>";
+    start = end;
   }
-  return body + (section === undefined ? "<p>沒有查詢鍵。</p>" : "</ul></section>");
+  return body || "<p>沒有目錄項目。</p>";
 }
 
 /** Build snapshot-relative HTML pages without reading records or writing files. */
@@ -74,7 +78,7 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
     const title = node.file === ROOT_PAGE ? "完整名稱目錄" : "名稱目錄";
     const navigation = `<nav aria-label="目錄導覽">${link(ROOT_PAGE, "名稱目錄首頁")}${node.parent ? ` ${link(node.parent, "上一層")}` : ""}</nav>`;
     const pagination = `<nav aria-label="分頁"><span>第 ${number} 頁 / 共 ${total} 頁</span>${number > 1 ? ` ${link(pageFile(node.file, number - 1), "上一頁", "prev")}` : ""}${hasNext ? ` ${link(pageFile(node.file, number + 1), "下一頁", "next")}` : " <span>結束</span>"}</nav>`;
-    const body = `${navigation}<h1>${title}${node.prefix ? `：${escapeHtml(node.prefix)}` : ""}</h1><p>全目錄查詢鍵數：${keys.size}；紀錄數：${totalRecords}。</p>${renderRows(rows, file)}${pagination}`;
+    const body = `${navigation}<h1>${title}${node.prefix ? `：${escapeHtml(node.prefix)}` : ""}</h1>${node.file === ROOT_PAGE ? `<p>共 ${totalRecords} 筆紀錄。</p>` : ""}${renderRows(rows, file)}${pagination}`;
     const bytes = renderPage(title, body, "../".repeat(file.split("/").length + 1) + "llms.txt");
     if (!Buffer.isBuffer(bytes)) throw new TypeError("renderPage must return an HTML Buffer");
     return bytes;
@@ -134,8 +138,7 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
     pending.push({ entries: group, file, parent, prefix });
     return {
       section,
-      prefix: true,
-      render: (from) => `<li><a href="${escapeHtml(relativeHref(from, file))}">${escapeHtml(prefix)}</a> <small>${group.length} 個查詢鍵</small></li>`,
+      render: (from, branch) => `<li><span class="tree-branch" aria-hidden="true">${branch}</span><a href="${escapeHtml(relativeHref(from, file))}">${escapeHtml(prefix)}</a></li>`,
     };
   }
 
@@ -179,7 +182,7 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
         children.get(character).push(entry);
       }
     }
-    const terminalRows = matchRows(terminal).map((row) => ({ ...row, section: "完整查詢鍵" }));
+    const terminalRows = matchRows(terminal).map((row) => ({ ...row, section: "完整名稱／識別碼" }));
     const childRows = [...children].map(([character, group]) => groupLink(group, character, node.file, "依下一字分組", common + character));
     writePages(node, [...terminalRows, ...childRows]);
   }

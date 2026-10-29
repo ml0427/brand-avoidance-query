@@ -42,7 +42,8 @@ Follow the query's normalized first character, then any longer matching prefix,
 and open every exact-name/alias/identifier collision's complete record page.
 Small groups are leaves; only oversized groups subdivide. HTML pages are bounded
 at 65536 bytes, with explicit pagination and end markers when subdivision alone
-cannot fit. Key counts and distinct record counts are labeled separately.
+cannot fit. The catalog uses a clickable ASCII-style indented text tree without
+lookup-key counters; only the root shows a record total, not a person/product count.
 
 Catalog pages are generated independently of JSON index shards. Catalog paths
 are implementation details discovered through actual links; do not invent page
