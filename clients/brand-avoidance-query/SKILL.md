@@ -5,10 +5,24 @@ description: Query the user's personal brand-avoidance database through its publ
 
 # Brand Avoidance Query
 
-Use the bundled Python standard-library reader. The only entry is
+With code execution, use the bundled Python standard-library reader through
 `https://ml0427.github.io/brand-avoidance-query/manifest.json`.
 Do not download a whole inventory, evidence images, or an old record array.
 This skill queries existing records; it does not authorize adding or publishing records.
+
+## Without Python
+
+Open `https://ml0427.github.io/brand-avoidance-query/` and follow the name catalog.
+Choose the visible A-Z, Chinese first-character, digit or other-character link,
+then any longer matching prefix. For example, 文姿雲 follows 文 to the full name.
+Aliases and identifiers use the same navigation. Open every matching record and
+read the full reasons and scope; a list entry alone is not an avoidance conclusion.
+Do not calculate UTF-8 ranges or invent catalog URLs. Follow actual links and
+all indicated continuation pages. Counts of lookup keys are not counts of people
+or products. Partial-name discovery may require multiple prefix groups; these
+pages are not semantic product-category search. If the tool cannot read the
+required pages, is truncated, or the version is uncertain, report incomplete
+lookup, not no-match. Do not claim cryptographic verification from HTML alone.
 
 ## Run
 

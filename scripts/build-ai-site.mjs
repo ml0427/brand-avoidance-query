@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import { pathToFileURL } from "node:url";
 import { compileRecords } from "../data/compile-records.mjs";
 import { identityTerms } from "../app-core.mjs";
+import { buildNameCatalog } from "./lib/name-catalog.mjs";
 import { ROOT, SHARD_LIMIT, compareUtf8, jsonBytes, sha256, descriptor, safeRelativePath, loadSchemas } from "./lib/site-format.mjs";
 
 export const PUBLIC_RESOURCES = [
@@ -17,7 +18,7 @@ export function escapeHtml(value) {
 }
 
 function html(title, body, llms = "../../../llms.txt") {
-  return Buffer.from(`<!doctype html>\n<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title><link rel="describedby" href="${escapeHtml(llms)}"><style>body{margin:0;color:#222;background:#fff;font:16px/1.65 system-ui,sans-serif;letter-spacing:0}main{max-width:72rem;padding:24px;margin:auto}h1{font-size:26px;line-height:1.3}h2{font-size:20px}a{color:#006b70}code,dd,a{overflow-wrap:anywhere}dt{font-weight:600;margin-top:12px}dd{margin-left:0}ul,ol{padding-left:24px}nav{display:flex;gap:20px;flex-wrap:wrap}li{margin-bottom:8px}small{color:#555}</style></head><body><main>${body}</main></body></html>\n`, "utf8");
+  return Buffer.from(`<!doctype html>\n<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title><link rel="describedby" href="${escapeHtml(llms)}"><style>body{margin:0;color:#222;background:#fff;font:16px/1.65 system-ui,sans-serif;letter-spacing:0}main{max-width:72rem;padding:24px;margin:auto}h1{font-size:26px;line-height:1.3}h2{font-size:20px}a{color:#006b70}code,dd,a{overflow-wrap:anywhere}dt{font-weight:600;margin-top:12px}dd{margin-left:0}ul,ol{padding-left:24px}nav{display:flex;gap:20px;flex-wrap:wrap}li{margin-bottom:8px}small{color:#555}.catalog-prefixes{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px 16px;list-style:none;padding:0}.catalog-prefixes li{margin:0;min-width:0}.catalog-prefixes small{display:block}</style></head><body><main>${body}</main></body></html>\n`, "utf8");
 }
 
 function renderValue(value) {
@@ -134,11 +135,10 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
     const bytes = jsonBytes({ schemaVersion: 1, entries: chunk });
     snapshot.set(file, bytes);
     indexes.push({ ...descriptor(file, bytes), firstKey: chunk[0].key, lastKey: chunk.at(-1).key, entryCount: chunk.length });
-    const nav = `<nav><a href="index.html">全部分片</a>${index ? `<a href="${String(index - 1).padStart(4, "0")}.html">上一頁</a>` : ""}${index + 1 < chunks.length ? `<a href="${String(index + 1).padStart(4, "0")}.html">下一頁</a>` : ""}</nav>`;
-    const list = chunk.map((entry) => `<li><strong>${escapeHtml(entry.key)}</strong><ul>${entry.matches.map((match) => `<li><a href="${escapeHtml(match.page.url)}">${escapeHtml(match.name)}</a> <small>${escapeHtml(match.field)}: ${escapeHtml(match.value)}</small></li>`).join("")}</ul></li>`).join("");
-    snapshot.set(`catalog/${suffix}.html`, html(`名稱目錄 ${suffix}`, `${nav}<h1>名稱目錄 ${suffix}</h1><p>此頁只供定位；名稱出現不等於風險定論，請讀取完整紀錄。</p><ol>${list}</ol>${nav}`));
   }
-  snapshot.set("catalog/index.html", html("完整名稱目錄", `<h1>完整名稱目錄</h1><p>共 ${records.length} 筆紀錄，${indexes.length} 個索引分片；key 範圍以 UTF-8 排序。</p><ol>${indexes.map((item, index) => `<li><a href="${String(index).padStart(4, "0")}.html">${escapeHtml(item.firstKey)} 至 ${escapeHtml(item.lastKey)}</a> (${item.entryCount})</li>`).join("")}</ol>`));
+  for (const [file, bytes] of buildNameCatalog(entries, { renderPage: html, recordCount: records.length })) {
+    snapshot.set(file, bytes);
+  }
   const schemas = {};
   for (const [name, schema] of Object.entries(loadSchemas())) {
     const file = `schemas/${name}.schema.json`;
@@ -161,7 +161,28 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
   files.set("manifest.json", jsonBytes(manifest));
   const resources = PUBLIC_RESOURCES.map((item) => `<li><a href="${escapeHtml(item.url)}" rel="noreferrer">${escapeHtml(item.title)}</a></li>`).join("");
   files.set("index.html", html("品牌／公眾人物風險資料", `<h1>品牌／公眾人物風險資料</h1><p>個人風險偏好與公開來源備忘，不是法院判決、官方黑名單或所有品項的事實定論。</p><nav><a href="manifest.json">資料版本 JSON</a><a href="${manifest.catalog.url}">完整名稱目錄</a><a href="llms.txt">AI 讀取契約</a></nav><p>紀錄：${records.length}；資料版本：<code>${dataVersion}</code></p><dl><dt>personal</dt><dd>個人避買／避開選擇，不等於客觀不當或違法。</dd><dt>watchlist</dt><dd>觀察中，需保留脈絡及不確定性。</dd><dt>confirmed</dt><dd>來源支持所列特定理由，不等於法律定罪或全品牌適用。</dd></dl><h2>外部查核資源</h2><ul>${resources}</ul>`, "llms.txt"));
-  files.set("llms.txt", Buffer.from(`# Brand Avoidance Query\n\n> 個人風險選擇與公開來源備忘；不是法律定論。\n\n先讀 manifest，使用同一版本的索引與單筆紀錄。精準比對 name / aliases / identifiers；部分字只列候選。命中後讀取完整 record、aiNotes、sourceLinks、來源 note 與複查期限。無命中不等於安全；讀取失敗不等於無命中。檔案失效、雜湊或版本錯誤時重取 manifest，整輪最多重試一次。不要自動下載圖片。期限以查詢當日 Asia/Taipei 判讀，不把舊事件當現行違規。本站沒有舊格式 fallback。\n\n## Data\n\n- [Manifest](manifest.json): 格式、版本、索引分片與檔案雜湊；exact 以 UTF-8 key 範圍選片，partial 需掃描全部索引。\n- [名稱目錄](${manifest.catalog.url}): 無 JavaScript 的完整導航；未讀完整目錄或工具截斷時不得宣稱完整無命中。\n- [格式定義](${manifest.schemas.record.url}): 單筆 JSON 保留全部來源欄位，公開來源連結以 sourceLinks 解析。\n`, "utf8"));
+  files.set("llms.txt", Buffer.from(`# Brand Avoidance Query
+
+> 使用者個人避開紀錄與公開來源備忘；不是法律定論。
+
+## 只有網址，不能執行程式
+
+從[名稱目錄](${manifest.catalog.url}) 選 A-Z、中文首字、數字或其他文字／符號的實際字頭連結，再循完整名稱、別名或識別鍵開啟所有命中紀錄。例如「文姿雲」選「文」，不需要猜 UTF-8 排序區間。組別過大才按後續字頭細分；有下一頁時繼續讀到結束。路徑以實際連結為準，不猜頁碼或自行計算 Unicode 檔名。
+
+目錄的查詢鍵數不等於紀錄數、人物數或商品數。部分字搜尋必須檢查所有可能的組別，不能只選查詢片段的首字；這也不是品類探索，搜尋「果汁」不能宣稱已列完所有果汁商品。HTML 讀取本身不等於已核對檔案雜湊。工具截斷、頁面不可讀或版本不明時，回報未完成查詢，不能當無命中。
+
+## 可以執行 reader
+
+先讀 [manifest](manifest.json)，使用同一版本的 JSON 索引與完整單筆紀錄。精準比對 name / aliases / identifiers；部分字只列候選。下載索引與紀錄時核對大小及 SHA-256。檔案失效、雜湊或版本錯誤時重取 manifest，整輪最多重試一次；仍失敗就回報不可用。本站沒有舊格式 fallback。
+
+## 判讀紀錄
+
+讀完整 record、aiNotes、sourceLinks、來源 note 與複查期限，不憑目錄名稱下結論。personal 是使用者個人選擇，理由可以只是主觀不喜歡；不要求以外部證據證明偏好。客觀事實與來源限制仍須分開。無命中不等於安全；讀取失敗不等於無命中。不自動下載圖片。期限以查詢當日 Asia/Taipei 判讀，不把舊事件當現行違規。
+
+- [首頁](index.html)
+- [Manifest](manifest.json): JSON 格式、版本、索引分片與檔案雜湊；exact 自動選片，partial 掃描全部 JSON 索引。
+- [格式定義](${manifest.schemas.record.url}): 單筆 JSON 保留全部來源欄位，公開來源連結以 sourceLinks 解析。
+`, "utf8"));
   return { files, manifest };
 }
 

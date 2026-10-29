@@ -20,6 +20,15 @@ function materialize(site) {
   return directory;
 }
 
+function pageLinks(bytes) {
+  return [...bytes.toString("utf8").matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gu)]
+    .map((match) => ({ href: match[1].replaceAll("&amp;", "&"), text: match[2].replace(/<[^>]*>/gu, "").trim() }));
+}
+
+function linkedFile(from, href) {
+  return decodeURIComponent(new URL(href, `https://site.invalid/${from}`).pathname.slice(1));
+}
+
 test("identity lookup excludes country, source text and cross-field substrings", () => {
   const record = sample();
   assert.equal(matchRecords([record], "中國").length, 0);
@@ -116,4 +125,54 @@ test("source deletions and changes do not revive prior records", () => {
   assert.notEqual(previous.manifest.dataVersion, current.manifest.dataVersion);
   assert.equal(current.manifest.recordCount, 1);
   assert(!current.files.has(`${current.manifest.recordBase}a.json`));
+});
+
+test("browser catalog routes by visible first character and retains every same-name record", () => {
+  const records = [
+    sample("wen-one", { name: "文姿雲", aliases: ["Wen Tzu-yun"] }),
+    sample("wen-two", { name: "文姿雲", aliases: ["Different Entity"] }),
+  ];
+  const site = generateSite({ records });
+  const root = site.manifest.catalog.url;
+  const firstCharacter = pageLinks(site.files.get(root)).find((link) => link.text === "文");
+  assert(firstCharacter, "root catalog exposes the literal first character, not a range");
+  const group = linkedFile(root, firstCharacter.href);
+  const matches = pageLinks(site.files.get(group)).filter((link) => link.text === "文姿雲");
+  assert.deepEqual(matches.map((link) => linkedFile(group, link.href)).sort(), [
+    `${site.manifest.recordBase}wen-one.html`, `${site.manifest.recordBase}wen-two.html`,
+  ]);
+  assert(!site.files.get(root).toString().includes("至"));
+  assert(!site.files.has(root.replace("index.html", "0000.html")), "no retired numbered HTML shard");
+});
+
+test("HTML catalog and JSON index are independent views of the same identity keys", () => {
+  const records = [sample("wen", { name: "文姿雲", aliases: ["Wen Tzu-yun"], identifiers: ["公開帳號：@wen"] })];
+  const site = generateSite({ records });
+  const root = site.manifest.catalog.url;
+  const rootLinks = pageLinks(site.files.get(root));
+  assert(rootLinks.some((link) => link.text === "文"));
+  assert(rootLinks.some((link) => link.text === "W"));
+  assert(rootLinks.some((link) => link.text === "@"));
+  const entries = site.manifest.indexes.flatMap((shard) => JSON.parse(site.files.get(shard.url)).entries);
+  assert.deepEqual(entries.map(({ key }) => key), ["@wen", "wen tzu-yun", "文姿雲"]);
+  for (const [file, bytes] of site.files) {
+    if (file.includes("/catalog/")) {
+      assert(bytes.length <= 65536, file);
+      assert(!/<script\b/iu.test(bytes.toString("utf8")), file);
+      for (const link of pageLinks(bytes)) {
+        if (!/^https?:/u.test(link.href)) assert(site.files.has(linkedFile(file, link.href)), `${file}: ${link.href}`);
+      }
+    }
+  }
+});
+
+test("browser catalog links the actual alias even when the canonical record has another spelling", () => {
+  const site = generateSite({ records: [sample("wen-alias", { name: "文姿云 / Wen Tzu-Yun", aliases: ["文姿雲"] })] });
+  const root = site.manifest.catalog.url;
+  const initial = pageLinks(site.files.get(root)).find((link) => link.text === "文");
+  const group = linkedFile(root, initial.href);
+  const alias = pageLinks(site.files.get(group)).find((link) => link.text === "文姿雲");
+  assert(alias, "the alias is itself clickable, not only surrounding text");
+  assert.equal(linkedFile(group, alias.href), `${site.manifest.recordBase}wen-alias.html`);
+  assert(site.files.get(group).toString().includes("文姿云 / Wen Tzu-Yun"));
 });

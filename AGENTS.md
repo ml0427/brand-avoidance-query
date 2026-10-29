@@ -62,7 +62,8 @@
 - 泛稱管控改在入庫驗證：不要把沒有品牌／人物／公司限定的泛稱寫成 exact `aliases` 或 `identifiers`；validator 的 `generic-search-fields` 會檢查這類資料品質問題。
 - 對外索引只使用 `name`、`aliases`、`identifiers`；`country`、分類、理由、摘要、來源正文與 `aiNotes` 不作實體命中。精準模式預設比對完整正規化鍵，partial 的 substring 結果只列候選；兩者都必須保留實際命中欄位／值，不得由名稱碰撞推定身分、集團關係或風險範圍。
 - 正規化為合併空白、trim、NFKC、Unicode 小寫；只移除 reader contract 列明的 identifier 展示標籤，不任意剝除 URL 協定、埠號或冒號前綴。不建立 query blocklist。
-- 查詢先驗 manifest，再驗命中索引與紀錄的 bytes／SHA-256，讀完整 `record`、`sourceLinks` 與所有限制。依 recordId 去重、先計完整命中數再套 limit；partial 必須掃描所有索引分片。
+- 程式型查詢先驗 manifest，再驗命中 JSON 索引與紀錄的 bytes／SHA-256，讀完整 `record`、`sourceLinks` 與所有限制。依 recordId 去重、先計完整命中數再套 limit；partial 必須掃描所有 JSON 索引分片。
+- 不能執行程式的瀏覽型 AI，可從固定首頁循 A-Z／中文首字、數字或其他文字的名稱目錄與實際連結讀取，不計算 UTF-8 區間或猜頁碼。HTML 目錄與 JSON 儲存分片分開，過大才依後續字頭細分或明示分頁；鍵數、紀錄數及商品／人物數不得混用。瀏覽型 AI 仍須讀完整命中紀錄，但不能僅憑 HTML 閱讀宣稱已驗證 bytes／SHA-256。名稱片段查找須涵蓋全部可能組別，名稱目錄不等於商品品類索引。
 - 404、雜湊／大小不符、無效 JSON／版本或資料不一致時，丟棄本次結果、重讀 manifest 並從頭重試一次；仍失敗即資料不可用，不得轉成成功無命中。不自動抓證據圖片。
 - 無命中只表示這份快照未直接收錄，不代表安全或清白。無 JS 閱讀未遍歷完整目錄、工具截斷或紀錄不可讀，須回報未完成查詢。
 - 回報資料版本／來源提交、實際命中欄位與值、狀態、信心、適用範圍、證據限制及來源。`sourceLinks` 以紀錄文件位置解析，不依賴退役的根路徑證據 URL。

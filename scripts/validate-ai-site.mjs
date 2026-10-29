@@ -4,6 +4,7 @@ import { isDeepStrictEqual } from "node:util";
 import { pathToFileURL } from "node:url";
 import { compileRecords } from "../data/compile-records.mjs";
 import { generateSite, loadEvidence } from "./build-ai-site.mjs";
+import { CATALOG_PAGE_LIMIT } from "./lib/name-catalog.mjs";
 import { ROOT, SHARD_LIMIT, compareUtf8, sha256, safeRelativePath, schemaValidators } from "./lib/site-format.mjs";
 
 export function siteFiles(directory, prefix = "") {
@@ -66,6 +67,9 @@ export function validateSite({ siteDir = path.join(ROOT, "_site"), records = com
       previousPath = file.path;
       const bytes = read(`${prefix}${file.path}`);
       if (bytes.length !== file.bytes || sha256(bytes) !== file.sha256) throw new Error(`Inventory file mismatch: ${file.path}`);
+      if (file.path.startsWith("catalog/") && file.path.endsWith(".html") && bytes.length > CATALOG_PAGE_LIMIT) {
+        throw new Error(`Catalog page exceeds byte limit: ${file.path}`);
+      }
       const type = file.path.startsWith("records/") && file.path.endsWith(".json") ? "record" : file.path.startsWith("index/") ? "index" : null;
       if (type && !validators[type](JSON.parse(bytes))) throw new Error(`${type} schema: ${file.path}: ${JSON.stringify(validators[type].errors)}`);
     }

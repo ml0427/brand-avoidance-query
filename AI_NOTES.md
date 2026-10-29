@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-29 純網頁名稱目錄
+
+- 使用者授權改成類 API 清單的 A-Z／中文首字導覽；本輪只改名稱目錄、建置驗證、文件與查詢技能，不重整既有避買紀錄、不新增品類索引、不改 JSON reader 契約或實作快取。
+- HTML 目錄與 JSON 儲存分片分開產生。字頭連結直接顯示 A、文、數字或其他實際字元；組別過大才按後續字頭細分，不能再細分時以最終 UTF-8 bytes 預算分頁，明示頁碼／下一頁／結束。builder 與 site validator 共用 65,536 bytes 上限；查詢鍵數與紀錄數分開。
+- 連結文字保留實際 name／alias／identifier 值，旁註對應紀錄與欄位；因此「文姿雲」可直接點入 canonical「文姿云 / Wen Tzu-Yun / wen_tzu_yun」，不必猜另一拼法。純網頁查找不等同 SHA-256 驗證；名稱片段也不等同品類完整探索。
+- Arendt 實作 name-catalog helper／18 項測試，Maxwell 獨立唯讀審查；主代理整合、補別名可點及頁面上限、格狀版面與回歸測試，親自驗收。兩代理完成後關閉。
+- 本地完整 gate：來源 validator 430 筆、warnings 0／errors 0；Node 57／57、Python reader 32／32；建置 1,504 檔、site validator PASS。完整遍歷 590 個目錄頁，3,614 個鍵／3,763 個欄位命中無遺漏或額外重複；最大目錄頁 43,759 bytes。430 筆 compiled 與本輪修改前逐值、內部陣列順序完全一致。
+- 瀏覽器在桌面 1280px 與手機 390px 實際循「首頁 → 文 → 文姿雲 → 完整紀錄」成功，頁面 script 數為 0，無橫向溢出；未把它描述成已關閉瀏覽器 JavaScript。實際安裝的 reader 對本次 localhost 產物精準查詢也成功。Codex 與 Hermes 兩處查詢技能同步自分發來源並核對雜湊；技能驗證工具在 Windows 使用 Python UTF-8 模式。
+- 以上是本地驗證；依專案規則推送後不另查線上內容。資料與既有未追蹤圖片保持不變；後續資料語意重整、品類探索、快取、穩定歷史連結等仍需另行實作，不將本輪名稱目錄宣稱為全部重設計完成。
+
 ## 2026-10-28 AI-first 一次切換實作
 
 - 使用者已授權完成改版、同步查詢技能、驗證並推送，不保留舊格式。實作移除 brands.json、merge 腳本、互動 UI；來源由 compileRecords 統一清理與 ID 排序，builder 產生版本化索引、完整 JSON／無 JS HTML，validator 檢查 schema、全值對等、連結、雜湊與發布範圍。

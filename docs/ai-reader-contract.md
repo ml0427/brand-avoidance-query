@@ -34,6 +34,25 @@ Timeliness is evaluated in the reader at the supplied/current Asia/Taipei calend
 
 On missing artifacts, checksum/size mismatch, invalid JSON/schema/version or inconsistent data: discard this attempt, reload the manifest and retry the entire query once. Still failing means unavailable, never not-found. Do not fetch evidence images automatically.
 
+## Browser-Only Name Lookup
+
+The root website and llms.txt link to the current catalog. Its A-Z, Han-character,
+digit and other-character links use visible name prefixes, not UTF-8 range labels.
+Follow the query's normalized first character, then any longer matching prefix,
+and open every exact-name/alias/identifier collision's complete record page.
+Small groups are leaves; only oversized groups subdivide. HTML pages are bounded
+at 65536 bytes, with explicit pagination and end markers when subdivision alone
+cannot fit. Key counts and distinct record counts are labeled separately.
+
+Catalog pages are generated independently of JSON index shards. Catalog paths
+are implementation details discovered through actual links; do not invent page
+numbers or calculate Unicode-codepoint routes. A partial-name search must visit
+all potentially relevant groups and pages, not just its first-character group.
+This is not semantic category discovery: a search for juice does not prove all
+juice products have been enumerated. HTML-only reading does not by itself prove
+byte/hash verification; disclose truncation, missing pages or version uncertainty
+rather than reporting a complete miss. The JSON reader contract is unchanged.
+
 ## Deterministic Publication
 
 canonical JSON is UTF-8, LF-terminated, with object keys sorted by UTF-8 bytes and array order preserved. Versioned artifacts contain relative links and no build clock, source commit or self-referencing dataVersion. inventory.json is `{schemaVersion:1, files:[{path,sha256,bytes}]}` sorted by relative UTF-8 path and does not list itself. Mutable root manifest/entry files are generated after the content hash is known. Only the current version is deployed.
