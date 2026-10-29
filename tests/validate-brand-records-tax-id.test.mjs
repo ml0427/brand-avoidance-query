@@ -152,7 +152,7 @@ test("default source CLI works without retired JSON/merge/UI or README and keeps
     fs.mkdirSync(path.join(tempDir, "scripts"));
     fs.cpSync(validatorPath, path.join(tempDir, "scripts", "validate-brand-records.mjs"));
     const cli = path.join(tempDir, "scripts", "validate-brand-records.mjs");
-    const result = spawnSync(process.execPath, [cli, "--no-git-diff-check", "--target-id", "weichuan-foods", "--positive", "味全", "--expect", "TikTok=>bytedance", "--not-expect", "Unrelated Entity=>bytedance", "--json"], { cwd: tempDir, encoding: "utf8" });
+    const result = spawnSync(process.execPath, [cli, "--no-git-diff-check", "--target-id", "weichuan-foods", "--positive", "味全", "--expect", "TikTok=>bytedance-54-69-6b-54-6f-6b", "--not-expect", "Unrelated Entity=>bytedance-54-69-6b-54-6f-6b", "--json"], { cwd: tempDir, encoding: "utf8" });
     assert.equal(result.status, 0, result.stderr || result.stdout);
     const output = JSON.parse(result.stdout);
     assert.equal(output.ok, true);

@@ -15,9 +15,17 @@
   tppCurrentPublicFigureAliases,
   treeProtectionPublicFigureAliases,
 } from "../record-helpers.mjs";
+import { splitRecord } from "../split-record.mjs";
 
 export const records = [
-  record({
+  ...((group) => {
+    const caveat = "使用者指定暫時個人避開；公司創辦人歷史關係、原告訴訟主張與影片指控須分層，不代表品牌被認定資助犯罪、人口販運、協助逃亡或妨礙司法。保留原複查期限，未查新進展。";
+    return splitRecord(group, [
+      { name: "Ideal Living", aliases: ["Ideal Living LLC", "Ideal Living Management LLC", "Ideal Living Holdings LLC"], identifiers: ["idealliving.com"], summary: `${group.summary} 本子筆僅公司，品牌另列。`, sources: group.sources, aiNotes: `${group.aiNotes} ${caveat}` },
+      { name: "AirDoctor", aliases: ["Air Doctor", "AirDoctor LLC"], identifiers: ["airdoctorpro.com"], avoidReasons: ["使用者指定 Ideal Living 現有品牌暫時個人避開"], summary: `Ideal Living 既有官方品牌頁列 AirDoctor，使用者依公司關聯指定本品牌暫避。${caveat}`, sources: [group.sources[1], group.sources[5], group.sources[6], group.sources[7]], aiNotes: caveat },
+      { name: "AquaTru", aliases: ["Aqua Tru", "AquaTru Pro", "AquaTru Pro Series"], identifiers: ["aquatruwater.com"], avoidReasons: ["使用者指定 Ideal Living 現有品牌暫時個人避開"], summary: `Ideal Living 既有官方品牌頁列 AquaTru 及 AquaTru Pro Series；Pro 是同品牌產品線，不另當其他公司。${caveat}`, sources: [group.sources[1], group.sources[5], group.sources[6], group.sources[7]], aiNotes: caveat },
+    ]);
+  })(record({
     id: "ideal-living-airdoctor-aquatru-temporary-personal-20260830",
     name: "Ideal Living／AirDoctor／AquaTru",
     aliases: [
@@ -103,7 +111,7 @@ export const records = [
     aiNotes:
       "此筆是 user-directed / temporary / company-and-current-brands personal record。2026-09-30 起先查 Ideal Living／Peter Spiegel 是否有正式回應、新法院卷宗、執法機關公開資訊、可靠具名媒體調查及 Reckless Ben 後續證據；2027-02-28 前完成半年複查。可說 Peter Spiegel 與 Barsana Dham 的歷史職務、100 萬美元現金保釋金及 1,000 萬美元擔保有同期報導支持，也可說 Nishizaki 確實提告並提出公司財務／宗教關係主張；不可把 plaintiff allegations、影片敘事、沉默或保密和解改寫成 Ideal Living／AirDoctor／AquaTru 已被認定資助性侵、人口販運、協助逃亡、滅證、威脅記者或妨礙司法。『世界最大』與『人口販運集團』不是目前已驗證客觀分類。searchable fields 僅公司、品牌與官方網域；Peter Spiegel、Katie Williams、Saraswati、JKP、Barsana Dham、Radha Madhav Dham、人口販運、兒童性侵、FBI、Newsweek、LA Times、Reckless Ben、影片名與法院案號不得作 standalone alias／identifier。",
     lastReviewed: "2026-08-30",
-  }),
+  })),
   record({
     id: "rhinoshield-custom-order-content-review-personal-20260910",
     name: "犀牛盾／RHINOSHIELD",
@@ -222,7 +230,56 @@ export const records = [
       source("U.S. CBP - Forced Labor Enforcement", "https://www.cbp.gov/trade/forced-labor/enforcement", "查核日 2026-06-25", "說明 CBP 可依 CAATSA、UFLPA 等執行強迫勞動商品扣留。"),
     ],
   }),
-  record({
+  ...((group) => {
+    const relation = "只依既有品牌組合／持股關聯列觀察；不把安踏退出 BCI 或新疆棉表態歸給本品牌，也不代表所有市場、台灣通路或商品由安踏營運。";
+    return splitRecord(group, [
+      {
+        name: "安踏／ANTA",
+        aliases: ["安踏", "安踏體育", "安踏体育", "安踏體育用品有限公司", "安踏体育用品有限公司", "ANTA", "ANTA Sports", "ANTA Sports Products Limited"],
+        identifiers: ["2020.HK", "82020.HK", "ir.anta.com", "anta.com", "anta.cn"],
+        summary: "既有來源記錄安踏退出 BCI 並稱持續採購／使用中國含新疆棉；此表態只歸安踏，不歸旗下或參股品牌。不代表國企、所有商品使用新疆棉或台灣禁售。",
+        sources: [group.sources[0], group.sources[1]],
+        aiNotes: "保留安踏公司與主品牌的穩定名稱。其他品牌另筆，母公司表態不可傳成各品牌自己的表態。",
+      },
+      ...[
+        ["ANTA KIDS", ["安踏兒童", "安踏儿童"], "安踏兒童產品線；不逐項確認棉花來源。"],
+        ["FILA（安踏中國區）", ["FILA", "FILA China"], "僅安踏既有中國區營運／授權脈絡，不推及 FILA 全球。", ["fila.cn"]],
+        ["FILA KIDS（安踏中國區）", ["FILA KIDS"], "只限原品牌組合的區域兒童產品線，不擴全球授權。"],
+        ["FILA FUSION（安踏中國區）", ["FILA FUSION"], "只限原品牌組合的區域產品線，不擴全球授權。"],
+        ["DESCENTE（安踏區域關聯）", ["DESCENTE", "DESCENTE China", "迪桑特"], "區域授權／合資關係，不寫成日本母品牌全資屬安踏。"],
+        ["KOLON SPORT（安踏區域關聯）", ["KOLON SPORT", "KOLON SPORT China", "可隆"], "區域授權／合資關係，不推及所有國家。"],
+        ["MAIA ACTIVE", [], "既有安踏多品牌策略列名；不由列名推定個別產品供應鏈。"],
+        ["JACK WOLFSKIN", ["狼爪"], "既有安踏品牌組合列名；不外推所有歷史商品與營運。"],
+        ["MUSINSA STANDARD China", [], "僅中國區合作／授權，不等於韓國 MUSINSA 全球被收購。"],
+        ["Musinsa Store China", [], "僅中國區店舖合作脈絡，不等於所有 MUSINSA 店舖或商品。"],
+      ].map(([name, aliases, scope, identifiers = []]) => ({
+        name, aliases, identifiers, country: "", avoidReasons: ["安踏品牌組合／區域營運關聯觀察"],
+        summary: `${scope}${relation}`, sources: [group.sources[1]], aiNotes: `${scope}${relation}`,
+      })),
+      {
+        name: "Amer Sports", identifiers: ["NYSE: AS"], country: "",
+        avoidReasons: ["安踏最大股東／重大持股關聯觀察"],
+        summary: "既有安踏公司簡介稱其為 Amer Sports 最大股東；不能寫成安踏單獨全資持有 Amer Sports 或旗下各品牌，不繼承安踏的新疆棉表態。",
+        sources: [group.sources[2], group.sources[3]],
+        aiNotes: "Arc’teryx／始祖鳥已有獨立紀錄，本次不重建、不放回其他品牌別名。",
+      },
+      ...[
+        ["Salomon", ["薩洛蒙", "萨洛蒙"]], ["Wilson", []], ["Peak Performance", []],
+        ["Atomic", []], ["Armada", []], ["ATEC", []], ["DeMarini", []],
+        ["EvoShield", []], ["Louisville Slugger", []],
+      ].map(([name, aliases]) => ({
+        name, aliases, country: "", avoidReasons: ["Amer Sports 品牌／安踏間接重大持股關聯觀察"],
+        summary: `既有 Amer Sports 品牌頁列「${name}」；安踏為 Amer Sports 最大股東，是間接持股關聯，不等於安踏全資持有本品牌。${relation}`,
+        sources: [group.sources[2], group.sources[3]], aiNotes: relation,
+      })),
+      ...["PUMA", "Cobra Golf", "stichd"].map((name) => ({
+        name, country: "", avoidReasons: ["PUMA 29.06% 股權交易待完成觀察"],
+        summary: `${name === "PUMA" ? "PUMA" : `原群組列名的 ${name} 僅按 PUMA 關聯辨識` }：既有 2026-01-27 公告為安踏擬收購 PUMA 29.06% 股權，仍待監管批准及交割；本次沒有新查核，不改寫成交易已完成、全資收購或日常控制，也不繼承安踏的新疆棉表態。`,
+        sources: [group.sources[4]],
+        aiNotes: "待完成狀態以原查核為界；Cobra Golf／stichd 的個別關係沒有逐項新增來源，不宣稱其本身被安踏直接收購。交易描述不是 identifier。",
+      })),
+    ]);
+  })(record({
     id: "anta",
     name: "安踏 / ANTA",
     aliases: [
@@ -281,7 +338,7 @@ export const records = [
       source("ANTA Sports - ANTA Sports to Acquire 29% Stake in PUMA", "https://ir.anta.com/en/news_detail.php?id=159082", "2026-01-27", "安踏公告與 Groupe Artemis 簽署協議收購 PUMA SE 29.06% 股權；交易預計 2026 年底前完成，仍受監管批准與交割條件限制。"),
     ],
     aiNotes: "FILA、DESCENTE、KOLON SPORT、MUSINSA 等品牌存在區域授權／合資範圍差異；PUMA 於查核日仍是已公告但待完成的 29.06% 股權交易，且 PUMA/Cobra Golf/stichd 不等同已被安踏全資控制。此筆是供使用者避用策略提示，不代表每個海外或台灣通路商品都直接由安踏營運。",
-  }),
+  })),
   record({
     id: "mammut-cpe-china-acquisition-pending-personal-20260730",
     name: "Mammut／猛瑪象／長毛象",
@@ -334,7 +391,37 @@ export const records = [
       source("Campaign for Uyghurs - Labubu's Link to Uyghur Forced Labor", "https://campaignforuyghurs.org/campaign-for-uyghurs-exposes-labubus-link-to-uyghur-forced-labor/", "2026-04-23", "指出報導與檢測資料顯示部分 Labubu 含新疆棉。"),
     ],
   }),
-  record({
+  ...((group) => {
+    const caveat = "既有 2024 年公告是特步向丁氏家族出售 KP Global，並保留可轉債／潛在轉換安排；不能繼續當成特步全資持有，不作國企、制裁或強迫勞動定論。";
+    return splitRecord(group, [
+      {
+        name: "KP Global", aliases: ["KP Global Investment Limited"],
+        summary: `KP Global 是 Palladium 與 K-Swiss 的持有公司；Ding Shun 僅作既有交易主體辨識，不把其全部業務納入。${caveat}`,
+        sources: [group.sources[2]], avoidReasons: ["KP Global 控制鏈觀察"], aiNotes: caveat,
+      },
+      {
+        name: "Ding Shun Investment", country: "", avoidReasons: ["KP Global 出售交易控制鏈辨識"],
+        summary: `僅原 KP Global 出售交易中的 Ding Shun Investment 主體辨識，不與 KP Global 視為同一公司，不擴及該投資方其他業務。${caveat}`,
+        sources: [group.sources[2]], aiNotes: caveat,
+      },
+      {
+        name: "Palladium", aliases: ["Palladium Boots", "PALLADIUM", "Palladium TW", "Palladium Taiwan", "帕拉丁", "帕拉迪姆"],
+        identifiers: ["palladiumboots.com", "palladium.com.tw"], country: "",
+        summary: `本筆只指 Palladium 鞋靴／服飾品牌，不指金屬鈀；依 KP Global 控制鏈保留觀察。${caveat}特步黨建是關聯背景，不等於本品牌自身有黨組織。`,
+        sources: group.sources, aiNotes: caveat,
+      },
+      {
+        name: "K-Swiss", aliases: ["K·SWISS", "K SWISS"], country: "",
+        summary: `本筆只指既有 KP Global 公告列出的 K-Swiss 品牌。${caveat}不繼承 Palladium 台灣通路證據或個別商品結論。`,
+        sources: [group.sources[2], group.sources[3]], aiNotes: caveat,
+      },
+      {
+        name: "特步／Xtep", aliases: ["特步", "Xtep"], identifiers: ["1368.HK"],
+        summary: `既有報導支持特步黨建活動；本筆只保留原群組已列名的特步及 KP Global 出售關聯。${caveat}`,
+        sources: [group.sources[2], group.sources[3]], aiNotes: caveat,
+      },
+    ]);
+  })(record({
     id: "kp-global-palladium-k-swiss",
     name: "KP Global / Palladium / K-Swiss",
     aliases: ["KP Global", "KP Global Investment Limited", "Palladium Boots", "Palladium", "PALLADIUM", "Palladium TW", "Palladium Taiwan", "帕拉丁", "帕拉迪姆", "K-Swiss", "K·SWISS", "K SWISS", "Ding Shun Investment", "Xtep", "特步"],
@@ -350,8 +437,24 @@ export const records = [
       source("東南網 - 特步：讓黨建融入職工的工作與生活", "https://qz.fjsen.com/2019-07/02/content_22458566_0.htm", "2019-07-02", "報導特步公司黨支部升格為黨委，並列行政、同步、營銷、供應鏈支部及黨建融入企業活動。"),
     ],
     aiNotes: "本條目用於標示 Palladium/K-Swiss 鞋靴服飾品牌的中國控制鏈與特步黨建關聯；不代表 Palladium 金屬元素、化學材料，或所有歷史/海外庫存商品皆有同等風險。",
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "僅保留既有復星投票權／集團管理關聯；不等於本品牌自身有黨組織、產品中國製、違法或所有歷史商品同風險。";
+    return splitRecord(group, [
+      {
+        name: "Lanvin Group", aliases: ["復星時尚", "复星时尚", "Fosun Fashion Group"],
+        identifiers: ["NYSE: LANV", "lanvin-group.com"],
+        summary: `既有申報揭露復星持有 Lanvin Group 過半投票權；集團與 Lanvin 品牌分開。${caveat}`,
+        sources: [group.sources[0], group.sources[1], group.sources[3]], aiNotes: caveat,
+      },
+      { name: "Fosun International（Lanvin持股鏈）", identifiers: ["Fosun International"], country: "", summary: `既有 Lanvin Group 20-F 所述復星國際過半投票權，僅限 Lanvin 控制鏈查詢，不把復星所有其他業務納入本次範圍。${caveat}`, sources: [group.sources[1], group.sources[3]], aiNotes: caveat },
+      ...[["Lanvin", ["浪凡"]], ["Wolford", []], ["Sergio Rossi", []], ["St. John Knits", ["St John Knits"]], ["Caruso", []]].map(([name, aliases]) => ({
+        name, aliases, country: "",
+        summary: `既有 Lanvin Group 品牌資料／歷史收購公告列「${name}」，依原群組的中國集團控制關聯收錄；未查新現況。${caveat}`,
+        sources: [group.sources[name === "Caruso" ? 2 : 0], group.sources[1], group.sources[3]], aiNotes: caveat,
+      })),
+    ]);
+  })(record({
     id: "lanvin-group-fosun",
     name: "Lanvin Group / Lanvin / Wolford / Sergio Rossi",
     aliases: ["Lanvin Group", "Lanvin", "浪凡", "Wolford", "Sergio Rossi", "St. John Knits", "St John Knits", "Caruso", "復星時尚", "复星时尚", "Fosun Fashion Group"],
@@ -367,8 +470,14 @@ export const records = [
       source("Fosun Fashion Group to Acquire Sergio Rossi", "https://www.lanvin-group.com/en/fosun-fashion-group-to-acquire-italian-luxury-shoemaker-sergio-rossi/", "2021-06-01", "官方新聞稿列 Fosun Fashion Group 品牌組合，包含 Lanvin、Wolford、Caruso、St. John Knits，並宣布收購 Sergio Rossi。"),
       source("共產黨員網 - 復星一家黨建工作路徑與抓手探索", "https://www.12371.cn/2019/06/05/ARTI1559727544061396.shtml", "2019-06-05", "公開黨建教材介紹復星集團黨委與黨建融入經營管理。"),
     ],
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "只限既有 Club Med 持有／經營鏈，復星黨建不等於度假村本身黨建、國企、違法或所有歷史服務同風險。";
+    return splitRecord(group, [
+      { name: "Club Med", aliases: ["Club Méditerranée", "地中海俱樂部", "地中海俱乐部"], country: "", summary: `既有復星資料與具名報導支持復星旅文持有、經營 Club Med 及管理層更替影響；品牌與控股公司另筆。${caveat}`, sources: group.sources, aiNotes: caveat },
+      { name: "Fosun Tourism Group（Club Med持股鏈）", aliases: ["Fosun Tourism", "Fosun Tourism Group", "Fosun Holiday", "復星旅文", "复星旅文"], identifiers: ["fosunholiday.com", "01992.HK"], summary: `既有公司簡介列復星旅文與 Club Med 管理／持有關係，僅此交易與治理鏈，不擴集團其餘品牌。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[2], group.sources[3]], aiNotes: caveat },
+    ]);
+  })(record({
     id: "club-med-fosun",
     name: "Club Med / Fosun Tourism Group",
     aliases: ["Club Med", "Club Méditerranée", "地中海俱樂部", "地中海俱乐部", "Fosun Tourism", "Fosun Tourism Group", "Fosun Holiday", "復星旅文", "复星旅文"],
@@ -384,8 +493,13 @@ export const records = [
       source("Le Monde - Club Med : Henri Giscard d'Estaing débarqué par le propriétaire chinois du groupe, Fosun", "https://www.lemonde.fr/economie/article/2025/07/16/club-med-henri-giscard-d-estaing-debarque-par-le-proprietaire-chinois-du-groupe-fosun_6621617_3234.html", "2025-07-16", "報導 Club Med 董事長被中國股東復星撤換，作為控制與治理影響佐證。"),
       source("共產黨員網 - 復星一家黨建工作路徑與抓手探索", "https://www.12371.cn/2019/06/05/ARTI1559727544061396.shtml", "2019-06-05", "公開黨建教材介紹復星集團黨委與黨建融入經營管理。"),
     ],
-  }),
-  record({
+  })),
+  ...((group) => {
+    return splitRecord(group, [
+      { name: "上汽集團／SAIC Motor", aliases: ["SAIC", "上汽", "上汽集團"], summary: "既有上汽年報支持地方國資背景；只限上汽集團關聯，反補貼措施限適用的中國製電動車，不概括所有車輛。", sources: [group.sources[1], group.sources[2]], aiNotes: "MG 及車型另筆；不得把品牌關聯當成各地經銷商本身為國企。" },
+      { name: "MG", aliases: ["MG Taiwan", "MG4", "MG HS", "MG HS PHEV", "MG ZS"], summary: "既有 MG 台灣站及上汽年報支持 MG 的在台車型與上汽關聯；國資描述指母集團，不表示各款車製造地相同或燃油／插電混合車均適用電動車反補貼措施。", sources: [group.sources[0], group.sources[1]], avoidReasons: ["上汽地方國資母集團關聯"], aiNotes: "只保留 MG 與原列名車型，不繼承其他品牌或車款的補貼、制裁與製造地結論。" },
+    ]);
+  })(record({
     id: "saic-mg",
     name: "上汽集團 / SAIC Motor / MG",
     aliases: ["SAIC", "上汽", "上汽集團", "MG", "MG Taiwan", "MG4", "MG HS", "MG HS PHEV", "MG ZS"],
@@ -399,7 +513,7 @@ export const records = [
       source("SAIC Motor Corporation Limited Annual Report 2023", "https://www.saicmotor.com/english/images/investor_relations/annual_report/2024/5/31/DE63B019CA9A441FA0801360B6121A6E.pdf", "2024-05-31", "年報列上海市國資委為實際控制人。"),
       euBevDuties,
     ],
-  }),
+  })),
   record({
     id: "byd",
     name: "比亞迪 / BYD",
@@ -415,7 +529,17 @@ export const records = [
       source("U-CAR - 凱勝綠能代理中國比亞迪 BYD，導入 e6H 純電動車", "https://news.u-car.com.tw/news/article/39640", "2017-11-17", "支撐 BYD 曾由台灣代理導入 e6H，面向計程車或企業租賃市場。"),
     ],
   }),
-  record({
+  ...((group) => {
+    const caveat = "僅吉利關聯觀察，不是國企或制裁認定；吉利黨建不等於品牌自身黨建，中國電動車反補貼措施不能套到所有市場、車款及製造地。";
+    return splitRecord(group, [
+      { name: "吉利控股／Geely", aliases: ["Geely", "吉利", "吉利控股", "Zhejiang Geely Holding Group"], identifiers: ["zgh.com", "geely.com"], summary: `既有來源支持吉利集團黨建與車業關聯；其他品牌的持股、合資型態須分開。${caveat}`, sources: [group.sources[2], group.sources[6], group.sources[7]], aiNotes: caveat },
+      { name: "Volvo Cars", aliases: ["Volvo", "富豪", "Volvo Taiwan", "EX30", "EX40", "EC40"], identifiers: ["volvocars.com"], country: "", summary: `只指 Volvo Cars 汽車及既有台灣站列名車型，既有 2010 年公告記錄吉利完成收購；不擴及其他 Volvo 同名企業或推定每款中國製。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[6]], aiNotes: caveat },
+      { name: "Polestar", aliases: ["Polestar Engineered"], identifiers: ["polestar.com"], country: "", summary: `既有吉利品牌銷量資料列 Polestar，僅保留原有所有權／營運關聯觀察；Polestar Engineered 是原群組辨識字，不據此新增獨立法人或推定與 Polestar 車款相同。${caveat}`, sources: [group.sources[2], group.sources[6]], aiNotes: caveat },
+      { name: "Lotus", aliases: ["Lotus Cars", "Lotus Technology", "Lotus Eletre", "Lotus Emira", "Lotus Emeya"], identifiers: ["group-lotus.com"], country: "", summary: `既有 2017 年公告記錄吉利取得 Lotus 51% 股權；Lotus Cars／Lotus Technology 及列名車款僅作原品牌體系辨識，不推定各法人最新比例一致或全部中國製。${caveat}`, sources: [group.sources[2], group.sources[3], group.sources[6]], aiNotes: caveat },
+      { name: "LEVC", aliases: ["London Electric Vehicle Company", "London Taxi Company"], identifiers: ["levc.com"], country: "", summary: `既有 LEVC 治理頁列 Geely UK 為全資母公司，最終母公司為吉利控股；只限此品牌與原名稱，不擴及所有倫敦計程車。${caveat}`, sources: [group.sources[4], group.sources[6]], aiNotes: caveat },
+      { name: "smart", aliases: ["smart Automobile", "smart #1", "smart #3", "smart #5"], identifiers: ["smart.com"], country: "", avoidReasons: ["吉利與 Mercedes-Benz 50:50 合資關聯觀察"], summary: `既有 smart 公告為 Daimler／Mercedes-Benz 與吉利 50:50 合資，不能寫成吉利全控；原列名車款留本品牌，不推定各款製造地。${caveat}`, sources: [group.sources[5], group.sources[6]], aiNotes: caveat },
+    ]);
+  })(record({
     id: "geely-volvo-polestar",
     name: "吉利控股 / Geely / Volvo / Polestar / Lotus / LEVC / smart",
     aliases: ["Geely", "吉利", "吉利控股", "Zhejiang Geely Holding Group", "Volvo", "富豪", "Volvo Taiwan", "EX30", "EX40", "EC40", "Polestar", "Polestar Engineered", "Lotus", "Lotus Cars", "Lotus Technology", "Lotus Eletre", "Lotus Emira", "Lotus Emeya", "LEVC", "London Electric Vehicle Company", "London Taxi Company", "smart", "smart Automobile", "smart #1", "smart #3", "smart #5"],
@@ -436,8 +560,19 @@ export const records = [
       euBevDuties,
     ],
     aiNotes: "Volvo、Polestar、Lotus、LEVC、smart 的控制型態不同；smart 是 50:50 合資，Lotus/LEVC 也有重整與股權細節，查具體車款時應看當地銷售主體與製造地。此筆是吉利控股相關歐洲品牌風險提示，不代表每一台車或每個市場都同等風險。",
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "僅 Pirelli 重大國企持股與治理限制關聯；義大利 golden power 已限制中資治理權，不能簡化為中國全資或完全日常控制，也不擴持股公司其他業務。";
+    return splitRecord(group, [
+      { name: "Pirelli", aliases: ["Pirelli & C.", "Pirelli & C. S.p.A.", "倍耐力"], identifiers: ["pirelli.com"], summary: `既有股權與政府公告支持 Pirelli 的中資重大持股及智慧輪胎治理疑慮。${caveat}`, sources: group.sources, avoidReasons: ["Pirelli 重大國企持股／外國政府治理限制"], aiNotes: caveat },
+      ...[
+        ["Sinochem（Pirelli持股鏈）", ["Sinochem", "Sinochem Holdings"], [0, 2, 3]],
+        ["ChemChina（Pirelli持股鏈）", ["ChemChina"], [0, 3]],
+        ["CNRC（Pirelli持股鏈）", ["CNRC"], [0, 1]],
+        ["Marco Polo International Italy（Pirelli持股鏈）", ["Marco Polo International Italy"], [0, 1]],
+      ].map(([name, aliases, indexes]) => ({ name, aliases, country: "", summary: `本筆只辨識原 Pirelli 紀錄列名的持股鏈主體，不把不同公司視為別名或新增全公司避買；未查新股權。${caveat}`, sources: indexes.map((index) => group.sources[index]), avoidReasons: ["Pirelli 持股鏈／治理限制辨識"], aiNotes: `${caveat}Golden Power 是政府措施名，只留正文，不作搜尋鍵。` })),
+    ]);
+  })(record({
     id: "pirelli-sinochem",
     name: "Pirelli / Sinochem / ChemChina",
     aliases: ["Pirelli", "Pirelli & C.", "Pirelli & C. S.p.A.", "倍耐力", "Sinochem", "Sinochem Holdings", "ChemChina", "CNRC", "Marco Polo International Italy"],
@@ -454,8 +589,17 @@ export const records = [
       sasacCentralEnterprises,
     ],
     aiNotes: "此筆指義大利輪胎與智慧輪胎品牌 Pirelli，不指一般輪胎品類。Pirelli 董事會與義大利政府已限制中資治理權，故摘要用重大國企持股與治理風險，不簡化成目前完全由中方日常控制。",
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "僅既有年報的 Weichai／SHIG／FIH 控制鏈及山東國資關聯，不代表本品牌自身為中國法人、所有二手船或歷史船款皆同風險。";
+    return splitRecord(group, [
+      { name: "Ferretti Group", aliases: ["Ferretti"], identifiers: ["9638.HK", "YACHT.MI", "ferrettigroup.com"], summary: `本筆僅 Ferretti 集團；股東另筆，名稱不冒充同一公司。${caveat}`, sources: group.sources, aiNotes: caveat },
+      { name: "Weichai（Ferretti控制鏈）", aliases: ["Weichai", "Weichai Group"], summary: `既有年報與公告中的 Weichai 僅作 Ferretti 控制鏈辨識，不擴其所有其他業務。${caveat}`, sources: group.sources, aiNotes: caveat },
+      { name: "SHIG（Ferretti控制鏈）", aliases: ["SHIG", "Shandong Heavy Industry Group"], identifiers: ["Shandong SASAC"], summary: `既有年報中的 SHIG 與山東國資關係只限 Ferretti 持股鏈；Shandong SASAC 是主管國資關係識別，不是 SHIG 同名公司或新避買對象。${caveat}`, sources: [group.sources[0], group.sources[1]], aiNotes: caveat },
+      { name: "Ferretti International Holding", identifiers: ["Ferretti International Holding S.p.A."], summary: `既有公告中的 FIH 為 Weichai 全資子公司與 Ferretti 控制股東；僅本持股鏈，不擴其他業務。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[3]], aiNotes: caveat },
+      ...["Ferretti Yachts", "Riva", "Pershing", "Wally", "Itama", "CRN", "Custom Line", "Mochi Craft"].map((name) => ({ name, summary: `原群組將「${name}」列為 Ferretti 遊艇品牌，依既有集團年報維持控制鏈關聯收錄；不新增股權現況。${caveat}`, sources: [group.sources[0], group.sources[1]], aiNotes: caveat })),
+    ]);
+  })(record({
     id: "ferretti-group-weichai",
     name: "Ferretti Group / Riva / Pershing / Wally / Weichai",
     aliases: ["Ferretti", "Ferretti Group", "Ferretti Yachts", "Riva", "Pershing", "Wally", "Itama", "CRN", "Custom Line", "Mochi Craft", "Weichai", "Weichai Group", "SHIG", "Shandong Heavy Industry Group", "Ferretti International Holding"],
@@ -472,8 +616,13 @@ export const records = [
       source("PR Newswire - Ferretti shareholders elect new board; FIH and Weichai reaffirm support", "https://www.prnewswire.com/news-releases/ferretti-spa-shareholders-elect-new-board-of-directors-at-annual-general-meeting-fih-and-weichai-group-reaffirm-full-support-for-the-companys-future-development-302792438.html", "2026-06-05", "近期公告稱 FIH 為 Weichai 全資子公司與 Ferretti 控制股東，並說明股東會董事選任。"),
     ],
     aiNotes: "此筆指 Ferretti Group 旗下遊艇品牌控制鏈；不代表所有二手船、歷史船款或無關同名品牌皆有同等風險。",
-  }),
-  record({
+  })),
+  ...((group) => {
+    return splitRecord(group, [
+      { name: "東風汽車／東風商用車", aliases: ["東風", "東風汽車", "Dongfeng", "東風商用車", "DFCV"], summary: "既有來源支持東風集團央企背景及東風商用車台灣接觸面；只限該集團／商用車體系，不把 DFSK 現行股權視為相同。", sources: [group.sources[0], group.sources[2]], aiNotes: "東風中英文及商用車營運名稱留同筆；不由央企名稱推斷其他品牌現行股權。" },
+      { name: "DFSK／東風小康", aliases: ["DFSK", "東風小康", "穩發", "風光380", "E380"], summary: "既有 DFSK 台灣站支持品牌及原列名車款；原紀錄已註明股權曾變動，現行控制須逐車款確認，不直接繼承東風央企標籤。", sources: [group.sources[1]], avoidReasons: ["DFSK 股權變動／車款關聯待核"], aiNotes: "不新增現行持股事實；穩發、風光380、E380 僅按原群組品牌車款辨識。" },
+    ]);
+  })(record({
     id: "dongfeng-dfsk",
     name: "東風汽車 / Dongfeng / DFSK",
     aliases: ["東風", "東風汽車", "Dongfeng", "東風商用車", "DFCV", "DFSK", "東風小康", "穩發", "風光380", "E380"],
@@ -487,7 +636,7 @@ export const records = [
       source("DFSK 東風小康台灣官網", "https://www.dfsk.com.tw/", "查核日 2026-06-25", "台灣 DFSK 官網列品牌、服務與聯絡資訊。"),
       sasacCentralEnterprises,
     ],
-  }),
+  })),
   record({
     id: "yutong",
     name: "宇通 / Yutong",
@@ -503,7 +652,12 @@ export const records = [
       source("宇通官方新聞 - 黨建工作觀摩團考察宇通", "https://m.yutong.com/news/yutongnews/10/2016LHTYUbObj3.shtml", "2016-10-31", "宇通官方新聞支撐其黨建工作與黨組織活動。"),
     ],
   }),
-  record({
+  ...((group) => {
+    return splitRecord(group, [
+      { name: "King Long／金龍客車", aliases: ["King Long", "金龍", "大金龍", "廈門金龍"], summary: "既有業者頁支持台灣大金龍公車接觸面，集團／福建國資頁支持金龍體系省屬國企背景；台灣另有本地同名車體脈絡，仍須按車型與採購主體辨識，不擴所有金龍同名品牌。", sources: group.sources, aiNotes: "Golden Dragon／金旅不是 King Long 的英文拼法變體，另筆；台灣同名本地車體不得直接套國資結論。" },
+      { name: "Golden Dragon／金旅", aliases: ["Golden Dragon", "金旅"], confidence: "low", avoidReasons: ["原金龍群組列名的金旅關聯待核"], summary: "原金龍群組列名 Golden Dragon／金旅，與 King Long 分開辨識；現有來源摘要未逐項橋接本品牌與台灣車型或國資鏈，維持低信心觀察，不直接繼承大金龍台灣車輛或省屬國企認定。", sources: [group.sources[1], group.sources[2]], aiNotes: "來源僅金龍集團背景，本次未新查金旅控制鏈、車型或台灣接觸面。" },
+    ]);
+  })(record({
     id: "king-long",
     name: "金龍客車 / King Long / Golden Dragon",
     aliases: ["King Long", "金龍", "大金龍", "廈門金龍", "金旅", "Golden Dragon"],
@@ -517,7 +671,7 @@ export const records = [
       source("金龍聯合 - 廈門金龍汽車集團", "https://www.xmklm.com.cn/tzqy/jllh.htm", "查核日 2026-06-25", "金龍集團頁面列廈門金龍為福建省屬國有企業。"),
       source("福建省國資委 - 福建省汽車工業集團", "https://gzw.fujian.gov.cn/gzgk/ssqy_1/fjsqcgyjtyxgs/", "查核日 2026-06-25", "福建省國資委頁面列福建汽車工業集團及其金龍汽車等整車企業。"),
     ],
-  }),
+  })),
   record({
     id: "catl",
     name: "寧德時代 / CATL",
@@ -575,7 +729,19 @@ export const records = [
       source("珠海格力電器股份有限公司章程", "https://static.cninfo.com.cn/finalpage/2025-10-31/1224779025.PDF", "2025-10-31", "公司章程設有黨建工作章節，明定公司黨委、紀委與黨委職責。"),
     ],
   }),
-  record({
+  ...((group) => splitRecord(group, [
+    {
+      id: group.id, name: "海信 / Hisense", aliases: ["Hisense", "海信", "海信電視", "海信投影機", "海信空調"],
+      summary: group.summary,
+      aiNotes: "只限海信品牌與原來源的公司治理脈絡；容聲另列，不把海信章程與台灣販售資訊當容聲自身事實。未重新外查。",
+    },
+    {
+      name: "容聲", aliases: ["Ronshen"], country: "", status: "watchlist", confidence: "low", sources: [],
+      avoidReasons: ["原群組已列名的品牌關聯觀察"],
+      summary: "容聲Ronshen原已列於海信群組，現獨立保留為關聯觀察。既有來源摘要未個別證明容聲的章程、台灣販售、產地或制裁適用，不將海信母卡的黨建／國企標籤歸本品牌，待補個別關係來源。",
+      aiNotes: "只拆既有列名，不新增所有權或產品事實；sources空表示缺本品牌個別適用來源，不以母卡來源冒充。",
+    },
+  ]))(record({
     id: "hisense",
     name: "海信 / Hisense",
     aliases: ["Hisense", "海信", "海信電視", "海信投影機", "海信空調", "Ronshen", "容聲"],
@@ -588,8 +754,13 @@ export const records = [
       source("海信台灣", "https://www.hisense.com.tw/", "查核日 2026-06-25", "支撐台灣販售 Hisense 顯示器、投影機等。"),
       source("海信家電：《公司章程》(2026 年 4 月)", "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12143421&stockid=000921", "2026-04", "公司章程揭露黨委會研究三重一大事項、黨建經費納入預算。"),
     ],
-  }),
-  record({
+  })),
+  ...((group) => {
+    return splitRecord(group, [
+      { name: "科沃斯／ECOVACS", aliases: ["ECOVACS", "科沃斯", "DEEBOT", "WINBOT"], summary: "既有來源支持科沃斯在台家用機器人、CVE-2025-30200 所述通訊安全問題及集團黨建；漏洞只按受影響設備與條件理解，不推及全品。", sources: group.sources, aiNotes: "DEEBOT／WINBOT 留科沃斯產品線；不得把此 CVE 套到添可。" },
+      { name: "添可／Tineco", aliases: ["Tineco", "添可", "添可洗地機"], status: "watchlist", confidence: "low", avoidReasons: ["原群組列名的品牌關聯待核"], summary: "原群組將添可 Tineco 列名，但現有來源摘要未提供添可個別產品漏洞或獨立品牌橋接；只保留原名單的低信心關聯觀察，不繼承科沃斯 CVE、在台販售或自身黨建結論。", sources: [group.sources[2]], aiNotes: "來源為科沃斯集團報告，不當成添可個別事實已獨立證實；需後續取得品牌關係佐證，本次不查新來源。" },
+    ]);
+  })(record({
     id: "ecovacs-tineco",
     name: "科沃斯 / ECOVACS / 添可 Tineco",
     aliases: ["ECOVACS", "科沃斯", "DEEBOT", "WINBOT", "Tineco", "添可", "添可洗地機"],
@@ -603,7 +774,7 @@ export const records = [
       source("NVD CVE-2025-30200", "https://nvd.nist.gov/vuln/detail/CVE-2025-30200", "2025-09-05", "NVD 記錄 ECOVACS 掃地機器人／基站通訊安全問題，來源含 CISA。"),
       source("Ecovacs Sustainability Report 2025", "https://stockmc.xueqiu.com/202604/603486_20260425_WLWS.pdf", "2026-04", "報告提及科沃斯集團黨委與黨員志願者活動。"),
     ],
-  }),
+  })),
   record({
     id: "roborock",
     name: "石頭科技 / Roborock",
@@ -684,7 +855,14 @@ export const records = [
       "此筆是使用者明確以「避雷」指定的 screenshot-source personal record。範圍只收錄圖片中可辨識的 ZIV／ZIV 運動眼鏡品牌，不自動把遠炬公司、陳本偉、全球知名品牌代工客戶、鐵人三項／自行車／跑步賽事或其他運動眼鏡列入。圖片文字中的亞洲人臉型設計、本土品牌、每年贊助與代工經歷是宣傳／人物引述；Prohero Group 官方 About Us 頁支持 ZIV 為其 in-house brand，但未直接列出遠炬股份有限公司，不能由此把兩個法人／名稱直接合併，也不能把贊助、產品品質、政治立場、違法或人物責任寫成已獨立確認。searchable fields 僅保留 ZIV 與完整品牌名；不要把遠炬、陳本偉、運動眼鏡、亞洲人臉型、贊助、鐵人三項、自行車、跑步、代工、國內活動或其他文案／脈絡詞放入 aliases／identifiers。",
     lastReviewed: "2026-08-13",
   }),
-  record({
+  ...((group) => {
+    const caveat = "僅原妙管家清潔用品收購鏈，不指同名卡式爐／戶外生活用品，不將納愛斯黨建直接歸為每一產品本身的行為。";
+    return splitRecord(group, [
+      { name: "台灣妙管家清潔用品", aliases: ["妙管家", "台灣妙管家", "台湾妙管家", "台灣妙管家股份有限公司", "台湾妙管家股份有限公司", "MAGIC AMAH HOUSEHOLD (TAIWAN) CO., LTD."], identifiers: ["amah.com.tw"], summary: `既有收購報導、品牌頁與公司資料支持台灣妙管家清潔用品公司由納愛斯浙江投資收購 100%；僅該公司／清潔品牌。${caveat}`, sources: group.sources.slice(0, 4), aiNotes: caveat },
+      { name: "納愛斯／Nice Group（妙管家收購鏈）", aliases: ["納愛斯", "纳爱斯", "Nice Group"], identifiers: ["cnnice.com"], summary: `既有納愛斯官網列妙管家品牌並有母公司黨建文章；只限原收購鏈，不擴納愛斯所有其他品牌，伢牙樂已有獨立紀錄。${caveat}`, sources: [group.sources[1], group.sources[3], group.sources[4]], aiNotes: caveat },
+      { name: "納愛斯浙江投資（妙管家收購鏈）", aliases: ["大陸商納愛斯浙江投資有限公司", "纳爱斯浙江投资有限公司", "納愛斯浙江投資有限公司"], summary: `既有收購報導與公司資料中，納愛斯浙江投資是台灣妙管家的收購／法人代表鏈主體；僅此關係，不與納愛斯集團視為同一公司，也不擴其他投資。${caveat}`, sources: [group.sources[1], group.sources[2]], aiNotes: caveat },
+    ]);
+  })(record({
     id: "nice-magic-amah-household",
     name: "納愛斯 / 妙管家 / 台灣妙管家",
     aliases: ["納愛斯", "纳爱斯", "Nice Group", "妙管家", "台灣妙管家", "台湾妙管家", "台灣妙管家股份有限公司", "台湾妙管家股份有限公司", "MAGIC AMAH HOUSEHOLD (TAIWAN) CO., LTD.", "大陸商納愛斯浙江投資有限公司", "纳爱斯浙江投资有限公司", "納愛斯浙江投資有限公司"],
@@ -702,7 +880,7 @@ export const records = [
       source("納愛斯 - 黨建引領聚合力", "https://www.cnnice.com/news/1400.html", "查核日 2026-06-25", "納愛斯官網黨建文章，支撐母公司黨組織／黨建關聯。"),
     ],
     aiNotes: "妙管家在台灣至少有清潔用品與卡式爐／戶外用品兩個容易混淆的品牌脈絡；此筆只指被納愛斯收購的台灣妙管家清潔用品公司，不把清潔劑、洗衣精、除濕劑等泛用品項作為 alias。",
-  }),
+  })),
   record({
     id: "woawoa-sleeve-made-in-china-screenshot-personal",
     name: "WOAWOA / Woawoa",

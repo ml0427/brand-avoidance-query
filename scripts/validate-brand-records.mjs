@@ -18,9 +18,9 @@ const rootDir = path.resolve(__dirname, "..");
 
 const DEFAULT_POSITIVE_SMOKE_TESTS = [
   { query: "味全", expectedIds: ["weichuan-foods"] },
-  { query: "TikTok", expectedIds: ["bytedance"] },
+  { query: "TikTok", expectedIds: ["bytedance-54-69-6b-54-6f-6b"] },
   { query: "國民黨", minMatches: 1 },
-  { query: "Palladium", expectedIds: ["kp-global-palladium-k-swiss"] },
+  { query: "Palladium", expectedIds: ["kp-global-palladium-k-swiss-50-61-6c-6c-61-64-69-75-6d"] },
   { query: "蔡詩萍", minMatches: 1 },
 ];
 

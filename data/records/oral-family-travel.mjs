@@ -15,6 +15,7 @@
   tppCurrentPublicFigureAliases,
   treeProtectionPublicFigureAliases,
 } from "../record-helpers.mjs";
+import { splitRecord } from "../split-record.mjs";
 
 export const records = [
   record({
@@ -55,7 +56,37 @@ export const records = [
     aiNotes: "high只指官方中國研發據點事實及明確個人避雷授權，不是全球控制鏈可信度。社群截圖只作線索，不作股權、控制或藥品安全客觀證據，也不保存公開圖副本。制度與政治風險已足以承接personal，不以中共直接控股證據作入庫門檻；中文譯名分歧只作必要實體辨識，不否定核心理由。不外溢股東、資產管理機構、合作企業或其他醫藥品牌；不提供停藥或替藥建議。搜尋只留品牌名稱，country空，理由、國家、研發據點及關係企業不作搜尋鍵。",
     lastReviewed: "2026-09-30",
   }),
-  record({
+  ...((group) => {
+    return splitRecord(group, [
+      ["高露潔 纖柔矯正", ["高露潔：纖柔矯正", "高露潔 纖柔矯正"]],
+      ["高露潔 360度齒縫潔淨", ["高露潔：360 度齒縫潔淨", "高露潔 360 度齒縫潔淨", "高露潔 360度齒縫潔淨"]],
+      ["高露潔 360度抗敏型", ["高露潔：360 度抗敏型", "高露潔 360 度抗敏型", "高露潔 360度抗敏型"]],
+      ["高露潔 Easy Comfort", ["高露潔：Easy Comfort", "高露潔 Easy Comfort"]],
+      ["高露潔 高分子超彈極淨", ["高露潔：高分子超彈極淨", "高露潔 高分子超彈極淨"]],
+      ["刷樂 極薄護齦", ["刷樂：極薄護齦", "刷樂 極薄護齦"]],
+      ["刷樂 濃密護齦", ["刷樂：濃密護齦", "刷樂 濃密護齦"]],
+      ["刷樂 濃密深潔", ["刷樂：濃密深潔", "刷樂 濃密深潔"]],
+      ["親親 一次性旅行專用", ["親親：一次性旅行專用", "親親 一次性旅行專用"]],
+      ["獅王 細潔寬薄椰萃護齦", ["獅王：細潔寬薄椰萃護齦", "獅王 細潔寬薄椰萃護齦"]],
+      ["獅王 細潔寬薄極上超小頭", ["獅王：細潔寬薄極上超小頭", "獅王 細潔寬薄極上超小頭"]],
+      ["獅王 細潔超柔護齦", ["獅王：細潔超柔護齦", "獅王 細潔超柔護齦"]],
+      ["獅王 細潔無隱角", ["獅王：細潔無隱角", "獅王 細潔無隱角"], "韓國／中國"],
+      ["好來 抗敏專用", ["好來：抗敏專用", "好來 抗敏專用"]],
+      ["好來 小細潔淨", ["好來：小細潔淨", "好來 小細潔淨"]],
+      ["好來 密淨護齦", ["好來：密淨護齦", "好來 密淨護齦"]],
+      ["好來 密泡淨白", ["好來：密泡淨白", "好來 密泡淨白"]],
+      ["好來 專業護齦", ["好來：專業護齦", "好來 專業護齦"]],
+      ["好來 寬綿抗敏", ["好來：寬綿抗敏", "好來 寬綿抗敏"]],
+      ["麗奇 14度牙周對策", ["麗奇：14 度牙周對策", "麗奇 14 度牙周對策", "麗奇 14度牙周對策"], "韓國／中國"],
+      ["欣芯潔 菱的小頭", ["欣芯潔：菱的小頭", "欣芯潔 菱的小頭"]],
+      ["欣芯潔 銀離子抗菌", ["欣芯潔：銀離子抗菌", "欣芯潔 銀離子抗菌"]],
+    ].map(([name, aliases, country = "中國"]) => ({
+      name, aliases, country,
+      summary: `使用者提供的康是美牙刷產地清單將「${name}」標示為${country}${country === "中國" ? "產地" : "，可能遇到中國產地批次"}，因此個人避開。只限列名 SKU，不擴及同品牌其他款式，也不宣稱未來每批產地相同。`,
+      sources: group.sources,
+      aiNotes: "僅依既有產地清單，沒有新增逐項商品頁或包裝佐證；韓國／中國兩種產地須按實際批次辨識。冒號、空白及度數寫法留在同款，不另拆；單獨品牌、牙刷及中國製不作查詢鍵。",
+    })));
+  })(record({
     id: "cosmed-china-origin-oral-care-skus-2026-06-28",
     name: "中國產地口腔清潔 SKU 名單（2026-06-28）",
     aliases: cosmedChinaOriginOralCareSkuAliases20260628,
@@ -69,7 +100,7 @@ export const records = [
       source("使用者提供 - 康是美牙刷產地清單", "", "2026-06-28", "使用者提供康是美商品產地整理；本筆依該清單只收標示中國或韓國 / 中國的 SKU。公開搜尋未取得可穩定引用的逐項商品 URL，因此列 medium。"),
     ],
     aiNotes: "此筆是 product/SKU 級 personal 紀錄，不是品牌整體風險判定。aliases 僅放品牌加具體款式，不放單獨品牌、牙刷、口腔用品、中國製等泛稱；但現有搜尋採 substring matching，單查品牌名時仍可能因品牌出現在具體 SKU alias 中而命中，回答時必須說明只限列名 SKU。若後續拿到康是美逐項商品 URL、包裝照片或品牌官方產地頁，可提高 confidence 或拆分更新。",
-  }),
+  })),
   record({
     id: "yunnan-baiyao-toothpaste-oral-care",
     name: "雲南白藥牙膏",
@@ -170,7 +201,26 @@ export const records = [
     aiNotes: "此筆是 personal：只表示使用者要求避買 Uni 水。回答時可說列入個人避買清單；不要在未查核前延伸成中資、國企、黨建、制裁、違法或食品安全定論。aliases 不放單獨「水」等泛稱，避免誤傷一般飲用水。",
     lastReviewed: "2026-06-29",
   }),
-  record({
+  ...((group) => {
+    return splitRecord(group, [
+      ["1147599", "光泉一日快充綜合水果飲", 0],
+      ["1413875", "波蜜100%一日百香果蔬果汁", 1],
+      ["2921851", "波蜜一日蔬果100％紫色蔬果汁", 2],
+      ["2970555", "一日水果100%蘋果汁", 3],
+      ["2970573", "一日蔬果100％紫色蔬果汁", 4],
+      ["2970591", "一日蔬果100%蔬果汁", 5],
+    ].map(([cmno, name, sourceIndex]) => {
+      const item = group.sources[sourceIndex];
+      if (!item.url.endsWith(`/product/${cmno}`)) throw new Error(`CMNO source mismatch: ${cmno}`);
+      return {
+        name,
+        identifiers: [cmno, `foodsafety.family.com.tw/Web_FFD_2022/product/${cmno}`],
+        summary: `依既有 2026-06-30 全家食安平台查核，「${name}」（CMNO ${cmno}）原料來源列蘋果濃縮汁／中國${cmno === "1413875" ? "及桃子濃縮汁／中國" : ""}，使用者選擇此 SKU 個人避買。這是原料來源，不等於成品中國製；不擴及全家、光泉、波蜜或整個一日系列。`,
+        sources: [item],
+        aiNotes: "CMNO 與商品 URL 只屬於本款，不繼承其他五款的識別或原料。未取得新快照，不宣稱現行配方未變；光泉一日快充高C檸檬飲及非飲料軟糖不在本次範圍。",
+      };
+    }));
+  })(record({
     id: "familymart-oneday-fruit-drinks-china-concentrate-2026-06-30",
     name: "全家一日水果／蔬果飲料中國來源濃縮汁 SKU",
     aliases: [
@@ -211,8 +261,35 @@ export const records = [
     ],
     aiNotes: "此筆是 SKU 級 personal record：依使用者口徑，針對全家食安平台查到中國來源果汁／濃縮汁的『一日』飲料列入。不要寫成全家、光泉、波蜜或所有一日系列都避雷；不要把『一日』『果汁』『水果飲』『濃縮汁』『中國製』等泛稱列為 alias。查到但未納入者：光泉一日快充高C檸檬飲（CMNO 1439025）有檸檬酸／中國、維生素C／中國，但未查到中國來源果汁／濃縮汁；綜合水果軟糖等非飲料不在本筆範圍。",
     lastReviewed: "2026-06-30",
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "僅為金之島營運與中國商務網絡關聯觀察，不代表本店有國資、黨建、制裁、違法或食安問題，也不擴及其他同名餐廳。";
+    return splitRecord(group, [
+      {
+        name: "金之島株式会社",
+        aliases: ["金之島", "Kin no Shima"],
+        identifiers: ["6360001022902", "kinnoshima-okinawa.com"],
+        summary: "既有公司沿革與具名報導記載金之島的中國企業主沖繩研修及中國銷售網絡，列公司關聯觀察；不推定國資、黨建、制裁或違法。",
+        sources: [group.sources[0], group.sources[2], group.sources[3]],
+        aiNotes: "日本公司識別與公司網域只歸本公司；品牌門店另筆，不把創辦人的背景改寫為各店行為。",
+      },
+      {
+        name: "蒸気海鮮 CHATAN STEAM SEAFOOD",
+        aliases: group.aliases.slice(3, 12),
+        identifiers: ["chatansteamseafood.owst.jp"],
+        summary: `既有官方沿革、店舖介紹與報導將蒸気海鮮對應至金之島營運的沖繩餐廳。${caveat}`,
+        sources: group.sources,
+        aiNotes: "僅本餐廳及既有沖繩蒸氣海鮮名稱變體；兩個電話與地址未在既有來源摘要逐一歸屬，不猜配到其他子筆。",
+      },
+      ...["地球村酒場", "福州園GARDEN", "コンベンションセンターレストラン", "POSTPOST 福州園GARDEN"].map((name) => ({
+        name,
+        confidence: name.includes("福州園") ? "low" : "medium",
+        summary: `金之島既有官方店舖介紹列有「${name}」，只依原群組的營運關聯列觀察。${caveat}`,
+        sources: [group.sources[0], group.sources[1]],
+        aiNotes: "僅保留既有完整列名，不推定 POSTPOST 與福州園GARDEN 為同一店或不同店；僅分開查詢名稱，不代表獨立門店已核實。也不推定各店均承辦中國研修；店別、電話與營業現況未另行確認。",
+      })),
+    ]);
+  })(record({
     id: "kinnoshima-chatan-steam-seafood",
     name: "金之島株式会社 / 蒸気海鮮 CHATAN STEAM SEAFOOD",
     aliases: [
@@ -248,5 +325,5 @@ export const records = [
     ],
     aiNotes: "此筆是 watchlist／中可信度：可公開核對中國商務研修與中國銷售網絡脈絡，琉球新報另有創辦人背景報導；但目前未查到中共黨建、國資／央企、制裁、違法或食品安全證據。回答時應說明是金之島株式会社／蒸気海鮮的中國商務網絡關聯觀察，不要寫成中國國資或親共定論。aliases 不放「海鮮」「沖繩餐廳」「蒸汽料理」或「天理スタミナラーメン」等泛稱／加盟品牌名，避免誤傷其他店家。",
     lastReviewed: "2026-06-30",
-  }),
+  })),
 ];

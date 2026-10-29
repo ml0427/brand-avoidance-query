@@ -177,6 +177,8 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
 
 ## 判讀紀錄
 
+不同人物、獨立品牌與 SKU 各有自己的紀錄；同一人的中英文名／藝名等仍是別名。共用來源只作背景，不把其他成員的言論、罪責、產地、制裁或控制關係套到本對象。同名的多筆命中仍需各自閱讀，不能自動合併。
+
 讀完整 record、aiNotes、sourceLinks、來源 note 與複查期限，不憑目錄名稱下結論。personal 是使用者個人選擇，理由可以只是主觀不喜歡；不要求以外部證據證明偏好。客觀事實與來源限制仍須分開。無命中不等於安全；讀取失敗不等於無命中。不自動下載圖片。期限以查詢當日 Asia/Taipei 判讀，不把舊事件當現行違規。
 
 - [首頁](index.html)

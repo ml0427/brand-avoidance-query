@@ -15,6 +15,7 @@
   tppCurrentPublicFigureAliases,
   treeProtectionPublicFigureAliases,
 } from "../record-helpers.mjs";
+import { splitRecord } from "../split-record.mjs";
 
 export const records = [
   record({
@@ -2263,7 +2264,12 @@ export const records = [
       "此筆是 source-backed / user-directed personal product record。範圍只限愛之味愛健萬丹紅紅豆水，不是愛之味全品牌。使用者明確要求電話補充也列入，因此即使文章與官方頁均指向台灣萬丹紅豆，仍保留個人避買；不可寫成愛之味電話說法已被證偽、產品使用外國豆、食安或違法。searchable fields 僅保留完整產品名與變體；不要把愛之味、紅豆、台灣、萬丹、電話、來源、食安或原料等單獨作 alias / identifier。證據圖 SHA-256：238413be339f4d71caa11851f40aa62a612b88c5676f38c30b88d5c9ff2614e8。",
     lastReviewed: "2026-08-07",
   }),
-  record({
+  ...((group) => {
+    return splitRecord(group, [
+      { name: "愛之味妞妞甜八寶", aliases: ["愛之味 妞妞甜八寶"], summary: "既有上下游更新文章記錄愛之味妞妞甜八寶使用阿根廷紅豆，使用者選擇本產品個人避買；原料國別不等於成品製造地，也不代表不安全、違法或愛之味全產品有問題。", sources: [group.sources[0]], aiNotes: "不繼承蒟蒻紅豆粉粿的規格或成品產地；紅豆水的台灣原料補充屬另一筆。" },
+      { name: "愛之味蒟蒻紅豆粉粿", aliases: ["愛之味妞妞紅豆粉粿", "愛之味 妞妞紅豆粉粿", "愛之味 蒟蒻紅豆粉粿"], summary: "既有上下游更新文章記錄愛之味紅豆粉粿甜湯使用阿根廷紅豆，官方頁支持蒟蒻紅豆粉粿 340g 及台灣製造；原料國別與成品製造地分開。只限本產品個人避買，不外推甜八寶的規格或全品牌不安全／違法。", sources: group.sources, aiNotes: "妞妞紅豆粉粿／蒟蒻紅豆粉粿依原紀錄作此產品辨識，不由文章反推未核產品；愛之味紅豆水另筆。" },
+    ]);
+  })(record({
     id: "aizhiwei-niniu-red-bean-desserts-argentina-personal-20260807",
     name: "愛之味妞妞甜八寶／紅豆粉粿（阿根廷紅豆）",
     aliases: [
@@ -2302,7 +2308,7 @@ export const records = [
     aiNotes:
       "此筆是 source-backed / user-directed personal product group record。只限愛之味妞妞甜八寶、妞妞紅豆粉粿／蒟蒻紅豆粉粿等文章明確涵蓋的紅豆甜湯品項；不要擴張成愛之味全品牌。文章明載阿根廷紅豆，不能改寫成中國原料、食安、違法或混充。searchable fields 僅保留完整品牌＋產品名稱；不要把愛之味、甜湯、紅豆、阿根廷、台灣製造、原料或食安單獨作 alias / identifier。證據圖 SHA-256：238413be339f4d71caa11851f40aa62a612b88c5676f38c30b88d5c9ff2614e8。",
     lastReviewed: "2026-08-07",
-  }),
+  })),
   record({
     id: "chimei-red-bean-pastry-origin-unclear-screenshot-personal-20260807",
     name: "奇美紅豆酥餅（原料紅豆來源未明）",
@@ -2330,7 +2336,33 @@ export const records = [
       "此筆是 screenshot-only / user-directed personal product record。範圍只限奇美紅豆酥餅；成品標示台灣不等於紅豆原料產地已知，亦不能由截圖推論外國原料、食安、違法或全品牌問題。searchable fields 僅保留完整產品名稱與變體；不要把奇美、紅豆、酥餅、台灣、原料來源、來源不明、食安或違法單獨作 alias / identifier。證據圖 SHA-256：238413be339f4d71caa11851f40aa62a612b88c5676f38c30b88d5c9ff2614e8。",
     lastReviewed: "2026-08-07",
   }),
-  record({
+  ...((group) => {
+    const caveat = "只依既有旺旺群組列名的消費品牌／產品線關聯辨識；集團補貼與媒體影響爭議不是本產品自己的表態，不代表國企、產品不安全、違法或每個 SKU 均有問題。";
+    return splitRecord(group, [
+      { name: "旺旺／中國旺旺控股", aliases: ["旺旺", "旺旺集團", "旺旺食品", "中國旺旺", "中國旺旺控股", "Want Want", "Want Want Holdings"], summary: "既有來源支持旺旺中國補貼及同集團媒體影響爭議；旺旺食品不是國企。食品／消費品牌另筆，媒體已有獨立群組，不跨域複製商品或媒體責任。", sources: group.sources, aiNotes: caveat },
+      ...[
+        ["旺仔", []], ["旺仔俱樂部", []], ["旺仔旺鋪", []],
+        ["旺旺仙貝", []], ["福旺仙貝", []], ["旺旺雪餅", ["旺仔雪餅"]],
+        ["旺仔牛奶", []], ["旺旺香蕉牛奶", []], ["旺仔牛奶糖", []], ["旺仔小饅頭", []],
+        ["旺仔米餅", []], ["旺仔有機米餅", []], ["旺旺小小酥", []],
+        ["旺旺O泡果奶", ["O泡果奶"]], ["旺旺果粒多", ["果粒多"]],
+        ["浪味仙", ["LONELY GOD 浪味仙"]], ["浪味炒麵", []], ["旺旺黑白配", ["黑白配"]],
+        ["旺旺碎冰冰", []], ["挑豆", []], ["雪里菓", []], ["旺旺厚燒", []],
+        ["無聊派", []], ["嚼代爽椒", []], ["Got Rice", []], ["帕樂德", []], ["匠派", []],
+        ["米小餅", []], ["紫薯物語", []], ["金薯物語", []], ["紅麴物語", []], ["青蔥物語", []],
+        ["米CHEESE", []], ["瑞花米果", []], ["米豆米果", []], ["燒米屋", []], ["波貝仙", []],
+        ["貝比瑪瑪", ["Baby Mama"]], ["野川蛋黃派", []], ["Jelly蒟蒻凍", []],
+        ["旺旺食技研", []], ["爆利旺", []], ["旺事平安", []], ["旺事發財", []], ["金旺米果", []],
+        ["邦德咖啡", []], ["邦德食品", []], ["Fix XBody", ["FixXBody"]], ["WANTPOWER", []],
+        ["水神", ["Water God"]], ["諾旺生醫", []], ["太陽星", []],
+      ].map(([name, aliases]) => ({
+        name, aliases, status: "watchlist", confidence: "medium", country: "",
+        avoidReasons: ["旺旺集團關聯消費品牌／產品線觀察"],
+        summary: `原紀錄將「${name}」列入旺旺食品、飲料或集團關聯消費品牌。${caveat}現有來源是集團層級，未逐款新增品牌或商品驗證。`,
+        sources: group.sources, aiNotes: caveat,
+      })),
+    ]);
+  })(record({
     id: "want-want",
     name: "旺旺 / 中國旺旺控股",
     aliases: [
@@ -2412,8 +2444,35 @@ export const records = [
       source("VOA - 旺旺集团否认从中国大陆拿巨额补助金用于在台湾的政治目的", "https://www.voachinese.com/a/Taiwan-Want-Want-Received-Billions-State-Grant-From-China-In-2017-20190423/4887944.html", "2019-04-23", "報導旺旺承認有中國地方政府補助但否認政治用途，並引述台灣主管機關疑慮。"),
     ],
     aiNotes: "此筆收旺旺食品、飲料與集團關聯消費品牌；中天、中國時報、中視、工商時報等媒體已拆到 want-want-china-times-media-group。不要把食品、飲料、零食、米果、牛奶、咖啡、清潔、保健等泛稱當 alias。水神、諾旺生醫、太陽星等是旺旺官網／商城關聯入口，回答時應說明屬關聯品牌辨識，不等於每項商品本身有安全或違法定論。",
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "依使用者原定個人避開與旺中媒體關聯收錄；不把其他媒體的表態、內容、換照處分或法律責任套給本對象，也不代表每位員工相同立場。";
+    return splitRecord(group, [
+      { name: "旺旺中時集團", aliases: ["旺中集團", "旺中", "Want Want China Times Group", "China Times Group"], identifiers: ["蔡衍明", "Want Want"], categories: ["App／數位服務"], summary: `既有 Freedom House、RSF 與陸委會來源記錄旺中集團的中國補貼／媒體影響、編輯干預指控與公開譴責脈絡；人物識別只指原媒體控制關係，不另作人物避雷。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[3], group.sources[4]], aiNotes: caveat },
+      ...[
+        ["中國時報", ["China Times"], [], [0, 3, 5]],
+        ["中時新聞網", [], ["chinatimes.com"], [0]],
+        ["中天電視", ["中天", "CTi TV"], ["ctitv.com.tw"], [0]],
+        ["中天新聞台", ["中天新聞", "CTi News"], [], [0, 2, 5]],
+        ["中國電視／中視", ["中國電視", "中視", "CTV"], ["ctv.com.tw"], [0]],
+        ["中視新聞", [], [], [0, 5]],
+        ["工商時報", ["Commercial Times"], [], [0, 5]],
+        ["工商時報網", [], ["ctee.com.tw"], [0]],
+        ["CTWANT", [], [], [0, 5]], ["旺報", ["WANT DAILY"], [], [5]],
+        ["時報周刊", ["China Times Weekly"], [], [5]],
+        ["時報資訊", ["InfoTimes"], [], [0]], ["伊林娛樂", ["Eelin"], [], [0]],
+        ["時際創意傳媒", [], [], [0]], ["商訊文化", [], [], [0]],
+        ["旺旺中時文化傳媒", [], [], [0]], ["美國中旺電視", [], [], [0]],
+        ["樂時尚", [], [], [0]], ["快點TV", [], [], [0]], ["翻爆", [], [], [0]], ["旺傳媒", [], [], [0]],
+      ].map(([name, aliases, identifiers, indexes]) => ({
+        name, aliases, identifiers, categories: ["App／數位服務"],
+        avoidReasons: ["使用者指定旺中媒體／友鏈關聯個人避開"],
+        summary: `原群組以旺旺官方媒體／友鏈或使用者圖卡列「${name}」。${name === "中天新聞台" ? "既有報導記錄 NCC 不予換照及法院撤銷原處分，兩者必須一併陳述，不延伸到中天全部內容。" : "不繼承中天新聞台換照事件。"}${caveat}`,
+        sources: indexes.map((index) => group.sources[index]),
+        aiNotes: `${caveat}友鏈列名不等於每一實體目前股權／控制均已逐項確認；CTWANT 與時報周刊保留不同服務名稱，不宣稱其為不同法人或同一 SKU。`,
+      })),
+    ]);
+  })(record({
     id: "want-want-china-times-media-group",
     name: "旺旺中時集團 / 中國時報 / 中天 / 中視",
     aliases: [
@@ -2472,7 +2531,7 @@ export const records = [
       source("使用者提供截圖 - 台灣媒體中國色彩圖卡", "", "2026-07-08", "截圖列旺報、中視新聞、中天新聞、中國時報、工商時報、時報周刊等媒體，並以『具有中國色彩（中資介入）的台灣媒體』描述；此來源只作使用者指定個人避開與清單補充，不獨立證明法律或股權事實。"),
     ],
     aiNotes: "此筆是紅媒／個人避開紀錄，依使用者要求採網路常見紅媒圖譜方向並用公開來源核對。不要把媒體、新聞、電視、報紙、節目等泛稱當 alias；回答時應區分旺旺食品與旺中媒體。中天新聞台換照是 NCC 對頻道換照處分，不等於中天全部內容均違法；FT/RSF 脈絡涉及報導與訴訟爭議，需避免寫成已法院定罪。",
-  }),
+  })),
   record({
     id: "coco-fresh-tea",
     name: "CoCo都可 / CoCo Fresh Tea & Juice / 億可國際飲食",
@@ -2544,7 +2603,36 @@ export const records = [
       "此筆是 screenshot-based user-directed personal record。可說使用者提供 Threads 截圖點名台中伍兩五炸雞太平二店，畫面造成餐飲備料衛生觀感疑慮，因此指定個人避開。不可寫成已由本專案獨立查證影片真實來源、店家官方承認、主管機關裁罰、法令違反、食品安全事故、故意污染、所有分店皆相同，或對畫面中人物作人身辨識。aliases 僅保留店名常見寫法；不要把 dafeiji_new、l.jeff_y、香噴噴地去角質、去角質、赤腳、踩食材、食安、衛生、Threads 等脈絡／原因詞放進 aliases / identifiers。",
     lastReviewed: "2026-07-08",
   }),
-  record({
+  ...((group) => {
+    return splitRecord(group, [
+      ["迷客夏", ["Milksha", "迷客夏 Milksha"], [5], "既有報導記錄香港加盟店與中國表態爭議，總公司強調台灣與中國經營權無關；不能把中國經營方表態歸給台灣全部門市。"],
+      ["一芳", ["一芳水果茶", "一芳台灣水果茶", "一芳（霜江茶行）", "一芳(霜江茶行)", "霜江茶行", "Yifang", "Yifang Taiwan Fruit Tea"], [2], "政治表態事件只按既有媒體整理理解，不推定每個加盟店或員工立場。"],
+      ["大苑子", ["大苑子茶飲專賣店", "Dayungs"]],
+      ["老虎堂", ["老虎堂 Tiger Sugar", "Tiger Sugar"]],
+      ["貢茶", ["贡茶", "Gong Cha", "Gongcha"], [6], "保留韓國／跨國品牌脈絡，不能因混合清單列名就判定台灣中資控制。"],
+      ["丹堤咖啡", ["Dante Coffee"]],
+      ["85度C", ["85°C", "85C", "85度C咖啡", "85°C Bakery Cafe"], [4], "既有中央社報導支持 2018 年九二共識聲明；不推定所有門市、員工或產品立場。"],
+      ["鮮芋仙", ["鲜芋仙", "Meet Fresh"]], ["丸作食茶", ["丸作", "OneZo"]],
+      ["日出茶太", ["Chatime"]], ["鹿角巷", ["鹿角巷 The Alley", "The Alley"]],
+      ["鮮茶道", ["Presotea"]], ["Tea's原味", ["Tea's 原味"]],
+      ["春陽茶事", ["Chun Yang Tea"]],
+      ["50嵐 北部", ["五十嵐 北部"], [], "僅北部，不能推及中部、南部或其他區域營運體系。"],
+      ["50嵐 中部", ["五十嵐 中部"], [], "僅中部，不能推及北部、南部或其他區域營運體系。"],
+      ["極品茶", []], ["署茗職茶", ["署茗職茶 AtTea", "ATTea"]],
+      ["COMEBUY", ["Comebuy", "COMEBUY 世界茶飲"]], ["雙妃奶茶", []],
+      ["七里香", ["七里香茶飲"]], ["十盛", []], ["麻六茶", []],
+      ["天仁茗茶", ["Ten Ren", "Ten Ren's Tea", "天仁茶業"]],
+      ["可不可熟成紅茶", ["可不可", "KEBUKE"]],
+      ["星巴克", ["Starbucks", "統一星巴克"]],
+      ["翰林茶館", ["Hanlin Tea Room"]], ["喫茶小舖", ["Teashop"]],
+    ].map(([name, aliases, extraSources = [], scope = ""]) => ({
+      name, aliases, identifiers: [],
+      avoidReasons: ["使用者依既有手搖飲／咖啡混合清單選擇個人避開"],
+      summary: `使用者提供的截圖／Dcard 混合清單列「${name}」，因此個人避開。清單混合政治表述、供應與消費爭議，不能把其他品牌的理由套給本品牌；沒有個別補充來源者不推定具體爭議已證實。${scope}不作中資、國資、違法、食安或全體員工立場定論。`,
+      sources: [group.sources[0], group.sources[1], ...extraSources.map((index) => group.sources[index])],
+      aiNotes: `只承接使用者對本名稱的個人避開，不承接清單其他品牌的聲明、供應或法律責任。${scope}CoCo都可已有獨立紀錄，本次不重複；清單日期與 Dcard 編號僅是來源，不是本品牌 identifier。`,
+    })));
+  })(record({
     id: "taiwan-beverage-chain-controversy-personal-list-2026-06-30",
     name: "台灣手搖飲／咖啡政治表述與消費爭議名單（2026-06-30）",
     aliases: [
@@ -2644,7 +2732,7 @@ export const records = [
     aiNotes:
       "此筆是 personal 混合清單：命中時要說明來源是使用者提供截圖與社群整理，公開媒體只能支撐其中部分政治表態或消費爭議。不要把清單內所有品牌一概寫成中資、國資、一國兩制或中國台灣；一芳、85度C、CoCo 等有較明確主流媒體政治表態來源，迷客夏有總公司否認台灣與中國經營權關聯的 caveat，貢茶需保留韓國／跨國企業脈絡。50嵐只依截圖寫北／中部，不擴張為所有區域；不把手搖飲、茶飲、奶茶、紅茶、咖啡、味全、林鳳營等泛稱作 alias。",
     lastReviewed: "2026-06-30",
-  }),
+  })),
   record({
     id: "butanchu-tainan-changrong-unification-personal",
     name: "豚人拉麵 長榮店 / butanchu_tainan",
@@ -2701,7 +2789,39 @@ export const records = [
       "此筆是 screenshot-only / user-directed personal record。可說使用者提供截圖可見帳號 baotien2001 的公開回覆含對特定政黨的粗俗政治性文字，因此指定將川田 手切冰淇淋列入個人避開；回覆與留言脈絡未由原貼文獨立讀回。Threads 與 Instagram 公開帳號頁只用於帳號—店名自我呈現的核對，不足以確認帳號實際經營者、店主、法人或地址。不可推定政治身分、正式政策、食安、法律責任或全體人員立場，也不要逐字重錄粗俗文字。searchable fields 僅保留店名、其無空格寫法、baotien2001 與中性完整值『公開帳號：baotien2001』；不要把香港、政黨、政治、粗俗回覆、一萬元、留言者、Threads、Instagram、餐車、冰淇淋等來源／理由／平台／泛稱作額外 standalone alias 或 identifier。",
     lastReviewed: "2026-07-18",
   }),
-  record({
+  ...((group) => splitRecord(group, [
+    {
+      id: group.id, name: "纖享樂", aliases: ["纖享樂 JOY FOOD", "JOY FOOD 纖享樂", "織享樂"], country: "",
+      avoidReasons: ["使用者指定同品牌食品先行避買"],
+      summary: "使用者原要求纖享樂同品牌食品先全部個人避買；中國原產標籤只確認梨在身邊冰糖燉梨，其他列名品項只確認既有通路標題，不代表逐款中國製。品牌、具名品項及責任廠商分別列出，不作食安、違法或中資定論。",
+      aiNotes: "全品牌食品個人政策不是全品項產地認證；織享樂只作原OCR誤讀導回，不是另一品牌。",
+    },
+    {
+      name: "纖享樂 梨在身邊 冰糖燉梨", country: "中國",
+      aliases: ["纖享樂梨在身邊", "纖享樂 梨在身邊", "纖享樂 燉梨罐頭", "纖享樂 冰糖燉梨", "織享樂 梨在身邊", "梨在身邊", "梨在身邊 冰糖燉梨"],
+      identifiers: ["條碼：4711595602307"], sources: [group.sources[0]],
+      avoidReasons: ["使用者個人避買", "本SKU原產地中國標示"],
+      summary: "使用者原提供的本款標籤可讀原產地中國、條碼4711595602307及國內負責廠商榮品居國際股份有限公司，依政策個人避買。僅本標籤商品，不把產地或條碼移給其他品項，不作食安、違法、禁售或中資定論。",
+      aiNotes: "本款有標籤產地，其他同品牌品項則是政策避買；未核新批次。OCR織享樂只作導回，非正式名稱。",
+    },
+    {
+      name: "榮品居國際股份有限公司", aliases: ["榮品居國際"], country: "", sources: [group.sources[0]],
+      avoidReasons: ["使用者指定同進口商食品先行避買"],
+      summary: "原燉梨標籤列榮品居國際股份有限公司為國內負責廠商，使用者已指定同進口商食品先行個人避買。此角色不是製造商證明，也不表示其全部食品皆中國製或公司有違法／食安問題；只限原已授權食品範圍。",
+      aiNotes: "責任公司與品牌、SKU分開；不猜所有權或未列產品。原帶角色前綴identifier改由公司完整名稱辨識，不再當另一實體鍵。",
+    },
+    ...[
+      ["纖享樂 蜜桃罐頭", ["纖享樂 水蜜桃罐頭"]], ["纖享樂 橘子罐頭", ["纖享樂 柑橘罐頭"]],
+      ["纖享樂 芋頭罐頭", []], ["纖享樂 梅漬小蕃茄", ["纖享樂 梅漬小番茄", "纖享樂 梅釀番茄"]],
+      ["纖享樂 甘栗仁", []], ["纖享樂 砂糖橘果乾", []], ["纖享樂 漢方去籽黑橄欖", []],
+      ["纖享樂 金萱冷泡茶", []], ["纖享樂 輕食光酵素果凍", []],
+    ].map(([name, aliases]) => ({
+      name, aliases, country: "", sources: [group.sources[1]],
+      avoidReasons: ["使用者指定同品牌食品先行避買", "既有通路列名辨識"],
+      summary: `既有BigGo比價頁可見「${name}」標題，使用者原要求同品牌食品先行個人避買。來源只支持通路列名，不逐款證明產地；本品沒有燉梨的中國標籤或條碼證據，不宣稱已確認中國原產、違法或不安全。`,
+      aiNotes: "本品依同品牌食品政策避買，非逐款產地查核；不繼承梨在身邊的中國標籤。僅既有具名商品／系列，不新增泛稱、規格或批號。",
+    })),
+  ]))(record({
     id: "xianxiangle-li-zaishenbian-canned-pear-china-origin-personal",
     name: "纖享樂 / JOY FOOD 纖享樂 / 榮品居國際食品",
     aliases: [
@@ -2747,7 +2867,7 @@ export const records = [
     ],
     aiNotes: "此筆是使用者指定的 personal 採買避雷規則：中國原產食品本身足以入庫，且使用者已要求纖享樂／JOY FOOD 纖享樂／榮品居國際底下查到的食品品項先全部列入個人避買。回答時可說明冰糖燉梨標籤已確認原產地中國、其他同品牌食品則依使用者要求先避買；不得延伸宣稱每一款均已確認中國原產、食安問題、違法、禁售、國資或中共控制。不要把蜜桃罐頭、橘子罐頭、芋頭罐頭、梅漬小蕃茄、甘栗仁、砂糖橘果乾、黑橄欖、冷泡茶、酵素果凍等泛用品項當成未限定品牌的命中理由；需搭配纖享樂、JOY FOOD、榮品居國際或條碼辨識。僅保留在 summary/source note 作佐證，不作 searchable identifier。織享樂只作 OCR 誤讀查詢導回，不是正式品牌名。",
     lastReviewed: "2026-07-04",
-  }),
+  })),
   record({
     id: "familymart-plant-based-life-frozen-spinach-china-origin-personal",
     name: "FamilyMart／全家 植覺生活 冷凍菠菜",
@@ -2852,7 +2972,15 @@ export const records = [
       "此筆是 product-specific personal record。可說『這款統一園之味蘋果汁標籤顯示原產地中國，因此依使用者偏好列個人避買』；不可說『統一企業全部產品都有問題』或『統一企業是中資／國資／中共控制』。查詢應使用統一企業、園之味、統一蘋果汁或條碼；僅保留在 summary/source note 作佐證，不作 searchable identifier。",
     lastReviewed: "2026-07-06",
   }),
-  record({
+  ...((group) => {
+    const caveat = "僅既有微熱山丘延伸品牌關聯觀察；中國市場重貼標爭議不代表本品牌在所有市場也有相同標示，不是國資、黨建、制裁、違法或中國製的認定。";
+    return splitRecord(group, [
+      { name: "微熱山丘／SunnyHills", aliases: ["微熱山丘", "微熱山丘 SunnyHills", "微热山丘", "SunnyHills", "Sunny Hills", "寶田股份有限公司", "宝田股份有限公司", "SUNNY HILLS DELIGHTS INC.", "サニーヒルズ", "山丘芭娜娜", "蜜豐糖脆蛋糕", "蜜丰糖脆蛋糕", "柚香蘋果", "微熱山丘柚香蘋果", "全球果實計畫", "全球果實計劃", "SunnyHills World Project"], summary: "本筆只指微熱山丘及原主品牌商品／企劃；既有報導記錄中國市場中國台灣與中國內地專供版標示爭議，品牌說明為中國經銷商重貼且產品台灣生產。不外推延伸品牌各自表態、國資或違法。", sources: [group.sources[0], group.sources[1], group.sources[2], group.sources[4], group.sources[7], group.sources[8]], aiNotes: caveat },
+      { name: "Smille 微笑蜜樂", aliases: ["Smille", "微笑蜜樂", "SMILLE by SunnyHills", "蜜樂酥"], summary: `既有中央社報導橋接 Smille 微笑蜜樂為微熱山丘旗下甜點品牌；蜜樂酥只按原產品線辨識。${caveat}`, sources: [group.sources[3], group.sources[7], group.sources[8]], avoidReasons: ["微熱山丘延伸品牌關聯觀察"], aiNotes: caveat },
+      { name: "FORBIDDEN 馥餅殿", aliases: ["FORBIDDEN", "馥餅殿", "FORBIDDEN D24榴槤蛋捲", "D24榴槤蛋捲", "SunnyHills D24 Durian Roll", "SunnyHills Musang King Roulade"], summary: `既有 iF Design 與新加坡官方集合頁支持 FORBIDDEN 榴槤甜點及 SunnyHills World Project 關聯；D24 與 Musang King 仍按原列名產品辨識，不當同一 SKU。${caveat}`, sources: [group.sources[5], group.sources[6], group.sources[7], group.sources[8]], avoidReasons: ["微熱山丘延伸品牌關聯觀察"], aiNotes: caveat },
+      { name: "微熱生活／SunnyHills Life", aliases: ["微熱生活", "SunnyHills Life", "SunnyHillsLife"], summary: `原群組列微熱生活為延伸品牌／入口，現有來源摘要未獨立對應此名稱，維持低信心關聯觀察。${caveat}`, sources: [group.sources[0], group.sources[7], group.sources[8]], avoidReasons: ["原群組列名延伸品牌待核"], aiNotes: "公司頁與標示爭議來源只作主品牌背景，不能當成微熱生活獨立品牌關係或標示行為已核證。" },
+    ]);
+  })(record({
     id: "sunnyhills-delights",
     name: "微熱山丘 / SunnyHills / 寶田股份有限公司",
     aliases: [
@@ -2907,7 +3035,7 @@ export const records = [
       source("壹蘋新聞網 - 微熱山丘喊冤產地只標台灣，卻自曝包裝用這兩字稱中國", "https://news.nextapple.com/life/20250103/5A85D2053EAC14B8D0CEC8B519CE00A8", "2025-01-03", "報導品牌公布包裝另有「中國內地專供版」字樣，作為矮化標示爭議來源。"),
     ],
     aiNotes: "此筆是低可信度／觀察中；收錄重點是中國市場標示與通路合規爭議，不是確認寶田或微熱山丘有國資、黨建、制裁或法律違規問題。已核對官方／公開商品線與延伸品牌：台灣為鳳梨酥、蘋果酥、山丘芭娜娜、鳳梨汁、柚香蘋果酥；中港為鳳梨酥／凤梨酥、蜜豐糖脆蛋糕／蜜丰糖脆蛋糕；日本為パイナップルケーキ、りんごケーキ、バナナワッフルクッキー；英文／新加坡為 Pineapple Cake、D24 Durian Roll、Musang King Roulade；延伸品牌／企劃包含 Smille 微笑蜜樂、蜜樂酥、全球果實計畫、FORBIDDEN 馥餅殿、微熱生活。一般未帶品牌的鳳梨酥、蘋果酥、鳳梨汁、蛋糕、榴槤捲、蘋果蛋糕、香蕉鬆餅餅乾等泛用品項不得當成命中。",
-  }),
+  })),
   record({
     id: "tsingtao-brewery",
     name: "青島啤酒 / Tsingtao Brewery",
@@ -2950,7 +3078,13 @@ export const records = [
       source("Wine Peers - 五糧液 52% 酒精度", "https://www.winepeers.com/zh-hant/Product/EshopDetail/spirtis/class-0/product-1151227/cm-38584/d-0", "查核日 2026-06-25", "顯示台灣可購買或詢價的五糧液商品頁。"),
     ],
   }),
-  record({
+  ...((group) => {
+    return splitRecord(group, [
+      { name: "中糧集團／COFCO", aliases: ["COFCO", "中糧", "中糧集團"], summary: "既有國資委名錄支持中糧集團央企背景；本筆只指集團，不把所有關聯產品當成國企法人或親共表態。", sources: [group.sources[0]], aiNotes: "中茶、長城葡萄酒、孔乙己另筆，品牌及母公司國資角色分開。" },
+      { name: "中茶／China Tea", aliases: ["中茶", "China Tea"], summary: "既有中糧官方品牌頁列中茶為旗下茶品牌；此筆只保留母集團央企關聯，不推定每件商品的產地、品質或政治表態。", sources: group.sources, aiNotes: "本品牌關係有官方頁；不擴及一般茶葉或其他同名實體。" },
+      ...[["長城葡萄酒", ["Greatwall Wine"]], ["孔乙己", []]].map(([name, aliases]) => ({ name, aliases, confidence: "low", summary: `原中糧群組列「${name}」；既有來源未附本品牌的逐項關係頁，僅保留低信心集團關聯觀察，不將中茶的品牌頁當本品牌佐證，也不判定產品不安全或品牌自身為國企。`, sources: [group.sources[0]], aiNotes: "僅原群組列名與中糧背景；品牌關係未補獨立來源，本次不查新事實。" })),
+    ]);
+  })(record({
     id: "cofco",
     name: "中糧集團 / COFCO",
     aliases: ["COFCO", "中糧", "中糧集團", "中茶", "China Tea", "長城葡萄酒", "Greatwall Wine", "孔乙己"],
@@ -2963,8 +3097,21 @@ export const records = [
       sasacCentralEnterprises,
       source("COFCO - China Tea", "https://www.cofco.com/cn/BrandProduct/ChinaTea/", "查核日 2026-06-25", "中糧官方列出中茶為旗下茶葉品牌。"),
     ],
-  }),
-  record({
+  })),
+  ...((group) => {
+    const caveat = "使用者依集團負責人政治立場偏好指定個人避開；只以官方品牌總覽橋接，不代表各品牌、加盟店或員工同樣表態，也不是違法、食安或品質認定。";
+    return splitRecord(group, [
+      { name: "築間餐飲集團", aliases: ["築間", "JHUJIAN", "Jhu Jian"], summary: `僅築間集團與主體名稱辨識，旗下具名品牌另筆。${caveat}`, sources: group.sources, aiNotes: caveat },
+      ...[
+        ["築間幸福鍋物", []], ["燒肉smile", ["燒肉Smile"]], ["有之和牛", []], ["本格和牛", []],
+        ["築間酸菜魚", []], ["紫木槿韓餐酒館", []], ["築間燒肉本命", []],
+        ["朴庶韓國烤肉", []], ["朴庶韓國銅盤烤肉", []], ["芡芳石頭火鍋", []],
+        ["麟徳殿牛肉麵", ["麟德殿牛肉麵"]], ["喜辰港式點心茶餐廳", []],
+        ["中央韓鍋酒舍", []], ["稻鎮經典台灣菜", []],
+        ["横浜焼き鳥·達磨 千日前店", ["橫浜焼き鳥·達磨 千日前店"]], ["百年土種蔘雞湯", []],
+      ].map(([name, aliases]) => ({ name, aliases, summary: `既有築間官方品牌總覽列「${name}」。${caveat}`, sources: group.sources, aiNotes: caveat })),
+    ]);
+  })(record({
     id: "jhujian-restaurant-group-political-preference-personal",
     name: "築間餐飲集團 / 築間旗下品牌",
     aliases: [
@@ -3006,7 +3153,7 @@ export const records = [
     aiNotes:
       "此筆是 user-directed personal group record。aliases 只放築間餐飲集團與官方網站列出的旗下品牌名稱；不要把小草、政治、老闆、支持民眾黨、柯文哲、加盟、火鍋、燒肉、餐廳等理由詞或泛稱放入 aliases / identifiers。回答時可說使用者指定因政治立場偏好列入個人避開；不可寫成違法、官方認定、食品安全或服務品質問題，也不可推論每家加盟／門市或員工個人政治立場。",
     lastReviewed: "2026-07-07",
-  }),
+  })),
   record({
     id: "menzteler-olive-oil-100pure-mislabeling-adulteration-202607",
     name: "蒙特樂橄欖油100%PURE 2L 混充標示不實案",
@@ -3039,7 +3186,29 @@ export const records = [
       "此筆是 product/event-level confirmed record，限於融琦公司販售之蒙特樂橄欖油100%PURE 2L／條碼8007270126647與混充標示不實案。回答時可說官方衛生局公告確認混充芥花油與標示不實、北檢已偵結起訴；不可說案件已判決有罪，不可說COSTA D'ORO S.R.L.或義大利原廠被起訴／參與混油，不可擴張為所有Costa d'Oro、所有蒙特樂或所有橄欖油皆有問題。aliases 不放單獨的橄欖油、油品、假油、黑心油、芥花油、義大利、融琦、源樂、COSTA D'ORO 或 Costa d'Oro，以免泛稱或無涉原廠查詢被污染；條碼可作 identifier。",
     lastReviewed: "2026-07-15",
   }),
-  record({
+  ...((group) => {
+    const caveat = "僅 2026 年 7 月中聯油脂事件的流向／預防性下架警示，不等於本業者產品已逐一檢出、所有門市／商品有問題或應永久全品牌避買；保留原 temporaryUntil／reviewAfter，未查新結案資訊。";
+    return splitRecord(group, [
+      { name: "中聯油脂", aliases: ["中聯油"], summary: `既有官方公告記錄中聯油脂大豆油事件的超標品項、批號與流向；只限公告事件。${caveat}`, sources: group.sources.slice(0, 4), aiNotes: caveat },
+      ...[
+        ["福壽實業", ["福壽花生風味精華調合油"], [0, 1, 2]],
+        ["福懋油脂", [], [0, 1, 2]], ["泰山企業", [], [0, 3]],
+        ["瓦城", ["瓦城泰統"], [4, 5]], ["點點心", [], [4]], ["時時香", [], [4]],
+        ["鬍鬚張", [], [4, 5]], ["爭鮮", [], [4, 5, 7]], ["好市多", ["Costco"], [4, 5]],
+        ["海霸王", [], [5]], ["貳樓", ["Second Floor"], [4, 5]], ["樂雅樂", ["Royal Host"], [4]],
+        ["添好運", ["Tim Ho Wan"], [4]], ["好樂迪", ["Holiday KTV"], [6]],
+        ["全聯", ["PX Mart"], [6]], ["萬家福", [], []],
+        ["統一超食代", [], [7]], ["聯華食品", [], [7]], ["貴族世家", [], [7]], ["康達盛通", [], [7]],
+        ["故宮晶華", [], [6]], ["六福開發", [], [6]], ["路易莎", [], [6]], ["胖老爹", [], [6]], ["遠百企業", [], [6]],
+      ].map(([name, aliases, indexes]) => ({
+        name, aliases,
+        avoidReasons: ["2026/7 中聯油脂事件限定下游／預防性下架警示"],
+        summary: `原群組列「${name}」作為本事件下游／受影響業者辨識。${indexes.length ? "只依分配到的既有官方公告或報導，不能把流向列名當作該業者檢驗不合格。" : "現有來源摘要未逐項列此名稱，未取得完整附件逐列對應，維持待核列名。"}${caveat}`,
+        sources: indexes.length ? indexes.map((index) => group.sources[index]) : [group.sources[0]],
+        aiNotes: `${caveat}統一超食代等僅搜尋摘要支持的名稱，不能升為完整正文已核。事件詞與合成的「事件產品」名稱不再當實體鍵。`,
+      })),
+    ]);
+  })(record({
     id: "chung-lian-oil-bap-downstream-alert-202607",
     name: "中聯油脂苯駢芘問題事件產品下游流向短期警示（2026/7）",
     aliases: [
@@ -3108,7 +3277,7 @@ export const records = [
     aiNotes:
       "這是一筆 temporary watchlist / event-limited food-safety flow record。回覆時務必說明：被列為下游流向或預防性下架，不等於品牌整體、所有門市、所有商品永久有問題，也不等於行政裁罰或刑事責任已成立。aliases 只放公開點名的業者／品牌與涉案公司、產品名；不要把事件產品、致癌、苯駢芘、下游、食安、衛生局、問題事件產品等泛稱或理由詞單獨當查詢鍵。2026-07-20 之後應重新查官方結案／上架原則；2026-08-31 後若無新進展應下修或移除。PDF 表格本機 pdftotext 無法完整抽取中文字，因此本筆未收完整數百家名單，只收官方公告與多家媒體明確點名的可辨識品牌。",
     lastReviewed: "2026-07-13",
-  }),
+  })),
   record({
     id: "haidilao",
     name: "海底撈 / Haidilao",
@@ -3140,7 +3309,13 @@ export const records = [
     ],
     aiNotes: "此筆只指餐飲連鎖品牌小谷姐姐／小谷姊姊，不指兒童節目主持人、藝人或泛稱姐姐。台灣双玉餐飲有限公司與天津總部之間的授權或股權控制鏈尚未由政府登記或合約資料完整證實，因此列 watchlist 而非 confirmed。",
   }),
-  record({
+  ...((group) => {
+    const caveat = "使用者指定製造端個人避買，不表示所有產品或批次已檢出甲醛。官方仍須釐清是否人為添加，不能判定故意添加、原因或刑責；不擴及其他農耕牌／風城同名字樣。";
+    return splitRecord(group, [
+      { name: "明好企業社", aliases: ["明好企業有限公司", "農耕牌"], summary: `既有官方公告記錄多品項、多批次檢出與改善處置；使用者據此選擇製造端產品個人避買。公告企業社／有限公司名稱不一致，僅作公告原文字樣，不推定正式法律關係。${caveat}`, sources: group.sources, aiNotes: caveat },
+      ...["農耕牌濁水炊粉", "風城香菇油蔥炊粉", "農耕牌新竹炊粉 200g"].map((name) => ({ name, aliases: group.aliases.filter((value) => value.startsWith(name)), summary: `原紀錄在明好製造端公告中列「${name}」及本筆保留的有效日期辨識。僅按既有列名批次與使用者個人範圍，不把公告總計四品項七效期反推成未列名品項。${caveat}`, sources: [group.sources[0], group.sources[2]], aiNotes: caveat })),
+    ]);
+  })(record({
     id: "minghao-enterprise-rice-noodle-official-alert-202607",
     name: "明好企業社",
     aliases: [
@@ -3186,7 +3361,7 @@ export const records = [
     aiNotes:
       "此筆由 event-limited temporary watchlist 升級為 user-directed personal 製造端避買，保留原 record ID，避免生成檔殘留舊 ID。外部可確認事實限於主管機關公告的 4 品項、7 個有效日期檢出甲醛、下架回收／同類產品停產／限期改善，以及後續多品項抽驗結果；使用者指定的長期範圍是明好製造端產品，不是外部已證實每一個產品都檢出或不安全。公告稱現場未查獲違法添加物，且 2026-07-20 明示仍須釐清是否人為添加；不得寫成故意添加、特定添加劑、污染原因、刑事責任或全品牌／所有新竹炊粉的客觀結論。searchable fields 限明好企業社／有限公司、農耕牌、官方具名的完整產品與產品＋有效日期；不得新增未限定的明好、炊粉、甲醛、福馬林、食安、回收、下架、召回、停產、裁罰、處分、衛生局、臺南、新竹、數字、法條或罰鍰等搜尋欄位；「風城」只可透過完整產品名辨識，不擴及其他風城商品。",
     lastReviewed: "2026-07-21",
-  }),
+  })),
   record({
     id: "namchow-products-user-directed-personal",
     name: "南僑產品",
@@ -3233,7 +3408,16 @@ export const records = [
       "此筆是 screenshot-only / user-directed personal store record。後續僅可說使用者提供截圖並指定個人避買，且截圖僅可見／標記店名『卓家龍安食堂』；未確認地址、店方與人物關係、現場情況、貼文主張／回覆、餐飲安全、服務品質、違規或法律責任，不擴及同名或其他店家。searchable fields 僅保留店名；不要加入帳號、地點、人物、現場、回覆、理由、餐飲安全、服務品質、違規或法律責任相關詞。",
     lastReviewed: "2026-07-20",
   }),
-  record({
+  ...((group) => {
+    const caveat = "保留原短期警示及複查日期，不擴為品牌永久避買；原料是否中國進口尚未證實。250mL 同原料六批中的 2028/1/2、2028/2/22、2028/3/17 未逐品牌配對，不能猜配或一概寫成已檢出。";
+    return splitRecord(group, [
+      { name: "源春製油廠", aliases: ["源春製油廠苦茶油"], summary: `既有官方公告記錄源春代工／代料苦茶油事件、停工與庫存管制；只限本事件與原公告範圍。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[2], group.sources[5]], aiNotes: caveat },
+      { name: "在地金花小菓苦茶油 250mL", aliases: group.aliases.filter((value) => value.includes("在地金花" ) || value === "永豐餘生技股份有限公司"), summary: `本 SKU 既有公告的 2028/5/25 批次檢出苯駢芘 2.9 μg/kg；公司名稱只作此產品責任鏈辨識，不擴永豐餘全部商品。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[2]], aiNotes: caveat },
+      { name: "高仰三苦茶油 250mL", aliases: group.aliases.filter((value) => value.includes("高仰三") || value === "威加國際股份有限公司"), summary: `本 SKU 2028/6/15、2028/6/22 批次既有公告分別檢出 2.6、2.4 μg/kg；2028/5/25 是另則公告的出貨／流向，不據此宣稱同一檢驗結果。威加公司名只限此代工鏈。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[3]], aiNotes: caveat },
+      { name: "庭茂苦茶油 250mL", aliases: group.aliases.filter((value) => value.includes("庭茂")), summary: `既有官方關係圖將庭茂本 SKU 列在同原料 250mL 產品組；現有摘要沒有將未知三個效期逐一對應庭茂，不猜測其特定檢出批次。${caveat}`, sources: [group.sources[0], group.sources[1]], aiNotes: caveat },
+      { name: "台灣苦茶油（國際機能）500mL", aliases: group.aliases.filter((value) => value.includes("國際機能") || value.includes("江醫師")), summary: `本 SKU 2027/12/25 批次既有公告檢出 2.6 μg/kg；2028/5/24 批次 599 瓶尚未出貨而列預防性下架／回收，不能把兩批都寫成已檢出。國際機能與江醫師名稱只限此產品委託／銷售鏈。${caveat}`, sources: [group.sources[0], group.sources[1], group.sources[4]], aiNotes: caveat },
+    ]);
+  })(record({
     id: "yuan-chun-oem-camellia-oil-bap-temporary-alert-202608",
     name: "源春製油廠代工／代料苦茶油 8批短期警示（2026-08）",
     aliases: [
@@ -3320,7 +3504,7 @@ export const records = [
     aiNotes:
       "此筆是 2026-08-01 官方公告支持的 temporary watchlist，不是永久品牌避雷。searchable fields 只保留源春製油廠、4 個完整產品／品牌名稱、必要的公司—產品組合與已知產品＋有效日期；不要把苯駢芘、食安、下架、回收、停工、疑似中國、原料來源、嘉義、檢調等原因／調查詞作 standalone alias。6 個 250mL 批次在官方關係圖中以同批原料群組列出，但除在地金花小菓 2028/5/25、高仰三 2028/6/15與2028/6/22外，官方公開資料沒有把 2028/1/2、2028/2/22、2028/3/17 逐一對應到三個品牌，不要自行配對。台灣苦茶油 2027/12/25 是已通報檢出批次，2028/5/24 是未出貨而預防性下架／回收批次，不能把兩者都寫成已檢出。源春被停工、自製油品庫存被管制是官方處置；苦茶籽原料是否來自中國仍在調查，不能寫成已證實中國原料、違法進口、故意摻用或四品牌全線都有問題。2026-08-31 後應依最新官方公告複查，若無新進展降為歷史警示。",
     lastReviewed: "2026-08-02",
-  }),
+  })),
   record({
     id: "aconpure-organic-camellia-oil-250ml-china-seed-batch-26v224xw01-personal",
     name: "連淨 有機苦茶油 250mL（批號 26V224XW01）",
@@ -3425,7 +3609,13 @@ export const records = [
       "此筆是使用者明示升級的 personal product-line record：官方證據只確認連淨於 2026-07 的兩個具名苦茶油批次使用中國輸入苦茶籽；使用者採買標準為曾有一次可靠中國原料紀錄，即避開同製造端的苦茶油產品線。可說『連淨苦茶油產品線為使用者個人避買』，不可改寫為所有連淨產品、所有統一生機產品、所有現售連淨苦茶油皆使用中國原料，或中國原料必然造成苯駢芘超標。searchable fields 限連淨與完整苦茶油產品線名稱；不要加入中國、中國原料、苯駢芘、回收、下架、衛生局、食用油、原料等未限定泛稱。",
     lastReviewed: "2026-07-24",
   }),
-  record({
+  ...((group) => {
+    const caveat = "使用者指定全品牌個人避買，不等於每款都已驗證中國製、食安不合格或違法；君樂寶不是三鹿改名，歷史持股不可當現況。";
+    return splitRecord(group, [
+      { name: "君樂寶／Junlebao", aliases: group.aliases.filter((value) => !/[悅悦][鮮鲜]活/u.test(value)), summary: `本筆只指君樂寶公司／主品牌。${caveat}`, sources: group.sources, aiNotes: caveat },
+      { name: "悅鮮活", aliases: group.aliases.filter((value) => /[悅悦][鮮鲜]活/u.test(value)), summary: `原群組將悅鮮活列為君樂寶鮮奶品牌，僅承接使用者原定個人避買範圍，不把母公司或三鹿歷史爭議歸成本產品已檢出問題。${caveat}`, sources: group.sources.filter((item) => /[悅悦][鮮鲜]活/u.test(item.title + item.note) || item.url === ""), aiNotes: caveat },
+    ]);
+  })(record({
     id: "junlebao-yuexianhuo-china-dairy-whole-brand-personal",
     name: "君樂寶／君乐宝／悅鮮活／悦鲜活（使用者全品牌避雷）",
     aliases: [
@@ -3489,7 +3679,7 @@ export const records = [
     aiNotes:
       "此筆是 user-directed whole-brand personal record。依使用者固定採買規則，中國製食品／中國食品品牌直接避買，因此君樂寶、悅鮮活與其繁簡字形均應命中本筆。可說悅鮮活是君樂寶旗下中國鮮奶品牌，並補充三鹿曾歷史持股、2009 年已回購；不可回答成君樂寶就是三鹿改名、三鹿目前仍持股、悅鮮活參與 2008 年三聚氰胺事件，或宣稱悅鮮活曾造成腎衰竭／腎結石。全品牌避雷是使用者個人採買決策，不是主管機關對所有現售君樂寶／悅鮮活商品作出的不安全、違法、禁售、國資或中共控制定論。不要把鮮奶、牛奶、乳品、中國品牌、毒奶粉、三聚氰胺、腎結石、腎衰竭、三鹿或 2008 等來源／理由／泛稱作 standalone alias 或 identifier。",
     lastReviewed: "2026-07-28",
-  }),
+  })),
   record({
     id: "tiger-rice-noodles-china-origin-whole-brand-personal",
     name: "虎牌／虎牌日進食品（使用者全品牌避雷）",

@@ -53,6 +53,8 @@ HTML 目錄不再沿用 JSON 的儲存分片，以 ASCII 樹狀縮排列出可�
 
 唯一紀錄來源為 `data/records/*.mjs`；共用 `data/compile-records.mjs` 的 `compileRecords()` 套用 cleanup、override、重複 ID 檢查與 ID 排序。來源驗證、builder 與測試使用同一份編譯結果，保留單筆全部欄位與內部陣列順序。
 
+不同人物、品牌與商品 SKU 各自有獨立紀錄及目錄入口；同一對象的中英文名／藝名等仍作別名，不用別名假充另一位人物。共用背景的來源寫法、逐項範圍與拆分防護見 [獨立對象紀錄](docs/record-authoring.md)。
+
 建置產生：
 
 ```text

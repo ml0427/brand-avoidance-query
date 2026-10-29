@@ -45,7 +45,7 @@ test("the six restored baseline records are present in the sole source list", ()
     "tianwei-agricultural-technology",
     "hualien-county-farmers-association",
   ];
-  assert.deepEqual(baselineRecords.map(({ id }) => id), expectedIds);
+  for (const id of expectedIds) assert.ok(baselineRecords.some((record) => record.id === id));
   for (const record of baselineRecords) {
     assert.equal(riskRecords.filter(({ id }) => id === record.id).length, 1);
     assert.ok(riskRecords.includes(record));

@@ -15,9 +15,10 @@
   tppCurrentPublicFigureAliases,
   treeProtectionPublicFigureAliases,
 } from "../record-helpers.mjs";
+import { splitRecord } from "../split-record.mjs";
 
 export const records = [
-  record({
+  ...splitRecord(record({
     id: "pdd-temu-pinduoduo",
     name: "拼多多 / PDD Holdings / Temu",
     aliases: ["PDD", "PDD Holdings", "拼多多", "Pinduoduo", "Temu"],
@@ -31,8 +32,94 @@ export const records = [
       source("U.S. House Select Committee - Shein & Temu Forced Labor Interim Findings", "https://chinaselectcommittee.house.gov/media/press-releases/select-committee-releases-interim-findings-shein-temu-forced-labor", "2023-06-22", "國會委員會指 Temu 商業模式存在規避 UFLPA 與強迫勞動合規責任問題。"),
       source("Apple App Store Taiwan - Temu", "https://apps.apple.com/tw/app/temu-shop-like-a-billionaire/id1641486558", "查核日 2026-06-25", "顯示 Temu 可由台灣 App Store 取得。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "PDD Holdings",
+      "aliases": [
+        "PDD"
+      ],
+      "identifiers": [],
+      "summary": "PDD Holdings 保留原群組所列的 Temu 關聯風險；USCC 既有報告作為中國電商資料、供應鏈與貿易漏洞脈絡，不將針對 Temu 的 UFLPA 合規指稱當成 PDD 全部業務已違規。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險",
+        "供應鏈透明度風險"
+      ],
+      "aiNotes": "本筆保留 PDD 與原群組的關聯觀察；不承接僅指 Temu 商業模式的國會個別指稱或 Temu App Store 身分來源。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "USCC - Shein, Temu, and Chinese e-Commerce",
+          "url": "https://www.uscc.gov/research/shein-temu-and-chinese-e-commerce-data-risks-sourcing-violations-and-trade-loopholes",
+          "date": "2023-04-14",
+          "note": "USCC 報告分析 Temu/SHEIN 的中國電商資料風險、供應鏈與貿易漏洞。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "拼多多",
+      "aliases": [
+        "Pinduoduo"
+      ],
+      "identifiers": [],
+      "summary": "拼多多保留原群組已收錄的中國電商資料與供應鏈風險觀察；USCC 報告僅作既有電商脈絡，不把 Temu 強迫勞動合規指稱或其台灣上架資訊當成拼多多自身結論。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險",
+        "資料安全／審查風險"
+      ],
+      "aiNotes": "未新增拼多多漏洞、惡意程式或其他事件事實；不承接原群組中僅指 Temu 的國會 UFLPA 指稱與 App Store 來源。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "USCC - Shein, Temu, and Chinese e-Commerce",
+          "url": "https://www.uscc.gov/research/shein-temu-and-chinese-e-commerce-data-risks-sourcing-violations-and-trade-loopholes",
+          "date": "2023-04-14",
+          "note": "USCC 報告分析 Temu/SHEIN 的中國電商資料風險、供應鏈與貿易漏洞。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Temu",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Temu 保留 USCC 中國電商資料／供應鏈風險分析與美國眾院委員會對其 UFLPA、強迫勞動合規責任的指稱；台灣 App Store 頁僅支撐當時可取得 App，不等於全商品來源或違法定論。",
+      "aiNotes": "國會來源是針對 Temu 商業模式的合規風險指稱，不寫成所有商品都涉及強迫勞動，也不套用至拼多多或 PDD 全部業務。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "USCC - Shein, Temu, and Chinese e-Commerce",
+          "url": "https://www.uscc.gov/research/shein-temu-and-chinese-e-commerce-data-risks-sourcing-violations-and-trade-loopholes",
+          "date": "2023-04-14",
+          "note": "USCC 報告分析 Temu/SHEIN 的中國電商資料風險、供應鏈與貿易漏洞。"
+        },
+        {
+          "title": "U.S. House Select Committee - Shein & Temu Forced Labor Interim Findings",
+          "url": "https://chinaselectcommittee.house.gov/media/press-releases/select-committee-releases-interim-findings-shein-temu-forced-labor",
+          "date": "2023-06-22",
+          "note": "國會委員會指 Temu 商業模式存在規避 UFLPA 與強迫勞動合規責任問題。"
+        },
+        {
+          "title": "Apple App Store Taiwan - Temu",
+          "url": "https://apps.apple.com/tw/app/temu-shop-like-a-billionaire/id1641486558",
+          "date": "查核日 2026-06-25",
+          "note": "顯示 Temu 可由台灣 App Store 取得。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "shein",
     name: "SHEIN",
     aliases: ["SHEIN", "Shein Taiwan", "ROMWE"],
@@ -46,7 +133,35 @@ export const records = [
       source("U.S. House Select Committee - Fast Fashion and the Uyghur Genocide", "https://chinaselectcommittee.house.gov/sites/evo-subsites/selectcommitteeontheccp.house.gov/files/evo-media-document/fast-fashion-and-the-uyghur-genocide-interim-findings.pdf", "2023-06", "國會報告將 SHEIN 與 Temu 列為強迫勞動與 UFLPA 規避風險調查對象。"),
       source("Business & Human Rights Resource Centre - Shein garment samples contain Xinjiang cotton", "https://www.business-humanrights.org/en/latest-news/china-laboratory-results-finds-shein-garment-samples-shipped-to-the-us-contain-cotton-sourced-from-xinjiang/", "2022", "彙整檢測指出部分 SHEIN 服飾含新疆棉。"),
     ],
-  }),
+  }), [
+    {
+      "id": "shein",
+      "name": "SHEIN",
+      "aliases": [
+        "SHEIN",
+        "Shein Taiwan"
+      ],
+      "identifiers": [],
+      "summary": "SHEIN 台灣可直接購買；公開風險主要在新疆棉、強迫勞動合規與供應鏈透明度。"
+    },
+    {
+      "name": "ROMWE",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "ROMWE 原已列於SHEIN 原紀錄的名稱鍵；本筆僅保留原群組的關聯觀察範圍，既有來源未直接支持本品牌獨立風險，不將母卡的制裁、官方名單或特定產品問題套用於本筆。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "sources": [],
+      "aiNotes": "由既有名稱鍵移為獨立對象，未新增品牌關聯或風險事實。原來源不足以支持本品牌的個別制裁、國安、人權或供應鏈結論，故 sources 留空，僅保留原群組觀察；不推定母卡所有限制自動適用。本次未外查，查核日期沿用原紀錄。",
+      "categories": [
+        "服飾生活"
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
   record({
     id: "vivaia",
     name: "VIVAIA",
@@ -67,7 +182,7 @@ export const records = [
     aiNotes: "此筆是 personal／中可信度：可回覆還沒買不建議買；已買鞋不是食安或立即安全問題，不需要恐慌，但之後可避開。若涉及官網註冊／下單，重點說明隱私政策揭露個資可能轉移至 China。不要寫成台灣禁售、已確認國資／黨建、制裁或違法案例。aliases 不放「鞋」「女鞋」「平底鞋」「服飾」「環保鞋」等商品泛稱，避免誤傷一般品項。",
     lastReviewed: "2026-07-02",
   }),
-  record({
+  ...splitRecord(record({
     id: "alibaba-taobao-aliexpress",
     name: "阿里巴巴 / Alibaba / 淘寶 / AliExpress",
     aliases: ["Alibaba", "阿里巴巴", "Taobao", "淘寶", "Tmall", "天貓", "AliExpress", "Alibaba.com", "Lazada", "DingTalk", "釘釘", "UC Browser", "阿里雲", "Alibaba Cloud"],
@@ -81,8 +196,184 @@ export const records = [
       source("U.S. House Energy & Commerce - China-based online marketplaces", "https://energycommerce.house.gov/posts/chairs-rodgers-and-bilirakis-press-china-based-online-marketplaces-on-potential-data-privacy-and-human-rights-violations", "2023-12-20", "美國眾院委員會點名 Taobao、Alibaba、AliExpress 等，要求說明資料隱私、資安、強迫勞動與是否有中共黨委。"),
       source("AmCham Taiwan - Taobao Quietly Cultivates a Taiwan Following", "https://topics.amcham.com.tw/2017/03/taobao-quietly-cultivates-taiwan-following/", "2017-03", "說明淘寶在台灣消費者中的使用基礎。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "阿里巴巴",
+      "aliases": [
+        "Alibaba",
+        "Alibaba.com"
+      ],
+      "identifiers": [],
+      "summary": "阿里巴巴保留原美國國防部 1260H 國安／軍民融合脈絡，以及眾院委員會對 Alibaba 等電商資料隱私、資安及人權議題的詢問；詢問不是已確認違法，名單也不是旗下所有服務個別受列名。",
+      "aiNotes": "Alibaba 與 Alibaba.com 為本筆既有名稱／域名鍵，不另建同名公司或域名卡；不將公司層級名單歸責淘寶、Lazada、阿里雲等全部產品。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "U.S. DoD Section 1260H Chinese Military Companies List",
+          "url": "https://media.defense.gov/2026/Jun/08/2003945537/-1/-1/1/ENTITIES-IDENTIFIED-AS-CHINESE-MILITARY-COMPANIES-OPERATING-IN-THE-UNITED-STATES-IN-ACCORDANCE-WITH-SECTION-1260H.PDF",
+          "date": "2026-06-08",
+          "note": "美國國防部依 Section 1260H 公布中國軍事公司名單；此為國安／軍民融合風險來源，不等同一般消費禁售。"
+        },
+        {
+          "title": "U.S. House Energy & Commerce - China-based online marketplaces",
+          "url": "https://energycommerce.house.gov/posts/chairs-rodgers-and-bilirakis-press-china-based-online-marketplaces-on-potential-data-privacy-and-human-rights-violations",
+          "date": "2023-12-20",
+          "note": "美國眾院委員會點名 Taobao、Alibaba、AliExpress 等，要求說明資料隱私、資安、強迫勞動與是否有中共黨委。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "淘寶",
+      "aliases": [
+        "Taobao"
+      ],
+      "identifiers": [],
+      "summary": "淘寶保留眾院委員會對 Taobao 的資料隱私、資安與人權議題詢問，以及 AmCham Taiwan 描述的台灣使用脈絡；不承接阿里巴巴公司 1260H 身分或推定詢問已證實違法。",
+      "avoidReasons": [
+        "中共政權關聯風險",
+        "資料安全／審查風險",
+        "供應鏈透明度風險"
+      ],
+      "aiNotes": "AmCham 只支撐台灣消費使用脈絡，不證明資安或違法；不保留未有本筆來源直接支持的假貨管制結論。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "U.S. House Energy & Commerce - China-based online marketplaces",
+          "url": "https://energycommerce.house.gov/posts/chairs-rodgers-and-bilirakis-press-china-based-online-marketplaces-on-potential-data-privacy-and-human-rights-violations",
+          "date": "2023-12-20",
+          "note": "美國眾院委員會點名 Taobao、Alibaba、AliExpress 等，要求說明資料隱私、資安、強迫勞動與是否有中共黨委。"
+        },
+        {
+          "title": "AmCham Taiwan - Taobao Quietly Cultivates a Taiwan Following",
+          "url": "https://topics.amcham.com.tw/2017/03/taobao-quietly-cultivates-taiwan-following/",
+          "date": "2017-03",
+          "note": "說明淘寶在台灣消費者中的使用基礎。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "AliExpress",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "AliExpress 保留美國眾院委員會點名電商、要求說明資料隱私、資安、強迫勞動及黨委議題的既有來源；這是監督詢問，不是違法、強迫勞動或黨委已確認的認定。",
+      "avoidReasons": [
+        "中共政權關聯風險",
+        "資料安全／審查風險",
+        "供應鏈透明度風險"
+      ],
+      "aiNotes": "不承接阿里巴巴公司的 1260H 身分，也不將原淘寶台灣使用來源視為 AliExpress 的身分或可取得性證據。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "U.S. House Energy & Commerce - China-based online marketplaces",
+          "url": "https://energycommerce.house.gov/posts/chairs-rodgers-and-bilirakis-press-china-based-online-marketplaces-on-potential-data-privacy-and-human-rights-violations",
+          "date": "2023-12-20",
+          "note": "美國眾院委員會點名 Taobao、Alibaba、AliExpress 等，要求說明資料隱私、資安、強迫勞動與是否有中共黨委。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Tmall",
+      "aliases": [
+        "天貓"
+      ],
+      "identifiers": [],
+      "summary": "Tmall 原已列於群組收錄範圍；本筆保留為關聯觀察，不把阿里巴巴公司 1260H 列名或針對其他電商的國會詢問視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。阿里巴巴公司 1260H 列名或針對其他電商的國會詢問的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Lazada",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Lazada 原已列於群組收錄範圍；本筆保留為關聯觀察，不把阿里巴巴公司 1260H 列名或針對其他電商的國會詢問視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。阿里巴巴公司 1260H 列名或針對其他電商的國會詢問的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "DingTalk",
+      "aliases": [
+        "釘釘"
+      ],
+      "identifiers": [],
+      "summary": "DingTalk 原已列於群組收錄範圍；本筆保留為關聯觀察，不把阿里巴巴公司 1260H 列名或針對其他電商的國會詢問視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。阿里巴巴公司 1260H 列名或針對其他電商的國會詢問的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "UC Browser",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "UC Browser 原已列於群組收錄範圍；本筆保留為關聯觀察，不把阿里巴巴公司 1260H 列名或針對其他電商的國會詢問視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。阿里巴巴公司 1260H 列名或針對其他電商的國會詢問的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "阿里雲",
+      "aliases": [
+        "Alibaba Cloud"
+      ],
+      "identifiers": [],
+      "summary": "阿里雲 原已列於群組收錄範圍；本筆保留為關聯觀察，不把阿里巴巴公司 1260H 列名或針對電商的國會詢問視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。阿里巴巴公司 1260H 列名或針對電商的國會詢問的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "ant-group-alipay",
     name: "螞蟻集團 / Ant Group / Alipay",
     aliases: ["Ant Group", "螞蟻集團", "Alipay", "支付寶", "AlipayHK"],
@@ -94,7 +385,65 @@ export const records = [
     sources: [
       source("Executive Order 13971 - Chinese connected software applications", "https://www.federalregister.gov/documents/2021/01/08/2021-00305/addressing-the-threat-posed-by-applications-and-other-software-developed-or-controlled-by-chinese", "2021-01-08", "美國行政命令點名 Alipay 等中國 connected software applications；此命令後來已被撤銷。"),
     ],
-  }),
+  }), [
+    {
+      "name": "螞蟻集團",
+      "aliases": [
+        "Ant Group"
+      ],
+      "identifiers": [],
+      "summary": "螞蟻集團 原已列於群組收錄範圍；本筆保留為關聯觀察，不把針對 Alipay 且已撤銷的美國歷史行政命令視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。針對 Alipay 且已撤銷的美國歷史行政命令的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Alipay",
+      "aliases": [
+        "支付寶"
+      ],
+      "identifiers": [],
+      "summary": "Alipay 保留美國 2021 年行政命令 13971 對中國 connected software applications 的資料國安風險歷史來源；原紀錄已註明該命令後來撤銷，不能描述為本次仍有效的禁令。",
+      "aiNotes": "僅保留原命令與已撤銷的歷史狀態，不新增現行禁令主張，也不推為螞蟻集團或 AlipayHK 個別受該命令限制。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "Executive Order 13971 - Chinese connected software applications",
+          "url": "https://www.federalregister.gov/documents/2021/01/08/2021-00305/addressing-the-threat-posed-by-applications-and-other-software-developed-or-controlled-by-chinese",
+          "date": "2021-01-08",
+          "note": "美國行政命令點名 Alipay 等中國 connected software applications；此命令後來已被撤銷。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "AlipayHK",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "AlipayHK 原已列於群組收錄範圍；本筆保留為關聯觀察，不把針對 Alipay 且已撤銷的美國歷史行政命令視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。針對 Alipay 且已撤銷的美國歷史行政命令的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
   record({
     id: "xiaohongshu",
     name: "小紅書 / Xiaohongshu / REDnote",
@@ -109,7 +458,7 @@ export const records = [
       source("台灣公部門：勿以公務設備使用抖音或小紅書等軟體", "https://www.tyy.moj.gov.tw/233917/234014/1328913/1328982/post", "2022-12-27", "公告稱小紅書列入危害國家資通安全產品。"),
     ],
   }),
-  record({
+  ...splitRecord(record({
     id: "weibo-sina",
     name: "微博 / Weibo / Sina",
     aliases: ["微博", "Weibo", "Sina Weibo", "新浪微博", "Sina"],
@@ -119,7 +468,48 @@ export const records = [
     status: "confirmed",
     summary: "微博被台灣資安署列為受測高風險 App；審查宣傳標籤可再補平台審查案例，但資料國安警示已足以收錄。",
     sources: [taiwanHighRiskApps],
-  }),
+  }), [
+    {
+      "name": "微博",
+      "aliases": [
+        "Weibo",
+        "Sina Weibo",
+        "新浪微博"
+      ],
+      "identifiers": [],
+      "summary": "微博保留台灣資安署受測高風險 App 警示；本筆僅沿用原資料國安風險，不新增具體審查或宣傳事件，也不將其 App 測試結果套至 Sina 所有服務。",
+      "aiNotes": "Sina 另列；本筆來源只支撐微博 App 警示，不代表新浪公司或其他產品逐一接受相同測試。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "台灣資安署：提醒民眾對於資安高風險 App 須慎選使用",
+          "url": "https://moda.gov.tw/ACS/press/news/press/18104",
+          "date": "2025-12-03",
+          "note": "台灣資安署點名多款中國 App 具高風險，並說明中國法規下企業可能被要求提供用戶資料。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Sina",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Sina 原已列於群組收錄範圍；本筆保留為關聯觀察，不把微博 App 的台灣資安署測試與警示視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。微博 App 的台灣資安署測試與警示的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
   record({
     id: "baidu",
     name: "百度 / Baidu",
@@ -160,7 +550,7 @@ export const records = [
     summary: "Qihoo 360 被美國國防部 1260H 名單列入，風險焦點在 MIIT/MSS 關聯、軍民融合與資安軟體敏感性。",
     sources: [dod1260h2026],
   }),
-  record({
+  ...splitRecord(record({
     id: "xiaomi",
     name: "小米 / Xiaomi / Redmi / POCO",
     aliases: ["Xiaomi", "小米", "Redmi", "紅米", "POCO", "Mi", "HyperOS", "米家", "Mijia", "小米手環", "Xiaomi Watch", "小米路由器", "掃拖機器人"],
@@ -174,8 +564,118 @@ export const records = [
       source("Lithuania NCSC - Assessment of cybersecurity of 5G mobile devices", "https://www.nksc.lt/doc/en/analysis/2021-08-23_5G-CN-analysis_env3.pdf", "2021-08-23", "立陶宛國家網安中心報告指出 Xiaomi 手機有內容過濾與資料傳輸等風險。"),
       source("黨建賦能科技創新型企業發展的「小米實踐」", "https://www.zyshgzb.gov.cn/n1/2026/0311/c461662-40679771.html", "2026-03-11", "中共中央社會工作部來源說明小米集團黨委、黨組織覆蓋核心業務線。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "小米",
+      "aliases": [
+        "Xiaomi",
+        "Mi",
+        "小米手環",
+        "Xiaomi Watch",
+        "小米路由器"
+      ],
+      "identifiers": [],
+      "summary": "小米保留原台灣官方販售脈絡、立陶宛網安中心對 Xiaomi 手機的內容過濾／資料傳輸風險報告，以及小米集團黨建資料；手機測試不等於所有小米、Redmi、POCO 或智慧家庭產品皆有相同行為。",
+      "aiNotes": "特定 Xiaomi 手機報告不移植至 Redmi、POCO、HyperOS 或米家。無品牌限定的『掃拖機器人』移除，不以品類泛稱作名稱鍵；具名產品線仍歸小米，不另推其具同一漏洞。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "小米台灣官網",
+          "url": "https://www.mi.com/tw/",
+          "date": "查核日 2026-06-25",
+          "note": "支撐台灣販售手機、手環、耳機、手錶、家電與掃拖機器人。"
+        },
+        {
+          "title": "Lithuania NCSC - Assessment of cybersecurity of 5G mobile devices",
+          "url": "https://www.nksc.lt/doc/en/analysis/2021-08-23_5G-CN-analysis_env3.pdf",
+          "date": "2021-08-23",
+          "note": "立陶宛國家網安中心報告指出 Xiaomi 手機有內容過濾與資料傳輸等風險。"
+        },
+        {
+          "title": "黨建賦能科技創新型企業發展的「小米實踐」",
+          "url": "https://www.zyshgzb.gov.cn/n1/2026/0311/c461662-40679771.html",
+          "date": "2026-03-11",
+          "note": "中共中央社會工作部來源說明小米集團黨委、黨組織覆蓋核心業務線。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Redmi",
+      "aliases": [
+        "紅米"
+      ],
+      "identifiers": [],
+      "summary": "Redmi 原已列於群組收錄範圍；本筆保留為關聯觀察，不把Xiaomi 特定手機網安測試與小米集團黨建資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。Xiaomi 特定手機網安測試與小米集團黨建資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "POCO",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "POCO 原已列於群組收錄範圍；本筆保留為關聯觀察，不把Xiaomi 特定手機網安測試與小米集團黨建資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。Xiaomi 特定手機網安測試與小米集團黨建資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "HyperOS",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "HyperOS 原已列於群組收錄範圍；本筆保留為關聯觀察，不把Xiaomi 特定手機網安測試與小米集團黨建資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。Xiaomi 特定手機網安測試與小米集團黨建資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "米家",
+      "aliases": [
+        "Mijia"
+      ],
+      "identifiers": [],
+      "summary": "米家 原已列於群組收錄範圍；本筆保留為關聯觀察，不把Xiaomi 特定手機網安測試與小米集團黨建資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。Xiaomi 特定手機網安測試與小米集團黨建資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "oppo-oneplus-realme",
     name: "OPPO / OnePlus / realme",
     aliases: ["OPPO", "OnePlus", "一加", "realme", "ColorOS", "OPPO Watch"],
@@ -187,8 +687,83 @@ export const records = [
     sources: [
       source("東莞濱海灣：OPPO 公司党建交流活動", "https://bhwxq.dg.gov.cn/gkmlpt/content/3/3865/post_3865133.html", "2022-09-07", "東莞政府頁面稱 OPPO 公司黨支部介紹党建工作，並提到黨企融合與提高企業競爭力。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "OPPO",
+      "aliases": [
+        "OPPO Watch"
+      ],
+      "identifiers": [],
+      "summary": "OPPO 保留原東莞政府頁面記錄公司黨支部及黨企融合的來源，維持觀察中；該資料不是國安制裁，也不證明 OnePlus、realme 或各產品均有相同組織與行為。",
+      "aiNotes": "原來源具名 OPPO 公司，不把公司黨支部資料改寫成 OnePlus／realme／ColorOS 各自黨建或漏洞證據。OPPO Watch 保留為具品牌限定的產品線名稱，不主張其單品受相同風險認定。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "東莞濱海灣：OPPO 公司党建交流活動",
+          "url": "https://bhwxq.dg.gov.cn/gkmlpt/content/3/3865/post_3865133.html",
+          "date": "2022-09-07",
+          "note": "東莞政府頁面稱 OPPO 公司黨支部介紹党建工作，並提到黨企融合與提高企業競爭力。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "OnePlus",
+      "aliases": [
+        "一加"
+      ],
+      "identifiers": [],
+      "summary": "OnePlus 原已列於群組收錄範圍；本筆保留為關聯觀察，不把OPPO 公司黨支部與黨企融合資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。OPPO 公司黨支部與黨企融合資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "realme",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "realme 原已列於群組收錄範圍；本筆保留為關聯觀察，不把OPPO 公司黨支部與黨企融合資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。OPPO 公司黨支部與黨企融合資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "ColorOS",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "ColorOS 原已列於群組收錄範圍；本筆保留為關聯觀察，不把OPPO 公司黨支部與黨企融合資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。OPPO 公司黨支部與黨企融合資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "vivo-iqoo",
     name: "vivo / iQOO",
     aliases: ["vivo", "iQOO", "OriginOS", "vivo Watch", "vivo Pad"],
@@ -200,7 +775,64 @@ export const records = [
     sources: [
       source("東莞長安：vivo 黨群服務中心揭牌", "https://webzdg.sun0769.com/web/news/content/178194?share=1", "2021-04-13", "地方官方媒體報導 vivo 黨群服務中心，稱黨組織先進性為企業發展提供動力。"),
     ],
-  }),
+  }), [
+    {
+      "name": "vivo",
+      "aliases": [
+        "vivo Watch",
+        "vivo Pad"
+      ],
+      "identifiers": [],
+      "summary": "vivo 保留原地方官方媒體對其黨群服務中心及黨建的報導，維持觀察中；不新增國安制裁主張，也不把公司層級資料直接套為 iQOO 或每款產品的獨立事實。",
+      "aiNotes": "iQOO、OriginOS 另列；vivo Watch／vivo Pad 只作既有具品牌限定產品線鍵，原公司黨建來源不證明所有單品有資安漏洞。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "東莞長安：vivo 黨群服務中心揭牌",
+          "url": "https://webzdg.sun0769.com/web/news/content/178194?share=1",
+          "date": "2021-04-13",
+          "note": "地方官方媒體報導 vivo 黨群服務中心，稱黨組織先進性為企業發展提供動力。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "iQOO",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "iQOO 原已列於群組收錄範圍；本筆保留為關聯觀察，不把vivo 黨群服務中心與公司黨建資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。vivo 黨群服務中心與公司黨建資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "OriginOS",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "OriginOS 原已列於群組收錄範圍；本筆保留為關聯觀察，不把vivo 黨群服務中心與公司黨建資料視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。vivo 黨群服務中心與公司黨建資料的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
   record({
     id: "honor",
     name: "榮耀 / Honor",

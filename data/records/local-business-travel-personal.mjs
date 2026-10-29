@@ -15,6 +15,7 @@
   tppCurrentPublicFigureAliases,
   treeProtectionPublicFigureAliases,
 } from "../record-helpers.mjs";
+import { splitRecord } from "../split-record.mjs";
 
 export const records = [
   record({
@@ -137,7 +138,7 @@ export const records = [
       "此筆是 screenshot-led / public-business-account political-text / user-directed personal record。唯一核心理由是使用者不接受截圖所示帳號 `europegarden` 發表的民進黨批評文字；截圖只證明可見 handle、相對『8 小時』與文字像素，內層原始 permalink／絕對時間不可得，不能由相對時間回推。Threads、Instagram 與 Facebook 三個第一方 profile 才共同把截圖 handle 橋接到『歐元花藝氣球設計』的商業名稱與服務；各 source note 必須只描述自身來源，不在單一 note 內作跨來源比較。Facebook 的『企業社』只屬頁面自我呈現，不是已核實商業登記。這是使用者個人政治價值與消費選擇，不採文字內容為真，也不認定違法、非法利益、貪腐、黨籍、經營者自然人身分或完整政治信念。searchable fields 只保留 canonical name『歐元花藝氣球設計』、頁面自稱『歐元花藝氣球設計企業社』及 `@europegarden`；canonical name 本身含『花藝氣球』子字串，故查詢會依 substring 命中，但未另將『花藝氣球』加入 standalone alias／identifier。`country` 刻意留空，因 country 會被查詢；商家所在地脈絡只留在個別來源自我描述，不作可搜尋欄位。",
     lastReviewed: "2026-09-15",
   }),
-  record({
+  ...splitRecord(record({
     id: "chen-yichian-soers-technology-programming-payment-claims-personal-20260914",
     name: "陳宜謙／索爾斯科技",
     aliases: [
@@ -217,7 +218,24 @@ export const records = [
     aiNotes:
       "此筆是 image-led / source-attributed unpaid-development-claim / official-civil-records / user-directed personal collaboration record。核心避雷對象是陳宜謙本人、公開帳號 `teemokayy`，以及由司法院裁判書直接橋接的索爾斯科技股份有限公司／索爾斯科技有限公司；不要把高度同名的英文顯示名稱 Timothy Chen 當作 standalone alias。原帖的本次未付款事件只有合作方單方陳述，必須保留『發文者稱／主張』，不可寫成詐騙、惡意欠款、刑事犯罪、累犯或司法已證實。司法院以公司全名查詢於 2026-09-14 回傳 15 份裁判文件，但其中含同案判決／更正／二審／律師費及移送／補正等程序裁定，不能說成 15 次敗訴；精確可列的核心是兩件軟體契約金錢判決、三件公司借款及連帶保證判決，以及一件附異議權的支付命令。五件判決判命本金／價金／違約金合計 697 萬 5,241 元，另有 1,376 萬 6,203 元支付命令；這些歷史金額不代表查核日仍有未清餘額，利息、違約金、費用、後續清償與執行情形也未合併估算。原帖列出的肯美廣告、爆炸行銷、淘設計、磐信管理諮詢、Nexw Tech／`nexwtech`、`conveymar` 只屬發文者列名，本輪未完成足以擴張避雷範圍的直接橋接；不得作 aliases／identifiers、不得建立各公司卡，也不得讓它們承擔陳宜謙或索爾斯科技的債務／合作責任。赴美成立公司與可能募資未驗證；公開 profile 附圖的 FAE 徵才與舊金山灣區文字不能證明募資或公司法律身分。searchable fields 只保留陳宜謙、索爾斯科技必要公司名及 `teemokayy`；不要把 Timothy Chen、lin_6543_、Threads、程式開發、付款、欠款、詐騙、累犯、訴訟、債務、執行、銀行名、案號、金額、iLending、CakeResume、FAE、美國、舊金山、募資、其他列名公司／品牌／帳號或理由／事件／平台／泛稱作 standalone alias／identifier。",
     lastReviewed: "2026-09-14",
-  }),
+  }), [
+    {
+      name: "陳宜謙",
+      identifiers: ["teemokayy"],
+      summary:
+        "沿用原紀錄對陳宜謙本人的個人合作避開。合作方 lin_6543_ 公開主張程式工作與成果已交付，但付款遭拖延且未結清；沒有本次合作底層文件或法院認定，不認定詐騙、惡意欠款、累犯或刑事犯罪。既有司法院裁判書直接列陳宜謙為索爾斯科技法定代理人，三件銀行借款判決另列其為連帶保證人，與公司連帶給付的歷史本金合計 566 萬 7,241 元及利息、違約金；兩件軟體契約給付判決的義務人是公司，不因其代表人身分改寫為陳宜謙個人契約債務。桃園地院 113 年度促字第 431 號另命其與公司連帶清償本金 1,376 萬 6,203 元，但支付命令附送達後 20 日異議權，未確認異議、確定、執行或清償；上述歷史金額不代表目前欠款餘額。只限具名本人及原帖所列 teemokayy，不擴其他同名者、英文顯示名稱或未橋接公司。",
+      aiNotes:
+        "本人卡只承接原紀錄的個人避開指定、合作方單方付款主張、法定代理人身分及明載的個人連帶保證／支付命令。公司軟體契約返還價金與違約金不是本人個人義務；來源記載的判決確定狀態只適用各該案件，不當作全部確定或仍欠同額。Timothy Chen 不作獨立別名；肯美廣告、爆炸行銷、淘設計、磐信管理諮詢、Nexw Tech／nexwtech、conveymar 未完成橋接，不建卡、不作查詢鍵，也不採赴美成立公司或募資猜測。teemokayy 只沿用原帖指認，不宣稱已完成完整法律身分橋接。",
+    },
+    {
+      name: "索爾斯科技",
+      aliases: ["索爾斯科技股份有限公司", "索爾斯科技有限公司"],
+      summary:
+        "沿用原紀錄對索爾斯科技的個人合作避開；司法院裁判書直接橋接公司新舊名稱及法定代理人陳宜謙。新竹地院 113 年度訴字第 340 號判命公司依合作終止協議返還 93 萬 6,000 元；iLending 軟體案一審判命公司返還 27 萬 2,000 元並給付經酌減的懲罰性違約金 10 萬元，二審駁回原告其餘 54 萬元請求且不得上訴，不能說原告所有主張獲支持。另三件銀行借款判決命公司與連帶保證人給付本金合計 566 萬 7,241 元及利息、違約金；桃園地院 113 年度促字第 431 號另核發本金 1,376 萬 6,203 元的附異議權支付命令，未確認是否異議、確定或執行。這些是公司歷史民事裁判／命令，不代表目前未清償餘額或刑事犯罪；合作方對陳宜謙的本次付款主張沒有底層文件，不移作公司已證實的新欠款。只限此公司，不擴原帖其他未橋接品牌或公司。",
+      aiNotes:
+        "公司卡承接既有民事裁判與個人合作避開指定；五件判決的本金／價金／違約金合計 697 萬 5,241 元，另列附異議權支付命令，不將二者當作目前欠款總額。苗栗地院 113 年度司聲字第 114 號只確認前述苗簡借款判決確定及公司新舊名稱，不推及其他案件。共同來源中的自然人帳號與合作方主張僅為原收錄背景；陳宜謙、teemokayy 留本人卡，不作公司查詢鍵。肯美廣告等未橋接名稱、Timothy Chen、赴美成立公司與募資均不擴張。",
+    },
+  ]),
   record({
     id: "dalu-construction-resident-quality-claims-personal-20260914",
     name: "大陸建設",
@@ -471,7 +489,7 @@ export const records = [
       "此筆是 source-backed / user-directed company personal record。可說基隆地檢署官方遮名新聞稿列飛○科技的陳○傑、C 男分別為實際負責人與總經理，共同綜理公司事務；聯合報與自由時報把公司與 C 男橋接為飛虎科技／陳旻諺，公司官網使用飛虎科技股份有限公司名稱。陳旻諺屬遭起訴、檢方求刑階段，不是有罪或判刑確定；陳○傑是另行通緝、未在本次起訴 9 人內。公司列入避雷是使用者對品牌／公司及管理層的個人決定，不可寫成飛虎法人被起訴、判刑、有罪或其他董事／主管均涉案。官方實際負責人完整姓名仍遮蔽，不得以公司登記或姓氏字樣補猜。相似現行公司登記名稱與負責人因缺乏不依賴台灣公司稅籍號碼、可重現的直接舊名沿革來源，不可當作本案公司 aliases 或管理層人物。媒體標題的「走私」不得取代官方「不法出口」及背信、偽造文書等罪嫌口徑。searchable fields 僅飛虎科技、飛虎科技公司、飛虎科技股份有限公司；不要把飛○科技股份有限公司、陳旻諺、陳○傑、陳姓實際負責人、B300、伺服器、輝達、美超微、中國、走私、不法出口、內鬼、起訴、通緝、兩千萬美元、Threads、媒體名稱或未橋接的相似公司名稱作其他公司 alias／identifier。",
     lastReviewed: "2026-08-27",
   }),
-  record({
+  ...splitRecord(record({
     id: "wumamii-beefnoodle-owner-dui-deferred-prosecution-personal-20260826",
     name: "門前隱味牛肉麵／吳皓民",
     aliases: [
@@ -526,7 +544,26 @@ export const records = [
     aiNotes:
       "此筆是 source-backed / user-conditioned brand-and-person personal record。可說吳皓民是具名媒體直接橋接的門前隱味牛肉麵老闆；他於 2023-09-28 飲酒後駕車約 2.3 公里，吐氣酒精濃度每公升 0.77 毫克，警詢與偵查坦承酒駕，士林地檢署作成緩起訴 1 年、支付公庫 11 萬 5000 元的處分。必須保留程序狀態為緩起訴，不可改寫成法院判刑、有罪確定或品牌／法人遭刑事處分。門前隱味品牌列入避雷是使用者基於經營者酒駕所作的個人消費決定；自然人責任不可外溢到公司／商號、員工、各分店現場人員、廣告照片人物、台酒商品、聯名或其他合作品牌。使用者截圖只作線索，不當作酒駕證明。searchable fields 僅保留門前隱味牛肉麵、門前隱味、WUMAMII BEEFNOODLE、吳皓民及官方網域；不要把酒駕、酒駕仔、酒測值、0.77、公共危險、緩起訴、特斯拉、大同區、三重、台酒、麻辣乾拌麵、500 盤、Facebook、Threads、`double_lucky_` 或其他事件／來源／理由／平台／泛稱作 alias／identifier。",
     lastReviewed: "2026-08-26",
-  }),
+  }), [
+    {
+      name: "門前隱味牛肉麵",
+      aliases: ["門前隱味", "WUMAMII BEEFNOODLE"],
+      identifiers: ["wumamii.com.tw"],
+      avoidReasons: ["使用者確認經營者酒駕後指定品牌個人避開"],
+      summary:
+        "沿用使用者確認經營者酒駕屬實後，對門前隱味牛肉麵品牌的個人消費避開。既有 ETtoday 具名報導直接橋接經營者吳皓民，聯合報交叉確認其於 2023-09-28 酒後駕車、酒測每公升 0.77 毫克及士林地檢署緩起訴 1 年、處分確定後 8 個月內支付公庫 11 萬 5000 元的程序內容；行為及處分只屬吳皓民本人，不是品牌、公司／商號或分店遭刑事處分。只保留品牌避開，不擴員工、照片人物、台酒商品、聯名或其他合作品牌。",
+      aiNotes:
+        "品牌卡的理由是使用者依經營者行為作出的消費決定，不是品牌酒駕、遭判刑或緩起訴。共同來源的自然人事件只作指定理由；本人另卡，人物姓名不作品牌查詢鍵。截圖只是線索，酒駕及程序以原有具名報導為據；不擴其他分店現場人員或合作對象責任。",
+    },
+    {
+      name: "吳皓民",
+      avoidReasons: ["使用者個人避開", "本人酒駕及緩起訴處分報導"],
+      summary:
+        "沿用原紀錄對門前隱味牛肉麵經營者吳皓民本人的個人避開。ETtoday 具名報導直接橋接姓名與品牌，聯合報交叉確認 2023-09-28 酒駕事件：飲酒後駕車約 2.3 公里，吐氣酒精濃度每公升 0.77 毫克，報導稱其警詢、偵查均坦承；士林地檢署作成緩起訴 1 年、處分確定後 8 個月內支付公庫 11 萬 5000 元。程序是緩起訴，不是法院判刑或有罪確定。只限本人，不讓品牌、法人、員工、分店或合作對象承擔其刑事責任。",
+      aiNotes:
+        "本人卡只承接原來源直接橋接的姓名、酒駕行為及緩起訴程序；不得改寫判刑、有罪確定或推定目前處分履行情形。共同來源中的品牌官網只供原經營關係脈絡，不把官方網域、品牌或聯名商品作本人查詢鍵。",
+    },
+  ]),
   record({
     id: "fans-plant-instagram-profile-personal-20260826",
     name: "FaN's Plant／帆植",
@@ -821,7 +858,7 @@ export const records = [
       "此筆是 screenshot-only / user-directed personal record，收錄範圍限土城日月光廣場這一場域。可說使用者依 `iam_echia` Threads 截圖，因停車折抵券由可留在機器供他人使用改為有人監督並要求投入桶內的描述，而指定個人避雷；不可寫成日月光廣場已正式公告該政策、所有時段／入口一致、違法、不公平、場方承認或其他日月光／ASE 據點均有相同問題。OpenStreetMap 只作場域名稱橋接。searchable fields 僅保留土城日月光廣場、土城日月光、日月光廣場；不要把日月光集團、ASE、停車、停車費、停車折抵券、折抵券、監督、投入桶、iam_echia、Threads 或其他理由／平台／泛稱作 aliases／identifiers。",
     lastReviewed: "2026-08-11",
   }),
-  record({
+  ...splitRecord(record({
     id: "tree-party-tree-protection-public-figures",
     name: "樹黨／護樹公開代表人物名單",
     aliases: treeProtectionPublicFigureAliases,
@@ -842,7 +879,39 @@ export const records = [
       source("台灣法人網 - 社團法人台灣森林城市協會", "https://org.twincn.com/item.aspx?no=21018666&sn=520526", "查核日 2026-06-30", "法人資料列正式名稱、地址、設立日期與第2屆理事長／理監事姓名，用於核對公開組織與人物名單。"),
     ],
     aiNotes: "此筆依使用者明確指示列入 personal，但只收公開可核對的組織名稱、公開黨職、公開候選人、公開理監事或代表人物；不把「護樹團體」「護樹人士」「志工」「環團」「森林」「協會」等泛稱作 alias，也不整理一般成員、連署者或未公開代表身分的私人名單。confidence medium 是因為公開資料可支持已列姓名，但不代表涵蓋所有護樹團體或全部成員；若要擴充到特定團體，必須逐一查官方名單或公開報導。",
-  }),
+  }), [
+    {
+      name: "樹黨",
+      aliases: ["Trees Party"],
+      identifiers: ["Tree Party Taiwan", "treesparty.tw"],
+      summary: "沿用原名單對樹黨的個人避開，僅作既有公開政治／社運參與脈絡紀錄；不將黨職、候選人或護樹人士全部視為同一對象，也不作親共、中資、制裁或違法定論。",
+      aiNotes: "只承接原群組明列的樹黨實體；各人物與其他組織另列，不由本卡擴張一般黨員或支持者。原 tree-protection-public-figures 與 reviewed:2026-06-27 是名單／複查標籤，不是實體識別，移出查詢鍵。",
+    },
+    {
+      name: "土城護樹者聯盟",
+      summary: "沿用原名單對土城護樹者聯盟的個人避開，只限此具名組織；不推定所有護樹團體、成員、志工或合作對象同樣適用，也不作違法或其他法律風險定論。",
+      aiNotes: "原群組已明列的獨立組織名稱；沿用既有來源，不另認定成員名單、組織延續性或其他團體關係。",
+    },
+    {
+      name: "幸町百年老樹聯盟",
+      summary: "沿用原名單對幸町百年老樹聯盟的個人避開，只限此歷史名稱對應的組織；不等同幸町老樹保護行動或幸町老樹守護行動，不擴張成員或同區其他團體。",
+      aiNotes: "既有來源列林逸萍為此聯盟召集人，只作組織辨識；與幸町老樹保護行動等名稱的法律／組織連續性未證實，不硬併既有團體卡。",
+    },
+    ...[
+      "莊傑任", "楊吉壽", "王瑞輝", "吳庭輝", "安茂元", "陳銘彬", "林新旻",
+      "朱子涵", "陳雅菁", "張豐藤", "王榮祥", "洪郁凱", "黃瑾瑜", "陳建合",
+      "連宏珠", "林亮妤", "潘翰疆", "蘇柏豪", "許育綸", "吳曉東", "劉青英",
+      "王南昕", "陳家宏", "林婉瑜", "冼義哲", "王鐘銘", "林逸萍", "余筱菁",
+      "鄭惠齡", "林佳諭", "黃婷筠", "何承翰", "陳曉雯", "黃雅婕", "高民晟",
+      "林一方", "陳紀衡", "蔡尚媞", "陳盅禓", "潘靜竹", "邱馨慧", "李建明",
+      "陳佩俞", "蘇通達", "姚胤宏", "尤瑞敏", "李柏融", "林富源", "張佳偉",
+    ].map((name) => ({
+      name,
+      aliases: name === "潘翰疆" ? ["潘翰聲"] : [],
+      summary: `沿用原護樹／樹黨公開代表人物名單對${name}本人的個人避開，只限原收錄姓名對應的公開人物。共用來源涵蓋不同黨職、候選人、理監事及社運角色，不能據此認定本人具備全部角色或參與每項事件；不擴同名者、其他成員或組織，也不作中資、親共、制裁或違法定論。`,
+      aiNotes: `只拆出原名單已列本人，不新增人物、角色或風險判斷；各來源的組織與其他人物敘述僅為名單背景，不全數歸給本人。${name === "潘翰疆" ? "潘翰聲只保留為本人的同人別名。" : ""}即使其他既有卡有相同姓名，也不僅憑同名合併或移入其指控。`,
+    })),
+  ]),
   record({
     id: "taiwanize-naizhi-cultural",
     name: "TAIWANIZE / 耐製文創有限公司",
@@ -911,7 +980,7 @@ export const records = [
       "此筆是 user-directed personal record。可說使用者因 bgirl_anlei／Anlei 抄襲爭議與其公開 IG 上髮基因團購促銷線索，指定個人避開髮基因／Scalp Recovery；不可寫成 bgirl_anlei 抄襲已由本專案獨立查證、髮基因或 Scalp Recovery 抄襲、已確認付費代言合約、違法、官方認定或法律責任。aliases 僅保留品牌、官方帳號與具體產品線；不要把 bgirl_anlei、Anlei、安蕾、抄襲、一直抄襲、代言、合作、團購優惠、網紅、吉伊卡哇、Bandai、chiikawa 等原因詞或脈絡詞作 alias / identifier。",
     lastReviewed: "2026-07-08",
   }),
-  record({
+  ...splitRecord(record({
     id: "tpp-muke-zhiyau-xiaocao-cafe",
     name: "木可公關行銷 / 智堯資訊傳媒 / 小草咖啡廳",
     aliases: [
@@ -927,7 +996,7 @@ export const records = [
     ],
     identifiers: ["柯文哲", "陳佩琪", "柯傅堯", "李文宗", "李文娟"],
     country: "台灣",
-    categories: ["政治／個人避開", "公關／電商／餐飲規劃"],
+    categories: ["餐飲／生活服務"],
     avoidReasons: ["使用者個人避開", "民眾黨／柯文哲政治人物關聯", "政治獻金案件／募款小物爭議"],
     confidence: "high",
     status: "personal",
@@ -940,8 +1009,43 @@ export const records = [
       source("Newtalk - 用別人名義開小草咖啡廳惹議", "https://newtalk.tw/news/view/2024-08-09/931673", "2024-08-09", "報導陳佩琪稱因公務員身份先用別人名字開公司，並已託人撤銷公司。"),
     ],
     aiNotes: "此筆是使用者個人避開與政治人物／政黨關聯紀錄。台北地院資訊是一審判決脈絡，後續上訴或判決變動需重查；智堯資訊傳媒已解散，小草咖啡廳目前只作特定計畫名稱辨識，不把咖啡、咖啡廳、小草等泛稱作 alias。",
-  }),
-  record({
+  }), [
+    {
+      name: "木可公關行銷",
+      aliases: ["木可公關行銷有限公司", "木可公關", "木可公司", "木可", "木可好物"],
+      identifiers: ["柯文哲", "李文宗", "李文娟"],
+      summary: "沿用原紀錄對木可公關行銷的個人避開。既有中央社報導台北地院一審認定柯文哲、李文宗、李文娟共同以木可公司名義侵占募款小物所得；此為自然人案件與公司名義的關聯脈絡，不改寫為木可公司本身被判同罪或已定讞。只限木可公司／既有木可好物銷售名稱，不把智堯資訊傳媒或小草咖啡計畫承擔此案責任。姓名 identifier 僅保留原公司案件／代表人關係查詢，命中本卡不表示本卡另將本人列入避開。",
+      sources: [
+        source("中央社 - 北院認柯文哲偕李文宗兄妹侵占6134萬政治獻金", "https://www.cna.com.tw/news/aipl/202603260308.aspx", "2026-03-26", "中央社報導台北地方法院一審認定柯文哲與李文宗、李文娟共同以木可公司名義侵占募款小物所得。"),
+        source("台灣公司網 - 木可公關行銷有限公司", "", "查核日 2026-06-26", "公司資料列公司名稱木可公關行銷有限公司、代表人李文娟。"),
+      ],
+      aiNotes: "僅木可公司與既有銷售名稱的 personal；保留一審程序及後續上訴／判決變動需重查的限制。柯文哲、李文宗、李文娟由原中央社來源直接橋接木可案件，保留原穩定關係 identifier，但不是本人卡，也不由公司避開推定本人另受使用者指定避開。",
+    },
+    {
+      name: "智堯資訊傳媒",
+      aliases: ["智堯資訊傳媒有限公司"],
+      identifiers: ["陳佩琪"],
+      avoidReasons: ["使用者個人避開", "小草咖啡規劃與政治人物關聯"],
+      summary: "沿用原紀錄對智堯資訊傳媒的個人避開。既有報導稱陳佩琪曾為規劃小草咖啡廳而以兒子名義設立公司，公開公司資料顯示智堯資訊傳媒已解散；只保留該公司與計畫的政治關聯，不把木可募款小物案件的一審認定、侵占行為或刑責移給智堯資訊傳媒。陳佩琪 identifier 僅作原公司設立說法的關係辨識，命中本卡不等同陳佩琪本人避開。",
+      sources: [
+        source("台灣公司網 - 智堯資訊傳媒有限公司", "", "查核日 2026-06-26", "公司資料列公司名稱智堯資訊傳媒有限公司，並顯示已解散／非營業中。"),
+        source("Newtalk - 用別人名義開小草咖啡廳惹議", "https://newtalk.tw/news/view/2024-08-09/931673", "2024-08-09", "報導陳佩琪稱因公務員身份先用別人名字開公司，並已託人撤銷公司。"),
+      ],
+      aiNotes: "已解散公司的 personal 關聯紀錄，不是仍營業的咖啡品牌或木可案件被告定論。陳佩琪由既有報導直接具名，保留原公司關係 identifier，不建本人卡。原柯傅堯 identifier 不承接：既有來源 note 只寫兒子／別人名字，未直接具名橋接其與智堯；本次不查新事實、不依親屬推定補鍵或新增本人避開。",
+    },
+    {
+      name: "小草咖啡廳",
+      aliases: ["小草咖啡棧"],
+      avoidReasons: ["使用者個人避開", "政治人物咖啡廳規劃關聯"],
+      summary: "沿用原紀錄對小草咖啡廳／小草咖啡棧這一特定計畫名稱的個人避開。既有中央社報導柯文哲曾表示預計開設咖啡廳，Newtalk 另報導陳佩琪對公司設立及撤銷的說法；不代表已核實實體餐廳持續營運，也不把木可案件一審認定或智堯公司法律狀態直接視為計畫本身刑責。",
+      sources: [
+        source("中央社 - 柯文哲擬開小草咖啡廳恐違法", "https://www.cna.com.tw/news/aipl/202402290407.aspx", "2024-02-29", "報導柯文哲表示預計開設小草咖啡廳，販賣飲料與熱食。"),
+        source("Newtalk - 用別人名義開小草咖啡廳惹議", "https://newtalk.tw/news/view/2024-08-09/931673", "2024-08-09", "報導陳佩琪稱因公務員身份先用別人名字開公司，並已託人撤銷公司。"),
+      ],
+      aiNotes: "只收既有特定計畫名稱及別稱，不新增開幕、持續營運或違法結論；咖啡、咖啡廳、小草及人物姓名不作查詢鍵。",
+    },
+  ]),
+  ...splitRecord(record({
     id: "yen-kuan-heng-lutzr-yuanli-related",
     name: "顏寬恒關聯公司 / 鹿澤國際開發 / 苑裡營造",
     aliases: [
@@ -959,7 +1063,7 @@ export const records = [
     ],
     identifiers: ["顏寬恒"],
     country: "台灣",
-    categories: ["政治／個人避開", "不動產／營造／投資公司"],
+    categories: ["餐飲／生活服務"],
     avoidReasons: ["使用者個人避開", "國民黨人物公司關聯"],
     confidence: "medium",
     status: "personal",
@@ -970,7 +1074,33 @@ export const records = [
       source("放言 - 李順涼揭露顏寬恒名片掛4公司", "https://www.fountmedia.io/article/137913", "2021-11-08", "報導顏寬恒名片曾同時列出苑裡營造、鹿澤開發、昱縉公司、弘城營造等公司名稱；此來源僅作背景，不作所有公司現任控制定論。"),
     ],
     aiNotes: "此筆 personal，重點是顏寬恒直接代表／董監事或公開司法新聞可核對的公司關聯。弘城營造、昱縉公司只在名片報導中出現，未列入 aliases；若後續查到現任股權或負責人關係，再另行補入。",
-  }),
+  }), [
+    {
+      name: "鹿澤國際開發",
+      aliases: ["鹿澤國際開發股份有限公司", "LU TZR INTERNATIONAL DEVELOPMENT CO., LTD."],
+      summary: "沿用原紀錄對鹿澤國際開發的個人避開。既有公司資料列代表人／董事長顏寬恒，此卡只承接該具名公司與政治人物的關聯；不把苑裡營造帳務或顏寬恒個人起訴內容移作鹿澤公司的犯罪或法律責任，也不新增現任控制判斷。",
+      sources: [source("台灣公司網 - 鹿澤國際開發股份有限公司", "", "查核日 2026-06-26", "公司資料列代表人與董事長顏寬恒，並列顏寬恒其他公司負責人與董監事關聯。")],
+      aiNotes: "只拆原已收錄公司；顏寬恒是關聯敘事，不作公司查詢鍵。既有名片來源的弘城營造、昱縉公司未列入原實體鍵，不新增卡或別名。",
+    },
+    {
+      name: "苑裡營造",
+      aliases: ["苑裡營造有限公司"],
+      summary: "沿用原紀錄對苑裡營造的個人避開。既有中央社報導顏寬恒為公司股東，並稱其透過公司領取盈餘分配扣抵私人支出，相關帳務出現在個人助理費起訴脈絡；只記該公司關聯，不把顏寬恒的起訴罪名視為公司有罪、定讞或其他公司責任。",
+      sources: [source("中央社 - 顏寬恒涉豪宅假買賣詐領助理費 檢依貪污竊占等罪起訴", "https://www.cna.com.tw/news/asoc/202304260216.aspx", "2023-04-26", "報導顏寬恒在苑裡營造公司擔任股東，並透過該公司領取盈餘分配扣抵私人支出。")],
+      aiNotes: "只限苑裡營造的既有政治人物公司關聯；起訴是原來源程序，不擴為公司定罪或現任控制結論。弘城營造與昱縉公司仍排除。",
+    },
+    ...[
+      { name: "僑鴻國際開發", aliases: ["僑鴻國際開發股份有限公司"] },
+      { name: "麗正國際科技股份有限公司" },
+      { name: "永群豪國際股份有限公司" },
+      { name: "昆宏投資", aliases: ["昆宏投資股份有限公司"] },
+    ].map((member) => ({
+      ...member,
+      summary: `沿用原紀錄已列${member.name}的個人避開，僅承接既有公司資料所列的顏寬恒公司關聯。不新增本人現任職務、股權或控制程度判斷，不把苑裡營造帳務、顏寬恒個人起訴或其他公司的行為歸給此公司。`,
+      sources: [source("台灣公司網 - 鹿澤國際開發股份有限公司", "", "查核日 2026-06-26", "公司資料列代表人與董事長顏寬恒，並列顏寬恒其他公司負責人與董監事關聯。")],
+      aiNotes: "只拆原群組已明列公司名稱；既有來源未在 note 逐家公司列出具體職務，不補推職位、現任控制、刑事責任或其他新事實。顏寬恒與名片旁支弘城營造、昱縉公司不新增為本卡別名或拆卡對象。",
+    })),
+  ]),
   record({
     id: "fu-hsu-jungliang-enterprise",
     name: "榮亮實業 / 傅崐萁徐榛蔚關聯公司",
@@ -989,7 +1119,7 @@ export const records = [
     ],
     aiNotes: "榮亮實業已解散，收錄目的是讓公司名稱與傅崐萁／徐榛蔚關聯可被查到；不要把它說成現行餐廳、商店或仍營業品牌。",
   }),
-  record({
+  ...splitRecord(record({
     id: "taroko-sankong-hsieh-family",
     name: "大魯閣實業 / Taroko Sports / 遊戲愛樂園",
     aliases: [
@@ -1007,7 +1137,7 @@ export const records = [
     ],
     identifiers: ["1432", "1432.TW", "謝國樑", "謝國棟", "林曼麗", "三功集團"],
     country: "台灣",
-    categories: ["政治／個人避開", "運動休閒／親子娛樂"],
+    categories: ["餐飲／生活服務"],
     avoidReasons: ["使用者個人避開", "國民黨人物家族企業關聯"],
     confidence: "medium",
     status: "personal",
@@ -1018,7 +1148,21 @@ export const records = [
       source("放言專題 - 謝國樑投入選戰", "https://www.fountmedia.io/article/163526", "2022-07-26", "報導謝國樑出身三功集團謝家，母親林曼麗，並稱謝家掌握上市公司大魯閣實業。"),
     ],
     aiNotes: "此筆為 personal／家族企業關聯。回答時應說明是謝國樑家族與大魯閣體系，不要寫成謝國樑本人現任大魯閣董事長或直接經營全部品牌。",
-  }),
+  }), [
+    {
+      name: "大魯閣實業",
+      aliases: ["大魯閣", "大魯閣實業股份有限公司", "Taroko", "Taroko Sports", "大魯閣棒壘球打擊場", "大魯閣保齡球", "大魯閣賽道樂園"],
+      identifiers: ["1432", "1432.TW", "謝國樑", "林曼麗", "三功集團"],
+      summary: "沿用原紀錄對大魯閣實業及其既有大魯閣運動休閒營運名稱的個人避開。公開報導稱謝國樑出身三功集團謝家、謝家掌握大魯閣實業，既有官方經營團隊頁列董事長林曼麗；理由限家族企業關聯，不主張謝國樑本人現任董事長或直接經營每項業務，也不移作遊戲愛樂園、員工或其他關係人的個人責任。謝國樑、林曼麗與三功集團 identifier 只保留原公司關係查詢，命中本卡不等同本人或集團另被指定避開。",
+      aiNotes: "公司與同名大魯閣營運品牌留同卡；遊戲愛樂園另卡。謝國樑、林曼麗、三功集團由原媒體／官方頁直接列入關聯，保留在最精確公司卡，不新增人物／集團卡。原謝國棟 identifier 不承接：現有來源 note 沒有直接具名其身分或對本公司的具體職務橋接，本次不從謝家關係推定、不新增事實或本人避開。",
+    },
+    {
+      name: "遊戲愛樂園",
+      aliases: ["大魯閣遊戲愛樂園", "Yukids Island"],
+      summary: "沿用原紀錄對遊戲愛樂園品牌的個人避開。既有大魯閣官網列此品牌，原收錄依大魯閣體系與謝家關聯作個人選擇；只限該品牌，不主張謝國樑本人直接經營每一家店，也不把大魯閣公司職務、股票代號或其他人的行為當成品牌本身責任。",
+      aiNotes: "只承接原列遊戲愛樂園品牌與既有家族企業關聯理由；不擴所有同名樂園、員工或合作品牌。股票代號歸大魯閣實業卡，政治人物、董事及集團名稱只保留敘事。",
+    },
+  ]),
   record({
     id: "antai-hospital-su-ching-chuan",
     name: "安泰醫療社團法人安泰醫院",
@@ -1056,7 +1200,7 @@ export const records = [
     ],
     aiNotes: "此筆 personal，僅收具名店家與公開新聞可核對的反罷免／不同意罷免表態。不要把飯糰、日式料理、永康街、餐廳、反罷免等泛稱當成 alias；回答時須說明這不是中資或法律風險定論。路易莎埔里酒廠門市目前只查到謝絕政治活動／拒絕罷免連署場地使用，不足以寫成反對大罷免；小草店家地圖屬群眾標記，未逐店驗證前不列入。此筆收斂到新聞直接指名的永康店，不把同社群提到的其他分店一併列入。",
   }),
-  record({
+  ...splitRecord(record({
     id: "black-tea-bus-wanglai-bluebird-remark",
     name: "紅茶巴士 / 旺來餐飲",
     aliases: [
@@ -1071,7 +1215,7 @@ export const records = [
     ],
     identifiers: ["王茹", "吳楷鈞", "WANG LAI CO., LTD."],
     country: "台灣",
-    categories: ["政治／個人避開", "手搖飲／連鎖飲料"],
+    categories: ["餐飲／生活服務"],
     avoidReasons: ["使用者個人避開", "公開社群挑釁青鳥言論", "大罷免／青鳥政治語境關聯"],
     confidence: "high",
     status: "personal",
@@ -1083,7 +1227,26 @@ export const records = [
       source("104 人力銀行 - 紅茶巴士 Black Tea Bus / 旺來餐飲有限公司", "https://www.104.com.tw/company/1a2x6bm178", "查核日 2026-06-26", "104 公司頁將紅茶巴士 Black Tea Bus 與旺來餐飲有限公司對應。"),
     ],
     aiNotes: "此筆 personal，依使用者放寬標準納入公開社群挑釁青鳥／大罷免陣營語境。紅茶巴士風波並非單一立委罷免投票文宣店，回答時應寫成青鳥政治語境挑釁與個人避開，不要寫成中資、國資、制裁、犯罪或官方風險定論。aliases 僅放媒體可核對的品牌與公司名；未把手搖飲、飲料店、青鳥、曬太陽等泛稱列為 alias。功夫茶需保留紅茗手工功夫茶全稱，避免誤傷其他同名品牌。",
-  }),
+  }), [
+    {
+      name: "紅茶巴士",
+      aliases: ["Black Tea Bus", "旺來餐飲有限公司", "紅茶巴士Black Tea Bus"],
+      identifiers: ["WANG LAI CO., LTD.", "王茹", "吳楷鈞"],
+      summary: "沿用原紀錄對紅茶巴士及其營運公司旺來餐飲的個人避開。既有媒體報導創辦人／老闆娘王茹以青鳥多曬太陽等語回應網友，後續引發抵制及道歉；公司資料與104頁對應品牌與營運公司。只記該品牌的個人消費選擇，不把人物言論當成其他飲料品牌親自發言，也不定性中資、制裁或犯罪。王茹與吳楷鈞 identifier 僅作原經營者／公司代表人關係查詢，命中本卡不等同本人另被指定避開。",
+      aiNotes: "紅茶巴士與直接營運公司留同卡；紅茗、阿檸、米桔另卡，只承接原有關聯理由。王茹由既有媒體具名、吳楷鈞由原公司資料列代表人，保留公司關係 identifier，不新增人物卡；不得由此命中認定本人避開。不把青鳥、曬太陽、手搖飲等理由或泛稱作別名。",
+    },
+    ...[
+      { name: "紅茗手工功夫茶" },
+      { name: "阿檸爆打鮮檸所", aliases: ["阿檸"] },
+      { name: "米桔" },
+    ].map((member) => ({
+      ...member,
+      avoidReasons: ["使用者個人避開", "原紅茶巴士爭議紀錄所列的品牌關聯"],
+      summary: `沿用原紀錄對${member.name}這一已列名品牌的個人避開。既有 TVBS 報導在紅茶巴士王茹言論風波脈絡中列出同地址／相關品牌；此卡只承接原關聯理由，不表示此品牌親自發表該言論、各店同一經營者或現任控制已逐一確認，不定性中資、制裁、犯罪或其他法律責任。`,
+      sources: [source("TVBS - 台中紅茶巴士闆娘自誇陸配擁百店嗆青鳥多曬太陽", "https://news.tvbs.com.tw/life/3158273", "2026-03-23", "報導紅茶巴士老闆娘王茹留言回應青鳥多曬太陽，並指出同地址／相關品牌包含紅茗手工功夫茶、阿檸、米桔。")],
+      aiNotes: "只拆原已列品牌，不把王茹言論、旺來公司代表人或其他品牌行為歸給本卡；同址／媒體列名不足以證明所有門市、現任股權或責任相同。紅茗保留全稱，不用功夫茶泛稱誤傷其他品牌；人物與其他品牌不作本卡查詢鍵。",
+    })),
+  ]),
   record({
     id: "meilongzhen-tu-shih-mei-recall-remarks",
     name: "梅蘢鎮 / 杜詩梅關聯餐廳",
@@ -1158,11 +1321,11 @@ export const records = [
       "此筆是 personal。媒體報導重點是活動贈品／周邊產地，不要擴張成所有 HAHABABY 商品都是中國製，也不要寫成中資、黨建、制裁或違法證據。不要把贈品、包屁衣、童裝、嬰兒用品、MIT、台灣製、中國製贈品等泛稱當 alias。",
     lastReviewed: "2026-07-01",
   }),
-  record({
+  ...splitRecord(record({
     id: "anker",
     name: "安克創新 / Anker",
     aliases: ["Anker", "安克", "安克創新", "eufy", "soundcore", "Nebula", "行動電源", "充電器", "家用儲能", "智慧安防"],
-    categories: ["消費電子", "行動電源", "充電器", "智慧家居", "家用安防"],
+    categories: ["科技／通訊／消費電子"],
     avoidReasons: ["中共政權關聯風險", "資料安全／審查風險", "政府關切"],
     confidence: "low",
     status: "watchlist",
@@ -1171,7 +1334,19 @@ export const records = [
       source("ANKER 官方授權直營 - momo", "https://m.momoshop.com.tw/category.momo?cid=dir&cn=4201400192&oid=rela", "查核日 2026-06-25", "支撐台灣可買到 Anker 充電產品。"),
       source("U.S. House Select Committee - Moolenaar asks Commerce to investigate Anker", "https://chinaselectcommittee.house.gov/media/press-releases/moolenaar-asks-commerce-to-investigate-ccp-backed-anker-innovations-and-protect-american-consumers", "2025-09-22", "美國眾院中共特別委員會要求商務部調查 Anker；這不是正式制裁。"),
     ],
-  }),
+  }), [
+    {
+      name: "安克創新 / Anker",
+      aliases: ["Anker", "安克", "安克創新"],
+      summary: "沿用原觀察紀錄，只限安克創新 / Anker 這一公司／品牌。既有美國眾院中共特別委員會來源要求商務部調查 Anker，並非正式制裁，也未達原紀錄所要求的明確黨建治理證據，因此維持 watchlist／low；不認定所有商品都有資料安全問題、違法或台灣禁售。",
+      aiNotes: "承接舊 anker 清理後有效內容：行動電源、充電器、家用儲能、智慧安防原已被 cleanup 排除，拆卡不復活這些泛稱。eufy、soundcore、Nebula 另卡，只保留原列名關聯，不因國會要求調查升級為制裁或已證實安全事件。",
+    },
+    ...["eufy", "soundcore", "Nebula"].map((name) => ({
+      name,
+      summary: `沿用原 Anker 紀錄對既有列名品牌 ${name} 的低信心觀察，維持 watchlist／low。原來源為對 Anker 的美國國會關切，這裡只承接原品牌關聯，不表示 ${name} 另受正式制裁、每項產品有安全問題、違法或已取得獨立黨建治理證據，也不把其他子品牌的行為歸給本品牌。`,
+      aiNotes: "只拆原 aliases 已列品牌；既有 source note 未逐品牌列具體指控，故不補推個別產品、資安事件、官方處分或新的品牌關係事實。共同 Anker 來源只作原關聯背景，不將政府關切等同正式制裁；已清掉的商品泛稱不復活。",
+    })),
+  ]),
   record({
     id: "lalamove-taiwan-china-taiwan-labeling-watchlist",
     name: "Lalamove Taiwan Limited / 小蜂鳥國際物流有限公司",
@@ -1230,7 +1405,23 @@ export const records = [
       "此筆是 personal subjective preference：回答時只能說使用者個人避買／避住承攜行旅，理由是個人住宿服務品質／體驗不佳；不代表所有分館皆有客觀違規、安全、食安、法律或政治風險，也不要延伸為中資／親共／國資結論。",
     lastReviewed: "2026-07-02",
   }),
-  record({
+  ...((group) => splitRecord(group, [
+    {
+      id: group.id, name: "茶裏王", aliases: ["茶裡王", "茶里王"],
+      avoidReasons: ["使用者依既定規則列入全品牌個人避買"],
+      summary: "保留使用者因茶裏王出現中國製食品而全品牌個人避買的政策；直接產地證據只支持正山小種與茉莉龍井兩款限定商品，另列SKU。不能說每款皆中國製、違法、不安全或中資，不擴至統一其他品牌。",
+      aiNotes: "全品牌避買是個人政策，不是全品項產地認證；具名SKU另筆，本次未重新外查。",
+    },
+    ...[
+      ["正山小種", [group.sources[1]]],
+      ["茉莉龍井", group.sources.slice(0, 2)],
+    ].map(([product, sources]) => ({
+      name: `茶裏王 ${product}`, aliases: [`茶裏王${product}`, `茶裏王：${product}`], country: "中國", sources,
+      avoidReasons: ["使用者個人避買", "本SKU中國產地標示／報導"],
+      summary: `既有自由時報2026年5月12日報導茶裏王${product}限定商品生產地標示中國；${product === "茉莉龍井" ? "使用者原提供的本款瓶身照片亦可讀原產地中國。" : "茉莉龍井瓶身圖不是本款標籤證據。"}依使用者政策個人避買本款，不推新批次、其他商品產地、食安、違法、禁售或中資。`,
+      aiNotes: "只限原SKU及原時點，未核新批次；個別產地與品牌全避政策不同。照片標示與貼文作者評論分開，不以倒掉飲品等評論證明食安。",
+    })),
+  ]))(record({
     id: "cha-li-wang-china-origin-food-whole-brand-personal-20260827",
     name: "茶裏王",
     aliases: [
@@ -1258,7 +1449,7 @@ export const records = [
     aiNotes:
       "本筆由舊兩款 SKU 紀錄升級為茶裏王全品牌 personal 避買；直接證據僅確認正山小種與茉莉龍井兩款 7-11 限定商品生產地／原產地標示中國，統一集團發言人並稱兩款使用中國茶葉。不得擴張成所有茶裏王商品皆中國製，或食安、違法、假標、禁售、中資、統一企業全品牌及其其他品牌避雷。searchable fields 僅茶裏王名稱字形變體與兩款具名 SKU；查理王、中國、台灣、統一、統一企業、7-11、瓶裝茶、茶飲、正山小種、茉莉龍井、Threads、貼文帳號及原因詞不得作 standalone alias／identifier。",
     lastReviewed: "2026-08-27",
-  }),
+  })),
   record({
     id: "sunshine-womens-choir-china-taiwan-labeling-watchlist",
     name: "《陽光女子合唱團》",
@@ -1296,7 +1487,7 @@ export const records = [
       "此筆依媒體報導列 watchlist；未找到原始微博封存或官方裁處前，不得寫成 confirmed、違法、遭處分或中共黨政關聯。不要把演員、藝人、作品名或社群政治口號放入 alias。",
     lastReviewed: "2026-07-01",
   }),
-  record({
+  ...splitRecord(record({
     id: "mecatron-joemars-iran-uav-ofac-sanctions",
     name: "龍馬精機股份有限公司 / 喬懋機電工業股份有限公司",
     aliases: [
@@ -1316,7 +1507,7 @@ export const records = [
     ],
     identifiers: ["320400400003944", "913204006081307514"],
     country: "台灣／中國子公司",
-    categories: ["工具機／CNC／出口管制"],
+    categories: ["科技／通訊／消費電子"],
     avoidReasons: ["美國 OFAC SDN 制裁", "制裁／國安風險", "伊朗無人機採購網絡", "出口管制／制裁規避風險"],
     confidence: "high",
     status: "confirmed",
@@ -1330,8 +1521,31 @@ export const records = [
     aiNotes:
       "此筆依美國 Treasury/OFAC 官方指定列 confirmed/high。回答時應限於官方制裁與採購／運送 CNC 設備網絡指稱，不額外推論所有台灣工具機業者、所有 CNC 機器或未列名關聯公司都有相同風險；Control Afzar Tabriz 與 HESA 只作官方 linked-to 識別與脈絡，不作本資料庫的台灣消費品牌別名。 僅保留在 OFAC source note 作佐證，不作 searchable/display identifier；中國登記號／統一社會信用代碼可保留作正式制裁識別。",
     lastReviewed: "2026-07-01",
-  }),
-  record({
+  }), [
+    {
+      name: "龍馬精機股份有限公司",
+      aliases: ["龍馬精機", "MECATRON MACHINERY CO LTD", "Mecatron Machinery Co Ltd"],
+      country: "台灣",
+      summary: "沿用原 OFAC 制裁紀錄，只限龍馬精機股份有限公司（Mecatron Machinery Co Ltd）。既有 Treasury／OFAC 2025-07-31 來源將該公司依 E.O. 13382 列入 SDN，官方指稱其參與支援 Control Afzar Tabriz 為 HESA 採購／運送 CNC 機器設備的網絡。confirmed／high 只表示原官方指定與指稱，不推論其他工具機公司、所有產品或未列名關係公司同受制裁。",
+      aiNotes: "只承接龍馬的原官方指定，不把喬懋或常州公司的登記號、其他行為移給龍馬。共同來源中其他受指定者只作背景；台灣稅籍號碼不查、不存，Control Afzar Tabriz 與 HESA 不作本公司查詢鍵。",
+    },
+    {
+      name: "喬懋機電工業股份有限公司",
+      aliases: ["喬懋機電", "JOEMARS MACHINERY AND ELECTRIC INDUSTRIAL CO LTD", "Joemars Machinery and Electric Industrial Co Ltd"],
+      country: "台灣",
+      summary: "沿用原 OFAC 制裁紀錄，只限喬懋機電工業股份有限公司（Joemars Machinery and Electric Industrial Co Ltd）。既有 Treasury／OFAC 2025-07-31 來源將該公司依 E.O. 13382 列入 SDN，官方指稱其參與支援 Control Afzar Tabriz 為 HESA 採購／運送 CNC 機器設備的網絡。只記原官方指定，不把中國子公司獨立登記識別、龍馬或其他企業的行為當成此公司同一身分。",
+      aiNotes: "台灣喬懋與常州子公司分卡，來源的關聯不代表法人相同。只承接原官方制裁指定與指稱，不新增產品、未列名法人或現行制裁變更判斷；台灣稅籍號碼不查、不存。",
+    },
+    {
+      name: "常州喬懋工業自動化有限公司",
+      aliases: ["常州乔懋工业自动化有限公司", "CHANGZHOU JOEMARS INDUSTRIAL AUTOMATION CO LTD", "CHANGZHOU JOMARS INDUSTRIAL AUTOMATION CO LTD", "CHANGZHOU QIAOMAO INDUSTRIAL AUTOMATION CO LTD"],
+      identifiers: ["320400400003944", "913204006081307514"],
+      country: "中國",
+      summary: "沿用原 OFAC 制裁紀錄，只限常州喬懋工業自動化有限公司。既有 OFAC 2025-07-31 Recent Action 將 CHANGZHOU JOEMARS INDUSTRIAL AUTOMATION CO LTD 列入 SDN，原紀錄列為喬懋中國子公司；中國登記號及統一社會信用代碼只識別此法人。不得因與台灣喬懋或龍馬共用來源而認為其法人、每項行為、所有產品或其他公司責任相同。",
+      aiNotes: "常州公司依原 OFAC 列名維持 confirmed／high；不將 Treasury 對兩家台灣公司的每項行為指稱自動歸給子公司。只保留原有中國正式制裁識別，台灣公司稅籍號碼不查、不存；linked-to 對象不新增為卡或別名。",
+    },
+  ]),
+  ...splitRecord(record({
     id: "china-hongkong-macau-202607-political-law-travel-risk",
     name: "中國／香港／澳門旅遊司法安全風險",
     aliases: [
@@ -1363,8 +1577,26 @@ export const records = [
     aiNotes:
       "此筆是旅遊目的地／司法安全 personal 紀錄，不是商品品牌。回答時可說使用者對中國、香港、澳門採非必要不前往的保守避雷；不得宣稱台灣已全面禁止旅遊、每位台灣人都會被逮捕，或把所有與中國有引渡條約的國家都列同級風險。",
     lastReviewed: "2026-07-02",
-  }),
-  record({
+  }), [
+    {
+      name: "中國",
+      aliases: ["大陸", "China"],
+      country: "中國",
+      summary: "沿用原紀錄對中國這一旅遊目的地非必要不前往的個人風險控管。原收錄理由為中國《民族團結進步促進法》及既有國安／政治敏感司法環境；本次不重查法令或警示。只限目的地司法與人身安全偏好，不等同台灣全面禁旅、不代表每位旅客必然被捕，亦非所有中國品牌避買；出行前仍應另查最新官方公告。",
+      aiNotes: "只拆出原已列的中國目的地，香港、澳門另卡。原新法名稱及赴中風險等理由／情境鍵不作實體別名；不新增法律適用、事件或當前警示認定。",
+    },
+    ...[
+      { name: "香港", aliases: ["Hong Kong"] },
+      { name: "澳門", aliases: ["Macau"] },
+    ].map((member) => ({
+      ...member,
+      country: member.name,
+      avoidReasons: ["使用者個人避開", "國安／政治敏感司法風險", "旅遊人身安全風險"],
+      summary: `沿用原紀錄對${member.name}這一旅遊目的地非必要不前往的個人風險控管，僅承接既有國安／政治敏感司法與人身安全考量。本次不重新查核當地法令，不把中國新法自動寫成在此地直接適用；不代表台灣全面禁旅、所有旅客必然被捕或所有當地品牌須避買，出行前仍應另查最新官方公告。`,
+      aiNotes: "只限本卡單一目的地；共同來源原為中港澳整組風險背景，不代表三地法令、警示或風險完全一致。原法律名、旅遊風險與赴某地風險等理由詞不留實體查詢鍵。",
+    })),
+  ]),
+  ...splitRecord(record({
     id: "china-extradition-weak-rule-of-law-travel-risk-personal",
     name: "中國引渡／移送風險較高旅遊地（柬埔寨／寮國／巴基斯坦／俄羅斯／阿聯）",
     aliases: [
@@ -1404,8 +1636,19 @@ export const records = [
     aiNotes:
       "此筆是多國旅遊風險 personal 紀錄。命中柬埔寨、寮國、巴基斯坦、俄羅斯或阿聯時，應說明是使用者保守避開的第三地司法／人身安全風險，不是商品或品牌避買；也不要把『有中國引渡條約』簡化成必然送中。",
     lastReviewed: "2026-07-02",
-  }),
-  record({
+  }), [
+    { name: "柬埔寨", aliases: ["Cambodia"] },
+    { name: "寮國", aliases: ["老撾", "老挝", "Laos"] },
+    { name: "巴基斯坦", aliases: ["Pakistan"] },
+    { name: "俄羅斯", aliases: ["俄罗斯", "Russia"] },
+    { name: "阿聯", aliases: ["阿拉伯聯合大公國", "阿拉伯联合酋长国", "UAE", "United Arab Emirates"] },
+  ].map((member) => ({
+    ...member,
+    country: member.name,
+    summary: `沿用原紀錄對${member.name}這一旅遊目的地非必要不前往或高度避開的個人選擇，保留原中國引渡／司法合作、當地法治、人身安全及政治敏感度的綜合考量。只限此目的地，不表示與其他國家風險相同，不認定所有台灣旅客必然移送中國；條約、執法與最新警示本次未重新查核，出行前應另查官方資訊。`,
+    aiNotes: "此為原保守旅遊 personal 分級，不是商品品牌避買或現行官方禁旅。各國條約與事件未逐一補證，不把共同來源當作每國相同行為／責任，也不由有條約推論必然送中。理由式旅遊風險 alias 移出，國名與既有名稱變體保留。",
+  }))),
+  ...splitRecord(record({
     id: "china-extradition-asean-travel-caution-watchlist",
     name: "中國司法合作旅遊高度謹慎觀察國（泰國／越南／菲律賓／印尼）",
     aliases: [
@@ -1437,8 +1680,18 @@ export const records = [
     aiNotes:
       "此筆是 watchlist，不是禁止旅遊或必然送中結論。命中泰國、越南、菲律賓、印尼時，回答應提醒旅前查最新外交部警示、個人政治敏感度與是否有跨境司法合作事件；不要自動說非去不可或完全安全。",
     lastReviewed: "2026-07-02",
-  }),
-  record({
+  }), [
+    { name: "泰國", aliases: ["Thailand"] },
+    { name: "越南", aliases: ["Vietnam"] },
+    { name: "菲律賓", aliases: ["Philippines"] },
+    { name: "印尼", aliases: ["印度尼西亞", "Indonesia"] },
+  ].map((member) => ({
+    ...member,
+    country: member.name,
+    summary: `沿用原紀錄對${member.name}的旅遊前高度謹慎／二次查核 watchlist，只限此目的地的中國司法合作、引渡或遣返風險討論，不提升為全面避去或與中港澳、弱法治高風險目的地同級。本次未新查條約、事件或警示；出行前仍應核對最新官方資訊與個人情況，不稱必然送中或完全安全。`,
+    aiNotes: "僅原單一目的地 watchlist／medium，不是 personal 全面避去。共同來源只是原分級背景，不將其他國家個案或法令套用此地；保留國名變體，理由式旅遊風險 alias 不作實體鍵。",
+  }))),
+  ...splitRecord(record({
     id: "china-extradition-democratic-treaty-travel-note-watchlist",
     name: "有中國引渡條約但不列極高風險國家（韓國／法國／義大利／葡萄牙）",
     aliases: [
@@ -1472,7 +1725,17 @@ export const records = [
     aiNotes:
       "此筆是低可信度 watchlist／分級提醒，不是避去定論。命中韓國、法國、義大利或葡萄牙時，應明確說明它們不應與中港澳或弱法治高風險國家同級；除非使用者另有政治敏感、司法個案或最新官方警示，不要建議一概取消旅行。",
     lastReviewed: "2026-07-02",
-  }),
+  }), [
+    { name: "韓國", aliases: ["南韓", "South Korea", "Korea"] },
+    { name: "法國", aliases: ["France"] },
+    { name: "義大利", aliases: ["意大利", "Italy"] },
+    { name: "葡萄牙", aliases: ["Portugal"] },
+  ].map((member) => ({
+    ...member,
+    country: member.name,
+    summary: `沿用原紀錄對${member.name}的低可信度旅遊風險分級提醒 watchlist，只限此目的地。原中國引渡條約或司法合作討論不能使其與中港澳、弱法治或威權司法目的地同列極高風險，也不是使用者最高優先避去清單；本次未查條約現況、個案或最新警示，不建議僅憑原共同名單一概取消旅行。`,
+    aiNotes: "維持原 watchlist／low 與降級提醒，不變更為 personal 或極高風險判斷。各國司法情況不同，共同來源不證明每國條約、個案或風險相同；保留國名與原有別稱，不保留理由式旅遊風險 alias。",
+  }))),
   record({
     id: "wahaha-ad-calcium-milk-food-beverage",
     name: "娃哈哈 / AD鈣奶",
@@ -1528,7 +1791,7 @@ export const records = [
       "此筆可提示官方資料支持其為中國國有控股食品企業、烏江品牌、重慶市涪陵榨菜集團股份有限公司與 A 股 002507.SZ 辨識。不得推論或宣稱烏江／涪陵榨菜有食安問題、違法、制裁、禁售、直接統戰或國安風險；也不要把「榨菜」「榨菜絲」「食品」「佐餐菜」「下飯菜」等泛稱作 alias/identifier。",
     lastReviewed: "2026-07-03",
   }),
-  record({
+  ...splitRecord(record({
     id: "saint-dong-chaoyue-taipei-procurement-watchlist",
     name: "聖東營造 / 超鉞科技（台北遮陽傘／機器狗爭議）",
     aliases: [
@@ -1564,7 +1827,35 @@ export const records = [
     aiNotes:
       "此筆是公共採購／資安疑慮 watchlist，不是法院判決或弊案定論。命中聖東、超鉞、楊博森、台北機器狗或台北遮陽傘時，應說明有公司登記關聯與媒體報導爭議，但也要保留北市府澄清公館圓環與機器狗非同一案。不要把『機器狗』『遮陽傘』『營造』『科技公司』等泛稱作 alias，也不要推論所有楊博森同名者或所有北市標案都有問題。",
     lastReviewed: "2026-07-02",
-  }),
+  }), [
+    {
+      name: "聖東營造",
+      aliases: ["聖東營造股份有限公司"],
+      identifiers: ["楊博森"],
+      avoidReasons: ["公共採購／遮陽傘設置爭議", "公司負責人／地址關聯", "使用者個人避開", "需二次查核"],
+      summary: "沿用原紀錄對聖東營造的 watchlist。既有壹新聞報導稱小巨蛋附近遮陽傘由聖東免費贈送，並提及市府標案質疑；公司資料及報導另有其與超鉞科技代表人楊博森及地址關聯線索。只記聖東的遮陽傘／公共採購爭議，不把超鉞機器狗整合與中國製載體資安疑慮當成聖東承作事實，也不定性弊案、違法或圖利。中央社所載北市府澄清公館圓環與機器狗分屬不同廠商仍是限制依據。楊博森 identifier 僅查到此公司的原代表人關係，不代表本人避開。",
+      sources: [
+        source("公司資料庫 - 聖東營造股份有限公司", "", "查核日 2026-07-02", "頁面列聖東營造股份有限負責人楊博森、登記地址及相關同名負責人公司資料。"),
+        source("壹新聞 - 聖東營造『免費贈』遮陽傘爭議", "https://www.nexttv.com.tw/NextTV/News/Home/Politics/2026-07-02/2395011.html", "2026-07-02", "報導台北遮陽傘爭議，稱小巨蛋附近遮陽傘由聖東營造免費贈送，並提及與超鉞科技代表同一人及市府標案質疑。"),
+        source("中央社 - 網傳拆公館圓環及機器狗同公司 北市府：非事實", "https://www.cna.com.tw/news/aloc/202508310071.aspx", "查核日 2026-07-02", "中央社報導北市府澄清公館圓環拆除及地下道填平工程與智慧巡查機器狗分屬不同廠商；此來源作為限制與降級依據。"),
+      ],
+      aiNotes: "僅聖東公司 watchlist，不等同超鉞的業務、資安指控或責任。楊博森由本公司原登記來源具名，保留原關係查詢鍵；超鉞也有自身來源直接橋接同一姓名，因此允許關係查詢命中兩家公司，但不等同本人避開、不新增本人卡或同名其他公司。遮陽傘與機器狗等事件鍵移出。",
+    },
+    {
+      name: "超鉞科技",
+      aliases: ["超鉞科技股份有限公司", "HONG ZHUN INFORMATION MANAGEMENT CO., LTD."],
+      identifiers: ["楊博森"],
+      avoidReasons: ["公共採購／標案爭議", "資安疑慮／中國製機器狗載體", "公司負責人／地址關聯", "使用者個人避開", "需二次查核"],
+      summary: "沿用原紀錄對超鉞科技的 watchlist。既有自由時報報導超鉞進行台北智慧巡查機器狗軟體開發／整合，並有中國製載體資安疑慮；公司資料及報導另有其與聖東營造代表人楊博森及地址關聯線索。只限超鉞的機器狗整合與原爭議，不把聖東免費設置遮陽傘當成超鉞行為。中央社所載北市府澄清公館圓環與機器狗分屬不同廠商須保留，不定性弊案、違法或圖利。楊博森 identifier 僅查到此公司的原代表人關係，不代表本人避開。",
+      sources: [
+        source("公司登記查詢中心 - 超鉞科技股份有限公司", "", "查核日 2026-07-02", "頁面列超鉞科技股份有限負責人楊博森、登記地址等公司登記資料。"),
+        source("自由時報 - 機器狗巡檢人行道藏資安風險", "https://news.ltn.com.tw/news/politics/breakingnews/5157780", "查核日 2026-07-02", "報導北市人行道普查智能機器狗與軟硬體資安疑慮，並提到超鉞科技進行軟體開發與整合。"),
+        source("壹新聞 - 聖東營造『免費贈』遮陽傘爭議", "https://www.nexttv.com.tw/NextTV/News/Home/Politics/2026-07-02/2395011.html", "2026-07-02", "報導台北遮陽傘爭議，稱小巨蛋附近遮陽傘由聖東營造免費贈送，並提及與超鉞科技代表同一人及市府標案質疑。"),
+        source("中央社 - 網傳拆公館圓環及機器狗同公司 北市府：非事實", "https://www.cna.com.tw/news/aloc/202508310071.aspx", "查核日 2026-07-02", "中央社報導北市府澄清公館圓環拆除及地下道填平工程與智慧巡查機器狗分屬不同廠商；此來源作為限制與降級依據。"),
+      ],
+      aiNotes: "僅超鉞公司 watchlist，聖東來源只支持原代表人／地址關聯，不代表行為責任相同。楊博森由本公司原登記來源直接具名，保留原關係 identifier，允許與聖東各自命中其代表人關係；不表示本人避開，不擴同名者、其他公司或所有北市標案。機器狗與遮陽傘事件不作實體鍵。",
+    },
+  ]),
   record({
     id: "cheap-zheng-caiwei-public-figure-personal",
     name: "Cheap / 鄭才暐",
@@ -1648,7 +1939,7 @@ export const records = [
       "此筆是 user-directed personal record。可說使用者指定列入個人避開，且使用者表示該品牌使用 AI 製作醜化賴清德與川普的影片；不可寫成違法、法院／政府認定、客觀事實已確定或官方負面判決。aliases 僅保留實體名稱、官方帳號與網站；identifiers 僅保留官網、官方社群／LINE、地址與電話等識別資訊。不要把賴清德、川普、AI影片、醜化、政治、室內設計公司等人物／理由／泛稱放入 aliases 或 identifiers；不要查或存台灣公司稅籍號碼。",
     lastReviewed: "2026-07-07",
   }),
-  record({
+  ...splitRecord(record({
     id: "langai-jishi-stray-dog-food-fundraising-screenshot-personal",
     name: "浪愛集食／毛孩集糧／米家集糧／浪浪天使／糧盛集食／糧舍商號",
     aliases: [
@@ -1689,7 +1980,19 @@ export const records = [
     aiNotes:
       "此筆是 no-text screenshot / user-directed group personal record。可說使用者提供社群截圖列出浪愛集食、毛孩集糧、米家集糧、浪浪天使、糧盛集食、糧舍商號、浪愛溫飽浪浪糧食等名稱，截圖稱其為同一老闆並涉及流浪動物狗食／勸募廣告資格疑慮，因此使用者指定個人避開。不可寫成台南市社會局說法已由本專案獨立查證、違法定罪、詐騙成立、所有同名實體同一經營者、或所有流浪動物／狗食勸募都有問題。searchable fields 只放截圖列出的具體名稱；不要把 yunpeihsu、公益勸募、公益勸募條例、勸募資格、台南市社會局、販售狗食、捐助流浪動物、流浪動物、募資廣告、合法管道、同一個老闆、社群平台、做愛心、狗食、狗糧等來源／理由／泛稱作 alias / identifier。",
     lastReviewed: "2026-07-11",
-  }),
+  }), [
+    { name: "浪愛集食" },
+    { name: "毛孩集糧", aliases: ["毛孩集糧-流浪狗集食計畫"] },
+    { name: "米家集糧", aliases: ["米家集糧-浪愛屋呷計畫", "浪愛屋呷計畫"] },
+    { name: "浪浪天使" },
+    { name: "糧盛集食", aliases: ["糧盛集食 Love & Food for Strays Dogs", "Love & Food for Strays Dogs"] },
+    { name: "糧舍商號" },
+    { name: "浪愛溫飽浪浪糧食" },
+  ].map((member) => ({
+    ...member,
+    summary: `沿用使用者依社群截圖對${member.name}這一具名募糧名稱的個人避開。原截圖帳號 yunpeihsu 列出此名稱及其他名稱，主張同一老闆並涉及狗食／勸募廣告資格疑慮；既有快查未取得可直接引用的官方或新聞頁。只記使用者選擇與截圖說法，不確認本名稱的法律主體、經營者相同、官方制止、違法或詐騙，不把其他名稱行為或所有同名實體一併歸責。`,
+    aiNotes: "本卡只拆原截圖明列的單一名稱，維持 personal／low。共同來源未逐名確認經營者與法律責任；台南市社會局相關說法仍屬截圖主張，不作本專案獨立確認。其餘募糧名稱另卡，不由相似名稱或同一老闆主張自動合併；帳號、勸募理由及法律泛稱不作實體鍵。",
+  }))),
   record({
     id: "fucheng-finance-loan-consultation-personal",
     name: "富誠理財",
@@ -1946,7 +2249,7 @@ export const records = [
       "此筆是 screenshot-only / user-directed local-business personal record。收錄範圍限使用者辨識的『新視界眼鏡／新視界驗光所』名稱線索，不自動擴張為所有分店、法人或全品牌。截圖下方店招失焦且被遮住，Google Maps 同名結果不代表具體分店橋接；因此 confidence low、country 留空、不設 identifiers。可說使用者依截圖中的宣傳文字與個人偏好指定避買；不可寫成已證實店家使用全部簡體字、違法、欺騙、服務品質問題、特定分店責任或所有同名店家均有問題。searchable fields 僅保留名稱與繁簡變體；不要把簡體字、宣傳、眼鏡、驗光、Threads、Google Maps、地址、分店或理由詞作 standalone alias / identifier。",
     lastReviewed: "2026-08-09",
   }),
-  record({
+  ...splitRecord(record({
     id: "opium-alchemy-su-tzuyi-bribery-first-instance-personal-20260731",
     name: "OPIUM Champagne Bar / Alchemy Bar / 蘇子怡",
     aliases: [
@@ -2005,5 +2308,26 @@ export const records = [
     aiNotes:
       "此筆是 user-directed personal record，收錄範圍為公開媒體直接橋接的 OPIUM Champagne Bar、Alchemy Bar 與蘇子怡。可說蘇子怡因對有投票權人行求賄賂而約其為一定投票權行使罪，獲台北地院一審判刑 3 年 4 月、褫奪公權 2 年；必須同時標註全案可上訴、尚未定讞。截至 2026-07-31，司法院裁判書查詢尚未出現可引用的本案新判決正文／固定案號頁；曾命中司法院『114年度選易字第2號』新聞稿，但正文是趙少康亮票案，已隔離為同號異案，不得引用。本案法律細節目前以中央社／ETtoday 起訴報導及自由時報／聯合報判決報導交叉核對；若後續裁判書公開、提起上訴或改判，應更新程序狀態。不得自行增加現有來源未支撐的沒收／追徵資訊，也不得把『掛名擁有』『與女藝人合夥』擴寫成已查明股權、公司登記或其他投資人刑責；不得外推到未具直接橋接的法人、商號、員工、女藝人合夥人、同址其他店家或其他同名 Alchemy／Opium 品牌。searchable fields 僅保留兩酒吧特定品牌名與蘇子怡姓名；不要把賄選、反罷免、酒吧、闆娘、台北、信義區、1000 元、公假、LINE、Threads、民視、聯合報、ETtoday、自由時報、女藝人或其他事件／來源／理由詞放入 aliases / identifiers。",
     lastReviewed: "2026-07-31",
-  }),
+  }), [
+    {
+      name: "OPIUM Champagne Bar",
+      aliases: ["OPIUM CHAMPAGNE", "OPIUM"],
+      avoidReasons: ["使用者個人避開", "經營者賄選案一審判決的品牌關聯"],
+      summary: "沿用使用者對 OPIUM Champagne Bar 品牌的個人避開。既有 ETtoday 具名橋接經營者蘇子怡，鏡週刊另列其為 OPIUM 創辦人；自由時報報導蘇子怡於 2026-07-30 因對有投票權人行求賄賂而約其為一定投票權行使罪，獲台北地院一審判刑 3 年 4 月、褫奪公權 2 年，可上訴、非定讞。行為及一審刑責只屬蘇子怡，不表示 OPIUM 品牌、公司／商號、員工、投資人或合夥人同受刑事判決，也不擴同名店家。",
+      aiNotes: "僅 OPIUM 品牌的原個人避開，法律報導只是使用者理由；品牌不是自然人被告。共同來源的 Alchemy 與蘇子怡另卡，不共享查詢鍵或刑責；不新增未核對法人、股權、投資人或藝人合夥關係。本案尚無原紀錄可引用的裁判正文／固定案號，114年度選易字第2號趙少康亮票案屬同號異案，不能引用；不新增沒收／追徵。",
+    },
+    {
+      name: "Alchemy Bar",
+      aliases: ["Alchemy"],
+      avoidReasons: ["使用者個人避開", "經營者賄選案一審判決的品牌關聯"],
+      summary: "沿用使用者對 Alchemy Bar 品牌的個人避開。既有 ETtoday 與自由時報具名橋接經營者蘇子怡；自由時報報導其於 2026-07-30 因對有投票權人行求賄賂而約其為一定投票權行使罪，獲台北地院一審判刑 3 年 4 月、褫奪公權 2 年，可上訴、非定讞。這是原品牌關聯理由，不表示 Alchemy 品牌、公司／商號、其他經營者或員工被判同罪，也不把 OPIUM 創辦關聯或其他同名酒吧視為本品牌事實。",
+      aiNotes: "僅 Alchemy 品牌的原個人避開；鏡週刊 OPIUM 專訪不證 Alchemy 創辦或股權關係。蘇子怡的一審刑責不可歸品牌，仍保留可上訴及非定讞；不擴女藝人、投資人、未橋接法人或同址其他店家。原本案未有可引用裁判正文，114年度選易字第2號亮票案是異案，不得引用；不新增沒收／追徵。",
+    },
+    {
+      name: "蘇子怡",
+      avoidReasons: ["使用者個人避開", "本人賄選案一審有罪判決"],
+      summary: "沿用原紀錄對蘇子怡本人的個人避開。既有 ETtoday 具名報導其經營 Alchemy Bar、OPIUM Champagne Bar，檢方指其在員工 LINE 群組以一天公假或 1000 元獎金要求投票反罷免；自由時報具名報導台北地院於 2026-07-30 一審依對有投票權人行求賄賂而約其為一定投票權行使罪判刑 3 年 4 月、褫奪公權 2 年。全案可上訴、非定讞；只限本人，不將刑責移給兩品牌、其他同名者、法人、員工、投資人或合夥人。",
+      aiNotes: "本人卡承接原具名媒體支持的一審罪名、刑度與可上訴程序，不宣稱定讞。原查核截至2026-07-31未有可引用的本案裁判正文／固定案號，114年度選易字第2號趙少康亮票案已隔離，不能引用；沒收／追徵、股權、公司登記及其他投資人刑責仍不新增。兩品牌另卡，姓名查詢只到本人。",
+    },
+  ]),
 ];

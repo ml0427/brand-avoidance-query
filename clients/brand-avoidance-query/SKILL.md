@@ -18,8 +18,10 @@ then any longer matching prefix. For example, 文姿雲 follows 文 to the full 
 Aliases and identifiers use the same navigation. Open every matching record and
 read the full reasons and scope; a list entry alone is not an avoidance conclusion.
 Do not calculate UTF-8 ranges or invent catalog URLs. Follow actual links and
-all indicated continuation pages. The catalog is an indented text tree; a record
-may cover multiple people or products. Partial-name discovery may require multiple prefix groups; these
+all indicated continuation pages. The catalog is an indented text tree. Independent
+people, brands and SKUs have their own records; alternate names remain aliases.
+Do not infer a member's actions or responsibility from shared group context.
+Partial-name discovery may require multiple prefix groups; these
 pages are not semantic product-category search. If the tool cannot read the
 required pages, is truncated, or the version is uncertain, report incomplete
 lookup, not no-match. Do not claim cryptographic verification from HTML alone.

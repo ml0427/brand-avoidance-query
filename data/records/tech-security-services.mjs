@@ -15,6 +15,7 @@
   tppCurrentPublicFigureAliases,
   treeProtectionPublicFigureAliases,
 } from "../record-helpers.mjs";
+import { splitRecord } from "../split-record.mjs";
 
 export const records = [
   record({
@@ -362,7 +363,7 @@ export const records = [
       source("European Commission - 5G Cybersecurity Toolbox Implementation", "https://digital-strategy.ec.europa.eu/en/library/communication-commission-implementation-5g-cybersecurity-toolbox", "2023-06-15", "歐委會說明 Huawei/ZTE 較其他 5G 供應商有實質更高風險。"),
     ],
   }),
-  record({
+  ...splitRecord(record({
     id: "zte-nubia-redmagic",
     name: "中興通訊 / ZTE / nubia / REDMAGIC",
     aliases: ["ZTE", "中興", "中興通訊", "nubia", "努比亞", "REDMAGIC", "紅魔", "Axon", "Blade", "5G CPE"],
@@ -376,8 +377,84 @@ export const records = [
       source("U.S. Treasury - Settlement with ZTE", "https://home.treasury.gov/news/press-releases/sm0023", "2017-03-07", "OFAC 說明 ZTE 違反伊朗制裁並隱匿交易。"),
       source("European Commission - 5G Cybersecurity Toolbox Implementation", "https://digital-strategy.ec.europa.eu/en/library/communication-commission-implementation-5g-cybersecurity-toolbox", "2023-06-15", "歐委會說明 Huawei/ZTE 5G 供應商風險。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "中興通訊",
+      "aliases": [
+        "ZTE",
+        "中興",
+        "ZTE Axon",
+        "ZTE Blade",
+        "ZTE 5G CPE"
+      ],
+      "identifiers": [],
+      "summary": "中興通訊（ZTE）保留 FCC Covered List、2017 年 OFAC 制裁違規和解及歐盟 5G 供應商風險來源；這些來源的實體、設備及服務範圍各有差異，不等於每款 ZTE 消費品皆有問題。",
+      "aiNotes": "本筆只限 ZTE。nubia／REDMAGIC 另列，不能把 ZTE 的制裁違規直接歸責於其他品牌；Axon／Blade／5G CPE 僅保留加上 ZTE 限定的既有有效鍵。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "FCC Covered List",
+          "url": "https://www.fcc.gov/supplychain/coveredlist",
+          "date": "查核日 2026-06-25",
+          "note": "FCC Covered List 納入被認定對美國國家安全構成不可接受風險的通訊或影像監控設備與服務。"
+        },
+        {
+          "title": "U.S. Treasury - Settlement with ZTE",
+          "url": "https://home.treasury.gov/news/press-releases/sm0023",
+          "date": "2017-03-07",
+          "note": "OFAC 說明 ZTE 違反伊朗制裁並隱匿交易。"
+        },
+        {
+          "title": "European Commission - 5G Cybersecurity Toolbox Implementation",
+          "url": "https://digital-strategy.ec.europa.eu/en/library/communication-commission-implementation-5g-cybersecurity-toolbox",
+          "date": "2023-06-15",
+          "note": "歐委會說明 Huawei/ZTE 5G 供應商風險。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "nubia",
+      "aliases": [
+        "努比亞"
+      ],
+      "identifiers": [],
+      "summary": "nubia 原已列於群組收錄範圍；本筆保留為關聯觀察，不把ZTE 的 OFAC 制裁違規、FCC 清單與歐盟 5G 供應商風險視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。ZTE 的 OFAC 制裁違規、FCC 清單與歐盟 5G 供應商風險的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "REDMAGIC",
+      "aliases": [
+        "紅魔"
+      ],
+      "identifiers": [],
+      "summary": "REDMAGIC 原已列於群組收錄範圍；本筆保留為關聯觀察，不把ZTE 的 OFAC 制裁違規、FCC 清單與歐盟 5G 供應商風險視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。ZTE 的 OFAC 制裁違規、FCC 清單與歐盟 5G 供應商風險的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "china-state-telecoms",
     name: "中國移動／中國電信／中國聯通",
     aliases: ["中國移動", "China Mobile", "CMLink", "CMHK", "中國電信", "China Telecom", "中國聯通", "China Unicom", "SIM", "eSIM", "漫遊卡"],
@@ -387,8 +464,106 @@ export const records = [
     status: "confirmed",
     summary: "中國三大電信商屬中國國資體系，且被 FCC 與美國國防部名單以國安理由納入風險範圍。",
     sources: [dod1260h2026, fccCoveredList],
-  }),
-  record({
+  }), [
+    {
+      "name": "中國移動",
+      "aliases": [
+        "China Mobile"
+      ],
+      "identifiers": [],
+      "summary": "中國移動在既有群組中列為中國國資體系電信商，保留原美國國防部 1260H 國安風險來源。FCC 清單涉及特定實體／服務，不把其範圍直接擴為中國移動所有品牌與服務。",
+      "aiNotes": "本筆只處理中國移動；CMLink、CMHK 另列。未重新核對 FCC 清單中各法人與服務的精確適用範圍，故不承接 FCC 來源；1260H 名單不等於一般消費禁售。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "U.S. DoD Section 1260H Chinese Military Companies List",
+          "url": "https://media.defense.gov/2026/Jun/08/2003945537/-1/-1/1/ENTITIES-IDENTIFIED-AS-CHINESE-MILITARY-COMPANIES-OPERATING-IN-THE-UNITED-STATES-IN-ACCORDANCE-WITH-SECTION-1260H.PDF",
+          "date": "2026-06-08",
+          "note": "美國國防部依 Section 1260H 公布中國軍事公司名單；此為國安／軍民融合風險來源，不等同一般消費禁售。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "中國電信",
+      "aliases": [
+        "China Telecom"
+      ],
+      "identifiers": [],
+      "summary": "中國電信在既有群組中列為中國國資體系電信商，保留原美國國防部 1260H 國安風險來源。FCC 清單涉及特定實體／服務，不擴寫為中國電信所有服務均受相同限制。",
+      "aiNotes": "只承接原群組的中國電信國安風險脈絡。未重新核對 FCC 清單各法人／服務範圍，不承接該來源，也不宣稱一般消費禁售。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "U.S. DoD Section 1260H Chinese Military Companies List",
+          "url": "https://media.defense.gov/2026/Jun/08/2003945537/-1/-1/1/ENTITIES-IDENTIFIED-AS-CHINESE-MILITARY-COMPANIES-OPERATING-IN-THE-UNITED-STATES-IN-ACCORDANCE-WITH-SECTION-1260H.PDF",
+          "date": "2026-06-08",
+          "note": "美國國防部依 Section 1260H 公布中國軍事公司名單；此為國安／軍民融合風險來源，不等同一般消費禁售。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "中國聯通",
+      "aliases": [
+        "China Unicom"
+      ],
+      "identifiers": [],
+      "summary": "中國聯通在既有群組中列為中國國資體系電信商，保留原美國國防部 1260H 國安風險來源。FCC 清單涉及特定實體／服務，不擴寫為中國聯通所有服務均受相同限制。",
+      "aiNotes": "只承接原群組的中國聯通國安風險脈絡。未重新核對 FCC 清單各法人／服務範圍，不承接該來源，也不宣稱一般消費禁售。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "U.S. DoD Section 1260H Chinese Military Companies List",
+          "url": "https://media.defense.gov/2026/Jun/08/2003945537/-1/-1/1/ENTITIES-IDENTIFIED-AS-CHINESE-MILITARY-COMPANIES-OPERATING-IN-THE-UNITED-STATES-IN-ACCORDANCE-WITH-SECTION-1260H.PDF",
+          "date": "2026-06-08",
+          "note": "美國國防部依 Section 1260H 公布中國軍事公司名單；此為國安／軍民融合風險來源，不等同一般消費禁售。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "CMLink",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "CMLink 原已列於群組收錄範圍；本筆保留為關聯觀察，不把中國移動的法人名單與特定服務限制視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。中國移動的法人名單與特定服務限制的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "CMHK",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "CMHK 原已列於群組收錄範圍；本筆保留為關聯觀察，不把中國移動的法人名單與特定服務限制視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。中國移動的法人名單與特定服務限制的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "tp-link",
     name: "TP-Link",
     aliases: ["TP-Link", "Archer", "Deco", "Tapo", "Omada", "VIGI", "Mercusys"],
@@ -398,8 +573,72 @@ export const records = [
     status: "confirmed",
     summary: "TP-Link 是常見消費網路設備品牌；2026 年美國國防部 1260H 名單將 TP-Link Technologies 列入，支撐國安／軍民融合風險標籤。",
     sources: [dod1260h2026],
-  }),
-  record({
+  }), [
+    {
+      "id": "tp-link",
+      "name": "TP-Link",
+      "aliases": [
+        "TP-Link",
+        "Archer",
+        "Deco",
+        "Omada"
+      ],
+      "identifiers": [],
+      "summary": "TP-Link 是常見消費網路設備品牌；2026 年美國國防部 1260H 名單將 TP-Link Technologies 列入，支撐國安／軍民融合風險標籤。"
+    },
+    {
+      "name": "Mercusys",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Mercusys 原已列於TP-Link 原紀錄的名稱鍵；本筆僅保留原群組的關聯觀察範圍，既有來源未直接支持本品牌獨立風險，不將母卡的制裁、官方名單或特定產品問題套用於本筆。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "sources": [],
+      "aiNotes": "由既有名稱鍵移為獨立對象，未新增品牌關聯或風險事實。原來源不足以支持本品牌的個別制裁、國安、人權或供應鏈結論，故 sources 留空，僅保留原群組觀察；不推定母卡所有限制自動適用。本次未外查，查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Tapo",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Tapo 原已列於TP-Link 原紀錄的名稱鍵；本筆僅保留原群組的關聯觀察範圍，既有來源未直接支持本品牌獨立風險，不將母卡的制裁、官方名單或特定產品問題套用於本筆。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "sources": [],
+      "aiNotes": "由既有名稱鍵移為獨立對象，未新增品牌關聯或風險事實。原來源不足以支持本品牌的個別制裁、國安、人權或供應鏈結論，故 sources 留空，僅保留原群組觀察；不推定母卡所有限制自動適用。本次未外查，查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "VIGI",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "VIGI 原已列於TP-Link 原紀錄的名稱鍵；本筆僅保留原群組的關聯觀察範圍，既有來源未直接支持本品牌獨立風險，不將母卡的制裁、官方名單或特定產品問題套用於本筆。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "sources": [],
+      "aiNotes": "由既有名稱鍵移為獨立對象，未新增品牌關聯或風險事實。原來源不足以支持本品牌的個別制裁、國安、人權或供應鏈結論，故 sources 留空，僅保留原群組觀察；不推定母卡所有限制自動適用。本次未外查，查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "hikvision",
     name: "海康威視 / Hikvision",
     aliases: ["Hikvision", "海康威視", "HiLook", "Hik-Connect", "HiLookVision", "Turbo HD", "AcuSense", "ColorVu", "DarkFighter", "DeepinView"],
@@ -409,8 +648,44 @@ export const records = [
     status: "confirmed",
     summary: "Hikvision 有 BIS Entity List、FCC Covered List 與 DoD 1260H 等官方來源，風險焦點在新疆高科技監控、國安與軍民融合。",
     sources: [bis2019, fccCoveredList, dod1260h2026],
-  }),
-  record({
+  }), [
+    {
+      "id": "hikvision",
+      "name": "海康威視 / Hikvision",
+      "aliases": [
+        "Hikvision",
+        "海康威視",
+        "Hik-Connect",
+        "Turbo HD",
+        "AcuSense",
+        "ColorVu",
+        "DarkFighter",
+        "DeepinView"
+      ],
+      "identifiers": [],
+      "summary": "Hikvision 有 BIS Entity List、FCC Covered List 與 DoD 1260H 等官方來源，風險焦點在新疆高科技監控、國安與軍民融合。"
+    },
+    {
+      "name": "HiLook",
+      "aliases": [
+        "HiLookVision"
+      ],
+      "identifiers": [],
+      "summary": "HiLook 原已列於海康威視原紀錄的名稱鍵；本筆僅保留原群組的關聯觀察範圍，既有來源未直接支持本品牌獨立風險，不將母卡的制裁、官方名單或特定產品問題套用於本筆。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "sources": [],
+      "aiNotes": "由既有名稱鍵移為獨立對象，未新增品牌關聯或風險事實。原來源不足以支持本品牌的個別制裁、國安、人權或供應鏈結論，故 sources 留空，僅保留原群組觀察；不推定母卡所有限制自動適用。本次未外查，查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "dahua",
     name: "大華 / Dahua",
     aliases: ["Dahua", "大華", "Imou", "DMSS", "SmartPSS", "WizSense", "WizMind", "TiOC", "HDCVI", "XVR", "NVR"],
@@ -420,7 +695,43 @@ export const records = [
     status: "confirmed",
     summary: "Dahua 有 BIS Entity List、FCC Covered List 與 DoD 1260H 等官方來源，風險焦點在新疆高科技監控與國安。",
     sources: [bis2019, fccCoveredList, dod1260h2026],
-  }),
+  }), [
+    {
+      "id": "dahua",
+      "name": "大華 / Dahua",
+      "aliases": [
+        "Dahua",
+        "大華",
+        "DMSS",
+        "SmartPSS",
+        "WizSense",
+        "WizMind",
+        "TiOC",
+        "HDCVI",
+        "XVR",
+        "NVR"
+      ],
+      "identifiers": [],
+      "summary": "Dahua 有 BIS Entity List、FCC Covered List 與 DoD 1260H 等官方來源，風險焦點在新疆高科技監控與國安。"
+    },
+    {
+      "name": "Imou",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Imou 原已列於大華原紀錄的名稱鍵；本筆僅保留原群組的關聯觀察範圍，既有來源未直接支持本品牌獨立風險，不將母卡的制裁、官方名單或特定產品問題套用於本筆。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "sources": [],
+      "aiNotes": "由既有名稱鍵移為獨立對象，未新增品牌關聯或風險事實。原來源不足以支持本品牌的個別制裁、國安、人權或供應鏈結論，故 sources 留空，僅保留原群組觀察；不推定母卡所有限制自動適用。本次未外查，查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
   record({
     id: "dji",
     name: "大疆 / DJI",
@@ -517,7 +828,7 @@ export const records = [
       dod1260h2026,
     ],
   }),
-  record({
+  ...splitRecord(record({
     id: "netposa-sensenets",
     name: "東方網力 / NetPosa / SenseNets",
     aliases: ["NetPosa", "東方網力", "SenseNets", "video cloud", "facial recognition database"],
@@ -530,7 +841,58 @@ export const records = [
       source("U.S. Treasury - Chinese tech firms and military-industrial complex", "https://home.treasury.gov/news/press-releases/jy0538", "2021-12-16", "OFAC 指稱 NetPosa 控制 SenseNets，其人臉辨識資料庫結合 GPS 與敏感個資追蹤包含維吾爾人在內的人員。"),
       dod1260h2026,
     ],
-  }),
+  }), [
+    {
+      "name": "東方網力",
+      "aliases": [
+        "NetPosa"
+      ],
+      "identifiers": [],
+      "summary": "既有美國財政部來源指稱 NetPosa 控制 SenseNets，並描述後者的人臉辨識資料庫與維吾爾人追蹤；本筆保留對 NetPosa 的控制關聯與國防部名單風險，不把子公司具體行為改寫為母公司所有產品的功能。",
+      "aiNotes": "NetPosa 與 SenseNets 分列；財政部來源中的資料庫功能須歸屬 SenseNets，不宣稱所有 NetPosa 產品均具相同行為。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "U.S. Treasury - Chinese tech firms and military-industrial complex",
+          "url": "https://home.treasury.gov/news/press-releases/jy0538",
+          "date": "2021-12-16",
+          "note": "OFAC 指稱 NetPosa 控制 SenseNets，其人臉辨識資料庫結合 GPS 與敏感個資追蹤包含維吾爾人在內的人員。"
+        },
+        {
+          "title": "U.S. DoD Section 1260H Chinese Military Companies List",
+          "url": "https://media.defense.gov/2026/Jun/08/2003945537/-1/-1/1/ENTITIES-IDENTIFIED-AS-CHINESE-MILITARY-COMPANIES-OPERATING-IN-THE-UNITED-STATES-IN-ACCORDANCE-WITH-SECTION-1260H.PDF",
+          "date": "2026-06-08",
+          "note": "美國國防部依 Section 1260H 公布中國軍事公司名單；此為國安／軍民融合風險來源，不等同一般消費禁售。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "SenseNets",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "既有美國財政部來源指稱，NetPosa 控制的 SenseNets 人臉辨識資料庫結合 GPS 與敏感個資，追蹤包含維吾爾人在內的人員；本筆只承接該具名描述，不推定其獨立列入美國國防部名單。",
+      "avoidReasons": [
+        "中共政權關聯風險",
+        "人權監控風險"
+      ],
+      "aiNotes": "不承接原群組 DoD 1260H 來源；未重新核對 SenseNets 是否另以獨立法人列名。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "科技／通訊資安"
+      ],
+      "sources": [
+        {
+          "title": "U.S. Treasury - Chinese tech firms and military-industrial complex",
+          "url": "https://home.treasury.gov/news/press-releases/jy0538",
+          "date": "2021-12-16",
+          "note": "OFAC 指稱 NetPosa 控制 SenseNets，其人臉辨識資料庫結合 GPS 與敏感個資追蹤包含維吾爾人在內的人員。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
   record({
     id: "meiya-pico-sdic-intelligence",
     name: "美亞柏科 / SDIC Intelligence",
@@ -557,7 +919,7 @@ export const records = [
     summary: "Autel Robotics 被美國國防部 1260H 名單列入，支撐軍民融合與國安風險標籤。",
     sources: [dod1260h2026],
   }),
-  record({
+  ...splitRecord(record({
     id: "bytedance",
     name: "字節跳動 / ByteDance",
     aliases: ["ByteDance", "字節跳動", "TikTok", "抖音", "Douyin", "CapCut", "剪映", "Lemon8", "Hypic"],
@@ -570,8 +932,144 @@ export const records = [
       source("TikTok Inc. v. Garland, U.S. Supreme Court opinion", "https://www.supremecourt.gov/opinions/24pdf/24-656_ca7d.pdf", "2025-01-17", "美國最高法院意見書處理 ByteDance-owned TikTok 相關國安風險與 PAFACA 適用。"),
       source("台灣公部門：勿以公務設備使用抖音或小紅書等軟體", "https://www.tyy.moj.gov.tw/233917/234014/1328913/1328982/post", "2022-12-27", "公告稱抖音/TikTok、小紅書列入危害國家資通安全產品。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "字節跳動",
+      "aliases": [
+        "ByteDance"
+      ],
+      "identifiers": [],
+      "summary": "既有美國最高法院 TikTok Inc. v. Garland 意見書處理 ByteDance-owned TikTok 的國安風險與 PAFACA 適用；本筆保留字節跳動在該案的控制關聯，不擴為旗下所有 App 皆受相同法律限制。",
+      "aiNotes": "TikTok、抖音及其他已收錄 App 各自分列；法院意見限於原案與原查核時點，不證明所有旗下 App 的資料行為或現行法律狀態。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "TikTok Inc. v. Garland, U.S. Supreme Court opinion",
+          "url": "https://www.supremecourt.gov/opinions/24pdf/24-656_ca7d.pdf",
+          "date": "2025-01-17",
+          "note": "美國最高法院意見書處理 ByteDance-owned TikTok 相關國安風險與 PAFACA 適用。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "TikTok",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "TikTok 保留既有美國最高法院意見書的 ByteDance-owned TikTok 國安／PAFACA 脈絡，以及台灣公部門公告的公務設備使用限制；不擴張至其他 App 或一般消費禁售。",
+      "aiNotes": "只承接 TikTok 的既有來源，不將抖音或其他字節 App 的行為混為同一產品；法院意見與公告皆保留原日期，並非本次重新查核現況。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "TikTok Inc. v. Garland, U.S. Supreme Court opinion",
+          "url": "https://www.supremecourt.gov/opinions/24pdf/24-656_ca7d.pdf",
+          "date": "2025-01-17",
+          "note": "美國最高法院意見書處理 ByteDance-owned TikTok 相關國安風險與 PAFACA 適用。"
+        },
+        {
+          "title": "台灣公部門：勿以公務設備使用抖音或小紅書等軟體",
+          "url": "https://www.tyy.moj.gov.tw/233917/234014/1328913/1328982/post",
+          "date": "2022-12-27",
+          "note": "公告稱抖音/TikTok、小紅書列入危害國家資通安全產品。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "抖音",
+      "aliases": [
+        "Douyin"
+      ],
+      "identifiers": [],
+      "summary": "抖音保留既有台灣公部門公告列入危害國家資通安全產品的脈絡；本筆不承接以 TikTok 為對象的美國最高法院意見書結論。",
+      "aiNotes": "抖音與 TikTok 分列；不將 TikTok 案的法律適用或其他字節 App 的資料行為直接套用。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "台灣公部門：勿以公務設備使用抖音或小紅書等軟體",
+          "url": "https://www.tyy.moj.gov.tw/233917/234014/1328913/1328982/post",
+          "date": "2022-12-27",
+          "note": "公告稱抖音/TikTok、小紅書列入危害國家資通安全產品。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "CapCut",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "CapCut 原已列於群組收錄範圍；本筆保留為關聯觀察，不把TikTok 法院意見書或抖音／TikTok 公務設備限制視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。TikTok 法院意見書或抖音／TikTok 公務設備限制的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "剪映",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "剪映 原已列於群組收錄範圍；本筆保留為關聯觀察，不把TikTok 法院意見書或抖音／TikTok 公務設備限制視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。TikTok 法院意見書或抖音／TikTok 公務設備限制的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Lemon8",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Lemon8 原已列於群組收錄範圍；本筆保留為關聯觀察，不把TikTok 法院意見書或抖音／TikTok 公務設備限制視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。TikTok 法院意見書或抖音／TikTok 公務設備限制的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Hypic",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Hypic 原已列於群組收錄範圍；本筆保留為關聯觀察，不把TikTok 法院意見書或抖音／TikTok 公務設備限制視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。TikTok 法院意見書或抖音／TikTok 公務設備限制的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...splitRecord(record({
     id: "tencent-wechat",
     name: "騰訊 / Tencent / WeChat",
     aliases: ["Tencent", "騰訊", "WeChat", "微信", "Weixin", "QQ", "QQ Wallet", "WeChat Pay", "微信支付", "Tencent Video", "WeTV", "騰訊會議", "騰訊遊戲"],
@@ -585,8 +1083,218 @@ export const records = [
       taiwanHighRiskApps,
       source("Citizen Lab - We Chat, They Watch", "https://citizenlab.ca/research/we-chat-they-watch/", "2020-05-07", "研究指出非中國註冊 WeChat 帳號通訊也會被監測以支援中國區審查系統。"),
     ],
-  }),
-  record({
+  }), [
+    {
+      "name": "騰訊",
+      "aliases": [
+        "Tencent"
+      ],
+      "identifiers": [],
+      "summary": "騰訊保留原美國國防部 1260H 名單的國安／軍民融合風險脈絡；微信資料與審查研究另列於 WeChat，不將特定 App 技術結論套用於騰訊全部服務。",
+      "avoidReasons": [
+        "中共政權關聯風險",
+        "制裁／國安風險",
+        "軍民融合風險"
+      ],
+      "aiNotes": "1260H 名單不等於一般消費禁售；WeChat、QQ、支付、影音、會議與遊戲品牌各自分列。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "U.S. DoD Section 1260H Chinese Military Companies List",
+          "url": "https://media.defense.gov/2026/Jun/08/2003945537/-1/-1/1/ENTITIES-IDENTIFIED-AS-CHINESE-MILITARY-COMPANIES-OPERATING-IN-THE-UNITED-STATES-IN-ACCORDANCE-WITH-SECTION-1260H.PDF",
+          "date": "2026-06-08",
+          "note": "美國國防部依 Section 1260H 公布中國軍事公司名單；此為國安／軍民融合風險來源，不等同一般消費禁售。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "WeChat",
+      "aliases": [
+        "微信",
+        "Weixin"
+      ],
+      "identifiers": [],
+      "summary": "WeChat 保留台灣資安署高風險 App 警示與 Citizen Lab 2020 年研究：研究指非中國註冊帳號通訊也會被監測以支援中國區審查系統；不把騰訊公司的 1260H 名單身分當成 WeChat 獨立受列名。",
+      "avoidReasons": [
+        "中共政權關聯風險",
+        "資料安全／審查風險"
+      ],
+      "aiNotes": "Citizen Lab 結論限於該研究的 WeChat 情境與時點，不移植至 QQ、微信支付或其他騰訊 App。Weixin 保留為原群組的微信名稱鍵，不宣稱各區版本功能完全相同。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "台灣資安署：提醒民眾對於資安高風險 App 須慎選使用",
+          "url": "https://moda.gov.tw/ACS/press/news/press/18104",
+          "date": "2025-12-03",
+          "note": "台灣資安署點名多款中國 App 具高風險，並說明中國法規下企業可能被要求提供用戶資料。"
+        },
+        {
+          "title": "Citizen Lab - We Chat, They Watch",
+          "url": "https://citizenlab.ca/research/we-chat-they-watch/",
+          "date": "2020-05-07",
+          "note": "研究指出非中國註冊 WeChat 帳號通訊也會被監測以支援中國區審查系統。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "QQ",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "QQ 原已列於群組收錄範圍；本筆保留為關聯觀察，不把WeChat 的 Citizen Lab 技術研究、資安署具名警示或騰訊公司 1260H 列名視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。WeChat 的 Citizen Lab 技術研究、資安署具名警示或騰訊公司 1260H 列名的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "QQ Wallet",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "QQ Wallet 原已列於群組收錄範圍；本筆保留為關聯觀察，不把WeChat 技術研究或騰訊公司 1260H 列名視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。WeChat 技術研究或騰訊公司 1260H 列名的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "WeChat Pay",
+      "aliases": [
+        "微信支付"
+      ],
+      "identifiers": [],
+      "summary": "WeChat Pay 原已列於群組收錄範圍；本筆保留為關聯觀察，不把WeChat 通訊研究或騰訊公司 1260H 列名視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。WeChat 通訊研究或騰訊公司 1260H 列名的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Tencent Video",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "Tencent Video 原已列於群組收錄範圍；本筆保留為關聯觀察，不把WeChat 技術研究或騰訊公司 1260H 列名視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。WeChat 技術研究或騰訊公司 1260H 列名的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "WeTV",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "WeTV 保留原已收錄的騰訊服務範圍；本檔既有 2020 年 OTT 報導同時具名 WeTV，記錄台灣主管機關及對中國 OTT 業者服務的限制脈絡。這是原日期的媒體報導，不是本次重新查核現行法律，也不承接 WeChat 技術研究或騰訊公司 1260H 列名。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險",
+        "政府限制"
+      ],
+      "aiNotes": "沿用本檔愛奇藝紀錄原有且同時具名 WeTV 的歷史 OTT 報導；未新增外部事實或重新核對法規現況。不把 WeChat 通訊研究或騰訊公司的 1260H 名單身分套用至 WeTV，也不視為騰訊所有影音服務均受同一限制。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        source("Taipei Times - China's iQiyi is illegal in Taiwan, NCC says", "https://www.taipeitimes.com/News/taiwan/archives/2020/05/21/2003736791", "2020-05-21", "報導台灣 NCC/跨部會會議認定 iQIYI 與 WeTV 為非法中國 OTT 業者。"),
+        source("TechCrunch - Taiwan set to bar Chinese streaming services", "https://techcrunch.com/2020/08/19/taiwan-set-to-bar-chinese-streaming-services-like-iqiyi-and-tencents-wetv/", "2020-08-19", "報導台灣禁止台灣公司或個人替中國 OTT 業者提供服務。"),
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "騰訊會議",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "騰訊會議 原已列於群組收錄範圍；本筆保留為關聯觀察，不把WeChat 技術研究或騰訊公司 1260H 列名視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。WeChat 技術研究或騰訊公司 1260H 列名的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "騰訊遊戲",
+      "aliases": [],
+      "identifiers": [],
+      "summary": "騰訊遊戲 原已列於群組收錄範圍；本筆保留為關聯觀察，不把WeChat 技術研究或騰訊公司 1260H 列名視為本對象已獲證實的獨立風險。",
+      "status": "watchlist",
+      "confidence": "medium",
+      "avoidReasons": [
+        "既有群組關聯風險"
+      ],
+      "aiNotes": "原群組已收錄本名稱，但既有來源未直接支持本對象的獨立風險結論；sources 留空，不以關聯代替證據。WeChat 技術研究或騰訊公司 1260H 列名的直接結論不適用於本筆。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
+  ...((group) => splitRecord(group, [
+    {
+      id: group.id, name: "愛彼蓋爾國際有限公司", aliases: ["愛彼蓋爾"], country: "台灣",
+      summary: "使用者原指定愛彼蓋爾國際有限公司個人避開。既有具名報導稱其兩名負責人涉將台灣門號註冊的 LINE 帳號出租給中共網軍，士林地檢署對兩名自然人依幫助違反個資法作緩起訴，妨害電腦使用部分不起訴；這是公司關聯背景，不表示公司法人獲刑事有罪判決、全體人員涉案或攻擊均成功。",
+      aiNotes: "公司與三名人物、中國端公司各自查詢。緩起訴／不起訴程序屬報導中的自然人，不改成公司被判同罪；不推定現任代表人、歷任負責人皆涉案。本次沿用2026-07-07報導，未核程序後續。",
+    },
+    ...["李樺倫", "陳孟森"].map((name) => ({
+      name, country: "",
+      avoidReasons: ["使用者個人避開", "本人個資法緩起訴報導"],
+      summary: `既有中時具名報導將${name}列為愛彼蓋爾兩名負責人之一，太報報導士林地檢署對兩人依幫助違反個資法給予緩起訴、妨害電腦使用部分不起訴。使用者原已將該具名本人列入個人避開；不是法院有罪判決，不把洪清涯的通緝或中國端公司的行為歸於本人，也不推定查詢日仍有同一職務或程序狀態。`,
+      aiNotes: "本人姓名由既有具名新聞橋接，不從公司現任登記猜人。保留緩起訴與妨害電腦使用不起訴的分別，不推實際入侵成功、其他人罪責或今日職務。本次只拆資料，沒有重新查偵查結果。",
+    })),
+    {
+      name: "洪清涯", country: "", sources: [group.sources[1]],
+      avoidReasons: ["使用者個人避開", "中國端負責人通緝報導"],
+      summary: "使用者原已對洪清涯本人個人避開。既有太報／LINE TODAY 2026年7月7日報導稱，中國端負責人洪清涯另由士林地檢署發布通緝；通緝不是有罪判決，也不能改成愛彼蓋爾兩名負責人的緩起訴或不起訴結果適用本人。未核後續是否到案、撤銷通緝或裁判。",
+      aiNotes: "只承接來源對洪清涯的具名通緝報導，不把程序混成其他兩人的緩起訴／不起訴；不新增罪名、判刑、定讞或現況。",
+    },
+    {
+      name: "廈門市女帝信息科技有限公司", country: "中國",
+      aliases: ["廈門市女帝訊息科技有限公司", "厦门市女帝信息科技有限公司"],
+      sources: [group.sources[0]],
+      avoidReasons: ["使用者個人避開", "新聞所載中國端公司與帳號租用／社交工程關聯"],
+      summary: "既有中時2026年7月7日報導稱廈門市女帝信息科技有限公司透過台灣愛彼蓋爾公司租用 LINE 帳號並涉及偽冒記者的社交工程攻擊脈絡，使用者原已依此對該中國端公司個人避開。這是報導所載關聯，不表示公司、全體人員均遭有罪判決，亦不將台灣兩名負責人緩起訴或洪清涯通緝直接當成公司處分。",
+      aiNotes: "只保留原具名公司及繁簡／信息與訊息名稱變體；中共網軍是來源的說法，不自行新增國資、股權、控制、制裁或成功入侵事實。本次沒有重新核對公司或案件現況。",
+    },
+  ]))(record({
     id: "abigail-international-line-accounts-cyberattack-personal",
     name: "愛彼蓋爾國際有限公司",
     aliases: [
@@ -618,7 +1326,7 @@ export const records = [
     aiNotes:
       "此筆是 user-directed personal record with public reporting. 可說公開報導支持愛彼蓋爾國際有限公司與 LINE 帳號出租、中共網軍、社交工程攻擊、個資法緩起訴脈絡；不可寫成法院有罪判決、妨害電腦使用成立、惡意程式已成功入侵、所有公司現任／歷任登記代表人都涉案，或把公司登記現任代表人與新聞中的李姓實際負責人混同。台灣公司稅籍號碼不得放入任何欄位；aliases 僅保留公司名、報導列名／涉及的主要人名與中國端公司名，不放『網軍』『LINE帳號』『駭客』『社交工程』『個資法』『緩起訴』等原因詞。",
     lastReviewed: "2026-07-07",
-  }),
+  })),
   record({
     id: "lg-webos-smart-tv-privacy-acr-personal-20260909",
     name: "LG webOS 智慧電視",
@@ -665,7 +1373,7 @@ export const records = [
       "本筆是 LG 品牌 webOS 智慧電視產品線的 personal 避雷，不是 LG 全集團或所有 webOS 授權品牌。可直接陳述 LG 官方 Smart TV 條款中的基礎裝置／使用資料、同意後的 ACR／Alphonso 資料分享與跨裝置廣告、LG 官方 ACR 商業化及德州同意機制協議。ACR 使用電視播放 soundboard 訊號，不得寫成 ACR 本身透過房間麥克風偷聽。LAN／附近 Wi‑Fi 詳細列舉、離線／待機收音與漏洞內容須歸屬於 Gamers Nexus 及其合作研究者；LG 只經 Ars 承認同網路相容裝置探索是標準智慧功能。不得把研究者以 root／漏洞示範的遠端麥克風情境寫成 LG 出廠預設持續竊聽，也不得聲稱離線錄音會由原生服務自動上傳、所有掃描資訊都已證實傳給 LG、漏洞已公開驗證，或德州協議等同 LG 承認違法。",
     lastReviewed: "2026-09-09",
   }),
-  record({
+  ...splitRecord(record({
     id: "deskin-zuler-todesk",
     name: "DeskIn / Zuler / ToDesk",
     aliases: ["DeskIn", "DeskIn Remote Desktop", "Zuler", "ZULER TECHNOLOGY PTE. LTD.", "ToDesk", "ToDesk Remote Desktop", "ToDesk远程控制"],
@@ -684,5 +1392,125 @@ export const records = [
       source("ToDesk - 隱私政策", "https://www.todesk.com/privacy.html", "查核日 2026-06-28", "ToDesk 隱私政策列海南有趣科技有限公司，並稱在中華人民共和國境內收集和產生的個人信息將存儲於中國境內。"),
     ],
     aiNotes: "此筆是 watchlist：目前公開來源支持 DeskIn 與 ToDesk／海南有趣科技存在官方品牌與服務關聯，且 DeskIn/ToDesk 是高敏感度遠端控制軟體；但尚未查到 DeskIn 本身被制裁、列入台灣高風險 App 清單、國資或中共黨建證據。回答時不要寫成已確認國資、黨建或制裁案例；也不要把『遠端桌面』『遠控』『檔案傳輸』等功能泛稱當成 alias。",
-  }),
+  }), [
+    {
+      "name": "DeskIn",
+      "aliases": [
+        "DeskIn Remote Desktop"
+      ],
+      "identifiers": [
+        "deskin.io",
+        "com.zuler.deskin"
+      ],
+      "summary": "DeskIn 的既有 Google Play 與官方隱私政策列新加坡 ZULER TECHNOLOGY PTE. LTD. 為開發／服務主體；官方 About 頁列 DeskIn 與 ToDesk 為 Zuler 品牌。只以遠端控制軟體的敏感性及既有品牌關聯保留觀察，不將 ToDesk 的中國境內個資儲存政策當成 DeskIn 政策。",
+      "country": "新加坡／中國關聯",
+      "aiNotes": "原群組列的 ToDesk 海南服務公司、許可及中國境內儲存只屬 ToDesk；不推定 DeskIn 個資均存於中國，也不稱其已遭制裁、列入台灣高風險 App、國資或黨建已證實。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "Google Play - DeskIn Remote Desktop",
+          "url": "https://play.google.com/store/apps/details?id=com.zuler.deskin",
+          "date": "查核日 2026-06-28",
+          "note": "Google Play 列 DeskIn Remote Desktop，開發者為 ZULER TECHNOLOGY PTE. LTD.，功能包含遠端存取、無人值守遠端存取、檔案傳輸與行動裝置控制。"
+        },
+        {
+          "title": "DeskIn - Privacy Policy",
+          "url": "https://deskin.io/privacy-policy",
+          "date": "查核日 2026-06-28",
+          "note": "DeskIn 隱私政策列 ZULER TECHNOLOGY PTE. LTD. 為 DeskIn 服務主體。"
+        },
+        {
+          "title": "DeskIn - About Us",
+          "url": "https://deskin.io/about-zuler",
+          "date": "查核日 2026-06-28",
+          "note": "DeskIn 官方 About 頁稱 Zuler 旗下知名品牌包含 DeskIn 與 ToDesk，並列新加坡地址與 Zuler Technology PTE. LTD.。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "Zuler",
+      "aliases": [
+        "ZULER TECHNOLOGY PTE. LTD."
+      ],
+      "identifiers": [],
+      "summary": "既有 DeskIn 隱私政策與 About 頁列 ZULER TECHNOLOGY PTE. LTD. 為新加坡服務主體，並列 DeskIn、ToDesk 品牌；本筆只保留服務主體與遠端控制品牌關聯觀察，不將 ToDesk 中國公司的資料儲存條款套用於 Zuler 全部服務。",
+      "country": "新加坡",
+      "avoidReasons": [
+        "遠端控制服務關聯風險",
+        "品牌與 ToDesk 關聯"
+      ],
+      "aiNotes": "不因品牌關聯推定 Zuler 與海南有趣科技為同一法人，或認定國資、黨建、制裁與統一的中國境內資料儲存政策。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "Google Play - DeskIn Remote Desktop",
+          "url": "https://play.google.com/store/apps/details?id=com.zuler.deskin",
+          "date": "查核日 2026-06-28",
+          "note": "Google Play 列 DeskIn Remote Desktop，開發者為 ZULER TECHNOLOGY PTE. LTD.，功能包含遠端存取、無人值守遠端存取、檔案傳輸與行動裝置控制。"
+        },
+        {
+          "title": "DeskIn - Privacy Policy",
+          "url": "https://deskin.io/privacy-policy",
+          "date": "查核日 2026-06-28",
+          "note": "DeskIn 隱私政策列 ZULER TECHNOLOGY PTE. LTD. 為 DeskIn 服務主體。"
+        },
+        {
+          "title": "DeskIn - About Us",
+          "url": "https://deskin.io/about-zuler",
+          "date": "查核日 2026-06-28",
+          "note": "DeskIn 官方 About 頁稱 Zuler 旗下知名品牌包含 DeskIn 與 ToDesk，並列新加坡地址與 Zuler Technology PTE. LTD.。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    },
+    {
+      "name": "ToDesk",
+      "aliases": [
+        "ToDesk Remote Desktop",
+        "ToDesk远程控制"
+      ],
+      "identifiers": [
+        "todesk.com",
+        "海南有趣科技有限公司",
+        "琼ICP备20000605号-1",
+        "琼B2-20190526"
+      ],
+      "summary": "既有 ToDesk 官網與隱私政策列海南有趣科技有限公司及海南 ICP／增值電信許可，並稱中國境內收集和產生的個人信息存儲於中國境內；與 DeskIn 的品牌關聯由原官方 About 頁保留。此筆為遠端控制與中國法域資料風險觀察，不是制裁或已外洩認定。",
+      "country": "中國",
+      "avoidReasons": [
+        "中國公司／中國法域關聯風險",
+        "資料安全／遠端控制風險"
+      ],
+      "aiNotes": "海南公司名稱與許可只歸 ToDesk，不是 DeskIn 或 Zuler 的獨立識別。中國境內儲存描述限於政策所稱中國境內收集／產生的個資，不推為所有地區資料均適用。本次僅重整既有紀錄、未重新外查；查核日期沿用原紀錄。",
+      "categories": [
+        "App／數位服務"
+      ],
+      "sources": [
+        {
+          "title": "DeskIn - About Us",
+          "url": "https://deskin.io/about-zuler",
+          "date": "查核日 2026-06-28",
+          "note": "DeskIn 官方 About 頁稱 Zuler 旗下知名品牌包含 DeskIn 與 ToDesk，並列新加坡地址與 Zuler Technology PTE. LTD.。"
+        },
+        {
+          "title": "ToDesk - About Us",
+          "url": "https://www.todesk.com/about.html",
+          "date": "查核日 2026-06-28",
+          "note": "ToDesk 官網介紹久尺科技，列北京、上海、廣州、海口、新加坡辦公地點；頁腳列海南有趣科技有限公司、琼公网安备、琼B2 與琼 ICP。"
+        },
+        {
+          "title": "ToDesk - 隱私政策",
+          "url": "https://www.todesk.com/privacy.html",
+          "date": "查核日 2026-06-28",
+          "note": "ToDesk 隱私政策列海南有趣科技有限公司，並稱在中華人民共和國境內收集和產生的個人信息將存儲於中國境內。"
+        }
+      ],
+      "lastReviewed": "2026-06-25"
+    }
+  ]),
 ];

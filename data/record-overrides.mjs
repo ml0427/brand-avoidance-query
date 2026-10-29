@@ -6,8 +6,6 @@ export const broadCategoryOverrides = new Map([
   ["tianwei-agricultural-technology", ["食品／飲料／農水產"]],
   ["hualien-county-farmers-association", ["食品／飲料／農水產"]],
   ["huawei", ["科技／通訊／消費電子"]],
-  ["zte-nubia-redmagic", ["科技／通訊／消費電子"]],
-  ["china-state-telecoms", ["科技／通訊／消費電子"]],
   ["tp-link", ["科技／通訊／消費電子"]],
   ["hikvision", ["監控／AI／資安"]],
   ["dahua", ["監控／AI／資安"]],
@@ -18,100 +16,46 @@ export const broadCategoryOverrides = new Map([
   ["uniview", ["監控／AI／資安"]],
   ["cloudwalk", ["監控／AI／資安"]],
   ["yitu", ["監控／AI／資安"]],
-  ["netposa-sensenets", ["監控／AI／資安"]],
   ["meiya-pico-sdic-intelligence", ["監控／AI／資安"]],
   ["autel-robotics", ["監控／AI／資安"]],
-  ["bytedance", ["電商／App／數位服務"]],
-  ["tencent-wechat", ["電商／App／數位服務"]],
-  ["pdd-temu-pinduoduo", ["電商／App／數位服務"]],
   ["shein", ["服飾／玩具／生活零售"]],
-  ["alibaba-taobao-aliexpress", ["電商／App／數位服務"]],
-  ["ant-group-alipay", ["電商／App／數位服務"]],
   ["xiaohongshu", ["電商／App／數位服務"]],
-  ["weibo-sina", ["電商／App／數位服務"]],
   ["baidu", ["電商／App／數位服務"]],
   ["iqiyi", ["電商／App／數位服務"]],
   ["qihoo-360", ["科技／通訊／消費電子"]],
-  ["xiaomi", ["科技／通訊／消費電子"]],
-  ["oppo-oneplus-realme", ["科技／通訊／消費電子"]],
-  ["vivo-iqoo", ["科技／通訊／消費電子"]],
   ["honor", ["科技／通訊／消費電子"]],
-  ["want-want", ["食品／飲料／農水產"]],
   ["wahaha-ad-calcium-milk-food-beverage", ["食品／飲料／農水產"]],
   ["wujiang-fuling-zhacai-state-owned-food", ["食品／飲料／農水產"]],
-  ["want-want-china-times-media-group", ["社群／App／媒體娛樂"]],
   ["coco-fresh-tea", ["食品／飲料／農水產"]],
-  ["sunnyhills-delights", ["食品／飲料／農水產"]],
   ["tsingtao-brewery", ["食品／飲料／農水產"]],
   ["moutai", ["食品／飲料／農水產"]],
   ["wuliangye", ["食品／飲料／農水產"]],
-  ["cofco", ["食品／飲料／農水產"]],
   ["haidilao", ["餐飲／生活服務"]],
   ["xiaogu-jiejie-malaban", ["餐飲／生活服務"]],
   ["li-ning", ["服飾／玩具／生活零售"]],
-  ["anta", ["服飾／玩具／生活零售"]],
   ["pop-mart", ["服飾／玩具／生活零售"]],
-  ["kp-global-palladium-k-swiss", ["服飾／玩具／生活零售"]],
-  ["lanvin-group-fosun", ["服飾／玩具／生活零售"]],
   ["taiwanize-naizhi-cultural", ["服飾／玩具／生活零售"]],
-  ["tpp-muke-zhiyau-xiaocao-cafe", ["餐飲／生活服務"]],
-  ["yen-kuan-heng-lutzr-yuanli-related", ["餐飲／生活服務"]],
   ["fu-hsu-jungliang-enterprise", ["餐飲／生活服務"]],
-  ["taroko-sankong-hsieh-family", ["餐飲／生活服務"]],
   ["antai-hospital-su-ching-chuan", ["餐飲／生活服務"]],
   ["shenshen-yongkang-onigiri-anti-recall", ["餐飲／生活服務"]],
-  ["black-tea-bus-wanglai-bluebird-remark", ["餐飲／生活服務"]],
   ["meilongzhen-tu-shih-mei-recall-remarks", ["餐飲／生活服務"]],
-  ["club-med-fosun", ["餐飲／生活服務"]],
-  ["saic-mg", ["汽車／交通／能源"]],
   ["byd", ["汽車／交通／能源"]],
-  ["geely-volvo-polestar", ["汽車／交通／能源"]],
-  ["pirelli-sinochem", ["汽車／交通／能源"]],
-  ["ferretti-group-weichai", ["汽車／交通／能源"]],
-  ["dongfeng-dfsk", ["汽車／交通／能源"]],
   ["yutong", ["汽車／交通／能源"]],
-  ["king-long", ["汽車／交通／能源"]],
   ["catl", ["汽車／交通／能源"]],
   ["midea", ["家電／智慧家庭"]],
   ["tcl", ["家電／智慧家庭"]],
   ["gree", ["家電／智慧家庭"]],
   ["hisense", ["家電／智慧家庭"]],
-  ["ecovacs-tineco", ["家電／智慧家庭"]],
   ["roborock", ["家電／智慧家庭"]],
   ["haier", ["家電／智慧家庭"]],
-  ["nice-magic-amah-household", ["家電／智慧家庭"]],
-  ["anker", ["科技／通訊／消費電子"]],
   ["lalamove-taiwan-china-taiwan-labeling-watchlist", ["汽車／交通／能源"]],
   ["paris-evergreen-laurel-hotel-statement-event-personal", ["餐飲／生活服務"]],
   ["cha-li-wang-china-origin-food-whole-brand-personal-20260827", ["食品／飲料／農水產"]],
   ["sunshine-womens-choir-china-taiwan-labeling-watchlist", ["社群／App／媒體娛樂"]],
   ["lin-bo-rui-public-figure-watchlist", ["社群／App／媒體娛樂"]],
-  ["mecatron-joemars-iran-uav-ofac-sanctions", ["科技／通訊／消費電子"]],
-  ["saint-dong-chaoyue-taipei-procurement-watchlist", ["司法／企業案件"]],
-  ["china-hongkong-macau-202607-political-law-travel-risk", ["餐飲／生活服務"]],
-  ["china-extradition-weak-rule-of-law-travel-risk-personal", ["餐飲／生活服務"]],
-  ["china-extradition-asean-travel-caution-watchlist", ["餐飲／生活服務"]],
-  ["china-extradition-democratic-treaty-travel-note-watchlist", ["餐飲／生活服務"]],
 ]);
 
 export const recordCleanups = new Map([
-  [
-    "weichuan-foods",
-    {
-      removeAliases: ["萬丹"],
-      addAliases: ["木崗雞蛋"],
-      addSources: [
-        {
-          title: "使用者提供的 Threads 截圖：木崗高品質雞蛋",
-          url: "https://www.threads.com/@jax780824",
-          date: "2026-07-27",
-          note: "截圖可見帳號 jax780824、相對時間 19 小時及木崗高品質雞蛋包裝；發文者自稱曾任洗選蛋工廠員工並勸勿購買，另稱工廠已搬遷。未取得原貼 permalink、工廠名稱、作業細節、官方資料或可獨立核驗證據，僅作使用者個人避買線索，不確認食安、違法或搬遷後現況。",
-        },
-      ],
-      appendAiNotes: "2026-07-27 使用者再依 Threads 截圖指定木崗雞蛋全商品線個人避買；截圖中的匿名員工身分、洗選蛋工廠作業與搬遷後現況均未獨立證實，不得寫成食安、違法或官方認定。帳號、雞蛋泛稱、洗選蛋、工廠、頂新與相關原因詞不得作 searchable fields。",
-      lastReviewed: "2026-07-27",
-    },
-  ],
   [
     "tacoop-taiwan-agricultural-united-marketing-cooperative",
     {
@@ -173,7 +117,6 @@ export const recordCleanups = new Map([
         "天綠菓美膚油",
         "天綠菓護手膏",
       ],
-      aiNotes: "別名只保留農會名稱、品牌／系列名與較明確的禮盒名；烏龍茶、Q梅、苦茶油等泛用品項只作分類脈絡，不再作品牌別名命中。",
     },
   ],
   [
@@ -190,34 +133,6 @@ export const recordCleanups = new Map([
         "鳳梨酥",
         "金鑽鳳梨脆片",
       ],
-      summary: "使用者標記為關聯保守避開；天崴公司本身可由公開資料確認，永興菓舖／永興合作社與黃威騰、鳳梨供應鏈有公開關聯，但未確認為天崴自有品牌的泛用品項已不放入別名。",
-      sources: [
-        {
-          title: "使用者提供避買清單",
-          url: "",
-          date: "2026-06-25",
-          note: "使用者指定天崴農業科技與永興菓舖、永興合作社、鳳梨／冷凍水果相關字樣作為保守避開。",
-        },
-        {
-          title: "天崴農業科技 - 創生夥伴介紹",
-          url: "https://twrr.org.tw/zh-TW/partner/273",
-          date: "2026-06-25",
-          note: "介紹天崴農業科技由黃威騰創立，經營種植、集貨、內外銷、加工與水果原物料供應。",
-        },
-        {
-          title: "古坑第三代鳳梨產業升級-天崴農業科技",
-          url: "https://www.newsmarket.com.tw/blog/214575/",
-          date: "2026-06-25",
-          note: "文章提到天崴農業科技與雲林永興合作社在產地種植、收購水果上的角色。",
-        },
-        {
-          title: "永興菓舖 100%鳳梨鮮果萃",
-          url: "https://www.afasale.tw/product/634",
-          date: "2026-06-25",
-          note: "商品頁介紹永興菓舖源自雲林永興合作社，並列鳳梨鮮果萃、金鑽鳳梨等商品。",
-        },
-      ],
-      aiNotes: "此筆是低可信度／觀察中，重點是公司與關聯單位辨識。珍珠芭樂、鳳梨酥、金鑽鳳梨等沒有品牌或責任廠商限定的品項不得當成別名；只有看到天崴、永興菓舖或永興果菜生產合作社時才應命中。",
     },
   ],
   [
@@ -227,61 +142,9 @@ export const recordCleanups = new Map([
     },
   ],
   [
-    "sunnyhills-delights",
-    {},
-  ],
-  [
     "xiaogu-jiejie-malaban",
     {
       identifiers: ["xiaogujiejie.com", "天津小谷顿餐饮管理服务有限公司"],
-    },
-  ],
-  [
-    "kp-global-palladium-k-swiss",
-    {
-      identifiers: ["palladiumboots.com", "palladium.com.tw", "1368.HK", "KP Global Investment Limited"],
-    },
-  ],
-  [
-    "lanvin-group-fosun",
-    {
-      identifiers: ["NYSE: LANV", "lanvin-group.com", "Fosun International"],
-    },
-  ],
-  [
-    "club-med-fosun",
-    {
-      identifiers: ["fosunholiday.com", "Fosun Tourism Group", "01992.HK"],
-    },
-  ],
-  [
-    "anta",
-    {
-      identifiers: ["2020.HK", "82020.HK", "ir.anta.com", "anta.com", "anta.cn", "fila.cn", "NYSE: AS", "PUMA 29.06% pending acquisition"],
-    },
-  ],
-  [
-    "geely-volvo-polestar",
-    {
-      identifiers: ["zgh.com", "geely.com", "volvocars.com", "polestar.com", "levc.com", "group-lotus.com", "smart.com", "smart 50:50 JV"],
-    },
-  ],
-  [
-    "pirelli-sinochem",
-    {
-      identifiers: ["pirelli.com", "Sinochem Holdings", "CNRC", "Marco Polo International Italy", "Golden Power"],
-    },
-  ],
-  [
-    "ferretti-group-weichai",
-    {
-      identifiers: ["9638.HK", "YACHT.MI", "ferrettigroup.com", "Ferretti International Holding S.p.A.", "Weichai Group", "Shandong SASAC"],
-    },
-  ],
-  [
-    "nice-magic-amah-household",
-    {
-      identifiers: ["amah.com.tw", "cnnice.com"],
     },
   ],
   [
@@ -299,13 +162,6 @@ export const recordCleanups = new Map([
         "洛神香草茶包",
         "魚腥草茶包",
       ],
-      aiNotes: "別名保留農會、展售中心、品牌／店家／通路單位字樣；鰻魚罐頭、醬油、茶包等沒有搭配品牌或責任單位的品項不再當成別名。",
-    },
-  ],
-  [
-    "china-state-telecoms",
-    {
-      removeAliases: ["SIM", "eSIM", "漫遊卡"],
     },
   ],
   [
@@ -313,13 +169,6 @@ export const recordCleanups = new Map([
     {
       removeAliases: ["Mini", "Air", "Phantom", "Matrice", "Agras", "Osmo"],
       addAliases: ["DJI Mini", "DJI Air", "DJI Phantom", "DJI Matrice", "DJI Agras", "DJI Osmo"],
-    },
-  ],
-  [
-    "zte-nubia-redmagic",
-    {
-      removeAliases: ["Axon", "Blade", "5G CPE"],
-      addAliases: ["ZTE Axon", "ZTE Blade", "ZTE 5G CPE"],
     },
   ],
   [
@@ -339,12 +188,6 @@ export const recordCleanups = new Map([
     "yitu",
     {
       removeAliases: ["AI video analytics"],
-    },
-  ],
-  [
-    "netposa-sensenets",
-    {
-      removeAliases: ["video cloud", "facial recognition database"],
     },
   ],
   [
@@ -377,12 +220,6 @@ export const recordCleanups = new Map([
     {
       removeAliases: ["家用空調", "商用空調"],
       addAliases: ["GREE 家用空調", "GREE 商用空調"],
-    },
-  ],
-  [
-    "anker",
-    {
-      removeAliases: ["行動電源", "充電器", "家用儲能", "智慧安防"],
     },
   ],
 ]);

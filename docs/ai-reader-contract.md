@@ -24,6 +24,15 @@ Normalization: collapse whitespace, trim, NFKC, then Unicode lowercase (not case
 Envelope: `{schemaVersion: 1, record: <complete compiled source record>, sourceLinks: [...]}`.
 Each source link is `{sourceIndex, originalUrl, url}` and covers one nonempty source URL. External HTTP(S) references keep their URL. Approved relative evidence resolves as `../evidence/...` relative to this record document. Empty source URLs remain notes in record.sources without a fabricated link. Preserve all original record values and internal array order, especially aiNotes, sources.note, lastReviewed, temporaryUntil, reviewAfter and temporaryAlertReason.
 
+Independent people, brands and product SKUs are separate records, not members
+hidden in another record's aliases. Alternate names of the same subject stay
+aliases. Source files may explicitly share context through splitRecord(), but
+each emitted record has its own ID, name, scoped summary and identity fields.
+Shared sources do not attribute other members' actions, allegations or ownership
+scope to this subject. Existing same-name records are not automatically merged;
+read every matching record and its limits. A structural split is not a new
+source review and must not reset lastReviewed.
+
 ## Reader Result
 
 `schemaVersion`, `dataVersion`, `sourceCommit`, `query`, `mode`, `evaluationDate`, `totalMatches`, `returnedMatches`, `hasMore`, `matches`, `note`.
