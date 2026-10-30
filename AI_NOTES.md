@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-30｜逐筆閉環第6人：李哲華歷史刑事告訴與民事有利結果補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-674e-54f2-83ef` 的李哲華member override，不新增重複卡、不改群組共用欄位或其他人。唯一核准負面case key為 `lee-tsai-billboard-2015-16`：只記自由時報具名報導所載蔡煌瑯於2016-01-06赴南投地檢署，對時任中國國民黨南投縣黨部主委李哲華提出加重誹謗及違反選罷法告訴的歷史程序；目前刑事程序unknown，未取得刑事案號、偵結、撤回、起訴或刑事裁判，不寫目前仍偵查、已起訴、犯罪、有罪、定讞或案底。罪名是告訴方主張，不是檢方或法院認定。
+- 可見並列李哲華否認抹黑、主張看板及文宣有所本，以及同一看板爭議的必要有利脈絡：南投地院105年度訴字第4號於2016-05-04駁回蔡煌瑯民事之訴及假執行聲請，臺中高分院105年度上字第311號於2016-11-01駁回上訴。民事駁回不是刑事不起訴、無罪或告訴結案；本次未取得民事二審確定日期或後續最高法院文書，不稱確定。看板所涉350萬元及8年刑度是蔡煌瑯另案，不移植為李哲華的收賄、犯罪所得或刑度。
+- 保留原ID、name／aliases／identifiers、country、personal／high與原2026-06-26國民黨名冊來源；新增「司法／公眾人物」與「政黨／中國國民黨」分類。政黨分類只依2026-06-26既有來源時點，不推定2026-10-30即時黨籍、案發時黨籍或政黨責任。姓名鍵維持純姓名，不納加重誹謗、選罷法、蔡煌瑯、看板、case key或其他事件詞。原研究coverage_status為blocked，保留刑事後續缺口；不是完整前科證明，也不把同名、證人或其他案件責任移入本人卡。
+- 新增來源為自由時報2016-01-07具名報導、司法院南投地院2016-05-04民事判決及臺中高分院2016-11-01民事判決。必要節錄SHA-256依序 `4252df7f7d5c2a16f5729021084517ddde525c21e22aa60f7166541be6f9ec92`、`8e92286f4f3478a52b22b4f57c0b575f60c43d2267a503d1f29061c4b33090ac`、`92b73c456aa433117dc80400ecb6980606ec9e742538a34d527c742e2b422d60`；source report SHA-256 `361ee6600acd7cae502fa981990f1320b415361817629a9d05c1ad89ea5a72ac`；source review SHA-256 `47113a3064bc7d22860bb8c7237cda2c6b20d16b44f69395c73a26ff8d9d4fb4`。
+- 開工前baseline存當前profile同task `serial-runs/0006/writer/`：HEAD `b32e86264059710e9b92c012f5ee9190811d426b`、181個tracked hashes、空index、1,654筆compiled snapshot、真`_site` 3,961檔hash及Kevin既有untracked PNG。writer只執行局部語法、compile冪等、本人正負查、其餘1,653筆全值含序保真、來源／case唯一歸屬、受保護檔與真`_site`保真及`git diff --check`；詳細實跑結果見同writer `local-verification.json`。這些不是獨立verify或完整gate。
+- 本writer只改授權兩檔；不改`_site`、queue、CONTROL、lock或其他STATE，不npm ci、不跑完整validate／Node全套／Python全套／真build／site validator，不stage／commit／push／發布，不執行verify或closure。完成證據與最終report留 `serial-runs/0006/writer/`，後續獨立verify由主控另行處理，本輪不接第7人。
+
 ## 2026-10-30｜逐筆閉環第5人：蕭旭岑歷史刑事告訴／分案補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-856d-65ed-5c91` 的蕭旭岑member override，不新增重複卡、不改群組共用欄位或其他人。唯一核准case key為 `hsiao-ma-foundation-2026`：只記2026-05-29馬英九基金會已提出背信、侵占刑事告訴，以及中央社具名報導轉述士林地檢署已收狀、當日完成分案並由經濟專組檢察官後續偵辦的歷史程序；截至2026-10-30目前程序unknown，未取得起訴、不起訴、撤回、和解、處分或裁判，不寫目前仍偵查、已起訴、犯罪、有罪、定讞或案底。罪名是告訴方主張，不是檢方或法院認定。
