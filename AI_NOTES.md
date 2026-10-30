@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-30｜香港牛奶冰室高雄籌備門市最小personal
+
+- 收尾：單輪獨立verifier PASS、無must-fix；完整gate來源1,654筆／warnings0／errors0、Node78/78、Python32/32、實際build與site validator3,946檔均通過。3正查、37負查、4 partial及本機manifest reader44項與matchedTerms通過；舊1,653筆逐值含序不變，全站1,654份完整record JSON與來源相同。主控核179個tracked hashes、穩定diff、空index並親讀實跑log及來源diff。reviewer/report.json位於當前profile scratch/hk-milkcafe-20261030，SHA-256 `0f1e242f936acd8e80e5fd5dd906e4a31b486d81090c1ffeda6fad81e9e90b2a`。以下不build／不發布為writer階段限制；限定兩檔提交推送與遠端精確commit/blob讀回以Git及publish-report.json為準，不另查Pages。
+- 本次驗證的Windows坑：Python路徑列舉漏掉兩個既有長路徑產物；改由Node原生逐檔驗證，實際3,946檔與inventory一致，不是缺檔。
+
+- 使用者明示「避雷」並提供圖片，本輪只新增 `milk-cafe-kaohsiung-planned-store-personal-20261030`：香港牛奶冰室（高雄籌備門市），personal／low。主因是使用者供餐方式與原料透明疑慮，不是重大刑事或客觀食安認定；不以法律定讞或香港總部認可台灣帳號作個人避開的必要門檻，但明列高雄門市仍只以同名公開宣傳／社群對讀，未完成同角位影像、香港官方授權及地址橋接。
+- writer親讀研究report與六份必要節錄並核SHA-256。原帖 `happy_chocomousse/DfGbEgNk3rE` 與截圖主文逐句對位，time 2026-10-30T01:39:54Z＝台北09:39:54；主張只歸屬作者，未取完整回覆，不稱無更正。nellydyu原帖2026-10-29T03:04:44Z只支持社群稱辛亥路要新開台灣首店，非官方地址證明。台灣自稱品牌帳號Threads的2026-10-23籌備貼文、IG Deyp5wTRBfD的2026-10-22 Coming soon只證宣傳，不證已營業、授權或供應鏈；日期取發布日，不混用2026-10-30查取日。香港官方頁只證同名品牌存在，2024-09-30香港01／田中貴關於香港其他店的紙箱米飯報導不採為高雄證據，兩者不列本卡來源。
+- 不宣稱高雄中國製、預製菜、菠蘿包預製、添加物有害、欺詐、假香港或整品牌中國供應鏈。只設兩個限定高雄別名「香港牛奶冰室高雄店」「牛奶冰室高雄店」，不用裸品牌／英文品牌／來源與留言帳號／理由詞作exact鍵；country及identifiers空，不採未核門牌或電話，不查存稅籍或無關個資。
+- 研究packet位於當前profile scratch `hk-milkcafe-20261030/research/report.json`，SHA-256 `f1a0a764634543f43bf536474555e8d70fc2bfd4db66c4ee4b8314880bc4d0fb`；六節錄hash由packet逐檔核對並記writer報告。原圖SHA-256 `7eee53b3288bce20b3d3d0c27fdbb0125e7cbbd6880927f127e9b7c0bc2d9e36`，僅保留profile，不公開、不複製repo、不改public-evidence，排除路人、政治看板及無關留言。
+- 寫前HEAD `3e61400bb229d9d2ef9bc9662d46b824670f4798`、1653筆compiled baseline、tracked hashes、status／空index及Kevin既有untracked PNG hash存同scratch `writer/`。本輪只改食品來源與本節，保留名屋及涉賄選所有舊筆與舊筆記；局部schema（Ajv2020）、每key正查／指定卡負查、兩次compile冪等、舊1653逐值含序保真、語法與diffcheck結果見 `writer/report.json`。不跑完整gate、不build／stage／commit／push／發布，不改版本或產物；交主控獨立完整gate。
+
 ## 2026-10-30｜名屋與涉賄選新聞收錄驗收
 
 - 單輪獨立verifier PASS，無must-fix；完整gate：npm ci、來源validate 1,653筆／warnings0／errors0、Node78/78、Python32/32、真實build3,944檔、site validator warnings0／errors0、diffcheck均通過。9對象11項正查及376項指定卡負查通過；全站1,653筆完整產物與compile逐值相同。
