@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-30｜逐筆閉環第5人：蕭旭岑歷史刑事告訴／分案補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-856d-65ed-5c91` 的蕭旭岑member override，不新增重複卡、不改群組共用欄位或其他人。唯一核准case key為 `hsiao-ma-foundation-2026`：只記2026-05-29馬英九基金會已提出背信、侵占刑事告訴，以及中央社具名報導轉述士林地檢署已收狀、當日完成分案並由經濟專組檢察官後續偵辦的歷史程序；截至2026-10-30目前程序unknown，未取得起訴、不起訴、撤回、和解、處分或裁判，不寫目前仍偵查、已起訴、犯罪、有罪、定讞或案底。罪名是告訴方主張，不是檢方或法院認定。
+- 可見並列蕭旭岑否認收取不應得款項、稱配合調查；基金會三人內部調查小組此前稱無具體、確切客觀證據證明蕭旭岑、王光慈私吞財物或違反財政紀律，馬英九不接受該結果。內部調查不是不起訴或無罪；不把共同被告訴對象、基金會或其他關係人的責任移入本人卡，也不發布source review未核准案件、未獨立橋接資料或其他人。
+- 保留原ID、name／aliases／identifiers、country、personal／high與原2026-06-26國民黨名冊來源；新增「司法／公眾人物」與「政黨／中國國民黨」分類。政黨分類只依2026-06-26既有來源時點，不推定2026-10-30即時黨籍、案發時黨籍或政黨責任。姓名鍵維持純姓名，不納背信、侵占、基金會、case key或事件詞。原研究coverage_status為complete只代表既定公開查詢範圍完成，不是完整前科證明。
+- 新增司法來源僅兩篇中央社：2026-05-29 `https://www.cna.com.tw/news/aipl/202605290055.aspx` 與2026-05-24 `https://www.cna.com.tw/news/aipl/202605240148.aspx`。source.note明示具名報導、士檢回應轉述、未取得士檢正式新聞稿／案號／處分書及內部調查非司法處分。必要節錄SHA-256依序 `2fe086e511750f86afbff03b9525a4749cb15d456fd9cdb156b87fb5e5610554`、`a8a2b0132789209549db1bd11d44c6fdf9dc45d695b93b27e3ecde9af1c588de`；source report SHA-256 `927eaf110f1bdac22c80ad423c09904e3cbb90055c4db1033cc4081f4569fad2`；source review SHA-256 `e45d34506c7d5eba20a4f4689ca456d004452eaf3bffd59b6582131964234575`。
+- 開工前baseline存當前profile同task `serial-runs/0005/writer/`：HEAD `ba1f1aa80a86bbc83cf0a9bb612af496e0273715`、181個tracked hashes、空index、1,654筆compiled snapshot、真`_site` 3,961檔hash及Kevin既有untracked PNG。寫後局部實跑：來源語法、compile兩次冪等、1,654 IDs唯一與總數不變、其餘1,653筆全值含陣列順序不變；2項姓名exact正查唯一命中本人、9項事件／case／排除案exact負查不命中本人、2項partial只作候選；唯一case key與兩篇CNA URL只出現在本人卡。179個受保護tracked檔、真`_site`與Kevin PNG前後hash相同，`git diff --check` exit 0。詳細命令、正負矩陣、編譯前後hash及保護值見同writer `local-verification.json`；這些只是writer局部檢查，不是獨立verify或完整gate。
+- 本writer只改授權兩檔；不改`_site`、queue、CONTROL、lock或其他STATE，不npm ci、不跑完整validate／Node全套／Python全套／真build／site validator，不stage／commit／push／發布，不執行verify或closure。完成證據與最終report留 `serial-runs/0005/writer/`，後續獨立verify由主控另行處理，本輪不接第6人。
+
 ## 2026-10-30｜司法目錄內政黨分類（完整驗收通過）
 
 - source＋UI單輪獨立合併驗收PASS、MustFix0：完整gate來源1,654筆／warnings0／errors0、Node102/102、Python32/32及部署指定Python3.13重驗32/32、真build與site validator3,963檔全通過；17司法頁／610個href、本機reader69項通過。其餘1,653筆全值含序不變，UI前後3,942份舊snapshot bytes／SHA保真。主控親核獨立report SHA-256 `6988cc958cf79458f67ca9f142406887bdafdaf1b0a8d724e415143e43d3ffe1`、全部artifact manifest、七檔原bytes、diff hash、HEAD／空index及Kevin原圖後，只追加本收尾筆記。驗收證據在當前profile同task `combined-review/report.json`；以下未完整gate／未發布為writer階段限制。限定七檔發布與公開站實讀以 `serial-runs/0001/release/` 及 `serial-closures/0001.json` 實際證據為準，不用本機PASS當上線；438人未查完，本人coverage仍blocked。
