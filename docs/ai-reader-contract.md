@@ -49,6 +49,13 @@ The root website and llms.txt link to the current catalog. Its A-Z, Han-characte
 digit and other-character links use visible name prefixes, not UTF-8 range labels.
 Follow the query's normalized first character, then any longer matching prefix,
 and open every exact-name/alias/identifier collision's complete record page.
+Each catalog node (including its pagination chain) lists each recordId only once.
+Its representative is a name match when present, otherwise an alias, then an
+identifier. Different recordIds are never merged by equal display names. The
+same record may remain reachable through different prefix branches. All lookup
+keys stay in the JSON indexes and full record; they are not all printed in the
+catalog. A missing literal alias in a catalog is not a no-match: open candidate
+records in the relevant branch and verify their complete identity fields.
 Small groups are leaves; only oversized groups subdivide. HTML pages are bounded
 at 65536 bytes, with explicit pagination and end markers when subdivision alone
 cannot fit. The catalog uses a clickable ASCII-style indented text tree without

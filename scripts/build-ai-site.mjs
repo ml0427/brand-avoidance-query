@@ -171,6 +171,8 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
 
 目錄的查詢鍵數不等於紀錄數、人物數或商品數。部分字搜尋必須檢查所有可能的組別，不能只選查詢片段的首字；這也不是品類探索，搜尋「果汁」不能宣稱已列完所有果汁商品。HTML 讀取本身不等於已核對檔案雜湊。工具截斷、頁面不可讀或版本不明時，回報未完成查詢，不能當無命中。
 
+同一目錄節點及其分頁每個recordId只列一次，優先正式名稱，其次該字頭別名、識別碼；不同ID即使同名仍分開。完整別名／識別保留在JSON索引與單筆紀錄，目錄未列出別名字面不等於無命中，需開啟該字頭候選紀錄核對。
+
 ## 可以執行 reader
 
 先讀 [manifest](manifest.json)，使用同一版本的 JSON 索引與完整單筆紀錄。精準比對 name / aliases / identifiers；部分字只列候選。下載索引與紀錄時核對大小及 SHA-256。檔案失效、雜湊或版本錯誤時重取 manifest，整輪最多重試一次；仍失敗就回報不可用。本站沒有舊格式 fallback。

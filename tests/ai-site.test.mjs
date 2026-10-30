@@ -166,13 +166,15 @@ test("HTML catalog and JSON index are independent views of the same identity key
   }
 });
 
-test("browser catalog links the actual alias even when the canonical record has another spelling", () => {
+test("browser catalog groups same-initial aliases into one canonical record link", () => {
   const site = generateSite({ records: [sample("wen-alias", { name: "文姿云 / Wen Tzu-Yun", aliases: ["文姿雲"] })] });
   const root = site.manifest.catalog.url;
   const initial = pageLinks(site.files.get(root)).find((link) => link.text === "文");
   const group = linkedFile(root, initial.href);
-  const alias = pageLinks(site.files.get(group)).find((link) => link.text === "文姿雲");
-  assert(alias, "the alias is itself clickable, not only surrounding text");
-  assert.equal(linkedFile(group, alias.href), `${site.manifest.recordBase}wen-alias.html`);
+  const recordLinks = pageLinks(site.files.get(group)).filter((link) => linkedFile(group, link.href) === `${site.manifest.recordBase}wen-alias.html`);
+  assert.equal(recordLinks.length, 1);
+  assert.equal(recordLinks[0].text, "文姿云 / Wen Tzu-Yun");
   assert(site.files.get(group).toString().includes("文姿云 / Wen Tzu-Yun"));
+  const fullRecord = JSON.parse(site.files.get(`${site.manifest.recordBase}wen-alias.json`)).record;
+  assert.deepEqual(fullRecord.aliases, ["文姿雲"]);
 });

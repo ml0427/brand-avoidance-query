@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import path from "node:path";
 import test from "node:test";
 import { buildNameCatalog, CATALOG_PAGE_LIMIT } from "../scripts/lib/name-catalog.mjs";
+import { compileRecords } from "../data/compile-records.mjs";
+import { identityTerms } from "../app-core.mjs";
 
 const ROOT = "catalog/index.html";
 const escapeHtml = (value) => String(value).replace(/[&<>"']/gu, (char) => ({
@@ -37,6 +39,7 @@ function assertGraph(files, budget = CATALOG_PAGE_LIMIT) {
   const visited = new Set();
   const queue = [ROOT];
   const rows = [];
+  const nodeRecords = new Map();
   for (let index = 0; index < queue.length; index++) {
     const file = queue[index];
     if (visited.has(file)) continue;
@@ -55,7 +58,12 @@ function assertGraph(files, budget = CATALOG_PAGE_LIMIT) {
       else assert.match(link.target, /^records\/[a-z0-9][a-z0-9._-]*\.html$/u);
     }
     for (const row of content(files, file).matchAll(/<li data-key="([^"]*)" data-match-field="([^"]*)" data-record-name="([^"]*)">[\s\S]*?<a href="([^"]+)">([^<]*)<\/a>/gu)) {
-      rows.push([unescapeHtml(row[1]), resolve(file, row[4]), unescapeHtml(row[5]), `欄位：${unescapeHtml(row[2])}；紀錄：${unescapeHtml(row[3])}`]);
+      const target = resolve(file, row[4]);
+      const node = path.posix.dirname(file);
+      if (!nodeRecords.has(node)) nodeRecords.set(node, new Set());
+      assert(!nodeRecords.get(node).has(target), `${node}: duplicate record row ${target}`);
+      nodeRecords.get(node).add(target);
+      rows.push([unescapeHtml(row[1]), target, unescapeHtml(row[5]), `欄位：${unescapeHtml(row[2])}；紀錄：${unescapeHtml(row[3])}`]);
     }
   }
   assert.deepEqual([...visited].sort(), [...files.keys()].sort(), "Every generated page must be reachable");
@@ -67,8 +75,32 @@ function expectedRows(entries) {
 }
 
 function assertAllRows(files, entries, budget) {
-  const order = (rows) => rows.map((row) => JSON.stringify(row)).sort();
-  assert.deepEqual(order(assertGraph(files, budget)), order(expectedRows(entries)));
+  const actual = assertGraph(files, budget);
+  const allowed = new Set(expectedRows(entries).map((row) => JSON.stringify(row)));
+  for (const row of actual) assert(allowed.has(JSON.stringify(row)), `Fabricated representative: ${JSON.stringify(row)}`);
+  const cache = new Map();
+  const nodeLinks = (file) => {
+    if (!cache.has(file)) cache.set(file, pageChain(files, file).flatMap((page) => links(files, page)));
+    return cache.get(file);
+  };
+  for (const { key, matches } of entries) {
+    const first = Array.from(key)[0];
+    const label = /^[a-z]$/u.test(first) ? first.toUpperCase() : first;
+    const initial = nodeLinks(ROOT).filter((link) => link.label === label);
+    assert.equal(initial.length, 1, `Missing initial for ${key}`);
+    let file = initial[0].target;
+    for (;;) {
+      const available = nodeLinks(file);
+      const children = available.filter((link) => link.target.startsWith(`${path.posix.dirname(file)}/`) &&
+        path.posix.dirname(link.target) !== path.posix.dirname(file) && key.startsWith(link.label));
+      if (!children.length) {
+        for (const { recordId } of matches) assert(available.some((link) => link.target === `records/${recordId}.html`), `${key}: unreachable ${recordId}`);
+        break;
+      }
+      assert.equal(children.length, 1, `Ambiguous prefix for ${key}`);
+      file = children[0].target;
+    }
+  }
 }
 
 function pageChain(files, first) {
@@ -146,15 +178,58 @@ test("normalized keys stay unchanged while name, aliases, and identifiers retain
   assert.equal(follow(files, follow(files, ROOT, "4"), "條碼：4710000000000"), "records/same.html");
   assert.equal(follow(files, follow(files, ROOT, "H"), "https://example.test:8443/shop"), "records/same.html");
   assertAllRows(files, entries);
+  assert.deepEqual([...files], [...build(entries.map((item) => ({ ...item, matches: [...item.matches].reverse() })))]);
 });
 
-test("colliding names preserve multiple record IDs and every matched field", () => {
+test("an alias represents its prefix ahead of identifiers while the name stays in its own prefix", () => {
+  const entries = [entry("zeta", "one", "Zeta"), entry("alpha", "one", "Zeta", "aliases", "Alpha"), entry("a-001", "one", "Zeta", "identifiers", "A-001")];
+  const files = build(entries);
+  assert.equal(follow(files, follow(files, ROOT, "A"), "Alpha"), "records/one.html");
+  assert.equal(follow(files, follow(files, ROOT, "Z"), "Zeta"), "records/one.html");
+  assertAllRows(files, entries);
+});
+
+test("colliding names retain different record IDs but omit duplicate fields of one record", () => {
   const entries = [{ key: "同名", matches: [match("first", "同名"), match("second", "同名"), match("first", "同名", "aliases", "同名")] }];
   const files = build(entries);
   const group = follow(files, ROOT, "同");
-  assert.equal(links(files, group).filter((link) => link.label === "同名").length, 3);
+  assert.equal(links(files, group).filter((link) => link.label === "同名").length, 2);
   assert(content(files).includes("共 2 筆紀錄。"));
   assertAllRows(files, entries);
+});
+
+test("silver-rabbit spelling and spacing variants produce one canonical row", () => {
+  const name = "銀兔湯咖哩 信義店";
+  const entries = [entry(name, "silver-rabbit", name), ...["銀兔湯咖哩信義店", "銀兔湯咖喱 信義店", "銀兔湯咖喱信義店"].map((alias) => entry(alias, "silver-rabbit", name, "aliases", alias))];
+  const files = build(entries);
+  const group = follow(files, ROOT, "銀");
+  assert.equal(links(files, group).filter((link) => link.target === "records/silver-rabbit.html").length, 1);
+  assert.equal(follow(files, group, name), "records/silver-rabbit.html");
+  assertAllRows(files, entries);
+  assert.deepEqual([...files], [...build([...entries].reverse())]);
+});
+
+test("separate branches, SKUs and same-name people are never merged by display name", () => {
+  const entries = [{ key: "相同名稱", matches: [match("branch-one", "相同名稱"), match("branch-two", "相同名稱"), match("sku-one", "相同名稱"), match("person-one", "相同名稱"), match("person-two", "相同名稱")] }];
+  const files = build(entries);
+  assert.equal(assertGraph(files).length, 5);
+  assertAllRows(files, entries);
+});
+
+test("every real record and lookup key remains reachable without repeated rows", () => {
+  const records = compileRecords();
+  const before = JSON.stringify(records);
+  const byKey = new Map();
+  for (const record of records) for (const { key, field, value } of identityTerms(record)) {
+    if (!byKey.has(key)) byKey.set(key, { key, matches: [] });
+    byKey.get(key).matches.push(match(record.id, record.name, field, value));
+  }
+  const entries = [...byKey.values()];
+  const files = build(entries);
+  assertAllRows(files, entries);
+  const ids = new Set(assertGraph(files).map((row) => row[1]));
+  assert.equal(ids.size, records.length);
+  assert.equal(JSON.stringify(compileRecords()), before);
 });
 
 test("small leaves list all names directly instead of splitting every shared prefix", () => {
@@ -214,8 +289,8 @@ test("large roots paginate without dropping or duplicating any initial or result
   assertAllRows(files, entries, budget);
 });
 
-test("large unsplittable collisions paginate every field and same-name record exactly once", () => {
-  const entries = [{ key: "collision", matches: Array.from({ length: 85 }, (_, index) => match(`collision-${index}`, "同一名字", index % 2 ? "aliases" : "name", "COLLISION")) }];
+test("large unsplittable collisions deduplicate fields before paginating distinct records", () => {
+  const entries = [{ key: "collision", matches: Array.from({ length: 85 }, (_, index) => [match(`collision-${index}`, "同一名字", "name", "COLLISION"), match(`collision-${index}`, "同一名字", "aliases", "Collision")]).flat() }];
   const budget = 1200;
   const files = build(entries, { maxPageBytes: budget });
   const first = follow(files, ROOT, "C");
@@ -308,6 +383,7 @@ test("input validation rejects unsafe paths, invalid counts, and non-Buffer rend
   assert.throws(() => build([{ key: "", matches: [] }]), /nonempty/u);
   assert.throws(() => build([entry("a", "a"), entry("a", "b")]), /Duplicate catalog key/u);
   for (const id of ["../escape", "/absolute", "a/b", "bad\"attribute", "a\\b"]) assert.throws(() => build([entry("a", id)]), /unsafe recordId/u);
+  assert.throws(() => build([entry("a", "same-id", "Name one"), entry("b", "same-id", "Name two")]), /Conflicting catalog record name/u);
   for (const recordCount of [-1, 0, 0.5, NaN, Infinity]) assert.throws(() => build([entry("a", "a")], { recordCount }), /recordCount/u);
 });
 

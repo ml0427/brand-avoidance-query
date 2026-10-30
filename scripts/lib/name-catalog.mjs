@@ -19,11 +19,24 @@ function sectionFor(character) {
   return 3;
 }
 
+const FIELD_RANK = new Map([["name", 0], ["aliases", 1], ["identifiers", 2]]);
+const fieldRank = (field) => FIELD_RANK.get(field) ?? 3;
+const compareMatch = (left, right) => fieldRank(left.field) - fieldRank(right.field) ||
+  compareUtf8(left.key, right.key) || compareUtf8(left.value, right.value) || compareUtf8(left.field, right.field);
+
 function matchRows(entries) {
-  return entries.flatMap((entry) => entry.matches.map((match) => ({
+  const representatives = new Map();
+  for (const { key, matches } of entries) {
+    for (const match of matches) {
+      const candidate = { ...match, key };
+      const previous = representatives.get(match.recordId);
+      if (!previous || compareMatch(candidate, previous) < 0) representatives.set(match.recordId, candidate);
+    }
+  }
+  return [...representatives.values()].sort((left, right) => compareUtf8(left.key, right.key) || compareUtf8(left.recordId, right.recordId)).map((match) => ({
     section: "",
-    render: (file, branch) => `<li data-key="${escapeHtml(entry.key)}" data-match-field="${escapeHtml(match.field)}" data-record-name="${escapeHtml(match.name)}"><span class="tree-branch" aria-hidden="true">${branch}</span><span class="tree-label"><a href="${escapeHtml(relativeHref(file, `records/${match.recordId}.html`))}">${escapeHtml(match.value)}</a>${match.name !== match.value ? ` <small>(${escapeHtml(match.name)})</small>` : ""}</span></li>`,
-  })));
+    render: (file, branch) => `<li data-key="${escapeHtml(match.key)}" data-match-field="${escapeHtml(match.field)}" data-record-name="${escapeHtml(match.name)}"><span class="tree-branch" aria-hidden="true">${branch}</span><span class="tree-label"><a href="${escapeHtml(relativeHref(file, `records/${match.recordId}.html`))}">${escapeHtml(match.value)}</a>${match.name !== match.value ? ` <small>(${escapeHtml(match.name)})</small>` : ""}</span></li>`,
+  }));
 }
 
 function renderRows(rows, file) {
@@ -52,7 +65,7 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
   }
   if (!Array.isArray(entries)) throw new TypeError("entries must be an array");
   const keys = new Set();
-  const records = new Set();
+  const records = new Map();
   for (const entry of entries) {
     if (typeof entry?.key !== "string" || !entry.key || !Array.isArray(entry.matches) || !entry.matches.length) {
       throw new TypeError("Each catalog entry needs a nonempty key and matches");
@@ -64,7 +77,10 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
           [match.name, match.field, match.value].some((value) => typeof value !== "string")) {
         throw new TypeError("Invalid catalog match or unsafe recordId");
       }
-      records.add(match.recordId);
+      if (records.has(match.recordId) && records.get(match.recordId) !== match.name) {
+        throw new Error(`Conflicting catalog record name: ${match.recordId}`);
+      }
+      records.set(match.recordId, match.name);
     }
   }
   const totalRecords = recordCount ?? records.size;

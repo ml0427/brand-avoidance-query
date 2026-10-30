@@ -15,7 +15,12 @@ This skill queries existing records; it does not authorize adding or publishing 
 Open `https://ml0427.github.io/brand-avoidance-query/` and follow the name catalog.
 Choose the visible A-Z, Chinese first-character, digit or other-character link,
 then any longer matching prefix. For example, 文姿雲 follows 文 to the full name.
-Aliases and identifiers use the same navigation. Open every matching record and
+Aliases and identifiers use the same navigation. Each catalog node, including
+its continuation pages, shows one representative per recordId: name, else alias,
+else identifier. Other variants remain in the full record and JSON indexes.
+If an alias is not printed, inspect candidate records under its prefix before
+claiming no-match; do not require the representative text to equal the query.
+Different recordIds with the same name are retained. Open every matching record and
 read the full reasons and scope; a list entry alone is not an avoidance conclusion.
 Do not calculate UTF-8 ranges or invent catalog URLs. Follow actual links and
 all indicated continuation pages. The catalog is an indented text tree. Independent
