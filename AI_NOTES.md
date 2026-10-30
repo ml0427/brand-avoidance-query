@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-30｜首頁司法案件捷徑與同來源分類目錄
+
+- 收尾：單輪獨立verifier PASS、must-fix 0；完整gate來源1,654筆／warnings0／errors0、Node87/87、Python32/32、真實build與site validator3,954檔全部通過。實際遍歷178筆分類紀錄、8個司法目錄頁（最大65,378 bytes）、loopback HTTP188次讀取均成功；178不是人數或案件數。1,654筆來源全值含陣列順序不變，3,942份舊snapshot bytes保真。主控核report SHA、真實gate logs、179個tracked及3個untracked hashes、穩定diff與空index，並親讀首頁實際版本化link；reviewer report為同task `homepage-review/report.json`，SHA-256 `4c0ceb32658d1f6a89cf4a9bad26b106b104873f8594e99e6234fb669343e81f`。以下不完整gate／不build／不發布為writer階段邊界；限定六檔提交推送及遠端精確commit/blob讀回以Git與同task `homepage-release/publish-report.json`為準。不查Pages；此功能PASS不代表438人查核完成。
+
+- 首頁增加「司法案件」普通連結；generateSite 從同一 compileRecords 編譯結果派生 judicial HTML 目錄並納入既有 snapshot／inventory hash／v1版本路徑，不另建案件事實表，不改 manifest/schema 或 JSON 名稱查詢語意。精確白名單只含既有「司法／人物案件」「司法／企業案件」「司法／公眾人物」，不靠摘要關鍵字或 confirmed 推定犯罪，不將政治名冊全員列入。
+- 首頁及每個司法目錄頁均明示：「司法相關分類不代表全是被告、有罪或定讞；具體角色及最新已核程序請讀完整紀錄；舊紀錄不是本輪新複查完成。」各列保留完整正式名稱與完整摘要、直接連既有完整record HTML；程序、角色、來源限制與日期仍讀該筆 aiNotes／sources.note／來源，不發明判決或今日進度。此功能不代表本輪438人逐一查核已完成。
+- 全部視圖與個別分類各自於分頁前按recordId去重，同名不同ID保留、跨分類可重複；按名稱UTF-8與ID穩定排序。以實際最終HTML bytes維持既有65,536上限、明示上下頁／結束及普通連結全可達；空分類保留真實空狀態。單筆完整摘要超預算時明確失敗，不截斷或靜默漏列。
+- TDD實跑先RED：9項中8項因缺捷徑／helper失敗、既有record保真1項通過；最小實作後9/9 GREEN。另跑ai-site／name-catalog／external-reference／compile-records及本次tests的局部套件，實際結果與log見當前profile tasks/public-case-audit-20261030/homepage-writer-report.json；site-validator整合只驗合成快照暫存，不寫正式_site。
+- 寫前HEAD、179個tracked hashes、status／index entries／cached diff、1654筆compiled全值含序及舊生成快照各檔hash存同task的homepage-baseline/；Kevin既有untracked PNG hash亦保存。最終保真與記憶體generateSite的舊snapshot逐檔hash核對，以同report實測為準。只動builder、新目錄helper／tests、reader contract、README與本次筆記，不改data/records、個人理由、來源、圖片或public-evidence；不重設lastReviewed。
+- 本子任務不跑npm ci／完整gate、不正式build、不stage／commit／push／發布、不查Pages，不新增package版號或Tauri腳本；完整gate及實體build交主控後續單次獨立verifier。局部通過不能稱完整驗收或已上線。
+- 耐久批次索引：使用者本輪438人，附件只是待複核線索，檔名不是查核截止日。task根為 `D:/AI_workspace/.hermes/profiles/amagi-line/tasks/public-case-audit-20261030`；接續依 `RUNBOOK.md`／`queue.json`／`CHECKLIST.md`／`CONTROL.json`，逐人研究報告存 `results/`，佇列工具為 `audit_queue.py`。耐久cron `07dc56a70a68` 每20m接續5人；`CONTROL.repo_writes_allowed=false` 直到主控首批發布驗收。20人初批研究尚未全完成，不把新目錄描述成438人已新查完；本次程式改動範圍保留所有舊案來源不變。
+
 ## 2026-10-30｜香港牛奶冰室高雄籌備門市最小personal
 
 - 收尾：單輪獨立verifier PASS、無must-fix；完整gate來源1,654筆／warnings0／errors0、Node78/78、Python32/32、實際build與site validator3,946檔均通過。3正查、37負查、4 partial及本機manifest reader44項與matchedTerms通過；舊1,653筆逐值含序不變，全站1,654份完整record JSON與來源相同。主控核179個tracked hashes、穩定diff、空index並親讀實跑log及來源diff。reviewer/report.json位於當前profile scratch/hk-milkcafe-20261030，SHA-256 `0f1e242f936acd8e80e5fd5dd906e4a31b486d81090c1ffeda6fad81e9e90b2a`。以下不build／不發布為writer階段限制；限定兩檔提交推送與遠端精確commit/blob讀回以Git及publish-report.json為準，不另查Pages。

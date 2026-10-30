@@ -78,6 +78,37 @@ juice products have been enumerated. HTML-only reading does not by itself prove
 byte/hash verification; disclose truncation, missing pages or version uncertainty
 rather than reporting a complete miss. The JSON reader contract is unchanged.
 
+## Browser-Only Judicial Category Discovery
+
+The root homepage and llms.txt expose a separate ordinary link named 司法案件.
+It leads to the same versioned snapshot's judicial/index.html, included in the
+existing inventory bytes/SHA-256 system, not an external site or a new JSON API.
+The manifest and JSON identity-query schemas and semantics are unchanged.
+
+This directory selects only exact existing compiled categories: 司法／人物案件,
+司法／企業案件 and 司法／公眾人物. Do not infer membership from summary keywords,
+confirmed status, political rosters or another person's case. It is not a complete
+judicial case registry or evidence that any ongoing person-by-person audit has
+finished. The homepage and every directory page explicitly state:
+「司法相關分類不代表全是被告、有罪或定讞；具體角色及最新已核程序請讀完整紀錄；舊紀錄不是本輪新複查完成。」
+
+Follow actual links to the all-records view or individual category views. Each row
+links the complete canonical name to the existing complete record HTML and shows
+its full source summary, without synthesizing a verdict, role or latest procedure.
+Read that complete record's aiNotes, sources.note, dates and sources for procedural
+and evidence limits. The directory neither creates case-fact records nor changes
+lastReviewed, personal reasons, sources or any existing record/index bytes.
+
+Each view, across its whole pagination chain, deduplicates by recordId before
+pagination and retains same-name records with different IDs. A record belonging
+to multiple categories can appear in each category; the all-records view lists it
+once. Rows sort deterministically by UTF-8 canonical name then recordId. HTML pages
+share the 65536-byte budget with explicit previous/next links and an end marker;
+all pages are reachable without JavaScript. A summary too large for one page fails
+the build rather than being truncated. Empty categories remain linked with a true
+empty state, not a claim of innocence, safety or completed review. HTML reading
+alone does not establish bytes/SHA-256 verification or latest external progress.
+
 ## Deterministic Publication
 
 canonical JSON is UTF-8, LF-terminated, with object keys sorted by UTF-8 bytes and array order preserved. Versioned artifacts contain relative links and no build clock, source commit or self-referencing dataVersion. inventory.json is `{schemaVersion:1, files:[{path,sha256,bytes}]}` sorted by relative UTF-8 path and does not list itself. Mutable root manifest/entry files are generated after the content hash is known. Only the current version is deployed.

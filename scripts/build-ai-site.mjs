@@ -5,6 +5,7 @@ import { pathToFileURL } from "node:url";
 import { compileRecords } from "../data/compile-records.mjs";
 import { identityTerms } from "../app-core.mjs";
 import { buildNameCatalog } from "./lib/name-catalog.mjs";
+import { buildJudicialCatalog, JUDICIAL_CATALOG_ROOT, JUDICIAL_NOTICE } from "./lib/judicial-catalog.mjs";
 import { ROOT, SHARD_LIMIT, compareUtf8, jsonBytes, sha256, descriptor, safeRelativePath, loadSchemas } from "./lib/site-format.mjs";
 
 export const PUBLIC_RESOURCES = [
@@ -139,6 +140,9 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
   for (const [file, bytes] of buildNameCatalog(entries, { renderPage: html, recordCount: records.length })) {
     snapshot.set(file, bytes);
   }
+  for (const [file, bytes] of buildJudicialCatalog(sortedRecords, { renderPage: html })) {
+    snapshot.set(file, bytes);
+  }
   const schemas = {};
   for (const [name, schema] of Object.entries(loadSchemas())) {
     const file = `schemas/${name}.schema.json`;
@@ -160,7 +164,7 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
   files.set(`${prefix}inventory.json`, inventory);
   files.set("manifest.json", jsonBytes(manifest));
   const resources = PUBLIC_RESOURCES.map((item) => `<li><a href="${escapeHtml(item.url)}" rel="noreferrer">${escapeHtml(item.title)}</a></li>`).join("");
-  files.set("index.html", html("品牌／公眾人物風險資料", `<h1>品牌／公眾人物風險資料</h1><p>個人風險偏好與公開來源備忘，不是法院判決、官方黑名單或所有品項的事實定論。</p><nav><a href="manifest.json">資料版本 JSON</a><a href="${manifest.catalog.url}">完整名稱目錄</a><a href="llms.txt">AI 讀取契約</a></nav><p>紀錄：${records.length}；資料版本：<code>${dataVersion}</code></p><dl><dt>personal</dt><dd>個人避買／避開選擇，不等於客觀不當或違法。</dd><dt>watchlist</dt><dd>觀察中，需保留脈絡及不確定性。</dd><dt>confirmed</dt><dd>來源支持所列特定理由，不等於法律定罪或全品牌適用。</dd></dl><h2>外部查核資源</h2><ul>${resources}</ul>`, "llms.txt"));
+  files.set("index.html", html("品牌／公眾人物風險資料", `<h1>品牌／公眾人物風險資料</h1><p>個人風險偏好與公開來源備忘，不是法院判決、官方黑名單或所有品項的事實定論。</p><nav><a href="manifest.json">資料版本 JSON</a><a href="${manifest.catalog.url}">完整名稱目錄</a><a href="${prefix}${JUDICIAL_CATALOG_ROOT}">司法案件</a><a href="llms.txt">AI 讀取契約</a></nav><p>${JUDICIAL_NOTICE}</p><p>紀錄：${records.length}；資料版本：<code>${dataVersion}</code></p><dl><dt>personal</dt><dd>個人避買／避開選擇，不等於客觀不當或違法。</dd><dt>watchlist</dt><dd>觀察中，需保留脈絡及不確定性。</dd><dt>confirmed</dt><dd>來源支持所列特定理由，不等於法律定罪或全品牌適用。</dd></dl><h2>外部查核資源</h2><ul>${resources}</ul>`, "llms.txt"));
   files.set("llms.txt", Buffer.from(`# Brand Avoidance Query
 
 > 使用者個人避開紀錄與公開來源備忘；不是法律定論。
@@ -174,6 +178,12 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
 同一目錄節點及其分頁每個recordId只列一次，優先正式名稱，其次該字頭別名、識別碼；不同ID即使同名仍分開。不同名稱可跨字頭找到同筆，例如Cheap／鄭才暐保留C／鄭兩入口，不是全目錄只留一次。完整別名／識別保留在JSON索引與單筆紀錄，目錄未列出別名字面不等於無命中，需開啟該字頭候選紀錄核對。
 
 僅目錄導覽略過開頭的書名號、左括號與起始引號（Unicode Ps／Pi）、ASCII單雙引號及空白；若無剩餘內容則保留原鍵。接著僅略過緊接Unicode字母、數字或底線的單一開頭@。《功夫道長》選「功」，《陽光女子合唱團》選「陽」，@cheapaoe選C。單獨@、@@、內嵌@、#、+、點等不略過，完整名稱與帳號照常顯示；JSON查詢鍵及精準比對不受這項目錄規則影響。
+
+## 司法分類探索（本站無 JS 目錄）
+
+從[司法案件](${prefix}${JUDICIAL_CATALOG_ROOT}) 讀取全部司法相關紀錄或既有「司法／人物案件」「司法／企業案件」「司法／公眾人物」分類，只有分類精確符合的紀錄列入，不靠摘要關鍵字或 confirmed 狀態推定犯罪。每列保留完整名稱、完整摘要及完整單筆 HTML 的實際連結；有下一頁時循連結讀至結束，不猜路徑。全部視圖及每一分類視圖各自依 recordId 去重，同名不同 ID 保留；分類間可重複出現同筆。
+
+${JUDICIAL_NOTICE} 新增分類導覽不代表已逐人重新複查，也不是司法機關全量案件名冊；未列入不等於清白。程序、角色及來源限制以完整紀錄與其實際來源為準，分類導覽不改 JSON 名稱查詢語意；HTML 閱讀本身不代表已驗證 bytes／SHA-256。
 
 ## 可以執行 reader
 
