@@ -19,6 +19,47 @@ import { splitRecord } from "../split-record.mjs";
 
 export const records = [
   record({
+    id: "famous-house-packaging-personal-20261030",
+    name: "名屋",
+    aliases: ["Famous House", "名屋食品廠產業股份有限公司"],
+    identifiers: [],
+    country: "",
+    categories: ["食品飲料"],
+    avoidReasons: ["使用者不接受圖中牛奶花生容易混淆的包裝呈現，選擇名屋品牌個人避買"],
+    confidence: "medium",
+    status: "personal",
+    summary: "使用者不接受截圖中名屋牛奶花生與愛之味牛奶花生容易混淆的包裝呈現，明示選擇個人避買名屋品牌。這是使用者的視覺與消費判斷，事由只涉及圖示牛奶花生，不宣稱名屋每款商品包裝相同。官方頁面僅橋接名屋、Famous House、名屋食品廠產業股份有限公司及牛奶花生商品身分，不證明買錯事實、抄襲、侵權、違法、食安問題或中國產地；不將愛之味、發文者或留言者列為避雷對象。",
+    sources: [
+      {
+        title: "使用者提供的牛奶花生包裝比較截圖與名屋個人避買指示",
+        url: "",
+        date: "",
+        note: "2026-10-30檢視使用者提供圖片；僅作使用者視覺與消費判斷的intake，不冒充公開原文或證明實際買錯。Threads原貼永久連結、絕對發文時間及完整回覆未取得，不由相對時間推算發文日期。原圖不公開、不複製入repo。官網僅身分橋接，不證買錯事實或抄襲。"
+      },
+      {
+        title: "名屋官方中文商品頁｜牛奶花生（顆粒）",
+        url: "https://www.famoushouse.com.tw/product-S004.html",
+        date: "",
+        note: "2026-10-30由研究代理以真實瀏覽器查取，writer讀取保存節錄並核hash；頁面列牛奶花生(顆粒)與名屋食品廠產業股份有限公司。僅橋接商品與品牌營運身分，不證買錯事實、抄襲或其他指控；官網S004的320g不證圖中實罐容量，也不作品牌識別鍵。發布日期未知。"
+      },
+      {
+        title: "名屋官方英文商品頁｜Milk Peanut Soup",
+        url: "https://www.famoushouse.com.tw/webls-en-us/product-S004.html",
+        date: "",
+        note: "2026-10-30由研究代理以真實瀏覽器查取，writer讀取保存節錄並核hash；英文同SKU頁列Milk Peanut Soup、Famous House及公司英文名稱。僅橋接中英文品牌與商品身分，不證買錯事實、抄襲、圖中容量或所有品項相同；發布日期未知。"
+      },
+      {
+        title: "名屋官方品牌簡介｜名屋與營運公司",
+        url: "https://www.famoushouse.com.tw/msg/About.html",
+        date: "",
+        note: "2026-10-30由研究代理以真實瀏覽器查取，writer讀取保存節錄並核hash；品牌名屋與名屋食品廠產業股份有限公司同頁出現。公司全名僅作同一品牌營運身分橋接，非額外個別target；不證買錯事實或抄襲，不延伸股權、產地或法律責任；發布日期未知。"
+      }
+    ],
+    aiNotes: "personal／medium指使用者明示的名屋品牌避買及可確認身分，不是抄襲、侵權或買錯事實的可信度評分。官網僅身分橋接，不證買錯事實／抄襲；不推違法、食安、中國產地或每款包裝相同。Threads原貼URL、絕對時間及完整回覆未取，截圖只作使用者判斷，不冒充公開原文。僅name名屋及官方英文品牌／營運公司別名可搜尋，identifiers與country空；愛之味、牛奶花生泛稱、Threads、作者與留言者、事件理由或政黨均不是本筆搜尋鍵。原圖SHA-256 de1c976da1ab7953a5e2577035a1188ea6d4205b06a11008e01c3f7b5967a3a0，不公開、不複製入repo，不改public-evidence。",
+    lastReviewed: "2026-10-30"
+  }),
+
+  record({
     "id": "lam-heung-ling-china-brand-background-personal-20261014",
     "name": "林香檸",
     "aliases": [

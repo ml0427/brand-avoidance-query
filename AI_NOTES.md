@@ -1,5 +1,27 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-30｜名屋與涉賄選新聞收錄驗收
+
+- 單輪獨立verifier PASS，無must-fix；完整gate：npm ci、來源validate 1,653筆／warnings0／errors0、Node78/78、Python32/32、真實build3,944檔、site validator warnings0／errors0、diffcheck均通過。9對象11項正查及376項指定卡負查通過；全站1,653筆完整產物與compile逐值相同。
+- 相對HEAD baseline 1,645筆，本次新增8筆、補強陳重文本人personal卡1筆；其餘1,644筆含內部陣列順序不變，包括其舊案一審卡及其他355名冊成員。台碩只有內部待核筆記，無公開target；原圖、新聞全文及Kevin既有未追蹤圖未發布。
+- 主控親讀三來源diff與名屋精準命中，核對reviewer報告、五項關鍵命令真實log、179個tracked hashes、空index及穩定diff。報告為當前profile scratch/election-intake-20261030/reviewer/report.json，SHA-256 3cf9436e04980425423c60171db679987aea636f80f767dd82a552b6aefd5202；compiled SHA-256 c516401f41337279a81aea35c317f7189a75039a524f39969b41e3ccd8456ed2。以下未完整gate／不發布均指writer階段限制；最終限定四檔提交推送與遠端精確commit/blob讀回以Git及publish-report.json為準，不另查Pages。
+
+## 2026-10-30｜名屋品牌包裝觀感個人避買（writer階段）
+
+- 使用者明示「名屋避雷」並提供圖片；只新增名屋品牌 `famous-house-packaging-personal-20261030`，personal／medium。主因是使用者不接受圖中名屋牛奶花生與愛之味牛奶花生容易混淆的包裝呈現，屬視覺與消費判斷，不宣稱實際買錯已核實、抄襲、侵權、違法、食安、中國產地或每款包裝相同。愛之味、發文者及留言者不列target。
+- writer親讀研究報告內3份必要節錄；官網僅橋接名屋／Famous House／名屋食品廠產業股份有限公司及牛奶花生(顆粒)／Milk Peanut Soup，不證買錯事實／抄襲。官網S004 320g不證圖中容量，不作整品牌識別鍵；來源日期空白，note記2026-10-30查取。查詢鍵只有品牌名及同一品牌營運橋接兩別名，identifiers／country空；不收產品泛稱、事件、作者、政黨或其他品牌為鍵。
+- 來源packet：`D:/AI_workspace/.hermes/profiles/amagi-line/cache/scratch/mingwu-packaging-20261030/research/report.json`，SHA-256 `a6cbc89241a6506c5db85be3be4b071072a08381c17171738f6a6fd101df3157`；中文商品／英文商品／品牌簡介必要節錄UTF-8 SHA-256依序 `61579265626890a10709931b776981242f0cc1cb4b45e92e3c270fcd87882dd2`、`6d5081dd1871d3cf151fc25f495a315acd93cb49cc75172ffcc2ba79caf4b927`、`e51977ba3913d1b053a555638b6f410fa2834e21b84425595b276d1a974d7fed`，非完整HTML雜湊。原圖 `img_cc342215ce4b.jpeg` SHA-256 `de1c976da1ab7953a5e2577035a1188ea6d4205b06a11008e01c3f7b5967a3a0`，只留profile，不公開、不複製入repo、不改public-evidence。Threads原貼URL、絕對時間及完整回覆未取，不回推相對時間，不冒充公開原文，不查存稅號與非必要個資。
+- 台碩內部待核，無公開紀錄：原帖未取回，短名／印章全名未橋接，後續未知；只留intake，不是指控事實，不加入搜尋target。
+- 寫前HEAD／tracked hashes／status／index／compiled baseline及Kevin既有untracked hash存同profile `mingwu-packaging-20261030/writer/`，不覆蓋election baseline。保留已完成賄選8對象及原筆記；本輪只改食品來源一檔與本節，局部編譯冪等、schema、三鍵正查／限定名屋負查及其餘1652筆逐值含序保真結果見writer/report.json；完整gate交主控獨立執行。不build／stage／commit／push、不改版本、程式或產物。
+
+## 2026-10-30｜10月29日涉賄選新聞：8對象獨立personal（writer階段）
+
+- 承接使用者「避雷啊，等什麼？」授權，只補本次案；writer階段限定不自行發布。陳重文既有本人personal卡 `kmt-council-list-2026-06-26-9673-91cd-6587` 僅在judicial-politics-lists的該成員override補理由、來源、aiNotes及2026-10-30複查日，保留原名冊與時點邊界；舊案一審卡 `chen-chungwen-corruption-first-instance` 不改。未將新案加到356人共用欄位。
+- public-figures-politics新增廖宜琨、許家豪、許榮德、何加忻、林耀明、陳柏旭、正神名黨7張獨立卡，全為personal／medium；連同陳重文共8對象。name純名、aliases／identifiers空，不互為搜尋鍵，不擴其他黨員、其他政黨、蘇巧慧、檢察官或背景人物。組織卡不宣稱全員涉案；medium只指具名媒體支撐窄幅事實，不是有罪機率。
+- writer親讀研究代理report及公視／中央社3篇保存正文，核對SHA-256及各claim；取文者為研究代理Python urllib，writer未自行直接open。公視保留陳重文否認；廖採中央社2026-10-29 20:21更新的50萬元交保與限制住居、出境出海，保留本人長期常態服務及相信清白說法，不將較早聲押當仍羈押。許家豪具名僅依公視；中央社同案同職「許男」10萬元交保保留全名橋接缺口，不冒稱CNA具名確認。何／林／陳柏旭具名依公視，CNA僅姓氏角色；陳柏旭只採本次參選脈絡，不推現任。均不推犯罪已證、有罪或定讞。
+- 正文SHA-256依序：公視 `7d62531485b5c7a39175bd99d193f067fd36e234cfc815696e66c402df4c7685`；CNA廖案 `f47d77d50f5408275ba1d1548b2e89a008a8419c33e0806f2fa023bb6211e3ae`；CNA正神名黨案 `498585b3118095dba9345bd05338cf2f76de8d12bf5367d2e30775e561ad1e69`。研究原圖及新聞全文僅存profile scratch，不公開、不入repo，不查存稅號或非必要個資。
+- 寫前HEAD、tracked hashes、compiled baseline、status／空index及Kevin既有untracked PNG hash保存在當前profile scratch `election-intake-20261030/writer/`。本輪限compile、schema、8對象正負查、其他舊筆逐值含序保真、語法與diffcheck；實際結果、命令與hash見同處report.json。完整gate待其他writer串行完成後由主控統一review；本輪不stage／commit／push／build／發布，不查Pages、不改版本或程式。
+
 ## 2026-10-30 帳號字頭與跨名稱入口
 
 - 使用者確認Cheap／鄭才暐應保留C、鄭兩個入口，@cheapaoe不應集中在@組。主代理先前提議全目錄只留主名稱並不符合需求，已撤回；正確規則是同節點及其分頁按recordId去重，不刪除其他名稱的跨字頭入口，不改來源人物姓名。
