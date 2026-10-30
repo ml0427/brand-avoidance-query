@@ -49,15 +49,18 @@ The root website and llms.txt link to the current catalog. Its A-Z, Han-characte
 digit and other-character links use visible name prefixes, not UTF-8 range labels.
 For HTML routing only, skip a leading run of Unicode opening punctuation (Ps),
 initial quotes (Pi), ASCII single/double quotes and whitespace. Keep the original
-key if nothing remains. Thus 《功夫道長》 follows 功 and 《陽光女子合唱團》 follows 陽,
-while @, #, +, dots and other meaningful symbols are retained. This does not
-change exact-match normalization, JSON keys, record fields or visible names.
+key if nothing remains. Then skip one leading @ only when immediately followed
+by a Unicode letter, number or underscore. Thus 《功夫道長》 follows 功,
+《陽光女子合唱團》 follows 陽 and @cheapaoe follows C. A lone @, @@, embedded @,
+#, +, dots and other symbols are retained. This does not change exact-match
+normalization, JSON keys, record fields or visible names.
 Follow the resulting first character, then any longer matching content prefix,
 and open every exact-name/alias/identifier collision's complete record page.
 Each catalog node (including its pagination chain) lists each recordId only once.
 Its representative is a name match when present, otherwise an alias, then an
 identifier. Different recordIds are never merged by equal display names. The
-same record may remain reachable through different prefix branches. All lookup
+same record remains reachable through its different name/alias prefix branches:
+Cheap and 鄭才暐 retain both C and 鄭 entries, not one global representative. All lookup
 keys stay in the JSON indexes and full record; they are not all printed in the
 catalog. A missing literal alias in a catalog is not a no-match: open candidate
 records in the relevant branch and verify their complete identity fields.

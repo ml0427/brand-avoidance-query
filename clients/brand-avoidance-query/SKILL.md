@@ -18,11 +18,13 @@ then any longer matching prefix. For example, 文姿雲 follows 文 to the full 
 For catalog routing only, skip leading opening brackets/title marks (Unicode Ps),
 initial quotes (Pi), ASCII single/double quotes and whitespace; retain the
 original key if nothing remains. 《功夫道長》 follows 功 and 《陽光女子合唱團》 follows 陽.
-Keep meaningful @, #, + and dot prefixes. Display names and JSON exact keys are
-unchanged; do not apply this catalog rule to exact-match queries.
+Next skip one leading @ only before a Unicode letter, number or underscore:
+@cheapaoe follows C. Keep lone @, @@, embedded @, #, + and dot prefixes. Display
+names and JSON exact keys are unchanged; do not apply this rule to exact queries.
 Aliases and identifiers use the same navigation. Each catalog node, including
 its continuation pages, shows one representative per recordId: name, else alias,
-else identifier. Other variants remain in the full record and JSON indexes.
+else identifier. Deduplication is per node, not global: Cheap and 鄭才暐 retain
+both C and 鄭 entry points. Other variants remain in the full record and JSON indexes.
 If an alias is not printed, inspect candidate records under its prefix before
 claiming no-match; do not require the representative text to equal the query.
 Different recordIds with the same name are retained. Open every matching record and

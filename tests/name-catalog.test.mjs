@@ -84,7 +84,8 @@ function assertAllRows(files, entries, budget) {
     return cache.get(file);
   };
   for (const { key, matches } of entries) {
-    const route = key.replace(/^[\p{Ps}\p{Pi}"'\s]+/u, "") || key;
+    const unwrapped = key.replace(/^[\p{Ps}\p{Pi}"'\s]+/u, "") || key;
+    const route = unwrapped.replace(/^@(?=[\p{L}\p{N}_])/u, "");
     const first = Array.from(route)[0];
     const label = /^[a-z]$/u.test(first) ? first.toUpperCase() : first;
     const initial = nodeLinks(ROOT).filter((link) => link.label === label);
@@ -140,7 +141,7 @@ test("root separates A-Z, Chinese initials, numbers, and other text or symbols",
   const files = build(entries);
   const root = content(files);
   for (const section of ["A-Z", "中文首字", "數字", "其他文字／符號"]) assert(root.includes(`${section}</h2>`));
-  for (const label of ["A", "Z", "文", "7", "@", "é"]) assert(files.has(follow(files, ROOT, label)));
+  for (const label of ["A", "Z", "S", "文", "7", "é"]) assert(files.has(follow(files, ROOT, label)));
   assert(root.indexOf("A-Z") < root.indexOf("中文首字"));
   assert(root.indexOf("中文首字") < root.indexOf("數字"));
   assert(root.indexOf("數字") < root.indexOf("其他文字／符號"));
@@ -164,8 +165,8 @@ test("opening title marks, quotes and brackets route by content without changing
   assert.deepEqual([...files], [...build([...entries].reverse())]);
 });
 
-test("meaningful symbols and wrapper-only keys remain explicit catalog initials", () => {
-  const keys = ["@account", "#channel", "+brand", ".net", "-brand", "/path", "&brand", "★brand", "《", "「", "'", "\""];
+test("non-handle symbols and wrapper-only keys remain explicit catalog initials", () => {
+  const keys = ["@", "@@account", "@-brand", "@.brand", "#channel", "+brand", ".net", "-brand", "/path", "&brand", "★brand", "《", "「", "'", "\""];
   const entries = keys.map((key, index) => entry(key, `symbol-${index}`));
   const files = build(entries);
   for (const [index, key] of keys.entries()) {
@@ -174,10 +175,41 @@ test("meaningful symbols and wrapper-only keys remain explicit catalog initials"
   assertAllRows(files, entries);
 });
 
+test("handle routing keeps both Latin and Chinese name entry points without duplicate rows", () => {
+  const name = "Cheap / 鄭才暐";
+  const entries = [entry("cheap / 鄭才暐", "cheap", name), ...["Cheap", "鄭才暐", "cheapaoe", "@cheapaoe"].map((alias) => entry(alias.toLowerCase(), "cheap", name, "aliases", alias))];
+  const before = structuredClone(entries);
+  const files = build(entries);
+  assert(!links(files, ROOT).some((link) => link.label === "@"));
+  const latin = follow(files, ROOT, "C");
+  const chinese = follow(files, ROOT, "鄭");
+  assert.equal(follow(files, latin, name), "records/cheap.html");
+  assert.equal(follow(files, chinese, "鄭才暐"), "records/cheap.html");
+  for (const node of [latin, chinese]) assert.equal(links(files, node).filter((link) => link.target === "records/cheap.html").length, 1);
+  assertAllRows(files, entries);
+  assert.deepEqual(entries, before);
+  assert.deepEqual([...files], [...build([...entries].reverse())]);
+});
+
+test("one leading handle marker is skipped after wrappers without touching inner at signs", () => {
+  const values = ["@account", "@7studio", "@_under", "@éclair", "@𠀀甲", "「@文姿雲」", '"@mixed"', "alice@example.test"];
+  const initials = ["A", "7", "_", "é", "𠀀", "文", "M", "A"];
+  const entries = values.map((value, index) => entry(value, `handle-${index}`));
+  const files = build(entries);
+  for (const [index, value] of values.entries()) {
+    const group = follow(files, ROOT, initials[index]);
+    assert.equal(follow(files, group, value), `records/handle-${index}.html`);
+    assert(content(files, group).includes(`data-key="${escapeHtml(value)}"`));
+  }
+  assertAllRows(files, entries);
+});
+
 test("wrapped and bare routing collisions deduplicate only equal record IDs before pagination", () => {
   const entries = [
     { key: "alpha", matches: Array.from({ length: 35 }, (_, index) => match(`route-${index}`, `Alpha ${index}`)) },
     { key: "《alpha", matches: Array.from({ length: 35 }, (_, index) => match(`route-${index}`, `Alpha ${index}`, "aliases", "《alpha")) },
+    { key: "@alpha", matches: Array.from({ length: 35 }, (_, index) => match(`route-${index}`, `Alpha ${index}`, "aliases", "@alpha")) },
+    { key: "「@alpha", matches: Array.from({ length: 35 }, (_, index) => match(`route-${index}`, `Alpha ${index}`, "identifiers", "「@alpha")) },
   ];
   const budget = 1400;
   const files = build(entries, { maxPageBytes: budget });
@@ -189,7 +221,7 @@ test("wrapped and bare routing collisions deduplicate only equal record IDs befo
 
 test("wrapped names use content prefixes through crowded nested groups and terminal keys", () => {
   const entries = [entry("《a", "wrapped-terminal"), entry("a", "bare-terminal"), ...["a", "b", "c"].flatMap((letter) =>
-    Array.from({ length: 4 }, (_, index) => entry(`${index % 2 ? "《" : ""}alphabet${letter}${index}`, `wrapped-${letter}-${index}`)))];
+    Array.from({ length: 4 }, (_, index) => entry(`${["", "《", "@", "「@"][index]}alphabet${letter}${index}`, `wrapped-${letter}-${index}`)))];
   const budget = 1700;
   const files = build(entries, { maxPageBytes: budget });
   const group = follow(files, ROOT, "A");

@@ -11,8 +11,11 @@ const compareUtf8 = (a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b));
 const relativeHref = (file, target) => path.posix.relative(path.posix.dirname(file), target);
 const pageFile = (file, number) => number === 1 ? file : path.posix.join(path.posix.dirname(file), `page-${number}.html`);
 const slug = (character) => character.codePointAt(0).toString(16);
-// Display-only routing skips opening wrappers, never identity-key punctuation.
-const catalogKey = (key) => key.replace(/^[\p{Ps}\p{Pi}"'\s]+/u, "") || key;
+// Display-only routing skips wrappers and one handle prefix; identity keys stay intact.
+const catalogKey = (key) => {
+  const unwrapped = key.replace(/^[\p{Ps}\p{Pi}"'\s]+/u, "") || key;
+  return unwrapped.replace(/^@(?=[\p{L}\p{N}_])/u, "");
+};
 
 function sectionFor(character) {
   if (/^[a-zA-Z]$/u.test(character)) return 0;

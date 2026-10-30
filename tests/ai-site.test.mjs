@@ -152,7 +152,7 @@ test("HTML catalog and JSON index are independent views of the same identity key
   const rootLinks = pageLinks(site.files.get(root));
   assert(rootLinks.some((link) => link.text === "文"));
   assert(rootLinks.some((link) => link.text === "W"));
-  assert(rootLinks.some((link) => link.text === "@"));
+  assert(!rootLinks.some((link) => link.text === "@"));
   const entries = site.manifest.indexes.flatMap((shard) => JSON.parse(site.files.get(shard.url)).entries);
   assert.deepEqual(entries.map(({ key }) => key), ["@wen", "wen tzu-yun", "文姿雲"]);
   for (const [file, bytes] of site.files) {
@@ -196,4 +196,27 @@ test("title wrappers affect only HTML routing, not exact identity lookup or comp
   assert.deepEqual(JSON.parse(site.files.get(`${site.manifest.recordBase}wrapped-title.json`)).record, record);
   assert.equal(matchRecords([record], record.name).length, 1);
   assert.equal(matchRecords([record], "陽光女子合唱團").length, 0);
+});
+
+test("handles keep complete exact keys while their records remain under Latin and Chinese names", () => {
+  const record = sample("cheap", { name: "Cheap / 鄭才暐", aliases: ["Cheap", "鄭才暐", "@cheapaoe"], identifiers: [] });
+  const site = generateSite({ records: [record] });
+  const root = site.manifest.catalog.url;
+  const rootLinks = pageLinks(site.files.get(root));
+  assert(!rootLinks.some((link) => link.text === "@"));
+  for (const initial of ["C", "鄭"]) {
+    const link = rootLinks.find((link) => link.text === initial);
+    assert(link, initial);
+    const group = linkedFile(root, link.href);
+    const matches = pageLinks(site.files.get(group)).filter((link) => linkedFile(group, link.href) === `${site.manifest.recordBase}cheap.html`);
+    assert.equal(matches.length, 1);
+    assert.equal(matches[0].text, initial === "C" ? record.name : "鄭才暐");
+  }
+  const entries = site.manifest.indexes.flatMap((shard) => JSON.parse(site.files.get(shard.url)).entries);
+  assert(entries.some(({ key }) => key === "@cheapaoe"));
+  assert.deepEqual(JSON.parse(site.files.get(`${site.manifest.recordBase}cheap.json`)).record, record);
+  const hit = matchRecords([record], "@cheapaoe");
+  assert.equal(hit.length, 1);
+  assert(hit[0].matchedTerms.some(({ field, value }) => field === "aliases" && value === "@cheapaoe"));
+  assert.equal(matchRecords([record], "cheapaoe").length, 0);
 });
