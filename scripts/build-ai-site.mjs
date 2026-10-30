@@ -5,7 +5,7 @@ import { pathToFileURL } from "node:url";
 import { compileRecords } from "../data/compile-records.mjs";
 import { identityTerms } from "../app-core.mjs";
 import { buildNameCatalog } from "./lib/name-catalog.mjs";
-import { buildJudicialCatalog, JUDICIAL_CATALOG_ROOT, JUDICIAL_NOTICE } from "./lib/judicial-catalog.mjs";
+import { buildJudicialCatalog, JUDICIAL_CATALOG_ROOT, JUDICIAL_NOTICE, JUDICIAL_PARTY_NOTICE } from "./lib/judicial-catalog.mjs";
 import { ROOT, SHARD_LIMIT, compareUtf8, jsonBytes, sha256, descriptor, safeRelativePath, loadSchemas } from "./lib/site-format.mjs";
 
 export const PUBLIC_RESOURCES = [
@@ -181,7 +181,11 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
 
 ## 司法分類探索（本站無 JS 目錄）
 
-從[司法案件](${prefix}${JUDICIAL_CATALOG_ROOT}) 讀取全部司法相關紀錄或既有「司法／人物案件」「司法／企業案件」「司法／公眾人物」分類，只有分類精確符合的紀錄列入，不靠摘要關鍵字或 confirmed 狀態推定犯罪。每列保留完整名稱、完整摘要及完整單筆 HTML 的實際連結；有下一頁時循連結讀至結束，不猜路徑。全部視圖及每一分類視圖各自依 recordId 去重，同名不同 ID 保留；分類間可重複出現同筆。
+從[司法案件](${prefix}${JUDICIAL_CATALOG_ROOT}) 讀取全部司法相關紀錄或既有「司法／人物案件」「司法／企業案件」「司法／公眾人物」分類，只有分類精確符合的紀錄列入，不靠摘要關鍵字或 confirmed 狀態推定犯罪。每列保留完整名稱、完整摘要及完整單筆 HTML 的實際連結；有下一頁時循連結讀至結束，不猜路徑。全部視圖及每一分類視圖各自依 recordId 去重，同名不同 ID 保留；原三種司法分類間可重複出現同筆。
+
+司法目錄先列中國國民黨、民主進步黨、台灣民眾黨、其他政黨、無黨籍、未確認／未分類六個互斥政黨導覽，之後保留全部與原三分類。只對上述司法選集讀同筆 categories 中以「政黨／」開頭的不同完整字串；恰一項且精確為「政黨／中國國民黨」「政黨／民主進步黨」「政黨／台灣民眾黨」「政黨／其他政黨」「政黨／無黨籍」之一才入該組，無 tag、未支援值或多個不同 tag（含有效加未支援值）均列未確認／未分類；同 tag 重複不算衝突。不解析摘要、姓名、ID、名冊或關係人來猜黨，不自動把任意小黨 tag 當其他政黨。六組的紀錄 ID 聯集等於全部視圖，每筆只入一組；零筆仍有真實空頁。
+
+${JUDICIAL_PARTY_NOTICE}
 
 ${JUDICIAL_NOTICE} 新增分類導覽不代表已逐人重新複查，也不是司法機關全量案件名冊；未列入不等於清白。程序、角色及來源限制以完整紀錄與其實際來源為準，分類導覽不改 JSON 名稱查詢語意；HTML 閱讀本身不代表已驗證 bytes／SHA-256。
 

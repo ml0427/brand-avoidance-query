@@ -92,9 +92,39 @@ judicial case registry or evidence that any ongoing person-by-person audit has
 finished. The homepage and every directory page explicitly state:
 「司法相關分類不代表全是被告、有罪或定讞；具體角色及最新已核程序請讀完整紀錄；舊紀錄不是本輪新複查完成。」
 
-Follow actual links to the all-records view or individual category views. Each row
-links the complete canonical name to the existing complete record HTML and shows
-its full source summary, without synthesizing a verdict, role or latest procedure.
+Follow actual links to the six party views first, then the preserved all-records
+and three original judicial-category views. Party views partition only that same
+judicial selection, using the **same compiled record's categories**. Collect the
+distinct complete strings starting exactly with `政黨／`, without trimming or alias
+mapping. Exactly one distinct string must match one of these five tags:
+
+| View | Exact source tag | Directory under `judicial/` |
+| --- | --- | --- |
+| 中國國民黨 | 政黨／中國國民黨 | `party/kmt/` |
+| 民主進步黨 | 政黨／民主進步黨 | `party/dpp/` |
+| 台灣民眾黨 | 政黨／台灣民眾黨 | `party/tpp/` |
+| 其他政黨 | 政黨／其他政黨 | `party/other/` |
+| 無黨籍 | 政黨／無黨籍 | `party/independent/` |
+| 未確認／未分類 | missing, unsupported or conflicting tags | `party/unknown/` |
+
+Repeated copies of the same tag are not a conflict. Multiple distinct prefix tags,
+including a valid tag plus an unsupported tag, go only to unknown. An arbitrary
+small-party tag does not automatically mean other. The six views are mutually
+exclusive by recordId and their union equals all-records. No party is inferred
+from names, IDs, summary/source prose, political rosters, nomination, relatives or
+other people's roles. No tags are added by the renderer. Unknown is a navigation
+bucket, not an affiliation fact; untagged people and companies are not presumed
+independent or uniformly non-political.
+
+Source writers must support each explicit tag, including independent/other, with
+evidence for this subject at a stated source time in existing sources.note/aiNotes.
+The renderer does not extract dates from prose, use the newest source date or
+lastReviewed as affiliation dates, or treat historical affiliation as present-day
+or incident-time affiliation. Each judicial page also states:
+「政黨導覽只依本筆紀錄明確標籤及其來源時點分類，不代表即時黨籍、案發時黨籍或政黨責任；退黨、轉黨與來源日期請讀完整紀錄。未確認／未分類包含尚未核實、標籤衝突及公司等不適用對象，不等於無黨籍；本目錄不是各黨涉案人數或完整案件統計。」
+
+Each row links the complete canonical name to the existing complete record HTML
+and shows its full source summary, without synthesizing a verdict, role or latest procedure.
 Read that complete record's aiNotes, sources.note, dates and sources for procedural
 and evidence limits. The directory neither creates case-fact records nor changes
 lastReviewed, personal reasons, sources or any existing record/index bytes.

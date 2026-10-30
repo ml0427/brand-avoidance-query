@@ -1,5 +1,26 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-30｜司法目錄內政黨分類（完整驗收通過）
+
+- source＋UI單輪獨立合併驗收PASS、MustFix0：完整gate來源1,654筆／warnings0／errors0、Node102/102、Python32/32及部署指定Python3.13重驗32/32、真build與site validator3,963檔全通過；17司法頁／610個href、本機reader69項通過。其餘1,653筆全值含序不變，UI前後3,942份舊snapshot bytes／SHA保真。主控親核獨立report SHA-256 `6988cc958cf79458f67ca9f142406887bdafdaf1b0a8d724e415143e43d3ffe1`、全部artifact manifest、七檔原bytes、diff hash、HEAD／空index及Kevin原圖後，只追加本收尾筆記。驗收證據在當前profile同task `combined-review/report.json`；以下未完整gate／未發布為writer階段限制。限定七檔發布與公開站實讀以 `serial-runs/0001/release/` 及 `serial-closures/0001.json` 實際證據為準，不用本機PASS當上線；438人未查完，本人coverage仍blocked。
+
+- 承接使用者message1565640176070561873，只在既有司法目錄內先列中國國民黨、民主進步黨、台灣民眾黨、其他政黨、無黨籍、未確認／未分類六組；首頁原入口、全部及原三司法分類保留。只對原三類精確司法選集，以同筆compiled categories取`政黨／`開頭的不同完整字串；恰一項且等於五個明確tag之一才分類，缺值、不支援或衝突（含有效+不支援tag）只列unknown。同tag重複不衝突，不trim／映射、不以姓名、摘要、名冊、關係人或來源文句猜黨。六組按ID互斥、聯集等於原all；無tag、公司及其他不適用者不是無黨籍。
+- 每個司法頁保留舊司法NOTICE並增加來源時點／非即時、非案發時黨籍、非政黨責任／未知不等於無黨籍聲明；每列保留完整正式名稱、完整摘要、原record HTML及程序限制，加「依來源時點；非即時黨籍；詳完整紀錄」。不改來源、lastReviewed、manifest/schema、JSON查詢、recordHtml或原名稱目錄；六組即使為空仍有真實空頁，不稱無案或已查完。
+- 嚴格TDD先擴既有9項並加T01–T15：真RED共24項、19失敗／5通過，缺六組入口、分桶及聲明造成預期失敗，保真fixture原即通過；最小helper及llms說明後24/24 GREEN。相關五檔Node局部回歸78/78、diffcheck exit0；最終重跑將TEMP／TMP／TMPDIR明設profile scratch，合成站validator正常PASS、竄改深層party頁FAIL。舊3600-byte fixture因新聲明合理改4800並增至100筆，保留超九頁／最終Buffer限制；同組壓測實得20頁，正式65536不放寬。
+- 以本writer開工時HEAD `335270abcef00adf6be14c74a1bc747364dd267e`固定baseline，承接鄭麗文source及前筆記兩檔dirty而非清理工作樹。1,654筆compiled全值含陣列序前後相同，採site-format.jsonBytes序列化SHA-256 `147e745be8e824e4c31603b6f8ff94e4c82a7bc3b887b991bd42adc78f724175`，與前source writer不同JSON編碼不直接比hash。去版本前綴後3,942份舊snapshot逐檔bytes／SHA不變：record JSON/HTML共3,308、index31、名稱目錄583、schema5、evidence15；只司法HTML、inventory及根entry/llms隨版本更新。
+- 本次記憶體實測司法選集179筆、六組1/0/0/0/0/178筆、17個司法頁、最大65,521 bytes、610個實際href均可達，同snapshot inventory大小／SHA正確。這些是目前標籤導覽紀錄數，不是人數、案件數、黨籍全面查核進度、178／179人本輪已查完或438人完成；沒有替其他人補tag或廣搜。
+- 寫前181個tracked hashes、index／status、Kevin既有untracked PNG、真_site全3,954檔hash及source回流後compiled／snapshot baseline存當前profile tasks/public-case-audit-20261030/party-catalog/writer/；完整證據及前後保護以同處report.json為準。初次全庫導覽探針誤要求同頁姓名label唯一，被合法同名不同ID擋下；只修探針改逐row核實ID／href，正式程式及來源不迎合修改，重跑通過。另實際工具環境TEMP／TMP／TMPDIR仍指系統temp而非runtime聲明scratch，首輪測試暫存均循finally清理；末輪明設三變數至profile scratch後重新通過，未寫真_site。
+- 本writer只改授權六檔，前鄭麗文source原bytes／前筆記完整保留；不寫真_site、queue／CONTROL／STATE，不npm ci／完整gate／真build／Tauri／版本更新、不stage／commit／push／部署或查Pages。局部PASS不代表完整驗收或已上線；source+UI合併單輪獨立完整gate及後續發布讀回交主控，完成報告後停止。
+
+## 2026-10-30｜逐筆閉環第1人：鄭麗文歷史提告補既有personal（writer階段）
+
+- 本輪只補 `kmt-current-public-figures-2026-06-26-912d-9e97-6587` 的鄭麗文member override，不新增重複卡、不改群組共用欄位或其他人。保留原ID、姓名／aliases／identifiers、country、personal／high、原名冊理由與來源物件、2026-06-26時點限制；high只指來源支持窄幅事實，非犯罪機率或研究完備度。
+- 摘要開頭明示2026-10-30複核、2018-10-02花博評論已實際遭誹謗告訴，後續處分或裁判未取得；不是現行偵查／起訴／審理、有罪、定讞或案底。保留鄭本人稱就媒體報導被動評論、屬可受公評事項之抗辯，不當法院認定言論真偽。不擴共同被提告人、廖婉如、奇美博物館或政黨全體；三立不起訴、林效先免賠、選舉案待補證及未橋接同名／機關代理案不作新增負面理由。原研究coverage仍blocked，未宣稱整人查清。
+- 只新增中央社2018-10-02一來源，title「遭指涉花博標案 廖婉如告鄭麗文等3人」，URL `https://www.cna.com.tw/news/aloc/201810020219.aspx`。writer讀回initial-research-a的browser DOM必要節錄及serial-review-0001報告，非writer直接開頁；後者已重讀具名正文。必要節錄UTF-8 SHA-256 `3ee5829a282decac0813403cd7b2148ea55304f647e681174c597bb780ecb648`、review report `00e78f1fb57827f32ec27d50408fe3a59d81030032b5580f6dfb10d4e90eae02`、原source report `ddc48f97cdf2e49d7464acc082e97937f4715b00aa8a70e3a205546cf5b7cec0`均親核。全文與圖片不入repo、不改public-evidence。
+- 只本人新增精確分類「司法／公眾人物」供既有首頁司法捷徑可達；承接追加指示message1565640176070561873，再加「政黨／中國國民黨」。政黨分類僅依2026-06-26既有來源時點，不保證今日仍在任或黨籍未變，aiNotes明示此限制；未廣搜現任、不推其他人黨籍。政黨分組目錄功能交後續writer串行處理，本輪不改helper／tests。
+- 寫前HEAD `335270abcef00adf6be14c74a1bc747364dd267e`、181個tracked hashes、空index、1,654筆compiled baseline、既有3,952個_site檔及Kevin untracked PNG原bytes存task `serial-runs/0001/writer/`。局部實跑：全1,654筆schema、compile兩次冪等、其餘1,653筆逐值含陣列順序完全不變、唯一ID及總數不變、2姓名正查與66指定卡負查、partial候選、既有司法helper純記憶體完整摘要／連結可達均通過；不等於真實build或上線驗收。來源成員區塊外原bytes不變。
+- 僅修改本來源及AI_NOTES；鎖owner `controller-serial-0001-20261030T161251+0800`保持原樣，不另建／刪鎖，不改queue／CONTROL／STATE／results。不npm ci／完整gate、不正式build、不stage／commit／push／發布、不查Pages、不改版本或Tauri。實際命令、局部結果、前後保護與風險見同writer `report.json`；交主控另派單輪獨立完整gate及上線確認，本人有效publication closure前不接下一人。
+
 ## 2026-10-30｜首頁司法案件捷徑與同來源分類目錄
 
 - 收尾：單輪獨立verifier PASS、must-fix 0；完整gate來源1,654筆／warnings0／errors0、Node87/87、Python32/32、真實build與site validator3,954檔全部通過。實際遍歷178筆分類紀錄、8個司法目錄頁（最大65,378 bytes）、loopback HTTP188次讀取均成功；178不是人數或案件數。1,654筆來源全值含陣列順序不變，3,942份舊snapshot bytes保真。主控核report SHA、真實gate logs、179個tracked及3個untracked hashes、穩定diff與空index，並親讀首頁實際版本化link；reviewer report為同task `homepage-review/report.json`，SHA-256 `4c0ceb32658d1f6a89cf4a9bad26b106b104873f8594e99e6234fb669343e81f`。以下不完整gate／不build／不發布為writer階段邊界；限定六檔提交推送及遠端精確commit/blob讀回以Git與同task `homepage-release/publish-report.json`為準。不查Pages；此功能PASS不代表438人查核完成。
@@ -10,7 +31,7 @@
 - TDD實跑先RED：9項中8項因缺捷徑／helper失敗、既有record保真1項通過；最小實作後9/9 GREEN。另跑ai-site／name-catalog／external-reference／compile-records及本次tests的局部套件，實際結果與log見當前profile tasks/public-case-audit-20261030/homepage-writer-report.json；site-validator整合只驗合成快照暫存，不寫正式_site。
 - 寫前HEAD、179個tracked hashes、status／index entries／cached diff、1654筆compiled全值含序及舊生成快照各檔hash存同task的homepage-baseline/；Kevin既有untracked PNG hash亦保存。最終保真與記憶體generateSite的舊snapshot逐檔hash核對，以同report實測為準。只動builder、新目錄helper／tests、reader contract、README與本次筆記，不改data/records、個人理由、來源、圖片或public-evidence；不重設lastReviewed。
 - 本子任務不跑npm ci／完整gate、不正式build、不stage／commit／push／發布、不查Pages，不新增package版號或Tauri腳本；完整gate及實體build交主控後續單次獨立verifier。局部通過不能稱完整驗收或已上線。
-- 耐久批次索引：使用者本輪438人，附件只是待複核線索，檔名不是查核截止日。task根為 `D:/AI_workspace/.hermes/profiles/amagi-line/tasks/public-case-audit-20261030`；接續依 `RUNBOOK.md`／`queue.json`／`CHECKLIST.md`／`CONTROL.json`，逐人研究報告存 `results/`，佇列工具為 `audit_queue.py`。耐久cron `07dc56a70a68` 每20m接續5人；`CONTROL.repo_writes_allowed=false` 直到主控首批發布驗收。20人初批研究尚未全完成，不把新目錄描述成438人已新查完；本次程式改動範圍保留所有舊案來源不變。
+- 耐久逐筆閉環索引：使用者本輪438人，附件只是待複核線索，檔名不是查核截止日。task根為 `D:/AI_workspace/.hermes/profiles/amagi-line/tasks/public-case-audit-20261030`；執行順序以 `SERIAL_FLOW.md` 優先於舊批次安排，並讀 `RUNBOOK.md`／`queue.json`／`CHECKLIST.md`／`CONTROL.json`與本人STATE；逐人研究存 `results/`、審核存 `serial-reviews/`、writer／verifier存 `serial-runs/`、有效收尾存 `serial-closures/`，佇列工具為 `audit_queue.py`。耐久cron `07dc56a70a68` 沿用，但舊「每20m接續5人」停用：每次只處理最早未有效closure的一人及其有界phase；適格案須完成本人編輯、獨立完整gate、主控限定提交推送與公開網頁精確版本可見才下一人，無適格案／未解則依序列政策明示closure。writer目前僅在主控持鎖且CONTROL允許的ordinal範圍寫入，不能把它當全面開放；cron實際啟停由主控管理。既有研究完成不代表438人全查完，既有司法目錄數也不是本輪入庫進度。
 
 ## 2026-10-30｜香港牛奶冰室高雄籌備門市最小personal
 
