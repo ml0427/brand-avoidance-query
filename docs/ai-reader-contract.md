@@ -47,7 +47,12 @@ On missing artifacts, checksum/size mismatch, invalid JSON/schema/version or inc
 
 The root website and llms.txt link to the current catalog. Its A-Z, Han-character,
 digit and other-character links use visible name prefixes, not UTF-8 range labels.
-Follow the query's normalized first character, then any longer matching prefix,
+For HTML routing only, skip a leading run of Unicode opening punctuation (Ps),
+initial quotes (Pi), ASCII single/double quotes and whitespace. Keep the original
+key if nothing remains. Thus 《功夫道長》 follows 功 and 《陽光女子合唱團》 follows 陽,
+while @, #, +, dots and other meaningful symbols are retained. This does not
+change exact-match normalization, JSON keys, record fields or visible names.
+Follow the resulting first character, then any longer matching content prefix,
 and open every exact-name/alias/identifier collision's complete record page.
 Each catalog node (including its pagination chain) lists each recordId only once.
 Its representative is a name match when present, otherwise an alias, then an

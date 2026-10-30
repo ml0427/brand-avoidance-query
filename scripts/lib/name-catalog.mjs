@@ -11,6 +11,8 @@ const compareUtf8 = (a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b));
 const relativeHref = (file, target) => path.posix.relative(path.posix.dirname(file), target);
 const pageFile = (file, number) => number === 1 ? file : path.posix.join(path.posix.dirname(file), `page-${number}.html`);
 const slug = (character) => character.codePointAt(0).toString(16);
+// Display-only routing skips opening wrappers, never identity-key punctuation.
+const catalogKey = (key) => key.replace(/^[\p{Ps}\p{Pi}"'\s]+/u, "") || key;
 
 function sectionFor(character) {
   if (/^[a-zA-Z]$/u.test(character)) return 0;
@@ -26,14 +28,14 @@ const compareMatch = (left, right) => fieldRank(left.field) - fieldRank(right.fi
 
 function matchRows(entries) {
   const representatives = new Map();
-  for (const { key, matches } of entries) {
+  for (const { key, routeKey, matches } of entries) {
     for (const match of matches) {
-      const candidate = { ...match, key };
+      const candidate = { ...match, key, routeKey };
       const previous = representatives.get(match.recordId);
       if (!previous || compareMatch(candidate, previous) < 0) representatives.set(match.recordId, candidate);
     }
   }
-  return [...representatives.values()].sort((left, right) => compareUtf8(left.key, right.key) || compareUtf8(left.recordId, right.recordId)).map((match) => ({
+  return [...representatives.values()].sort((left, right) => compareUtf8(left.routeKey, right.routeKey) || compareUtf8(left.key, right.key) || compareUtf8(left.recordId, right.recordId)).map((match) => ({
     section: "",
     render: (file, branch) => `<li data-key="${escapeHtml(match.key)}" data-match-field="${escapeHtml(match.field)}" data-record-name="${escapeHtml(match.name)}"><span class="tree-branch" aria-hidden="true">${branch}</span><span class="tree-label"><a href="${escapeHtml(relativeHref(file, `records/${match.recordId}.html`))}">${escapeHtml(match.value)}</a>${match.name !== match.value ? ` <small>(${escapeHtml(match.name)})</small>` : ""}</span></li>`,
   }));
@@ -85,7 +87,8 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
   }
   const totalRecords = recordCount ?? records.size;
   if (!Number.isSafeInteger(totalRecords) || totalRecords < records.size) throw new RangeError("Invalid recordCount");
-  const sorted = [...entries].sort((a, b) => compareUtf8(a.key, b.key));
+  const sorted = entries.map((entry) => ({ ...entry, routeKey: catalogKey(entry.key) }))
+    .sort((a, b) => compareUtf8(a.routeKey, b.routeKey) || compareUtf8(a.key, b.key));
   const files = new Map();
 
   function render(node, rows, number = 1, total = 1, hasNext = false) {
@@ -160,7 +163,7 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
 
   const initials = new Map();
   for (const entry of sorted) {
-    const first = Array.from(entry.key)[0];
+    const first = Array.from(entry.routeKey)[0];
     if (!initials.has(first)) initials.set(first, []);
     initials.get(first).push(entry);
   }
@@ -183,15 +186,15 @@ export function buildNameCatalog(entries, { renderPage, recordCount, maxPageByte
       writePages(node, rows);
       continue;
     }
-    const first = Array.from(node.entries[0].key);
-    const last = Array.from(node.entries.at(-1).key);
+    const first = Array.from(node.entries[0].routeKey);
+    const last = Array.from(node.entries.at(-1).routeKey);
     let depth = 0;
     while (depth < first.length && first[depth] === last[depth]) depth++;
     const common = first.slice(0, depth).join("");
     const children = new Map();
     const terminal = [];
     for (const entry of node.entries) {
-      const character = Array.from(entry.key)[depth];
+      const character = Array.from(entry.routeKey)[depth];
       if (character === undefined) terminal.push(entry);
       else {
         if (!children.has(character)) children.set(character, []);

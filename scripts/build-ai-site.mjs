@@ -173,6 +173,8 @@ export function generateSite({ records, evidenceFiles = new Map(), sourceCommit 
 
 同一目錄節點及其分頁每個recordId只列一次，優先正式名稱，其次該字頭別名、識別碼；不同ID即使同名仍分開。完整別名／識別保留在JSON索引與單筆紀錄，目錄未列出別名字面不等於無命中，需開啟該字頭候選紀錄核對。
 
+僅目錄導覽略過開頭的書名號、左括號與起始引號（Unicode Ps／Pi）、ASCII單雙引號及空白；若無剩餘內容則保留原鍵。《功夫道長》選「功」，《陽光女子合唱團》選「陽」。@、#、+、點等有意義的符號不略過，原始名稱照常顯示；JSON查詢鍵及精準比對不受這項目錄規則影響。
+
 ## 可以執行 reader
 
 先讀 [manifest](manifest.json)，使用同一版本的 JSON 索引與完整單筆紀錄。精準比對 name / aliases / identifiers；部分字只列候選。下載索引與紀錄時核對大小及 SHA-256。檔案失效、雜湊或版本錯誤時重取 manifest，整輪最多重試一次；仍失敗就回報不可用。本站沒有舊格式 fallback。

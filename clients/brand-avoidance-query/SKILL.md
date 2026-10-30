@@ -15,6 +15,11 @@ This skill queries existing records; it does not authorize adding or publishing 
 Open `https://ml0427.github.io/brand-avoidance-query/` and follow the name catalog.
 Choose the visible A-Z, Chinese first-character, digit or other-character link,
 then any longer matching prefix. For example, 文姿雲 follows 文 to the full name.
+For catalog routing only, skip leading opening brackets/title marks (Unicode Ps),
+initial quotes (Pi), ASCII single/double quotes and whitespace; retain the
+original key if nothing remains. 《功夫道長》 follows 功 and 《陽光女子合唱團》 follows 陽.
+Keep meaningful @, #, + and dot prefixes. Display names and JSON exact keys are
+unchanged; do not apply this catalog rule to exact-match queries.
 Aliases and identifiers use the same navigation. Each catalog node, including
 its continuation pages, shows one representative per recordId: name, else alias,
 else identifier. Other variants remain in the full record and JSON indexes.

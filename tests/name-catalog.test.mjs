@@ -84,7 +84,8 @@ function assertAllRows(files, entries, budget) {
     return cache.get(file);
   };
   for (const { key, matches } of entries) {
-    const first = Array.from(key)[0];
+    const route = key.replace(/^[\p{Ps}\p{Pi}"'\s]+/u, "") || key;
+    const first = Array.from(route)[0];
     const label = /^[a-z]$/u.test(first) ? first.toUpperCase() : first;
     const initial = nodeLinks(ROOT).filter((link) => link.label === label);
     assert.equal(initial.length, 1, `Missing initial for ${key}`);
@@ -92,7 +93,7 @@ function assertAllRows(files, entries, budget) {
     for (;;) {
       const available = nodeLinks(file);
       const children = available.filter((link) => link.target.startsWith(`${path.posix.dirname(file)}/`) &&
-        path.posix.dirname(link.target) !== path.posix.dirname(file) && key.startsWith(link.label));
+        path.posix.dirname(link.target) !== path.posix.dirname(file) && route.startsWith(link.label));
       if (!children.length) {
         for (const { recordId } of matches) assert(available.some((link) => link.target === `records/${recordId}.html`), `${key}: unreachable ${recordId}`);
         break;
@@ -144,6 +145,59 @@ test("root separates A-Z, Chinese initials, numbers, and other text or symbols",
   assert(root.indexOf("中文首字") < root.indexOf("數字"));
   assert(root.indexOf("數字") < root.indexOf("其他文字／符號"));
   assertAllRows(files, entries);
+});
+
+test("opening title marks, quotes and brackets route by content without changing identity or display", () => {
+  const titles = ["《功夫道長》 / kung_fu168", "《陽光女子合唱團》", "「文姿雲」", "『文藝』", '"alpha"', "'beta'", "“gamma”", "‘delta’", "【7sample】", "(éclair)", "〔𠀀甲〕", "  「《巢狀》」"];
+  const initials = ["功", "陽", "文", "文", "A", "B", "G", "D", "7", "é", "𠀀", "巢"];
+  const entries = titles.map((title, index) => entry(title, `wrapper-${index}`));
+  const before = structuredClone(entries);
+  const files = build(entries);
+  for (const [index, title] of titles.entries()) {
+    const group = follow(files, ROOT, initials[index]);
+    assert.equal(follow(files, group, title), `records/wrapper-${index}.html`);
+    assert(content(files, group).includes(`data-key="${escapeHtml(title)}"`));
+  }
+  assert(!links(files, ROOT).some((link) => ["《", "「", "『", "【", "(", "\"", "'"].includes(link.label)));
+  assertAllRows(files, entries);
+  assert.deepEqual(entries, before);
+  assert.deepEqual([...files], [...build([...entries].reverse())]);
+});
+
+test("meaningful symbols and wrapper-only keys remain explicit catalog initials", () => {
+  const keys = ["@account", "#channel", "+brand", ".net", "-brand", "/path", "&brand", "★brand", "《", "「", "'", "\""];
+  const entries = keys.map((key, index) => entry(key, `symbol-${index}`));
+  const files = build(entries);
+  for (const [index, key] of keys.entries()) {
+    assert.equal(follow(files, follow(files, ROOT, Array.from(key)[0]), key), `records/symbol-${index}.html`);
+  }
+  assertAllRows(files, entries);
+});
+
+test("wrapped and bare routing collisions deduplicate only equal record IDs before pagination", () => {
+  const entries = [
+    { key: "alpha", matches: Array.from({ length: 35 }, (_, index) => match(`route-${index}`, `Alpha ${index}`)) },
+    { key: "《alpha", matches: Array.from({ length: 35 }, (_, index) => match(`route-${index}`, `Alpha ${index}`, "aliases", "《alpha")) },
+  ];
+  const budget = 1400;
+  const files = build(entries, { maxPageBytes: budget });
+  const group = follow(files, ROOT, "A");
+  assert(pageChain(files, group).length > 1);
+  assert.equal(assertGraph(files, budget).length, 35);
+  assertAllRows(files, entries, budget);
+});
+
+test("wrapped names use content prefixes through crowded nested groups and terminal keys", () => {
+  const entries = [entry("《a", "wrapped-terminal"), entry("a", "bare-terminal"), ...["a", "b", "c"].flatMap((letter) =>
+    Array.from({ length: 4 }, (_, index) => entry(`${index % 2 ? "《" : ""}alphabet${letter}${index}`, `wrapped-${letter}-${index}`)))];
+  const budget = 1700;
+  const files = build(entries, { maxPageBytes: budget });
+  const group = follow(files, ROOT, "A");
+  assert.equal(follow(files, group, "《a"), "records/wrapped-terminal.html");
+  assert.equal(follow(files, group, "a"), "records/bare-terminal.html");
+  assert([...files.keys()].some((file) => file.split("/").length > 3));
+  assertAllRows(files, entries, budget);
+  assert.deepEqual([...files], [...build([...entries].reverse(), { maxPageBytes: budget })]);
 });
 
 test("ASCII tree branches preserve sibling indentation and mark each final child", () => {

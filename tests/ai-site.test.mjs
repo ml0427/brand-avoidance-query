@@ -178,3 +178,22 @@ test("browser catalog groups same-initial aliases into one canonical record link
   const fullRecord = JSON.parse(site.files.get(`${site.manifest.recordBase}wen-alias.json`)).record;
   assert.deepEqual(fullRecord.aliases, ["文姿雲"]);
 });
+
+test("title wrappers affect only HTML routing, not exact identity lookup or complete records", () => {
+  const record = sample("wrapped-title", { name: "《陽光女子合唱團》", aliases: [], identifiers: [] });
+  const site = generateSite({ records: [record] });
+  const root = site.manifest.catalog.url;
+  const rootLinks = pageLinks(site.files.get(root));
+  assert(!rootLinks.some((link) => link.text === "《"));
+  const initial = rootLinks.find((link) => link.text === "陽");
+  assert(initial);
+  const group = linkedFile(root, initial.href);
+  const title = pageLinks(site.files.get(group)).find((link) => link.text === record.name);
+  assert(title);
+  assert.equal(linkedFile(group, title.href), `${site.manifest.recordBase}wrapped-title.html`);
+  const entries = site.manifest.indexes.flatMap((shard) => JSON.parse(site.files.get(shard.url)).entries);
+  assert.deepEqual(entries.map(({ key }) => key), [record.name]);
+  assert.deepEqual(JSON.parse(site.files.get(`${site.manifest.recordBase}wrapped-title.json`)).record, record);
+  assert.equal(matchRecords([record], record.name).length, 1);
+  assert.equal(matchRecords([record], "陽光女子合唱團").length, 0);
+});
