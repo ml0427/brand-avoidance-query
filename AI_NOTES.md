@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-31｜逐筆閉環第13人：柯志恩歷史加重誹謗告訴補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-67ef-5fd7-6069` 的柯志恩member override；record ID是以開工前 `compileRecords()` 及 `matchRecords(records, "柯志恩")` 唯一精準命中實際導出，不是手猜。未新增重複卡、不改群組共用欄位或其他人。唯一核准case key為 `ko-lai-defamation`：只記2025-10-08賴瑞隆委由律師赴高雄地方檢察署，至少對柯志恩提出加重誹謗告訴的歷史事實；目前程序unknown，未取得可歸屬本告訴的案號、起訴、不起訴、撤回、再議或裁判，不寫仍偵查、已起訴、審理、犯罪成立、有罪、定讞、案底、柯志恩已不起訴、無罪或案件已終結。賴方主張不是司法認定，也不表示司法機關認定柯志恩參與盜採砂石。
+- 使用者可見正文保留柯志恩抗辯：她稱只談修法及遏止盜採、全程未說賴瑞隆姓名，並批評濫用司法資源；這是柯方說法，不是司法認定。另清楚保留不同人的有利邊界：許采蓁於2026-09-14向聯合報稱自己在相關但不同的告訴中獲不起訴；本次未取得官方處分書，被告訴人與具體言論不同，不得移植為柯志恩不起訴或同一處分。柯志恩於2025-09-13作為提告方的另案及2023年陳時奮不起訴案均排除，不混入本案後續。
+- 保留原ID、name／aliases／identifiers、country、personal／high、兩項既有2026-06-26名冊來源與所有非本次欄位；新增「司法／公眾人物」與「政黨／中國國民黨」，並保留編譯後「政治／政黨名單」。另新增2026-10-31查取的立法院及中國國民黨官方人物頁；政黨分類只依明示來源時點，不推定未來黨籍／職務、案發時全部身分或政黨責任。姓名鍵維持純姓名，不納case key、賴瑞隆、加重誹謗、美濃大峽谷、盜採砂石、許采蓁、不起訴、陳時奮、日期、政黨、職稱、機構、媒體或事件詞。high只指既有名冊身分及核准來源支持窄幅事實，不是指控成立、犯罪機率、目前程序或研究完備度。
+- 新增來源為中央社兩篇、自由時報、聯合報、立法院官方頁及中國國民黨官方頁；逐項source.note均寫角色、支持範圍、限制與必要節錄SHA-256。必要節錄SHA-256依序為中央社提告 `205a0c89d25d4e866ce71342422206aa3cce092f20a0d4c1ef6150aec581e589`、中央社抗辯 `b2695941194cd7ae732114de0592f4a979dc12c635e77320c8172c7328e5e541`、自由時報 `03fafbbde3d7dbe4489cecd4bfde925406ffc2a7b338615ca475aff946cb3bfe`、聯合報 `09d39cd4479fbd8b901fa84ec41e092e43b7669fc05745ca82369a80394dc8ad`、立法院 `dd43fe2b61a07917174bc23fba9456b895263bc1224f33d6d93f830135772cb1`、中國國民黨 `b9f5b5cb7be8f68826d5a1f2928d06fce9a5a85919120c4870254056331775d2`；source report SHA-256 `48661f3cbd7c724fe8c5df8bb2e822ef65cfdcf52e3a3a38cabfe8322fb2dc2a`；source review SHA-256 `cdef5db7251c426f67a878482ab015356c0e3ea22fbd69872bad9ce3a2aaf15f`。
+- 開工前baseline存當前profile同task `serial-runs/0013/writer/`：HEAD／origin main `a48beeb8decd6f5565b654779d537f393e6b98c3`、181個tracked hashes、空index、1,654筆compiled snapshot、真`_site`逐檔hash及Kevin既有untracked PNG；source report、review及13份review列管節錄雜湊全部重算一致。writer局部驗證只涵蓋來源語法、compileRecords兩次冪等、總數與ID唯一、其餘1,653筆全值含陣列順序保真、本人精準正查／partial候選／指定負查、case key與6個新核准URL只歸本人、原名冊來源與搜尋欄保真、來源／CONTROL／lock／STATE與受保護tracked檔／真`_site`／Kevin PNG保真及`git diff --check`；詳細實跑結果見同writer報告。這些不是獨立verify或完整gate。
+- 本writer只改授權兩檔；不改`_site`、queue、CONTROL、STATE、results、review或repo-write.lock，不npm ci、不跑完整validate／Node全套／Python全套／build／site validator，不stage／commit／push／發布，不執行verify或closure。完成證據與最終report留 `serial-runs/0013/writer/`，後續獨立verify由主控另行處理，本輪不接第14人。
+
 ## 2026-10-31｜逐筆閉環第12人：江啟臣歷史刑事告訴與不同程序有利結果補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-6c5f-555f-81e3` 的江啟臣member override；record ID是以開工前`compileRecords()`及`matchRecords(records, "江啟臣")`唯一精準命中實際導出，不是手猜。未新增重複卡、不改群組共用欄位或其他人。唯一核准case key為 `chiang-hsieh-2024-complaint`：只記2024-01-07謝志忠赴臺中地檢署按鈴申告江啟臣涉嫌誣告及選罷法第104條意圖使人不當選的歷史事實；目前程序unknown，未取得可歸屬本告訴的檢方案號、起訴、不起訴、撤回、再議或裁判，不寫仍偵查、已起訴、審理、犯罪成立、有罪、定讞、案底、已不起訴、無罪或案件已終結。誣告及意圖使人不當選都是謝志忠的告訴主張，不是檢方或法院認定。
