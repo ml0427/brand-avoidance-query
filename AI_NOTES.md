@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-31｜逐筆閉環第12人：江啟臣歷史刑事告訴與不同程序有利結果補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-6c5f-555f-81e3` 的江啟臣member override；record ID是以開工前`compileRecords()`及`matchRecords(records, "江啟臣")`唯一精準命中實際導出，不是手猜。未新增重複卡、不改群組共用欄位或其他人。唯一核准case key為 `chiang-hsieh-2024-complaint`：只記2024-01-07謝志忠赴臺中地檢署按鈴申告江啟臣涉嫌誣告及選罷法第104條意圖使人不當選的歷史事實；目前程序unknown，未取得可歸屬本告訴的檢方案號、起訴、不起訴、撤回、再議或裁判，不寫仍偵查、已起訴、審理、犯罪成立、有罪、定讞、案底、已不起訴、無罪或案件已終結。誣告及意圖使人不當選都是謝志忠的告訴主張，不是檢方或法院認定。
+- 使用者可見正文保留江方抗辯：江啟臣服務處稱對手含沙射影、造謠抹黑，江方是以訟止謗並拒絕對手抹黑指控；這是江方說法，不是司法認定。另清楚分開兩項有利程序：(1)中央社2025-06-18報導，不同的競選團隊餐會賄選刑事偵查中江啟臣因罪證不足獲不起訴；未取得正式處分全文、案號、精確處分日或再議狀態，不稱不起訴確定。(2)臺灣高等法院臺中分院114年度選上字第1號當選無效民事事件於2025-06-18二審駁回確定，法院認為不足證明江啟臣知悉、參與、授意、同意或知情放任3名競選團隊成員賄選。兩者都不是2024-01-07告訴的偵結結果；3名成員的刑事定罪不是江啟臣犯罪，民事駁回也不是刑事無罪。
+- 不發布 `chiang-sign-pressure-2023-announced-complaint`：2023-10-11報導正文只載謝志忠將前往／也會前往地檢署，未確認實際按鈴、收狀或分案，不能只依標題寫成已提告。公開搜尋及具名報導不是完整前科或偵查資料庫，可能漏列遮名裁判或未公開程序；不能宣稱沒有其他案件或整人查清。
+- 保留原ID、name／aliases／identifiers、country、personal／high、兩項既有2026-06-26名冊來源與時點限制；新增「司法／公眾人物」與「政黨／中國國民黨」，並保留編譯後「政治／政黨名單」。另新增2026-10-31查取的立法院英文官方頁，只補強Johnny C. Chiang、KMT、第11屆臺中市第8選區及副院長辦公室身分；政黨tag只依明示來源時點，不推定未來黨籍／職務、歷史事件時全部職稱或政黨責任。姓名鍵維持純姓名，不納case key、罪名、謝志忠、政黨、黨職、機構或事件詞。high只指名冊身分及核准來源支持窄幅事實，不是指控成立、犯罪機率、目前程序或研究完備度。
+- 新增NOWnews、聯合影音、中央社、臺中高分院官方新聞稿與立法院英文官方頁；必要節錄SHA-256依序為NOWnews `dd0edae2e66e00e6a1503ced0e256e392a51acc89a08c4f9376a64865f9bd178`、聯合影音 `8b2847f19f3dd0fba8821664116d65a6277eebed3c2bc8594606c08e6b724938`、中央社 `1be3f987f33507fe9e21ae8263ddb21de4fe40f15994d8c3cd545fe987e4e942`、法院 `d1a4529f477798dbf34360430988feabab1e6e6f2b01231e76ad0b2d26a246a0`、立法院身分 `466bcd03303265f686be313911b998f42f583dab369c43b0fcb972ca210aacc9`；排除的2023線索節錄 `9617fb4b04478c8a1978e2dd035decdadded0e6abf2b0c7d6db90cf3b430d5e1`。source report SHA-256 `6939d34ca732e04db7feaabe3e83278601c3b84ae8d438ce8700528e05c73abf`；source review SHA-256 `4d73918703b461acd932231519e3dbf26a4e776aa6f2489923f6a1baabd04db5`。
+- 開工前baseline存當前profile同task `serial-runs/0012/writer/`：HEAD／origin main `2b7c47bdd0ec04fd5f47e8117e4fe70f1cd19002`、181個tracked hashes、空index、1,654筆compiled snapshot、真`_site`逐檔hash及Kevin既有untracked PNG；source report、review及6份review evidence雜湊全部重算一致。writer只執行局部語法、compileRecords兩次冪等、本人正負查、其餘1,653筆全值含陣列順序保真、唯一case key與4個核准發布URL只歸本人、來源／review evidence保真、受保護tracked檔／真`_site`／Kevin PNG保真及`git diff --check`；詳細實跑結果見同writer報告。這些不是獨立verify或完整gate。
+- 本writer只改授權兩檔；不改`_site`、queue、CONTROL、STATE、lock或其他資料，不npm ci、不跑完整validate／Node全套／Python全套／build／site validator，不stage／commit／push／發布，不執行verify或closure。完成證據與最終report留 `serial-runs/0012/writer/`，後續獨立verify由主控另行處理，本輪不接第13人。
+
 ## 2026-10-31｜逐筆閉環第11人：韓國瑜一審有罪裁判與歷史告發補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-97d3-570b-745c` 的韓國瑜member override，不新增重複卡、不改群組共用欄位或其他人。兩個source review核准case key都已在同一卡清楚分段呈現：`han-2004-traffic` 與 `han-chicken-election-complaint-2018`；前者是過失致死一審有罪裁判、確定性未確認，後者是2018年官方會議紀錄可證的歷史告發、目前程序unknown，未混成定讞或現行偵查。
