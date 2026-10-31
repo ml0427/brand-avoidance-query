@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-10-31｜逐筆閉環第11人：韓國瑜一審有罪裁判與歷史告發補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-97d3-570b-745c` 的韓國瑜member override，不新增重複卡、不改群組共用欄位或其他人。兩個source review核准case key都已在同一卡清楚分段呈現：`han-2004-traffic` 與 `han-chicken-election-complaint-2018`；前者是過失致死一審有罪裁判、確定性未確認，後者是2018年官方會議紀錄可證的歷史告發、目前程序unknown，未混成定讞或現行偵查。
+- 交通案採臺灣雲林地院94年度交易字第161號：2006-10-11依修正前刑法過失致死罪判有期徒刑6月、得易科罰金、緩刑2年，量刑脈絡保留已與家屬和解。匿名被告丁○○由2004-01-03西螺事故、死者白啟鴻、證人李佳芬及刑度，與鏡週刊、公視具名正文交叉橋接韓國瑜。頁面雖示本件無歷審裁判，判決附上訴教示，本次未取得正式確定證明、精確確定日或執行資料；不寫定讞、實際易科罰金、已執行完畢、酒駕、肇逃、故意殺人或全部肇責。94年度交易字第14號是同事故重機駕駛另案，只作防混淆；鏡週刊標題「無前科」不作全人結論。
+- 雞排案只記高雄市選舉委員會第84次會議紀錄所載：民眾檢舉朱學恒以雞排變相助選、涉嫌期約賄選並指韓國瑜為共犯；選委會明示犯罪／當選無效屬司法認定且本會無偵查權，2018-12-18決議函請高雄地檢署自行審酌。這只證歷史告發；本次未取得分案案號、偵結、起訴、當選無效訴訟或裁判，目前程序unknown。不得寫仍偵查、犯罪成立、起訴、有罪、定讞、案底、不起訴或無罪；雞排份數／金額不得改成韓國瑜收受、交付、約定或犯罪所得。
+- 不發布其餘6案：北農、三立、319及訪港已有不起訴或查無不法簽結的有利後續；兩件罷免案本人是行政聲請人／抗告人，行政抗告駁回不是刑事定罪。2020振興購物嘉年華報導的告發對象是高雄市政府，也不倒置角色。這些排除均留在aiNotes，不另建負面卡。
+- 保留原ID、name／aliases／identifiers、country、personal／high、兩項既有2026-06-26名冊來源與時點限制；新增「司法／公眾人物」與「政黨／中國國民黨」，並保留「政治／政黨名單」。政黨tag只依2026-06-26既有來源時點，不推定2026-10-31即時黨籍／職務、2004案發時黨籍或政黨責任。姓名鍵維持純姓名，不納案件、罪名、案號、朱學恒、雞排、選罷法、李佳芬、政黨、黨職或case key。公開搜尋、姓名索引及同名命中不是完整前科證明，也不能宣稱沒有其他案件。
+- 新增交通案4來源及雞排案1官方來源；逐source note都記角色、支持範圍、SHA-256與限制。必要節錄／PDF SHA-256依序為第161號 `6388dbc846739611453d7e6c3b83977f12c69b68685098b27fdf8ee0cebd2f03`、鏡週刊 `6094c74ff7be09f2acd568c2751c59c07753057b47dabd89dd95375e7655d72c`、公視 `307d0a4cbd573a2014f98658bae1ecf134ebb9a05b1b8b9f9eb5bd818acda6e1`、第14號 `f6fc4caa6bdd24559d473ed0585fb6e315404ad2623ec5175ce54054bc99539c`、選委會PDF `4c1a3cf3f92782745749d9677b25f7ae8e1eba8dceca1074509aaff2b781f824`；source report SHA-256 `4015b5d1f436360ee471cce358f7cd691aaa349ad4cc8fc0f51d7c687ac8726a`；source review SHA-256 `e6fc521b273e88ea6db1ccdf5af2ae1831b644a35db922fa0f97c996960cc16f`。
+- 開工前baseline存當前profile同task `serial-runs/0011/writer/`：HEAD／origin main `a187589d0486bb8f6ad034c6ad97a61f7b37175e`、181個tracked hashes、空index、1,654筆compiled snapshot、真`_site` 3,961檔hash及Kevin既有untracked PNG；source report、review及15份必要來源檔雜湊全部重算一致。writer只執行局部語法、compileRecords兩次冪等、本人正負查、其餘1,653筆全值含陣列順序保真、兩個case key與五個核准來源URL唯一歸屬、受保護tracked檔／真`_site`／Kevin PNG保真及`git diff --check`；詳細實跑結果見同writer報告。這些不是獨立verify或完整gate。
+- 本writer只改授權兩檔；不改`_site`、queue、CONTROL、STATE、lock或其他資料，不npm ci、不跑完整validate／Node全套／Python全套／build／site validator，不stage／commit／push／發布，不執行verify或closure。完成證據與最終report留 `serial-runs/0011/writer/`，後續獨立verify由主控另行處理，本輪不接第12人。
+
 ## 2026-10-31｜逐筆閉環第8人：張雅屏有罪定讞與同事件民事責任補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-5f35-96c5-5c4f` 的張雅屏member override，不新增重複卡、不改群組共用欄位或其他人。唯一核准發布case key為 `chang-yaping-election-defamation-2014`：最高法院106年度台上字第1509號於2017-05-18駁回上訴；高雄高分院107年度聲字第1378號後續記載最高法院駁回確定後移送執行，因此可確認有罪定讞，但未取得刑事判決精確確定日期，不以裁判日、非常上訴聲請駁回日、假釋核准日或保護管束裁定日代替。
