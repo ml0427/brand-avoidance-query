@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-01｜逐筆閉環第21人：謝龍介4個核准案與必要有利／角色邊界補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-8b1d-9f8d-4ecb` 的謝龍介member override；record ID以開工前 `compileRecords()` 及 `matchRecords(records, "謝龍介")` 唯一精準命中導出。未新增重複卡、不改群組共用值或其他人。一次完整涵蓋4個核准案鍵：`xie-legislature-injury-2024`、`xie-assembly-act-2025`、`xie-taichung-recall-defamation-2025`、`xie-chenkailing-defamation-2022`，後續closure不得只發布子集。
+- 傷害案公開文字分開2026-02-12北檢依傷害罪起訴、北院115年度易字第315號審理及2026-06-24庭訊後擇期再審；115年度聲字第983號只處理卷證聲請，不是實體裁判。檢方建請再傳或依法拘提不等於法院已裁定拘提；截至2026-11-01未取得6月24日後實體判決。未取得謝龍介本人直接答辯，不移植同案其他被告、黨團或他人結果。起訴與審理中不等於有罪。
+- 集遊法案只寫警方函送，以及最後可證為2026-09-30具名正文稱北檢偵辦；截至2026-11-01未取得較新起訴、不起訴、簽結或判決，不把查取日寫成仍偵辦狀態日。謝龍介另為行政原告挑戰警方警告、命令解散及制止處分；其緊急和平集會主張與警方影像反駁都保留為尚待裁判爭點，刑事與行政分列，不倒置行政原告角色。
+- 台中罷團案只記2025-05-28實際提出公然侮辱與誹謗告訴、謝龍介稱發言前提是針對說謊／扭曲／抹黑者，以及後續處分未取得；陳凱凌案只記2022-06-13實際提出誹謗告訴、謝龍介回應有查證／未斷章取義／希望檢察官調取證人釐清，以及後續刑民處分未取得。兩案均不得現在式化為仍偵查，告訴方主張也不是司法認定。
+- 必要有利與後續限制完整可見：宏宇法律事務所北院111年度訴字第3374號一審駁回原告之訴，屬有利民事結果、非刑事無罪且正式確定性未證；陳亭妃案雖一審判賠25萬元，但官方裁定確認謝龍介已上訴、中央社確認二審開庭，終局未知，禁止只留舊一審負面結果。2019台南立委補選與2020高雄衝突線索中謝龍介為提告方；對應3個0-byte節錄不作正向證據。
+- 保留原ID、name／aliases／identifiers、country、personal／high、兩項既有名冊來源與所有非本次欄位；新增「司法／公眾人物」與「政黨／中國國民黨」，編譯後保留「政治／政黨名單」。立法院官方頁支持第11屆中國國民黨全國不分區立委及2024-02-01到職；政黨tag只依來源明示時點，不保證即時黨籍、未來職務或表示政黨責任。姓名搜尋欄維持純姓名，不納案號、case key、罪名、對造、罷團、行政機關、法院、媒體、政黨、職稱或事件詞。起訴、警方函送、偵查與提告均不等於有罪，不寫前科、案底、判刑、定讞或沒有其他案件。
+- 新增來源涵蓋北院115年度聲字第983號官方裁定、中央社起訴、壹蘋庭訊、中央社集遊法函送、聯合報刑事／行政程序、兩件中央社歷史提告、宏宇官方民事判決、陳亭妃一審／上訴裁定／二審報導及立法院官方身分頁；逐項source.note均記支持範圍、角色、限制與必要證據SHA-256。source report SHA-256 `6d59814be3b0aef38cede60b74c6e104e91fde2d3c4a36123edeb444a2a414fb`；source review SHA-256 `93b86fb9584344f1ff6fae51b048d9ff2744dc643666f9c5e6238e513b0b0260`；independent worker report SHA-256 `7f8e53511df4849e45c98cc992194520d601815e625f87741490c3253f400d9d`；worker evidence manifest SHA-256 `e1f8d7595b1fe097fbb2d2aef152ab51ff70021af46b96aa998dc073de64c10b`；query ledger SHA-256 `066f392b353848b5c571aba5bf9a12209a58c4d1d77d75f0cf0c4ff58baad005`。
+- 開工前baseline存同task `serial-runs/0021/writer/`：HEAD／origin main `4f738e2a24261b926a54134c0ec6ef2ef568c0bd`、181個tracked hashes、空index、1,654筆compiled snapshot（SHA-256 `95c386715a25b5d8bf94b3faa445a9e6945a9216eb6bed92fb9cfbdbefba87e0`）、真`_site` 3,961檔逐檔hash及Kevin既有untracked PNG（SHA-256 `4b6e019a1f31f05906711f349b2d3e56cd47f15307afc0052c571adf7a0af499`）；CONTROL、repo-write.lock、STATE、results、review、worker report、worker manifest／ledger、13份既有節錄與4份worker evidence均逐bytes重算一致。writer局部驗證只涵蓋來源語法／import、compileRecords兩次冪等、總數與ID唯一、其餘1,653筆全值含陣列順序保真、本人exact／partial正查、案號／case key／罪名／對造／事件／機關／媒體等負查、4個核准case key與新增URL只歸本人、原名冊來源與搜尋欄保真、未授權tracked／真`_site`／Kevin PNG／task必要檔保真、空index及`git diff --check`；寫入後compiled SHA-256為 `b9ed53a975c3e4187803418a6e086707e3a2ec90d56ea2a101320c7da52672fb`；詳細結果與artifact manifest見同writer `report.json`。這些不是獨立verify或完整gate。
+- 本writer只改授權兩檔；不改`_site`、queue、CONTROL、results、review或repo-write.lock，只在完成writer artifacts後將本人的STATE交接verify。不npm ci、不跑完整validate／Node全套／Python全套／build／site validator，不stage／commit／push／發布／closure，不處理第22人。
+
 ## 2026-11-01｜逐筆閉環第20人：許宇甄罷免提議書起訴與審理中程序補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-8a31-5b87-7504` 的許宇甄member override；record ID是以開工前 `compileRecords()` 及 `matchRecords(records, "許宇甄")` 唯一精準命中實際導出，不是手猜。未新增重複卡、不改群組共用欄位或其他人。唯一核准publish case key為 `hsu-wu-recall-forgery`；`hsu-chen-recall-merged` 完整併入同一卡，作陳瑩罷免提議書案移送併辦組件，不另建第二案或雙重計數。
