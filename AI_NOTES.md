@@ -1,5 +1,18 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-02｜逐筆閉環第25人：傅崐萁3件定讞、2件歷史刑事程序與2件民事程序補既有案件卡（writer階段）
+
+- 本輪只補強既有案件卡 `fu-kunqi-stock-manipulation-final-convictions`，未新增或刪除人物／案件卡，不改榮亮實業公司卡 `fu-hsu-jungliang-enterprise`，也不把名冊人物卡 `kmt-current-public-figures-2026-06-26-5085-5d10-8401` 錯改成案件。開工前以 `compileRecords()` 與 `matchRecords(records, "傅崐萁")` 實得上述3筆精準命中；公司、案件、名冊三筆範圍分開保留。案件卡原name含「炒股案定讞判刑」事件詞，本輪依姓名查詢純度校正為穩定姓名「傅崐萁」，保留原ID、穩定別名、country、high／confirmed及既有可靠來源；相同姓名不同ID依reader contract不自動合併。
+- 一次完整涵蓋7個核准案鍵，後續closure不得只發布子集：`fu-2009-false-divorce-public-record`、`fu-heji-106taishang3111`、`fu-kaiju-108taishang1367`、`fu-campaign-items-zhan-tianxia`、`fu-foreign-offence-infiltration-complaint-2025`、`fu-dpp-media-buying-defamation-civil`、`fu-shen-boyang-civil-114su4942`。三件有罪定讞逐案單罪刑為使公務員登載不實6月、合機減刑後8月、凱聚／昱成／長億／華隆2年10月；3年10月只作三罪跨案應執行刑。
+- 2009案完整揭露兩項官方文件衝突：花蓮地院99年度易字第358號原始主文易科罰金每日新臺幣3,000元，高院2020新聞稿摘要寫每日1,000元；109年度聲字第2227號理由正文記確定日100/04/29，掃描附表另列100/05/16。本次未查得更正裁定，不自行選定或修復。110年度聲字第1907號所載2021假釋中付保護管束只作歷史執行資料，不證明2026仍受管束、實際出監日或完整服刑日期。
+- 戰天下只寫中央社2026-01-07可證的歷史分案偵辦及截至2026-11-02後續未知，不移植李慶隆或張姓律師的通緝、藏匿、交保或律師程序。外患／反滲透法只寫經民連2025-03-03歷史告發、高檢署證實收件依法辦理及截至2026-11-02後續未知；告發方主張不是犯罪認定。兩案均不得寫目前仍偵查、已起訴、有罪、定讞、案底或前科。
+- 兩件民事程序清楚標示為民事：民進黨200萬元名譽案只證2025-12-12臺北地院開庭，案號與其後裁判／撤回／和解／確定結果未知；沈伯洋案同時醒目呈現臺北地院114年度訴字第4942號一審駁回原告之訴，以及官方歷審已列高院115年度上字第1101號、二審結果未取得，不寫一審確定、判賠或刑事有罪。
+- 必要有利／角色限制完整可見：理想大地案傅本人被控稅捐與偽證部分無罪確定；葉春蓮案花蓮地院114年度易字第396號被告只有余明火、熊愛蓮，傅不是被告，余、熊結果不得移植且傅早期被告發部分正式處分未知；幸福人壽案傅為第三人沒收程序參與人，高院110年度金上重更二字第1號更二審不予沒收且可上訴，鄧文聰等罪刑不得移植；張峻案傅是提告者。公開查取不是完整前科、全部告訴告發或未公開程序證明。
+- 新增立法院身分頁、4項官方裁判／定刑與執行、兩項最高法院新聞稿、戰天下與外患告發、兩件民事、理想大地無罪、葉春蓮角色排除、幸福人壽第三人不予沒收及張峻提告者等來源；逐項 `sources.note` 均寫支持範圍、角色、程序限制及必要節錄SHA-256。政黨分類只依立法院官方頁2026-11-02查取時點，不回填三件歷史犯行時黨籍、不保證即時／未來黨籍或政黨責任。`confirmed` 是資料狀態，不代表全部7案皆為定讞；`high` 不是犯罪機率或研究完整度。姓名搜尋欄只保留穩定姓名，不納case key、案名、罪名、案號、對造、機關、媒體、政黨、職稱或事件詞。
+- 開工前baseline存同task `serial-runs/0025/writer/`：HEAD／origin／remote main均為 `7a3f69a84450786522c85c69550b873424b01b29`、181個tracked hashes、空index、1,654筆compiled snapshot（SHA-256 `558d265d360273feeda496f23eeee9de39f97fbb1e9f9f0e090448bca4da69c9`）、真`_site` 3,961檔逐檔hash、Kevin既有untracked PNG，以及CONTROL、lock、STATE、results、review、worker report／manifest／ledger與31組列管證據逐bytes保真。writer局部驗證涵蓋來源語法／import、compileRecords兩次冪等、總數與ID唯一、除唯一授權target外其餘全部record逐值含陣列順序保真、本人exact／空白變體與partial候選、7案鍵及新增URL只歸本人、事件／罪名／案號／對造／機關／媒體／政黨／職稱不成為target搜尋鍵、正負矩陣、未授權tracked檔／真`_site`／Kevin PNG／task必要檔與lock保真、空index及`git diff --check`；詳細實跑結果與最終compiled SHA-256見同writer `report.json`。這些不是獨立verify或完整gate。
+- 本writer只改授權兩個repo檔，完成耐久artifacts後只將第25人STATE與repo-write.lock交接pending verify；不改`_site`、程式、契約、其他卡、public-evidence、queue、CONTROL、results、review或worker evidence，不npm ci、不跑完整validate／Node全套／Python全套／build／site validator，不stage／commit／push／部署／closure，不處理第26人。
+- 初次獨立verify的唯一MustFix為司法目錄分類：來源值「司法／公眾人物案件」會被`normalizeCategories()`正規化為「司法／人物案件」，使真build誤進`judicial/people`。本次MF-01單點rework已改用精確分類「司法／公眾人物」；局部重建實讀確認本人只出現在`judicial/all/index.html`、`judicial/party/kmt/index.html`與`judicial/public-figures/index.html`，未出現在people或其他司法／政黨頁，其他1,653筆編譯值與順序均保真。完整gate仍交新的獨立verifier-recheck，不以局部修正取代。
+
 ## 2026-11-01｜逐筆閉環第24人：王育敏歷史侵占相關告發與完整有利後續補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-738b-80b2-654f` 的王育敏member override；record ID是以開工前 `compileRecords()` 及 `matchRecords(records, "王育敏")` 唯一精準命中實際導出，不是手猜。未新增重複人物或案件卡、不改群組共用值。唯一核准案鍵為 `wang-child-welfare-embezzlement-complaint-2024`；只收錄2024-03-26台灣基進人士實際赴臺北地方檢察署提出侵占相關告發的歷史事實，目前程序unknown。
