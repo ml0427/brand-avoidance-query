@@ -1,5 +1,17 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-02｜逐筆閉環第26人：王鴻薇3個核准案與完整有利／角色限制補既有personal（writer階段）
+
+- 本輪只改 `kmt-current-public-figures-2026-06-26-738b-9d3b-8587` 的王鴻薇member override；record ID以開工前 `compileRecords()` 及 `matchRecords(records, "王鴻薇")` 唯一精準命中實際導出，不是手猜。未新增重複人物或案件卡、不改群組共用值。一次完整涵蓋全部3個核准案鍵：`wang-lin-legislature-injury-2026`、`wang-zhang-pharma-corruption-complaint-2025`、`wang-pan-meng-an-civil-defamation-2024-2026`，後續closure不得只發布子集。
+- 傷害案只寫歷史程序：具名法院線記載王鴻薇與林楚茵於2026年2月均因傷害罪起訴，臺北地院原訂2026-06-05庭期後因雙方請假取消；2026-06-04後程序未取得。王在林楚茵告訴部分為被告，在反控部分為告訴人。起訴不等於有罪，不寫目前仍審理、有罪、判刑或定讞。
+- 藥商案只寫2025-10-14歷史實際告發與凍結節錄所證2025-10-31曾傳證人；截至2026-11-02未取得起訴、不起訴、簽結或其他處分。230萬元、索賄及相關金流均為告發方主張，不是司法認定或犯罪所得；王鴻薇否認並稱歡迎調查。不寫目前仍偵查、已起訴、收賄、犯罪所得或有罪。
+- 潘孟安案清楚標示民事：最高法院114年度台上字第1572號先前廢棄發回；高院115年度上更一字第20號於2026-09-01就編號1言論部分改判王勝訴，編號2言論部分認侵權，賠30萬元並保留該部分回復名譽處置，判決仍可上訴。未取得其後第三審或確定證明，不寫成刑事定罪、全案敗訴或定讞。
+- 必要有利／排除脈絡完整可見：三立案2025-11-19罪嫌不足不起訴、可再議且後續未取得；王婉諭案2024-11-12罪嫌不足不起訴，再議／確定性未取得；八炯（温子渝）民事案北院114年度訴字第7367號於2026-08-21一審駁回原告之訴及假執行聲請，未確認上訴／確定；羅景壬自訴案北院114年度自字第56號於2026-05-27判王鴻薇等一審均無罪，未確認上訴／確定。所稱蔣萬安／成功高中案未定位，禁止猜測或發布，也不得以潘孟安案替代。公開查取不是完整前科、全部告訴告發或未公開程序證明，不宣稱沒有其他案件、沒有前科、證明清白或全部程序結束。
+- 保留原ID、name「王鴻薇」、空aliases／identifiers、country、personal／high、兩項既有名冊來源及所有非本次欄位；新增精確分類「司法／公眾人物」與「政黨／中國國民黨」。立法院官方頁只支持2026-11-02查取時第11屆中國國民黨籍、臺北市第3選舉區立委；政黨tag不回填更早事件時黨籍、不保證即時／未來黨籍、職務或政黨責任。personal是使用者個人避開，不是司法定性；high不是犯罪機率、程序確定性或研究完備度。姓名搜尋欄只保留穩定姓名，不納case key、案名、罪名、案號、對造、機關、媒體、政黨、職稱或事件詞。
+- 新增來源為立法院官方人物頁、傷害案聯合報具名法院線、藥商案中央社正文與聯合報凍結節錄、三立及王婉諭不起訴中央社正文、八炯案官方民事判決、潘孟安案最高法院與更一審官方民事判決、羅景壬案官方刑事判決；逐項 `sources.note` 均寫支持範圍、角色、程序限制及必要節錄／保存正文SHA-256。source report `5d6d648d9326656a02e93e14a5b815b47f2ab80562f2d65c5c2427de89c71ad6`；source review `6b56e00da8633b57dba72478253834f7c0235acb24e920a0f4836d2562bb71e2`；independent worker report `169aa33f341b0acbf5267cafa234765ef4a533b7f16979432cc310b5dd3b6449`；worker evidence manifest `c6dc2eb048c8c9211e45e4da4c0b4997586f41795e0ac8996e81de38a7f972de`；worker query ledger `fc1eccad0ffd008ade74b85c83ff2aff703bfc4e719902231e874584e114fa3b`。
+- 開工前baseline存同task `serial-runs/0026/writer/`：HEAD／origin／remote main均為 `53005dc1b531501aaf60c317a10097943107a138`、181個tracked hashes、空index、1,654筆compiled snapshot（SHA-256 `d02317156f07dd93a5cf0dc3fddf2178965c3d0bcde163a5d999eddd0ebb4671`）、真`_site` 3,961檔逐檔hash與size、Kevin既有untracked PNG，以及CONTROL、lock、STATE、results、review、worker report／manifest／ledger與34組列管證據逐bytes保真。writer局部驗證涵蓋來源語法／import、compileRecords兩次冪等、總數／ID唯一、除唯一target外其他1,653筆逐值含陣列順序保真、本人exact／空白變體正查與partial候選、3案鍵及新增URL只歸target、指定事件／罪名／案號／對造／機關／媒體／政黨／職稱不成為target搜尋鍵、正負矩陣、未授權tracked／真`_site`／Kevin PNG／task必要檔保真、空index及`git diff --check`；實跑結果及修改後compiled SHA-256見同writer `report.json`。這些不是獨立verify或完整gate。
+- 本writer只改授權兩個repo檔；不改`_site`、程式、契約、其他卡、public-evidence、queue、CONTROL、results、review或worker evidence，不npm ci、不跑完整validate／Node全套／Python全套／build／site validator，不stage／commit／push／發布／closure，不處理第27人。完成耐久artifacts後只將第26人STATE與repo-write.lock交接為pending verify，正式獨立verify由下一輪執行。
+
 ## 2026-11-02｜逐筆閉環第25人：傅崐萁3件定讞、2件歷史刑事程序與2件民事程序補既有案件卡（writer階段）
 
 - 本輪只補強既有案件卡 `fu-kunqi-stock-manipulation-final-convictions`，未新增或刪除人物／案件卡，不改榮亮實業公司卡 `fu-hsu-jungliang-enterprise`，也不把名冊人物卡 `kmt-current-public-figures-2026-06-26-5085-5d10-8401` 錯改成案件。開工前以 `compileRecords()` 與 `matchRecords(records, "傅崐萁")` 實得上述3筆精準命中；公司、案件、名冊三筆範圍分開保留。案件卡原name含「炒股案定讞判刑」事件詞，本輪依姓名查詢純度校正為穩定姓名「傅崐萁」，保留原ID、穩定別名、country、high／confirmed及既有可靠來源；相同姓名不同ID依reader contract不自動合併。
