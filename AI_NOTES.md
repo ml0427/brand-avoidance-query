@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-06｜補處理漏接圖片：陳昇最小personal；另一位教練線索保留內部待補證
+
+- 本輪承接使用者先前圖片式「避雷」及「處理沒處理到的訊息」授權；新增 `chen-sheng-election-comments-personal-20261106`，name僅「陳昇」，personal／medium。理由是使用者不接受本次言論呈現的政治冷感與公共責任態度，不是違法或黨派認定，不擴及樂團成員、家人、公司、活動或轉貼者。
+- 主控以certifi信任根、保留憑證鏈及主機名稱驗證的HTTPS直接讀中央社王心妤2026-11-04具名正文；17:13發布、18:46更新。保留自述從未投票、看好候選人後來失望、自我提醒少說話，以及提早造勢、吵鬧、選後看板／旗幟無人處理與想逃離的脈絡；不認證一生實際選票史、不改寫成自稱沒有政治立場、不推定反民主、支持政黨或已決定離台。另一研究者實讀ETtoday正文，但本卡不依其額外細節擴張，公開來源僅中央社及必要摘要，不公開新聞全文、原圖或裁圖。
+- 另一件教練／公開帳號線索的身分自介及第三方轉貼已核；但本人爭議原帖永久連結、確切時間及可歸屬的可信具名事件來源未取得。依重大人物指控來源gate保留內部待補證，不新增該人物紀錄，不因個人避開授權把第三方法律指控升為事實；未見回應只代表本輪有限視野，不能稱從未道歉或校方未處理。詳細姓名／帳號與原截圖均只留當前profile task，不在此公開擴張未核指控。
+- 三張原圖及研究／引用ledger／主控取文覆核已保存至當前profile `tasks/missed-avoidance-20261106/`；圖片只留內部、不入repo或public-evidence。三圖SHA-256依序 `1722a75b9fc088ec116cc0f717978153482304db14d46beef9a89bce70be04b6`、`0db78c00431ce64b83aad95133ee52feb65005eac045b353eac75a6ba7a2d669`、`c195c7f9c104f0fa0d6fdacf24bc7564e1735483f6c66e1d0fca5ba600220c90`；intake manifest SHA-256 `1da096c3927e17a7fb416c2ca73c87b664c140482fc26127252fe6d8f9970b3f`。保留未成年人影像於使用者原始證據的內部副本，不再公開傳佈、不擷取學生身分或作外貌分析。
+- 寫前HEAD／origin main均為 `d5c018eaa763e223ef93cd71f7e089e0921d04e6`，181個tracked hashes、1,654筆compiled baseline及Kevin既有untracked PNG保存在同名profile scratch。writer局部實跑：新增後1,655筆／ID唯一，移除新增ID後舊1,654筆全值含序不變；「陳昇」exact唯一命中新ID，投票、造勢、中央社、沒有政治立場、另一人物姓名／handle及樂團名均不成為新卡搜尋鍵。只改本來源與本筆記；不改公開證據、司法任務控制／queue／closure、程式或讀取契約，不恢復已暫停排程。
+- 局部PASS不代表完整驗收或上線。單輪獨立完整gate、目標查詢及本機manifest reader的實跑結果留同profile task `verification/`，最後提交／推送及遠端精確commit/blob讀回留 `publication-report.json` 並以Git實證為準；依repo政策不輪詢Pages，不將push冒充部署已驗證。
+
 ## 2026-11-02｜逐筆閉環第26人：王鴻薇3個核准案與完整有利／角色限制補既有personal（writer階段）
 
 - 本輪只改 `kmt-current-public-figures-2026-06-26-738b-9d3b-8587` 的王鴻薇member override；record ID以開工前 `compileRecords()` 及 `matchRecords(records, "王鴻薇")` 唯一精準命中實際導出，不是手猜。未新增重複人物或案件卡、不改群組共用值。一次完整涵蓋全部3個核准案鍵：`wang-lin-legislature-injury-2026`、`wang-zhang-pharma-corruption-complaint-2025`、`wang-pan-meng-an-civil-defamation-2024-2026`，後續closure不得只發布子集。
