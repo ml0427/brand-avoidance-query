@@ -1,5 +1,13 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-06｜洪聖翔／stamp888888本次Threads表達的最小personal
+
+- 使用者附公開帳號截圖明示「避雷」。寫前以compileRecords／matchRecords確認洪聖翔、stamp888888均未命中，只新增 `hung-sheng-hsiang-stamp888888-personal-20261106`，personal／medium；理由限使用者不接受本次將政治支持、輕生及救護情境連用、認為有嘲諷意味的表達。只歸本姓名／帳號，不擴房仲品牌、機構、同名者、沈伯洋或支持者，不認定作者意圖、心理狀態、鼓動自傷、威脅、違法或實際傷害。
+- 研究者在隔離browser session由真實a[href]取得原帖DfXOtJuI6KY（2026-11-05 22:18:57台北）、續文DfXTMOco26q（同日22:58:08）、作者後續DfY2FLpI5bB（2026-11-06 13:22:15）。主控另直接讀三原頁正文與time[datetime]；原帖初讀僅metadata／空正文，僅在補讀成功後才作正文核對。profile姓名與handle只由研究者必要文字artifact讀回，不冒稱主控直接開啟，也不將藍勾或自述履歷當身分認證。完整原帖涉及自傷情境，公開敘述只作必要概述，不重現具體措辭；保留續文「支持沈伯洋按這裡」及作者後續抗壓、親友陪伴、信心與行車安全脈絡。洋流帶指涉及1128年份仍未核，不由發文日猜補。未登入視野有限、不稱從未道歉或完整澄清已取得。
+- 研究及必要正文packet存當前profile `tasks/hung-sheng-hsiang-20261106/`。原圖含聯絡資料，僅核原圖SHA-256 `06f63754f96abc77cc6748b1bcc82f7ea39886525b16a779500990fc7084f1b9`，不複製原圖。原位裁圖座標 `[170,2000,1260,2570]`，1090×570 RGBA，排除整段自介、電話及頭像；重開輸出確認原生像素一致且metadata空。私有裁圖檔案SHA-256 `68b70c89e0db347de293556e758359172cdad91e88cc7e0dfff57927e5348a08`、RGBA pixel SHA-256 `d45c3dce8e4805f6a2ee0be66bef55b9c6c7ef72d71548c826237862efee8000`；只留profile，不入repo或public-evidence，不公開圖片、電話、LINE或學經歷。
+- 搜尋僅name「洪聖翔」與alias「stamp888888」，country／identifiers空。正查須各唯一命中新ID，理由、情境、續文政治人物、職稱、關聯品牌與泛詞均作target負查，partial只作候選；不新建query blocklist。原1,655筆含內部陣列序須保真，唯一新增後共1,656筆。寫前HEAD／origin main均 `08f921bafa4ff01533366122377c1cb54647468f`，181 tracked hashes與compiled baseline存同名profile scratch；保護既有Kevin untracked PNG，不改司法控制、queue、closure或已暫停cron。
+- 本輪只改人物來源與本筆記，完整gate、單輪獨立審核及本機manifest reader實跑結果留同task `verification/`，限定提交／推送與遠端ref及精確blob讀回留 `publication-report.json`，以Git實證為準。不把writer局部PASS稱作完整驗收；不輪詢Pages或冒稱網站已驗上線。Windows推送若default helper-selector停滯，依已驗工作流使用單次gh auth git-credential覆寫，不改全域憑證設定、不印出token。
+
 ## 2026-11-06｜補處理漏接圖片：陳昇最小personal；另一位教練線索保留內部待補證
 
 - 本輪承接使用者先前圖片式「避雷」及「處理沒處理到的訊息」授權；新增 `chen-sheng-election-comments-personal-20261106`，name僅「陳昇」，personal／medium。理由是使用者不接受本次言論呈現的政治冷感與公共責任態度，不是違法或黨派認定，不擴及樂團成員、家人、公司、活動或轉貼者。
