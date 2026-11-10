@@ -134,6 +134,34 @@ const newPartySources = [
 
 export const records = [
   {
+    id: "licing-editor-personal-20261110",
+    name: "李青",
+    aliases: ["licing.editor"],
+    identifiers: [],
+    country: "",
+    categories: ["人物／社群帳號"],
+    avoidReasons: ["使用者看本次圖片線索後，明示個人避開圖示剪輯帳號"],
+    confidence: "low",
+    status: "personal",
+    lastReviewed: "2026-11-10",
+    summary: "使用者看本次圖片線索後，明示個人避開李青／licing.editor剪輯帳號。第一方作品網站僅支撐李青及短影音剪輯身分的自述；另一圖回覆尚未完成同人及原帖核對，不能歸屬本人。範圍不擴及客戶、VTubers、發問者、合作者或同名者。",
+    sources: [
+      source(
+        "使用者明示個人避開／可見profile截圖",
+        "",
+        "2026-11-10",
+        "使用者在知悉圖片帳號尚未完成同人橋接後，明示『不用 直接避雷』；只支持個人避開圖示李青／licing.editor帳號，不證明另一圖回覆出自本人。李青僅為公開顯示名，不是真名認證。第一張原圖SHA-256：77ae580ebe7a625a17ad30660ec7a83b410e8a46e33c173638df0135e05e03e4；僅供私有原圖完整性核對，不公開原圖或裁圖，不保存聯絡資訊及無關個資。",
+      ),
+      source(
+        "首頁｜李青 Riaoi 短影音剪輯師",
+        "https://licingeditor.netlify.app/",
+        "查核日 2026-11-10",
+        "先前research子代理透過browser實讀網站；主控從已完成工具log讀回title與部分正文，可見LICING、李青、VTUBER短影音剪輯師及剪輯經驗自述。本來源只支持公開顯示名與短影音剪輯身分的第一方自述，不代表其本人是VTuber；未完整核對作品、社群連結、發言或資格，也不支撐另一圖回覆歸屬、法律定性或言論意圖。",
+      ),
+    ],
+    aiNotes: "僅收第一張圖的李青／licing.editor帳號；公開顯示名不是真名認證。personal為使用者選擇，low保留來源及同人核對限制；不合併另一圖回覆帳號、不另建第二卡，不將未橋接回覆或其意圖與法律評價歸於本人。只用姓名及handle搜尋，不以職業、作品網站、理由或其他人作搜尋鍵。依使用者指示停止研究，不擴及客戶、VTubers、發問者、合作者或同名者。",
+  },
+  {
     id: "lin-chu-chuan-pushing-microphone-personal-20261110",
     name: "林主全",
     aliases: [],

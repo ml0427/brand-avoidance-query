@@ -1,5 +1,13 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-10｜李青／licing.editor最小personal（僅本地writer交接）
+
+- 使用者知悉兩圖帳號未橋接後明示「不用 直接避雷」，本次再明確授權僅新增 `licing-editor-personal-20261110`，name「李青」僅公開顯示名、非真名認證，alias僅 `licing.editor`；identifiers／country空，分類只「人物／社群帳號」，personal／low，lastReviewed為2026-11-10。主因僅使用者看本次圖片線索後指定個人避開圖示剪輯帳號，不重述他方辯解、不認定法律責任或言論意圖。
+- 第一方作品網站 `https://licingeditor.netlify.app/` 已由先前research子代理browser實讀；主控從完成工具log `cache/delegation/live/deleg_d9018fca/task-0.log:15-16` 讀回title及部分正文，只支持李青、LICING與短影音剪輯師的網站自述，不是主控直接open、完整作品／社群連結／發言／資格驗證，也不把剪輯師誤寫成VTuber本人。依使用者指示停止外部研究及橋接；writer只依已給內容，不再瀏覽。
+- 另一張圖的 `tzn._lee` 回覆尚未完成同人／原帖核對，不與 `licing.editor` 合併、不加alias、不另建卡，未橋接回覆及法律／意圖不歸於李青；公開摘要不曝另一handle。不擴及客戶、VTubers、發問者、合作者或同名者。原圖SHA-256依序為 `77ae580ebe7a625a17ad30660ec7a83b410e8a46e33c173638df0135e05e03e4`、`59a7e0a4f2bcbd5807aa7662cefbf9b74ed26d85df118ddc79406c91618bae5a`；公開source僅留第一圖必要hash，不公開原圖／裁圖、不新增public-evidence，不抄存信箱、頭像、粉絲數、價格或聯絡資訊。
+- 寫前baseline：HEAD `85820d06d18eeba72f48f7c4a3c6acff18ba92c2`、181個tracked hashes、1,658筆compiled及姓名／handle／網站／另一帳號四鍵零命中，保存在當前profile `tasks/licing-editor-20261110/`。本輪只patch人物來源與本筆記；其餘tracked及既有Kevin untracked PNG須逐hash保真，舊1,658筆逐值含順序不變，唯一新增後1,659筆。
+- 局部驗證交接：compileRecords、ID唯一性、舊資料含序保真、姓名及handle正查，VTuber／剪輯師／網站描述／另一帳號／發問者／理由詞exact與partial均作target負查（泛詞可命中其他卡，不得命中新卡），git diff --check及兩檔範圍／hash核對；真實命令、query matrix、結果與兩檔SHA-256只留同task `writer-report.json`。局部PASS不是完整gate或發布；本輪不npm ci／fullgate／build，不stage／commit／push，不改司法、其他pending或cron，後續完整驗收及發布另交主控，不自行續做。
+
 ## 2026-11-10｜林主全推擠／搶麥事件最小personal（writer階段）
 
 - 使用者明確授權只收林主全本人；寫前主控compileRecords確認姓名exact／林主partial均零命中。新增 `lin-chu-chuan-pushing-microphone-personal-20261110`，personal／medium；name「林主全」，aliases／identifiers／country空，分類只政治／公眾人物。理由是使用者不接受媒體所載推擠住戶、搶麥阻止反映問題，不因林方致歉取消個人避開；不擴其他人、政黨、合照者或同名者。
