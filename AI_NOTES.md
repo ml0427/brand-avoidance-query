@@ -1,5 +1,13 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-10｜林主全推擠／搶麥事件最小personal（writer階段）
+
+- 使用者明確授權只收林主全本人；寫前主控compileRecords確認姓名exact／林主partial均零命中。新增 `lin-chu-chuan-pushing-microphone-personal-20261110`，personal／medium；name「林主全」，aliases／identifiers／country空，分類只政治／公眾人物。理由是使用者不接受媒體所載推擠住戶、搶麥阻止反映問題，不因林方致歉取消個人避開；不擴其他人、政黨、合照者或同名者。
+- 主控已實讀東森新聞2026-11-09 14:25正文（頁面未列個別記者）及TVBS羅喬薰同日18:06發布／23:19更新正文，writer依同profile `tasks/lin-chu-chuan-20261110/source-packet.json`讀回，不冒稱writer直接開頁。依使用者最新指示，摘要及理由不重述林方或里長辯解；不將不採信升為已客觀證實說謊。摘要區分東森明述推一把與TVBS疑似推人，來源註記僅極短保留事後道歉，不作個人避雷減免；路權及申請內容未獨立查核。來源讀取方法依主控更正為真實browser DOM，公開note只寫主控實讀，不保留錯誤方法或假行號。
+- 民政顧問僅媒體所載職稱，不證官方聘任、現職公務員或黨籍；無政黨tag或司法分類，不是犯罪、定讞或前科紀錄。完整原串／原片未取得，不冒稱完整影像驗證。公開來源只用東森與TVBS兩實際URL，不以社群評論補強法律指控。
+- 兩張原圖含無關資訊，只記私有SHA-256 `f225f90d732ec418a0d5f76e969e11ff2eab2711cb570387ae98efcc2c87e6da`、`1c8131e62c4660f0daa5d8a2db354fdc7173cb62557ffc56143da780e7e652a4`；不複製、不裁切公開、不入repo或public-evidence。私有intake manifest與來源packet留同名profile task。
+- 寫前HEAD `d82923fbf381d5b4a0783ea3860918ef29c3bb61`，181 tracked及1,657筆compiled baseline留同task。局部驗證限定來源import、compiled唯一性、姓名及前後空白變體正查、理由／來源／他人／政黨負查、舊1,657筆全值含序保真；實跑結果與兩授權檔SHA-256見 `writer-report.json`，不把writer局部驗證稱完整gate。完整gate及本機reader交主控單輪獨立驗收；本writer不build、不stage／commit／push，不動司法任務、既有pending或cron，保護原有Kevin未追蹤PNG。
+
 ## 2026-11-07｜陳竹音公開中國認同／歷史戶籍健保表態與參選背景的最小personal
 
 - 持續避雷收件中使用者提供無文字圖片，目標清楚為陳竹音，承接最小本人personal授權。寫前陳竹音／陈竹音exact均未命中，新增 `chen-chu-yin-public-identity-election-personal-20261107`，personal／medium，搜尋只含name「陳竹音」與繁簡alias「陈竹音」，country／identifiers空。主因是使用者不接受其公開中國認同及曾表明申請中國戶籍、放棄台灣健保的立場，不因行政結果未知否定個人避開；不擴政黨其他成員、轉貼者、留言者、家人或其他藝人。
