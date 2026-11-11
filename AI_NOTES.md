@@ -1,5 +1,14 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-11｜羅大佑婚育／下一代發言的最小personal
+
+- 使用者先要求找圖中說法來源，立即限縮「羅大佑的原話就好」，已停止陳菊背景查核；主控交付具名報導引述及原始節目後，使用者明示「避雷」（message 1569918457426870303），構成本次本人personal寫入授權，不再重問。只收羅大佑，主因是使用者不接受以有無子女評斷是否關心下一代，不擴其他人或機構，不認定犯罪、違法、動機或司法上的歧視。
+- 主控browser實讀聯合報林士傑2026-11-10 18:43報導 `https://stars.udn.com/star/story/10091/9869971` 正文；必要段落指他談到蔡英文、蕭美琴、陳菊沒有子女及賴清德兒子赴美後，對比自己有子女、對下一代想得較多。這是具名媒體引述，不是原音逐字聽打；不可擴寫為逐字說陳菊沒有結婚，不納同篇其他政治／文化補助爭議。
+- 子代理找到官方Podcast單集，主控再以具名隔離browser session讀回Apple與SoundOn的單集標題／發布者／日期／主持人。公開只引用SoundOn原始播放器，支撐2026-11-10飛碟聯播網《飛碟早餐 唐湘龍時間》羅大佑專訪的單集身分；未取得字幕、定位爭議段落秒數或完成原音聽證，不把單集metadata當逐字佐證。YouTube候選未直接核實，不收。來源節錄留profile `cache/scratch/lo-ta-yu-original-20261111/`，本次source-packet如實載明讀取者／方法／界線，不猜原話或假時間戳。
+- 圖卡只作intake線索，私有原圖SHA-256 `ff0a40614372c069d7a57f09f8f6963430cdb886da64e09366f8fb1211539817`；不複製原圖／裁圖入repo、不新增public-evidence、不公開頭像、留言或無關個資。未收圖卡中陳菊未婚原因、死刑、遺書、受難等敘述；不擴查、不歸咎其他政治人物／主持人／家人／合作方。未做完整道歉／更正全網掃描，不寫從未道歉。
+- 寫前HEAD `73e7a568ea9405f9d0ed33f12f0cf0bd2af364e0`、181 tracked hashes、1,659筆compiled，羅大佑／罗大佑exact及羅大佑partial皆零命中。baseline與source-packet保存在當前profile `tasks/lo-ta-yu-parenthood-personal-20261111/`。本輪僅patch `data/records/public-figures-politics.mjs` 與本筆記，新增 `lo-ta-yu-parenthood-remarks-personal-20261111`，personal／medium，name羅大佑、alias僅罗大佑，identifiers／country空、分類人物／藝文、lastReviewed2026-11-11。其餘1,659筆逐值含序與其他179 tracked、既有Kevin untracked PNG保真。
+- 本地目標矩陣驗姓名繁簡及空白變體正查；關係人、主持人、媒體／節目、職業、婚育／下一代理由詞exact／partial作target負查，泛詞可命中其他卡，partial只作候選，不新增blocklist。後續由單輪獨立驗收完成完整gate、本機reader及bytes／SHA-256；主控限定兩檔提交推送並精確遠端ref／blob讀回。局部PASS不冒稱發布，未明示要求不輪詢Pages；不動司法／cron／其他pending。
+
 ## 2026-11-10｜李青／licing.editor最小personal（僅本地writer交接）
 
 - 使用者知悉兩圖帳號未橋接後明示「不用 直接避雷」，本次再明確授權僅新增 `licing-editor-personal-20261110`，name「李青」僅公開顯示名、非真名認證，alias僅 `licing.editor`；identifiers／country空，分類只「人物／社群帳號」，personal／low，lastReviewed為2026-11-10。主因僅使用者看本次圖片線索後指定個人避開圖示剪輯帳號，不重述他方辯解、不認定法律責任或言論意圖。
