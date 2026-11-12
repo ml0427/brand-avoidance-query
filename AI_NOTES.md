@@ -1,5 +1,16 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-12｜PHOSEPO 全工作室及三部自製作品 personal
+
+- 首輪獨立完整驗收發現四卡 `country: []` 與 reader 字串契約不符，來源驗證、Node 102／Python 32、198 列查詢及舊 1,660 筆保真通過，但 validate:site 與九項 reader 查詢失敗，原 `verification/report.json` 保留 FAIL_MUST_FIX，不冒稱發布。主控依獨立驗收的單點修正將四處改為空字串 `country: ""`，不改來源措辭、搜尋鍵、範圍或其他紀錄；修正後完整 gate 與 reader 的真實重驗結果另存 `tasks/psycho-sleuth-20261112/controller-closure/`。國別未知保留空字串；identifiers／aliases 才使用陣列，不從「空」一字推測欄位型別。
+
+- 使用者「找一下遊戲製作組全部避雷」及本輪四卡實作授權，範圍是整個 PHOSEPO 工作室與三部已確認自製作品；主因是使用者不接受《異病偵探》中國社群稱國產的宣傳爭議。新增四筆獨立 personal／medium：`phosepo-studio-personal-20261112`、`psycho-sleuth-personal-20261112`、`zhan-lan-lao-long-personal-20261112`、`project-ahnos-ark-personal-20261112`。工作室 aliases 僅光之語／光之語有限公司，作品不塞入工作室別名；異病偵探 aliases 僅 Psycho-Sleuth／異病偵探 Psycho-Sleuth，湛藍牢籠無英文別名，倒轉方舟保留 GNN 實讀 `Project: AHNO's Ark`。identifiers／country 空，既有分類 App／數位服務，lastReviewed 2026-11-12。
+- 研究子代理獨立 HTTP 實讀 Yahoo MrSun／Yahoo遊戲編輯正文，主控與 writer 讀回當前 profile `tasks/psycho-sleuth-20261112/research/report.json`、`evidence-excerpts.json`，必要子字串對位通過；不是主控親自 web.run。Yahoo 發布／更新 2026-11-11T13:04:41Z＝台北 21:04；只證具名媒體轉述小黑盒遊戲帳號貼文截圖，沒有本輪原平台讀證、撰稿／批准者確認或團隊逐人表態。同文王柏森稱中國帳號註冊、行銷與社群由熱脈營運，並稱本作是台灣本土國產，必須保留於 sources.note／aiNotes，不冒稱團隊官方澄清、不改寫為五人本人政治立場，也不因此取消使用者 personal。
+- Steam 作品頁只證異病偵探開發者 PHOSEPO；GNN `sn=256231` 的【TGS 23】正文證 PHOSEPO 光之語、湛藍牢籠及倒轉方舟；TTXC 2025 展覽頁將異病偵探與光之語有限公司對位，僅作名稱橋接，不是公司登記查核。其他兩作只因同工作室全組指定收錄，未有各自相同宣傳爭議的讀證。未核 114／115 官方補助結果、金額或撥款，TTXC 另一計畫不得代替核定結果，不新增補助既定事實、詐領或違法指控。
+- 未有完整五人公開名單，不建自然人卡、不猜小鹿／Chase Lee／Alex Lu 同人；不擴 Thermite／熱脈／Smilegate 及其其他工作室、聲優、合作方、跨工作室組合包、炎姬、紅眼露比、亞路塔。沒有查存公司稅號。私有 intake SHA-256 `358ec39ac8d4f3a293372c4b48f8586e2c6207b7332406e2d7dc39f4410ac7a8` 僅留本筆記；不抄截圖、裁圖或聯絡個資入 repo，不新增 public-evidence。
+- 寫前 HEAD `fcb4912d6c235bb2d8f338c2e21b8333e10b9173`、181 tracked hashes、1,660 筆 compiled baseline 在同 task 根；只改本筆記與 `data/records/digital-commerce-apps.mjs`。局部驗證含編譯冪等／ID 唯一、新增後 1,664 筆、舊 1,660 筆逐值含陣列序保真、其餘 179 tracked／HEAD／index／Kevin 既有 untracked PNG 保真及 git diff --check；真實結果、檔案 SHA-256 與完整目標查詢矩陣分別交同 task `writer-report.json`、`query-matrix.json`。
+- 正查各卡姓名／別名及正規化變體，其他三卡 target 負查；來源、理由、平台、泛稱及明確排除對象均作四卡 target 負查。partial 先按名稱 substring 判定應有候選，不把作品名片段誤當負查；泛詞可命中其他既有卡，不設 blocklist。此為 writer 局部交接，不是完整 gate／獨立驗收或發布；不跑 npm ci、完整 gate、build，不 stage／commit／push，不改其他 pending、司法或 cron，完整驗收交主控。
+
 ## 2026-11-11｜羅大佑婚育／下一代發言的最小personal
 
 - 使用者先要求找圖中說法來源，立即限縮「羅大佑的原話就好」，已停止陳菊背景查核；主控交付具名報導引述及原始節目後，使用者明示「避雷」（message 1569918457426870303），構成本次本人personal寫入授權，不再重問。只收羅大佑，主因是使用者不接受以有無子女評斷是否關心下一代，不擴其他人或機構，不認定犯罪、違法、動機或司法上的歧視。
