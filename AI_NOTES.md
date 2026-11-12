@@ -1,5 +1,15 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-13｜兩岸和平倡議具名16到場＋2發起證據者 personal（writer交接）
+
+- 使用者「有參加的都避雷」及本輪18人逐人personal授權，主因是使用者不接受本場倡議及政治安排方向，不是司法／犯罪判斷。新建17張獨立人物卡，既有 `hung-hsiu-chu-public-figure` 洪秀柱保留原ID、name、aliases、identifiers、country、信心medium及全部舊來源，改personal並補本場到場證據；不另建重複卡。新卡只有姓名及已橋接陳沖／李勝峰變體，country空字串、identifiers空陣列、分類政治／公眾人物、lastReviewed 2026-11-13；一般medium，毛治國及帥化民low。
+- 到場16人：丁守中、關中、王金平、陳冲、蘇起、林永樂、陳鎮湘、邱進益、吳志揚、潘維大、李勝峯、趙麗雲、雷倩、蘇進強、洪秀柱、丁渝洲。原站中央社劉冠廷、新頭殼李宣萱現場報導及蕃新聞刊載樂聯網虞煥榮現場稿逐人對位；未用沃草第三方鏡像作公開卡來源，不把原X的403稱原文讀證。陳冲／陳沖依同事件前行政院長職務對位，李勝峯／李勝峰依現場稿與同場發起代表預告對位；丁中守屬原文誤植，不作alias。
+- 另外2人角色分開：毛治國只有中評社2026-11-10報導列共同發起，未核本人簽署或11/12出席，非官方名冊；帥化民只有愛傳媒11/12 09:38活動前預告列發起人各領域代表及預定致詞，未證當日實際到場或致詞。這兩筆仍依使用者對具名發起者的personal授權收錄，不能混稱18人到場。各卡不將邱進益十年計畫、2036一國兩制或現場口號歸給所有人，不捏造共同政治表態。
+- 尚無260人、逾280人或另稱278人的完整可核名冊；本輪僅完成上述18名已具名對位對象，不稱全體完成，不以報導總數相減湊未核姓名。來源研究子代理實讀、主控讀回並做正文substring核對；writer依當前profile `tasks/peace-initiative-20261113/research/`及`source-substring-checks.json`交接材料核對，不冒稱writer親自web.run／開頁。中央社13:08發布／14:02更新、新頭殼12:37、樂聯網17:45發布／19:15更新；預告09:38發布／09:55更新；中評社11/10 11:03:36。主控另讀聯合報僅補丁守中等五人，不從該文擴名。
+- 原圖私有SHA-256 `3759b63da94e2e3657212df411121347a1047dc04546256010b78c1ededaf615`僅留筆記，不複製原圖／裁圖、不新增public-evidence、不收頭像或聯絡個資，不擴外部研究、刑案背景、政黨或其他人。
+- 寫前HEAD `1e9fe90464ea4a164d54a50480dcec1efd169cba`、181 tracked hashes與1,664筆compiled baseline在同task。預期新增17後1,681筆；除授權洪秀柱外其餘舊筆逐值含陣列序保真，其他179 tracked、HEAD、index與Kevin既有untracked PNG保真。局部compileRecords／matchRecords矩陣含姓名／變體正查、跨卡隔離及理由／活動／政黨／職稱／媒體／地點／記者／轉貼者／邱垂正／梁文傑／習近平等target負查；partial先檢substring合理候選，不要求全庫零命中。真實局部結果、逐人ID／角色、矩陣、兩檔pins與log交 `writer-report.json`、`targets.json`、`query-matrix.json`。
+- 只改本筆記及 `data/records/public-figures-politics.mjs`；不build／fullgate、不stage／commit／push、不改核心／其他pending／司法／cron。局部PASS不是獨立完整驗收、reader驗證或發布，交下一輪單一獨立verifier。
+
 ## 2026-11-12｜PHOSEPO 全工作室及三部自製作品 personal
 
 - 首輪獨立完整驗收發現四卡 `country: []` 與 reader 字串契約不符，來源驗證、Node 102／Python 32、198 列查詢及舊 1,660 筆保真通過，但 validate:site 與九項 reader 查詢失敗，原 `verification/report.json` 保留 FAIL_MUST_FIX，不冒稱發布。主控依獨立驗收的單點修正將四處改為空字串 `country: ""`，不改來源措辭、搜尋鍵、範圍或其他紀錄；修正後完整 gate 與 reader 的真實重驗結果另存 `tasks/psycho-sleuth-20261112/controller-closure/`。國別未知保留空字串；identifiers／aliases 才使用陣列，不從「空」一字推測欄位型別。
