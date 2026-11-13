@@ -1,14 +1,18 @@
 # AI_NOTES — brand-avoidance-query
 
-## 2026-11-13｜兩岸和平倡議具名16到場＋2發起證據者 personal（writer交接）
+## 2026-11-13｜兩岸和平倡議既有18人：17到場＋1發起相關 personal（帥化民補強writer交接）
 
 - 使用者「有參加的都避雷」及本輪18人逐人personal授權，主因是使用者不接受本場倡議及政治安排方向，不是司法／犯罪判斷。新建17張獨立人物卡，既有 `hung-hsiu-chu-public-figure` 洪秀柱保留原ID、name、aliases、identifiers、country、信心medium及全部舊來源，改personal並補本場到場證據；不另建重複卡。新卡只有姓名及已橋接陳沖／李勝峰變體，country空字串、identifiers空陣列、分類政治／公眾人物、lastReviewed 2026-11-13；一般medium，毛治國及帥化民low。
-- 到場16人：丁守中、關中、王金平、陳冲、蘇起、林永樂、陳鎮湘、邱進益、吳志揚、潘維大、李勝峯、趙麗雲、雷倩、蘇進強、洪秀柱、丁渝洲。原站中央社劉冠廷、新頭殼李宣萱現場報導及蕃新聞刊載樂聯網虞煥榮現場稿逐人對位；未用沃草第三方鏡像作公開卡來源，不把原X的403稱原文讀證。陳冲／陳沖依同事件前行政院長職務對位，李勝峯／李勝峰依現場稿與同場發起代表預告對位；丁中守屬原文誤植，不作alias。
-- 另外2人角色分開：毛治國只有中評社2026-11-10報導列共同發起，未核本人簽署或11/12出席，非官方名冊；帥化民只有愛傳媒11/12 09:38活動前預告列發起人各領域代表及預定致詞，未證當日實際到場或致詞。這兩筆仍依使用者對具名發起者的personal授權收錄，不能混稱18人到場。各卡不將邱進益十年計畫、2036一國兩制或現場口號歸給所有人，不捏造共同政治表態。
+- 首輪已核到場16人：丁守中、關中、王金平、陳冲、蘇起、林永樂、陳鎮湘、邱進益、吳志揚、潘維大、李勝峯、趙麗雲、雷倩、蘇進強、洪秀柱、丁渝洲。原站中央社劉冠廷、新頭殼李宣萱現場報導及蕃新聞刊載樂聯網虞煥榮現場稿逐人對位；未用沃草第三方鏡像作公開卡來源，不把原X的403稱原文讀證。陳冲／陳沖依同事件前行政院長職務對位，李勝峯／李勝峰依現場稿與同場發起代表預告對位；丁中守屬原文誤植，不作alias。續查以長直播合併證據補強既有帥化民為實際發言／到場，既有18人目前為17到場＋1發起相關，不是新增第19人。
+- 剩餘1人角色分開：毛治國只有中評社2026-11-10報導列共同發起，未核本人簽署或11/12出席，非官方名冊；其personal仍依使用者對具名發起者授權收錄，不能混稱18人到場。帥化民原愛傳媒11/12 09:38來源仍只證活動前預告列發起人各領域代表及預定致詞；本輪另以原長直播補強實際角色，不回寫預告為現場報導。各卡不將邱進益十年計畫、2036一國兩制或現場口號歸給所有人，不捏造共同政治表態。
 - 尚無260人、逾280人或另稱278人的完整可核名冊；本輪僅完成上述18名已具名對位對象，不稱全體完成，不以報導總數相減湊未核姓名。來源研究子代理實讀、主控讀回並做正文substring核對；writer依當前profile `tasks/peace-initiative-20261113/research/`及`source-substring-checks.json`交接材料核對，不冒稱writer親自web.run／開頁。中央社13:08發布／14:02更新、新頭殼12:37、樂聯網17:45發布／19:15更新；預告09:38發布／09:55更新；中評社11/10 11:03:36。主控另讀聯合報僅補丁守中等五人，不從該文擴名。
 - 原圖私有SHA-256 `3759b63da94e2e3657212df411121347a1047dc04546256010b78c1ededaf615`僅留筆記，不複製原圖／裁圖、不新增public-evidence、不收頭像或聯絡個資，不擴外部研究、刑案背景、政黨或其他人。
 - 寫前HEAD `1e9fe90464ea4a164d54a50480dcec1efd169cba`、181 tracked hashes與1,664筆compiled baseline在同task。預期新增17後1,681筆；除授權洪秀柱外其餘舊筆逐值含陣列序保真，其他179 tracked、HEAD、index與Kevin既有untracked PNG保真。局部compileRecords／matchRecords矩陣含姓名／變體正查、跨卡隔離及理由／活動／政黨／職稱／媒體／地點／記者／轉貼者／邱垂正／梁文傑／習近平等target負查；partial先檢substring合理候選，不要求全庫零命中。真實局部結果、逐人ID／角色、矩陣、兩檔pins與log交 `writer-report.json`、`targets.json`、`query-matrix.json`。
 - 只改本筆記及 `data/records/public-figures-politics.mjs`；不build／fullgate、不stage／commit／push、不改核心／其他pending／司法／cron。局部PASS不是獨立完整驗收、reader驗證或發布，交下一輪單一獨立verifier。
+
+- 本輪角色補強以已推送HEAD `22e10320a6e1dae77736e50f817dccbb761fd1da` 為baseline，唯一target為既有 `peace-initiative-20261112-person-e5b8a5e58c96e6b091` 帥化民，只改summary、增加1個直播source及aiNotes；原ID、name、aliases／identifiers、country、分類、personal主因、low信心、lastReviewed與原預告來源完整保留。原直播 `https://www.youtube.com/watch?v=Js4t4GJxAUE&t=5859s` 發布者蘇恆政經觀察／台灣關鍵論壇，說明欄稱野禮傳媒受邀直播，不是主辦名冊。公開字幕自載AI生成；1:37:39姓名誤作帥化武，1:37:48主持列職銜，1:37:55接續發言至1:42:51主持感謝帥將軍。研究子代理另下載原媒體與1080p指定片段，抽樣畫面可讀前立委／國防管理學院院長／國家安全促進協會理事長並見站立持麥；投影片姓名不在取景內。以metadata流程明列帥化民、字幕、職銜及流程合併橋接，不辨臉、不把ASR錯字收alias、不聲稱已聽原音或擴張其具體政治立場。本writer只讀回研究report、metadata與926段字幕的指定段落，未親自開原頁。
+- 續查材料在當前profile同task `continuation/closure-evidence-report.json`、`video-roster-report.json`；11頁PDF已逐頁視讀確認為童子賢能源訪談，排除且停止旁支，不當本次名冊。新增確認人物0，不新建李翔宙／李紀珠／桂宏誠／陳良安／林安吾／楊泰順；公開AI字幕姓名／角色線索不直接當核字或到場。主辦原站 `democracyfoundation.org.tw` 連線逾時的缺口仍未解，完整260／逾280／另稱278人名冊未取得，不以既有18人子集補強稱全任務完成。
+- 本輪新的before compiled、53列正負／partial矩陣、181個tracked hashes、既有Kevin未追蹤PNG及研究材料hash、兩檔diff、精確target與修改後SHA均存 `continuation/role-upgrade/writer/`。局部實測採compileRecords／matchRecords，總數維持1,681／ID唯一、兩次compile冪等；除唯一target外其他1,680筆逐值含內部陣列序保真，原搜尋鍵正查、未核候選及理由／職銜／媒體等target負查、其他179個tracked、HEAD／index、Kevin PNG與研究材料保真及git diff --check，以 `writer-report.json` 與真實命令輸出為準。不變更其他人物卡；其他卡仍留首輪16＋2歷史註記，本輪現況以本節與帥化民卡為準。完整gate及reader交下一單輪獨立verifier，本writer不重跑、不發布。
 
 ## 2026-11-12｜PHOSEPO 全工作室及三部自製作品 personal
 
