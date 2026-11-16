@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-16｜馬幼興卡補正羅大佑婚育／下一代爭議脈絡（writer交接）
+
+- 使用者追問聲援內容是否串到羅大佑既有紀錄，本輪補正 `ma-you-hsing-lo-ta-yu-support-personal-20261116` 的summary／sources／aiNotes：主因置首，明寫羅大佑以有無子女評斷是否關心下一代引發爭議後，馬幼興公開聲援，使用者因此個人避開。羅大佑是原發言者，馬幼興是聲援者，不把前者逐句言論歸給後者；personal／medium、姓名、空aliases／identifiers／country、分類、avoidReasons與日期保留，不動既有羅大佑卡或其他人物。
+- 本輪writer只讀回同profile `tasks/ma-you-hsing-support-20261116/verified-source-packet.json`、`writer/source-context-excerpt.txt`、`writer/source-excerpts.json`及repo既有羅大佑卡。NOWnews已核節錄明確以婚育／下一代爭議銜接馬幼興11/12晚聲援；原站正文由初次收錄writer的browser DOM實讀，非本輪重開。新增聯合報林士傑2026-11-10 18:43原報導來源，承接既有卡所記主控當時DOM讀證；只作羅大佑發言背景，不證馬逐句認同，不納補助及其他政治指控。未獨立讀Threads永久帖、未聽原音；不採撤回材料、不捏造來源碼，既有羅卡recordId僅作追溯關聯，不稱新增內部可點超連結。
+- 寫前HEAD `4cb4ca061838391cb0891e9c0a28d15e8c61516b`、1,682筆compiled、181 tracked hashes、index與Kevin既有untracked PNG基線存同task `context-link/writer/baseline.json`及`compiled-before.json`；局部命令與結果交 `context-link/writer/report.json`、`commands-before.json`／`commands-after.json`、`compiled-after.json`、`query-matrix.json`、`changes.diff`及`sha256-pins.json`。交下一輪單一獨立verifier，不在筆記預先宣稱驗收或發布完成；本writer僅兩檔補正，不跑fullgate／build、不stage／commit／push／deploy、不改程式／版號／tauri，亦不改其他179 tracked及Kevin PNG。
+
 ## 2026-11-16｜馬幼興本次聲援羅大佑的最小personal（writer交接，未發布）
 
 - 承接持續避雷對話中的重送圖卡，依AGENTS圖片intake規則及主控本輪寫入範圍，只新增 `ma-you-hsing-lo-ta-yu-support-personal-20261116` 馬幼興本人。主因是「使用者對馬幼興本次公開聲援羅大佑的表態選擇個人避開」；personal／medium，aliases／identifiers空、country空字串、分類人物／藝文、lastReviewed 2026-11-16。只記本次聲援，不代分配羅大佑每句話或婚育貶抑，不推定黨籍／選票／犯罪，不擴家人、其他藝人、媒體或羅大佑既有卡，不查舊刑案。
