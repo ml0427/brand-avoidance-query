@@ -134,6 +134,28 @@ const newPartySources = [
 
 export const records = [
   record({
+    "id": "ma-you-hsing-lo-ta-yu-support-personal-20261116",
+    "name": "馬幼興",
+    "aliases": [],
+    "identifiers": [],
+    "country": "",
+    "categories": ["人物／藝文"],
+    "avoidReasons": ["使用者對馬幼興本次公開聲援羅大佑的表態選擇個人避開"],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者對馬幼興本次公開聲援羅大佑的表態選擇個人避開。NOWnews具名報導記載，他於2026-11-12晚間在Threads表態支持羅大佑，主張台灣應容納不同聲音；本卡只記本次聲援，不推定他認同羅大佑每一句話。",
+    "sources": [
+      source(
+        "NOWnews今日新聞－繼盧學叡再+1！馬幼興挺羅大佑發聲：台灣不能只有一種聲音",
+        "https://www.nownews.com/news/6891979",
+        "2026-11-13",
+        "記者趙浩雲／綜合報導，2026-11-13 10:26:08發布、11:13:46更新。本輪writer以browser DOM親讀正文，主控交接讀回來源artifact；報導引述馬幼興『這一局我挺音樂教父 羅大佑』。未獨立讀到Threads永久帖或聽原音；同文保留沒有子女仍關心下一代的相反回應，未載馬幼興撤回，不等於從未撤回或道歉。"
+      )
+    ],
+    "aiNotes": "personal僅表示使用者對本次聲援的個人避開，medium依具名媒體引述、非原帖讀證；不將羅大佑的婚育言論或每句話歸給馬幼興，不推定其貶抑無子女者、黨籍、選票或犯罪，不擴家人、其他藝人或羅大佑既有卡。姓名以外的理由、媒體、職稱與他人不作搜尋鍵；未全網掃描更正或道歉。原圖只作私有intake，不公開。",
+    "lastReviewed": "2026-11-16"
+  }),
+  record({
     "id": "peace-initiative-20261112-person-e4b881e5ae88e4b8ad",
     "name": "丁守中",
     "aliases": [],

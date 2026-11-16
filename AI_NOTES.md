@@ -1,5 +1,12 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-16｜馬幼興本次聲援羅大佑的最小personal（writer交接，未發布）
+
+- 承接持續避雷對話中的重送圖卡，依AGENTS圖片intake規則及主控本輪寫入範圍，只新增 `ma-you-hsing-lo-ta-yu-support-personal-20261116` 馬幼興本人。主因是「使用者對馬幼興本次公開聲援羅大佑的表態選擇個人避開」；personal／medium，aliases／identifiers空、country空字串、分類人物／藝文、lastReviewed 2026-11-16。只記本次聲援，不代分配羅大佑每句話或婚育貶抑，不推定黨籍／選票／犯罪，不擴家人、其他藝人、媒體或羅大佑既有卡，不查舊刑案。
+- 本輪writer以隔離browser session `ma-you-hsing-source-20261116` 實讀NOWnews原站DOM正文，核記者趙浩雲、2026-11-13 10:26:08發布／11:13:46更新及11/12晚間Threads聲援；同文反向回應已核，未載本人撤回不等於從未撤回／道歉，未全網掃描。未獨立讀Threads永久帖或聽原音，不強湊第二來源。requests保留certifi驗證但403，只當失敗log，不當正文。原交接撤回材料完全禁用；writer初步artifact也曾誤寫未執行的web.run ref／行號，已於repo寫入前撤回改為真實browser方法，現以新 `verified-source-packet.json` 為準，無偽來源代碼。主控後續讀artifact，不冒稱主控親開。
+- 私有研究與必要短節錄存當前profile `tasks/ma-you-hsing-support-20261116/`；來源packet SHA-256 `483e6abf2e286d07f93c2b831787829923548405e23aefca384028ea3ae53cff`，節錄artifact SHA-256 `8256adb7793433641758661a0bec7d3a60feb8f0d5655a67b368da0a361fcfe7`，均非原站HTML hash。原圖私有SHA-256 `29d9df2c0fe3b337c565e7d8c1c99dde567ca329af8f90351bacb4e7be573e33`，只讀標題、不辨臉、不複製／裁圖入repo、不新增public-evidence。
+- 寫前HEAD `affb4e9cc381337b02cae1a4b00b035ed17e0013`、181 tracked hashes、index及Kevin既有未追蹤PNG hash與1,681筆compiled baseline在同task `writer/`。compileRecords／matchRecords姓名繁簡與片段皆未命中後新增一筆；局部檢查含兩次compile冪等、ID唯一、舊1,681筆逐值含序、姓名正查與理由／他人／媒體／職稱target負查、partial合理候選、其餘179 tracked／HEAD／index／PNG保真及diffcheck，真實結果以 `writer/writer-report.json`、`query-matrix.json`、before／after compiled、兩檔diff與SHA pins為準。只有局部PASS才交下一輪單一獨立verifier；本writer不跑fullgate／build、不stage／commit／push／deploy，不改程式版號、其他pending、司法或cron。不發布僅為writer子任務限制，並非使用者取消既定發布授權；完整gate通過後由主控依AGENTS限定提交推送並讀回遠端。
+
 ## 2026-11-13｜兩岸和平倡議既有18人：17到場＋1發起相關 personal（帥化民補強writer交接）
 
 - 使用者「有參加的都避雷」及本輪18人逐人personal授權，主因是使用者不接受本場倡議及政治安排方向，不是司法／犯罪判斷。新建17張獨立人物卡，既有 `hung-hsiu-chu-public-figure` 洪秀柱保留原ID、name、aliases、identifiers、country、信心medium及全部舊來源，改personal並補本場到場證據；不另建重複卡。新卡只有姓名及已橋接陳沖／李勝峰變體，country空字串、identifiers空陣列、分類政治／公眾人物、lastReviewed 2026-11-13；一般medium，毛治國及帥化民low。
