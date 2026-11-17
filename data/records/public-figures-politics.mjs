@@ -134,6 +134,30 @@ const newPartySources = [
 
 export const records = [
   record({
+    id: "ku-chen-feng-minor-sexual-conduct-personal-20261117",
+    name: "古振豐",
+    aliases: [],
+    identifiers: [],
+    country: "",
+    categories: ["人物／政治"],
+    avoidReasons: ["使用者因古振豐自承與未成年人發生性行為觸法而選擇個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者因古振豐自承與未成年人發生性行為觸法而選擇個人避開。自由時報2026-11-17具名採訪引述他表示，只有妨害性自主部分判刑確定並已執行完畢；他另否認毒品、殺人及致死相關指控，稱其他指控已判無罪。上述判刑、執行及無罪範圍均歸屬本人自述；本次未取得本刑案軍事裁判、精確法律罪名、刑度及定讞日期，不稱官方已核實前科，也不把餵毒致死當成確認事實。收錄範圍僅本人。",
+    sources: [
+      source(
+        "自由時報－選前​遭爆曾涉女高中生餵毒案 古振豐出面駁斥涉毒且已判無罪",
+        "https://news.ltn.com.tw/news/politics/breakingnews/5643745",
+        "2026-11-17",
+        "記者鄭淑婷／桃園報導，原站JSON-LD發布及更新時間2026-11-17T15:19:43+08:00。研究worker以browser DOM innerText及JSON-LD實讀原站，session ku-chen-feng-case-20261117 laneW；本writer與主控讀回私有source-packet-03.json，不冒稱親開原站。報導將古振豐本人與當時桃園市楊梅區議員候選角色及本次受訪回應橋接，記其自承與未成年前女友性行為觸法，並引述他稱只有妨害性自主部分判刑確定、已執行完畢，其他指控已判無罪，否認毒品及殺人等犯罪。此為具名新聞引述本人說法，不是官方裁判原件或本研究獨立核實有罪／無罪；未獨立讀其Facebook原始聲明。標題以packet正文文章本題為準，不採瀏覽器title的emoji修飾；標題中的餵毒案不作已確認事實。",
+      ),
+    ],
+    aiNotes:
+      "承接持續避雷對話新圖的personal intake，非本輪明示文字授權；重大指控經具名可信來源後只收本人自承行為及判刑自述的最小personal／medium。必要有利後續保留：本人否認毒品、殺人及致死相關指控，稱其他指控已判無罪；未取得本刑案有罪或無罪裁判，不推定全案所有罪定讞，不稱清白或沒有前科，也不以選舉資格審查作無罪證明。未取得裁判不等於裁判不存在。餵毒致死、殺人、遺棄、強迫墮胎、獨立墮胎罪、毒品有罪或觀察勒戒前科均不作本次收錄理由或查詢鍵。僅本人姓名作搜尋鍵；職稱、政黨、罪名、理由及媒體不是aliases或identifiers。新聞職稱及黨籍只屬報導當時身分，不擴其他政治人物、親友或政黨。原圖private-only，不辨臉、不複製或裁圖入repo、不公開、不新增public-evidence，不保存受害者資訊；不重啟已暫停司法批次或買區。",
+    lastReviewed: "2026-11-17",
+  }),
+  record({
     "id": "bai-xin-ru-political-remarks-personal-20261117",
     "name": "白馨儒",
     "aliases": ["白白"],

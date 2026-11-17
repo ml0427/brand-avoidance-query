@@ -1,5 +1,12 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-17｜古振豐本人自承未成年人性行為觸法最小personal（writer交接，未發布）
+
+- 承接持續避雷對話新圖intake，非本輪明示文字授權；只新增 `ku-chen-feng-minor-sexual-conduct-personal-20261117`，personal／medium、姓名古振豐、aliases／identifiers空、country空字串、人物／政治、lastReviewed 2026-11-17。主因置首為使用者因本人自承與未成年人發生性行為觸法而個人避開；保留本人稱只有妨害性自主部分判刑確定、已執行完畢，及否認毒品、殺人、致死相關指控、稱其他指控已判無罪的必要有利自述。
+- 最小來源一份自由時報S2 `https://news.ltn.com.tw/news/politics/breakingnews/5643745`，記者鄭淑婷／桃園報導、JSON-LD 2026-11-17T15:19:43+08:00。原站由研究worker browser DOM innerText＋JSON-LD實讀（session ku-chen-feng-case-20261117 laneW）；writer及主控讀回私有封包，不冒稱親開原站、不獨立讀FB。以正文文章本題為標題，不採瀏覽器emoji。來源層級是具名新聞引述本人，不是官方裁判；本刑案軍事裁判、精確法律罪名／刑度／定讞日未取得，不稱官方已核前科或全案有罪，不以選舉資格證無罪，缺裁判不代表不存在或清白。
+- 其餘重大指控BLOCKED：餵毒致死、殺人、遺棄、強迫墮胎／獨立墮胎罪、毒品有罪或觀察勒戒前科均不入理由及查詢鍵；不納未橋接同名民事旁支、不擴其他人／政黨、不重啟暫停司法批次或買區。只本人姓名作鍵；職稱、黨籍、理由、罪名、媒體不作aliases／identifiers。原圖private-only，不辨臉、不複製或裁圖入repo、不公開，不新增public-evidence或受害者資訊。
+- 私有研究 `tasks/ku-chen-feng-case-20261117/research/report.json` SHA-256 `22d9cd773036846e0ceaca685ee60c206cc3abbd7293498122a31ad2e6f71a8a`；`research/source-packet-03.json` SHA-256 `909ef76658e48c58a9a8362638cef877e7b87b580fdff1897141f645a960b6af`。寫前HEAD `549b1654bb8923f6e1de26abdd7e555fc6f11e3e`，source與compileRecords／matchRecords實查重後無既有本人卡；1,683筆compiled、181 tracked hashes、index及Kevin既有untracked PNG保存同task `writer/`。局部結果依report.json、compiled-before／after、query-matrix、changes.diff與SHA pins；交單一獨立verifier完整gate與reader後由主控限定兩檔發布。本writer不跑fullgate／build、不stage／commit／push，不改版號、tauri或白馨儒節；不預先宣稱完整驗收或發布完成。
+
 ## 2026-11-17｜白馨儒（白白）本次政治環境評論最小personal（writer交接，未發布）
 
 - 承接持續避雷對話中使用者僅傳新聞轉貼圖的personal intake，只新增本人 `bai-xin-ru-political-remarks-personal-20261117`，不是明示文字授權。主因置首：使用者對她以質疑施政可能遭圍剿、貼標籤描述台灣政治環境的本次表態選擇個人避開；personal／medium、藝名alias僅白白、identifiers空、country空字串、人物／藝文、lastReviewed 2026-11-17。不把其政治環境判斷當政黨確實系統性圍剿的客觀結論；保留她主張容納異議、監督政府與改善社會問題的必要脈絡。
