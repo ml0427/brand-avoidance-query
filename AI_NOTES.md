@@ -1,5 +1,13 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-17｜白馨儒（白白）本次政治環境評論最小personal（writer交接，未發布）
+
+- 承接持續避雷對話中使用者僅傳新聞轉貼圖的personal intake，只新增本人 `bai-xin-ru-political-remarks-personal-20261117`，不是明示文字授權。主因置首：使用者對她以質疑施政可能遭圍剿、貼標籤描述台灣政治環境的本次表態選擇個人避開；personal／medium、藝名alias僅白白、identifiers空、country空字串、人物／藝文、lastReviewed 2026-11-17。不把其政治環境判斷當政黨確實系統性圍剿的客觀結論；保留她主張容納異議、監督政府與改善社會問題的必要脈絡。
+- 本writer透過browser_exec隔離session `bai-xin-ru-source-20261117`，以new_tab／wait_for_load／page_info及document.body.innerText實讀三立娛樂星聞原站 `https://star.setn.com/news/1939978` 完整可見正文，核編輯林品妤／綜合報導、2026/11/16 20:45。原文橋接白白＝白馨儒，記今年5月宣布退出加入14年的民進黨，不將11月報導日期當退黨日期，也不採撤回候選的5月底、更精確時間或署名。具名原文一份足夠即停，實質來源核讀1次；未獨立開Facebook原帖、聽原音或全網掃描更正／道歉，同文未載不等於不存在。主控後續可讀私有packet，未冒稱主控親開原文，不使用任何預填web.run ref或行號。
+- 外層mercyke002不是本人已核帳號，不作alias或新對象；轉貼評論比較羅大佑不證她聲援羅大佑、認同婚育言論。她提及的社會案件不是她的刑案，不重啟司法查核、不擴案中人物、其他藝人、親友或政黨。不推定中國身分、中資／中共關係、轉藍、新黨籍、選票或沒有政治立場；選人不選黨不能改成沒有政治立場。理由／圍剿／新聞／轉貼者／羅大佑等不作她的查詢鍵。
+- 私有來源在同profile `tasks/bai-xin-ru-political-remarks-20261117/verified-source-packet.json`，SHA-256 `7d9ad95455e6fd20107462421759b1b07c4ea9c3cf910bcd2326b0fc3021bc6c`；必要脈絡節錄 `writer/source-context-excerpt.txt` SHA-256 `7da005768925f5e7010d4cffe9dec2f8ecb2a8bf47aef250ff8efd9c3cbbff79`，均為私有研究artifact而非原站HTML hash。原圖主控只讀文字，writer只計SHA-256 `e6087ab44728dc28138c5dbd262c10f2604af1b9962ea207e07e7173c9744bab`；不辨臉、不公開、不複製或裁圖入repo、不新增public-evidence。
+- 寫前HEAD `1dbb932a2ddf19284328e9a3d1d8e1a723e76331`，compileRecords／matchRecords本人姓名、藝名、片段及外層帳號查重皆未命中；1,682筆compiled、181 tracked hashes、index及Kevin既有untracked PNG基線已存同task `writer/`。局部執行結果以 `writer/report.json`、commands-before／after、compiled-before／after、query-matrix、changes.diff及兩檔SHA pins為準；交下一輪單一獨立verifier，筆記不預先聲稱驗收或發布完成。本writer只改兩檔，不跑fullgate／build、不stage／commit／push／deploy、不動core/UI/schema/版號/tauri；主控後續依AGENTS完整gate處理發布。
+
 ## 2026-11-16｜馬幼興卡補正羅大佑婚育／下一代爭議脈絡（writer交接）
 
 - 使用者追問聲援內容是否串到羅大佑既有紀錄，本輪補正 `ma-you-hsing-lo-ta-yu-support-personal-20261116` 的summary／sources／aiNotes：主因置首，明寫羅大佑以有無子女評斷是否關心下一代引發爭議後，馬幼興公開聲援，使用者因此個人避開。羅大佑是原發言者，馬幼興是聲援者，不把前者逐句言論歸給後者；personal／medium、姓名、空aliases／identifiers／country、分類、avoidReasons與日期保留，不動既有羅大佑卡或其他人物。
