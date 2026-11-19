@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-19｜姚惠珍本人水庫光電發言（本地交接，未發布）
+
+- 承接避雷對話的新圖線索，只新增 `yao-hui-chen-reservoir-post-personal-20261119`（personal／medium）。使用者因姚惠珍以「草菅人命」評論水庫光電與環評的這則貼文選擇個人避開。僅本人姓名索引，aliases／identifiers 為空；不納其他人、政黨、留言或轉貼，不複製原圖、不新增公開證據。
+- 主控以具名 browser_exec session `yao-hui-chen-reservoir` 實讀公開專頁 DOM 正文；本次編輯依私有 `tasks/yao-hui-chen-reservoir-post-20261119/parent-source.json` 讀回，不另開原頁。頁面顯示作者姚惠珍及 2026-11-18 上午 9:32；網址是含該文的專頁，未取得單則永久連結。該段未具名水庫、市長或工程；未查核工程與環評，僅歸屬其發言，不將發言視為已證實的工程事實、違法、傷亡或對第三人的認定。
+- 局部驗證與差異釘定見同任務的私有 `writer/report.json`；不暫存、不提交、不推送、不發布。
+
 ## 2026-11-19｜張榮味本人林內焚化廠期約賄賂定讞
 
 - 承接新圖的避雷查核，只新增 `chang-jung-wei-linne-bribery-20180704`；confirmed／high 限本人本案有罪定讞，不是對其他人的認定。唯一搜尋鍵為張榮味，aliases／identifiers 均空；不納泛稱、親屬、同案者、廠商、政黨、轉貼者或其他案件，不重啟司法批次。

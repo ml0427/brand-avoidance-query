@@ -134,6 +134,30 @@ const newPartySources = [
 
 export const records = [
   record({
+    id: "yao-hui-chen-reservoir-post-personal-20261119",
+    name: "姚惠珍",
+    aliases: [],
+    identifiers: [],
+    country: "",
+    categories: ["人物／政治"],
+    avoidReasons: ["使用者因姚惠珍以『草菅人命』評論水庫光電與環評的這則貼文而選擇個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者因姚惠珍以「草菅人命」評論水庫光電與環評的這則貼文而選擇個人避開。她於2026-11-18在Facebook公開專頁發文，稱「沒環評實測就先在水庫蓋光電板」。這是她在貼文中的說法，並非經本紀錄核實的工程事實；這段未具名水庫、市長或工程。收錄僅限姚惠珍本人及這次發言。",
+    sources: [
+      source(
+        "姚惠珍 Facebook 公開專頁（2026-11-18 貼文）",
+        "https://www.facebook.com/%E5%A7%9A%E6%83%A0%E7%8F%8D-100044321895047/",
+        "2026-11-18",
+        "主控實讀專頁顯示的貼文正文；頁面顯示作者姚惠珍、時間2026年11月18日星期三上午9:32。所列為含該貼文的專頁網址，未取得單則貼文永久連結。來源僅支持發言歸屬，不證實環評或工程情況。",
+      ),
+    ],
+    aiNotes:
+      "personal是使用者的個人選擇；medium只反映發言歸屬。未查核環評或設置情況，不將貼文當作有人傷亡、違法或任何對第三人的指控的證據，也不判定發言真假。不納圖片、留言、轉貼或其他人物；僅本人姓名作搜尋鍵。",
+    lastReviewed: "2026-11-19",
+  }),
+  record({
     id: "duan-shu-wen-violent-crime-history-personal-20261118",
     name: "段樹文",
     aliases: [],
