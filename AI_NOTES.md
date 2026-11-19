@@ -1,5 +1,10 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-18｜段樹文本人最小 personal（writer 交接，未發布）
+
+- 承接新圖避雷脈絡，只收 `duan-shu-wen-violent-crime-history-personal-20261118` 段樹文本人（personal／medium）。中央社吳睿騏訪問正文對位歷史列名與本人自述；《關鍵評論網》2018年專題（整理：羊正鈺、李秉芳）記載殺人／無期徒刑定讞，未核精確刊日。只用這兩個原站；歷史列名不等於現時通緝，刑度與定讞依媒體記載，未取得同案裁判全文、裁判案號或確切定讞日，不用檢方偵案號橋接。
+- 僅本人姓名作查詢鍵，不擴段林淑婷、圖外層、另案或候選資格。原圖私有，依文字，不辨臉、不複製入 repo、不新增公開證據。局部驗證與差異釘定見私有 `tasks/duan-shu-wen-banner-20261118/writer/report.json`；交獨立驗收，不暫存、不提交、不推送、不發布。
+
 ## 2026-11-17｜古振豐本人自承未成年人性行為觸法最小personal（writer交接，未發布）
 
 - 承接持續避雷對話新圖intake，非本輪明示文字授權；只新增 `ku-chen-feng-minor-sexual-conduct-personal-20261117`，personal／medium、姓名古振豐、aliases／identifiers空、country空字串、人物／政治、lastReviewed 2026-11-17。主因置首為使用者因本人自承與未成年人發生性行為觸法而個人避開；保留本人稱只有妨害性自主部分判刑確定、已執行完畢，及否認毒品、殺人、致死相關指控、稱其他指控已判無罪的必要有利自述。
