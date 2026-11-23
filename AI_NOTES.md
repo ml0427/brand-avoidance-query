@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-23｜趙世煌既有 personal 卡補強（本地交接，未發布）
+
+- 只補 `chao-shih-huang-laure-chao-post-personal-20261017`：保留原避雷理由、personal／medium、分類、三條既有來源與趙世煌／laure_chao 查詢鍵。另增 2026-11-22 替許甫辯護並催票投票、2026-11-19 在「民眾黨」主題呼籲 11/28 支持動員兩則原帖；`lastReviewed` 為 2026-11-23。僅記該帳號公開表態，不核定車禍、協助經過或歧視爭議，不推黨籍、黨職、正式代表身分、「兩年前」的指涉或實際投票；不擴第三人或政黨。
+- 起點是持續避雷對話中的兩張圖，不是使用者另行明示反對哪句。主控以具名 browser session `laure-chao-nov23` 實讀兩則 Threads 原頁 DOM 正文與 time 元素；本輪只讀回私有 `tasks/laure-chao-post-update-20261123/parent-source.json`，未重開原頁。另一圖回覆未驗，不收錄；原圖不複製、不公開，不新增公開證據。
+- 只改本筆記與 `data/records/public-figures-politics.mjs`。局部驗證、查詢矩陣及差異雜湊交同任務的私有 `writer/report.json` 與伴隨檔案；不做完整驗收、建置、暫存、提交、推送或發布。
+
 ## 2026-11-19｜姚惠珍本人水庫光電發言（本地交接，未發布）
 
 - 承接避雷對話的新圖線索，只新增 `yao-hui-chen-reservoir-post-personal-20261119`（personal／medium）。使用者因姚惠珍以「草菅人命」評論水庫光電與環評的這則貼文選擇個人避開。僅本人姓名索引，aliases／identifiers 為空；不納其他人、政黨、留言或轉貼，不複製原圖、不新增公開證據。
