@@ -134,6 +134,30 @@ const newPartySources = [
 
 export const records = [
   record({
+    id: "du-wen-ching-chung-tung-chin-endorsement-personal-20261125",
+    name: "杜文卿",
+    aliases: [],
+    identifiers: [],
+    country: "",
+    categories: ["人物／政治"],
+    avoidReasons: ["使用者因杜文卿選前公開表態支持鍾東錦而選擇個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary:
+      "使用者因杜文卿選前公開表態支持鍾東錦而選擇個人避開。據中央社報導，時為苗栗縣第三選區縣議員候選人的杜文卿，在苑裡一場公開說明會上表示縣長選票要投給鍾東錦；他後來受訪稱這是一時氣話，並表示收回發言。收錄僅限杜文卿本人與這次公開表態。",
+    sources: [
+      source(
+        "喊縣長投鍾東錦遭民進黨除名　杜文卿：一時氣話",
+        "https://www.cna.com.tw/news/aipl/202611240188.aspx",
+        "2026-11-24",
+        "中央社記者管瑞平、王揚宇報導，16:06發布、18:16更新。正文記載杜文卿以苗栗縣第三選區（通霄、苑裡）縣議員候選人身分出席苑裡一場地方說明會，公開表示縣長選票要投給鍾東錦，後續受訪稱是一時氣話並表示收回。報導另載民進黨苗栗縣黨部評議委員會決議除名；這是地方黨部的決議，不代表中央最終處理結果或現行黨籍。",
+      ),
+    ],
+    aiNotes:
+      "personal是使用者的個人選擇；medium反映具名媒體對身分及發言的報導。公開表態不等於實際投票，也不據此判定長期政治立場。地方黨部處理不是個人避雷的理由；不擴及其他人或政黨。僅本人姓名作搜尋鍵。",
+    lastReviewed: "2026-11-25",
+  }),
+  record({
     id: "yao-hui-chen-reservoir-post-personal-20261119",
     name: "姚惠珍",
     aliases: [],
