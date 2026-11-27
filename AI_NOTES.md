@@ -1,5 +1,10 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-27｜陳鴻：2012 年上海餐飲合作，個人避雷
+
+- 承接使用者在避雷對話的貼圖與「要查核我會說」更正，只新增 `chen-hong-shanghai-culinary-work-personal-20261127`（`personal / medium`）。既有蔡康永紀錄不變。只以陳鴻本人姓名為查詢鍵。
+- 主控實讀陳鴻官方履歷及欣傳媒王志峰 2012-07-21 報導的合作段落；只收 2012 年上海客座主廚與為期三個月的餐飲合作，非現行發展或政治立場。原圖留在私有附件（SHA-256 `de655af844e6aa4690d183008e56849f75410e4eb357b89bfeaab2c6291678d3`），不公開、不採用發文標籤、留言或圖中另一人物的爭議。新收到的其他人物線索不併入本案。
+
 ## 2026-11-26｜周曉芸本人起訴範圍 personal（本地交接，未發布）
 
 - 本輪明示授權 `1575441785168068733`「避雷拉，是還要查甚麼阿」；前則 `1575437615950340208` 純圖只作線索，私有 `tasks/chou-hsiao-yun-20261126/case-intake.json`（SHA-256 `4851ed109b38f30a9326429176218b887a2455ea760901c566b014ae031ad6e2`）的 `public_write: false` 是前輪快照，不是本輪限制。只新增 `chou-hsiao-yun-anti-infiltration-indictment-personal-20261126`（personal／medium）；僅周曉芸本人姓名作鍵，aliases／identifiers 均空，分類人物／政治。
