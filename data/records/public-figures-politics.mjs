@@ -5973,4 +5973,23 @@ export const records = [
     aiNotes: "收錄限陳鴻本人及已核的歷史商業經歷。未採發文者的標籤、節目爭議或留言，不推定政治立場、現行活動或蔡康永及合作方有相同理由。只以本人姓名比對。",
     lastReviewed: "2026-11-27",
   }),
+  record({
+    id: "mrjohnsonlintw-public-creator-personal-20261127",
+    name: "強生先生",
+    aliases: [],
+    identifiers: ["mrjohnsonlintw", "@mrjohnsonlintw", "mrjohnsontw", "@mrjohnsontw"],
+    country: "台灣",
+    categories: ["媒體娛樂"],
+    avoidReasons: ["使用者指定個人避開"],
+    confidence: "medium",
+    status: "personal",
+    summary: "使用者指定避開以「強生先生」為名經營的公開創作者帳號及其直接推廣的「街頭實戰幫」，未另述具體事由。公開連結頁自介為搭訕與兩性主題，列出「街頭實戰幫」；同名 YouTube 頻道列出交友教學，首頁影片說明連回同一公開連結頁及 Instagram 帳號 mrjohnsonlintw。只依公開經營身分收錄，不指認本名，也不定性課程或個別行為。",
+    sources: [
+      source("強生先生－公開連結頁", "https://linktr.ee/mrjohnsonlintw", "查核日 2026-11-27", "頁面以 mrjohnsonlintw 自介為強生先生的搭訕與兩性專頁，列有街頭實戰幫的 Skool 連結。僅支持品牌、帳號及直接推廣的服務。"),
+      source("強生先生－YouTube 公開頻道", "https://www.youtube.com/channel/UCSTr1BFcSvooTU8faA0jC8g", "查核日 2026-11-27", "頻道顯示名稱強生先生、帳號 mrjohnsontw；首頁影片說明連回 Linktree 與 Instagram mrjohnsonlintw。僅作公開帳號及交友教學內容對位，不採節目標題或自述故事為客觀事實。"),
+      source("街頭實戰幫－Skool 公開招生頁", "https://www.skool.com/mrjohnsonstreet-9393/about", "查核日 2026-11-27", "由本人公開連結頁連到此招生頁；頁面署名 Johnson Lin，並稱強生先生在社團提供搭訕教學。只確認公開署名及服務關聯；署名不是法定姓名證明，未進入私人社團。"),
+    ],
+    aiNotes: "精準比對限公開名稱與兩種公開帳號字串（含 @ 變體）。街頭實戰幫是本筆適用的直接推廣服務，不當人物別名；不延伸至 Skool 平台、學員、貼文提及者或其他同名者。截圖中的貼文反駁女性只看金錢，未把該說法或貼文中的任何主張當成避雷事由；不推定違法、騷擾、課程成效或未確認的自然人身分。",
+    lastReviewed: "2026-11-27",
+  }),
 ];

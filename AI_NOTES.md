@@ -1,5 +1,10 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-27｜強生先生：公開帳號與直接推廣服務，個人避雷
+
+- 使用者明示避雷，新增 `mrjohnsonlintw-public-creator-personal-20261127`（`personal / medium`）；限「強生先生」的公開創作者帳號與直接推廣的街頭實戰幫。不推定具體避雷事由，不查本名，不收 Skool 平台、學員、貼文提及者或其他同名者。
+- Linktree 正文核對自介與街頭實戰幫；YouTube 頻道及首頁影片說明對位 `mrjohnsonlintw` 和 `mrjohnsontw`。沿 Linktree 開啟 Skool 公開招生頁，確認其署名 Johnson Lin 及與強生先生的服務關聯，署名不作本名或查詢鍵。未採單支影片、Threads 原頁或私人社團內容；不將截圖貼文誤寫成支持女性只看金錢，不採自述故事為事實。原圖私存，SHA-256 `293854a470c4c268ce7a84fba3111c382cde9243bd2fa5dd90be2ed61e87ddcf`，不進 Git 或公開證據清單。
+
 ## 2026-11-27｜陳鴻：2012 年上海餐飲合作，個人避雷
 
 - 承接使用者在避雷對話的貼圖與「要查核我會說」更正，只新增 `chen-hong-shanghai-culinary-work-personal-20261127`（`personal / medium`）。既有蔡康永紀錄不變。只以陳鴻本人姓名為查詢鍵。
