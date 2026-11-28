@@ -1,5 +1,11 @@
 # AI_NOTES — brand-avoidance-query
 
+## 2026-11-28｜AGCC 上市母公司個人避雷（本地交接，未發布）
+
+- 依持續避雷對話中的兩張圖作 `personal` intake，非明示文字授權；只新增 `agcc-ai-compute-disclosure-personal-20261128`（`personal / medium`）。只以 `Agencia Comercial Spirits Ltd` 和 `AGCC` 作查詢鍵，不另收台灣子公司、品牌、人員或其他公司。主因是算力業務擬議供應商與董事長跨公司任職交集，次因是公司披露廈門關係企業共同最終受益人及 2023、2024 年歷史售酒；不採貼圖未核的廈門公司登記或持股。
+- 初稿編輯者依交接，未重開原站；主控於初稿完成後開三份 SEC EDGAR 原文：20-F 財報附註（R9）區分母子公司；7 月提交的 424B4 核對文件當時的無約束力租賃意向、兩個 Ricloud 法人及歷史售酒；11 月 27 日 6-K 附件為公司回應，提及算力供應安排但未指明是否為同一筆租賃。公司披露不是 SEC 實質認定，不把歷史酒類往來當晶片往來，也不推定設備交付、使用端、走私、供應中共或共軍、中資控制或違法。
+- 原圖只私存，檔案 SHA-256 依序為 `f32dcfbd22421ec736f3358a2cb89e14603c3e0d463d13cc3f69920162ac16a8`、`3e4176626b3d7baa75f7f737d334f567c73441d5f3cfae3dba082e66957e76d6`；不複製進 Git 或公開證據。僅修改本筆記及 `data/records/tech-security-services.mjs`；本地驗證與釘定見私有 `tasks/agcc-20261128/writer/report.json`。本輪不建站、不暫存、不提交、不推送、不部署或查 Pages；交主控獨立驗收。
+
 ## 2026-11-27｜強生先生：公開帳號與直接推廣服務，個人避雷
 
 - 使用者明示避雷，新增 `mrjohnsonlintw-public-creator-personal-20261127`（`personal / medium`）；限「強生先生」的公開創作者帳號與直接推廣的街頭實戰幫。不推定具體避雷事由，不查本名，不收 Skool 平台、學員、貼文提及者或其他同名者。

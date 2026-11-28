@@ -19,6 +19,44 @@ import { splitRecord } from "../split-record.mjs";
 
 export const records = [
   record({
+    "id": "agcc-ai-compute-disclosure-personal-20261128",
+    "name": "Agencia Comercial Spirits Ltd",
+    "aliases": [],
+    "identifiers": ["AGCC"],
+    "country": "",
+    "categories": ["科技／通訊資安"],
+    "avoidReasons": [
+      "使用者個人避開",
+      "AI 算力擬議供應商與董事長跨公司任職交集",
+      "廈門關係企業的歷史酒類交易"
+    ],
+    "confidence": "medium",
+    "status": "personal",
+    "summary": "使用者因上市母公司發展 AI 算力業務時披露的擬議租賃供應商及董事長跨公司任職交集，選擇個人避開。另一考量是公司披露集團與一家廈門企業有共同最終受益人，並於 2023、2024 年向其銷售瓶裝威士忌。7 月提交的公開說明書載明，Ricloud AI Inc. 的伺服器租賃為無約束力的意向，文件所述當時未簽正式租約。公司 11 月 27 日稱已有算力供應安排，預計算力就位且符合監管要求後才開始供應，並否認違規供貨；該聲明未指明是否為同一筆租賃。這些資料不能證明設備已交付、特定使用端、走私、供應中共或共軍、中資控制或違法。",
+    "sources": [
+      source(
+        "Agencia Comercial Spirits Ltd：20-F 財報附註（R9）",
+        "https://www.sec.gov/Archives/edgar/data/2060016/000121390026050040/R9.htm",
+        "",
+        "公司披露開曼母公司透過英屬維京群島全資子公司，間接持有台灣酒商 Agencia Comercial Co., Ltd 全部股權；兩者是不同法人。"
+      ),
+      source(
+        "Agencia Comercial Spirits Ltd：424B4 公開說明書",
+        "https://www.sec.gov/Archives/edgar/data/2060016/000121390026079442/ea0295913-424b4_agencia.htm",
+        "2026-07",
+        "AI 算力章節：Ricloud AI Inc. 是擬議租賃供應方，文件所述當時只有無約束力的意向、未簽正式租約。管理層與關係人章節：AGCC 董事長 Li Qiang 兼任 Ricloud AI Inc. 資料中心主管及裕興科技董事長；公司不將 Ricloud AI Inc. 視為關係人。公司視為關係人的是另一法人 Ricloud Corp.，為裕興科技全資子公司。公司另披露 Xiamen Celtic Culture Communication 為有共同最終受益人的關係企業，集團於 2023、2024 年向其銷售瓶裝威士忌。"
+      ),
+      source(
+        "Agencia Comercial Spirits Ltd：6-K 附件 99.1（公司回應）",
+        "https://www.sec.gov/Archives/edgar/data/2060016/000121390026124306/ea031368301ex99-1.htm",
+        "2026-11-27",
+        "公司稱已有算力供應安排，擬於算力就位且符合監管要求後開始供應，未指明是否為同一筆租賃；公司否認違規供貨，並稱不向客戶販售或轉交晶片。此為公司說法，不是監管機關認定。"
+      )
+    ],
+    "aiNotes": "只收 Nasdaq 代號 AGCC 的上市母公司，不納台灣子公司、酒類品牌、人員或其他法人。三份 SEC EDGAR 文件均為公司披露，不是 SEC 實質認定。擬議供應方不等於已租用、交付設備或實際供應；廈門關係企業的歷史售酒不等於母公司持有該企業或與其有晶片交易。",
+    "lastReviewed": "2026-11-28"
+  }),
+  record({
     "id": "anhe-technology-mofa-software-origin-personal-20261013",
     "name": "安和科技",
     "aliases": [],
